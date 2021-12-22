@@ -1,5 +1,11 @@
 @import 'styles/common';
 
+//Library
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
 //Atoms
 @import 'components/atoms/Image/';
 @import 'components/atoms/Input/';
+
+//Organisms
+@import 'components/organisms/Container/';
