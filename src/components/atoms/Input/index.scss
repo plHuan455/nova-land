@@ -1,0 +1,59 @@
+.a-input {
+  $root: &;
+  position: relative;
+
+  &-disabled {
+    #{$root}_input {
+      background-color: $xanadu02;
+      color: $davys-grey;
+    }
+  }
+
+  &-error {
+    #{$root}_input {
+      border-color: $sinopia;
+      color: $sinopia;
+    }
+  }
+
+  &-password {
+    #{$root}_input {
+      font-weight: 700;
+      @include font-base(20, 26);
+    }
+  }
+
+  &_input {
+    appearance: none;
+    background: $white;
+    border: 1px solid $gainsboro;
+    border-radius: rem(4);
+    color: $raisin-black;
+    font: inherit;
+    font-weight: 400;
+    margin: 0;
+    outline: none;
+    padding: rem(7) rem(12);
+    transition: all $transition linear;
+    width: 100%;
+    @include font-base(16, 24);
+
+    &::placeholder {
+      color: $black025;
+      font-weight: 400;
+      @include font-base(16, 24);
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      display: none;
+    }
+  }
+
+  &_message {
+    &-error {
+      color: $sinopia;
+      @include font-base(14, 18);
+    }
+  }
+}
