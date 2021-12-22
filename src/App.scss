@@ -2,6 +2,8 @@
 
 //Library
 @import '~bootstrap/dist/css/bootstrap-grid.min.css';
+@import '~slick-carousel/slick/slick-theme.css';
+@import '~slick-carousel/slick/slick.css';
 
 //Atoms
 @import 'components/atoms/Image/';
@@ -12,3 +14,4 @@
 
 //Organisms
 @import 'components/organisms/Container/';
+@import 'components/organisms/Carousel/';
