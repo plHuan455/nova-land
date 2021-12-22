@@ -1,0 +1,80 @@
+// fonts
+@font-face {
+  font-display: swap;
+  font-family: 'Kuro';
+  font-style: normal;
+  font-weight: 300;
+  src: url('#{$font-path}Kuro-Light.woff2') format('woff2'),
+    url('#{$font-path}Kuro-Light.woff') format('woff'),
+    url('#{$font-path}Kuro-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Kuro';
+  font-style: normal;
+  font-weight: 900;
+  src: url('#{$font-path}Kuro-Heavy.woff2') format('woff2'),
+    url('#{$font-path}Kuro-Heavy.woff') format('woff'),
+    url('#{$font-path}Kuro-Heavy.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Kuro';
+  font-style: normal;
+  font-weight: 600;
+  src: url('#{$font-path}Kuro-DemiBold.woff2') format('woff2'),
+    url('#{$font-path}Kuro-DemiBold.woff') format('woff'),
+    url('#{$font-path}Kuro-DemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Kuro';
+  font-style: normal;
+  font-weight: bolder;
+  src: url('#{$font-path}Kuro-ExtraBold.woff2') format('woff2'),
+    url('#{$font-path}Kuro-ExtraBold.woff') format('woff'),
+    url('#{$font-path}Kuro-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Kuro';
+  font-style: normal;
+  font-weight: bold;
+  src: url('#{$font-path}Kuro-Bold.woff2') format('woff2'),
+    url('#{$font-path}Kuro-Bold.woff') format('woff'),
+    url('#{$font-path}Kuro-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Kuro';
+  font-style: italic;
+  font-weight: normal;
+  src: url('#{$font-path}Kuro-Italic.woff2') format('woff2'),
+    url('#{$font-path}Kuro-Italic.woff') format('woff'),
+    url('#{$font-path}Kuro-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Kuro';
+  font-style: normal;
+  font-weight: 500;
+  src: url('#{$font-path}Kuro-Medium.woff2') format('woff2'),
+    url('#{$font-path}Kuro-Medium.woff') format('woff'),
+    url('#{$font-path}Kuro-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Kuro';
+  font-style: normal;
+  font-weight: normal;
+  src: url('#{$font-path}Kuro-Regular.woff2') format('woff2'),
+    url('#{$font-path}Kuro-Regular.woff') format('woff'),
+    url('#{$font-path}Kuro-Regular.ttf') format('truetype');
+}
