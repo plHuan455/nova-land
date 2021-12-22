@@ -1,0 +1,33 @@
+.a-image {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 100%;
+  position: relative;
+  transition: $transition-long ease;
+  width: 100%;
+
+  img {
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  &-logo {
+    @include aspect-ratio(78, 52);
+  }
+
+  &-4x3 {
+    @include aspect-ratio(4,3);
+  }
+
+  &-16x9 {
+    @include aspect-ratio(16,9);
+  }
+
+  &-1371x620 {
+    @include aspect-ratio(1371,620);
+  }
+}
