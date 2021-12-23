@@ -1,7 +1,9 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
+import { SubmitHandler, UseFormReturn } from 'react-hook-form';
 
 import Container, { CustomCol, CustomRow } from '../Container';
+import Form from '../Form';
 
 import bgFooter from 'assets/images/bg-footer.png';
 import logoImg from 'assets/images/footer-logo.png';
@@ -9,7 +11,7 @@ import Button from 'components/atoms/Button';
 import Heading from 'components/atoms/Heading';
 import Icon, { IconName } from 'components/atoms/Icon';
 import Image from 'components/atoms/Image';
-import Input from 'components/atoms/Input';
+import { InputHookForm } from 'components/atoms/Input';
 import Link from 'components/atoms/Link';
 import Text from 'components/atoms/Text';
 
@@ -22,15 +24,27 @@ export type MenuFooterTypes = {
     icon?: string;
   }[]
 }
+
+export type FooterRegisterFormTypes = {
+  fullname: string;
+  phone: string;
+  email: string;
+  project?: string;
+}
+
 interface FooterProps {
   footerLink?: MenuFooterTypes[];
+  method?: UseFormReturn<FooterRegisterFormTypes>;
+  submitForm?: SubmitHandler<FooterRegisterFormTypes>;
   externalLink?: {
     policy: string;
     privacy: string;
   }
 }
 
-const Footer: React.FC<FooterProps> = ({ footerLink, externalLink }) => (
+const Footer: React.FC<FooterProps> = ({
+  footerLink, externalLink, method, submitForm,
+}) => (
   <footer className="o-footer" style={{ backgroundImage: `url(${bgFooter})` }}>
     <div className="o-footer_background">
       <img src={bgFooter} alt="background footer" />
@@ -96,25 +110,28 @@ const Footer: React.FC<FooterProps> = ({ footerLink, externalLink }) => (
           <CustomCol lg={4}>
             {/* Register Form  */}
             <div className="o-footer_main_form">
-              <form>
+              <Form
+                method={method}
+                submitForm={submitForm}
+              >
                 <div className="o-footer_main_form_input">
-                  <Input name="fullName" placeholder="Họ và tên" />
+                  <InputHookForm name="fullname" placeholder="Họ và tên" />
                 </div>
                 <div className="o-footer_main_form_input mt-24">
-                  <Input name="fullName" placeholder="Số điện thoại" />
+                  <InputHookForm name="phone" placeholder="Số điện thoại" />
                 </div>
                 <div className="o-footer_main_form_input mt-24">
-                  <Input name="fullName" placeholder="Email" />
+                  <InputHookForm name="email" placeholder="Email" />
                 </div>
-                <div className="o-footer_main_form_input mt-24">
-                  <Input name="fullName" placeholder="Email" />
-                </div>
+                {/* <div className="o-footer_main_form_input mt-24">
+                  <InputHookForm name="fullName" placeholder="Email" />
+                </div> */}
                 <div className="o-footer_main_form_button mt-32">
                   <Button type="submit" modifiers="primary">
                     Đăng Ký
                   </Button>
                 </div>
-              </form>
+              </Form>
             </div>
           </CustomCol>
         </CustomRow>
@@ -193,6 +210,8 @@ const Footer: React.FC<FooterProps> = ({ footerLink, externalLink }) => (
 Footer.defaultProps = {
   footerLink: undefined,
   externalLink: undefined,
+  method: undefined,
+  submitForm: undefined,
 };
 
 export default Footer;

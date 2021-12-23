@@ -52,8 +52,11 @@
 
   &_message {
     &-error {
+      bottom: rem(-18);
       color: $sinopia;
-      @include font-base(14, 18);
+      left: 0;
+      position: absolute;
+      @include font-base(12, 16);
     }
   }
 }
