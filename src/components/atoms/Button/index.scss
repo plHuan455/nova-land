@@ -19,25 +19,121 @@
     background-color: $golden-brown;
     box-shadow: 0 2px 0 $black0043;
     color: $white;
+
+    &:hover {
+      background-color: $white;
+      color: $golden-brown;
+
+      &::before {
+        transform: scaleY(1);
+      }
+    }
+
+    &::before {
+      background: transparent;
+      border: 3px solid $golden-brown;
+      bottom: 0;
+      content: '';
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: scaleY(0);
+      transition: $transition-long ease;
+    }
+    
   }
 
   &-secondary {
-    background-color: $white;
+    background-color: $gainsboro;
     border-color: $gainsboro;
     box-shadow: 0 2px 0 $black0016;
     color: $black085;
+    @include prefixed(transition-property, color);
+    @include prefixed(transition-duration, 0.3s);
+    @include prefixed(transform, perspective(1px) translateZ(0));
+
+    &::before {
+      background: $white;
+      bottom: 0;
+      content: '';
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -1;
+      @include prefixed(transform, scaleY(1));
+      @include prefixed(transform-origin, 50%);
+      @include prefixed(transition-property, transform);
+      @include prefixed(transition-duration, 0.3s);
+      @include prefixed(transition-timing-function, ease-out);
+    }
+
+    &:hover {
+      color: $metallic-sunburst;
+
+      &::before {
+        @include prefixed(transform, scaleY(0));
+      }
+    }
   }
   
   &-outline {
-    background-color: $white;
+    background-color: $golden-brown;
     border-color: $metallic-sunburst;
     box-shadow: 0 2px 0 $black0016;
     color: $metallic-sunburst;
+    @include prefixed(transition-property, color);
+    @include prefixed(transition-duration, 0.3s);
+    @include prefixed(transform, perspective(1px) translateZ(0));
+
+    &::before {
+      background: $white;
+      bottom: 0;
+      content: '';
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -1;
+      @include prefixed(transform, scaleY(1));
+      @include prefixed(transform-origin, 50%);
+      @include prefixed(transition-property, transform);
+      @include prefixed(transition-duration, 0.3s);
+      @include prefixed(transition-timing-function, ease-out);
+    }
+
+    &:hover {
+      color: $white;
+
+      &::before {
+        @include prefixed(transform, scaleY(0));
+      }
+    }
+  }
+
+  &:disabled,
+  &-loading {
+    cursor: no-drop;
+    &#{$root}-primary {
+      background-color: rgba($golden-brown, 0.5);
+    }
+    &#{$root}-secondary {
+      background-color: rgba($xanadu, 0.2);
+    }
+    &#{$root}-outline {
+      background-color: rgba($amazon, 0.2);
+      border-color: rgba($amazon, 0.2);
+    }
+
+    &::before {
+      display: none;
+    }
   }
 
   &-loading {
     img {
-      width: rem(30);
+      width: rem(24);
     }
   }
 }

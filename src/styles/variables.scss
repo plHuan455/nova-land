@@ -12,3 +12,9 @@ $z-header: 100;
 $z-modal: 101;
 
 $standard-viewport: 1366px;
+
+// Browser Prefixes - Which CSS prefixes should be used?
+$webkit: true;
+$moz: false;
+$ms: false;
+$o: false;

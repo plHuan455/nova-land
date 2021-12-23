@@ -11,12 +11,14 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 const Button: React.FC<ButtonProps> = ({
   children, modifiers, isSubmit, name, id, className, isLoading, disabled,
+  onClick,
 }) => (
   <button
     id={id}
     name={name}
     type={isSubmit ? 'submit' : 'button'}
     disabled={disabled || isLoading}
+    onClick={onClick}
     className={mapModifiers('a-button',
       modifiers,
       className,

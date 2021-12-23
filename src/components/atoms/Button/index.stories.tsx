@@ -27,13 +27,25 @@ export default {
       },
       defaultValue: false,
     },
+    disabled: {
+      control: {
+        type: 'boolean',
+        options: [false, true],
+      },
+      defaultValue: false,
+    },
+    handleClick: { action: 'clicked' },
   },
 } as Meta;
 
-export const normal: Story = ({ modifiers, textButton, loading }) => (
+export const normal: Story = ({
+  modifiers, textButton, loading, handleClick, disabled,
+}) => (
   <Button
     isLoading={loading}
     modifiers={modifiers}
+    onClick={handleClick}
+    disabled={disabled}
   >
     {textButton}
   </Button>
