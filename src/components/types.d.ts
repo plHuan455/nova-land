@@ -30,5 +30,22 @@ type TextStyle =
 type ColorStyle =
   | 'white'
   | 'raisinBlack'
+  | 'davysGrey'
+  | 'whitesmoke'
+  | 'grayX11'
+  | 'snow'
+  | 'gainsboro'
+  | 'amazon'
+  | 'xanadu'
+  | 'goldenBrown'
+  | 'paleGoldenrod'
+  | 'juneBud'
+  | 'greenryb'
+  | 'aeroBlue'
+  | 'coolBlack'
+  | 'metallicSunburst'
+  | 'cyberGrape'
+  | 'antiqueBronze'
+  | 'urobilin'
 
 type GeneralTextStyle = ColorStyle | FontWeightStyle | TextStyle ;

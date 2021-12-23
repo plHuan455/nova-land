@@ -140,6 +140,23 @@
 $colors-design: (
   'white': $white,
   'raisinBlack': $raisin-black,
+  'davysGrey': $davys-grey,
+  'grayX11': $gray-x11,
+  'whitesmoke': $white-smoke,
+  'snow': $snow,
+  'gainsboro': $gainsboro,
+  'amazon': $amazon,
+  'xanadu': $xanadu,
+  'goldenBrown': $golden-brown,
+  'paleGoldenrod': $pale-goldenrod,
+  'juneBud': $june-bud,
+  'greenryb': $green-ryb,
+  'aeroBlue': $aero-blue,
+  'coolBlack': $cool-black,
+  'metallicSunburst': $metallic-sunburst,
+  'cyberGrape': $cyber-grape,
+  'antiqueBronze': $antique-bronze,
+  'urobilin': $urobilin,
 );
 
 @mixin style-color {
