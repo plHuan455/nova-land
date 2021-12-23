@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
@@ -10,9 +12,9 @@ export default {
     size: {
       control: {
         type: 'select',
-        options: ['16', '20', '24', '28'],
+        options: ['14', '24', '40'],
       },
-      defaultValue: '16',
+      defaultValue: '24',
     },
   },
 } as Meta;
@@ -28,7 +30,7 @@ export const normal: Story = ({ size }) => (
   }}
   >
     {listIcon.map((item, index) => (
-      <div key={index.toString()} style={{ marginLeft: 5 }}>
+      <div key={index.toString()} style={{ marginLeft: 7 }}>
         <Icon size={size} iconName={item} />
       </div>
     ))}
