@@ -8,7 +8,9 @@ export type Sizes =
   | '38x52'
   | '60x72';
 
-export type TextStyle = (GeneralTextStyle | Sizes)[];
+type Variant = 'blueLinear';
+
+export type TextStyle = (GeneralTextStyle | Sizes | Variant)[];
 
 interface HeadingProps {
   type?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5';

@@ -11,6 +11,10 @@ $snow: rgb(250, 250, 250); // #fafafa
 $white: rgb(255, 255, 255); // #ffffff
 $black: rgb(0, 0, 0); //#000000
 $gainsboro: rgb(217, 217, 217); //#D9D9D9
+$dim-gray: rgb(109, 110, 113); //#6d6e71
+$jet: rgb(47, 46, 47); //#2f2e2f
+$dark-midnight-blue: rgb(11, 52, 107); //#0b346b
+$oxford-blue: rgb(1, 11, 52); //#010b34
 
 // Palette Colors
 $amazon: rgb(57, 112, 90); // #39705a
@@ -43,3 +47,7 @@ $black025: rgba($black, 0.25);
 $black085: rgba($black, 0.85);
 $xanadu02: rgba($xanadu, 0.2);
 $cool-black04: rgba($cool-black, 0.4);
+$dark-midnight-blue0: rgba(11, 52, 107, 0.6);
+
+// Linear colors
+$outstanding-number-linear: linear-gradient(180deg, $dark-midnight-blue0 0%, $oxford-blue 100%);
