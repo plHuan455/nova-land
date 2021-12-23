@@ -14,6 +14,7 @@ import Image from 'components/atoms/Image';
 import { InputHookForm } from 'components/atoms/Input';
 import Link from 'components/atoms/Link';
 import Text from 'components/atoms/Text';
+import { OptionType, PulldownHookForm } from 'components/molecules/Pulldown';
 
 export type MenuFooterTypes = {
   title: string;
@@ -29,13 +30,14 @@ export type FooterRegisterFormTypes = {
   fullname: string;
   phone: string;
   email: string;
-  project?: string;
+  project: string;
 }
 
 interface FooterProps {
   footerLink?: MenuFooterTypes[];
   method?: UseFormReturn<FooterRegisterFormTypes>;
   submitForm?: SubmitHandler<FooterRegisterFormTypes>;
+  projectOptions: OptionType[];
   externalLink?: {
     policy: string;
     privacy: string;
@@ -43,7 +45,7 @@ interface FooterProps {
 }
 
 const Footer: React.FC<FooterProps> = ({
-  footerLink, externalLink, method, submitForm,
+  footerLink, externalLink, method, submitForm, projectOptions,
 }) => (
   <footer className="o-footer" style={{ backgroundImage: `url(${bgFooter})` }}>
     <div className="o-footer_background">
@@ -123,9 +125,13 @@ const Footer: React.FC<FooterProps> = ({
                 <div className="o-footer_main_form_input mt-24">
                   <InputHookForm name="email" placeholder="Email" />
                 </div>
-                {/* <div className="o-footer_main_form_input mt-24">
-                  <InputHookForm name="fullName" placeholder="Email" />
-                </div> */}
+                <div className="o-footer_main_form_input mt-24">
+                  <PulldownHookForm
+                    name="project"
+                    options={projectOptions}
+                    placeholder="- Dự án khách hàng quan tâm -"
+                  />
+                </div>
                 <div className="o-footer_main_form_button mt-32">
                   <Button type="submit" modifiers="primary">
                     Đăng Ký

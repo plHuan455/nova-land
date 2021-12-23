@@ -6,7 +6,7 @@ import Footer from '.';
 describe('<Footer />', () => {
   test('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<Footer />, div);
+    ReactDOM.render(<Footer projectOptions={[]} />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 });
