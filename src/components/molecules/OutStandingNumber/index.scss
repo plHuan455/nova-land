@@ -1,6 +1,7 @@
 .m-outStandingNumber {
   @include adjust-flex;
   flex-direction: column;
+
   &_desc {
     margin-top: rem(16);
     @include mobile-down {
