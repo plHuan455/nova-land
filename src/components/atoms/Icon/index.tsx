@@ -1,13 +1,29 @@
 import React from 'react';
 
-interface IconProps {
-}
+import mapModifiers from 'utils/functions';
 
-const Icon: React.FC<IconProps> = ({ children }) => (
-  <div className="a-icon">{children}</div>
-);
+export const iconList = {
+  facebook: 'facebook',
+  youtube: 'youtube',
+  zalo: 'zalo',
+  arrowDownBlack: 'arrowDownBlack',
+  arrowDownGrey: 'arrowDownGrey',
+  arrowNextRed: 'arrowNextRed',
+  arrowNextGrey: 'arrowNextGrey',
+};
+
+export type IconName = keyof typeof iconList;
+
+export type IconSize = '14' | '24' |'40';
+interface IconProps {
+  iconName: IconName;
+  size?: IconSize;
+}
+const Icon: React.FC<IconProps> = ({ iconName, size }) => (
+  <i className={mapModifiers('a-icon', iconName, size)} />);
 
 Icon.defaultProps = {
+  size: '24',
 };
 
 export default Icon;
