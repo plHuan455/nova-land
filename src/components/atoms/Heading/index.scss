@@ -1,0 +1,27 @@
+.a-heading {
+  margin: 0;
+  @include font-base(24, 32);
+  @include mobile-down {
+    @include font-base(18, 28);
+  }
+
+  &-20x30 {
+    @include font-base(20, 30);
+  }
+
+  &-32x48 {
+    @include font-base(32, 48);
+  }
+
+  &-38x52 {
+    @include font-base(38, 52);
+  }
+
+  &-60x72 {
+    @include font-base(60, 72);
+  }
+
+  @include style-color();
+  @include style-font-weight();
+  @include style-general();
+}
