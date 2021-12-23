@@ -9,12 +9,28 @@ export default {
   argTypes: {},
 } as Meta;
 
-const item = {
-  number: '50',
-  desc: 'Dự án',
-};
-
-const list = Array(5).fill(item);
+const list = [
+  {
+    number: '50',
+    desc: 'Dự án',
+  },
+  {
+    number: '5.400',
+    desc: 'Hecta Đất',
+  },
+  {
+    number: '60.000',
+    desc: 'Sản Phẩm',
+  },
+  {
+    number: '350.000',
+    desc: 'Khách Hàng',
+  },
+  {
+    number: '1.000',
+    desc: 'Giải Thưởng',
+  },
+];
 
 export const normal: Story = () => (
   <OutStandingNumbers

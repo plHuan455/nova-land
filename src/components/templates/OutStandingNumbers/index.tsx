@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Text from 'components/atoms/Text';
+import Heading from 'components/atoms/Heading';
 import OutStandingNumber, { OutStandingNumberProps } from 'components/molecules/OutStandingNumber';
 import Container from 'components/organisms/Container';
 
@@ -12,9 +12,9 @@ interface OutStandingNumbersProps {
 const OutStandingNumbers: React.FC<OutStandingNumbersProps> = ({ title, dataList }) => (
   <div className="t-outStandingNumbers">
     <Container>
-      <Text modifiers={['center', '700', '16x24']}>
+      <Heading modifiers={['center', '700', '38x52', 'fontNoto', 'jet']}>
         {title}
-      </Text>
+      </Heading>
       {dataList.length > 0 && (
         <div className="t-outStandingNumbers_list">
           {dataList.map((item, idx) => (
