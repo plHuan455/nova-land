@@ -1,0 +1,43 @@
+.a-button {
+  $root: &;
+  align-items: center;
+  border: 1px solid $golden-brown;
+  border-radius: 2px;
+  display: flex;
+  font: inherit;
+  font-weight: 400;
+  justify-content: center;
+  outline: 0;
+  overflow: hidden;
+  padding: rem(7) rem(16);
+  position: relative;
+  transition: $transition-long ease;
+  width: 100%;
+  @include font-base(16, 24);
+
+  &-primary {
+    background-color: $golden-brown;
+    box-shadow: 0 2px 0 $black0043;
+    color: $white;
+  }
+
+  &-secondary {
+    background-color: $white;
+    border-color: $gainsboro;
+    box-shadow: 0 2px 0 $black0016;
+    color: $black085;
+  }
+  
+  &-outline {
+    background-color: $white;
+    border-color: $metallic-sunburst;
+    box-shadow: 0 2px 0 $black0016;
+    color: $metallic-sunburst;
+  }
+
+  &-loading {
+    img {
+      width: rem(30);
+    }
+  }
+}
