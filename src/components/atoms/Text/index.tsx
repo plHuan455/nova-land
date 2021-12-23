@@ -9,12 +9,13 @@ export type Sizes =
 export type LetterSpacing =
   | 'ls-005'
 
-export type TextStyle = (GeneralTextStyle | Sizes | LetterSpacing)[];
+export type TextStyle = (GeneralTextStyle | Sizes | LetterSpacing | 'opacity07')[];
 
 interface TextProps {
   modifiers?: TextStyle;
   type?: 'p' | 'span' | 'div';
   content?: string;
+  isInline?: boolean;
 }
 
 const Text: React.FC<TextProps> = ({
@@ -22,17 +23,18 @@ const Text: React.FC<TextProps> = ({
   type = 'p',
   content,
   children,
+  isInline,
 }) => {
   const Element = type;
   return (
     <>
       {content ? (
         <Element
-          className={mapModifiers('a-text', modifiers)}
+          className={mapModifiers('a-text', modifiers, isInline && 'inline')}
           dangerouslySetInnerHTML={{ __html: content }}
         />
       ) : (
-        <Element className={mapModifiers('a-text', modifiers)}>
+        <Element className={mapModifiers('a-text', modifiers, isInline && 'inline')}>
           {children}
         </Element>
       )}
@@ -44,6 +46,7 @@ Text.defaultProps = {
   modifiers: undefined,
   type: 'p',
   content: undefined,
+  isInline: undefined,
 };
 
 export default Text;

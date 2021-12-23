@@ -1,7 +1,10 @@
 import { Story, Meta } from '@storybook/react';
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
 import Footer from '.';
+
+import footerMenuData from 'assets/dataDummy/footer';
 
 export default {
   title: 'Components/organisms/Footer',
@@ -10,5 +13,7 @@ export default {
 } as Meta;
 
 export const normal: Story = () => (
-  <Footer />
+  <BrowserRouter>
+    <Footer footerLink={footerMenuData} />
+  </BrowserRouter>
 );
