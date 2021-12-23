@@ -15,13 +15,27 @@
 
   &-38x52 {
     @include font-base(38, 52);
+    @include tablet-down {
+      @include font-base(28, 40);
+    }
+
+    @include mobile-down {
+      @include font-base(24, 36);
+    }
   }
 
   &-60x72 {
     @include font-base(60, 72);
   }
 
+  &-blueLinear {
+    background-image: $outStandingNumber-linear;
+    @include prefixed(background-clip, text);
+    -webkit-text-fill-color: transparent;
+  }
+
   @include style-color();
   @include style-font-weight();
   @include style-general();
+  @include style-font-family();
 }
