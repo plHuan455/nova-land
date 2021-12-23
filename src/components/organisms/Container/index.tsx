@@ -11,10 +11,10 @@ interface ContainerProps {
 const Container: React.FC<ContainerProps> = ({
   fullScreen, noPaddingRight, noPaddingLeft, children,
 }) => (
-  <div className={mapModifiers('o-container',
+  <div className={`container ${mapModifiers('o-container',
     fullScreen && 'fullscreen',
     noPaddingRight && 'noPaddingRight',
-    noPaddingLeft && 'noPaddingLeft')}
+    noPaddingLeft && 'noPaddingLeft')}`}
   >
     {children}
 
