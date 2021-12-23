@@ -1,0 +1,49 @@
+.a-icon {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+
+  &-14 {
+    height: rem(14);
+    width: rem(14);
+  }
+
+  &-24 {
+    height: rem(24);
+    width: rem(24);
+  }
+
+  &-40 {
+    height: rem(40);
+    width: rem(40);
+  }
+
+  &-facebook {
+    background-image: url('~assets/icons/ic_facebook.svg');
+  }
+
+  &-youtube {
+    background-image: url('~assets/icons/ic_youtube.svg');
+  }
+
+  &-zalo {
+    background-image: url('~assets/icons/ic_zalo.svg');
+  }
+
+  &-arrowDownBlack {
+    background-image: url('~assets/icons/ic_arrow_down_black.svg');
+  }
+
+  &-arrowDownGrey {
+    background-image: url('~assets/icons/ic_arrow_down_grey.svg');
+  }
+
+  &-arrowNextRed {
+    background-image: url('~assets/icons/ic_arrow_next_red.svg');
+  }
+
+  &-arrowNextGrey {
+    background-image: url('~assets/icons/ic_arrow_next_grey.svg');
+  }
+}
