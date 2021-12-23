@@ -19,4 +19,18 @@
     padding-left: 0;
     padding-right: 0;
   }
+
+  &_row {
+    @include break-min($standard-viewport) {
+      margin-left: rem(-16) !important;
+      margin-right: rem(-16) !important;
+    }
+  }
+
+  &_col {
+    @include break-min($standard-viewport) {
+      padding-left: rem(16) !important;
+      padding-right: rem(16) !important;
+    }
+  }
 }
