@@ -1,0 +1,139 @@
+.o-carousel {
+  $root: &;
+  position: relative;
+
+  &_dot {
+    background-color: $cool-black04;
+    border-radius: 4px;
+    display: block;
+    height: 6px;
+    transition: $transition-long ease;
+    width: 6px;
+  }
+
+  &_arrow {
+    $arrow: &;
+    background: $white;
+    border-radius: 0;
+    height: rem(64);
+    transition: $transition-long ease;
+    width: rem(64);
+    z-index: $z-1;
+    
+    @include tablet-down {
+      height: rem(40);
+      width: rem(40);
+    }
+
+    @include mobile-down {
+      height: rem(36);
+      width: rem(36);
+    }
+    
+    &::before {
+      background-color: transparent;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: rem(24);
+      content: '';
+      display: block;
+      height: 100%;
+      opacity: 1;
+      transition: $transition-long ease;
+      width: 100%;
+      @include tablet-down {
+        background-size: rem(20);
+      }
+    }
+
+    &:not(.slick-disabled):hover {
+      background: $metallic-sunburst;
+      &#{$arrow}_prev::before {
+        background-image: url('~assets/icons/ic_arrow_prev_white.svg');
+      }
+      &#{$arrow}_next::before {
+        background-image: url('~assets/icons/ic_arrow_next_white.svg');
+      }
+    }
+
+    &_prev {
+      left: 0;
+
+      &::before {
+        background-image: url('~assets/icons/ic_arrow_prev_red.svg');
+      }
+    }
+  
+    &_next {
+      right: 0;
+
+      &::before {
+        background-image: url('~assets/icons/ic_arrow_next_red.svg');
+      }
+    }
+
+    &.banner {
+      bottom: rem(32);
+      top: unset;
+      &#{$arrow}_prev {
+        left: rem(50);
+        @include mobile-down {
+          left: rem(30);
+        }
+      }
+      &#{$arrow}_next {
+        left: rem(138);
+        right: unset;
+        @include tablet-down {
+          left: rem(110);
+        }
+        @include mobile-down {
+          left: rem(80);
+        }
+      }
+    }
+  }
+
+  .slick-slide {
+    margin-bottom: -5px;
+    outline: none;
+
+    div {
+      &:focus {
+        outline: 0;
+      }
+    }
+  }
+
+  .slick-active {
+    #{$root}_dot {
+      background-color: $cool-black;
+      border-radius: 4px;
+      width: rem(32);
+    }
+  }
+
+  .slick-dots {
+    bottom: rem(-38);
+    display: flex !important;
+    justify-content: center;
+    @include mobile-down {
+      bottom: rem(-22);
+    }
+
+    li {
+      display: block;
+      height: auto;
+      margin: 0 3px;
+      width: auto;
+    }
+  }
+
+  .slick-arrow {
+    &.slick-disabled {
+      background: $white;
+      cursor: no-drop;
+      opacity: 0.5;
+    }
+  }
+}
