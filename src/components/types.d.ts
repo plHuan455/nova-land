@@ -55,12 +55,12 @@ type ColorStyle =
   | 'antiqueBronze'
   | 'urobilin'
   | 'arsenic'
-  | 'lavenderGray'
-  | 'dimGray'
   | 'jet'
   | 'black085'
   | 'darkMidnightBlue'
-  | 'deer';
+  | 'deer'
+  | 'dimGray'
+  | 'lavenderGray';
 
 type FontFamily = 'fontLexend' | 'fontNoto' | 'fontLato';
 

@@ -1,0 +1,38 @@
+.t-outStandingNumbers {
+  background-color: $white-smoke248;
+  background-image: url('~assets/images/bg_outStandingNumbers.png');
+  background-repeat: no-repeat;
+  padding: rem(100) 0;
+
+  &_list {
+    flex-wrap: wrap;
+    margin-top: rem(52);
+    @include adjust-flex(space-between, center);
+    @include mobile-down {
+      @include adjust-flex;
+      margin: rem(24) rem(-8) rem(-8);
+    }
+
+    &-item {
+      position: relative;
+      @include mobile-down {
+        flex: 0 0 calc(100% / 5);
+        padding: rem(8);
+      }
+    }
+
+    &-line {
+      border-top: 1px solid $camel;
+      height: 1px;
+      max-width: rem(60);
+      width: 100%;
+      @include mobile-down {
+        flex: 0 0 calc(100% / 5);
+
+        &:nth-child(6) {
+          display: none;
+        }
+      }
+    }
+  }
+}
