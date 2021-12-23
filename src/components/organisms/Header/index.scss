@@ -1,0 +1,7 @@
+.o-header {
+  @include adjust-flex(center, center);
+
+  &_logo {
+    width: rem(78.78);
+  }
+}
