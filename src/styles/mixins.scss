@@ -1,4 +1,4 @@
-@mixin text-overflow ($number: 2) {
+@mixin text-overflow($number: 2) {
   display: box;
   -webkit-line-clamp: ($number);
   overflow: hidden;
@@ -38,7 +38,7 @@
   }
 
   // For Internet Explorer
-  
+
   scrollbar-face-color: $thumb-color;
   scrollbar-track-color: $track-color;
 }
@@ -139,6 +139,7 @@
 
 $colors-design: (
   'white': $white,
+  'raisinBlack': $raisin-black,
 );
 
 @mixin style-color {

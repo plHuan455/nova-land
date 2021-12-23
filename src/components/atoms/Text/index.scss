@@ -1,0 +1,17 @@
+.a-text {
+  @include font-base(14, 22);
+  @include mobile-down {
+    @include font-base(12, 20);
+  }
+
+  &-16x24 {
+    @include font-base(16, 24);
+    @include mobile-down {
+      @include font-base(14, 22);
+    }
+  }
+
+  @include style-color();
+  @include style-font-weight();
+  @include style-general();
+}
