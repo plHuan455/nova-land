@@ -29,7 +29,7 @@
   }
 
   &-blueLinear {
-    background-image: $outStandingNumber-linear;
+    background-image: $outstanding-number-linear;
     @include prefixed(background-clip, text);
     -webkit-text-fill-color: transparent;
   }
