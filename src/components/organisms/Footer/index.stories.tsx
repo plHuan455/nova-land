@@ -14,6 +14,12 @@ export default {
 
 export const normal: Story = () => (
   <BrowserRouter>
-    <Footer footerLink={footerMenuData} />
+    <Footer
+      externalLink={{
+        privacy: '/',
+        policy: '/',
+      }}
+      footerLink={footerMenuData}
+    />
   </BrowserRouter>
 );

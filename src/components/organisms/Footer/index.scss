@@ -71,14 +71,30 @@
         }
       }
 
+      &_wrap:last-child {
+        @include mobile-down {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
+
       &_list {
         list-style: none;
+        margin-bottom: 0;
         margin-top: rem(16);
         padding-left: 0;
       }
 
       &_nav {
         position: relative;
+      }
+
+      &_icon {
+        display: flex;
+        justify-content: space-between;
+        margin-top: rem(16);
+        max-width: rem(170);
+        padding: 0;
       }
     }
 
@@ -103,17 +119,70 @@
     &_contact {
       margin-top: rem(30);
       @include break-min(1200px) {
-        @include adjust-flex(space-between, center);
+        @include adjust-flex(unset, center);
       }
       @include mobile-down {
         margin-top: rem(14);
       }
 
       &_item {
+        position: relative;
         @include adjust-flex(unset, center);
   
         .a-text + * {
           margin-left: rem(8);
+        }
+      }
+
+      &_item:last-child {
+        @include desktop-up {
+          padding-left: rem(30);
+        }
+      }
+
+      &_item:last-child::before {
+        @include desktop-up {
+          background-color: $white07;
+          bottom: 3px;
+          content: '';
+          left: rem(14);
+          position: absolute;
+          top: 3px;
+          width: 1.5px;
+        }
+      }
+    }
+  }
+
+  &_bottom {
+    background-color: $black04;
+    padding-bottom: rem(15);
+    padding-top: rem(18);
+
+    &_wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &_policy {
+      display: flex;
+
+      &_item {
+        position: relative;
+      }
+
+      &_item:last-child {
+        padding-left: rem(30);
+
+        &::before {
+          background-color: $white07;
+          bottom: 3px;
+          content: '';
+          left: rem(14);
+          position: absolute;
+          top: 3px;
+          width: 1.5px;
         }
       }
     }

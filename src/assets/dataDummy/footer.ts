@@ -65,6 +65,24 @@ const footerMenuData: MenuFooterTypes[] = [
   },
   {
     title: 'THEO DÕI NOVALAND TRÊN',
+    hasIcon: true,
+    link: [
+      {
+        href: '/',
+        title: 'zalo',
+        icon: 'zalo',
+      },
+      {
+        href: '/',
+        title: 'youtube',
+        icon: 'youtube',
+      },
+      {
+        href: '/',
+        title: 'facebook',
+        icon: 'facebook',
+      },
+    ],
   },
 ];
 

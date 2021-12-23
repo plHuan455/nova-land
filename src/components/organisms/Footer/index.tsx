@@ -6,6 +6,8 @@ import Container, { CustomCol, CustomRow } from '../Container';
 import bgFooter from 'assets/images/bg-footer.png';
 import logoImg from 'assets/images/footer-logo.png';
 import Button from 'components/atoms/Button';
+import Heading from 'components/atoms/Heading';
+import Icon, { IconName } from 'components/atoms/Icon';
 import Image from 'components/atoms/Image';
 import Input from 'components/atoms/Input';
 import Link from 'components/atoms/Link';
@@ -13,6 +15,7 @@ import Text from 'components/atoms/Text';
 
 export type MenuFooterTypes = {
   title: string;
+  hasIcon?: boolean;
   link?: {
     href: string;
     title?: string;
@@ -21,9 +24,13 @@ export type MenuFooterTypes = {
 }
 interface FooterProps {
   footerLink?: MenuFooterTypes[];
+  externalLink?: {
+    policy: string;
+    privacy: string;
+  }
 }
 
-const Footer: React.FC<FooterProps> = ({ footerLink }) => (
+const Footer: React.FC<FooterProps> = ({ footerLink, externalLink }) => (
   <footer className="o-footer" style={{ backgroundImage: `url(${bgFooter})` }}>
     <div className="o-footer_background">
       <img src={bgFooter} alt="background footer" />
@@ -43,9 +50,9 @@ const Footer: React.FC<FooterProps> = ({ footerLink }) => (
                 </div>
                 {/* Info  */}
                 <div className="o-footer_main_info">
-                  <Text modifiers={['400', 'white', 'uppercase']}>
+                  <Heading type="h3" modifiers={['400', 'white', 'uppercase', '14x22']}>
                     CÔNG TY CỔ PHẦN TẬP ĐOÀN ĐẦU TƯ ĐỊA ỐC NOVA
-                  </Text>
+                  </Heading>
                   <div className="mt-8">
                     <Text
                       modifiers={['400', 'white', 'opacity07']}
@@ -114,36 +121,78 @@ const Footer: React.FC<FooterProps> = ({ footerLink }) => (
         {/* Bottom  */}
         <div className="o-footer_main_menu_bottom">
           {
-          footerLink && footerLink.map((val, idx) => (
-            <div className="o-footer_main_menu_wrap" key={idx.toString()}>
-              <div className="o-footer_main_menu_title">
-                {val.title}
-              </div>
-              <ul className="o-footer_main_menu_list">
-                {
-                  val.link && val.link.map((item, i) => (
-                    <li className="o-footer_main_menu_nav" key={i.toString()}>
-                      <Link href="/">
-                        <Text modifiers={['lavenderGray', '400']} isInline>
-                          {item.title}
-                        </Text>
-                      </Link>
-                    </li>
-                  ))
-                }
-              </ul>
-            </div>
-          ))
-        }
+              footerLink && footerLink.map((val, idx) => (
+                <div className="o-footer_main_menu_wrap" key={idx.toString()}>
+                  <div className="o-footer_main_menu_title">
+                    <Heading type="h4" modifiers={['white', '16x24', '700', 'uppercase']}>
+                      {val.title}
+                    </Heading>
+                  </div>
+                  <ul className={val.hasIcon ? 'o-footer_main_menu_icon' : 'o-footer_main_menu_list'}>
+                    {
+                      val.link && val.link.map((item, i) => {
+                        if (item.icon) {
+                          return (
+                            <div className="o-footer_main_menu_icon_item" key={i.toString()}>
+                              <Link href={item.href} title={item.title}>
+                                <Icon iconName={item.icon as IconName} size="40" />
+                              </Link>
+                            </div>
+                          );
+                        }
+                        return (
+                          <li className="o-footer_main_menu_nav" key={i.toString()}>
+                            <Link href={item.href}>
+                              <Text modifiers={['lavenderGray', '400']} isInline>
+                                {item.title}
+                              </Text>
+                            </Link>
+                          </li>
+                        );
+                      })
+                    }
+                  </ul>
+                </div>
+              ))
+            }
         </div>
       </div>
 
     </Container>
+    <div className="o-footer_bottom">
+      <Container>
+        <div className="o-footer_bottom_wrap">
+          <div className="o-footer_bottom_policy">
+            <div className="o-footer_bottom_policy_item">
+              <Link href={externalLink?.privacy}>
+                <Text modifiers={['400', 'white', 'opacity07']}>
+                  Chính sách bảo mật
+                </Text>
+              </Link>
+            </div>
+            <div className="o-footer_bottom_policy_item">
+              <Link href={externalLink?.policy}>
+                <Text modifiers={['400', 'white', 'opacity07']}>
+                  Điều khoản khách hàng
+                </Text>
+              </Link>
+            </div>
+          </div>
+          <div className="o-footer_bottom_copyright">
+            <Text modifiers={['400', 'white', 'opacity07']}>
+              © 2021. Bản quyền thuộc về Tập đoàn Novaland (Việt Nam).
+              Tất cả các quyền được bảo hộ.
+            </Text>
+          </div>
+        </div>
+      </Container>
+    </div>
   </footer>
 );
 
 Footer.defaultProps = {
   footerLink: undefined,
+  externalLink: undefined,
 };
 
 export default Footer;
