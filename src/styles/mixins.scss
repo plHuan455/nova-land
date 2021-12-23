@@ -157,6 +157,8 @@ $colors-design: (
   'cyberGrape': $cyber-grape,
   'antiqueBronze': $antique-bronze,
   'urobilin': $urobilin,
+  "dimGray": $dim-gray,
+  "jet": $jet,
 );
 
 @mixin style-color {
@@ -186,4 +188,17 @@ $colors-design: (
   }
 
   #{$property}: #{$value};
+}
+
+$font-design: (
+  "fontLexend": $font-lexend,
+  "fontNoto": $font-noto,
+);
+
+@mixin style-font-family {
+  @each $name, $font in $font-design {
+    &-#{$name} {
+      font-family: $font;
+    }
+  }
 }
