@@ -21,7 +21,7 @@ const TransportationInfrastructure: React.FC<
   <div className="t-transportInfrastructure">
     <Container>
       <div className="t-transportInfrastructure_title">
-        <Heading modifiers={['32x48', '700', 'fontNoto']}>{title}</Heading>
+        <Heading modifiers={['32x48', '700', 'fontNoto', 'jet', 'uppercase']}>{title}</Heading>
       </div>
       <div className="t-transportInfrastructure_desc">
         <Text modifiers={['dimGray', '400', 'center']}>{desc}</Text>

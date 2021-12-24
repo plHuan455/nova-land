@@ -51,7 +51,8 @@ type ColorStyle =
   | 'urobilin'
   | 'arsenic'
   | 'lavenderGray'
-  | 'dimGray';
+  | 'dimGray'
+  | 'jet';
 
 type FontFamily = 'fontLexend' | 'fontNoto' | 'fontLato';
 
