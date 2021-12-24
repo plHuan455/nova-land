@@ -1,0 +1,127 @@
+.t-investmentCard {
+  border: rem(1) solid $gainsboro;
+  padding: rem(52) rem(40);
+
+  @include tablet-down {
+    padding: rem(22) rem(18);
+  }
+
+  &_icon {
+    align-items: center;
+    border: rem(2) solid $golden-brown;
+    border-radius: 50%;
+    display: flex;
+    height: rem(120);
+    justify-content: center;
+    width: rem(120);
+
+    @include tablet-down {
+      height: rem(90);
+      width: rem(90);
+    }
+  }
+
+  &_content {
+    flex-grow: 1;
+    margin: rem(32) 0 rem(24);
+
+    @include tablet-down {
+      margin: rem(20) 0 rem(15);
+    }
+  
+    @include mobile-down {
+      margin: rem(16) 0 rem(14);
+    }
+
+    &_item {
+      p {
+        margin: 0;
+      }
+
+      margin-top: rem(8);
+      opacity: 0.8;
+      @include text-overflow(2);
+    }
+  }
+}
+
+.t-investmentSector {
+  &_title {
+    margin-bottom: rem(52);
+
+    @include tablet-down {
+      margin-bottom: rem(40);
+    }
+
+    @include mobile-down {
+      margin-bottom: rem(25);
+    }
+
+    .a-heading {
+      width: 100%;
+    }
+  }
+
+  &_content {
+    margin-left: rem(-16);
+    margin-right: rem(-16);
+
+    .slick-prev {
+      background: $white-smoke2;
+      left: calc(-96 / 1366 * 100%);
+
+      @include desktop-down {
+        left: calc(-120 / 1366 * 100%);
+      }
+
+      @include tablet-down {
+        left: calc(-80 / 1366 * 100%);
+      }
+
+      @include mobile-down {
+        left: calc(-100 / 1366 * 100%);
+      }
+    }
+
+    .slick-next {
+      background: $white-smoke2;
+      right: calc(-120 / 1366 * 100%);
+
+      @include desktop-down {
+        right: calc(-150 / 1366 * 100%);
+      }
+
+      @include tablet-down {
+        right: calc(-80 / 1366 * 100%);
+      }
+
+      @include mobile-down {
+        right: calc(-100 / 1366 * 100%);
+      }
+    }
+
+    .o-carousel_arrow {
+      &:not(.slick-disabled):hover {
+        background: $metallic-sunburst;
+      }
+    }
+
+    .o-carousel {
+      @include max-desktop-down {
+        padding-left: rem(50);
+        padding-right: rem(50);
+      }
+
+      @include tablet-down {
+        padding-left: rem(20);
+        padding-right: rem(20);
+      }
+    }
+  }
+
+  &_item {
+    padding-bottom: rem(10);
+    padding-left: rem(16);
+    padding-right: rem(16);
+  }
+}

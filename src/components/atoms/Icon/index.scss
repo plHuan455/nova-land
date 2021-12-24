@@ -19,6 +19,11 @@
     width: rem(40);
   }
 
+  &-61 {
+    height: rem(61);
+    width: rem(61);
+  }
+
   &-facebook {
     background-image: url('~assets/icons/ic_facebook.svg');
   }
@@ -49,5 +54,9 @@
 
   &-eyeOpen {
     background-image: url('~assets/icons/ic_eye_open.svg');
+  }
+
+  &-building {
+    background-image: url('~assets/icons/ic_building.svg');
   }
 }
