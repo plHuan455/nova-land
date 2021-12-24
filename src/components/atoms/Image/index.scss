@@ -20,11 +20,15 @@
   }
 
   &-4x3 {
-    @include aspect-ratio(4,3);
+    @include aspect-ratio(4, 3);
   }
 
   &-16x9 {
-    @include aspect-ratio(16,9);
+    @include aspect-ratio(16, 9);
+  }
+
+  &-1126x376 {
+    @include aspect-ratio(1126, 376);
   }
 
   &-220x145 {
@@ -32,6 +36,6 @@
   }
 
   &-1371x620 {
-    @include aspect-ratio(1371,620);
+    @include aspect-ratio(1371, 620);
   }
 }
