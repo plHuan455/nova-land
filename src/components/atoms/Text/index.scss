@@ -1,5 +1,6 @@
 .a-text {
   margin: 0;
+  transition: $transition ease;
   @include font-base(14, 22);
   @include mobile-down {
     @include font-base(12, 20);

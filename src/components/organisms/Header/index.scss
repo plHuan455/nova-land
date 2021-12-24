@@ -1,7 +1,133 @@
 .o-header {
+  $root: &;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: $transition-long ease;
   @include adjust-flex(center, center);
+  
+  &.scrolled {
+    background-color: $white;
+    box-shadow: 0 3px 6px -4px $black012, 0 6px 16px $black088, 0 9px 28px 8px $black005;
+  }
 
   &_logo {
     width: rem(78.78);
+  }
+
+  &_wrapper {
+    @include adjust-flex(space-between, center);
+  }
+
+  &_right {
+    @include adjust-flex(unset, center);
+  }
+
+  &_nav {
+    list-style: none;
+    padding-left: 0;
+    @include adjust-flex(unset, center);
+
+    &_item {
+      margin-bottom: 0;
+      position: relative;
+
+      &:not(:first-child) {
+        margin-left: rem(24);
+      }
+    }
+
+    &_link {
+      display: block;
+      padding: rem(8);
+      position: relative;
+      z-index: $z-2;
+
+      &::before {
+        background: transparent url('~assets/icons/ic_polygon.svg') no-repeat center/100% auto;
+        content: '';
+        height: rem(40);
+        left: -5px;
+        opacity: 0;
+        position: absolute;
+        top: 1px;
+        transform: rotate(-90deg);
+        transition: $transition ease;
+        visibility: hidden;
+        width: rem(32);
+        z-index: $z-1;
+      }
+
+      &.active {
+        .a-text {
+          font-weight: 700;
+          text-shadow: none !important;
+        }
+      }
+
+      &:hover,
+      &.active {
+        opacity: 1;
+
+        &::before {
+          opacity: 1;
+          transform: rotate(0);
+          visibility: visible;
+        }
+
+        .a-text {
+          color: $dark-midnight-blue;
+          text-shadow: 0.5px 0.5px 0 $dark-midnight-blue, 0.5px 0.5px 0.5px $dark-midnight-blue;
+        }
+      }
+    }
+  }
+
+  &_search {
+    cursor: pointer;
+    margin-left: rem(16);
+    position: relative;
+
+    &_wrap {
+      position: relative;
+    }
+
+    &_panel {
+      min-width: rem(419);
+      opacity: 0;
+      position: absolute;
+      right: 0;
+      top: calc(100% + 16px);
+      visibility: hidden;
+
+      &.open {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &_languagepicker {
+    margin-left: rem(40);
+    position: relative;
+
+    &_value {
+      cursor: pointer;
+      @include adjust-flex(unset, center);
+    }
+
+    &_list {
+      list-style: none;
+      margin: 0;
+      padding-left: 0;
+      position: absolute;
+      right: 0;
+      top: calc(100% + 10px);
+
+      &_item {
+        margin: 0;
+      }
+    }
   }
 }

@@ -4,6 +4,8 @@ import { BrowserRouter } from 'react-router-dom';
 
 import Header from '.';
 
+import headerMenuDummy, { languageListDummy } from 'assets/dataDummy/header';
+
 export default {
   title: 'Components/organisms/Header',
   component: Header,
@@ -12,6 +14,16 @@ export default {
 
 export const normal: Story = () => (
   <BrowserRouter>
-    <Header />
+    <div style={{
+      height: '130vh',
+      backgroundColor: '#dbdbdb',
+    }}
+    >
+      <Header
+        languageList={languageListDummy}
+        headerMenu={headerMenuDummy}
+        languageSelected="VN"
+      />
+    </div>
   </BrowserRouter>
 );

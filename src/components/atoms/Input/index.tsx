@@ -16,7 +16,7 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
 
 const InputRef: React.ForwardRefRenderFunction<HTMLInputElement, InputProps> = ({
   type, error, disabled, placeholder, value, maxLength, autoComplete, name,
-  onChange, onBlur, onFocus,
+  onChange, onBlur, onFocus, onKeyPress,
 }, ref) => (
   <div className={mapModifiers('a-input',
     type,
@@ -37,6 +37,7 @@ const InputRef: React.ForwardRefRenderFunction<HTMLInputElement, InputProps> = (
         onBlur={onBlur}
         onFocus={onFocus}
         name={name}
+        onKeyPress={onKeyPress}
       />
     </div>
     {
