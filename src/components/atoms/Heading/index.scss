@@ -19,13 +19,12 @@
 
   &-32x48 {
     @include font-base(32, 48);
-
     @include tablet-down {
-      @include font-base(26, 32);
+      @include font-base(28, 44);
     }
 
     @include mobile-down {
-      @include font-base(24, 30);
+      @include font-base(24, 36);
     }
   }
 
