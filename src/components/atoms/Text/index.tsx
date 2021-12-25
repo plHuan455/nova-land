@@ -4,8 +4,12 @@ import mapModifiers from 'utils/functions';
 
 export type Sizes =
   | '16x24'
+  | '12x17'
 
-export type TextStyle = (GeneralTextStyle | Sizes)[];
+export type LetterSpacing =
+  | 'ls-005'
+
+export type TextStyle = (GeneralTextStyle | Sizes | LetterSpacing)[];
 
 interface TextProps {
   modifiers?: TextStyle;

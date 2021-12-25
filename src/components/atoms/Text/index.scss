@@ -4,11 +4,19 @@
     @include font-base(12, 20);
   }
 
+  &-ls-005 {
+    letter-spacing: 0.005em;
+  }
+
   &-16x24 {
     @include font-base(16, 24);
     @include mobile-down {
       @include font-base(14, 22);
     }
+  }
+
+  &-12x17 {
+    @include font-base(12, 17);
   }
 
   @include style-color();

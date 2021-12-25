@@ -106,6 +106,17 @@ exports[`Storyshots Components/atoms/Icon Normal 1`] = `
       className="a-icon a-icon-arrowNextGrey a-icon-24"
     />
   </div>
+  <div
+    style={
+      Object {
+        "marginLeft": 7,
+      }
+    }
+  >
+    <i
+      className="a-icon a-icon-eyeOpen a-icon-24"
+    />
+  </div>
 </div>
 `;
 
@@ -1035,452 +1046,1080 @@ exports[`Storyshots Components/organisms/Container Row Container 1`] = `
 </div>
 `;
 
-exports[`Storyshots Example/Button Large 1`] = `
-<button
-  className="storybook-button storybook-button--large storybook-button--secondary"
+exports[`Storyshots Components/organisms/Tabs Normal 1`] = `
+<div
   style={
     Object {
-      "backgroundColor": undefined,
+      "background": "#bfbfbf",
     }
   }
-  type="button"
 >
-  Button
-</button>
-`;
-
-exports[`Storyshots Example/Button Primary 1`] = `
-<button
-  className="storybook-button storybook-button--medium storybook-button--primary"
-  style={
-    Object {
-      "backgroundColor": undefined,
-    }
-  }
-  type="button"
->
-  Button
-</button>
-`;
-
-exports[`Storyshots Example/Button Secondary 1`] = `
-<button
-  className="storybook-button storybook-button--medium storybook-button--secondary"
-  style={
-    Object {
-      "backgroundColor": undefined,
-    }
-  }
-  type="button"
->
-  Button
-</button>
-`;
-
-exports[`Storyshots Example/Button Small 1`] = `
-<button
-  className="storybook-button storybook-button--small storybook-button--secondary"
-  style={
-    Object {
-      "backgroundColor": undefined,
-    }
-  }
-  type="button"
->
-  Button
-</button>
-`;
-
-exports[`Storyshots Example/Header Logged In 1`] = `
-<header>
   <div
-    className="wrapper"
+    className="container o-container"
   >
-    <div>
-      <svg
-        height="32"
-        viewBox="0 0 32 32"
-        width="32"
-        xmlns="http://www.w3.org/2000/svg"
+    <div
+      className="o-tabs"
+    >
+      <div
+        className="o-tabs_labels"
       >
-        <g
-          fill="none"
-          fillRule="evenodd"
+        <div
+          className="o-tabs_tab o-tabs_tab-active"
+          onClick={[Function]}
         >
-          <path
-            d="M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z"
-            fill="#FFF"
-          />
-          <path
-            d="M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z"
-            fill="#555AB9"
-          />
-          <path
-            d="M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z"
-            fill="#91BAF8"
-          />
-        </g>
-      </svg>
-      <h1>
-        Acme
-      </h1>
+          <span
+            className="o-tabs_label"
+          >
+            Tin Tập Đoàn
+          </span>
+        </div>
+        <div
+          className="o-tabs_tab"
+          onClick={[Function]}
+        >
+          <span
+            className="o-tabs_label"
+          >
+            Tin Thị Trường
+          </span>
+        </div>
+        <div
+          className="o-tabs_tab"
+          onClick={[Function]}
+        >
+          <span
+            className="o-tabs_label"
+          >
+            Tin Dự án
+          </span>
+        </div>
+      </div>
     </div>
-    <div>
-      <button
-        className="storybook-button storybook-button--small storybook-button--secondary"
-        style={
-          Object {
-            "backgroundColor": undefined,
-          }
-        }
-        type="button"
-      >
-        Log out
-      </button>
+    <div
+      className="o-tabs_panel o-tabs_panel-active"
+    >
+      Content 1
+    </div>
+    <div
+      className="o-tabs_panel"
+    >
+      Content 2
+    </div>
+    <div
+      className="o-tabs_panel"
+    >
+      Content 3
     </div>
   </div>
-</header>
+</div>
 `;
 
-exports[`Storyshots Example/Header Logged Out 1`] = `
-<header>
+exports[`Storyshots Components/templates/HomeNews Home News Card 1`] = `
+<div
+  style={
+    Object {
+      "margin": "30px",
+      "maxWidth": "547px",
+    }
+  }
+>
   <div
-    className="wrapper"
+    className="t-homeNewsCard"
   >
-    <div>
-      <svg
-        height="32"
-        viewBox="0 0 32 32"
-        width="32"
-        xmlns="http://www.w3.org/2000/svg"
+    <div
+      className="t-homeNewsCard_thumbnail"
+    >
+      <div
+        className="a-image a-image-1x1"
       >
-        <g
-          fill="none"
-          fillRule="evenodd"
-        >
-          <path
-            d="M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z"
-            fill="#FFF"
-          />
-          <path
-            d="M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z"
-            fill="#555AB9"
-          />
-          <path
-            d="M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z"
-            fill="#91BAF8"
-          />
-        </g>
-      </svg>
-      <h1>
-        Acme
-      </h1>
+        <img
+          alt="HomeNewsCard"
+          loading="lazy"
+          src="img_homeNewsCard.png"
+        />
+      </div>
     </div>
-    <div>
-      <button
-        className="storybook-button storybook-button--small storybook-button--secondary"
-        style={
-          Object {
-            "backgroundColor": undefined,
-          }
-        }
-        type="button"
+    <div
+      className="t-homeNewsCard_wrapper"
+    >
+      <div
+        className="t-homeNewsCard_title"
       >
-        Log in
-      </button>
-      <button
-        className="storybook-button storybook-button--small storybook-button--primary"
-        style={
-          Object {
-            "backgroundColor": undefined,
+        <p
+          className="a-text a-text-16x24 a-text-600 a-text-arsenic"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Người dân TP.HCM đón Giáng sinh sớm, check-in cùng cây thông 25 m",
+            }
           }
-        }
-        type="button"
+        />
+      </div>
+      <div
+        className="t-homeNewsCard_content"
       >
-        Sign up
-      </button>
+        <p
+          className="a-text a-text-400 a-text-arsenic"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Còn hơn một tháng nữa mới đến Giáng sinh, nhưng Novaland Gallery đã trang hoàng một tháng nữa mới đến Giáng sinh",
+            }
+          }
+        />
+      </div>
+      <div
+        className="t-homeNewsCard_divider"
+      />
+      <div
+        className="t-homeNewsCard_general"
+      >
+        <div
+          className="t-homeNewsCard_date"
+        >
+          <p
+            className="a-text a-text-12x17 a-text-400 a-text-ls-005 a-text-arsenic"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "23/11/2021",
+              }
+            }
+          />
+        </div>
+        <div
+          className="t-homeNewsCard_view"
+        >
+          <span
+            onClick={[Function]}
+          >
+            <i
+              className="a-icon a-icon-eyeOpen a-icon-14"
+            />
+          </span>
+          <div
+            className="t-homeNewsCard_view_total"
+          >
+            <p
+              className="a-text a-text-12x17 a-text-400 a-text-ls-005 a-text-arsenic"
+            >
+              ---
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</header>
+</div>
 `;
 
-exports[`Storyshots Example/Page Logged In 1`] = `
-<article>
-  <header>
+exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
+<div
+  className="t-homeNews"
+>
+  <div
+    className="container o-container"
+  >
     <div
-      className="wrapper"
+      className="t-homeNews_title"
     >
-      <div>
-        <svg
-          height="32"
-          viewBox="0 0 32 32"
-          width="32"
-          xmlns="http://www.w3.org/2000/svg"
+      <h2
+        className="a-heading a-heading-32x48 a-heading-700 a-heading-uppercase a-heading-arsenic a-heading-center"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "TIN TỨC",
+          }
+        }
+      />
+    </div>
+    <div
+      className="t-homeNews_wrapper"
+    >
+      <div
+        className="o-tabs"
+      >
+        <div
+          className="o-tabs_labels"
         >
-          <g
-            fill="none"
-            fillRule="evenodd"
+          <div
+            className="o-tabs_tab o-tabs_tab-active"
+            onClick={[Function]}
           >
-            <path
-              d="M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z"
-              fill="#FFF"
-            />
-            <path
-              d="M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z"
-              fill="#555AB9"
-            />
-            <path
-              d="M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z"
-              fill="#91BAF8"
-            />
-          </g>
-        </svg>
-        <h1>
-          Acme
-        </h1>
-      </div>
-      <div>
-        <button
-          className="storybook-button storybook-button--small storybook-button--secondary"
-          style={
-            Object {
-              "backgroundColor": undefined,
-            }
-          }
-          type="button"
-        >
-          Log out
-        </button>
-      </div>
-    </div>
-  </header>
-  <section>
-    <h2>
-      Pages in Storybook
-    </h2>
-    <p>
-      We recommend building UIs with a
-       
-      <a
-        href="https://componentdriven.org"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <strong>
-          component-driven
-        </strong>
-      </a>
-       
-      process starting with atomic components and ending with pages.
-    </p>
-    <p>
-      Render pages with mock data. This makes it easy to build and review page states without needing to navigate to them in your app. Here are some handy patterns for managing page data in Storybook:
-    </p>
-    <ul>
-      <li>
-        Use a higher-level connected component. Storybook helps you compose such data from the "args" of child component stories
-      </li>
-      <li>
-        Assemble data in the page component from your services. You can mock these services out using Storybook.
-      </li>
-    </ul>
-    <p>
-      Get a guided tutorial on component-driven development at
-       
-      <a
-        href="https://storybook.js.org/tutorials/"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        Storybook tutorials
-      </a>
-      . Read more in the
-       
-      <a
-        href="https://storybook.js.org/docs"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        docs
-      </a>
-      .
-    </p>
-    <div
-      className="tip-wrapper"
-    >
-      <span
-        className="tip"
-      >
-        Tip
-      </span>
-       
-      Adjust the width of the canvas with the
-       
-      <svg
-        height="10"
-        viewBox="0 0 12 12"
-        width="10"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <g
-          fill="none"
-          fillRule="evenodd"
-        >
-          <path
-            d="M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z"
-            fill="#999"
-            id="a"
-          />
-        </g>
-      </svg>
-      Viewports addon in the toolbar
-    </div>
-  </section>
-</article>
-`;
-
-exports[`Storyshots Example/Page Logged Out 1`] = `
-<article>
-  <header>
-    <div
-      className="wrapper"
-    >
-      <div>
-        <svg
-          height="32"
-          viewBox="0 0 32 32"
-          width="32"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="none"
-            fillRule="evenodd"
+            <span
+              className="o-tabs_label"
+            >
+              Tin Tập Đoàn
+            </span>
+          </div>
+          <div
+            className="o-tabs_tab"
+            onClick={[Function]}
           >
-            <path
-              d="M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z"
-              fill="#FFF"
-            />
-            <path
-              d="M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z"
-              fill="#555AB9"
-            />
-            <path
-              d="M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z"
-              fill="#91BAF8"
-            />
-          </g>
-        </svg>
-        <h1>
-          Acme
-        </h1>
+            <span
+              className="o-tabs_label"
+            >
+              Tin Thị Trường
+            </span>
+          </div>
+          <div
+            className="o-tabs_tab"
+            onClick={[Function]}
+          >
+            <span
+              className="o-tabs_label"
+            >
+              Tin Dự Án
+            </span>
+          </div>
+        </div>
       </div>
-      <div>
-        <button
-          className="storybook-button storybook-button--small storybook-button--secondary"
-          style={
-            Object {
-              "backgroundColor": undefined,
-            }
-          }
-          type="button"
+      <div
+        className="o-tabs_panel o-tabs_panel-active"
+      >
+        <div
+          className="t-homeNews_content"
         >
-          Log in
-        </button>
-        <button
-          className="storybook-button storybook-button--small storybook-button--primary"
-          style={
-            Object {
-              "backgroundColor": undefined,
-            }
-          }
-          type="button"
+          <div
+            className="t-homeNews_item"
+          >
+            <div
+              className="t-homeNewsCard"
+            >
+              <div
+                className="t-homeNewsCard_thumbnail"
+              >
+                <div
+                  className="a-image a-image-1x1"
+                >
+                  <img
+                    alt="HomeNewsCard"
+                    loading="lazy"
+                    src="img_homeNewsCard.png"
+                  />
+                </div>
+              </div>
+              <div
+                className="t-homeNewsCard_wrapper"
+              >
+                <div
+                  className="t-homeNewsCard_title"
+                >
+                  <p
+                    className="a-text a-text-16x24 a-text-600 a-text-arsenic"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "Người dân TP.HCM đón Giáng sinh sớm, check-in cùng cây thông 25 m",
+                      }
+                    }
+                  />
+                </div>
+                <div
+                  className="t-homeNewsCard_content"
+                >
+                  <p
+                    className="a-text a-text-400 a-text-arsenic"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "Còn hơn một tháng nữa mới đến Giáng sinh, nhưng Novaland Gallery đã trang hoàng một tháng nữa mới đến Giáng sinh",
+                      }
+                    }
+                  />
+                </div>
+                <div
+                  className="t-homeNewsCard_divider"
+                />
+                <div
+                  className="t-homeNewsCard_general"
+                >
+                  <div
+                    className="t-homeNewsCard_date"
+                  >
+                    <p
+                      className="a-text a-text-12x17 a-text-400 a-text-ls-005 a-text-arsenic"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "23/11/2021",
+                        }
+                      }
+                    />
+                  </div>
+                  <div
+                    className="t-homeNewsCard_view"
+                  >
+                    <span
+                      onClick={[Function]}
+                    >
+                      <i
+                        className="a-icon a-icon-eyeOpen a-icon-14"
+                      />
+                    </span>
+                    <div
+                      className="t-homeNewsCard_view_total"
+                    >
+                      <p
+                        className="a-text a-text-12x17 a-text-400 a-text-ls-005 a-text-arsenic"
+                      >
+                        ---
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="t-homeNews_item"
+          >
+            <div
+              className="t-homeNewsCard"
+            >
+              <div
+                className="t-homeNewsCard_thumbnail"
+              >
+                <div
+                  className="a-image a-image-1x1"
+                >
+                  <img
+                    alt="HomeNewsCard"
+                    loading="lazy"
+                    src="img_homeNewsCard2.png"
+                  />
+                </div>
+              </div>
+              <div
+                className="t-homeNewsCard_wrapper"
+              >
+                <div
+                  className="t-homeNewsCard_title"
+                >
+                  <p
+                    className="a-text a-text-16x24 a-text-600 a-text-arsenic"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "Sắp khởi công đường Hàm Kiệm – Tiến Thành",
+                      }
+                    }
+                  />
+                </div>
+                <div
+                  className="t-homeNewsCard_content"
+                >
+                  <p
+                    className="a-text a-text-400 a-text-arsenic"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "Ban Quản lý Dự án và xây dựng công trình giao thông thuộc Sở Giao thông vận tải xây dựng công trình giao thông thuộc Sở Giao thông vận tải",
+                      }
+                    }
+                  />
+                </div>
+                <div
+                  className="t-homeNewsCard_divider"
+                />
+                <div
+                  className="t-homeNewsCard_general"
+                >
+                  <div
+                    className="t-homeNewsCard_date"
+                  >
+                    <p
+                      className="a-text a-text-12x17 a-text-400 a-text-ls-005 a-text-arsenic"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "23/11/2021",
+                        }
+                      }
+                    />
+                  </div>
+                  <div
+                    className="t-homeNewsCard_view"
+                  >
+                    <span
+                      onClick={[Function]}
+                    >
+                      <i
+                        className="a-icon a-icon-eyeOpen a-icon-14"
+                      />
+                    </span>
+                    <div
+                      className="t-homeNewsCard_view_total"
+                    >
+                      <p
+                        className="a-text a-text-12x17 a-text-400 a-text-ls-005 a-text-arsenic"
+                      >
+                        ---
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="t-homeNews_item"
+          >
+            <div
+              className="t-homeNewsCard"
+            >
+              <div
+                className="t-homeNewsCard_thumbnail"
+              >
+                <div
+                  className="a-image a-image-1x1"
+                >
+                  <img
+                    alt="HomeNewsCard"
+                    loading="lazy"
+                    src="img_homeNewsCard3.png"
+                  />
+                </div>
+              </div>
+              <div
+                className="t-homeNewsCard_wrapper"
+              >
+                <div
+                  className="t-homeNewsCard_title"
+                >
+                  <p
+                    className="a-text a-text-16x24 a-text-600 a-text-arsenic"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "Nhiều hạng mục của sân bay Long Thành sẽ khởi công năm sau",
+                      }
+                    }
+                  />
+                </div>
+                <div
+                  className="t-homeNewsCard_content"
+                >
+                  <p
+                    className="a-text a-text-400 a-text-arsenic"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "Báo cáo Quốc hội việc triển khai dự án sân bay Long Thành, Chính phủ cho biết mó hội việc triển khai dự án sân bay Long Thành, Chính phủ cho biết",
+                      }
+                    }
+                  />
+                </div>
+                <div
+                  className="t-homeNewsCard_divider"
+                />
+                <div
+                  className="t-homeNewsCard_general"
+                >
+                  <div
+                    className="t-homeNewsCard_date"
+                  >
+                    <p
+                      className="a-text a-text-12x17 a-text-400 a-text-ls-005 a-text-arsenic"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "23/11/2021",
+                        }
+                      }
+                    />
+                  </div>
+                  <div
+                    className="t-homeNewsCard_view"
+                  >
+                    <span
+                      onClick={[Function]}
+                    >
+                      <i
+                        className="a-icon a-icon-eyeOpen a-icon-14"
+                      />
+                    </span>
+                    <div
+                      className="t-homeNewsCard_view_total"
+                    >
+                      <p
+                        className="a-text a-text-12x17 a-text-400 a-text-ls-005 a-text-arsenic"
+                      >
+                        ---
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="t-homeNews_button"
         >
-          Sign up
-        </button>
+          <button
+            className="a-button a-button-outline"
+            disabled={false}
+            type="button"
+          >
+            Xem tất cả bài viết
+          </button>
+        </div>
+      </div>
+      <div
+        className="o-tabs_panel"
+      >
+        <div
+          className="t-homeNews_content"
+        >
+          <div
+            className="t-homeNews_item"
+          >
+            <div
+              className="t-homeNewsCard"
+            >
+              <div
+                className="t-homeNewsCard_thumbnail"
+              >
+                <div
+                  className="a-image a-image-1x1"
+                >
+                  <img
+                    alt="HomeNewsCard"
+                    loading="lazy"
+                    src="img_homeNewsCard.png"
+                  />
+                </div>
+              </div>
+              <div
+                className="t-homeNewsCard_wrapper"
+              >
+                <div
+                  className="t-homeNewsCard_title"
+                >
+                  <p
+                    className="a-text a-text-16x24 a-text-600 a-text-arsenic"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "Người dân TP.HCM đón Giáng sinh sớm, check-in cùng cây thông 25 m",
+                      }
+                    }
+                  />
+                </div>
+                <div
+                  className="t-homeNewsCard_content"
+                >
+                  <p
+                    className="a-text a-text-400 a-text-arsenic"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "Còn hơn một tháng nữa mới đến Giáng sinh, nhưng Novaland Gallery đã trang hoàng một tháng nữa mới đến Giáng sinh",
+                      }
+                    }
+                  />
+                </div>
+                <div
+                  className="t-homeNewsCard_divider"
+                />
+                <div
+                  className="t-homeNewsCard_general"
+                >
+                  <div
+                    className="t-homeNewsCard_date"
+                  >
+                    <p
+                      className="a-text a-text-12x17 a-text-400 a-text-ls-005 a-text-arsenic"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "23/11/2021",
+                        }
+                      }
+                    />
+                  </div>
+                  <div
+                    className="t-homeNewsCard_view"
+                  >
+                    <span
+                      onClick={[Function]}
+                    >
+                      <i
+                        className="a-icon a-icon-eyeOpen a-icon-14"
+                      />
+                    </span>
+                    <div
+                      className="t-homeNewsCard_view_total"
+                    >
+                      <p
+                        className="a-text a-text-12x17 a-text-400 a-text-ls-005 a-text-arsenic"
+                      >
+                        ---
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="t-homeNews_item"
+          >
+            <div
+              className="t-homeNewsCard"
+            >
+              <div
+                className="t-homeNewsCard_thumbnail"
+              >
+                <div
+                  className="a-image a-image-1x1"
+                >
+                  <img
+                    alt="HomeNewsCard"
+                    loading="lazy"
+                    src="img_homeNewsCard2.png"
+                  />
+                </div>
+              </div>
+              <div
+                className="t-homeNewsCard_wrapper"
+              >
+                <div
+                  className="t-homeNewsCard_title"
+                >
+                  <p
+                    className="a-text a-text-16x24 a-text-600 a-text-arsenic"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "Sắp khởi công đường Hàm Kiệm – Tiến Thành",
+                      }
+                    }
+                  />
+                </div>
+                <div
+                  className="t-homeNewsCard_content"
+                >
+                  <p
+                    className="a-text a-text-400 a-text-arsenic"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "Ban Quản lý Dự án và xây dựng công trình giao thông thuộc Sở Giao thông vận tải xây dựng công trình giao thông thuộc Sở Giao thông vận tải",
+                      }
+                    }
+                  />
+                </div>
+                <div
+                  className="t-homeNewsCard_divider"
+                />
+                <div
+                  className="t-homeNewsCard_general"
+                >
+                  <div
+                    className="t-homeNewsCard_date"
+                  >
+                    <p
+                      className="a-text a-text-12x17 a-text-400 a-text-ls-005 a-text-arsenic"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "23/11/2021",
+                        }
+                      }
+                    />
+                  </div>
+                  <div
+                    className="t-homeNewsCard_view"
+                  >
+                    <span
+                      onClick={[Function]}
+                    >
+                      <i
+                        className="a-icon a-icon-eyeOpen a-icon-14"
+                      />
+                    </span>
+                    <div
+                      className="t-homeNewsCard_view_total"
+                    >
+                      <p
+                        className="a-text a-text-12x17 a-text-400 a-text-ls-005 a-text-arsenic"
+                      >
+                        ---
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="t-homeNews_item"
+          >
+            <div
+              className="t-homeNewsCard"
+            >
+              <div
+                className="t-homeNewsCard_thumbnail"
+              >
+                <div
+                  className="a-image a-image-1x1"
+                >
+                  <img
+                    alt="HomeNewsCard"
+                    loading="lazy"
+                    src="img_homeNewsCard3.png"
+                  />
+                </div>
+              </div>
+              <div
+                className="t-homeNewsCard_wrapper"
+              >
+                <div
+                  className="t-homeNewsCard_title"
+                >
+                  <p
+                    className="a-text a-text-16x24 a-text-600 a-text-arsenic"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "Nhiều hạng mục của sân bay Long Thành sẽ khởi công năm sau",
+                      }
+                    }
+                  />
+                </div>
+                <div
+                  className="t-homeNewsCard_content"
+                >
+                  <p
+                    className="a-text a-text-400 a-text-arsenic"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "Báo cáo Quốc hội việc triển khai dự án sân bay Long Thành, Chính phủ cho biết mó hội việc triển khai dự án sân bay Long Thành, Chính phủ cho biết",
+                      }
+                    }
+                  />
+                </div>
+                <div
+                  className="t-homeNewsCard_divider"
+                />
+                <div
+                  className="t-homeNewsCard_general"
+                >
+                  <div
+                    className="t-homeNewsCard_date"
+                  >
+                    <p
+                      className="a-text a-text-12x17 a-text-400 a-text-ls-005 a-text-arsenic"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "23/11/2021",
+                        }
+                      }
+                    />
+                  </div>
+                  <div
+                    className="t-homeNewsCard_view"
+                  >
+                    <span
+                      onClick={[Function]}
+                    >
+                      <i
+                        className="a-icon a-icon-eyeOpen a-icon-14"
+                      />
+                    </span>
+                    <div
+                      className="t-homeNewsCard_view_total"
+                    >
+                      <p
+                        className="a-text a-text-12x17 a-text-400 a-text-ls-005 a-text-arsenic"
+                      >
+                        ---
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="t-homeNews_item"
+          >
+            <div
+              className="t-homeNewsCard"
+            >
+              <div
+                className="t-homeNewsCard_thumbnail"
+              >
+                <div
+                  className="a-image a-image-1x1"
+                >
+                  <img
+                    alt="HomeNewsCard"
+                    loading="lazy"
+                    src="img_homeNewsCard4.png"
+                  />
+                </div>
+              </div>
+              <div
+                className="t-homeNewsCard_wrapper"
+              >
+                <div
+                  className="t-homeNewsCard_title"
+                >
+                  <p
+                    className="a-text a-text-16x24 a-text-600 a-text-arsenic"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "Doanh nghiệp địa ốc bắt tay ngân hàng tăng lợi ích cho người mua",
+                      }
+                    }
+                  />
+                </div>
+                <div
+                  className="t-homeNewsCard_content"
+                >
+                  <p
+                    className="a-text a-text-400 a-text-arsenic"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "Hợp tác giữa doanh nghiệp bất động sản và ngân hàng tạo giải pháp tín dụng giàu giữa doanh nghiệp bất động sản và ngân hàng tạo giải pháp tín dụng giàu",
+                      }
+                    }
+                  />
+                </div>
+                <div
+                  className="t-homeNewsCard_divider"
+                />
+                <div
+                  className="t-homeNewsCard_general"
+                >
+                  <div
+                    className="t-homeNewsCard_date"
+                  >
+                    <p
+                      className="a-text a-text-12x17 a-text-400 a-text-ls-005 a-text-arsenic"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "23/11/2021",
+                        }
+                      }
+                    />
+                  </div>
+                  <div
+                    className="t-homeNewsCard_view"
+                  >
+                    <span
+                      onClick={[Function]}
+                    >
+                      <i
+                        className="a-icon a-icon-eyeOpen a-icon-14"
+                      />
+                    </span>
+                    <div
+                      className="t-homeNewsCard_view_total"
+                    >
+                      <p
+                        className="a-text a-text-12x17 a-text-400 a-text-ls-005 a-text-arsenic"
+                      >
+                        ---
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="t-homeNews_button"
+        >
+          <button
+            className="a-button a-button-outline"
+            disabled={false}
+            type="button"
+          >
+            Xem tất cả bài viết
+          </button>
+        </div>
+      </div>
+      <div
+        className="o-tabs_panel"
+      >
+        <div
+          className="t-homeNews_content"
+        >
+          <div
+            className="t-homeNews_item"
+          >
+            <div
+              className="t-homeNewsCard"
+            >
+              <div
+                className="t-homeNewsCard_thumbnail"
+              >
+                <div
+                  className="a-image a-image-1x1"
+                >
+                  <img
+                    alt="HomeNewsCard"
+                    loading="lazy"
+                    src="img_homeNewsCard.png"
+                  />
+                </div>
+              </div>
+              <div
+                className="t-homeNewsCard_wrapper"
+              >
+                <div
+                  className="t-homeNewsCard_title"
+                >
+                  <p
+                    className="a-text a-text-16x24 a-text-600 a-text-arsenic"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "Người dân TP.HCM đón Giáng sinh sớm, check-in cùng cây thông 25 m",
+                      }
+                    }
+                  />
+                </div>
+                <div
+                  className="t-homeNewsCard_content"
+                >
+                  <p
+                    className="a-text a-text-400 a-text-arsenic"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "Còn hơn một tháng nữa mới đến Giáng sinh, nhưng Novaland Gallery đã trang hoàng một tháng nữa mới đến Giáng sinh",
+                      }
+                    }
+                  />
+                </div>
+                <div
+                  className="t-homeNewsCard_divider"
+                />
+                <div
+                  className="t-homeNewsCard_general"
+                >
+                  <div
+                    className="t-homeNewsCard_date"
+                  >
+                    <p
+                      className="a-text a-text-12x17 a-text-400 a-text-ls-005 a-text-arsenic"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "23/11/2021",
+                        }
+                      }
+                    />
+                  </div>
+                  <div
+                    className="t-homeNewsCard_view"
+                  >
+                    <span
+                      onClick={[Function]}
+                    >
+                      <i
+                        className="a-icon a-icon-eyeOpen a-icon-14"
+                      />
+                    </span>
+                    <div
+                      className="t-homeNewsCard_view_total"
+                    >
+                      <p
+                        className="a-text a-text-12x17 a-text-400 a-text-ls-005 a-text-arsenic"
+                      >
+                        ---
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="t-homeNews_item"
+          >
+            <div
+              className="t-homeNewsCard"
+            >
+              <div
+                className="t-homeNewsCard_thumbnail"
+              >
+                <div
+                  className="a-image a-image-1x1"
+                >
+                  <img
+                    alt="HomeNewsCard"
+                    loading="lazy"
+                    src="img_homeNewsCard2.png"
+                  />
+                </div>
+              </div>
+              <div
+                className="t-homeNewsCard_wrapper"
+              >
+                <div
+                  className="t-homeNewsCard_title"
+                >
+                  <p
+                    className="a-text a-text-16x24 a-text-600 a-text-arsenic"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "Sắp khởi công đường Hàm Kiệm – Tiến Thành",
+                      }
+                    }
+                  />
+                </div>
+                <div
+                  className="t-homeNewsCard_content"
+                >
+                  <p
+                    className="a-text a-text-400 a-text-arsenic"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "Ban Quản lý Dự án và xây dựng công trình giao thông thuộc Sở Giao thông vận tải xây dựng công trình giao thông thuộc Sở Giao thông vận tải",
+                      }
+                    }
+                  />
+                </div>
+                <div
+                  className="t-homeNewsCard_divider"
+                />
+                <div
+                  className="t-homeNewsCard_general"
+                >
+                  <div
+                    className="t-homeNewsCard_date"
+                  >
+                    <p
+                      className="a-text a-text-12x17 a-text-400 a-text-ls-005 a-text-arsenic"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "23/11/2021",
+                        }
+                      }
+                    />
+                  </div>
+                  <div
+                    className="t-homeNewsCard_view"
+                  >
+                    <span
+                      onClick={[Function]}
+                    >
+                      <i
+                        className="a-icon a-icon-eyeOpen a-icon-14"
+                      />
+                    </span>
+                    <div
+                      className="t-homeNewsCard_view_total"
+                    >
+                      <p
+                        className="a-text a-text-12x17 a-text-400 a-text-ls-005 a-text-arsenic"
+                      >
+                        ---
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="t-homeNews_button"
+        >
+          <button
+            className="a-button a-button-outline"
+            disabled={false}
+            type="button"
+          >
+            Xem tất cả bài viết
+          </button>
+        </div>
       </div>
     </div>
-  </header>
-  <section>
-    <h2>
-      Pages in Storybook
-    </h2>
-    <p>
-      We recommend building UIs with a
-       
-      <a
-        href="https://componentdriven.org"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <strong>
-          component-driven
-        </strong>
-      </a>
-       
-      process starting with atomic components and ending with pages.
-    </p>
-    <p>
-      Render pages with mock data. This makes it easy to build and review page states without needing to navigate to them in your app. Here are some handy patterns for managing page data in Storybook:
-    </p>
-    <ul>
-      <li>
-        Use a higher-level connected component. Storybook helps you compose such data from the "args" of child component stories
-      </li>
-      <li>
-        Assemble data in the page component from your services. You can mock these services out using Storybook.
-      </li>
-    </ul>
-    <p>
-      Get a guided tutorial on component-driven development at
-       
-      <a
-        href="https://storybook.js.org/tutorials/"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        Storybook tutorials
-      </a>
-      . Read more in the
-       
-      <a
-        href="https://storybook.js.org/docs"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        docs
-      </a>
-      .
-    </p>
-    <div
-      className="tip-wrapper"
-    >
-      <span
-        className="tip"
-      >
-        Tip
-      </span>
-       
-      Adjust the width of the canvas with the
-       
-      <svg
-        height="10"
-        viewBox="0 0 12 12"
-        width="10"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <g
-          fill="none"
-          fillRule="evenodd"
-        >
-          <path
-            d="M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z"
-            fill="#999"
-            id="a"
-          />
-        </g>
-      </svg>
-      Viewports addon in the toolbar
-    </div>
-  </section>
-</article>
+  </div>
+</div>
 `;

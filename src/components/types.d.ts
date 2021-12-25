@@ -47,5 +47,6 @@ type ColorStyle =
   | 'cyberGrape'
   | 'antiqueBronze'
   | 'urobilin'
+  | 'arsenic'
 
 type GeneralTextStyle = ColorStyle | FontWeightStyle | TextStyle;
