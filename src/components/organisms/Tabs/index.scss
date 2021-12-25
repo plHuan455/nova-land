@@ -1,0 +1,74 @@
+.o-tabs {
+  $root: &;
+
+  &_labels {
+    border-radius: rem(3);
+    margin: 0 rem(-24);
+    @include adjust-flex();
+    overflow-x: auto;
+    position: relative;
+    @include scroll-bars(8);
+
+    @include small-mobile {
+      @include adjust-flex(flex-start, center);
+    }
+  }
+
+  &_label {
+    color: $black085;
+    font-weight: 400;
+    @include font-base(24, 32);
+    text-transform: capitalize;
+    white-space: nowrap;
+  }
+
+  &_tab {
+    cursor: pointer;
+    margin-left: rem(24);
+    margin-right: rem(24);
+    padding-bottom: rem(7);
+    padding-top: rem(7);
+    position: relative;
+
+    @include mobile-down {
+      margin-left: rem(10);
+      margin-right: rem(10);
+    }
+
+    &::after {
+      background: $light-french-beige;
+      bottom: 0;
+      content: '';
+      height: rem(2);
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      transition: all $transition-long linear;
+      visibility: hidden;
+      width: 0;
+      z-index: 1;
+    }
+
+    &-active {
+      #{$root}_label {
+        color: $light-french-beige;
+        font-weight: 700;
+      }
+
+      &::after {
+        opacity: 1;
+        visibility: visible;
+        width: 100%;
+      }
+    }
+  }
+
+  &_panel {
+    display: none;
+
+    &-active {
+      display: block;
+      margin-top: rem(33);
+    }
+  }
+}
