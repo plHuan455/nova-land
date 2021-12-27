@@ -1,9 +1,9 @@
 type Ratio =
-| 'logo'
-| '1x1'
-| '4x3'
-| '16x9'
-| '1371x620';
+  | 'logo'
+  | '1x1'
+  | '4x3'
+  | '16x9'
+  | '1371x620';
 
 type FontWeightStyle =
   | '100'
@@ -48,4 +48,4 @@ type ColorStyle =
   | 'antiqueBronze'
   | 'urobilin'
 
-type GeneralTextStyle = ColorStyle | FontWeightStyle | TextStyle ;
+type GeneralTextStyle = ColorStyle | FontWeightStyle | TextStyle;
