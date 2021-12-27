@@ -1,10 +1,11 @@
 .m-ecoCard {
   $root: &;
-  position: relative;
   border: 1px solid $gainsboro;
   height: rem(415);
   overflow: hidden;
+  position: relative;
   transition: 0.5s;
+
   &:hover {
     border: 1px solid $golden-brown;
 
@@ -14,11 +15,11 @@
     }
 
     #{$root}_field {
-      position: relative;
-      transform: scale(0.5);
-      top: 0;
       left: 0;
       padding: unset;
+      position: relative;
+      top: 0;
+      transform: scale(0.5);
       transition: 0.6s;
     }
 
@@ -29,12 +30,12 @@
   }
 
   &_field {
-    position: relative;
-    width: 100%;
-    top: 50%;
     left: 50%;
+    position: relative;
+    top: 50%;
     transform: translate(-50%, -50%);
     transition: 0.6s;
+    width: 100%;
 
     img {
       display: block;
@@ -43,11 +44,11 @@
   }
 
   &_brands {
-    position: relative;
+    flex-wrap: wrap;
     opacity: 0;
+    position: relative;
     transform: translateY(30px);
     transition: 0.5s;
-    flex-wrap: wrap;
     @include adjust-flex(space-between, center);
 
     &-item {
@@ -56,28 +57,28 @@
 
       img {
         display: block;
-        max-width: 90%;
         margin: auto;
+        max-width: 90%;
       }
     }
   }
 
   &_btn {
-    position: absolute;
-    opacity: 0;
-    max-width: rem(64);
-    width: 100%;
-    height: rem(64);
     background-color: $golden-brown;
     bottom: 0;
+    height: rem(64);
+    max-width: rem(64);
+    opacity: 0;
+    position: absolute;
     right: 0;
     transform: translateY(30px);
     transition: 0.5s;
+    width: 100%;
 
     .a-icon {
+      left: 50%;
       position: absolute;
       top: 50%;
-      left: 50%;
       transform: translate(-50%, -50%);
     }
   }

@@ -1,5 +1,4 @@
-.t-ecoSystems{
-
+.t-ecoSystems {
   &_title {
     text-align: center;
   }
@@ -10,9 +9,10 @@
 
   &_brands {
     margin: rem(-15);
+
     &-item {
-      max-width: rem(274);
       margin: auto;
+      max-width: rem(274);
       padding: rem(15);
     }
   }
