@@ -2,36 +2,77 @@ import React from 'react';
 
 import Heading from 'components/atoms/Heading';
 import Text from 'components/atoms/Text';
-import Carousel from 'components/organisms/Carousel';
+import EcoCard, { EcoCardProps } from 'components/molecules/EcoCard';
+import Carousel, { NextArrow, PrevArrow } from 'components/organisms/Carousel';
 import Container from 'components/organisms/Container';
 
-interface EcoSystemsProps { }
+interface EcoSystemsProps {
+  title: string;
+  desc: string;
+  dataList: EcoCardProps[];
+}
 
-const EcoSystems: React.FC<EcoSystemsProps> = () => (
-  <div className="t-ecoSystems">
-    <Container>
-      <div className="t-ecoSystems_title">
-        <Heading modifiers={['32x48', '700', 'fontNoto', 'arsenic', 'uppercase']}>HỆ SINH THÁI NOVA</Heading>
-      </div>
-      <div className="t-ecoSystems_desc">
-        <Text modifiers={['400', 'center', 'davysGrey']}>
-          Hệ sinh thái Nova Group, mang những tinh hoa Văn Hóa, Ẩm Thực, Giáo
-          Dục, Vui Chơi - Giải Trí, Du Lịch Nghỉ Dưỡng, Chăm Sóc Sức Khỏe, Y Tế
-          hàng đầu thế giới và Việt Nam về hội tụ tại quần thể các dự án của
-          Novaland nhằm phục vụ sự tiện nghi và thịnh vượng cho cộng đồng cư
-          dân, tăng giá trị cho các sản phẩm bất động sản và hiệu quả cho các
-          nhà đầu tư.
-        </Text>
-      </div>
-      <div className="t-ecoSystems_brands">
-        <Carousel>
-          a
-        </Carousel>
-      </div>
-    </Container>
-  </div>
-);
+const EcoSystems: React.FC<EcoSystemsProps> = ({ title, desc, dataList }) => {
+  const settingDefault = {
+    dots: true,
+    dotsClass: 'slick-dots o-carousel_dots',
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: false,
+    prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />,
+    infinite: false,
+    cssEase: 'ease-in-out',
+    customPaging() {
+      return (
+        <span className="o-carousel_dot" />
+      );
+    },
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+        },
+      },
+    ],
+  };
 
+  return (
+    <div className="t-ecoSystems">
+      <Container>
+        <div className="t-ecoSystems_title">
+          <Heading modifiers={['32x48', '700', 'fontNoto', 'arsenic', 'uppercase']}>{title}</Heading>
+        </div>
+        <div className="t-ecoSystems_desc">
+          <Text modifiers={['400', 'center', 'davysGrey']}>
+            {desc}
+          </Text>
+        </div>
+        {dataList?.length > 0 && (
+        <div className="t-ecoSystems_brands">
+          <Carousel settings={settingDefault}>
+            {dataList.map((item, idx) => (
+              <div key={`ecoSystems-item-${idx.toString()}`} className="t-ecoSystems_brands-item">
+                <EcoCard {...item} />
+              </div>
+            ))}
+          </Carousel>
+        </div>
+        )}
+      </Container>
+    </div>
+  );
+};
 EcoSystems.defaultProps = {};
 
 export default EcoSystems;

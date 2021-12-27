@@ -13,6 +13,7 @@ export const iconList = {
   eyeOpen: 'eyeOpen',
   building: 'building',
   buildingBlue: 'buildingBlue',
+  arrowNextWhite: 'arrowNextWhite',
 };
 
 export type IconName = keyof typeof iconList;

@@ -1,0 +1,19 @@
+.t-ecoSystems{
+
+  &_title {
+    text-align: center;
+  }
+
+  &_desc {
+    margin: rem(38) 0;
+  }
+
+  &_brands {
+    margin: rem(-15);
+    &-item {
+      max-width: rem(274);
+      margin: auto;
+      padding: rem(15);
+    }
+  }
+}

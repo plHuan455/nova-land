@@ -1,23 +1,22 @@
 import React from 'react';
 
-import Button from 'components/atoms/Button';
 import Icon from 'components/atoms/Icon';
-import Image from 'components/atoms/Image';
+import Link from 'components/atoms/Link';
 
 type BrandItemType = {
   imgSrc: string;
 }
 
-interface EcoCardProps {
+export interface EcoCardProps {
   fieldImgSrc: string;
   brandList: BrandItemType[];
-  handleClick?: () => void;
+  href: string;
 }
 
-const EcoCard: React.FC<EcoCardProps> = ({ fieldImgSrc, brandList, handleClick }) => (
+const EcoCard: React.FC<EcoCardProps> = ({ fieldImgSrc, brandList, href }) => (
   <div className="m-ecoCard">
     <div className="m-ecoCard_field">
-      <Image src={fieldImgSrc} ratio="179x120" alt="field" />
+      <img src={fieldImgSrc} alt="brand" sizes="contain" />
     </div>
     {brandList.length > 0 && (
       <div className="m-ecoCard_brands">
@@ -28,16 +27,12 @@ const EcoCard: React.FC<EcoCardProps> = ({ fieldImgSrc, brandList, handleClick }
         ))}
       </div>
     )}
-    <div className="m-ecoCard_btn">
-      <Button onClick={handleClick}>
+    <Link href={href}>
+      <div className="m-ecoCard_btn">
         <Icon iconName="arrowNextWhite" />
-      </Button>
-    </div>
+      </div>
+    </Link>
   </div>
 );
-
-EcoCard.defaultProps = {
-  handleClick: undefined,
-};
 
 export default EcoCard;
