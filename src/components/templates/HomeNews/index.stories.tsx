@@ -1,5 +1,6 @@
 import { Story, Meta } from '@storybook/react';
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
 import HomeNews, { HomeNewsCard, dataTabsType } from '.';
 
@@ -96,20 +97,24 @@ const tabDataHomeNewsList: dataTabsType[] = [
 ];
 
 export const normal: Story = () => (
-  <HomeNews
-    title="TIN TỨC"
-    tabDataHomeNews={tabDataHomeNewsList}
-  />
+  <BrowserRouter>
+    <HomeNews
+      title="TIN TỨC"
+      tabDataHomeNews={tabDataHomeNewsList}
+    />
+  </BrowserRouter>
 );
 
 export const homeNewsCard: Story = () => (
-  <div style={{ margin: '30px', maxWidth: '547px' }}>
-    <HomeNewsCard
-      imgSrc={imgHomeNewsCard}
-      title="Người dân TP.HCM đón Giáng sinh sớm, check-in cùng cây thông 25 m"
-      desc="Còn hơn một tháng nữa mới đến Giáng sinh, nhưng Novaland Gallery đã trang hoàng một tháng nữa mới đến Giáng sinh"
-      date="23/11/2021"
-      totalViews={111}
-    />
-  </div>
+  <BrowserRouter>
+    <div style={{ margin: '30px', maxWidth: '547px' }}>
+      <HomeNewsCard
+        imgSrc={imgHomeNewsCard}
+        title="Người dân TP.HCM đón Giáng sinh sớm, check-in cùng cây thông 25 m"
+        desc="Còn hơn một tháng nữa mới đến Giáng sinh, nhưng Novaland Gallery đã trang hoàng một tháng nữa mới đến Giáng sinh"
+        date="23/11/2021"
+        totalViews={111}
+      />
+    </div>
+  </BrowserRouter>
 );

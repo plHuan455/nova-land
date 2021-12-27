@@ -4,6 +4,7 @@ import Button from 'components/atoms/Button';
 import Heading from 'components/atoms/Heading';
 import Icon from 'components/atoms/Icon';
 import Image from 'components/atoms/Image';
+import Link from 'components/atoms/Link';
 import Text from 'components/atoms/Text';
 import Container from 'components/organisms/Container';
 import { Tab, TabPanel, Tabs } from 'components/organisms/Tabs';
@@ -14,6 +15,8 @@ export interface HomeNewsCardProps {
   desc: string;
   date: string;
   totalViews: number;
+  href?: string;
+  isHiddenViews?: boolean;
 }
 
 export const HomeNewsCard: React.FC<HomeNewsCardProps> = ({
@@ -22,20 +25,26 @@ export const HomeNewsCard: React.FC<HomeNewsCardProps> = ({
   desc,
   date,
   totalViews,
+  href,
+  isHiddenViews,
 }) => {
-  const [isOpenViews, setIsOpenView] = useState(false);
+  const [isOpenViews, setIsOpenView] = useState(!isHiddenViews);
 
   return (
     <div className="t-homeNewsCard">
       <div className="t-homeNewsCard_thumbnail">
-        <Image src={imgSrc} ratio="1x1" alt="HomeNewsCard" />
+        <Link href={href}>
+          <Image src={imgSrc} ratio="1x1" alt="HomeNewsCard" />
+        </Link>
       </div>
       <div className="t-homeNewsCard_wrapper">
         <div className="t-homeNewsCard_title">
-          <Text
-            modifiers={['16x24', '600', 'arsenic']}
-            content={title}
-          />
+          <Link href={href}>
+            <Text
+              modifiers={['16x24', '600', 'arsenic']}
+              content={title}
+            />
+          </Link>
         </div>
         <div className="t-homeNewsCard_content">
           <Text
@@ -46,6 +55,7 @@ export const HomeNewsCard: React.FC<HomeNewsCardProps> = ({
         <div className="t-homeNewsCard_divider" />
         <div className="t-homeNewsCard_general">
           <div className="t-homeNewsCard_date">
+            {/* Confirm with BA [font-family] later */}
             <Text
               modifiers={['12x17', '400', 'ls-005', 'arsenic']}
               content={date}
@@ -56,6 +66,7 @@ export const HomeNewsCard: React.FC<HomeNewsCardProps> = ({
               <Icon iconName="eyeOpen" size="14" />
             </span>
             <div className="t-homeNewsCard_view_total">
+              {/* Confirm with BA [font-family] later */}
               <Text modifiers={['12x17', '400', 'ls-005', 'arsenic']}>
                 {
                   isOpenViews ? totalViews : '---'
@@ -77,10 +88,11 @@ export interface dataTabsType {
 interface HomeNewsProps {
   title: string,
   tabDataHomeNews: dataTabsType[],
+  handleShowMore?: () => void;
 }
 
 const HomeNews: React.FC<HomeNewsProps> = ({
-  title, tabDataHomeNews,
+  title, tabDataHomeNews, handleShowMore,
 }) => {
   const [indexActive, setIndexActive] = useState(0);
 
@@ -89,7 +101,7 @@ const HomeNews: React.FC<HomeNewsProps> = ({
       <Container>
         <div className="t-homeNews_title">
           <Heading
-            modifiers={['32x48', '700', 'uppercase', 'arsenic', 'center']}
+            modifiers={['32x48', '700', 'uppercase', 'arsenic', 'center', 'fontNoto']}
             content={title}
           />
         </div>
@@ -118,14 +130,14 @@ const HomeNews: React.FC<HomeNewsProps> = ({
                     </div>
                   ))}
                 </div>
-                <div className="t-homeNews_button">
-                  <Button modifiers="outline">
-                    Xem tất cả bài viết
-                  </Button>
-                </div>
               </TabPanel>
             ))
           }
+          <div className="t-homeNews_button">
+            <Button modifiers="outline" onClick={handleShowMore}>
+              Xem tất cả bài viết
+            </Button>
+          </div>
         </div>
       </Container>
     </div>
@@ -133,6 +145,7 @@ const HomeNews: React.FC<HomeNewsProps> = ({
 };
 
 HomeNews.defaultProps = {
+  handleShowMore: undefined,
 };
 
 export default HomeNews;
