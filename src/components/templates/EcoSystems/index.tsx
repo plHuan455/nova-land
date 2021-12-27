@@ -30,14 +30,21 @@ const EcoSystems: React.FC<EcoSystemsProps> = ({ title, desc, dataList }) => {
     },
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1025,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 767,
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 426,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -50,24 +57,22 @@ const EcoSystems: React.FC<EcoSystemsProps> = ({ title, desc, dataList }) => {
   return (
     <div className="t-ecoSystems">
       <Container>
-        <div className="t-ecoSystems_title">
-          <Heading modifiers={['32x48', '700', 'fontNoto', 'arsenic', 'uppercase']}>{title}</Heading>
-        </div>
+        <Heading modifiers={['32x48', '700', 'fontNoto', 'arsenic', 'uppercase', 'center']}>{title}</Heading>
         <div className="t-ecoSystems_desc">
           <Text modifiers={['400', 'center', 'davysGrey']}>
             {desc}
           </Text>
         </div>
         {dataList?.length > 0 && (
-        <div className="t-ecoSystems_brands">
-          <Carousel settings={settingDefault}>
-            {dataList.map((item, idx) => (
-              <div key={`ecoSystems-item-${idx.toString()}`} className="t-ecoSystems_brands-item">
-                <EcoCard {...item} />
-              </div>
-            ))}
-          </Carousel>
-        </div>
+          <div className="t-ecoSystems_brands">
+            <Carousel settings={settingDefault}>
+              {dataList.map((item, idx) => (
+                <div key={`ecoSystems-item-${idx.toString()}`} className="t-ecoSystems_brands-item">
+                  <EcoCard {...item} />
+                </div>
+              ))}
+            </Carousel>
+          </div>
         )}
       </Container>
     </div>
