@@ -78,3 +78,165 @@
     url('#{$font-path}Kuro-Regular.woff') format('woff'),
     url('#{$font-path}Kuro-Regular.ttf') format('truetype');
 }
+
+@font-face {
+  font-family: 'Noto Serif Display';
+  src: url('#{$font-path}NotoSerifDisplay-Black.woff2') format('woff2'),
+      url('#{$font-path}NotoSerifDisplay-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Serif Display';
+  src: url('#{$font-path}NotoSerifDisplay-Bold.woff2') format('woff2'),
+      url('#{$font-path}NotoSerifDisplay-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Serif Display';
+  src: url('#{$font-path}NotoSerifDisplay-ExtraBold.woff2') format('woff2'),
+      url('#{$font-path}NotoSerifDisplay-ExtraBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Serif Display';
+  src: url('#{$font-path}NotoSerifDisplay-Italic.woff2') format('woff2'),
+      url('#{$font-path}NotoSerifDisplay-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Serif Display';
+  src: url('#{$font-path}NotoSerifDisplay-Light.woff2') format('woff2'),
+      url('#{$font-path}NotoSerifDisplay-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Serif Display';
+  src: url('#{$font-path}NotoSerifDisplay-Regular.woff2') format('woff2'),
+      url('#{$font-path}NotoSerifDisplay-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Serif Display';
+  src: url('#{$font-path}NotoSerifDisplay-Thin.woff2') format('woff2'),
+      url('#{$font-path}NotoSerifDisplay-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Serif Display';
+  src: url('#{$font-path}NotoSerifDisplay-ExtraLight.woff2') format('woff2'),
+      url('#{$font-path}NotoSerifDisplay-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Serif Display';
+  src: url('#{$font-path}NotoSerifDisplay-Medium.woff2') format('woff2'),
+      url('#{$font-path}NotoSerifDisplay-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lexend';
+  src: url('#{$font-path}Lexend-Regular.woff2') format('woff2'),
+      url('#{$font-path}Lexend-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lexend';
+  src: url('#{$font-path}Lexend-Medium.woff2') format('woff2'),
+      url('#{$font-path}Lexend-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lexend';
+  src: url('#{$font-path}Lexend-SemiBold.woff2') format('woff2'),
+      url('#{$font-path}Lexend-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lexend';
+  src: url('#{$font-path}Lexend-Light.woff2') format('woff2'),
+      url('#{$font-path}Lexend-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lexend';
+  src: url('#{$font-path}Lexend-Thin.woff2') format('woff2'),
+      url('#{$font-path}Lexend-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lexend';
+  src: url('#{$font-path}Lexend-Black.woff2') format('woff2'),
+      url('#{$font-path}Lexend-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lexend';
+  src: url('#{$font-path}Lexend-Bold.woff2') format('woff2'),
+      url('#{$font-path}Lexend-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lexend';
+  src: url('#{$font-path}Lexend-ExtraLight.woff2') format('woff2'),
+      url('#{$font-path}Lexend-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lexend';
+  src: url('#{$font-path}Lexend-ExtraBold.woff2') format('woff2'),
+      url('#{$font-path}Lexend-ExtraBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}

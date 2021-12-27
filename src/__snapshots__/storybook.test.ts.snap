@@ -1,5 +1,1040 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Components/atoms/Button Normal 1`] = `
+<button
+  className="a-button a-button-primary"
+  disabled={false}
+  type="button"
+>
+  Click me
+</button>
+`;
+
+exports[`Storyshots Components/atoms/Heading Normal 1`] = `
+<h2
+  className="a-heading a-heading-raisinBlack a-heading-400 a-heading-uppercase a-heading-undefined"
+>
+  Testing Heading
+</h2>
+`;
+
+exports[`Storyshots Components/atoms/Icon Normal 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "#ddd",
+      "display": "flex",
+      "flexWrap": "wrap",
+      "padding": 10,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "marginLeft": 7,
+      }
+    }
+  >
+    <i
+      className="a-icon a-icon-facebook a-icon-24"
+    />
+  </div>
+  <div
+    style={
+      Object {
+        "marginLeft": 7,
+      }
+    }
+  >
+    <i
+      className="a-icon a-icon-youtube a-icon-24"
+    />
+  </div>
+  <div
+    style={
+      Object {
+        "marginLeft": 7,
+      }
+    }
+  >
+    <i
+      className="a-icon a-icon-zalo a-icon-24"
+    />
+  </div>
+  <div
+    style={
+      Object {
+        "marginLeft": 7,
+      }
+    }
+  >
+    <i
+      className="a-icon a-icon-arrowDownBlack a-icon-24"
+    />
+  </div>
+  <div
+    style={
+      Object {
+        "marginLeft": 7,
+      }
+    }
+  >
+    <i
+      className="a-icon a-icon-arrowDownGrey a-icon-24"
+    />
+  </div>
+  <div
+    style={
+      Object {
+        "marginLeft": 7,
+      }
+    }
+  >
+    <i
+      className="a-icon a-icon-arrowNextRed a-icon-24"
+    />
+  </div>
+  <div
+    style={
+      Object {
+        "marginLeft": 7,
+      }
+    }
+  >
+    <i
+      className="a-icon a-icon-arrowNextGrey a-icon-24"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/atoms/Image Normal 1`] = `
+<div
+  style={
+    Object {
+      "maxWidth": "650px",
+    }
+  }
+>
+  <div
+    className="a-image a-image-1x1"
+  >
+    <img
+      alt="banner"
+      loading="lazy"
+      src="banner1.png"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/atoms/Input Normal 1`] = `
+<div
+  className="a-input"
+>
+  <div
+    className="a-input_wrap"
+  >
+    <input
+      autoComplete="off"
+      className="a-input_input"
+      disabled={false}
+      placeholder="Dummy text"
+      type={false}
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/atoms/Link Normal 1`] = `
+Array [
+  <a
+    aria-current={null}
+    className="a-link "
+    href="/home"
+    onClick={[Function]}
+    target="_self"
+  >
+    Home
+  </a>,
+  " ",
+  <a
+    aria-current={null}
+    className="a-link "
+    href="/about"
+    onClick={[Function]}
+    target="_self"
+  >
+    About
+  </a>,
+]
+`;
+
+exports[`Storyshots Components/atoms/Link Use External 1`] = `
+<a
+  className="a-link "
+  href="https://google.com.vn"
+  rel="noreferrer"
+  target="_blank"
+>
+  Google
+</a>
+`;
+
+exports[`Storyshots Components/atoms/Text Normal 1`] = `
+<p
+  className="a-text a-text-spanishGreen a-text-undefined a-text-mm a-text-400"
+>
+  Dummy text
+</p>
+`;
+
+exports[`Storyshots Components/molecules/Pulldown Normal 1`] = `
+<div
+  style={
+    Object {
+      "height": "100vh",
+    }
+  }
+>
+  <div
+    className="m-pulldown"
+  >
+    <div
+      className=" css-2b097c-container"
+      onKeyDown={[Function]}
+    >
+      <span
+        aria-atomic="false"
+        aria-live="polite"
+        aria-relevant="additions text"
+        className="css-1f43avz-a11yText-A11yText"
+      />
+      <div
+        className=" css-1wxtc0p-control"
+        onMouseDown={[Function]}
+        onTouchEnd={[Function]}
+      >
+        <div
+          className=" css-1733mh3-ValueContainer"
+        >
+          <div
+            className=" css-t6598d-placeholder"
+          >
+            Chọn Quận/Huyện
+          </div>
+          <div
+            className="css-b8ldur-Input"
+          >
+            <div
+              className=""
+              style={
+                Object {
+                  "display": "inline-block",
+                }
+              }
+            >
+              <input
+                aria-autocomplete="list"
+                autoCapitalize="none"
+                autoComplete="off"
+                autoCorrect="off"
+                disabled={false}
+                id="react-select-2-input"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                spellCheck="false"
+                style={
+                  Object {
+                    "background": 0,
+                    "border": 0,
+                    "boxSizing": "content-box",
+                    "color": "inherit",
+                    "fontSize": "inherit",
+                    "label": "input",
+                    "opacity": 1,
+                    "outline": 0,
+                    "padding": 0,
+                    "width": "1px",
+                  }
+                }
+                tabIndex="0"
+                type="text"
+                value=""
+              />
+              <div
+                style={
+                  Object {
+                    "height": 0,
+                    "left": 0,
+                    "overflow": "scroll",
+                    "position": "absolute",
+                    "top": 0,
+                    "visibility": "hidden",
+                    "whiteSpace": "pre",
+                  }
+                }
+              >
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className=" css-1hb7zxy-IndicatorsContainer"
+        >
+          <div
+            aria-hidden="true"
+            className=" css-xnkoxx-indicatorContainer"
+            onMouseDown={[Function]}
+            onTouchEnd={[Function]}
+          >
+            <img
+              alt="icon-arrow"
+              src="ic_carret_down.svg"
+              style={
+                Object {
+                  "transform": false,
+                  "transition": "all 0.3s ease",
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/organisms/Carousel Banner 1`] = `
+<div
+  style={
+    Object {
+      "height": "100vh",
+    }
+  }
+>
+  <div
+    className="o-carousel o-carousel-hasarrow"
+  >
+    <div
+      className="slick-slider slick-initialized"
+      dir="ltr"
+    >
+      <div
+        className="o-carousel_arrow o-carousel_arrow_prev slick-arrow slick-prev slick-disabled banner"
+        onClick={null}
+      />
+      <div
+        className="slick-list"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={null}
+        onMouseMove={null}
+        onMouseUp={[Function]}
+        onTouchCancel={null}
+        onTouchEnd={[Function]}
+        onTouchMove={null}
+        onTouchStart={[Function]}
+        style={Object {}}
+      >
+        <div
+          className="slick-track"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          style={
+            Object {
+              "WebkitTransform": "translate3d(0px, 0px, 0px)",
+              "WebkitTransition": "",
+              "msTransform": "translateX(0px)",
+              "opacity": 1,
+              "transform": "translate3d(0px, 0px, 0px)",
+              "transition": "",
+            }
+          }
+        >
+          <div
+            aria-hidden={false}
+            className="slick-slide slick-active slick-current"
+            data-index={0}
+            onClick={[Function]}
+            style={
+              Object {
+                "outline": "none",
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="o-carousel_wrap"
+                style={
+                  Object {
+                    "display": "inline-block",
+                    "width": "100%",
+                  }
+                }
+                tabIndex={-1}
+              >
+                <div
+                  className="o-carousel_item"
+                >
+                  <div
+                    style={
+                      Object {
+                        "backgroundColor": "#ccc",
+                        "height": 600,
+                      }
+                    }
+                  >
+                    <img
+                      alt="banner"
+                      src="banner1.png"
+                      style={
+                        Object {
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={true}
+            className="slick-slide"
+            data-index={1}
+            onClick={[Function]}
+            style={
+              Object {
+                "outline": "none",
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="o-carousel_wrap"
+                style={
+                  Object {
+                    "display": "inline-block",
+                    "width": "100%",
+                  }
+                }
+                tabIndex={-1}
+              >
+                <div
+                  className="o-carousel_item"
+                >
+                  <div
+                    style={
+                      Object {
+                        "backgroundColor": "#ccc",
+                        "height": 600,
+                      }
+                    }
+                  >
+                    <img
+                      alt="banner"
+                      src="banner1.png"
+                      style={
+                        Object {
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={true}
+            className="slick-slide"
+            data-index={2}
+            onClick={[Function]}
+            style={
+              Object {
+                "outline": "none",
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="o-carousel_wrap"
+                style={
+                  Object {
+                    "display": "inline-block",
+                    "width": "100%",
+                  }
+                }
+                tabIndex={-1}
+              >
+                <div
+                  className="o-carousel_item"
+                >
+                  <div
+                    style={
+                      Object {
+                        "backgroundColor": "#ccc",
+                        "height": 600,
+                      }
+                    }
+                  >
+                    <img
+                      alt="banner"
+                      src="banner1.png"
+                      style={
+                        Object {
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="o-carousel_arrow o-carousel_arrow_next slick-arrow slick-next banner"
+        onClick={[Function]}
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/organisms/Carousel Normal 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "marginLeft": "60px",
+      "marginRight": "60px",
+      "paddingBottom": "60px",
+    }
+  }
+>
+  <div
+    className="o-carousel"
+  >
+    <div
+      className="slick-slider slick-initialized"
+      dir="ltr"
+    >
+      <div
+        className="slick-list"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={null}
+        onMouseMove={null}
+        onMouseUp={[Function]}
+        onTouchCancel={null}
+        onTouchEnd={[Function]}
+        onTouchMove={null}
+        onTouchStart={[Function]}
+        style={Object {}}
+      >
+        <div
+          className="slick-track"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          style={
+            Object {
+              "WebkitTransform": "translate3d(0px, 0px, 0px)",
+              "WebkitTransition": "",
+              "msTransform": "translateX(0px)",
+              "opacity": 1,
+              "transform": "translate3d(0px, 0px, 0px)",
+              "transition": "",
+            }
+          }
+        >
+          <div
+            aria-hidden={false}
+            className="slick-slide slick-active slick-current"
+            data-index={0}
+            onClick={[Function]}
+            style={
+              Object {
+                "outline": "none",
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="o-carousel_wrap"
+                style={
+                  Object {
+                    "display": "inline-block",
+                    "width": "100%",
+                  }
+                }
+                tabIndex={-1}
+              >
+                <div
+                  className="o-carousel_item"
+                >
+                  <div
+                    style={
+                      Object {
+                        "backgroundColor": "#ccc",
+                        "height": 600,
+                      }
+                    }
+                  >
+                    a
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={false}
+            className="slick-slide slick-active"
+            data-index={1}
+            onClick={[Function]}
+            style={
+              Object {
+                "outline": "none",
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="o-carousel_wrap"
+                style={
+                  Object {
+                    "display": "inline-block",
+                    "width": "100%",
+                  }
+                }
+                tabIndex={-1}
+              >
+                <div
+                  className="o-carousel_item"
+                >
+                  <div
+                    style={
+                      Object {
+                        "backgroundColor": "#ccc",
+                        "height": 600,
+                      }
+                    }
+                  >
+                    b
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={false}
+            className="slick-slide slick-active"
+            data-index={2}
+            onClick={[Function]}
+            style={
+              Object {
+                "outline": "none",
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="o-carousel_wrap"
+                style={
+                  Object {
+                    "display": "inline-block",
+                    "width": "100%",
+                  }
+                }
+                tabIndex={-1}
+              >
+                <div
+                  className="o-carousel_item"
+                >
+                  <div
+                    style={
+                      Object {
+                        "backgroundColor": "#ccc",
+                        "height": 600,
+                      }
+                    }
+                  >
+                    c
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={false}
+            className="slick-slide slick-active"
+            data-index={3}
+            onClick={[Function]}
+            style={
+              Object {
+                "outline": "none",
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="o-carousel_wrap"
+                style={
+                  Object {
+                    "display": "inline-block",
+                    "width": "100%",
+                  }
+                }
+                tabIndex={-1}
+              >
+                <div
+                  className="o-carousel_item"
+                >
+                  <div
+                    style={
+                      Object {
+                        "backgroundColor": "#ccc",
+                        "height": 600,
+                      }
+                    }
+                  >
+                    a
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={true}
+            className="slick-slide"
+            data-index={4}
+            onClick={[Function]}
+            style={
+              Object {
+                "outline": "none",
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="o-carousel_wrap"
+                style={
+                  Object {
+                    "display": "inline-block",
+                    "width": "100%",
+                  }
+                }
+                tabIndex={-1}
+              >
+                <div
+                  className="o-carousel_item"
+                >
+                  <div
+                    style={
+                      Object {
+                        "backgroundColor": "#ccc",
+                        "height": 600,
+                      }
+                    }
+                  >
+                    b
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={true}
+            className="slick-slide"
+            data-index={5}
+            onClick={[Function]}
+            style={
+              Object {
+                "outline": "none",
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="o-carousel_wrap"
+                style={
+                  Object {
+                    "display": "inline-block",
+                    "width": "100%",
+                  }
+                }
+                tabIndex={-1}
+              >
+                <div
+                  className="o-carousel_item"
+                >
+                  <div
+                    style={
+                      Object {
+                        "backgroundColor": "#ccc",
+                        "height": 600,
+                      }
+                    }
+                  >
+                    c
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={true}
+            className="slick-slide"
+            data-index={6}
+            onClick={[Function]}
+            style={
+              Object {
+                "outline": "none",
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="o-carousel_wrap"
+                style={
+                  Object {
+                    "display": "inline-block",
+                    "width": "100%",
+                  }
+                }
+                tabIndex={-1}
+              >
+                <div
+                  className="o-carousel_item"
+                >
+                  <div
+                    style={
+                      Object {
+                        "backgroundColor": "#ccc",
+                        "height": 600,
+                      }
+                    }
+                  >
+                    a
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={true}
+            className="slick-slide"
+            data-index={7}
+            onClick={[Function]}
+            style={
+              Object {
+                "outline": "none",
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="o-carousel_wrap"
+                style={
+                  Object {
+                    "display": "inline-block",
+                    "width": "100%",
+                  }
+                }
+                tabIndex={-1}
+              >
+                <div
+                  className="o-carousel_item"
+                >
+                  <div
+                    style={
+                      Object {
+                        "backgroundColor": "#ccc",
+                        "height": 600,
+                      }
+                    }
+                  >
+                    b
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={true}
+            className="slick-slide"
+            data-index={8}
+            onClick={[Function]}
+            style={
+              Object {
+                "outline": "none",
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="o-carousel_wrap"
+                style={
+                  Object {
+                    "display": "inline-block",
+                    "width": "100%",
+                  }
+                }
+                tabIndex={-1}
+              >
+                <div
+                  className="o-carousel_item"
+                >
+                  <div
+                    style={
+                      Object {
+                        "backgroundColor": "#ccc",
+                        "height": 600,
+                      }
+                    }
+                  >
+                    c
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul
+        className="slick-dots o-carousel_dots"
+        onMouseEnter={null}
+        onMouseLeave={null}
+        onMouseOver={null}
+        style={
+          Object {
+            "display": "block",
+          }
+        }
+      >
+        <li
+          className="slick-active"
+        >
+          <span
+            className="o-carousel_dot"
+            onClick={[Function]}
+          />
+        </li>
+        <li
+          className=""
+        >
+          <span
+            className="o-carousel_dot"
+            onClick={[Function]}
+          />
+        </li>
+        <li
+          className=""
+        >
+          <span
+            className="o-carousel_dot"
+            onClick={[Function]}
+          />
+        </li>
+        <li
+          className=""
+        >
+          <span
+            className="o-carousel_dot"
+            onClick={[Function]}
+          />
+        </li>
+        <li
+          className=""
+        >
+          <span
+            className="o-carousel_dot"
+            onClick={[Function]}
+          />
+        </li>
+        <li
+          className=""
+        >
+          <span
+            className="o-carousel_dot"
+            onClick={[Function]}
+          />
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/organisms/Container Normal 1`] = `
+<div
+  className="container o-container"
+>
+  <p>
+    What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+  </p>
+</div>
+`;
+
+exports[`Storyshots Components/organisms/Container Row Container 1`] = `
+<div
+  className="container o-container"
+>
+  <div
+    className="o-container_row row"
+  >
+    <div
+      className="o-container_col col-lg-6"
+    >
+      <p>
+        What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      </p>
+    </div>
+    <div
+      className="o-container_col col-lg-6"
+    >
+      <p>
+        What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Example/Button Large 1`] = `
 <button
   className="storybook-button storybook-button--large storybook-button--secondary"
