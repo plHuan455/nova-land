@@ -18,7 +18,6 @@ import { OptionType, PulldownHookForm } from 'components/molecules/Pulldown';
 
 export type MenuFooterTypes = {
   title: string;
-  hasIcon?: boolean;
   link?: {
     href: string;
     title?: string;
@@ -119,13 +118,13 @@ const Footer: React.FC<FooterProps> = ({
                 <div className="o-footer_main_form_input">
                   <InputHookForm name="fullname" placeholder="Họ và tên" />
                 </div>
-                <div className="o-footer_main_form_input mt-24">
+                <div className="o-footer_main_form_input">
                   <InputHookForm name="phone" placeholder="Số điện thoại" />
                 </div>
-                <div className="o-footer_main_form_input mt-24">
+                <div className="o-footer_main_form_input">
                   <InputHookForm name="email" placeholder="Email" />
                 </div>
-                <div className="o-footer_main_form_input mt-24">
+                <div className="o-footer_main_form_input">
                   <PulldownHookForm
                     name="project"
                     options={projectOptions}
@@ -151,7 +150,7 @@ const Footer: React.FC<FooterProps> = ({
                       {val.title}
                     </Heading>
                   </div>
-                  <ul className={val.hasIcon ? 'o-footer_main_menu_icon' : 'o-footer_main_menu_list'}>
+                  <ul className={val.link?.find((e) => !!e.icon) ? 'o-footer_main_menu_icon' : 'o-footer_main_menu_list'}>
                     {
                       val.link && val.link.map((item, i) => {
                         if (item.icon) {

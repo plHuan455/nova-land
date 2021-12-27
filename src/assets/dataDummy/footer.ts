@@ -65,7 +65,6 @@ const footerMenuData: MenuFooterTypes[] = [
   },
   {
     title: 'THEO DÕI NOVALAND TRÊN',
-    hasIcon: true,
     link: [
       {
         href: '/',
