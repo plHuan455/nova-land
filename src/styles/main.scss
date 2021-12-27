@@ -50,3 +50,46 @@ ol {
 .overflow-hidden {
   height: 100vh;
 }
+
+@each $offset in $offsets {
+  @for $spacing from -20 through 50 {
+    @if $spacing >= 0 {
+      .u-m#{str-slice($offset, 0, 1)}-#{$spacing} {
+        margin-#{$offset}: #{$spacing}px;
+      }
+      .u-p#{str-slice($offset, 0, 1)}-#{$spacing} {
+        padding-#{$offset}: #{$spacing}px;
+      }
+    } @else {
+      .u-m#{str-slice($offset, 0, 1)}-negative#{$spacing} {
+        margin-#{$offset}: #{$spacing}px;
+      }
+    }
+  }
+}
+
+@each $name, $value in $breakpoints {
+  @each $offset in $offsets {
+    @for $spacing from -20 through 50 {
+      @if $spacing >= 0 {
+        .u-m#{str-slice($offset, 0, 1)}-#{$name}-#{$spacing} {
+          @media #{$value} {
+            margin-#{$offset}: #{$spacing}px;
+          }
+        }
+
+        .u-p#{str-slice($offset, 0, 1)}-#{$name}-#{$spacing} {
+          @media #{$value} {
+            padding-#{$offset}: #{$spacing}px;
+          }
+        }
+      } @else {
+        .u-m#{str-slice($offset, 0, 1)}-negative-#{$name}#{$spacing} {
+          @media #{$value} {
+            margin-#{$offset}: #{$spacing}px;
+          }
+        }
+      }
+    }
+  }
+}
