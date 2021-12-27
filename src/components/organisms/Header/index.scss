@@ -1,3 +1,4 @@
+/* stylelint-disable max-nesting-depth */
 .o-header {
   $root: &;
   left: 0;
@@ -7,9 +8,61 @@
   transition: $transition-long ease;
   @include adjust-flex(center, center);
   
-  &.scrolled {
+  &-scrolled {
     background-color: $white;
-    box-shadow: 0 3px 6px -4px $black012, 0 6px 16px $black088, 0 9px 28px 8px $black005;
+    box-shadow: 0 rem(3) rem(6) rem(-4) $black012, 0 rem(6) rem(16) $black088, 0 rem(9) rem(28) rem(8) $black005;
+  }
+
+  &_iconMenu {
+    cursor: pointer;
+    display: none;
+
+    span {
+      background-color: $jet;
+      display: block;
+      height: rem(2);
+      margin-bottom: rem(3);
+      position: relative;
+      transition: $transition-long ease;
+      width: rem(24);
+  
+      &:nth-child(1) {
+        transform-origin: left;
+      }
+  
+      &:nth-child(2) {
+        transform-origin: center;
+      }
+  
+      &:nth-child(3) {
+        transform-origin: left;
+      }
+  
+    }
+
+    &-active {
+      span {
+        &:nth-child(1) {
+          left: 0;
+          top: rem(-1);
+          transform: rotate(45deg);
+        }
+  
+        &:nth-child(2) {
+          right: rem(4);
+          top: rem(2);
+          transform: rotate(315deg);
+        }
+  
+        &:nth-child(3) {
+          transform: scaleX(0);
+        }
+      }
+    }
+    @include tablet-down {
+      display: block;
+      margin: 0 rem(11);
+    }
   }
 
   &_logo {
@@ -18,16 +71,49 @@
 
   &_wrapper {
     @include adjust-flex(space-between, center);
+    height: rem(80);
+
+    @include tablet-down {
+      height: rem(55);
+    }
   }
 
   &_right {
     @include adjust-flex(unset, center);
   }
 
+  &_menu {
+    ul {
+      margin: 0;
+    }
+  }
+
   &_nav {
     list-style: none;
     padding-left: 0;
     @include adjust-flex(unset, center);
+
+    @include tablet-down {
+      background-color: $dim-gray;
+      display: block;
+      height: 100vh;
+      overflow-y: auto;
+      padding: 0 rem(44) rem(100) rem(40);
+      position: fixed;
+      right: -100%;
+      top: rem(60);
+      transition: right $transition-long linear;
+      width: 100%;
+      z-index: $z-menu-toggle;
+    }
+
+    @include mobile-down {
+      padding: 0 rem(20) rem(50) rem(20);
+    }
+
+    &-active {
+      right: 0;
+    }
 
     &_item {
       margin-bottom: 0;
@@ -36,22 +122,38 @@
       &:not(:first-child) {
         margin-left: rem(24);
       }
+
+      @include tablet-down {
+        margin-top: rem(20);
+
+        &:not(:first-child) {
+          margin-left: 0;
+        }
+      }
     }
 
     &_link {
+      color: $jet;
       display: block;
       padding: rem(8);
       position: relative;
+      text-transform: capitalize;
       z-index: $z-2;
+      @include font-base();
+      @include style-font-family();
+
+      @include tablet-down {
+        color: $white;
+      }
 
       &::before {
         background: transparent url('~assets/icons/ic_polygon.svg') no-repeat center/100% auto;
         content: '';
         height: rem(40);
-        left: -5px;
+        left: rem(-5);
         opacity: 0;
         position: absolute;
-        top: 1px;
+        top: rem(1);
         transform: rotate(-90deg);
         transition: $transition ease;
         visibility: hidden;
@@ -59,27 +161,22 @@
         z-index: $z-1;
       }
 
-      &.active {
-        .a-text {
-          font-weight: 700;
-          text-shadow: none !important;
-        }
-      }
-
       &:hover,
       &.active {
+        color: $dark-midnight-blue;
         opacity: 1;
+        text-shadow: rem(0.5) rem(0.5) 0 $dark-midnight-blue, rem(0.5) rem(0.5) rem(0.5) $dark-midnight-blue;
 
         &::before {
           opacity: 1;
           transform: rotate(0);
           visibility: visible;
         }
+      }
 
-        .a-text {
-          color: $dark-midnight-blue;
-          text-shadow: 0.5px 0.5px 0 $dark-midnight-blue, 0.5px 0.5px 0.5px $dark-midnight-blue;
-        }
+      &.active {
+        font-weight: 700;
+        text-shadow: none !important;
       }
     }
   }
@@ -89,28 +186,76 @@
     margin-left: rem(16);
     position: relative;
 
+    &.pc {
+      @include tablet-down {
+        display: none;
+      }
+    }
+
+    &.mb {
+      display: none;
+      @include tablet-down {
+        display: block;
+        margin-left: 0;
+        width: 100%;
+      }
+    }
+
     &_wrap {
       position: relative;
     }
 
     &_panel {
-      min-width: rem(419);
+      background-color: $white;
+      border-radius: rem(10);
+      box-shadow: 0 rem(4) rem(10) $black085;
+      min-width: rem(400);
       opacity: 0;
       position: absolute;
       right: 0;
       top: calc(100% + 16px);
       visibility: hidden;
 
-      &.open {
+      &-open {
         opacity: 1;
+        padding: rem(16);
         visibility: visible;
+        width: 100%;
+      }
+
+      &_input {
+        position: relative;
+
+        @include tablet-down {
+          margin-top: rem(16);
+          width: 100%;
+        }
+  
+        .a-input_input {
+          background: $white-smoke;
+          border-radius: rem(20);
+          padding-right: rem(40);
+        }
+  
+        &_icon {
+          cursor: pointer;
+          position: absolute;
+          right: rem(16);
+          top: 50%;
+          transform: translateY(-50%);
+          width: rem(24);
+        }
       }
     }
   }
 
-  &_languagepicker {
+  &_languagePicker {
     margin-left: rem(40);
     position: relative;
+
+    @include tablet-down {
+      margin-left: 0;
+    }
 
     &_value {
       cursor: pointer;
@@ -118,15 +263,34 @@
     }
 
     &_list {
-      list-style: none;
-      margin: 0;
-      padding-left: 0;
+      @include list-style-none();
+      background-color: $white;
+      border: rem(1) solid $june-bud;
+      border-radius: rem(5);
+      opacity: 0;
+      padding: rem(8);
       position: absolute;
       right: 0;
+      text-align: center;
       top: calc(100% + 10px);
+      transition: all $transition linear;
+      visibility: hidden;
+      width: rem(60);
+      z-index: $z-language;
+
+      &-open {
+        opacity: 1;
+        visibility: visible;
+      }
 
       &_item {
-        margin: 0;
+        cursor: pointer;
+
+        &.active {
+          .a-text {
+            font-weight: 700;
+          }
+        }
       }
     }
   }

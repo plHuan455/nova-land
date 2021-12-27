@@ -13,6 +13,7 @@ import Link from 'components/atoms/Link';
 import Text from 'components/atoms/Text';
 import useClickOutside from 'hooks/useClickOutside';
 import useWindowScroll from 'hooks/useWindowScroll';
+import mapModifiers from 'utils/functions';
 
 export type HeaderMenuTypes = {
   href: string;
@@ -37,18 +38,23 @@ const Header: React.FC<HeaderProps> = ({
   const [openSearch, setOpenSearch] = useState(false);
   const [isScroll, setIsScroll] = useState(false);
   const [isOpenLanguage, setIsOpenLanguage] = useState(false);
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
 
   // HOOK
   const location = useLocation();
   const searchRef = useRef(null);
   const languageRef = useRef(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const menuRef = useRef<HTMLUListElement>(null);
 
   useClickOutside(searchRef, (): void => {
     if (openSearch) setOpenSearch(false);
   });
   useClickOutside(languageRef, (): void => {
     if (isOpenLanguage) setIsOpenLanguage(false);
+  });
+  useClickOutside(menuRef, (): void => {
+    if (isOpenMenu) setIsOpenMenu(false);
   });
 
   useWindowScroll(() => {
@@ -72,6 +78,7 @@ const Header: React.FC<HeaderProps> = ({
 
   // Submit search
   const handleSubmit = (text?: string) => {
+    /* eslint-disable no-console */
     console.log(text);
 
     setOpenSearch(false);
@@ -85,9 +92,24 @@ const Header: React.FC<HeaderProps> = ({
     }
   };
   return (
-    <header className={`o-header${isScroll ? ' scrolled' : ''}`}>
+    <header className={mapModifiers('o-header', isScroll && 'scrolled')}>
       <Container>
         <div className="o-header_wrapper">
+          <div
+            className={mapModifiers(
+              'o-header_iconMenu',
+              isOpenMenu && 'active',
+            )}
+            onClick={() => {
+              setIsOpenLanguage(false);
+              setIsOpenMenu(!isOpenMenu);
+              setOpenSearch(false);
+            }}
+          >
+            <span />
+            <span />
+            <span />
+          </div>
           <div className="o-header_left">
             <Link href="/">
               <div className="o-header_logo">
@@ -97,7 +119,30 @@ const Header: React.FC<HeaderProps> = ({
           </div>
           <div className="o-header_right">
             <div className="o-header_menu">
-              <ul className="o-header_nav">
+              <ul
+                ref={menuRef}
+                className={mapModifiers(
+                  'o-header_nav',
+                  isOpenMenu && 'active',
+                )}
+              >
+                <div className="o-header_search mb">
+                  <div className="o-header_search_panel_input">
+                    <Input
+                      autoComplete="off"
+                      id="search"
+                      placeholder="Tìm kiếm"
+                      type="text"
+                      value={value}
+                      ref={inputRef}
+                      onChange={(e: ChangeEvent<HTMLInputElement>) => setValue(e.target.value)}
+                      onKeyPress={onPressEnter}
+                    />
+                    <div className="o-header_search_panel_input_icon" onClick={() => handleSubmit()}>
+                      <Icon iconName="search" />
+                    </div>
+                  </div>
+                </div>
                 {
                   headerMenu && headerMenu.map((val, idx) => (
                     <li className="o-header_nav_item" key={idx.toString()}>
@@ -106,9 +151,7 @@ const Header: React.FC<HeaderProps> = ({
                         activeClassName={checkActive(val.href) ? 'active' : ''}
                         customClassName="o-header_nav_link"
                       >
-                        <Text modifiers={['jet', '16x24', 'capitalize']}>
-                          {val.title}
-                        </Text>
+                        {val.title}
                       </Link>
                     </li>
                   ))
@@ -116,9 +159,9 @@ const Header: React.FC<HeaderProps> = ({
               </ul>
             </div>
             {/* SET LANGUAGE  */}
-            <div className="o-header_languagepicker">
+            <div className="o-header_languagePicker" ref={languageRef}>
               <div
-                className={`o-header_languagepicker_value${isOpenLanguage ? ' open' : ''}`}
+                className="o-header_languagePicker_value"
                 onClick={() => {
                   setIsOpenLanguage(!isOpenLanguage);
                 }}
@@ -128,7 +171,7 @@ const Header: React.FC<HeaderProps> = ({
                 </Text>
                 <Icon iconName="carretDownBlack" size="24" />
               </div>
-              <ul className="o-header_languagepicker_list" ref={languageRef}>
+              <ul className={mapModifiers('o-header_languagePicker_list', isOpenLanguage && 'open')}>
                 {
                   languageList && languageList.map((val, idx) => (
                     <li
@@ -138,10 +181,12 @@ const Header: React.FC<HeaderProps> = ({
                         }
                         setIsOpenLanguage(false);
                       }}
-                      className="o-header_languagepicker_list_item"
+                      className={`o-header_languagePicker_list_item ${
+                        val === languageSelected ? 'active' : ''
+                      }`}
                       key={idx.toString()}
                     >
-                      <Text modifiers={['jet', '400', 'uppercase']}>
+                      <Text modifiers={['16x24', 'jet', '400', 'uppercase']}>
                         {val}
                       </Text>
                     </li>
@@ -165,7 +210,7 @@ const Header: React.FC<HeaderProps> = ({
                 <Icon iconName="search" size="24" />
               </div>
               <div
-                className={`o-header_search_panel${openSearch ? ' open' : ''}`}
+                className={mapModifiers('o-header_search_panel', openSearch && 'open')}
                 ref={searchRef}
               >
                 <div className="o-header_search_panel_input">
@@ -179,6 +224,9 @@ const Header: React.FC<HeaderProps> = ({
                     onChange={(e: ChangeEvent<HTMLInputElement>) => setValue(e.target.value)}
                     onKeyPress={onPressEnter}
                   />
+                  <div className="o-header_search_panel_input_icon" onClick={() => handleSubmit()}>
+                    <Icon iconName="search" />
+                  </div>
                 </div>
               </div>
             </div>
