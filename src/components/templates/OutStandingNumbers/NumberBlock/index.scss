@@ -1,9 +1,13 @@
 .m-outStandingNumber {
-  @include adjust-flex;
-  flex-direction: column;
+  &_title {
+    text-align: center;
+  }
 
   &_desc {
     margin-top: rem(16);
+    @include tablet-down {
+      margin-top: rem(8);
+    }
     @include mobile-down {
       margin-top: 0;
     }

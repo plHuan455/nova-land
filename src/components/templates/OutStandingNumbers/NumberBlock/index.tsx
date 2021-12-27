@@ -10,10 +10,12 @@ export interface OutStandingNumberProps {
 
 const OutStandingNumber: React.FC<OutStandingNumberProps> = ({ number, desc }) => (
   <div className="m-outStandingNumber">
-    <Heading modifiers={['38x52', '700', 'blueLinear', 'center']}>
-      {number}
-      +
-    </Heading>
+    <div className="m-outStandingNumber_title">
+      <Heading modifiers={['38x52', '700', 'blueLinear', 'center', 'fontNoto']}>
+        {number}
+        +
+      </Heading>
+    </div>
     <div className="m-outStandingNumber_desc">
       <Text modifiers={['16x24', '400', 'dimGray', 'center']}>{desc}</Text>
     </div>
