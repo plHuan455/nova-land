@@ -3,15 +3,15 @@
 ## Glad to see you here!
 ## About Project
 
-In this project, we will create a website about Vietcombank Securities
+In this project, we will create a website about NovaLand Website
 
 ## Repository
 
-<https://bitbucket.org/binhnguyenthien/3forcom-vcbs-website-2021/src/develop/>
+<https://bitbucket.org/binhnguyenthien/3forcom-nova-novaland-website-2021/src/develop/>
 
 ## Design Workspace
 
-<https://www.figma.com/file/p2YyZr3n0q4ADl1hv34MUs/%5BWebsite%5D-VCBS---DEV>
+<https://www.figma.com/file/1gGj7JY4vZupZXs37p70NY/G1-NOVALAND-GROUP?node-id=0%3A1>
 
 
 ## Languages and Frameworks
