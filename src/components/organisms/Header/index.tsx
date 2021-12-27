@@ -169,7 +169,14 @@ const Header: React.FC<HeaderProps> = ({
                 <Text modifiers={['16x24', 'jet', '400', 'uppercase']}>
                   {languageSelected}
                 </Text>
-                <Icon iconName="carretDownBlack" size="24" />
+                <div
+                  className={mapModifiers(
+                    'o-header_languagePicker_icon',
+                    isOpenLanguage && 'active',
+                  )}
+                >
+                  <Icon iconName="carretDownBlack" size="24" />
+                </div>
               </div>
               <ul className={mapModifiers('o-header_languagePicker_list', isOpenLanguage && 'open')}>
                 {

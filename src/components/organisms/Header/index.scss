@@ -262,6 +262,14 @@
       @include adjust-flex(unset, center);
     }
 
+    &_icon {
+      transition: all $transition-long linear;
+
+      &-active {
+        transform: rotate(180deg);
+      }
+    }
+
     &_list {
       @include list-style-none();
       background-color: $white;
