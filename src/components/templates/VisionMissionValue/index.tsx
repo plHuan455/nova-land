@@ -17,18 +17,18 @@ export interface ContentBlockProps {
 }
 
 const ContentBlock: React.FC<ContentBlockProps> = ({ title, desc, dataList }) => (
-  <div className="t-VMV_contentBlock">
+  <div className="t-VMV_content">
     <Heading modifiers={['32x48', '700', 'fontNoto', 'white', 'uppercase', 'center']}>{title}</Heading>
-    <div className="t-VMV_contentBlock_desc">
+    <div className="u-mt-16 u-mt-md-24 u-mt-lg-32 u-mb-16 u-mb-md-24 u-mb-lg-32">
       <Text modifiers={['400', 'fontLexend', 'white', 'center']}>{desc}</Text>
     </div>
-    <div className="t-VMV_contentBlock_list">
+    <div className="t-VMV_list">
       {dataList?.map((item, idx) => (
-        <div key={`contentBlock-${idx.toString()}`} className="t-VMV_contentBlock_list_item">
-          <div className="t-VMV_contentBlock_list_item-img">
-            <Image src={item.src} ratio="1x1" alt="" />
+        <div key={`content-${idx.toString()}`} className="t-VMV_list-item">
+          <div className="t-VMV_list-img">
+            <Image src={item.src} ratio="1x1" alt={item.title} />
           </div>
-          <div className="t-VMV_contentBlock_list_item-desc">
+          <div className="u-ml-12 u-ml-lg-16">
             <Text modifiers={['400', 'fontLexend', 'white', 'center']}>{item.title}</Text>
           </div>
         </div>
