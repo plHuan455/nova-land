@@ -24,6 +24,10 @@
     }
   }
 
+  &-14x22 {
+    @include font-base(14, 22);
+  }
+
   &-12x17 {
     @include font-base(12, 17);
   }

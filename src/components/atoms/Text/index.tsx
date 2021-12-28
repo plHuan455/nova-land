@@ -4,6 +4,7 @@ import mapModifiers from 'utils/functions';
 
 export type Sizes =
   | '16x24'
+  | '14x22'
   | '12x17'
 
 export type LetterSpacing =

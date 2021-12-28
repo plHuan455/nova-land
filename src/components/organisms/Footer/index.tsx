@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import { SubmitHandler, UseFormReturn } from 'react-hook-form';
 
@@ -8,7 +7,6 @@ import Form from '../Form';
 import bgFooter from 'assets/images/bg-footer.png';
 import logoImg from 'assets/images/footer-logo.png';
 import Button from 'components/atoms/Button';
-import Heading from 'components/atoms/Heading';
 import Icon, { IconName } from 'components/atoms/Icon';
 import Image from 'components/atoms/Image';
 import { InputHookForm } from 'components/atoms/Input';
@@ -65,9 +63,9 @@ const Footer: React.FC<FooterProps> = ({
                 </div>
                 {/* Info  */}
                 <div className="o-footer_main_info">
-                  <Heading type="h3" modifiers={['400', 'white', 'uppercase', '14x22']}>
+                  <Text modifiers={['400', 'white', 'uppercase', '14x22']}>
                     CÔNG TY CỔ PHẦN TẬP ĐOÀN ĐẦU TƯ ĐỊA ỐC NOVA
-                  </Heading>
+                  </Text>
                   <div className="mt-8">
                     <Text
                       modifiers={['400', 'white', 'opacity07']}
@@ -146,9 +144,9 @@ const Footer: React.FC<FooterProps> = ({
               footerLink && footerLink.map((val, idx) => (
                 <div className="o-footer_main_menu_wrap" key={idx.toString()}>
                   <div className="o-footer_main_menu_title">
-                    <Heading type="h4" modifiers={['white', '16x24', '700', 'uppercase']}>
+                    <Text modifiers={['white', '14x22', '700', 'uppercase']}>
                       {val.title}
-                    </Heading>
+                    </Text>
                   </div>
                   <ul className={val.link?.find((e) => !!e.icon) ? 'o-footer_main_menu_icon' : 'o-footer_main_menu_list'}>
                     {

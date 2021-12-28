@@ -88,6 +88,15 @@
       &_nav {
         position: relative;
         padding-left: rem(20);
+        
+        &:not(:first-child) {
+          margin-top: rem(8);
+
+          @include mobile-down {
+            margin-top: rem(4);
+          }
+        }
+
         &:before {
           content: "";
           width: rem(6);
