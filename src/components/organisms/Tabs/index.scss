@@ -3,7 +3,6 @@
 
   &_labels {
     border-radius: rem(3);
-    margin: 0 rem(-24);
     @include adjust-flex();
     overflow-x: auto;
     position: relative;
@@ -20,6 +19,10 @@
     @include font-base(24, 32);
     text-transform: capitalize;
     white-space: nowrap;
+
+    @include mobile-down {
+      @include font-base(16, 20);
+    }
   }
 
   &_tab {

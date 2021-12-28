@@ -49,6 +49,6 @@ type ColorStyle =
   | 'urobilin'
   | 'arsenic'
 
-type FontFamily = 'fontLexend' | 'fontNoto'
+type FontFamily = 'fontLexend' | 'fontNoto' | 'fontLato';
 
 type GeneralTextStyle = ColorStyle | FontWeightStyle | TextStyle | FontFamily;

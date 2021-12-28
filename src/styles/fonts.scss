@@ -240,3 +240,94 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'Lato';
+  src: url('#{$font-path}Lato-BoldItalic.woff2') format('woff2'),
+      url('#{$font-path}Lato-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('#{$font-path}Lato-LightItalic.woff2') format('woff2'),
+      url('#{$font-path}Lato-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('#{$font-path}Lato-Italic.woff2') format('woff2'),
+      url('#{$font-path}Lato-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('#{$font-path}Lato-Light.woff2') format('woff2'),
+      url('#{$font-path}Lato-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato Hairline';
+  src: url('#{$font-path}Lato-HairlineItalic.woff2') format('woff2'),
+      url('#{$font-path}Lato-HairlineItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato Hairline';
+  src: url('#{$font-path}Lato-Hairline.woff2') format('woff2'),
+      url('#{$font-path}Lato-Hairline.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('#{$font-path}Lato-Regular.woff2') format('woff2'),
+      url('#{$font-path}Lato-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('#{$font-path}Lato-BlackItalic.woff2') format('woff2'),
+      url('#{$font-path}Lato-BlackItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('#{$font-path}Lato-Bold.woff2') format('woff2'),
+      url('#{$font-path}Lato-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('#{$font-path}Lato-Black.woff2') format('woff2'),
+      url('#{$font-path}Lato-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+

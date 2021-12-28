@@ -11,6 +11,14 @@
 
   &-32x48 {
     @include font-base(32, 48);
+
+    @include tablet-down {
+      @include font-base(26, 32);
+    }
+
+    @include mobile-down {
+      @include font-base(24, 30);
+    }
   }
 
   &-38x52 {
@@ -26,6 +34,14 @@
 
   &-60x72 {
     @include font-base(60, 72);
+
+    @include tablet-down {
+      @include font-base(38, 52);
+    }
+
+    @include mobile-down {
+      @include font-base(28, 40);
+    }
   }
 
   &-blueLinear {

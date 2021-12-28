@@ -55,9 +55,8 @@ export const HomeNewsCard: React.FC<HomeNewsCardProps> = ({
         <div className="t-homeNewsCard_divider" />
         <div className="t-homeNewsCard_general">
           <div className="t-homeNewsCard_date">
-            {/* Confirm with BA [font-family] later */}
             <Text
-              modifiers={['12x17', '400', 'ls-005', 'arsenic']}
+              modifiers={['12x17', '400', 'ls-005', 'arsenic', 'fontLato']}
               content={date}
             />
           </div>
@@ -66,8 +65,7 @@ export const HomeNewsCard: React.FC<HomeNewsCardProps> = ({
               <Icon iconName="eyeOpen" size="14" />
             </span>
             <div className="t-homeNewsCard_view_total">
-              {/* Confirm with BA [font-family] later */}
-              <Text modifiers={['12x17', '400', 'ls-005', 'arsenic']}>
+              <Text modifiers={['12x17', '400', 'ls-005', 'arsenic', 'fontLato']}>
                 {
                   isOpenViews ? totalViews : '---'
                 }
@@ -99,12 +97,10 @@ const HomeNews: React.FC<HomeNewsProps> = ({
   return (
     <div className="t-homeNews">
       <Container>
-        <div className="t-homeNews_title">
-          <Heading
-            modifiers={['32x48', '700', 'uppercase', 'arsenic', 'center', 'fontNoto']}
-            content={title}
-          />
-        </div>
+        <Heading
+          modifiers={['32x48', '700', 'uppercase', 'arsenic', 'center', 'fontNoto']}
+          content={title}
+        />
         <div className="t-homeNews_wrapper">
           <Tabs variableMutate={indexActive}>
             {
