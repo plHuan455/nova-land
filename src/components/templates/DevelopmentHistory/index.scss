@@ -1,0 +1,88 @@
+.t-processItem {
+  position: relative;
+  padding: rem(2) rem(58);
+
+  &_year {
+    color: $white;
+    position: absolute;
+    bottom: calc(100% + 18px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    @include font-base(16,24);
+    cursor: pointer;
+  }
+
+  &_hexagon {
+    padding: 0 2px;
+    width: rem(13);
+    height: rem(12);
+    background: $cool-black;
+    cursor: pointer;
+
+    div:first-child {
+      width: 0;
+      border-bottom: rem(3.5) solid $light-french-beige;
+      border-left: rem(4.6) solid transparent;
+      border-right: rem(4.6) solid transparent;    
+    }
+    div:nth-child(2) {
+      width: rem(9);
+      height: rem(5);
+      background-color: $light-french-beige;
+    }
+    div:last-child {
+      width: 0;
+      border-top: rem(3.5) solid $light-french-beige;
+      border-left: rem(4.6) solid transparent;
+      border-right: rem(4.6) solid transparent;
+    }
+  }
+}
+
+.t-developmentHistory {
+  padding: rem(72) 0 rem(82);
+  background: $cool-black url('~assets/images/bg_development_history.png') bottom right no-repeat;
+  background-size: contain;
+
+  &_description {
+    margin-top: rem(24);
+  }
+
+  &_process {
+    max-width: rem(570);
+    margin-top: rem(32);
+    position: relative;
+    // &::before {
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   content: '';
+    //   width: 100%;
+    //   height: 100%;
+    //   z-index: 10;
+    //   box-sizing: border-box;
+    //   filter: drop-shadow(0px 16px 16px rgba(0, 0, 0, 0.25));
+    //   transform: matrix(1, 0, 0, -1, 0, 0);
+    //   pointer-events: none;
+    // }
+  }
+
+  .slick {
+    &-list {
+      padding-top: rem(54);
+      &::before {
+        position: absolute;
+        bottom: calc((100% - 54px) / 2);
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, rgba(195, 163, 113, 0) 0%, #F9E4C5 50.52%, rgba(195, 163, 113, 0) 100%);
+        transform: matrix(1, 0, 0, -1, 0, 0) translateY(-50%);
+        z-index: -1;
+        pointer-events: none;
+      }
+    }
+  }
+}
