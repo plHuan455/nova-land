@@ -12,17 +12,15 @@ interface FieldActivityProps {
 const FieldActivity: React.FC<FieldActivityProps> = ({ title, imgSrc }) => (
   <div className="t-fieldActivity">
     <Container>
-      <div className="t-fieldActivity_title">
-        <Heading
-          modifiers={['32x48', '700', 'fontNoto', 'jet', 'uppercase', 'center']}
-          content={title}
-        />
-      </div>
-      <div className="t-fieldActivity_image">
+      <Heading
+        modifiers={['32x48', '700', 'fontNoto', 'jet', 'uppercase', 'center']}
+        content={title}
+      />
+      <div className="u-mt-16 u-mt-sm-24 u-mt-lg-32">
         <Image
           src={imgSrc}
           ratio="721x303"
-          alt="FieldActivity"
+          alt="field_activity"
         />
       </div>
     </Container>
