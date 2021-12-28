@@ -1,5 +1,6 @@
 /* eslint-disable react/require-default-props */
 import React, { forwardRef } from 'react';
+import { useController } from 'react-hook-form';
 
 import mapModifiers from 'utils/functions';
 
@@ -14,7 +15,7 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
 }
 
 const InputRef: React.ForwardRefRenderFunction<HTMLInputElement, InputProps> = ({
-  type, error, disabled, placeholder, value, maxLength, autoComplete,
+  type, error, disabled, placeholder, value, maxLength, autoComplete, name,
   onChange, onBlur, onFocus,
 }, ref) => (
   <div className={mapModifiers('a-input',
@@ -35,6 +36,7 @@ const InputRef: React.ForwardRefRenderFunction<HTMLInputElement, InputProps> = (
         onChange={onChange}
         onBlur={onBlur}
         onFocus={onFocus}
+        name={name}
       />
     </div>
     {
@@ -43,6 +45,26 @@ const InputRef: React.ForwardRefRenderFunction<HTMLInputElement, InputProps> = (
   </div>
 );
 const Input = forwardRef(InputRef);
+
+interface InputHookFormProps extends InputProps {
+  name: string;
+}
+
+export const InputHookForm: React.FC<InputHookFormProps> = ({
+  name,
+  defaultValue,
+  ...props
+}) => {
+  const {
+    field: { ref, ...hookProps },
+    fieldState: { error },
+  } = useController({
+    name: `${name}` as const,
+    defaultValue: defaultValue || '',
+  });
+
+  return <Input {...hookProps} {...props} ref={ref} error={error?.message} />;
+};
 
 Input.defaultProps = {
   type: 'text',

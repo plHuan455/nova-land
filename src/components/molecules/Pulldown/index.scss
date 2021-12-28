@@ -6,6 +6,15 @@
     color: $sinopia;
     left: 0;
     position: absolute;
-    @include font-base(14, 18);
+    @include font-base(12, 16);
+  }
+
+  &-default {
+    &__placeholder {
+      @include mobile-down {
+        font-size: rem(14) !important;
+        line-height: rem(20);
+      }
+    }
   }
 }

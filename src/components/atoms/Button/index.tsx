@@ -1,3 +1,4 @@
+/* eslint-disable react/button-has-type */
 import React from 'react';
 
 import imgLoading from 'assets/images/loading.gif';
@@ -5,18 +6,17 @@ import mapModifiers from 'utils/functions';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   modifiers?: 'primary' | 'secondary' | 'outline';
-  isSubmit?: boolean;
   isLoading?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({
-  children, modifiers, isSubmit, name, id, className, isLoading, disabled,
+  children, modifiers, name, id, className, isLoading, disabled, type = 'button',
   onClick,
 }) => (
   <button
     id={id}
     name={name}
-    type={isSubmit ? 'submit' : 'button'}
+    type={type}
     disabled={disabled || isLoading}
     onClick={onClick}
     className={mapModifiers('a-button',
@@ -33,7 +33,6 @@ const Button: React.FC<ButtonProps> = ({
 
 Button.defaultProps = {
   modifiers: 'primary',
-  isSubmit: false,
   isLoading: false,
 };
 

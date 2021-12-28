@@ -1,6 +1,8 @@
+/* eslint-disable react/destructuring-assignment */
 import React, {
   forwardRef, useImperativeHandle, useMemo, useRef, useState,
 } from 'react';
+import { Controller, get, useFormContext } from 'react-hook-form';
 import Select, {
   components,
   GroupedOptionsType,
@@ -11,6 +13,8 @@ import Select, {
 
 import iconArrowDown2 from 'assets/icons/ic_arrow_down_small.svg';
 import iconArrowDown from 'assets/icons/ic_carret_down.svg';
+import { useDerivedStateFromProps } from 'helpers/react-hook';
+import mapModifiers from 'utils/functions';
 
 export interface DropDownReference {
   reset: () => void;
@@ -79,6 +83,8 @@ const PulldownRef: React.ForwardRefRenderFunction<HTMLDivElement, PulldownProps>
   return (
     <div className="m-pulldown">
       <Select
+        className="m-pulldown"
+        classNamePrefix={mapModifiers('m-pulldown', 'default')}
         menuPlacement="auto"
         ref={selectRef}
         defaultValue={selectedOption}
@@ -110,6 +116,7 @@ const PulldownRef: React.ForwardRefRenderFunction<HTMLDivElement, PulldownProps>
           }),
           placeholder: (base: any) => ({
             ...base,
+            fontSize: 16,
             color: isSecondary ? 'rgba(0, 0, 0, 0.45)' : 'rgba(0, 0, 0, 0.25)',
           }),
           valueContainer: (base: any) => ({
@@ -123,7 +130,7 @@ const PulldownRef: React.ForwardRefRenderFunction<HTMLDivElement, PulldownProps>
             alignItems: 'center',
             cursor: 'pointer',
             color: state.isSelected ? '#FFFFFF' : '#002137',
-            backgroundColor: state.isSelected || state.isFocused ? '#002B60' : 'transparent',
+            backgroundColor: state.isSelected ? '#002B60' : 'transparent',
             '&:hover': {
               backgroundColor: 'rgba(0, 43, 96, 0.2)',
             },
@@ -161,6 +168,40 @@ const PulldownRef: React.ForwardRefRenderFunction<HTMLDivElement, PulldownProps>
       />
       {error && <span className="m-pulldown_error">{error}</span>}
     </div>
+  );
+};
+interface PulldownHookFormProps extends PulldownProps {
+  name: string;
+}
+export const PulldownHookForm: React.FC<PulldownHookFormProps> = (props) => {
+  const { formState, control, getValues } = useFormContext();
+  const dropdownRef = useRef<DropDownReference | null>(null);
+
+  const hasError: Record<string, string> = get(formState.errors, `${props.name}`);
+
+  useDerivedStateFromProps((prevValue, currentValue) => {
+    if (typeof currentValue === 'undefined' && currentValue !== prevValue) {
+      dropdownRef.current?.reset();
+    }
+  }, getValues(props.name));
+
+  return (
+    <Controller
+      name={props.name}
+      control={control}
+      render={({ field: { onChange, value }, ...innerProps }) => (
+        <Pulldown
+          value={value}
+          register={dropdownRef}
+          handleChange={onChange}
+          error={hasError && hasError.message}
+          /* eslint-disable-next-line react/jsx-props-no-spreading */
+          {...props}
+          /* eslint-disable-next-line react/jsx-props-no-spreading */
+          {...innerProps}
+        />
+      )}
+    />
   );
 };
 

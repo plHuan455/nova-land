@@ -3,6 +3,8 @@ import React from 'react';
 import mapModifiers from 'utils/functions';
 
 export type Sizes =
+  | '14x22'
+  | '16x24'
   | '20x30'
   | '32x48'
   | '38x52'
