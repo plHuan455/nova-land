@@ -1,10 +1,13 @@
 import { Story, Meta } from '@storybook/react';
 import React from 'react';
+import {
+  BrowserRouter as Router,
+} from 'react-router-dom';
 
-import InvestmentSector, { InvestmentCard, InvestmentCardProps } from '.';
+import InvestmentSector, { InvestmentCard } from '.';
 
+import investmentSectorData from 'assets/dataDummy/investmentSector';
 import imgInvestmentSector from 'assets/images/InvestmentSector/img_investmentSector.png';
-import imgInvestmentSector2 from 'assets/images/InvestmentSector/img_investmentSector2.png';
 
 export default {
   title: 'Components/templates/InvestmentSector',
@@ -12,48 +15,42 @@ export default {
   argTypes: {},
 } as Meta;
 
-const investmentSectorData: InvestmentCardProps[] = [
-  {
-    title: 'BĐS TRUNG TÂM',
-    desc: 'Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.',
-    thumbnail: imgInvestmentSector,
-  },
-  {
-    title: 'BĐS TRUNG TÂM',
-    desc: 'Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.',
-    thumbnail: imgInvestmentSector2,
-  },
-  {
-    title: 'BĐS TRUNG TÂM',
-    desc: 'Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.',
-    thumbnail: imgInvestmentSector,
-  },
-  {
-    title: 'BĐS TRUNG TÂM',
-    desc: 'Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.',
-    thumbnail: imgInvestmentSector2,
-  },
-  {
-    title: 'BĐS TRUNG TÂM',
-    desc: 'Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.',
-    thumbnail: imgInvestmentSector,
-  },
-];
-
 export const normal: Story = () => (
-  <InvestmentSector
-    title="BẤT ĐỘNG SẢN"
-    investmentSectorList={investmentSectorData}
-  />
+  <Router>
+    <InvestmentSector
+      title="BẤT ĐỘNG SẢN"
+      investmentSectorList={investmentSectorData}
+    />
+  </Router>
 );
 
 export const second: Story = () => (
-  <div style={{ maxWidth: '450px' }}>
-    <InvestmentCard
-      title="BĐS TRUNG TÂM"
-      desc="Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM với dòng sản phẩm
-    nhà ở cao tầng & thương mại; khu đô thị thấp tầng."
-      thumbnail={imgInvestmentSector}
-    />
-  </div>
+  <Router>
+    <div style={{ maxWidth: '450px' }}>
+      <InvestmentCard
+        title="BĐS TRUNG TÂM"
+        desc="Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM với dòng sản phẩm
+      nhà ở cao tầng & thương mại; khu đô thị thấp tầng."
+        thumbnail={imgInvestmentSector}
+        descDetail="Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng."
+        href="/"
+      />
+    </div>
+  </Router>
+);
+
+export const small: Story = () => (
+  <Router>
+    <div style={{ maxWidth: '285px' }}>
+      <InvestmentCard
+        title="BĐS TRUNG TÂM"
+        desc="Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM với dòng sản phẩm
+      nhà ở cao tầng & thương mại; khu đô thị thấp tầng."
+        thumbnail={imgInvestmentSector}
+        isSmall
+        descDetail="Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng."
+        href="/"
+      />
+    </div>
+  </Router>
 );

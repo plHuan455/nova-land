@@ -7,7 +7,8 @@ type Ratio =
   | '1126x376'
   | '1371x620'
   | '721x303'
-  | '370x208';
+  | '370x208'
+  | '226x127';
 
 type FontWeightStyle =
   | '100'
@@ -54,7 +55,8 @@ type ColorStyle =
   | 'arsenic'
   | 'lavenderGray'
   | 'dimGray'
-  | 'jet';
+  | 'jet'
+  | 'black085';
 
 type FontFamily = 'fontLexend' | 'fontNoto' | 'fontLato';
 
