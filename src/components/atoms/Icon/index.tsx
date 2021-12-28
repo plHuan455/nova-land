@@ -17,7 +17,7 @@ export const iconList = {
 
 export type IconName = keyof typeof iconList;
 
-export type IconSize = '14' | '24' |'40' | '61';
+export type IconSize = '14' | '24' |'40' | '80' | '120';
 interface IconProps {
   iconName: IconName;
   size?: IconSize;

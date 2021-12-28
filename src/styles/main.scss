@@ -52,7 +52,7 @@ ol {
 }
 
 @each $offset in $offsets {
-  @for $spacing from -20 through 50 {
+  @for $spacing from -20 through 100 {
     @if $spacing >= 0 {
       .u-m#{str-slice($offset, 0, 1)}-#{$spacing} {
         margin-#{$offset}: #{$spacing}px;
@@ -70,7 +70,7 @@ ol {
 
 @each $name, $value in $breakpoints {
   @each $offset in $offsets {
-    @for $spacing from -20 through 50 {
+    @for $spacing from -20 through 100 {
       @if $spacing >= 0 {
         .u-m#{str-slice($offset, 0, 1)}-#{$name}-#{$spacing} {
           @media #{$value} {

@@ -29,11 +29,11 @@ export const second: Story = () => (
     <div style={{ maxWidth: '450px' }}>
       <InvestmentCard
         title="BĐS TRUNG TÂM"
-        desc="Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM với dòng sản phẩm
-      nhà ở cao tầng & thương mại; khu đô thị thấp tầng."
+        desc="Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng."
         thumbnail={imgInvestmentSector}
-        descDetail="Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng."
         href="/"
+        icon="building"
+        iconActive="buildingBlue"
       />
     </div>
   </Router>
@@ -44,12 +44,12 @@ export const small: Story = () => (
     <div style={{ maxWidth: '285px' }}>
       <InvestmentCard
         title="BĐS TRUNG TÂM"
-        desc="Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM với dòng sản phẩm
-      nhà ở cao tầng & thương mại; khu đô thị thấp tầng."
+        desc="Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng."
         thumbnail={imgInvestmentSector}
         isSmall
-        descDetail="Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng."
         href="/"
+        icon="building"
+        iconActive="buildingBlue"
       />
     </div>
   </Router>

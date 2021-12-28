@@ -2,147 +2,112 @@
   $root: &;
   border: rem(1) solid $gainsboro;
   overflow: hidden;
-  padding: rem(52) rem(40);
   position: relative;
+  transition: all $transition ease-in-out;
 
-  @include tablet-down {
-    padding: rem(22) rem(18);
-  }
-
-  &:hover {
-    #{$root}_detail {
-      animation-duration: 0.8s;
-      animation-fill-mode: both;
-      animation-name: backInUp;
-    }
-  }
-
-  &_detail {
-    background: url('~assets/images/InvestmentSector/img_general.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-    left: 0;
-    opacity: 0.7;
+  &_main,
+  &_layer {
     padding: rem(52) rem(40);
-    position: absolute;
-    top: 0;
-    transform: translateY(1200px) scale(0.7);
-    width: 100%;
-    z-index: 3;
-  
+
     @include tablet-down {
       padding: rem(22) rem(18);
     }
-  }
 
-  &-small {
-    padding: rem(32) rem(16) rem(16);
-
-    @include tablet-down {
-      padding: rem(20) rem(12) rem(12);
-    }
-
-    #{$root}_detail {
+    #{$root}-small & {
       padding: rem(32) rem(16) rem(16);
 
       @include tablet-down {
         padding: rem(20) rem(12) rem(12);
       }
     }
+  }
 
-    #{$root}_icon,
-    #{$root}_iconDetail {
-      height: rem(80);
-      width: rem(80);
+  &_layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all $transition ease-in-out;
+    visibility: hidden;
+  }
+
+  &_icon {
+    @include tablet-down {
+      .a-icon {
+        width: rem(100);
+        height: rem(100);
+        #{$root}-small & {
+          width: rem(60);
+          height: rem(60);
+        }
+      }
+    }
+  }
+
+  &_layer {
+    background: url('~assets/images/InvestmentSector/img_general.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &_title {
+    margin-top: rem(32);
+    @include mobile-down {
+      margin-top: rem(24);
     }
 
-    #{$root}_title {
+    #{$root}-small & {
       margin-top: rem(26);
-  
-      @include tablet-down {
-        margin-top: rem(18);
-      }
-  
       @include mobile-down {
         margin-top: rem(14);
       }
     }
 
-    #{$root}_desc,
-    #{$root}_descDetail {
-      margin-bottom: rem(24);
+  }
+
+  &_desc {
+    margin-top: rem(8);
+
+    &-main {
+      @include text-overflow(3);
+    }
+
+    &-layer {
+      @include text-overflow(5);
+    }
+
+    #{$root}-small & {
       margin-top: rem(16);
-  
-      @include tablet-down {
-        margin-bottom: rem(18);
-        margin-top: rem(10);
-      }
-  
       @include mobile-down {
-        margin-bottom: rem(15);
         margin-top: rem(8);
       }
     }
   }
 
-  &_icon,
-  &_iconDetail {
-    align-items: center;
-    background-color: $white;
-    border: rem(2) solid $golden-brown;
-    border-radius: 50%;
-    display: flex;
-    height: rem(120);
-    justify-content: center;
-    width: rem(120);
-
-    @include tablet-down {
-      height: rem(90);
-      width: rem(90);
+  &_thumbnail {
+    margin-top: rem(24);
+    @include mobile-down {
+      margin-top: rem(16);
     }
   }
 
-  &_iconDetail {
-    border: 0;
-  }
-
-  &_title {
-    margin-top: rem(32);
-    @include text-overflow(1);
-
-    @include tablet-down {
-      margin-top: rem(20);
-    }
+  &_button {
+    margin-top: rem(24);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: rem(150);
 
     @include mobile-down {
       margin-top: rem(16);
     }
   }
 
-  &_desc,
-  &_descDetail {
-    margin-bottom: rem(24);
-    margin-top: rem(8);
-    opacity: 0.8;
-    @include text-overflow(3);
-
-    @include tablet-down {
-      margin-bottom: rem(15);
+  &:hover {
+    #{$root}_main {
+      opacity: 0;
     }
-
-    @include mobile-down {
-      margin-bottom: rem(13);
-    }
-  }
-
-  &_descDetail {
-    @include text-overflow(7);
-  }
-
-  &_button {
-    margin: 0 auto;
-    width: 60%;
   }
 }
 
@@ -157,15 +122,9 @@
     @include mobile-down {
       margin-bottom: rem(25);
     }
-
-    .a-heading {
-      width: 100%;
-    }
   }
 
   &_content {
-    margin-left: rem(-16);
-    margin-right: rem(-16);
 
     .slick-prev {
       background: $white-smoke2;
@@ -224,17 +183,5 @@
     padding-bottom: rem(10);
     padding-left: rem(16);
     padding-right: rem(16);
-  }
-}
-
-@keyframes backInUp {
-  80% {
-    opacity: 0.7;
-    transform: translateY(0) scale(0.7);
-  }
-
-  100% {
-    opacity: 1;
-    transform: scale(1);
   }
 }
