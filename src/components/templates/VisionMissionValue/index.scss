@@ -1,0 +1,65 @@
+.t-VMV {
+  background-color: $cool-black;
+
+  &_wrapper {
+    flex-wrap: wrap;
+    padding: rem(72) rem(24);
+    @include adjust-flex;
+    @include tablet-down {
+      padding: rem(24);
+    }
+  }
+
+  &_block {
+    flex: 0 0 calc(100% / 3);
+
+    &:not(:last-child) {
+      border-right: 1px solid $gainsboro;
+      @include mobile-down {
+        border: 0;
+      }
+    }
+
+    @include tablet-down {
+      flex: 0 0 50%;
+      margin: rem(12) 0;
+      padding: 0 rem(24);
+    }
+
+    @include mobile-down {
+      flex: 0 0 100%;
+      padding: 0;
+    }
+  }
+
+  &_contentBlock {
+    @include adjust-flex;
+    flex-direction: column;
+
+    &_desc {
+      margin: rem(32) auto rem(24) auto;
+      @include mobile-down {
+        margin: rem(16) auto;
+      }
+    }
+
+    &_list {
+      max-width: rem(229);
+      width: 100%;
+
+      &_item {
+        @include adjust-flex(flex-start, center);
+        
+        &-img,
+        &-desc {
+          padding: rem(8);
+        }
+
+        &-img {
+          max-width: rem(60);
+          width: 100%;
+        }
+      }
+    }
+  }
+}
