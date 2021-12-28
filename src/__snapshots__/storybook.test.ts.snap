@@ -1871,6 +1871,42 @@ exports[`Storyshots Components/organisms/Tabs Normal 1`] = `
 </div>
 `;
 
+exports[`Storyshots Components/templates/FieldActivity Normal 1`] = `
+<div
+  className="t-fieldActivity"
+>
+  <div
+    className="container o-container"
+  >
+    <div
+      className="t-fieldActivity_title"
+    >
+      <h2
+        className="a-heading a-heading-32x48 a-heading-700 a-heading-fontNoto a-heading-jet a-heading-uppercase a-heading-center"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "LĨNH VỰC HOẠT ĐỘNG",
+          }
+        }
+      />
+    </div>
+    <div
+      className="t-fieldActivity_image"
+    >
+      <div
+        className="a-image a-image-721x303"
+      >
+        <img
+          alt="FieldActivity"
+          loading="lazy"
+          src="img_field_activity.png"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Components/templates/HomeNews Home News Card 1`] = `
 <div
   style={
