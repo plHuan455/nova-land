@@ -20,13 +20,11 @@ const TransportationInfrastructure: React.FC<
 }) => (
   <div className="t-transportInfrastructure">
     <Container>
-      <div className="t-transportInfrastructure_title">
-        <Heading modifiers={['32x48', '700', 'fontNoto', 'jet', 'uppercase', 'center']}>{title}</Heading>
-      </div>
-      <div className="t-transportInfrastructure_desc">
+      <Heading modifiers={['32x48', '700', 'fontNoto', 'jet', 'uppercase', 'center']}>{title}</Heading>
+      <div className="u-mt-8 u-mt-sm-16">
         <Text type="div" modifiers={['dimGray', '400', 'center']} content={desc} />
       </div>
-      <div className="t-transportInfrastructure_img">
+      <div className="u-mt-16 u-mt-sm-32">
         <Image
           src={imgSrc}
           srcTablet={imgSrcTablet}
