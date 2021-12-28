@@ -42,6 +42,10 @@
       color: $black025;
       font-weight: 400;
       @include font-base(16, 24);
+
+      @include mobile-down {
+        @include font-base(14, 20);
+      }
     }
 
     &::-webkit-outer-spin-button,

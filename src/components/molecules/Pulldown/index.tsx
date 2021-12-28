@@ -14,6 +14,7 @@ import Select, {
 import iconArrowDown2 from 'assets/icons/ic_arrow_down_small.svg';
 import iconArrowDown from 'assets/icons/ic_carret_down.svg';
 import { useDerivedStateFromProps } from 'helpers/react-hook';
+import mapModifiers from 'utils/functions';
 
 export interface DropDownReference {
   reset: () => void;
@@ -82,6 +83,8 @@ const PulldownRef: React.ForwardRefRenderFunction<HTMLDivElement, PulldownProps>
   return (
     <div className="m-pulldown">
       <Select
+        className="m-pulldown"
+        classNamePrefix={mapModifiers('m-pulldown', 'default')}
         menuPlacement="auto"
         ref={selectRef}
         defaultValue={selectedOption}
@@ -113,6 +116,7 @@ const PulldownRef: React.ForwardRefRenderFunction<HTMLDivElement, PulldownProps>
           }),
           placeholder: (base: any) => ({
             ...base,
+            fontSize: 16,
             color: isSecondary ? 'rgba(0, 0, 0, 0.45)' : 'rgba(0, 0, 0, 0.25)',
           }),
           valueContainer: (base: any) => ({
