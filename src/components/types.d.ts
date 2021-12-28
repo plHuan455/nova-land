@@ -47,5 +47,8 @@ type ColorStyle =
   | 'cyberGrape'
   | 'antiqueBronze'
   | 'urobilin'
+  | 'arsenic'
 
-type GeneralTextStyle = ColorStyle | FontWeightStyle | TextStyle;
+type FontFamily = 'fontLexend' | 'fontNoto' | 'fontLato';
+
+type GeneralTextStyle = ColorStyle | FontWeightStyle | TextStyle | FontFamily;

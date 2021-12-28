@@ -1,0 +1,110 @@
+.t-homeNewsCard {
+  @include adjust-flex(flex-start, center);
+  background: $white;
+  border: rem(1) solid $gainsboro;
+
+  @include small-mobile {
+    display: block;
+  }
+
+  &_thumbnail {
+    min-width: rem(194);
+
+    @include small-mobile {
+      width: 100%;
+    }
+  }
+
+  &_wrapper {
+    padding: rem(24) rem(24) rem(20);
+
+    @include mobile-down {
+      padding: rem(15);
+    }
+  }
+
+  &_title {
+    @include text-overflow(2);
+  }
+
+  &_content {
+    margin-top: rem(8);
+    opacity: 0.8;
+
+    @include text-overflow(2);
+  }
+
+  &_divider {
+    background: $arsenic;
+    height: rem(1);
+    margin: rem(16) 0;
+    opacity: 0.2;
+    width: 100%;
+
+    @include mobile-down {
+      margin: rem(10) 0;
+    }
+  }
+
+  &_general {
+    @include adjust-flex(space-between, center);
+  }
+
+  &_date {
+    opacity: 0.6;
+  }
+
+  &_view {
+    @include adjust-flex(space-between, center);
+
+    span {
+      cursor: pointer;
+    }
+
+    &_total {
+      margin-left: rem(8);
+      opacity: 0.6;
+    }
+  }
+}
+
+.t-homeNews {
+  &_title {
+    .a-heading {
+      width: 100%;
+    }
+  }
+
+  &_wrapper {
+    margin-top: rem(24);
+  }
+
+  &_content {
+    display: flex;
+    flex-wrap: wrap;
+    margin: rem(-16);
+
+    @include tablet-down {
+      margin: rem(-10) 0;
+    }
+  }
+
+  &_item {
+    flex: 0 0 50%;
+    padding: rem(16);
+
+    @include tablet-down {
+      flex: 0 0 100%;
+      padding: rem(10) 0;
+    }
+  }
+
+  &_button {
+    margin: rem(32) auto 0;
+    max-width: rem(185);
+
+    @include mobile-down {
+      margin: rem(20) auto 0;
+    }
+  }
+}
