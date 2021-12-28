@@ -1,0 +1,120 @@
+.t-outstandingProjectCard {
+  $root: &;
+
+  &:hover {
+    #{$root}_thumbnail::before {
+      transform: translateX(300%) rotate(45deg);
+    }
+  }
+
+  &_thumbnail {
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+      background-color: rgba($white, 0.3);
+      content: '';
+      height: 200%;
+      left: 0;
+      position: absolute;
+      top: -20%;
+      transform: translateX(-100%);
+      transition: $transition-long ease;
+      width: 50%;
+      z-index: $z-1;
+    }
+  }
+
+  &_title {
+    margin-top: rem(16);
+    @include text-overflow();
+
+    @include tablet-down {
+      margin-top: rem(10);
+    }
+  }
+}
+
+.t-outstandingProject {
+  background: $snow;
+  padding: rem(78) 0 rem(79);
+
+  @include tablet-down {
+    padding: rem(60) 0;
+  }
+
+  @include mobile-down {
+    padding: rem(50) 0;
+  }
+
+  &_wrapper {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include tablet-down {
+      display: block;
+    }
+  }
+
+  &_title {
+    width: 15%;
+
+    @include tablet-down {
+      margin-bottom: rem(10);
+      width: 100%;
+    }
+  }
+
+  &_content {
+    margin: 0 rem(-8);
+    padding-left: rem(12);
+    width: 85%;
+
+    @include break-min(1367px) {
+      padding-left: rem(32);
+    }
+
+    @include tablet-down {
+      padding-left: 0;
+      width: 100%;
+    }
+
+    @include mobile-down {
+      margin: 0;
+    }
+
+    .o-carousel_arrow {
+      height: rem(40);
+      width: rem(40);
+    }
+
+    .o-carousel_arrow {
+      top: 42%;
+    }
+
+    .slick-arrow.slick-prev {
+      left: calc(32 / 1366 * 100%);
+
+      @include break-min(1367px) {
+        left: calc(-22 / 1366 * 100%);
+      }
+    }
+
+    .slick-arrow.slick-next {
+      right: calc(32 / 1366 * 100%);
+
+      @include break-min(1367px) {
+        right: calc(-22 / 1366 * 100%);
+      }
+    }
+  }
+
+  &_item {
+    padding: 0 rem(8);
+
+    @include mobile-down {
+      padding: 0;
+    }
+  }
+}

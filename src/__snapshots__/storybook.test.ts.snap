@@ -7370,3 +7370,1657 @@ exports[`Storyshots Components/templates/VisionMissionValue Normal 1`] = `
   </div>
 </div>
 `;
+
+exports[`Storyshots Components/templates/OutstandingProject Card 1`] = `
+<div
+  style={
+    Object {
+      "margin": "30px",
+      "maxWidth": "221px",
+    }
+  }
+>
+  <div
+    className="t-outstandingProjectCard"
+  >
+    <a
+      aria-current="page"
+      className="a-link "
+      href="/"
+      onClick={[Function]}
+      style={Object {}}
+      target="_self"
+    >
+      <div
+        className="t-outstandingProjectCard_thumbnail"
+      >
+        <div
+          className="a-image a-image-221x166"
+        >
+          <img
+            alt="OutstandingProjectCard"
+            loading="lazy"
+            src="img_outstanding_project.png"
+          />
+        </div>
+      </div>
+      <div
+        className="t-outstandingProjectCard_title"
+      >
+        <p
+          className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Aqua City",
+            }
+          }
+        />
+      </div>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
+<div
+  className="t-outstandingProject"
+>
+  <div
+    className="container o-container"
+  >
+    <div
+      className="t-outstandingProject_wrapper"
+    >
+      <div
+        className="t-outstandingProject_title"
+      >
+        <h2
+          className="a-heading a-heading-32x48 a-heading-deer a-heading-700 a-heading-fontNoto a-heading-uppercase"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "DỰ ÁN NỔI BẬT",
+            }
+          }
+        />
+      </div>
+      <div
+        className="t-outstandingProject_content"
+      >
+        <div
+          className="o-carousel o-carousel-hasarrow"
+        >
+          <div
+            className="slick-slider slick-initialized"
+            dir="ltr"
+          >
+            <div
+              className="o-carousel_arrow o-carousel_arrow_prev slick-arrow slick-prev "
+              onClick={[Function]}
+            />
+            <div
+              className="slick-list"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={null}
+              onMouseMove={null}
+              onMouseUp={[Function]}
+              onTouchCancel={null}
+              onTouchEnd={[Function]}
+              onTouchMove={null}
+              onTouchStart={[Function]}
+              style={
+                Object {
+                  "padding": "0px 0",
+                }
+              }
+            >
+              <div
+                className="slick-track"
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                onMouseOver={[Function]}
+                style={
+                  Object {
+                    "WebkitTransform": "translate3d(0px, 0px, 0px)",
+                    "WebkitTransition": "",
+                    "msTransform": "translateX(0px)",
+                    "opacity": 1,
+                    "transform": "translate3d(0px, 0px, 0px)",
+                    "transition": "",
+                  }
+                }
+              >
+                <div
+                  aria-hidden={true}
+                  className="slick-slide slick-cloned"
+                  data-index={-5}
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "width": 0,
+                    }
+                  }
+                  tabIndex="-1"
+                >
+                  <div>
+                    <div
+                      className="o-carousel_wrap"
+                      style={
+                        Object {
+                          "display": "inline-block",
+                          "width": "100%",
+                        }
+                      }
+                      tabIndex={-1}
+                    >
+                      <div
+                        className="o-carousel_item"
+                      >
+                        <div
+                          className="t-outstandingProject_item"
+                        >
+                          <div
+                            className="t-outstandingProjectCard"
+                          >
+                            <a
+                              aria-current="page"
+                              className="a-link "
+                              href="/"
+                              onClick={[Function]}
+                              style={Object {}}
+                              target="_self"
+                            >
+                              <div
+                                className="t-outstandingProjectCard_thumbnail"
+                              >
+                                <div
+                                  className="a-image a-image-221x166"
+                                >
+                                  <img
+                                    alt="OutstandingProjectCard"
+                                    loading="lazy"
+                                    src="img_outstanding_project4.png"
+                                  />
+                                </div>
+                              </div>
+                              <div
+                                className="t-outstandingProjectCard_title"
+                              >
+                                <p
+                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                  dangerouslySetInnerHTML={
+                                    Object {
+                                      "__html": "Sunrise City",
+                                    }
+                                  }
+                                />
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  aria-hidden={true}
+                  className="slick-slide slick-cloned"
+                  data-index={-4}
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "width": 0,
+                    }
+                  }
+                  tabIndex="-1"
+                >
+                  <div>
+                    <div
+                      className="o-carousel_wrap"
+                      style={
+                        Object {
+                          "display": "inline-block",
+                          "width": "100%",
+                        }
+                      }
+                      tabIndex={-1}
+                    >
+                      <div
+                        className="o-carousel_item"
+                      >
+                        <div
+                          className="t-outstandingProject_item"
+                        >
+                          <div
+                            className="t-outstandingProjectCard"
+                          >
+                            <a
+                              aria-current="page"
+                              className="a-link "
+                              href="/"
+                              onClick={[Function]}
+                              style={Object {}}
+                              target="_self"
+                            >
+                              <div
+                                className="t-outstandingProjectCard_thumbnail"
+                              >
+                                <div
+                                  className="a-image a-image-221x166"
+                                >
+                                  <img
+                                    alt="OutstandingProjectCard"
+                                    loading="lazy"
+                                    src="img_outstanding_project.png"
+                                  />
+                                </div>
+                              </div>
+                              <div
+                                className="t-outstandingProjectCard_title"
+                              >
+                                <p
+                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                  dangerouslySetInnerHTML={
+                                    Object {
+                                      "__html": "Aqua City",
+                                    }
+                                  }
+                                />
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  aria-hidden={true}
+                  className="slick-slide slick-cloned"
+                  data-index={-3}
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "width": 0,
+                    }
+                  }
+                  tabIndex="-1"
+                >
+                  <div>
+                    <div
+                      className="o-carousel_wrap"
+                      style={
+                        Object {
+                          "display": "inline-block",
+                          "width": "100%",
+                        }
+                      }
+                      tabIndex={-1}
+                    >
+                      <div
+                        className="o-carousel_item"
+                      >
+                        <div
+                          className="t-outstandingProject_item"
+                        >
+                          <div
+                            className="t-outstandingProjectCard"
+                          >
+                            <a
+                              aria-current="page"
+                              className="a-link "
+                              href="/"
+                              onClick={[Function]}
+                              style={Object {}}
+                              target="_self"
+                            >
+                              <div
+                                className="t-outstandingProjectCard_thumbnail"
+                              >
+                                <div
+                                  className="a-image a-image-221x166"
+                                >
+                                  <img
+                                    alt="OutstandingProjectCard"
+                                    loading="lazy"
+                                    src="img_outstanding_project2.png"
+                                  />
+                                </div>
+                              </div>
+                              <div
+                                className="t-outstandingProjectCard_title"
+                              >
+                                <p
+                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                  dangerouslySetInnerHTML={
+                                    Object {
+                                      "__html": "NovaWorld Phan Thiet",
+                                    }
+                                  }
+                                />
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  aria-hidden={false}
+                  className="slick-slide slick-active slick-cloned"
+                  data-index={-2}
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "width": 0,
+                    }
+                  }
+                  tabIndex="-1"
+                >
+                  <div>
+                    <div
+                      className="o-carousel_wrap"
+                      style={
+                        Object {
+                          "display": "inline-block",
+                          "width": "100%",
+                        }
+                      }
+                      tabIndex={-1}
+                    >
+                      <div
+                        className="o-carousel_item"
+                      >
+                        <div
+                          className="t-outstandingProject_item"
+                        >
+                          <div
+                            className="t-outstandingProjectCard"
+                          >
+                            <a
+                              aria-current="page"
+                              className="a-link "
+                              href="/"
+                              onClick={[Function]}
+                              style={Object {}}
+                              target="_self"
+                            >
+                              <div
+                                className="t-outstandingProjectCard_thumbnail"
+                              >
+                                <div
+                                  className="a-image a-image-221x166"
+                                >
+                                  <img
+                                    alt="OutstandingProjectCard"
+                                    loading="lazy"
+                                    src="img_outstanding_project3.png"
+                                  />
+                                </div>
+                              </div>
+                              <div
+                                className="t-outstandingProjectCard_title"
+                              >
+                                <p
+                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                  dangerouslySetInnerHTML={
+                                    Object {
+                                      "__html": "NovaWorld Ho Tram",
+                                    }
+                                  }
+                                />
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  aria-hidden={false}
+                  className="slick-slide slick-active slick-cloned"
+                  data-index={-1}
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "width": 0,
+                    }
+                  }
+                  tabIndex="-1"
+                >
+                  <div>
+                    <div
+                      className="o-carousel_wrap"
+                      style={
+                        Object {
+                          "display": "inline-block",
+                          "width": "100%",
+                        }
+                      }
+                      tabIndex={-1}
+                    >
+                      <div
+                        className="o-carousel_item"
+                      >
+                        <div
+                          className="t-outstandingProject_item"
+                        >
+                          <div
+                            className="t-outstandingProjectCard"
+                          >
+                            <a
+                              aria-current="page"
+                              className="a-link "
+                              href="/"
+                              onClick={[Function]}
+                              style={Object {}}
+                              target="_self"
+                            >
+                              <div
+                                className="t-outstandingProjectCard_thumbnail"
+                              >
+                                <div
+                                  className="a-image a-image-221x166"
+                                >
+                                  <img
+                                    alt="OutstandingProjectCard"
+                                    loading="lazy"
+                                    src="img_outstanding_project4.png"
+                                  />
+                                </div>
+                              </div>
+                              <div
+                                className="t-outstandingProjectCard_title"
+                              >
+                                <p
+                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                  dangerouslySetInnerHTML={
+                                    Object {
+                                      "__html": "Sunrise City",
+                                    }
+                                  }
+                                />
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  aria-hidden={false}
+                  className="slick-slide slick-active slick-center slick-current"
+                  data-index={0}
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "outline": "none",
+                      "width": 0,
+                    }
+                  }
+                  tabIndex="-1"
+                >
+                  <div>
+                    <div
+                      className="o-carousel_wrap"
+                      style={
+                        Object {
+                          "display": "inline-block",
+                          "width": "100%",
+                        }
+                      }
+                      tabIndex={-1}
+                    >
+                      <div
+                        className="o-carousel_item"
+                      >
+                        <div
+                          className="t-outstandingProject_item"
+                        >
+                          <div
+                            className="t-outstandingProjectCard"
+                          >
+                            <a
+                              aria-current="page"
+                              className="a-link "
+                              href="/"
+                              onClick={[Function]}
+                              style={Object {}}
+                              target="_self"
+                            >
+                              <div
+                                className="t-outstandingProjectCard_thumbnail"
+                              >
+                                <div
+                                  className="a-image a-image-221x166"
+                                >
+                                  <img
+                                    alt="OutstandingProjectCard"
+                                    loading="lazy"
+                                    src="img_outstanding_project.png"
+                                  />
+                                </div>
+                              </div>
+                              <div
+                                className="t-outstandingProjectCard_title"
+                              >
+                                <p
+                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                  dangerouslySetInnerHTML={
+                                    Object {
+                                      "__html": "Aqua City",
+                                    }
+                                  }
+                                />
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  aria-hidden={false}
+                  className="slick-slide slick-active"
+                  data-index={1}
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "outline": "none",
+                      "width": 0,
+                    }
+                  }
+                  tabIndex="-1"
+                >
+                  <div>
+                    <div
+                      className="o-carousel_wrap"
+                      style={
+                        Object {
+                          "display": "inline-block",
+                          "width": "100%",
+                        }
+                      }
+                      tabIndex={-1}
+                    >
+                      <div
+                        className="o-carousel_item"
+                      >
+                        <div
+                          className="t-outstandingProject_item"
+                        >
+                          <div
+                            className="t-outstandingProjectCard"
+                          >
+                            <a
+                              aria-current="page"
+                              className="a-link "
+                              href="/"
+                              onClick={[Function]}
+                              style={Object {}}
+                              target="_self"
+                            >
+                              <div
+                                className="t-outstandingProjectCard_thumbnail"
+                              >
+                                <div
+                                  className="a-image a-image-221x166"
+                                >
+                                  <img
+                                    alt="OutstandingProjectCard"
+                                    loading="lazy"
+                                    src="img_outstanding_project2.png"
+                                  />
+                                </div>
+                              </div>
+                              <div
+                                className="t-outstandingProjectCard_title"
+                              >
+                                <p
+                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                  dangerouslySetInnerHTML={
+                                    Object {
+                                      "__html": "NovaWorld Phan Thiet",
+                                    }
+                                  }
+                                />
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  aria-hidden={false}
+                  className="slick-slide slick-active"
+                  data-index={2}
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "outline": "none",
+                      "width": 0,
+                    }
+                  }
+                  tabIndex="-1"
+                >
+                  <div>
+                    <div
+                      className="o-carousel_wrap"
+                      style={
+                        Object {
+                          "display": "inline-block",
+                          "width": "100%",
+                        }
+                      }
+                      tabIndex={-1}
+                    >
+                      <div
+                        className="o-carousel_item"
+                      >
+                        <div
+                          className="t-outstandingProject_item"
+                        >
+                          <div
+                            className="t-outstandingProjectCard"
+                          >
+                            <a
+                              aria-current="page"
+                              className="a-link "
+                              href="/"
+                              onClick={[Function]}
+                              style={Object {}}
+                              target="_self"
+                            >
+                              <div
+                                className="t-outstandingProjectCard_thumbnail"
+                              >
+                                <div
+                                  className="a-image a-image-221x166"
+                                >
+                                  <img
+                                    alt="OutstandingProjectCard"
+                                    loading="lazy"
+                                    src="img_outstanding_project3.png"
+                                  />
+                                </div>
+                              </div>
+                              <div
+                                className="t-outstandingProjectCard_title"
+                              >
+                                <p
+                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                  dangerouslySetInnerHTML={
+                                    Object {
+                                      "__html": "NovaWorld Ho Tram",
+                                    }
+                                  }
+                                />
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  aria-hidden={true}
+                  className="slick-slide"
+                  data-index={3}
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "outline": "none",
+                      "width": 0,
+                    }
+                  }
+                  tabIndex="-1"
+                >
+                  <div>
+                    <div
+                      className="o-carousel_wrap"
+                      style={
+                        Object {
+                          "display": "inline-block",
+                          "width": "100%",
+                        }
+                      }
+                      tabIndex={-1}
+                    >
+                      <div
+                        className="o-carousel_item"
+                      >
+                        <div
+                          className="t-outstandingProject_item"
+                        >
+                          <div
+                            className="t-outstandingProjectCard"
+                          >
+                            <a
+                              aria-current="page"
+                              className="a-link "
+                              href="/"
+                              onClick={[Function]}
+                              style={Object {}}
+                              target="_self"
+                            >
+                              <div
+                                className="t-outstandingProjectCard_thumbnail"
+                              >
+                                <div
+                                  className="a-image a-image-221x166"
+                                >
+                                  <img
+                                    alt="OutstandingProjectCard"
+                                    loading="lazy"
+                                    src="img_outstanding_project4.png"
+                                  />
+                                </div>
+                              </div>
+                              <div
+                                className="t-outstandingProjectCard_title"
+                              >
+                                <p
+                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                  dangerouslySetInnerHTML={
+                                    Object {
+                                      "__html": "Sunrise City",
+                                    }
+                                  }
+                                />
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  aria-hidden={true}
+                  className="slick-slide"
+                  data-index={4}
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "outline": "none",
+                      "width": 0,
+                    }
+                  }
+                  tabIndex="-1"
+                >
+                  <div>
+                    <div
+                      className="o-carousel_wrap"
+                      style={
+                        Object {
+                          "display": "inline-block",
+                          "width": "100%",
+                        }
+                      }
+                      tabIndex={-1}
+                    >
+                      <div
+                        className="o-carousel_item"
+                      >
+                        <div
+                          className="t-outstandingProject_item"
+                        >
+                          <div
+                            className="t-outstandingProjectCard"
+                          >
+                            <a
+                              aria-current="page"
+                              className="a-link "
+                              href="/"
+                              onClick={[Function]}
+                              style={Object {}}
+                              target="_self"
+                            >
+                              <div
+                                className="t-outstandingProjectCard_thumbnail"
+                              >
+                                <div
+                                  className="a-image a-image-221x166"
+                                >
+                                  <img
+                                    alt="OutstandingProjectCard"
+                                    loading="lazy"
+                                    src="img_outstanding_project.png"
+                                  />
+                                </div>
+                              </div>
+                              <div
+                                className="t-outstandingProjectCard_title"
+                              >
+                                <p
+                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                  dangerouslySetInnerHTML={
+                                    Object {
+                                      "__html": "Aqua City",
+                                    }
+                                  }
+                                />
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  aria-hidden={true}
+                  className="slick-slide"
+                  data-index={5}
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "outline": "none",
+                      "width": 0,
+                    }
+                  }
+                  tabIndex="-1"
+                >
+                  <div>
+                    <div
+                      className="o-carousel_wrap"
+                      style={
+                        Object {
+                          "display": "inline-block",
+                          "width": "100%",
+                        }
+                      }
+                      tabIndex={-1}
+                    >
+                      <div
+                        className="o-carousel_item"
+                      >
+                        <div
+                          className="t-outstandingProject_item"
+                        >
+                          <div
+                            className="t-outstandingProjectCard"
+                          >
+                            <a
+                              aria-current="page"
+                              className="a-link "
+                              href="/"
+                              onClick={[Function]}
+                              style={Object {}}
+                              target="_self"
+                            >
+                              <div
+                                className="t-outstandingProjectCard_thumbnail"
+                              >
+                                <div
+                                  className="a-image a-image-221x166"
+                                >
+                                  <img
+                                    alt="OutstandingProjectCard"
+                                    loading="lazy"
+                                    src="img_outstanding_project2.png"
+                                  />
+                                </div>
+                              </div>
+                              <div
+                                className="t-outstandingProjectCard_title"
+                              >
+                                <p
+                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                  dangerouslySetInnerHTML={
+                                    Object {
+                                      "__html": "NovaWorld Phan Thiet",
+                                    }
+                                  }
+                                />
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  aria-hidden={true}
+                  className="slick-slide"
+                  data-index={6}
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "outline": "none",
+                      "width": 0,
+                    }
+                  }
+                  tabIndex="-1"
+                >
+                  <div>
+                    <div
+                      className="o-carousel_wrap"
+                      style={
+                        Object {
+                          "display": "inline-block",
+                          "width": "100%",
+                        }
+                      }
+                      tabIndex={-1}
+                    >
+                      <div
+                        className="o-carousel_item"
+                      >
+                        <div
+                          className="t-outstandingProject_item"
+                        >
+                          <div
+                            className="t-outstandingProjectCard"
+                          >
+                            <a
+                              aria-current="page"
+                              className="a-link "
+                              href="/"
+                              onClick={[Function]}
+                              style={Object {}}
+                              target="_self"
+                            >
+                              <div
+                                className="t-outstandingProjectCard_thumbnail"
+                              >
+                                <div
+                                  className="a-image a-image-221x166"
+                                >
+                                  <img
+                                    alt="OutstandingProjectCard"
+                                    loading="lazy"
+                                    src="img_outstanding_project3.png"
+                                  />
+                                </div>
+                              </div>
+                              <div
+                                className="t-outstandingProjectCard_title"
+                              >
+                                <p
+                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                  dangerouslySetInnerHTML={
+                                    Object {
+                                      "__html": "NovaWorld Ho Tram",
+                                    }
+                                  }
+                                />
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  aria-hidden={true}
+                  className="slick-slide"
+                  data-index={7}
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "outline": "none",
+                      "width": 0,
+                    }
+                  }
+                  tabIndex="-1"
+                >
+                  <div>
+                    <div
+                      className="o-carousel_wrap"
+                      style={
+                        Object {
+                          "display": "inline-block",
+                          "width": "100%",
+                        }
+                      }
+                      tabIndex={-1}
+                    >
+                      <div
+                        className="o-carousel_item"
+                      >
+                        <div
+                          className="t-outstandingProject_item"
+                        >
+                          <div
+                            className="t-outstandingProjectCard"
+                          >
+                            <a
+                              aria-current="page"
+                              className="a-link "
+                              href="/"
+                              onClick={[Function]}
+                              style={Object {}}
+                              target="_self"
+                            >
+                              <div
+                                className="t-outstandingProjectCard_thumbnail"
+                              >
+                                <div
+                                  className="a-image a-image-221x166"
+                                >
+                                  <img
+                                    alt="OutstandingProjectCard"
+                                    loading="lazy"
+                                    src="img_outstanding_project4.png"
+                                  />
+                                </div>
+                              </div>
+                              <div
+                                className="t-outstandingProjectCard_title"
+                              >
+                                <p
+                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                  dangerouslySetInnerHTML={
+                                    Object {
+                                      "__html": "Sunrise City",
+                                    }
+                                  }
+                                />
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  aria-hidden={true}
+                  className="slick-slide slick-center slick-cloned"
+                  data-index={8}
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "width": 0,
+                    }
+                  }
+                  tabIndex="-1"
+                >
+                  <div>
+                    <div
+                      className="o-carousel_wrap"
+                      style={
+                        Object {
+                          "display": "inline-block",
+                          "width": "100%",
+                        }
+                      }
+                      tabIndex={-1}
+                    >
+                      <div
+                        className="o-carousel_item"
+                      >
+                        <div
+                          className="t-outstandingProject_item"
+                        >
+                          <div
+                            className="t-outstandingProjectCard"
+                          >
+                            <a
+                              aria-current="page"
+                              className="a-link "
+                              href="/"
+                              onClick={[Function]}
+                              style={Object {}}
+                              target="_self"
+                            >
+                              <div
+                                className="t-outstandingProjectCard_thumbnail"
+                              >
+                                <div
+                                  className="a-image a-image-221x166"
+                                >
+                                  <img
+                                    alt="OutstandingProjectCard"
+                                    loading="lazy"
+                                    src="img_outstanding_project.png"
+                                  />
+                                </div>
+                              </div>
+                              <div
+                                className="t-outstandingProjectCard_title"
+                              >
+                                <p
+                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                  dangerouslySetInnerHTML={
+                                    Object {
+                                      "__html": "Aqua City",
+                                    }
+                                  }
+                                />
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  aria-hidden={true}
+                  className="slick-slide slick-cloned"
+                  data-index={9}
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "width": 0,
+                    }
+                  }
+                  tabIndex="-1"
+                >
+                  <div>
+                    <div
+                      className="o-carousel_wrap"
+                      style={
+                        Object {
+                          "display": "inline-block",
+                          "width": "100%",
+                        }
+                      }
+                      tabIndex={-1}
+                    >
+                      <div
+                        className="o-carousel_item"
+                      >
+                        <div
+                          className="t-outstandingProject_item"
+                        >
+                          <div
+                            className="t-outstandingProjectCard"
+                          >
+                            <a
+                              aria-current="page"
+                              className="a-link "
+                              href="/"
+                              onClick={[Function]}
+                              style={Object {}}
+                              target="_self"
+                            >
+                              <div
+                                className="t-outstandingProjectCard_thumbnail"
+                              >
+                                <div
+                                  className="a-image a-image-221x166"
+                                >
+                                  <img
+                                    alt="OutstandingProjectCard"
+                                    loading="lazy"
+                                    src="img_outstanding_project2.png"
+                                  />
+                                </div>
+                              </div>
+                              <div
+                                className="t-outstandingProjectCard_title"
+                              >
+                                <p
+                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                  dangerouslySetInnerHTML={
+                                    Object {
+                                      "__html": "NovaWorld Phan Thiet",
+                                    }
+                                  }
+                                />
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  aria-hidden={true}
+                  className="slick-slide slick-cloned"
+                  data-index={10}
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "width": 0,
+                    }
+                  }
+                  tabIndex="-1"
+                >
+                  <div>
+                    <div
+                      className="o-carousel_wrap"
+                      style={
+                        Object {
+                          "display": "inline-block",
+                          "width": "100%",
+                        }
+                      }
+                      tabIndex={-1}
+                    >
+                      <div
+                        className="o-carousel_item"
+                      >
+                        <div
+                          className="t-outstandingProject_item"
+                        >
+                          <div
+                            className="t-outstandingProjectCard"
+                          >
+                            <a
+                              aria-current="page"
+                              className="a-link "
+                              href="/"
+                              onClick={[Function]}
+                              style={Object {}}
+                              target="_self"
+                            >
+                              <div
+                                className="t-outstandingProjectCard_thumbnail"
+                              >
+                                <div
+                                  className="a-image a-image-221x166"
+                                >
+                                  <img
+                                    alt="OutstandingProjectCard"
+                                    loading="lazy"
+                                    src="img_outstanding_project3.png"
+                                  />
+                                </div>
+                              </div>
+                              <div
+                                className="t-outstandingProjectCard_title"
+                              >
+                                <p
+                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                  dangerouslySetInnerHTML={
+                                    Object {
+                                      "__html": "NovaWorld Ho Tram",
+                                    }
+                                  }
+                                />
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  aria-hidden={true}
+                  className="slick-slide slick-cloned"
+                  data-index={11}
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "width": 0,
+                    }
+                  }
+                  tabIndex="-1"
+                >
+                  <div>
+                    <div
+                      className="o-carousel_wrap"
+                      style={
+                        Object {
+                          "display": "inline-block",
+                          "width": "100%",
+                        }
+                      }
+                      tabIndex={-1}
+                    >
+                      <div
+                        className="o-carousel_item"
+                      >
+                        <div
+                          className="t-outstandingProject_item"
+                        >
+                          <div
+                            className="t-outstandingProjectCard"
+                          >
+                            <a
+                              aria-current="page"
+                              className="a-link "
+                              href="/"
+                              onClick={[Function]}
+                              style={Object {}}
+                              target="_self"
+                            >
+                              <div
+                                className="t-outstandingProjectCard_thumbnail"
+                              >
+                                <div
+                                  className="a-image a-image-221x166"
+                                >
+                                  <img
+                                    alt="OutstandingProjectCard"
+                                    loading="lazy"
+                                    src="img_outstanding_project4.png"
+                                  />
+                                </div>
+                              </div>
+                              <div
+                                className="t-outstandingProjectCard_title"
+                              >
+                                <p
+                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                  dangerouslySetInnerHTML={
+                                    Object {
+                                      "__html": "Sunrise City",
+                                    }
+                                  }
+                                />
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  aria-hidden={true}
+                  className="slick-slide slick-cloned"
+                  data-index={12}
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "width": 0,
+                    }
+                  }
+                  tabIndex="-1"
+                >
+                  <div>
+                    <div
+                      className="o-carousel_wrap"
+                      style={
+                        Object {
+                          "display": "inline-block",
+                          "width": "100%",
+                        }
+                      }
+                      tabIndex={-1}
+                    >
+                      <div
+                        className="o-carousel_item"
+                      >
+                        <div
+                          className="t-outstandingProject_item"
+                        >
+                          <div
+                            className="t-outstandingProjectCard"
+                          >
+                            <a
+                              aria-current="page"
+                              className="a-link "
+                              href="/"
+                              onClick={[Function]}
+                              style={Object {}}
+                              target="_self"
+                            >
+                              <div
+                                className="t-outstandingProjectCard_thumbnail"
+                              >
+                                <div
+                                  className="a-image a-image-221x166"
+                                >
+                                  <img
+                                    alt="OutstandingProjectCard"
+                                    loading="lazy"
+                                    src="img_outstanding_project.png"
+                                  />
+                                </div>
+                              </div>
+                              <div
+                                className="t-outstandingProjectCard_title"
+                              >
+                                <p
+                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                  dangerouslySetInnerHTML={
+                                    Object {
+                                      "__html": "Aqua City",
+                                    }
+                                  }
+                                />
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  aria-hidden={true}
+                  className="slick-slide slick-cloned"
+                  data-index={13}
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "width": 0,
+                    }
+                  }
+                  tabIndex="-1"
+                >
+                  <div>
+                    <div
+                      className="o-carousel_wrap"
+                      style={
+                        Object {
+                          "display": "inline-block",
+                          "width": "100%",
+                        }
+                      }
+                      tabIndex={-1}
+                    >
+                      <div
+                        className="o-carousel_item"
+                      >
+                        <div
+                          className="t-outstandingProject_item"
+                        >
+                          <div
+                            className="t-outstandingProjectCard"
+                          >
+                            <a
+                              aria-current="page"
+                              className="a-link "
+                              href="/"
+                              onClick={[Function]}
+                              style={Object {}}
+                              target="_self"
+                            >
+                              <div
+                                className="t-outstandingProjectCard_thumbnail"
+                              >
+                                <div
+                                  className="a-image a-image-221x166"
+                                >
+                                  <img
+                                    alt="OutstandingProjectCard"
+                                    loading="lazy"
+                                    src="img_outstanding_project2.png"
+                                  />
+                                </div>
+                              </div>
+                              <div
+                                className="t-outstandingProjectCard_title"
+                              >
+                                <p
+                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                  dangerouslySetInnerHTML={
+                                    Object {
+                                      "__html": "NovaWorld Phan Thiet",
+                                    }
+                                  }
+                                />
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  aria-hidden={true}
+                  className="slick-slide slick-cloned"
+                  data-index={14}
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "width": 0,
+                    }
+                  }
+                  tabIndex="-1"
+                >
+                  <div>
+                    <div
+                      className="o-carousel_wrap"
+                      style={
+                        Object {
+                          "display": "inline-block",
+                          "width": "100%",
+                        }
+                      }
+                      tabIndex={-1}
+                    >
+                      <div
+                        className="o-carousel_item"
+                      >
+                        <div
+                          className="t-outstandingProject_item"
+                        >
+                          <div
+                            className="t-outstandingProjectCard"
+                          >
+                            <a
+                              aria-current="page"
+                              className="a-link "
+                              href="/"
+                              onClick={[Function]}
+                              style={Object {}}
+                              target="_self"
+                            >
+                              <div
+                                className="t-outstandingProjectCard_thumbnail"
+                              >
+                                <div
+                                  className="a-image a-image-221x166"
+                                >
+                                  <img
+                                    alt="OutstandingProjectCard"
+                                    loading="lazy"
+                                    src="img_outstanding_project3.png"
+                                  />
+                                </div>
+                              </div>
+                              <div
+                                className="t-outstandingProjectCard_title"
+                              >
+                                <p
+                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                  dangerouslySetInnerHTML={
+                                    Object {
+                                      "__html": "NovaWorld Ho Tram",
+                                    }
+                                  }
+                                />
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  aria-hidden={true}
+                  className="slick-slide slick-cloned"
+                  data-index={15}
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "width": 0,
+                    }
+                  }
+                  tabIndex="-1"
+                >
+                  <div>
+                    <div
+                      className="o-carousel_wrap"
+                      style={
+                        Object {
+                          "display": "inline-block",
+                          "width": "100%",
+                        }
+                      }
+                      tabIndex={-1}
+                    >
+                      <div
+                        className="o-carousel_item"
+                      >
+                        <div
+                          className="t-outstandingProject_item"
+                        >
+                          <div
+                            className="t-outstandingProjectCard"
+                          >
+                            <a
+                              aria-current="page"
+                              className="a-link "
+                              href="/"
+                              onClick={[Function]}
+                              style={Object {}}
+                              target="_self"
+                            >
+                              <div
+                                className="t-outstandingProjectCard_thumbnail"
+                              >
+                                <div
+                                  className="a-image a-image-221x166"
+                                >
+                                  <img
+                                    alt="OutstandingProjectCard"
+                                    loading="lazy"
+                                    src="img_outstanding_project4.png"
+                                  />
+                                </div>
+                              </div>
+                              <div
+                                className="t-outstandingProjectCard_title"
+                              >
+                                <p
+                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                  dangerouslySetInnerHTML={
+                                    Object {
+                                      "__html": "Sunrise City",
+                                    }
+                                  }
+                                />
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="o-carousel_arrow o-carousel_arrow_next slick-arrow slick-next "
+              onClick={[Function]}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
