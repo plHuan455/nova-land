@@ -25,13 +25,13 @@ const OutStandingNumbers: React.FC<OutStandingNumbersProps> = ({
           <>
             <div
               key={`number-item-${idx.toString()}`}
-              className="t-outStandingNumbers_list-item"
+              className={`t-outStandingNumbers_list-item t-outStandingNumbers_list-item-${idx + 1}`}
             >
               <OutStandingNumber number={item.number} desc={item.desc} />
             </div>
             {idx !== dataList.length - 1 && (
               <span
-                className={`t-outStandingNumbers_list-line t-outStandingNumbers_list-line-${idx}`}
+                className={`t-outStandingNumbers_list-line t-outStandingNumbers_list-line-${idx + 1}`}
               />
             )}
           </>
