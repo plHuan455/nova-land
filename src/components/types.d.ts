@@ -9,7 +9,8 @@ type Ratio =
   | '721x303'
   | '370x208'
   | '226x127'
-  | '350x197';
+  | '350x197'
+  | '221x166';
 
 type FontWeightStyle =
   | '100'
@@ -58,7 +59,8 @@ type ColorStyle =
   | 'dimGray'
   | 'jet'
   | 'black085'
-  | 'darkMidnightBlue';
+  | 'darkMidnightBlue'
+  | 'deer';
 
 type FontFamily = 'fontLexend' | 'fontNoto' | 'fontLato';
 
