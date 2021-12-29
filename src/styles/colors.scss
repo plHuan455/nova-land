@@ -45,6 +45,8 @@ $light-french-beige: rgb(199, 164, 127); // #C7A47F
 $independence: rgb(60, 75, 118); //#3C4B76
 $gainsboro: rgb(221, 221, 221); //#dddddd
 $white-smoke2: rgb(248, 248, 248); //#f8f8f8
+$bisque: rgb(249, 228, 197); //#F9E4C5
+$camel: rgb(195, 163, 113); //#c3a371
 
 // Overlays
 $black0016: rgba($black, 0.016);
@@ -59,3 +61,5 @@ $dark-midnight-blue0: rgba(11, 52, 107, 0.6);
 
 // Linear colors
 $outstanding-number-linear: linear-gradient(180deg, $dark-midnight-blue0 0%, $oxford-blue 100%);
+$camel-linear: linear-gradient(90deg, rgba($camel, 0) 0%, $bisque 50.52%, rgba($camel, 0) 100%);
+$cool-black-linear: linear-gradient(to right , $cool-black 2%, rgba($cool-black, 0.25) 30% , transparent 35% , transparent 65% ,rgba($cool-black, 0.25) 70% , $cool-black 98%) ;

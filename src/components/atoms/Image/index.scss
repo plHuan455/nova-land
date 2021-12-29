@@ -50,4 +50,8 @@
   &-721x303 {
     @include aspect-ratio(721,303);
   }
+
+  &-350x197 {
+    @include aspect-ratio(350,197);
+  }
 }
