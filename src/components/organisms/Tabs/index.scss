@@ -19,7 +19,11 @@
     @include font-base(24, 32);
     text-transform: capitalize;
     white-space: nowrap;
+    
+    &-16x24 {
+    @include font-base(16, 24);
 
+    }
     @include mobile-down {
       @include font-base(16, 20);
     }
