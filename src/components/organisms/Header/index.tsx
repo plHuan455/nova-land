@@ -1,10 +1,10 @@
 import React, {
-  ChangeEvent, useState, KeyboardEvent, useRef,
+  useState, KeyboardEvent, useRef,
 } from 'react';
-import { useLocation } from 'react-router-dom';
 
 import Container from '../Container';
 
+import { LIST_LANGUAGE, LanguageType } from 'assets/dataDummy/header';
 import logo from 'assets/images/logo.svg';
 import Icon from 'components/atoms/Icon';
 import Image from 'components/atoms/Image';
@@ -20,35 +20,30 @@ export type HeaderMenuTypes = {
   title: string;
 }
 
-export type LanguageType = 'VN'|'EN';
-
 interface HeaderProps {
   headerMenu?: HeaderMenuTypes[];
-  languageList?: string[];
-  languageSelected?: string;
   handleLanguage?: (val: LanguageType) => void;
 
 }
 
 const Header: React.FC<HeaderProps> = ({
-  headerMenu, languageList, languageSelected, handleLanguage,
+  headerMenu, handleLanguage,
 }) => {
   // STATE
-  const [value, setValue] = useState('');
-  const [openSearch, setOpenSearch] = useState(false);
+  const [isOpenSearch, setIsOpenSearch] = useState(false);
   const [isScroll, setIsScroll] = useState(false);
   const [isOpenLanguage, setIsOpenLanguage] = useState(false);
   const [isOpenMenu, setIsOpenMenu] = useState(false);
+  const [languageSelected, setLanguageSelected] = useState(LIST_LANGUAGE[0].label);
 
   // HOOK
-  const location = useLocation();
   const searchRef = useRef(null);
   const languageRef = useRef(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const menuRef = useRef<HTMLUListElement>(null);
 
   useClickOutside(searchRef, (): void => {
-    if (openSearch) setOpenSearch(false);
+    if (isOpenSearch) setIsOpenSearch(false);
   });
   useClickOutside(languageRef, (): void => {
     if (isOpenLanguage) setIsOpenLanguage(false);
@@ -65,24 +60,15 @@ const Header: React.FC<HeaderProps> = ({
     setIsScroll(false);
   });
 
-  /**
-   * FUNCTION
-   */
-  // Check active url with i18 after that
-  const checkActive = (href?: string): boolean => {
-    if (href) {
-      return location.pathname.split('/')[1].includes(href);
-    }
-    return false;
-  };
-
   // Submit search
   const handleSubmit = (text?: string) => {
     /* eslint-disable no-console */
     console.log(text);
 
-    setOpenSearch(false);
-    setValue('');
+    setIsOpenSearch(false);
+    if (inputRef.current) {
+      inputRef.current.value = '';
+    }
   };
 
   // Submit search by keyboard
@@ -103,7 +89,7 @@ const Header: React.FC<HeaderProps> = ({
             onClick={() => {
               setIsOpenLanguage(false);
               setIsOpenMenu(!isOpenMenu);
-              setOpenSearch(false);
+              setIsOpenSearch(false);
             }}
           >
             <span />
@@ -133,12 +119,10 @@ const Header: React.FC<HeaderProps> = ({
                       id="search"
                       placeholder="Tìm kiếm"
                       type="text"
-                      value={value}
                       ref={inputRef}
-                      onChange={(e: ChangeEvent<HTMLInputElement>) => setValue(e.target.value)}
                       onKeyPress={onPressEnter}
                     />
-                    <div className="o-header_search_panel_input_icon" onClick={() => handleSubmit()}>
+                    <div className="o-header_search_panel_input_icon" onClick={() => handleSubmit(inputRef.current?.value)}>
                       <Icon iconName="search" />
                     </div>
                   </div>
@@ -148,7 +132,6 @@ const Header: React.FC<HeaderProps> = ({
                     <li className="o-header_nav_item" key={idx.toString()}>
                       <Link
                         href={val.href}
-                        activeClassName={checkActive(val.href) ? 'active' : ''}
                         customClassName="o-header_nav_link"
                       >
                         {val.title}
@@ -180,21 +163,22 @@ const Header: React.FC<HeaderProps> = ({
               </div>
               <ul className={mapModifiers('o-header_languagePicker_list', isOpenLanguage && 'open')}>
                 {
-                  languageList && languageList.map((val, idx) => (
+                  LIST_LANGUAGE.map((val, idx) => (
                     <li
                       onClick={() => {
                         if (handleLanguage) {
-                          handleLanguage(val as LanguageType);
+                          handleLanguage(val.value as LanguageType);
                         }
                         setIsOpenLanguage(false);
+                        setLanguageSelected(val.label);
                       }}
                       className={`o-header_languagePicker_list_item ${
-                        val === languageSelected ? 'active' : ''
+                        val.label === languageSelected ? 'active' : ''
                       }`}
                       key={idx.toString()}
                     >
                       <Text modifiers={['16x24', 'jet', '400', 'uppercase']}>
-                        {val}
+                        {val.label}
                       </Text>
                     </li>
                   ))
@@ -206,7 +190,7 @@ const Header: React.FC<HeaderProps> = ({
               <div
                 className="o-header_search pc"
                 onClick={() => {
-                  setOpenSearch(!openSearch);
+                  setIsOpenSearch(!isOpenSearch);
                   setTimeout(() => {
                     if (inputRef.current) {
                       inputRef.current.focus();
@@ -217,7 +201,7 @@ const Header: React.FC<HeaderProps> = ({
                 <Icon iconName="search" size="24" />
               </div>
               <div
-                className={mapModifiers('o-header_search_panel', openSearch && 'open')}
+                className={mapModifiers('o-header_search_panel', isOpenSearch && 'open')}
                 ref={searchRef}
               >
                 <div className="o-header_search_panel_input">
@@ -226,12 +210,10 @@ const Header: React.FC<HeaderProps> = ({
                     id="search"
                     placeholder="Tìm kiếm"
                     type="text"
-                    value={value}
                     ref={inputRef}
-                    onChange={(e: ChangeEvent<HTMLInputElement>) => setValue(e.target.value)}
                     onKeyPress={onPressEnter}
                   />
-                  <div className="o-header_search_panel_input_icon" onClick={() => handleSubmit()}>
+                  <div className="o-header_search_panel_input_icon" onClick={() => handleSubmit(inputRef.current?.value)}>
                     <Icon iconName="search" />
                   </div>
                 </div>
@@ -246,8 +228,6 @@ const Header: React.FC<HeaderProps> = ({
 
 Header.defaultProps = {
   headerMenu: undefined,
-  languageList: undefined,
-  languageSelected: undefined,
   handleLanguage: undefined,
 };
 

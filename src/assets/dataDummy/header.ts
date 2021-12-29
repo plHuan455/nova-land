@@ -31,8 +31,17 @@ const headerMenuDummy: HeaderMenuTypes[] = [
   },
 ];
 
-export const languageListDummy = [
-  'VN', 'EN',
+export type LanguageType = 'VN'|'EN';
+
+export const LIST_LANGUAGE:Array<{label:LanguageType, value: string}> = [
+  {
+    label: 'VN',
+    value: 'vi',
+  },
+  {
+    label: 'EN',
+    value: 'en',
+  },
 ];
 
 export default headerMenuDummy;

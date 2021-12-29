@@ -123,6 +123,12 @@
         margin-left: rem(24);
       }
 
+      @include desktop-down {
+        &:not(:first-child) {
+          margin-left: rem(18);
+        }
+      }
+
       @include tablet-down {
         margin-top: rem(20);
 
@@ -141,6 +147,10 @@
       z-index: $z-2;
       @include font-base();
       @include style-font-family();
+
+      @include desktop-down {
+        padding: rem(4);
+      }
 
       @include tablet-down {
         color: $white;
@@ -252,6 +262,10 @@
   &_languagePicker {
     margin-left: rem(40);
     position: relative;
+
+    @include desktop-down {
+      margin-left: rem(20);
+    }
 
     @include tablet-down {
       margin-left: 0;

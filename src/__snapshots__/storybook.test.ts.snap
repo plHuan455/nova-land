@@ -150,6 +150,28 @@ exports[`Storyshots Components/atoms/Icon Normal 1`] = `
       className="a-icon a-icon-arrowNextWhite a-icon-24"
     />
   </div>
+  <div
+    style={
+      Object {
+        "marginLeft": 7,
+      }
+    }
+  >
+    <i
+      className="a-icon a-icon-search a-icon-24"
+    />
+  </div>
+  <div
+    style={
+      Object {
+        "marginLeft": 7,
+      }
+    }
+  >
+    <i
+      className="a-icon a-icon-carretDownBlack a-icon-24"
+    />
+  </div>
 </div>
 `;
 
@@ -1916,6 +1938,287 @@ exports[`Storyshots Components/organisms/Form Normal 1`] = `
 />
 `;
 
+exports[`Storyshots Components/organisms/Header Normal 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "#dbdbdb",
+      "height": "130vh",
+    }
+  }
+>
+  <header
+    className="o-header"
+  >
+    <div
+      className="container o-container"
+    >
+      <div
+        className="o-header_wrapper"
+      >
+        <div
+          className="o-header_iconMenu"
+          onClick={[Function]}
+        >
+          <span />
+          <span />
+          <span />
+        </div>
+        <div
+          className="o-header_left"
+        >
+          <a
+            aria-current="page"
+            className="a-link "
+            href="/"
+            onClick={[Function]}
+            style={Object {}}
+            target="_self"
+          >
+            <div
+              className="o-header_logo"
+            >
+              <div
+                className="a-image a-image-logo"
+              >
+                <img
+                  alt="replacing"
+                  loading="lazy"
+                  src="logo.svg"
+                />
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          className="o-header_right"
+        >
+          <div
+            className="o-header_menu"
+          >
+            <ul
+              className="o-header_nav"
+            >
+              <div
+                className="o-header_search mb"
+              >
+                <div
+                  className="o-header_search_panel_input"
+                >
+                  <div
+                    className="a-input a-input-text"
+                  >
+                    <div
+                      className="a-input_wrap"
+                    >
+                      <input
+                        autoComplete="off"
+                        className="a-input_input"
+                        onKeyPress={[Function]}
+                        placeholder="Tìm kiếm"
+                        type="text"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="o-header_search_panel_input_icon"
+                    onClick={[Function]}
+                  >
+                    <i
+                      className="a-icon a-icon-search a-icon-24"
+                    />
+                  </div>
+                </div>
+              </div>
+              <li
+                className="o-header_nav_item"
+              >
+                <a
+                  aria-current="page"
+                  className="a-link o-header_nav_link"
+                  href="/"
+                  onClick={[Function]}
+                  style={Object {}}
+                  target="_self"
+                >
+                  Trang chủ
+                </a>
+              </li>
+              <li
+                className="o-header_nav_item"
+              >
+                <a
+                  aria-current={null}
+                  className="a-link o-header_nav_link"
+                  href="/gioi-thieu"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  giới thiệu
+                </a>
+              </li>
+              <li
+                className="o-header_nav_item"
+              >
+                <a
+                  aria-current={null}
+                  className="a-link o-header_nav_link"
+                  href="/mua-ban"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  mua bán
+                </a>
+              </li>
+              <li
+                className="o-header_nav_item"
+              >
+                <a
+                  aria-current={null}
+                  className="a-link o-header_nav_link"
+                  href="/quan-he-dau-tu"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  quan hệ đầu tư
+                </a>
+              </li>
+              <li
+                className="o-header_nav_item"
+              >
+                <a
+                  aria-current={null}
+                  className="a-link o-header_nav_link"
+                  href="/tin-tuc"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  tin tức
+                </a>
+              </li>
+              <li
+                className="o-header_nav_item"
+              >
+                <a
+                  aria-current={null}
+                  className="a-link o-header_nav_link"
+                  href="/tuyen-dung"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  tuyển dụng
+                </a>
+              </li>
+              <li
+                className="o-header_nav_item"
+              >
+                <a
+                  aria-current={null}
+                  className="a-link o-header_nav_link"
+                  href="/lien-he"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  liên hệ
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div
+            className="o-header_languagePicker"
+          >
+            <div
+              className="o-header_languagePicker_value"
+              onClick={[Function]}
+            >
+              <p
+                className="a-text a-text-16x24 a-text-jet a-text-400 a-text-uppercase"
+              >
+                VN
+              </p>
+              <div
+                className="o-header_languagePicker_icon"
+              >
+                <i
+                  className="a-icon a-icon-carretDownBlack a-icon-24"
+                />
+              </div>
+            </div>
+            <ul
+              className="o-header_languagePicker_list"
+            >
+              <li
+                className="o-header_languagePicker_list_item active"
+                onClick={[Function]}
+              >
+                <p
+                  className="a-text a-text-16x24 a-text-jet a-text-400 a-text-uppercase"
+                >
+                  VN
+                </p>
+              </li>
+              <li
+                className="o-header_languagePicker_list_item "
+                onClick={[Function]}
+              >
+                <p
+                  className="a-text a-text-16x24 a-text-jet a-text-400 a-text-uppercase"
+                >
+                  EN
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div
+            className="o-header_search_wrap"
+          >
+            <div
+              className="o-header_search pc"
+              onClick={[Function]}
+            >
+              <i
+                className="a-icon a-icon-search a-icon-24"
+              />
+            </div>
+            <div
+              className="o-header_search_panel"
+            >
+              <div
+                className="o-header_search_panel_input"
+              >
+                <div
+                  className="a-input a-input-text"
+                >
+                  <div
+                    className="a-input_wrap"
+                  >
+                    <input
+                      autoComplete="off"
+                      className="a-input_input"
+                      onKeyPress={[Function]}
+                      placeholder="Tìm kiếm"
+                      type="text"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="o-header_search_panel_input_icon"
+                  onClick={[Function]}
+                >
+                  <i
+                    className="a-icon a-icon-search a-icon-24"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+`;
+
 exports[`Storyshots Components/organisms/Tabs Normal 1`] = `
 <div
   style={
@@ -1991,7 +2294,7 @@ exports[`Storyshots Components/templates/DevelopmentHistory Normal 1`] = `
   <div
     className="container o-container"
   >
-    <h3
+    <h2
       className="a-heading a-heading-32x48 a-heading-700 a-heading-white a-heading-center a-heading-fontNoto"
       dangerouslySetInnerHTML={
         Object {
@@ -2003,7 +2306,7 @@ exports[`Storyshots Components/templates/DevelopmentHistory Normal 1`] = `
       className="t-developmentHistory_description"
     >
       <p
-        className="a-text a-text-center a-text-white a-text-16x24"
+        className="a-text a-text-center a-text-white a-text-16x24 a-text-400"
         dangerouslySetInnerHTML={
           Object {
             "__html": "Trên hành trình trở thành nhà Đầu tư - Phát triển bất động sản uy tín hàng đầu Việt Nam, bằng niềm đam mê, sự tập trung và kiên định thực hiện sứ mệnh của mình, Novaland đã và đang đa dạng hóa sản phẩm ở trung tâm TPHCM, đô thị vệ tinh và đô thị du lịch nghỉ dưỡng ở các tỉnh thành trọng điểm, kiến tạo nên những cộng đồng tinh hoa, thu hút khách du lịch trong và ngoài nước.",
