@@ -5,6 +5,7 @@
   overflow: hidden;
   position: relative;
   transition: 0.5s;
+  padding: rem(10);
 
   &:hover {
     border: 1px solid $golden-brown;

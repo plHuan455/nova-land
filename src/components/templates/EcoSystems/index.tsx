@@ -59,7 +59,7 @@ const EcoSystems: React.FC<EcoSystemsProps> = ({ title, desc, dataList }) => {
       <Container>
         <Heading modifiers={['32x48', '700', 'fontNoto', 'arsenic', 'uppercase', 'center']}>{title}</Heading>
         <div className="t-ecoSystems_desc">
-          <Text modifiers={['400', 'center', 'davysGrey']}>
+          <Text modifiers={['400', 'center', 'davysGrey', '16x24']}>
             {desc}
           </Text>
         </div>
