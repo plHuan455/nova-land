@@ -1,0 +1,48 @@
+.t-heroBanner {
+  position: relative;
+
+  &_info {
+    background: $dark-green-linear;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    @include adjust-flex(space-between);
+    flex-direction: column;
+
+    @include small-mobile {
+      height: 100%;
+    }
+
+    &_content {
+      width: 100%;
+      padding: rem(32) 10%;
+
+      @include small-mobile {
+        padding: rem(10) 10%;
+      }
+    }
+
+    &_title {
+      @include text-overflow();
+    }
+
+    &_caption {
+      @include text-overflow();
+      margin-top: rem(16);
+    }
+  }
+
+  &_arrow {
+    &-next {
+      @include small-mobile-up {
+        right: calc(37 / 1366 * 100%);
+      }
+    }
+    &-prev {
+      @include small-mobile-up {
+        left: calc(37 / 1366 * 100%);
+      }
+    }
+  }
+}
