@@ -62,9 +62,9 @@ const DevelopmentHistory: React.FC<DevelopmentHistoryProps> = ({
   return (
     <div className="t-developmentHistory">
       <Container>
-        <Heading type="h3" modifiers={['32x48', '700', 'white', 'center', 'fontNoto']} content={title} />
+        <Heading type="h2" modifiers={['32x48', '700', 'white', 'center', 'fontNoto']} content={title} />
         <div className="t-developmentHistory_description">
-          <Text modifiers={['center', 'white', '16x24']} content={description} />
+          <Text modifiers={['center', 'white', '16x24', '400']} content={description} />
         </div>
         {list.length > 0 && (
         <div className="t-developmentHistory_process">
