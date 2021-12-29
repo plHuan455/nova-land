@@ -1,0 +1,15 @@
+.o-banner {
+  position: relative;
+
+  &::before {
+    content: '';
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50%;
+    background: $white-linear;
+    pointer-events: none;
+    z-index: 1;
+  }
+}
