@@ -1,25 +1,26 @@
 .t-heroBanner {
   position: relative;
+  
+  .o-carousel {
+    .a-image {
+      height: 100vh;
+      min-height: rem(400);
+    }
+  }
 
   &_info {
     background: $dark-green-linear;
     bottom: 0;
-    flex-direction: column;
     left: 0;
     position: absolute;
     width: 100%;
-    @include adjust-flex(space-between);
-
-    @include small-mobile {
-      height: 100%;
-    }
 
     &_content {
       padding: rem(32) 10%;
       width: 100%;
 
       @include small-mobile {
-        padding: rem(10) 10%;
+        padding: rem(20) 5%;
       }
     }
 
@@ -35,15 +36,11 @@
 
   &_arrow {
     &-next {
-      @include small-mobile-up {
-        right: calc(37 / 1366 * 100%);
-      }
+      right: calc(37 / 1366 * 100%);
     }
 
     &-prev {
-      @include small-mobile-up {
-        left: calc(37 / 1366 * 100%);
-      }
+      left: calc(37 / 1366 * 100%);
     }
   }
 }
