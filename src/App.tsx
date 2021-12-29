@@ -1,15 +1,29 @@
 import 'App.scss';
 
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Provider } from 'react-redux';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
+import MainLayoutContainer from 'container/MainLayout';
+import Home from 'pages/Home';
 import { store } from 'store';
 
-const App: React.FC = () => <div className="app">App</div>;
+const App: React.FC = () => (
+  <Suspense fallback>
+    <MainLayoutContainer>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<div>Not found</div>} />
+      </Routes>
+    </MainLayoutContainer>
+  </Suspense>
+);
 
 const AppWrapper: React.FC = () => (
   <Provider store={store}>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </Provider>
 );
 

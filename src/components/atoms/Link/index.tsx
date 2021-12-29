@@ -25,7 +25,7 @@ const Link: React.FC<LinkProps> = ({
   if (useExternal) {
     return (
       <a
-        className={`a-link ${customClassName}`}
+        className={`a-link ${customClassName} ${activeClassName}`}
         target={target}
         href={href}
         rel="noreferrer"
@@ -38,9 +38,8 @@ const Link: React.FC<LinkProps> = ({
   return (
     <NavLink
       title={title}
-      activeClassName={activeClassName}
       to={href || '#'}
-      className={`a-link ${customClassName}`}
+      className={`a-link ${customClassName} ${activeClassName}`}
       onClick={handleClick}
       target={target}
     >

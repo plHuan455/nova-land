@@ -6,6 +6,7 @@
   right: 0;
   top: 0;
   transition: $transition-long ease;
+  z-index: $z-header;
   @include adjust-flex(center, center);
   
   &-scrolled {
