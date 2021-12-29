@@ -1,0 +1,187 @@
+.t-investmentCard {
+  $root: &;
+  border: rem(1) solid $gainsboro;
+  overflow: hidden;
+  position: relative;
+  transition: all $transition ease-in-out;
+
+  &_main,
+  &_layer {
+    padding: rem(52) rem(40);
+
+    @include tablet-down {
+      padding: rem(22) rem(18);
+    }
+
+    #{$root}-small & {
+      padding: rem(32) rem(16) rem(16);
+
+      @include tablet-down {
+        padding: rem(20) rem(12) rem(12);
+      }
+    }
+  }
+
+  &_layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all $transition ease-in-out;
+    visibility: hidden;
+  }
+
+  &_icon {
+    @include tablet-down {
+      .a-icon {
+        width: rem(100);
+        height: rem(100);
+        #{$root}-small & {
+          width: rem(60);
+          height: rem(60);
+        }
+      }
+    }
+  }
+
+  &_layer {
+    background: url('~assets/images/InvestmentSector/img_general.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &_title {
+    margin-top: rem(32);
+    @include mobile-down {
+      margin-top: rem(24);
+    }
+
+    #{$root}-small & {
+      margin-top: rem(26);
+      @include mobile-down {
+        margin-top: rem(14);
+      }
+    }
+
+  }
+
+  &_desc {
+    margin-top: rem(8);
+
+    &-main {
+      @include text-overflow(3);
+    }
+
+    &-layer {
+      @include text-overflow(5);
+    }
+
+    #{$root}-small & {
+      margin-top: rem(16);
+      @include mobile-down {
+        margin-top: rem(8);
+      }
+    }
+  }
+
+  &_thumbnail {
+    margin-top: rem(24);
+    @include mobile-down {
+      margin-top: rem(16);
+    }
+  }
+
+  &_button {
+    margin-top: rem(24);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: rem(150);
+
+    @include mobile-down {
+      margin-top: rem(16);
+    }
+  }
+
+  &:hover {
+    #{$root}_main {
+      opacity: 0;
+    }
+  }
+}
+
+.t-investmentSector {
+  &_title {
+    margin-bottom: rem(52);
+
+    @include tablet-down {
+      margin-bottom: rem(40);
+    }
+
+    @include mobile-down {
+      margin-bottom: rem(25);
+    }
+  }
+
+  &_content {
+
+    .slick-prev {
+      background: $white-smoke2;
+      left: calc(-96 / 1366 * 100%);
+
+      @include desktop-down {
+        left: calc(-120 / 1366 * 100%);
+      }
+
+      @include tablet-down {
+        left: calc(-80 / 1366 * 100%);
+      }
+
+      @include mobile-down {
+        left: calc(-100 / 1366 * 100%);
+      }
+    }
+
+    .slick-next {
+      background: $white-smoke2;
+      right: calc(-120 / 1366 * 100%);
+
+      @include desktop-down {
+        right: calc(-150 / 1366 * 100%);
+      }
+
+      @include tablet-down {
+        right: calc(-80 / 1366 * 100%);
+      }
+
+      @include mobile-down {
+        right: calc(-100 / 1366 * 100%);
+      }
+    }
+
+    .o-carousel_arrow {
+      &:not(.slick-disabled):hover {
+        background: $metallic-sunburst;
+      }
+    }
+
+    .o-carousel {
+      @include max-desktop-down {
+        padding-left: rem(50);
+        padding-right: rem(50);
+      }
+
+      @include tablet-down {
+        padding-left: rem(20);
+        padding-right: rem(20);
+      }
+    }
+  }
+
+  &_item {
+    padding-bottom: rem(10);
+    padding-left: rem(16);
+    padding-right: rem(16);
+  }
+}

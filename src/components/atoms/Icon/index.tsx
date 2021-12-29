@@ -11,11 +11,13 @@ export const iconList = {
   arrowNextRed: 'arrowNextRed',
   arrowNextGrey: 'arrowNextGrey',
   eyeOpen: 'eyeOpen',
+  building: 'building',
+  buildingBlue: 'buildingBlue',
 };
 
 export type IconName = keyof typeof iconList;
 
-export type IconSize = '14' | '24' |'40';
+export type IconSize = '14' | '24' |'40' | '80' | '120';
 interface IconProps {
   iconName: IconName;
   size?: IconSize;
