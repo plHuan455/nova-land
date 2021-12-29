@@ -11,7 +11,7 @@
     flex-wrap: wrap;
     @include adjust-flex(space-between, center);
     @include tablet-down {
-      margin: rem(16) rem(-8) rem(-8);
+      margin: rem(8) rem(-8) rem(-8);
       @include adjust-flex;
     }
 
@@ -19,7 +19,7 @@
     &-line {
       margin-top: rem(52);
       @include tablet-down {
-        margin: rem(16) rem(-8) rem(-8);
+        margin: rem(8) rem(-8) rem(-8);
       }
     }
 
@@ -32,7 +32,7 @@
         flex: 0 0 30%;
         padding: rem(8);
       }
-      @include mobile-down {
+      @include small-mobile {
         flex: 0 0 50%;
       }
     }
@@ -42,12 +42,15 @@
       height: 1px;
       max-width: rem(60);
       width: 100%;
+      @include desktop-down {
+        max-width: rem(45);
+      }
       @include tablet-down {
         &-2 {
           display: none;
         }
       }
-      @include mobile-down {
+      @include small-mobile {
         display: none;
       }
     }
