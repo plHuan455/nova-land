@@ -4,6 +4,7 @@ type Ratio =
   | '4x3'
   | '16x9'
   | '220x145'
+  | '1126x376'
   | '1371x620';
 
 type FontWeightStyle =
@@ -49,7 +50,9 @@ type ColorStyle =
   | 'antiqueBronze'
   | 'urobilin'
   | 'arsenic'
-  | 'lavenderGray';
+  | 'lavenderGray'
+  | 'dimGray'
+  | 'jet';
 
 type FontFamily = 'fontLexend' | 'fontNoto' | 'fontLato';
 
