@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import EcoCard from '.';
+import VisionMissionValue from '.';
 
-describe('<EcoCard />', () => {
+describe('<VisionMissionValue />', () => {
   test('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<EcoCard brandList={[]} fieldImgSrc="" href="/" />, div);
+    ReactDOM.render(<VisionMissionValue dataList={[]} />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 });

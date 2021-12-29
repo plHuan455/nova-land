@@ -1,0 +1,78 @@
+.t-VMV {
+  background-color: $cool-black;
+
+  &_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: rem(72);
+    padding-bottom: rem(72);
+
+    @include tablet-down {
+      padding-top: rem(24);
+      padding-bottom: rem(24);
+    }
+  }
+
+  &_block {
+    flex: 0 0 calc(100% / 3);
+    padding-left: rem(44);
+    padding-right: rem(44);
+
+    @include small-mobile-up {
+      &:not(:last-child) {
+        border-right: 1px solid $gainsboro;
+      }
+    }
+
+    @include desktop-down {
+      padding-left: rem(20);
+      padding-right: rem(20);
+    }
+
+    @include small-mobile {
+      flex: 0 0 100%;
+      padding: rem(16);
+
+      &:not(:first-of-type) {
+        border-top: 1px solid $gainsboro;
+
+      }
+    }
+  }
+
+  &_content {
+    @include adjust-flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &_list {
+    margin-top: auto;
+
+    &-item {
+      display: flex;
+      align-items: center;
+
+      &:not(:first-of-type) {
+        margin-top: rem(16);
+      }
+    }
+
+    &-img {
+      width: rem(60);
+      flex-shrink: 0;
+
+      @include desktop-down {
+        width: rem(50);
+      }
+
+      @include tablet-down {
+        width: rem(40);
+      }
+
+      @include mobile-down {
+        width: rem(32);
+      }
+    }
+  }
+}
