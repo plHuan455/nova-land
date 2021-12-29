@@ -29,6 +29,10 @@
     width: rem(120);
   }
 
+  &-search {
+    background-image: url('~assets/icons/ic_search.svg');
+  }
+
   &-facebook {
     background-image: url('~assets/icons/ic_facebook.svg');
   }
@@ -71,5 +75,9 @@
 
   &-arrowNextWhite {
     background-image: url('~assets/icons/ic_arrow_next_white.svg');
+  }
+
+  &-carretDownBlack {
+    background-image: url('~assets/icons/ic_carret_down_black.svg');
   }
 }

@@ -57,7 +57,8 @@ type ColorStyle =
   | 'lavenderGray'
   | 'dimGray'
   | 'jet'
-  | 'black085';
+  | 'black085'
+  | 'darkMidnightBlue';
 
 type FontFamily = 'fontLexend' | 'fontNoto' | 'fontLato';
 
