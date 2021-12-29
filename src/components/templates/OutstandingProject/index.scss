@@ -68,11 +68,10 @@
 
   &_content {
     margin: 0 rem(-8);
-    padding-left: rem(12);
+    padding-left: rem(32);
     width: 85%;
 
     @include desktop-up {
-      padding-left: rem(32);
     }
 
     @include tablet-down {
