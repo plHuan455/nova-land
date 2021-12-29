@@ -7003,374 +7003,6 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components/templates/TransportationInfrastructure Normal 1`] = `
-<div
-  className="t-transportInfrastructure"
->
-  <div
-    className="container o-container"
-  >
-    <h2
-      className="a-heading a-heading-32x48 a-heading-700 a-heading-fontNoto a-heading-jet a-heading-uppercase a-heading-center"
-    >
-      HẠ TẦNG GIAO THÔNG
-    </h2>
-    <div
-      className="u-mt-8 u-mt-sm-16"
-    >
-      <div
-        className="a-text a-text-dimGray a-text-400 a-text-center a-text-16x24"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "Nâng cấp, phát triển hạ tầng giao thông tại nơi có dự án nhằm gia tăng tính kết nối vào hạ tầng giao thông trọng điểm quốc gia.",
-          }
-        }
-      />
-    </div>
-    <div
-      className="u-mt-16 u-mt-sm-32"
-    >
-      <div
-        className="a-image a-image-1126x376"
-      >
-        <img
-          alt="banner"
-          loading="lazy"
-          src="banner2.png"
-        />
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Components/templates/VisionMissionValue Normal 1`] = `
-<div
-  className="t-VMV"
->
-  <div
-    className="container o-container"
-  >
-    <div
-      className="t-VMV_wrapper"
-    >
-      <div
-        className="t-VMV_block"
-      >
-        <div
-          className="t-VMV_content"
-        >
-          <h2
-            className="a-heading a-heading-32x48 a-heading-700 a-heading-fontNoto a-heading-white a-heading-uppercase a-heading-center"
-          >
-            TẦM NHÌN
-          </h2>
-          <div
-            className="u-mt-16 u-mt-md-24 u-mt-lg-32 u-mb-16 u-mb-md-24"
-          >
-            <p
-              className="a-text a-text-400 a-text-fontLexend a-text-white a-text-center a-text-16x24"
-            >
-              Tập đoàn kinh tế hàng đầu trong các lĩnh vực
-            </p>
-          </div>
-          <div
-            className="t-VMV_list"
-          >
-            <div
-              className="t-VMV_list-item"
-            >
-              <div
-                className="t-VMV_list-img"
-              >
-                <div
-                  className="a-image a-image-1x1"
-                >
-                  <img
-                    alt="Bất động sản"
-                    loading="lazy"
-                    src="real_estate.png"
-                  />
-                </div>
-              </div>
-              <div
-                className="u-ml-12 u-ml-lg-16"
-              >
-                <p
-                  className="a-text a-text-400 a-text-fontLexend a-text-white a-text-left a-text-16x24"
-                >
-                  Bất động sản
-                </p>
-              </div>
-            </div>
-            <div
-              className="t-VMV_list-item"
-            >
-              <div
-                className="t-VMV_list-img"
-              >
-                <div
-                  className="a-image a-image-1x1"
-                >
-                  <img
-                    alt="Phát triển hạ tầng"
-                    loading="lazy"
-                    src="infrastructure.png"
-                  />
-                </div>
-              </div>
-              <div
-                className="u-ml-12 u-ml-lg-16"
-              >
-                <p
-                  className="a-text a-text-400 a-text-fontLexend a-text-white a-text-left a-text-16x24"
-                >
-                  Phát triển hạ tầng
-                </p>
-              </div>
-            </div>
-            <div
-              className="t-VMV_list-item"
-            >
-              <div
-                className="t-VMV_list-img"
-              >
-                <div
-                  className="a-image a-image-1x1"
-                >
-                  <img
-                    alt="Kiến tạo điểm đến"
-                    loading="lazy"
-                    src="assist_destination.png"
-                  />
-                </div>
-              </div>
-              <div
-                className="u-ml-12 u-ml-lg-16"
-              >
-                <p
-                  className="a-text a-text-400 a-text-fontLexend a-text-white a-text-left a-text-16x24"
-                >
-                  Kiến tạo điểm đến
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="t-VMV_block"
-      >
-        <div
-          className="t-VMV_content"
-        >
-          <h2
-            className="a-heading a-heading-32x48 a-heading-700 a-heading-fontNoto a-heading-white a-heading-uppercase a-heading-center"
-          >
-            SỨ MỆNH
-          </h2>
-          <div
-            className="u-mt-16 u-mt-md-24 u-mt-lg-32 u-mb-16 u-mb-md-24"
-          >
-            <p
-              className="a-text a-text-400 a-text-fontLexend a-text-white a-text-center a-text-16x24"
-            >
-              Tập đoàn tập trung cho các giá trị cộng đồng
-            </p>
-          </div>
-          <div
-            className="t-VMV_list"
-          >
-            <div
-              className="t-VMV_list-item"
-            >
-              <div
-                className="t-VMV_list-img"
-              >
-                <div
-                  className="a-image a-image-1x1"
-                >
-                  <img
-                    alt="Bất động sản"
-                    loading="lazy"
-                    src="real_estate.png"
-                  />
-                </div>
-              </div>
-              <div
-                className="u-ml-12 u-ml-lg-16"
-              >
-                <p
-                  className="a-text a-text-400 a-text-fontLexend a-text-white a-text-left a-text-16x24"
-                >
-                  Bất động sản
-                </p>
-              </div>
-            </div>
-            <div
-              className="t-VMV_list-item"
-            >
-              <div
-                className="t-VMV_list-img"
-              >
-                <div
-                  className="a-image a-image-1x1"
-                >
-                  <img
-                    alt="Phát triển hạ tầng"
-                    loading="lazy"
-                    src="infrastructure.png"
-                  />
-                </div>
-              </div>
-              <div
-                className="u-ml-12 u-ml-lg-16"
-              >
-                <p
-                  className="a-text a-text-400 a-text-fontLexend a-text-white a-text-left a-text-16x24"
-                >
-                  Phát triển hạ tầng
-                </p>
-              </div>
-            </div>
-            <div
-              className="t-VMV_list-item"
-            >
-              <div
-                className="t-VMV_list-img"
-              >
-                <div
-                  className="a-image a-image-1x1"
-                >
-                  <img
-                    alt="Kiến tạo điểm đến"
-                    loading="lazy"
-                    src="assist_destination.png"
-                  />
-                </div>
-              </div>
-              <div
-                className="u-ml-12 u-ml-lg-16"
-              >
-                <p
-                  className="a-text a-text-400 a-text-fontLexend a-text-white a-text-left a-text-16x24"
-                >
-                  Kiến tạo điểm đến
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="t-VMV_block"
-      >
-        <div
-          className="t-VMV_content"
-        >
-          <h2
-            className="a-heading a-heading-32x48 a-heading-700 a-heading-fontNoto a-heading-white a-heading-uppercase a-heading-center"
-          >
-            GIÁ TRỊ CỐT LÕI
-          </h2>
-          <div
-            className="u-mt-16 u-mt-md-24 u-mt-lg-32 u-mb-16 u-mb-md-24"
-          >
-            <p
-              className="a-text a-text-400 a-text-fontLexend a-text-white a-text-center a-text-16x24"
-            >
-              Chìa khoá của sự Thành Công
-            </p>
-          </div>
-          <div
-            className="t-VMV_list"
-          >
-            <div
-              className="t-VMV_list-item"
-            >
-              <div
-                className="t-VMV_list-img"
-              >
-                <div
-                  className="a-image a-image-1x1"
-                >
-                  <img
-                    alt="Bất động sản"
-                    loading="lazy"
-                    src="real_estate.png"
-                  />
-                </div>
-              </div>
-              <div
-                className="u-ml-12 u-ml-lg-16"
-              >
-                <p
-                  className="a-text a-text-400 a-text-fontLexend a-text-white a-text-left a-text-16x24"
-                >
-                  Bất động sản
-                </p>
-              </div>
-            </div>
-            <div
-              className="t-VMV_list-item"
-            >
-              <div
-                className="t-VMV_list-img"
-              >
-                <div
-                  className="a-image a-image-1x1"
-                >
-                  <img
-                    alt="Phát triển hạ tầng"
-                    loading="lazy"
-                    src="infrastructure.png"
-                  />
-                </div>
-              </div>
-              <div
-                className="u-ml-12 u-ml-lg-16"
-              >
-                <p
-                  className="a-text a-text-400 a-text-fontLexend a-text-white a-text-left a-text-16x24"
-                >
-                  Phát triển hạ tầng
-                </p>
-              </div>
-            </div>
-            <div
-              className="t-VMV_list-item"
-            >
-              <div
-                className="t-VMV_list-img"
-              >
-                <div
-                  className="a-image a-image-1x1"
-                >
-                  <img
-                    alt="Kiến tạo điểm đến"
-                    loading="lazy"
-                    src="assist_destination.png"
-                  />
-                </div>
-              </div>
-              <div
-                className="u-ml-12 u-ml-lg-16"
-              >
-                <p
-                  className="a-text a-text-400 a-text-fontLexend a-text-white a-text-left a-text-16x24"
-                >
-                  Kiến tạo điểm đến
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`Storyshots Components/templates/OutstandingProject Card 1`] = `
 <div
   style={
@@ -9017,6 +8649,374 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
               className="o-carousel_arrow o-carousel_arrow_next slick-arrow slick-next "
               onClick={[Function]}
             />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/templates/TransportationInfrastructure Normal 1`] = `
+<div
+  className="t-transportInfrastructure"
+>
+  <div
+    className="container o-container"
+  >
+    <h2
+      className="a-heading a-heading-32x48 a-heading-700 a-heading-fontNoto a-heading-jet a-heading-uppercase a-heading-center"
+    >
+      HẠ TẦNG GIAO THÔNG
+    </h2>
+    <div
+      className="u-mt-8 u-mt-sm-16"
+    >
+      <div
+        className="a-text a-text-dimGray a-text-400 a-text-center a-text-16x24"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "Nâng cấp, phát triển hạ tầng giao thông tại nơi có dự án nhằm gia tăng tính kết nối vào hạ tầng giao thông trọng điểm quốc gia.",
+          }
+        }
+      />
+    </div>
+    <div
+      className="u-mt-16 u-mt-sm-32"
+    >
+      <div
+        className="a-image a-image-1126x376"
+      >
+        <img
+          alt="banner"
+          loading="lazy"
+          src="banner2.png"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/templates/VisionMissionValue Normal 1`] = `
+<div
+  className="t-VMV"
+>
+  <div
+    className="container o-container"
+  >
+    <div
+      className="t-VMV_wrapper"
+    >
+      <div
+        className="t-VMV_block"
+      >
+        <div
+          className="t-VMV_content"
+        >
+          <h2
+            className="a-heading a-heading-32x48 a-heading-700 a-heading-fontNoto a-heading-white a-heading-uppercase a-heading-center"
+          >
+            TẦM NHÌN
+          </h2>
+          <div
+            className="u-mt-16 u-mt-md-24 u-mt-lg-32 u-mb-16 u-mb-md-24"
+          >
+            <p
+              className="a-text a-text-400 a-text-fontLexend a-text-white a-text-center a-text-16x24"
+            >
+              Tập đoàn kinh tế hàng đầu trong các lĩnh vực
+            </p>
+          </div>
+          <div
+            className="t-VMV_list"
+          >
+            <div
+              className="t-VMV_list-item"
+            >
+              <div
+                className="t-VMV_list-img"
+              >
+                <div
+                  className="a-image a-image-1x1"
+                >
+                  <img
+                    alt="Bất động sản"
+                    loading="lazy"
+                    src="real_estate.png"
+                  />
+                </div>
+              </div>
+              <div
+                className="u-ml-12 u-ml-lg-16"
+              >
+                <p
+                  className="a-text a-text-400 a-text-fontLexend a-text-white a-text-left a-text-16x24"
+                >
+                  Bất động sản
+                </p>
+              </div>
+            </div>
+            <div
+              className="t-VMV_list-item"
+            >
+              <div
+                className="t-VMV_list-img"
+              >
+                <div
+                  className="a-image a-image-1x1"
+                >
+                  <img
+                    alt="Phát triển hạ tầng"
+                    loading="lazy"
+                    src="infrastructure.png"
+                  />
+                </div>
+              </div>
+              <div
+                className="u-ml-12 u-ml-lg-16"
+              >
+                <p
+                  className="a-text a-text-400 a-text-fontLexend a-text-white a-text-left a-text-16x24"
+                >
+                  Phát triển hạ tầng
+                </p>
+              </div>
+            </div>
+            <div
+              className="t-VMV_list-item"
+            >
+              <div
+                className="t-VMV_list-img"
+              >
+                <div
+                  className="a-image a-image-1x1"
+                >
+                  <img
+                    alt="Kiến tạo điểm đến"
+                    loading="lazy"
+                    src="assist_destination.png"
+                  />
+                </div>
+              </div>
+              <div
+                className="u-ml-12 u-ml-lg-16"
+              >
+                <p
+                  className="a-text a-text-400 a-text-fontLexend a-text-white a-text-left a-text-16x24"
+                >
+                  Kiến tạo điểm đến
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="t-VMV_block"
+      >
+        <div
+          className="t-VMV_content"
+        >
+          <h2
+            className="a-heading a-heading-32x48 a-heading-700 a-heading-fontNoto a-heading-white a-heading-uppercase a-heading-center"
+          >
+            SỨ MỆNH
+          </h2>
+          <div
+            className="u-mt-16 u-mt-md-24 u-mt-lg-32 u-mb-16 u-mb-md-24"
+          >
+            <p
+              className="a-text a-text-400 a-text-fontLexend a-text-white a-text-center a-text-16x24"
+            >
+              Tập đoàn tập trung cho các giá trị cộng đồng
+            </p>
+          </div>
+          <div
+            className="t-VMV_list"
+          >
+            <div
+              className="t-VMV_list-item"
+            >
+              <div
+                className="t-VMV_list-img"
+              >
+                <div
+                  className="a-image a-image-1x1"
+                >
+                  <img
+                    alt="Bất động sản"
+                    loading="lazy"
+                    src="real_estate.png"
+                  />
+                </div>
+              </div>
+              <div
+                className="u-ml-12 u-ml-lg-16"
+              >
+                <p
+                  className="a-text a-text-400 a-text-fontLexend a-text-white a-text-left a-text-16x24"
+                >
+                  Bất động sản
+                </p>
+              </div>
+            </div>
+            <div
+              className="t-VMV_list-item"
+            >
+              <div
+                className="t-VMV_list-img"
+              >
+                <div
+                  className="a-image a-image-1x1"
+                >
+                  <img
+                    alt="Phát triển hạ tầng"
+                    loading="lazy"
+                    src="infrastructure.png"
+                  />
+                </div>
+              </div>
+              <div
+                className="u-ml-12 u-ml-lg-16"
+              >
+                <p
+                  className="a-text a-text-400 a-text-fontLexend a-text-white a-text-left a-text-16x24"
+                >
+                  Phát triển hạ tầng
+                </p>
+              </div>
+            </div>
+            <div
+              className="t-VMV_list-item"
+            >
+              <div
+                className="t-VMV_list-img"
+              >
+                <div
+                  className="a-image a-image-1x1"
+                >
+                  <img
+                    alt="Kiến tạo điểm đến"
+                    loading="lazy"
+                    src="assist_destination.png"
+                  />
+                </div>
+              </div>
+              <div
+                className="u-ml-12 u-ml-lg-16"
+              >
+                <p
+                  className="a-text a-text-400 a-text-fontLexend a-text-white a-text-left a-text-16x24"
+                >
+                  Kiến tạo điểm đến
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="t-VMV_block"
+      >
+        <div
+          className="t-VMV_content"
+        >
+          <h2
+            className="a-heading a-heading-32x48 a-heading-700 a-heading-fontNoto a-heading-white a-heading-uppercase a-heading-center"
+          >
+            GIÁ TRỊ CỐT LÕI
+          </h2>
+          <div
+            className="u-mt-16 u-mt-md-24 u-mt-lg-32 u-mb-16 u-mb-md-24"
+          >
+            <p
+              className="a-text a-text-400 a-text-fontLexend a-text-white a-text-center a-text-16x24"
+            >
+              Chìa khoá của sự Thành Công
+            </p>
+          </div>
+          <div
+            className="t-VMV_list"
+          >
+            <div
+              className="t-VMV_list-item"
+            >
+              <div
+                className="t-VMV_list-img"
+              >
+                <div
+                  className="a-image a-image-1x1"
+                >
+                  <img
+                    alt="Bất động sản"
+                    loading="lazy"
+                    src="real_estate.png"
+                  />
+                </div>
+              </div>
+              <div
+                className="u-ml-12 u-ml-lg-16"
+              >
+                <p
+                  className="a-text a-text-400 a-text-fontLexend a-text-white a-text-left a-text-16x24"
+                >
+                  Bất động sản
+                </p>
+              </div>
+            </div>
+            <div
+              className="t-VMV_list-item"
+            >
+              <div
+                className="t-VMV_list-img"
+              >
+                <div
+                  className="a-image a-image-1x1"
+                >
+                  <img
+                    alt="Phát triển hạ tầng"
+                    loading="lazy"
+                    src="infrastructure.png"
+                  />
+                </div>
+              </div>
+              <div
+                className="u-ml-12 u-ml-lg-16"
+              >
+                <p
+                  className="a-text a-text-400 a-text-fontLexend a-text-white a-text-left a-text-16x24"
+                >
+                  Phát triển hạ tầng
+                </p>
+              </div>
+            </div>
+            <div
+              className="t-VMV_list-item"
+            >
+              <div
+                className="t-VMV_list-img"
+              >
+                <div
+                  className="a-image a-image-1x1"
+                >
+                  <img
+                    alt="Kiến tạo điểm đến"
+                    loading="lazy"
+                    src="assist_destination.png"
+                  />
+                </div>
+              </div>
+              <div
+                className="u-ml-12 u-ml-lg-16"
+              >
+                <p
+                  className="a-text a-text-400 a-text-fontLexend a-text-white a-text-left a-text-16x24"
+                >
+                  Kiến tạo điểm đến
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
