@@ -26,25 +26,25 @@
   &_card {
     @include adjust-flex(flex-end, center);
     background-color: $white;
-    height: 100%;
     flex-direction: column;
+    height: 100%;
 
     &_desc {
       margin: rem(32) 0 rem(16);
     }
 
     &_year {
-      position: relative;
       background-color: $cool-black;
-      max-width: rem(157);
       height: rem(60);
+      max-width: rem(157);
+      position: relative;
       width: 100%;
       @include prefixed(clip-path, polygon(50% 0, 100% 50%, 100% 100%, 0 100%, 0% 50%));
 
       &-clip {
+        left: 50%;
         position: absolute;
         top: 50%;
-        left: 50%;
         transform: translate(-50%, -40%);
       }
     }
