@@ -4,15 +4,19 @@
   &_wrapper {
     display: flex;
     flex-wrap: wrap;
-    padding: rem(72) rem(24);
+    padding-top: rem(72);
+    padding-bottom: rem(72);
 
     @include tablet-down {
-      padding: rem(24) 0;
+      padding-top: rem(24);
+      padding-bottom: rem(24);
     }
   }
 
   &_block {
     flex: 0 0 calc(100% / 3);
+    padding-left: rem(44);
+    padding-right: rem(44);
 
     @include small-mobile-up {
       &:not(:last-child) {
@@ -20,15 +24,14 @@
       }
     }
 
-    @include tablet-down {
-      padding-left: rem(24);
-      padding-right: rem(24);
+    @include desktop-down {
+      padding-left: rem(20);
+      padding-right: rem(20);
     }
 
     @include small-mobile {
       flex: 0 0 100%;
-      padding-top: rem(16);
-      padding-bottom: rem(16);
+      padding: rem(16);
 
       &:not(:first-of-type) {
         border-top: 1px solid $gainsboro;
