@@ -3,6 +3,8 @@ import React from 'react';
 
 import DevelopmentHistory from '.';
 
+import listDevelopmentHistory from 'assets/dataDummy/developmentHistory';
+
 export default {
   title: 'Components/templates/DevelopmentHistory',
   component: DevelopmentHistory,
@@ -11,6 +13,7 @@ export default {
 
 export const normal: Story = () => (
   <DevelopmentHistory
+    list={listDevelopmentHistory}
     title="LỊCH SỬ PHÁT TRIỂN"
     description="Trên hành trình trở thành nhà Đầu tư - Phát triển bất động sản uy tín hàng đầu Việt Nam, bằng niềm đam mê,
   sự tập trung và kiên định thực hiện sứ mệnh của mình, Novaland đã và đang đa dạng hóa sản phẩm ở trung tâm TPHCM,

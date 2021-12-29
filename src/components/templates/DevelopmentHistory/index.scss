@@ -1,16 +1,23 @@
 .t-processItem {
   position: relative;
-  padding: rem(2) rem(58);
+  padding: rem(2) rem(30);
+  height: rem(33);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &_year {
-    color: $white;
     position: absolute;
-    bottom: calc(100% + 18px);
+    bottom: calc(100% + 6px);
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
     @include font-base(16,24);
     cursor: pointer;
+    color: $gainsboro;
+    @include mobile-down {
+      @include font-base(14, 22);
+    }
   }
 
   &_hexagon {
@@ -26,11 +33,13 @@
       border-left: rem(4.6) solid transparent;
       border-right: rem(4.6) solid transparent;    
     }
+
     div:nth-child(2) {
       width: rem(9);
       height: rem(5);
       background-color: $light-french-beige;
     }
+
     div:last-child {
       width: 0;
       border-top: rem(3.5) solid $light-french-beige;
@@ -38,50 +47,132 @@
       border-right: rem(4.6) solid transparent;
     }
   }
+
+  &_card {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: calc(100% + 35px);
+    min-width: rem(390);
+    left: 50%;
+    transform: translateX(-50%);
+    background: $white;
+    padding: rem(20);
+
+    @include small-mobile {
+      min-width: rem(300);
+      padding: rem(16);
+    }
+
+    @include break-max(325px) {
+      min-width: rem(250);
+    }
+
+    &::before {
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      content: "";
+      border-bottom: rem(28) solid $white;
+      border-right: rem(14) solid transparent;
+      border-left: rem(14) solid transparent;
+    }
+
+    &_description {
+      @include text-overflow(4);
+    }
+
+    &_image {
+      margin-top: rem(16);
+    }
+  }
 }
 
 .t-developmentHistory {
-  padding: rem(72) 0 rem(82);
+  padding: rem(72) 0 rem(30);
   background: $cool-black url('~assets/images/bg_development_history.png') bottom right no-repeat;
   background-size: contain;
 
+  @include small-mobile {
+    padding: rem(40) 0 rem(20);
+  }
+
   &_description {
     margin-top: rem(24);
+    @include small-mobile {
+      margin-top: rem(16);
+    }
   }
 
   &_process {
     max-width: rem(570);
     margin-top: rem(32);
     position: relative;
-    // &::before {
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-    //   content: '';
-    //   width: 100%;
-    //   height: 100%;
-    //   z-index: 10;
-    //   box-sizing: border-box;
-    //   filter: drop-shadow(0px 16px 16px rgba(0, 0, 0, 0.25));
-    //   transform: matrix(1, 0, 0, -1, 0, 0);
-    //   pointer-events: none;
-    // }
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      width: 100%;
+      height: rem(64);
+      z-index: 1;
+      background-image: $cool-black-linear;
+      pointer-events: none;
+    }
   }
 
   .slick {
+    &-track {
+      padding: rem(32) 0 rem(400);
+
+      @include small-mobile {
+        padding: rem(32) 0 rem(350);
+      }
+    }
     &-list {
-      padding-top: rem(54);
       &::before {
         position: absolute;
-        bottom: calc((100% - 54px) / 2);
+        top: rem(46);
         left: 0;
         content: '';
         width: 100%;
         height: 2px;
-        background: linear-gradient(90deg, rgba(195, 163, 113, 0) 0%, #F9E4C5 50.52%, rgba(195, 163, 113, 0) 100%);
+        background: $camel-linear;
         transform: matrix(1, 0, 0, -1, 0, 0) translateY(-50%);
         z-index: -1;
         pointer-events: none;
+      }
+    }
+
+    &-active {
+      .t-processItem {
+        &_year {
+          bottom: calc(100% - 2px);
+          color: $white;
+          @include font-base(24,32);
+          @include mobile-down {
+            bottom: 100%;
+            @include font-base(18, 28);
+          }
+        }
+
+        &_hexagon {
+          background: $cool-black url('~assets/images/logo_slide.png') no-repeat center / contain;
+          width: rem(26);
+          height: rem(31);
+          > div {
+            display: none;
+          }
+        }
+
+        &_card {
+          opacity: 1;
+          visibility: visible;
+        }
       }
     }
   }
