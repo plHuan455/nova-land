@@ -11,32 +11,32 @@ const tabsData: TabsDataTypes[] = [
     awardList: [
       {
         src: img1,
-        desc: '',
+        desc: 'Top 10 Chủ đầu tư Bất động sản uy tín',
         awardYear: '2021',
       },
       {
         src: img2,
-        desc: '',
+        desc: 'HR Asia - Nơi làm việc tốt nhất Châu Á',
         awardYear: '2021',
       },
       {
         src: img3,
-        desc: '',
+        desc: 'Nhà phát triển BĐS hạng sang tốt nhất Việt Nam - Luxury Lifestyle Awards',
         awardYear: '2021',
       },
       {
         src: img4,
-        desc: '',
+        desc: 'Chứng nhận Công trình tiêu biểu chào mừng 100 năm Liên Hiệp Quốc',
         awardYear: '2021',
       },
       {
         src: img5,
-        desc: '',
+        desc: 'Nhà phát triển và đầu tư. Bất động sản Tiêu biểu - Nhịp Cầu Đầu Tư',
         awardYear: '2021',
       },
       {
         src: img5,
-        desc: '',
+        desc: 'Nhà phát triển Bất động sản xuất sắc Việt Nam - Euromoney',
         awardYear: '2021',
       },
     ],
@@ -46,32 +46,32 @@ const tabsData: TabsDataTypes[] = [
     awardList: [
       {
         src: img1,
-        desc: '',
+        desc: 'Top 10 Chủ đầu tư Bất động sản uy tín',
         awardYear: '2020',
       },
       {
         src: img2,
-        desc: '',
+        desc: 'HR Asia - Nơi làm việc tốt nhất Châu Á',
         awardYear: '2020',
       },
       {
         src: img3,
-        desc: '',
+        desc: 'Nhà phát triển BĐS hạng sang tốt nhất Việt Nam - Luxury Lifestyle Awards',
         awardYear: '2020',
       },
       {
         src: img4,
-        desc: '',
+        desc: 'Chứng nhận Công trình tiêu biểu chào mừng 100 năm Liên Hiệp Quốc',
         awardYear: '2020',
       },
       {
         src: img5,
-        desc: '',
+        desc: 'Nhà phát triển và đầu tư. Bất động sản Tiêu biểu - Nhịp Cầu Đầu Tư',
         awardYear: '2020',
       },
       {
         src: img5,
-        desc: '',
+        desc: 'Nhà phát triển Bất động sản xuất sắc Việt Nam - Euromoney',
         awardYear: '2020',
       },
     ],
@@ -81,32 +81,32 @@ const tabsData: TabsDataTypes[] = [
     awardList: [
       {
         src: img1,
-        desc: '',
+        desc: 'Top 10 Chủ đầu tư Bất động sản uy tín',
         awardYear: '2019',
       },
       {
         src: img2,
-        desc: '',
+        desc: 'HR Asia - Nơi làm việc tốt nhất Châu Á',
         awardYear: '2019',
       },
       {
         src: img3,
-        desc: '',
+        desc: 'Nhà phát triển BĐS hạng sang tốt nhất Việt Nam - Luxury Lifestyle Awards',
         awardYear: '2019',
       },
       {
         src: img4,
-        desc: '',
+        desc: 'Chứng nhận Công trình tiêu biểu chào mừng 100 năm Liên Hiệp Quốc',
         awardYear: '2019',
       },
       {
         src: img5,
-        desc: '',
+        desc: 'Nhà phát triển và đầu tư. Bất động sản Tiêu biểu - Nhịp Cầu Đầu Tư',
         awardYear: '2019',
       },
       {
         src: img5,
-        desc: '',
+        desc: 'Nhà phát triển Bất động sản xuất sắc Việt Nam - Euromoney',
         awardYear: '2019',
       },
     ],
@@ -116,32 +116,32 @@ const tabsData: TabsDataTypes[] = [
     awardList: [
       {
         src: img1,
-        desc: '',
+        desc: 'Top 10 Chủ đầu tư Bất động sản uy tín',
         awardYear: '2018',
       },
       {
         src: img2,
-        desc: '',
+        desc: 'HR Asia - Nơi làm việc tốt nhất Châu Á',
         awardYear: '2018',
       },
       {
         src: img3,
-        desc: '',
+        desc: 'Nhà phát triển BĐS hạng sang tốt nhất Việt Nam - Luxury Lifestyle Awards',
         awardYear: '2018',
       },
       {
         src: img4,
-        desc: '',
+        desc: 'Chứng nhận Công trình tiêu biểu chào mừng 100 năm Liên Hiệp Quốc',
         awardYear: '2018',
       },
       {
         src: img5,
-        desc: '',
+        desc: 'Nhà phát triển và đầu tư. Bất động sản Tiêu biểu - Nhịp Cầu Đầu Tư',
         awardYear: '2018',
       },
       {
         src: img5,
-        desc: '',
+        desc: 'Nhà phát triển Bất động sản xuất sắc Việt Nam - Euromoney',
         awardYear: '2018',
       },
     ],
