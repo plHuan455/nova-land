@@ -3,20 +3,20 @@
 
   &_info {
     background: $dark-green-linear;
-    position: absolute;
     bottom: 0;
-    width: 100%;
-    left: 0;
-    @include adjust-flex(space-between);
     flex-direction: column;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    @include adjust-flex(space-between);
 
     @include small-mobile {
       height: 100%;
     }
 
     &_content {
-      width: 100%;
       padding: rem(32) 10%;
+      width: 100%;
 
       @include small-mobile {
         padding: rem(10) 10%;
@@ -39,6 +39,7 @@
         right: calc(37 / 1366 * 100%);
       }
     }
+
     &-prev {
       @include small-mobile-up {
         left: calc(37 / 1366 * 100%);
