@@ -1,0 +1,52 @@
+.t-awardList {
+  background-color: $snow;
+
+  &_desc {
+    margin: rem(24) 0 rem(32);
+  }
+
+  &_tabs {
+    &_panelWrap {
+      @include adjust-flex(center, stretch);
+      flex-wrap: wrap;
+
+      &-item {
+        flex: 0 0 calc(100% / 4 - 33px);
+        padding: rem(16.5);
+        @include tablet-down {
+          flex: 0 0 calc(100% / 2 - 33px);
+        }
+        @include mobile-down {
+          flex: 0 0 100%;
+        }
+      }
+    }
+  }
+
+  &_card {
+    @include adjust-flex(flex-end, center);
+    background-color: $white;
+    height: 100%;
+    flex-direction: column;
+
+    &_desc {
+      margin: rem(32) 0 rem(16);
+    }
+
+    &_year {
+      position: relative;
+      background-color: $cool-black;
+      max-width: rem(157);
+      height: rem(60);
+      width: 100%;
+      @include prefixed(clip-path, polygon(50% 0, 100% 50%, 100% 100%, 0 100%, 0% 50%));
+
+      &-clip {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+      }
+    }
+  }
+}
