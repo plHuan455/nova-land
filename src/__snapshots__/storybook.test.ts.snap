@@ -453,6 +453,22 @@ exports[`Storyshots Components/molecules/Pulldown Normal 1`] = `
 </div>
 `;
 
+exports[`Storyshots Components/organisms/Banner Normal 1`] = `
+<div
+  className="o-banner"
+>
+  <div
+    className="a-image a-image-1366x600"
+  >
+    <img
+      alt="image-banner"
+      loading="lazy"
+      src="banner_home.png"
+    />
+  </div>
+</div>
+`;
+
 exports[`Storyshots Components/organisms/Carousel Banner 1`] = `
 <div
   style={

@@ -2,14 +2,14 @@
   position: relative;
 
   &::before {
+    background: $white-linear;
     content: '';
-    width: 100%;
+    height: 50%;
+    left: 0;
+    pointer-events: none;
     position: absolute;
     top: 0;
-    left: 0;
-    height: 50%;
-    background: $white-linear;
-    pointer-events: none;
+    width: 100%;
     z-index: 1;
   }
 }
