@@ -136,14 +136,14 @@ const InvestmentSector: React.FC<InvestmentSectorProps> = ({
   title, investmentSectorList,
 }) => (
   <div className="t-investmentSector">
-    <div className="u-mb-lg-52 u-mb-sm-40 u-mb-24">
-      <Heading
-        modifiers={['32x48', 'jet', '700', 'uppercase', 'center', 'fontNoto']}
-        content={title}
-      />
-    </div>
-    <div className="t-investmentSector_content">
-      <Container>
+    <Container>
+      <div className="u-mb-lg-52 u-mb-sm-40 u-mb-24">
+        <Heading
+          modifiers={['32x48', 'jet', '700', 'uppercase', 'center', 'fontNoto']}
+          content={title}
+        />
+      </div>
+      <div className="t-investmentSector_content">
         <Carousel settings={setting}>
           {
             investmentSectorList.map((item, index) => (
@@ -155,8 +155,8 @@ const InvestmentSector: React.FC<InvestmentSectorProps> = ({
             ))
           }
         </Carousel>
-      </Container>
-    </div>
+      </div>
+    </Container>
   </div>
 );
 
