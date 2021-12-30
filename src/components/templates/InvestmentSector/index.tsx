@@ -18,10 +18,11 @@ export interface InvestmentCardProps {
   href: string;
   icon: IconName;
   iconActive: IconName,
+  btnText?: string;
 }
 
 export const InvestmentCard: React.FC<InvestmentCardProps> = ({
-  title, desc, thumbnail, isSmall, href, icon, iconActive,
+  title, desc, thumbnail, isSmall, href, icon, iconActive, btnText,
 }) => {
   const [classHover, setClassHover] = useState('');
 
@@ -82,7 +83,7 @@ export const InvestmentCard: React.FC<InvestmentCardProps> = ({
             <Button modifiers="secondary" type="button">
               <Text
                 modifiers={['16x24', 'black085', 'fontLexend', '400', 'capitalize', 'center']}
-                content="Tìm Hiểu Thêm"
+                content={btnText}
               />
             </Button>
           </Link>
@@ -95,6 +96,7 @@ export const InvestmentCard: React.FC<InvestmentCardProps> = ({
 interface InvestmentSectorProps {
   title: string;
   investmentSectorList: InvestmentCardProps[];
+  isSmall?: boolean;
 }
 
 const setting = {
@@ -132,10 +134,42 @@ const setting = {
   ],
 };
 
+const settingSmall = {
+  centerMode: true,
+  infinite: true,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  arrows: true,
+  prevArrow: <PrevArrow />,
+  nextArrow: <NextArrow />,
+  speed: 500,
+  slidesPerRow: 1,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+      },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 575,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
+};
+
 const InvestmentSector: React.FC<InvestmentSectorProps> = ({
-  title, investmentSectorList,
+  title, investmentSectorList, isSmall,
 }) => (
-  <div className="t-investmentSector">
+  <div className={mapModifiers('t-investmentSector', isSmall && 'small')}>
     <Container>
       <div className="u-mb-lg-52 u-mb-sm-40 u-mb-24">
         <Heading
@@ -144,12 +178,13 @@ const InvestmentSector: React.FC<InvestmentSectorProps> = ({
         />
       </div>
       <div className="t-investmentSector_content">
-        <Carousel settings={setting}>
+        <Carousel settings={isSmall ? settingSmall : setting}>
           {
             investmentSectorList.map((item, index) => (
               <div className="t-investmentSector_item" key={`_investmentSector_${index.toString()}`}>
                 <InvestmentCard
                   {...item}
+                  isSmall={isSmall}
                 />
               </div>
             ))
@@ -159,5 +194,9 @@ const InvestmentSector: React.FC<InvestmentSectorProps> = ({
     </Container>
   </div>
 );
+
+InvestmentSector.defaultProps = {
+  isSmall: false,
+};
 
 export default InvestmentSector;

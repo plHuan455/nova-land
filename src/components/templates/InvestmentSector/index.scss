@@ -23,24 +23,24 @@
   }
 
   &_layer {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
     height: 100%;
+    left: 0;
     opacity: 0;
+    position: absolute;
+    top: 0;
     transition: all $transition ease-in-out;
     visibility: hidden;
+    width: 100%;
   }
 
   &_icon {
     @include tablet-down {
       .a-icon {
-        width: rem(100);
         height: rem(100);
+        width: rem(100);
         #{$root}-small & {
-          width: rem(60);
           height: rem(60);
+          width: rem(60);
         }
       }
     }
@@ -94,9 +94,9 @@
   }
 
   &_button {
-    margin-top: rem(24);
     margin-left: auto;
     margin-right: auto;
+    margin-top: rem(24);
     max-width: rem(150);
 
     @include mobile-down {
@@ -112,6 +112,8 @@
 }
 
 .t-investmentSector {
+  $root: &;
+
   &_title {
     margin-bottom: rem(52);
 
@@ -125,7 +127,6 @@
   }
 
   &_content {
-
     .slick-prev {
       background: $white-smoke2;
       left: calc(-96 / 1366 * 100%);
@@ -135,11 +136,11 @@
       }
 
       @include tablet-down {
-        left: calc(-80 / 1366 * 100%);
+        left: calc(-90 / 1366 * 100%);
       }
 
       @include mobile-down {
-        left: calc(-100 / 1366 * 100%);
+        left: calc(-150 / 1366 * 100%);
       }
     }
 
@@ -148,15 +149,15 @@
       right: calc(-120 / 1366 * 100%);
 
       @include desktop-down {
-        right: calc(-150 / 1366 * 100%);
+        right: calc(-120 / 1366 * 100%);
       }
 
       @include tablet-down {
-        right: calc(-80 / 1366 * 100%);
+        right: calc(-90 / 1366 * 100%);
       }
 
       @include mobile-down {
-        right: calc(-100 / 1366 * 100%);
+        right: calc(-150 / 1366 * 100%);
       }
     }
 
@@ -175,6 +176,42 @@
       @include tablet-down {
         padding-left: rem(20);
         padding-right: rem(20);
+      }
+    }
+  }
+
+  &-small {
+    #{$root}_content {
+      .slick-prev {
+        left: calc(-90 / 1366 * 100%);
+  
+        @include desktop-down {
+          left: calc(-100 / 1366 * 100%);
+        }
+  
+        @include tablet-down {
+          left: calc(-90 / 1366 * 100%);
+        }
+  
+        @include mobile-down {
+          left: calc(-150 / 1366 * 100%);
+        }
+      }
+  
+      .slick-next {
+        right: calc(-90 / 1366 * 100%);
+  
+        @include desktop-down {
+          right: calc(-100 / 1366 * 100%);
+        }
+  
+        @include tablet-down {
+          right: calc(-90 / 1366 * 100%);
+        }
+  
+        @include mobile-down {
+          right: calc(-150 / 1366 * 100%);
+        }
       }
     }
   }
