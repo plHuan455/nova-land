@@ -86,8 +86,8 @@
       }
 
       &_nav {
-        position: relative;
         padding-left: rem(20);
+        position: relative;
         
         &:not(:first-child) {
           margin-top: rem(8);
@@ -97,16 +97,16 @@
           }
         }
 
-        &:before {
-          content: "";
-          width: rem(6);
+        &::before {
+          border-right: 1px solid $white;
+          border-top: 1px solid $white;
+          content: '';
           height: rem(6);
-          position: absolute;
           left: 0;
+          position: absolute;
           top: rem(7);
           transform: rotate(45deg);
-          border-top: 1px solid $white;
-          border-right: 1px solid $white;
+          width: rem(6);
         }
       }
 
@@ -176,16 +176,17 @@
 
     &_form {
       .o-form > form {
-          display: flex;
-          flex-wrap: wrap;
-          margin-left: rem(-12);
-          margin-right: rem(-12);
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: rem(-12);
+        margin-right: rem(-12);
       }
 
       &_input {
         flex: 0 0 100%;
         padding-left: rem(12);
         padding-right: rem(12);
+
         &:not(:first-child) {
           margin-top: rem(24);
         }
@@ -194,6 +195,7 @@
           margin-top: rem(24);
         }
       }
+
       &_button {
         flex: 0 0 100%;
         padding-left: rem(12);

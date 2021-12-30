@@ -3,9 +3,9 @@
   border: 1px solid $gainsboro;
   height: rem(415);
   overflow: hidden;
+  padding: rem(10);
   position: relative;
   transition: 0.5s;
-  padding: rem(10);
 
   &:hover {
     border: 1px solid $golden-brown;
@@ -31,12 +31,12 @@
   }
 
   &_field {
+    margin: auto;
+    max-width: rem(206);
     position: relative;
     top: 50%;
     transform: translateY(-50%);
     transition: 0.6s;
-    max-width: rem(206);
-    margin: auto;
 
     img {
       display: block;
