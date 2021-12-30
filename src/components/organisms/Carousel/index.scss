@@ -9,6 +9,10 @@
     height: 6px;
     transition: $transition-long ease;
     width: 6px;
+    &.white {
+      background-color: $white-smoke3;
+      opacity: 0.4;
+    }
   }
 
   &_arrow {
@@ -110,6 +114,10 @@
       background-color: $cool-black;
       border-radius: 4px;
       width: rem(32);
+      &.white {
+        background-color: $white;
+        opacity: 1;
+      }
     }
   }
 

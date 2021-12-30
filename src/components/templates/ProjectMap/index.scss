@@ -1,0 +1,101 @@
+.t-projectMap {
+  background-color: $cool-black;
+  $width-in-container-value: 1126;
+  $height-map: 800;
+
+  &_wrap {
+    position: relative;
+    padding: rem(40) 0 rem(28);
+    min-height: rem(250);
+  }
+
+  &_map {
+    max-width: calc(471 / #{$width-in-container-value} * 100%);
+
+    @include small-mobile {
+      max-width: rem(471);
+      margin: rem(10) auto 0;
+    }
+
+    &_img {
+      position: relative;
+      & > img {
+        height: 100%;
+        left: 0;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+    }
+
+    &_area {
+      position: absolute;
+      transform: translate(-50%,-50%);
+      background: url('~assets/images/logo_slide.png') no-repeat center/contain;
+      opacity: 0.6;
+      transition: $transition-long ease-in-out;
+      cursor: pointer;
+
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+
+  &_info {
+    position: absolute;
+    max-width: calc(760 / #{$width-in-container-value} * 100%); // 760 not scroll 
+    top: calc(194 / #{$height-map} * 100%);
+    right: 0;
+
+    @include tablet-down {
+      max-width: calc(650 / #{$width-in-container-value} * 100%);
+      top: calc(150 / #{$height-map} * 100%);
+    }
+
+    @include small-mobile {
+      position: unset;
+      top: auto;
+      right: auto;
+      max-width: 100%;
+    }
+
+    .o-tabs_panel-active {
+      margin-top: 0;
+    }
+
+    &_content {
+      margin-top: calc(32 / #{$height-map} * 100%);
+      @include tablet-down {
+        margin-top: rem(10);
+      }
+    }
+
+    &_panel {
+      margin-top: calc(52 / #{$height-map} * 100%);
+      @include tablet-down {
+        margin-top: rem(16);
+      }
+      @include small-mobile {
+        min-height: rem(190);
+      }
+    }
+
+    &_carousel {
+      margin: 0 rem(-16);
+    }
+
+    &_branch {
+      padding: rem(16);
+      cursor: pointer;
+      transition: $transition-long ease-in-out;
+      &.zoom-in {
+        transform: scale(0.7);
+      }
+      &.zoom-out {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
