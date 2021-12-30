@@ -13,25 +13,17 @@ export default {
   argTypes: {},
 } as Meta;
 
-const shareholderRelationsList: ShareholderCardProps[] = [
-  {
-    imgSrc: shareholderCard1,
-    isStocks: true,
-    title: 'Cổ Phiếu',
-    href: '/',
-  },
-  {
-    imgSrc: shareholderCard2,
-    title: 'Báo Cáo Tài Chính',
-    content: 'Báo cáo tài chính Quý 3',
-    href: '/',
-  },
-];
+const shareholderRelationsList: ShareholderCardProps = {
+  imgSrc: shareholderCard2,
+  title: 'Báo Cáo Tài Chính',
+  content: 'Báo cáo tài chính Quý 3',
+};
 
 export const normal: Story = () => (
   <Router>
     <ShareholderRelations
       title="Quan hệ cổ đông"
+      href="/"
       dataShareholderRelations={shareholderRelationsList}
     />
   </Router>
@@ -44,7 +36,6 @@ export const shareholderCard: Story = () => (
         imgSrc={shareholderCard1}
         isStocks
         title="Cổ Phiếu"
-        href="/"
       />
     </Router>
   </div>
@@ -57,7 +48,6 @@ export const shareholderCardSecond: Story = () => (
         imgSrc={shareholderCard2}
         title="Báo Cáo Tài Chính"
         content="Báo cáo tài chính Quý 3"
-        href="/"
       />
     </Router>
   </div>

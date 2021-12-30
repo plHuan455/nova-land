@@ -172,6 +172,17 @@ exports[`Storyshots Components/atoms/Icon Normal 1`] = `
       className="a-icon a-icon-carretDownBlack a-icon-24"
     />
   </div>
+  <div
+    style={
+      Object {
+        "marginLeft": 7,
+      }
+    }
+  >
+    <i
+      className="a-icon a-icon-arrowNextWhite2 a-icon-24"
+    />
+  </div>
 </div>
 `;
 
@@ -217,6 +228,7 @@ exports[`Storyshots Components/atoms/Input Normal 1`] = `
 exports[`Storyshots Components/atoms/Link Normal 1`] = `
 Array [
   <a
+    aria-current={null}
     className="a-link  "
     href="/home"
     onClick={[Function]}
@@ -226,6 +238,7 @@ Array [
   </a>,
   " ",
   <a
+    aria-current={null}
     className="a-link  "
     href="/about"
     onClick={[Function]}
@@ -320,6 +333,7 @@ exports[`Storyshots Components/molecules/EcoCard Normal 1`] = `
       className="a-link   active"
       href="/"
       onClick={[Function]}
+      style={Object {}}
       target="_self"
     >
       <div
@@ -385,7 +399,7 @@ exports[`Storyshots Components/molecules/Pulldown Normal 1`] = `
                 autoComplete="off"
                 autoCorrect="off"
                 disabled={false}
-                id="react-select-2-input"
+                id="react-select-3-input"
                 onBlur={[Function]}
                 onChange={[Function]}
                 onFocus={[Function]}
@@ -1200,7 +1214,7 @@ exports[`Storyshots Components/organisms/Container Row Container 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components/organisms/Footer Normal 1`] = `
+exports[`Storyshots Components/organisms/Footer normal 1`] = `
 <footer
   className="o-footer"
   style={
@@ -1243,6 +1257,7 @@ exports[`Storyshots Components/organisms/Footer Normal 1`] = `
                   className="a-link   active"
                   href="/"
                   onClick={[Function]}
+                  style={Object {}}
                   target="_self"
                 >
                   <div
@@ -1451,7 +1466,7 @@ exports[`Storyshots Components/organisms/Footer Normal 1`] = `
                                 autoComplete="off"
                                 autoCorrect="off"
                                 disabled={false}
-                                id="react-select-3-input"
+                                id="react-select-2-input"
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 onFocus={[Function]}
@@ -1564,6 +1579,7 @@ exports[`Storyshots Components/organisms/Footer Normal 1`] = `
                 className="a-link   active"
                 href="/"
                 onClick={[Function]}
+                style={Object {}}
                 target="_self"
               >
                 <p
@@ -1581,6 +1597,7 @@ exports[`Storyshots Components/organisms/Footer Normal 1`] = `
                 className="a-link   active"
                 href="/"
                 onClick={[Function]}
+                style={Object {}}
                 target="_self"
               >
                 <p
@@ -1598,6 +1615,7 @@ exports[`Storyshots Components/organisms/Footer Normal 1`] = `
                 className="a-link   active"
                 href="/"
                 onClick={[Function]}
+                style={Object {}}
                 target="_self"
               >
                 <p
@@ -1615,6 +1633,7 @@ exports[`Storyshots Components/organisms/Footer Normal 1`] = `
                 className="a-link   active"
                 href="/"
                 onClick={[Function]}
+                style={Object {}}
                 target="_self"
               >
                 <p
@@ -1632,6 +1651,7 @@ exports[`Storyshots Components/organisms/Footer Normal 1`] = `
                 className="a-link   active"
                 href="/"
                 onClick={[Function]}
+                style={Object {}}
                 target="_self"
               >
                 <p
@@ -1649,6 +1669,7 @@ exports[`Storyshots Components/organisms/Footer Normal 1`] = `
                 className="a-link   active"
                 href="/"
                 onClick={[Function]}
+                style={Object {}}
                 target="_self"
               >
                 <p
@@ -1683,6 +1704,7 @@ exports[`Storyshots Components/organisms/Footer Normal 1`] = `
                 className="a-link   active"
                 href="/"
                 onClick={[Function]}
+                style={Object {}}
                 target="_self"
               >
                 <p
@@ -1700,6 +1722,7 @@ exports[`Storyshots Components/organisms/Footer Normal 1`] = `
                 className="a-link   active"
                 href="/"
                 onClick={[Function]}
+                style={Object {}}
                 target="_self"
               >
                 <p
@@ -1717,6 +1740,7 @@ exports[`Storyshots Components/organisms/Footer Normal 1`] = `
                 className="a-link   active"
                 href="/"
                 onClick={[Function]}
+                style={Object {}}
                 target="_self"
               >
                 <p
@@ -1734,6 +1758,7 @@ exports[`Storyshots Components/organisms/Footer Normal 1`] = `
                 className="a-link   active"
                 href="/"
                 onClick={[Function]}
+                style={Object {}}
                 target="_self"
               >
                 <p
@@ -1751,6 +1776,7 @@ exports[`Storyshots Components/organisms/Footer Normal 1`] = `
                 className="a-link   active"
                 href="/"
                 onClick={[Function]}
+                style={Object {}}
                 target="_self"
               >
                 <p
@@ -1768,6 +1794,7 @@ exports[`Storyshots Components/organisms/Footer Normal 1`] = `
                 className="a-link   active"
                 href="/"
                 onClick={[Function]}
+                style={Object {}}
                 target="_self"
               >
                 <p
@@ -1785,6 +1812,7 @@ exports[`Storyshots Components/organisms/Footer Normal 1`] = `
                 className="a-link   active"
                 href="/"
                 onClick={[Function]}
+                style={Object {}}
                 target="_self"
               >
                 <p
@@ -1819,6 +1847,7 @@ exports[`Storyshots Components/organisms/Footer Normal 1`] = `
                 className="a-link   active"
                 href="/"
                 onClick={[Function]}
+                style={Object {}}
                 target="_self"
                 title="zalo"
               >
@@ -1835,6 +1864,7 @@ exports[`Storyshots Components/organisms/Footer Normal 1`] = `
                 className="a-link   active"
                 href="/"
                 onClick={[Function]}
+                style={Object {}}
                 target="_self"
                 title="youtube"
               >
@@ -1851,6 +1881,7 @@ exports[`Storyshots Components/organisms/Footer Normal 1`] = `
                 className="a-link   active"
                 href="/"
                 onClick={[Function]}
+                style={Object {}}
                 target="_self"
                 title="facebook"
               >
@@ -1884,6 +1915,7 @@ exports[`Storyshots Components/organisms/Footer Normal 1`] = `
               className="a-link   active"
               href="/"
               onClick={[Function]}
+              style={Object {}}
               target="_self"
             >
               <p
@@ -1901,6 +1933,7 @@ exports[`Storyshots Components/organisms/Footer Normal 1`] = `
               className="a-link   active"
               href="/"
               onClick={[Function]}
+              style={Object {}}
               target="_self"
             >
               <p
@@ -1932,11 +1965,10 @@ exports[`Storyshots Components/organisms/Form Normal 1`] = `
 />
 `;
 
-exports[`Storyshots Components/organisms/Header Normal 1`] = `
+exports[`Storyshots Components/organisms/Header normal 1`] = `
 <div
   style={
     Object {
-      "backgroundColor": "#dbdbdb",
       "height": "130vh",
     }
   }
@@ -1966,6 +1998,7 @@ exports[`Storyshots Components/organisms/Header Normal 1`] = `
             className="a-link   active"
             href="/"
             onClick={[Function]}
+            style={Object {}}
             target="_self"
           >
             <div
@@ -2031,6 +2064,7 @@ exports[`Storyshots Components/organisms/Header Normal 1`] = `
                   className="a-link o-header_nav_link  active"
                   href="/"
                   onClick={[Function]}
+                  style={Object {}}
                   target="_self"
                 >
                   Trang chủ
@@ -2040,6 +2074,7 @@ exports[`Storyshots Components/organisms/Header Normal 1`] = `
                 className="o-header_nav_item"
               >
                 <a
+                  aria-current={null}
                   className="a-link o-header_nav_link "
                   href="/gioi-thieu"
                   onClick={[Function]}
@@ -2052,6 +2087,7 @@ exports[`Storyshots Components/organisms/Header Normal 1`] = `
                 className="o-header_nav_item"
               >
                 <a
+                  aria-current={null}
                   className="a-link o-header_nav_link "
                   href="/mua-ban"
                   onClick={[Function]}
@@ -2064,6 +2100,7 @@ exports[`Storyshots Components/organisms/Header Normal 1`] = `
                 className="o-header_nav_item"
               >
                 <a
+                  aria-current={null}
                   className="a-link o-header_nav_link "
                   href="/quan-he-dau-tu"
                   onClick={[Function]}
@@ -2076,6 +2113,7 @@ exports[`Storyshots Components/organisms/Header Normal 1`] = `
                 className="o-header_nav_item"
               >
                 <a
+                  aria-current={null}
                   className="a-link o-header_nav_link "
                   href="/tin-tuc"
                   onClick={[Function]}
@@ -2088,6 +2126,7 @@ exports[`Storyshots Components/organisms/Header Normal 1`] = `
                 className="o-header_nav_item"
               >
                 <a
+                  aria-current={null}
                   className="a-link o-header_nav_link "
                   href="/tuyen-dung"
                   onClick={[Function]}
@@ -2100,6 +2139,7 @@ exports[`Storyshots Components/organisms/Header Normal 1`] = `
                 className="o-header_nav_item"
               >
                 <a
+                  aria-current={null}
                   className="a-link o-header_nav_link "
                   href="/lien-he"
                   onClick={[Function]}
@@ -2295,10 +2335,7 @@ exports[`Storyshots Components/templates/DevelopmentHistory Normal 1`] = `
         className="a-text a-text-center a-text-white a-text-16x24 a-text-400"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "Trên hành trình trở thành nhà Đầu tư - Phát triển bất động sản uy tín hàng đầu Việt Nam, bằng niềm đam mê,
- sự tập trung và kiên định thực hiện sứ mệnh của mình, Novaland đã và đang đa dạng hóa sản phẩm ở trung tâm TPHCM,
- đô thị vệ tinh và đô thị du lịch nghỉ dưỡng ở các tỉnh thành trọng điểm, kiến tạo nên những cộng đồng tinh hoa,
- thu hút khách du lịch trong và ngoài nước.",
+            "__html": "Trên hành trình trở thành nhà Đầu tư - Phát triển bất động sản uy tín hàng đầu Việt Nam, bằng niềm đam mê, sự tập trung và kiên định thực hiện sứ mệnh của mình, Novaland đã và đang đa dạng hóa sản phẩm ở trung tâm TPHCM, đô thị vệ tinh và đô thị du lịch nghỉ dưỡng ở các tỉnh thành trọng điểm, kiến tạo nên những cộng đồng tinh hoa, thu hút khách du lịch trong và ngoài nước.",
           }
         }
       />
@@ -2906,9 +2943,7 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
       <p
         className="a-text a-text-400 a-text-center a-text-davysGrey a-text-16x24"
       >
-        Hệ sinh thái Nova Group, mang những tinh hoa Văn Hóa, Ẩm Thực, Giáo Dục, Vui Chơi - Giải Trí, Du Lịch Nghỉ Dưỡng,
- Chăm Sóc Sức Khỏe, Y Tế hàng đầu thế giới và Việt Nam về hội tụ tại quần thể các dự án của Novaland nhằm phục vụ
- sự tiện nghi và thịnh vượng cho cộng đồng cư dân, tăng giá trị cho các sản phẩm bất động sản và hiệu quả cho các nhà đầu tư.
+        Hệ sinh thái Nova Group, mang những tinh hoa Văn Hóa, Ẩm Thực, Giáo Dục, Vui Chơi - Giải Trí, Du Lịch Nghỉ Dưỡng, Chăm Sóc Sức Khỏe, Y Tế hàng đầu thế giới và Việt Nam về hội tụ tại quần thể các dự án của Novaland nhằm phục vụ sự tiện nghi và thịnh vượng cho cộng đồng cư dân, tăng giá trị cho các sản phẩm bất động sản và hiệu quả cho các nhà đầu tư.
       </p>
     </div>
     <div
@@ -3038,6 +3073,7 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                             className="a-link   active"
                             href="/"
                             onClick={[Function]}
+                            style={Object {}}
                             target="_self"
                           >
                             <div
@@ -3141,6 +3177,7 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                             className="a-link   active"
                             href="/"
                             onClick={[Function]}
+                            style={Object {}}
                             target="_self"
                           >
                             <div
@@ -3244,6 +3281,7 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                             className="a-link   active"
                             href="/"
                             onClick={[Function]}
+                            style={Object {}}
                             target="_self"
                           >
                             <div
@@ -3347,6 +3385,7 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                             className="a-link   active"
                             href="/"
                             onClick={[Function]}
+                            style={Object {}}
                             target="_self"
                           >
                             <div
@@ -3450,6 +3489,7 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                             className="a-link   active"
                             href="/"
                             onClick={[Function]}
+                            style={Object {}}
                             target="_self"
                           >
                             <div
@@ -3843,6 +3883,7 @@ exports[`Storyshots Components/templates/HomeNews Home News Card 1`] = `
         className="a-link   active"
         href="/"
         onClick={[Function]}
+        style={Object {}}
         target="_self"
       >
         <div
@@ -3867,6 +3908,7 @@ exports[`Storyshots Components/templates/HomeNews Home News Card 1`] = `
           className="a-link   active"
           href="/"
           onClick={[Function]}
+          style={Object {}}
           target="_self"
         >
           <p
@@ -4011,6 +4053,7 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
                   className="a-link   active"
                   href="/"
                   onClick={[Function]}
+                  style={Object {}}
                   target="_self"
                 >
                   <div
@@ -4035,6 +4078,7 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
                     className="a-link   active"
                     href="/"
                     onClick={[Function]}
+                    style={Object {}}
                     target="_self"
                   >
                     <p
@@ -4115,6 +4159,7 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
                   className="a-link   active"
                   href="/"
                   onClick={[Function]}
+                  style={Object {}}
                   target="_self"
                 >
                   <div
@@ -4139,6 +4184,7 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
                     className="a-link   active"
                     href="/"
                     onClick={[Function]}
+                    style={Object {}}
                     target="_self"
                   >
                     <p
@@ -4219,6 +4265,7 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
                   className="a-link   active"
                   href="/"
                   onClick={[Function]}
+                  style={Object {}}
                   target="_self"
                 >
                   <div
@@ -4243,6 +4290,7 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
                     className="a-link   active"
                     href="/"
                     onClick={[Function]}
+                    style={Object {}}
                     target="_self"
                   >
                     <p
@@ -4331,6 +4379,7 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
                   className="a-link   active"
                   href="/"
                   onClick={[Function]}
+                  style={Object {}}
                   target="_self"
                 >
                   <div
@@ -4355,6 +4404,7 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
                     className="a-link   active"
                     href="/"
                     onClick={[Function]}
+                    style={Object {}}
                     target="_self"
                   >
                     <p
@@ -4435,6 +4485,7 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
                   className="a-link   active"
                   href="/"
                   onClick={[Function]}
+                  style={Object {}}
                   target="_self"
                 >
                   <div
@@ -4459,6 +4510,7 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
                     className="a-link   active"
                     href="/"
                     onClick={[Function]}
+                    style={Object {}}
                     target="_self"
                   >
                     <p
@@ -4539,6 +4591,7 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
                   className="a-link   active"
                   href="/"
                   onClick={[Function]}
+                  style={Object {}}
                   target="_self"
                 >
                   <div
@@ -4563,6 +4616,7 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
                     className="a-link   active"
                     href="/"
                     onClick={[Function]}
+                    style={Object {}}
                     target="_self"
                   >
                     <p
@@ -4643,6 +4697,7 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
                   className="a-link   active"
                   href="/"
                   onClick={[Function]}
+                  style={Object {}}
                   target="_self"
                 >
                   <div
@@ -4667,6 +4722,7 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
                     className="a-link   active"
                     href="/"
                     onClick={[Function]}
+                    style={Object {}}
                     target="_self"
                   >
                     <p
@@ -4755,6 +4811,7 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
                   className="a-link   active"
                   href="/"
                   onClick={[Function]}
+                  style={Object {}}
                   target="_self"
                 >
                   <div
@@ -4779,6 +4836,7 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
                     className="a-link   active"
                     href="/"
                     onClick={[Function]}
+                    style={Object {}}
                     target="_self"
                   >
                     <p
@@ -4859,6 +4917,7 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
                   className="a-link   active"
                   href="/"
                   onClick={[Function]}
+                  style={Object {}}
                   target="_self"
                 >
                   <div
@@ -4883,6 +4942,7 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
                     className="a-link   active"
                     href="/"
                     onClick={[Function]}
+                    style={Object {}}
                     target="_self"
                   >
                     <p
@@ -4961,6 +5021,133 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
         >
           Xem tất cả bài viết
         </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/templates/InvestmentSector Card 1`] = `
+<div
+  style={
+    Object {
+      "maxWidth": "450px",
+    }
+  }
+>
+  <div
+    className="t-investmentCard"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="t-investmentCard_main"
+    >
+      <div
+        className="t-investmentCard_icon"
+      >
+        <i
+          className="a-icon a-icon-building a-icon-120"
+        />
+      </div>
+      <div
+        className="t-investmentCard_title"
+      >
+        <h2
+          className="a-heading a-heading-32x48 a-heading-700 a-heading-raisinBlack a-heading-uppercase a-heading-fontNoto"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "BĐS TRUNG TÂM",
+            }
+          }
+        />
+      </div>
+      <div
+        className="t-investmentCard_desc t-investmentCard_desc-main"
+      >
+        <p
+          className="a-text a-text-arsenic a-text-400 a-text-fontLexend"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.",
+            }
+          }
+        />
+      </div>
+      <div
+        className="t-investmentCard_thumbnail"
+      >
+        <div
+          className="a-image a-image-16x9"
+        >
+          <img
+            alt="InvestmentCard"
+            loading="lazy"
+            src="img_investmentSector.png"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="t-investmentCard_layer "
+    >
+      <div
+        className="t-investmentCard_icon"
+      >
+        <i
+          className="a-icon a-icon-buildingBlue a-icon-120"
+        />
+      </div>
+      <div
+        className="t-investmentCard_title"
+      >
+        <h2
+          className="a-heading a-heading-32x48 a-heading-700 a-heading-white a-heading-uppercase a-heading-fontNoto"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "BĐS TRUNG TÂM",
+            }
+          }
+        />
+      </div>
+      <div
+        className="t-investmentCard_desc t-investmentCard_desc-layer"
+      >
+        <p
+          className="a-text a-text-white a-text-400 a-text-fontLexend"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.",
+            }
+          }
+        />
+      </div>
+      <div
+        className="t-investmentCard_button"
+      >
+        <a
+          aria-current="page"
+          className="a-link   active"
+          href="/"
+          onClick={[Function]}
+          style={Object {}}
+          target="_self"
+        >
+          <button
+            className="a-button a-button-secondary"
+            disabled={false}
+            type="button"
+          >
+            <p
+              className="a-text a-text-16x24 a-text-black085 a-text-fontLexend a-text-400 a-text-capitalize a-text-center"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "Tìm Hiểu Thêm",
+                }
+              }
+            />
+          </button>
+        </a>
       </div>
     </div>
   </div>
@@ -5159,6 +5346,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
+                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -5308,6 +5496,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
+                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -5457,6 +5646,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
+                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -5607,6 +5797,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
+                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -5757,6 +5948,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
+                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -5907,6 +6099,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
+                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -6057,6 +6250,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
+                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -6207,6 +6401,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
+                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -6356,6 +6551,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
+                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -6505,6 +6701,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
+                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -6654,6 +6851,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
+                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -6803,6 +7001,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
+                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -6952,6 +7151,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
+                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -6990,7 +7190,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components/templates/InvestmentSector Normal Small 1`] = `
+exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
 <div
   className="t-investmentSector t-investmentSector-small"
 >
@@ -7178,7 +7378,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal Small 1`] = `
                             >
                               <a
                                 aria-current="page"
-                                className="a-link "
+                                className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
                                 style={Object {}}
@@ -7328,7 +7528,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal Small 1`] = `
                             >
                               <a
                                 aria-current="page"
-                                className="a-link "
+                                className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
                                 style={Object {}}
@@ -7478,7 +7678,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal Small 1`] = `
                             >
                               <a
                                 aria-current="page"
-                                className="a-link "
+                                className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
                                 style={Object {}}
@@ -7628,7 +7828,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal Small 1`] = `
                             >
                               <a
                                 aria-current="page"
-                                className="a-link "
+                                className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
                                 style={Object {}}
@@ -7778,7 +7978,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal Small 1`] = `
                             >
                               <a
                                 aria-current="page"
-                                className="a-link "
+                                className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
                                 style={Object {}}
@@ -7929,7 +8129,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal Small 1`] = `
                             >
                               <a
                                 aria-current="page"
-                                className="a-link "
+                                className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
                                 style={Object {}}
@@ -8080,7 +8280,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal Small 1`] = `
                             >
                               <a
                                 aria-current="page"
-                                className="a-link "
+                                className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
                                 style={Object {}}
@@ -8231,7 +8431,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal Small 1`] = `
                             >
                               <a
                                 aria-current="page"
-                                className="a-link "
+                                className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
                                 style={Object {}}
@@ -8382,7 +8582,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal Small 1`] = `
                             >
                               <a
                                 aria-current="page"
-                                className="a-link "
+                                className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
                                 style={Object {}}
@@ -8533,7 +8733,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal Small 1`] = `
                             >
                               <a
                                 aria-current="page"
-                                className="a-link "
+                                className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
                                 style={Object {}}
@@ -8683,7 +8883,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal Small 1`] = `
                             >
                               <a
                                 aria-current="page"
-                                className="a-link "
+                                className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
                                 style={Object {}}
@@ -8833,7 +9033,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal Small 1`] = `
                             >
                               <a
                                 aria-current="page"
-                                className="a-link "
+                                className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
                                 style={Object {}}
@@ -8983,7 +9183,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal Small 1`] = `
                             >
                               <a
                                 aria-current="page"
-                                className="a-link "
+                                className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
                                 style={Object {}}
@@ -9133,7 +9333,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal Small 1`] = `
                             >
                               <a
                                 aria-current="page"
-                                className="a-link "
+                                className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
                                 style={Object {}}
@@ -9283,7 +9483,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal Small 1`] = `
                             >
                               <a
                                 aria-current="page"
-                                className="a-link "
+                                className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
                                 style={Object {}}
@@ -9319,258 +9519,6 @@ exports[`Storyshots Components/templates/InvestmentSector Normal Small 1`] = `
             onClick={[Function]}
           />
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Components/templates/InvestmentSector Second 1`] = `
-<div
-  style={
-    Object {
-      "maxWidth": "450px",
-    }
-  }
->
-  <div
-    className="t-investmentCard"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-  >
-    <div
-      className="t-investmentCard_main"
-    >
-      <div
-        className="t-investmentCard_icon"
-      >
-        <i
-          className="a-icon a-icon-building a-icon-120"
-        />
-      </div>
-      <div
-        className="t-investmentCard_title"
-      >
-        <h2
-          className="a-heading a-heading-32x48 a-heading-700 a-heading-raisinBlack a-heading-uppercase a-heading-fontNoto"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "BĐS TRUNG TÂM",
-            }
-          }
-        />
-      </div>
-      <div
-        className="t-investmentCard_desc t-investmentCard_desc-main"
-      >
-        <p
-          className="a-text a-text-arsenic a-text-400 a-text-fontLexend"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.",
-            }
-          }
-        />
-      </div>
-      <div
-        className="t-investmentCard_thumbnail"
-      >
-        <div
-          className="a-image a-image-16x9"
-        >
-          <img
-            alt="InvestmentCard"
-            loading="lazy"
-            src="img_investmentSector.png"
-          />
-        </div>
-      </div>
-    </div>
-    <div
-      className="t-investmentCard_layer "
-    >
-      <div
-        className="t-investmentCard_icon"
-      >
-        <i
-          className="a-icon a-icon-buildingBlue a-icon-120"
-        />
-      </div>
-      <div
-        className="t-investmentCard_title"
-      >
-        <h2
-          className="a-heading a-heading-32x48 a-heading-700 a-heading-white a-heading-uppercase a-heading-fontNoto"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "BĐS TRUNG TÂM",
-            }
-          }
-        />
-      </div>
-      <div
-        className="t-investmentCard_desc t-investmentCard_desc-layer"
-      >
-        <p
-          className="a-text a-text-white a-text-400 a-text-fontLexend"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.",
-            }
-          }
-        />
-      </div>
-      <div
-        className="t-investmentCard_button"
-      >
-        <a
-          aria-current="page"
-          className="a-link   active"
-          href="/"
-          onClick={[Function]}
-          target="_self"
-        >
-          <button
-            className="a-button a-button-secondary"
-            disabled={false}
-            type="button"
-          >
-            <p
-              className="a-text a-text-16x24 a-text-black085 a-text-fontLexend a-text-400 a-text-capitalize a-text-center"
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "Tìm Hiểu Thêm",
-                }
-              }
-            />
-          </button>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
-<div
-  style={
-    Object {
-      "maxWidth": "285px",
-    }
-  }
->
-  <div
-    className="t-investmentCard t-investmentCard-small"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-  >
-    <div
-      className="t-investmentCard_main"
-    >
-      <div
-        className="t-investmentCard_icon"
-      >
-        <i
-          className="a-icon a-icon-building a-icon-80"
-        />
-      </div>
-      <div
-        className="t-investmentCard_title"
-      >
-        <h2
-          className="a-heading a-heading-20x30 a-heading-400 a-heading-raisinBlack a-heading-uppercase a-heading-fontNoto"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "BĐS TRUNG TÂM",
-            }
-          }
-        />
-      </div>
-      <div
-        className="t-investmentCard_desc t-investmentCard_desc-main"
-      >
-        <p
-          className="a-text a-text-arsenic a-text-400 a-text-fontLexend"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.",
-            }
-          }
-        />
-      </div>
-      <div
-        className="t-investmentCard_thumbnail"
-      >
-        <div
-          className="a-image a-image-16x9"
-        >
-          <img
-            alt="InvestmentCard"
-            loading="lazy"
-            src="img_investmentSector.png"
-          />
-        </div>
-      </div>
-    </div>
-    <div
-      className="t-investmentCard_layer "
-    >
-      <div
-        className="t-investmentCard_icon"
-      >
-        <i
-          className="a-icon a-icon-buildingBlue a-icon-80"
-        />
-      </div>
-      <div
-        className="t-investmentCard_title"
-      >
-        <h2
-          className="a-heading a-heading-20x30 a-heading-400 a-heading-white a-heading-uppercase a-heading-fontNoto"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "BĐS TRUNG TÂM",
-            }
-          }
-        />
-      </div>
-      <div
-        className="t-investmentCard_desc t-investmentCard_desc-layer"
-      >
-        <p
-          className="a-text a-text-white a-text-400 a-text-fontLexend"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.",
-            }
-          }
-        />
-      </div>
-      <div
-        className="t-investmentCard_button"
-      >
-        <a
-          aria-current="page"
-          className="a-link   active"
-          href="/"
-          onClick={[Function]}
-          target="_self"
-        >
-          <button
-            className="a-button a-button-secondary"
-            disabled={false}
-            type="button"
-          >
-            <p
-              className="a-text a-text-16x24 a-text-black085 a-text-fontLexend a-text-400 a-text-capitalize a-text-center"
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "Tìm Hiểu Thêm",
-                }
-              }
-            />
-          </button>
-        </a>
       </div>
     </div>
   </div>
@@ -9731,6 +9679,7 @@ exports[`Storyshots Components/templates/OutstandingProject Card 1`] = `
       className="a-link   active"
       href="/"
       onClick={[Function]}
+      style={Object {}}
       target="_self"
     >
       <div
@@ -9870,6 +9819,7 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
+                              style={Object {}}
                               target="_self"
                             >
                               <div
@@ -9941,6 +9891,7 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
+                              style={Object {}}
                               target="_self"
                             >
                               <div
@@ -10012,6 +9963,7 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
+                              style={Object {}}
                               target="_self"
                             >
                               <div
@@ -10083,6 +10035,7 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
+                              style={Object {}}
                               target="_self"
                             >
                               <div
@@ -10154,6 +10107,7 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
+                              style={Object {}}
                               target="_self"
                             >
                               <div
@@ -10226,6 +10180,7 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
+                              style={Object {}}
                               target="_self"
                             >
                               <div
@@ -10298,6 +10253,7 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
+                              style={Object {}}
                               target="_self"
                             >
                               <div
@@ -10370,6 +10326,7 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
+                              style={Object {}}
                               target="_self"
                             >
                               <div
@@ -10442,6 +10399,7 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
+                              style={Object {}}
                               target="_self"
                             >
                               <div
@@ -10514,6 +10472,7 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
+                              style={Object {}}
                               target="_self"
                             >
                               <div
@@ -10586,6 +10545,7 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
+                              style={Object {}}
                               target="_self"
                             >
                               <div
@@ -10658,6 +10618,7 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
+                              style={Object {}}
                               target="_self"
                             >
                               <div
@@ -10730,6 +10691,7 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
+                              style={Object {}}
                               target="_self"
                             >
                               <div
@@ -10801,6 +10763,7 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
+                              style={Object {}}
                               target="_self"
                             >
                               <div
@@ -10872,6 +10835,7 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
+                              style={Object {}}
                               target="_self"
                             >
                               <div
@@ -10943,6 +10907,7 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
+                              style={Object {}}
                               target="_self"
                             >
                               <div
@@ -11014,6 +10979,7 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
+                              style={Object {}}
                               target="_self"
                             >
                               <div
@@ -11085,6 +11051,7 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
+                              style={Object {}}
                               target="_self"
                             >
                               <div
@@ -11156,6 +11123,7 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
+                              style={Object {}}
                               target="_self"
                             >
                               <div
@@ -11227,6 +11195,7 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
+                              style={Object {}}
                               target="_self"
                             >
                               <div
@@ -11298,6 +11267,7 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
+                              style={Object {}}
                               target="_self"
                             >
                               <div
@@ -11339,6 +11309,252 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
               onClick={[Function]}
             />
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/templates/ShareholderRelations Normal 1`] = `
+<div
+  className="t-shareholderRelations"
+>
+  <div
+    className="container o-container"
+  >
+    <div
+      className="t-shareholderRelations_title"
+    >
+      <h2
+        className="a-heading a-heading-32x48 a-heading-700 a-heading-arsenic a-heading-uppercase a-heading-center a-heading-fontNoto"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "Quan hệ cổ đông",
+          }
+        }
+      />
+    </div>
+    <div
+      className="t-shareholderRelations_content"
+    >
+      <div
+        className="t-shareholderRelations_content_item"
+      >
+        <div
+          className="t-shareholderCard"
+        >
+          <div
+            className="t-shareholderCard_thumbnail t-shareholderCard_thumbnail-stocks"
+          >
+            <div
+              className="a-image a-image-483x286"
+            >
+              <img
+                alt="ShareholderCard"
+                loading="lazy"
+                src="img_shareholderCard1.png"
+              />
+            </div>
+          </div>
+          <div
+            className="t-shareholderCard_wrapper"
+          >
+            <div
+              className="t-shareholderCard_title"
+            >
+              <h2
+                className="a-heading a-heading-600 a-heading-arsenic a-heading-capitalize a-heading-fontNoto"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "Cổ Phiếu",
+                  }
+                }
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="t-shareholderRelations_content_item"
+      >
+        <div
+          className="t-shareholderCard"
+        >
+          <div
+            className="t-shareholderCard_thumbnail"
+          >
+            <div
+              className="a-image a-image-549x308"
+            >
+              <img
+                alt="ShareholderCard"
+                loading="lazy"
+                src="img_shareholderCard2.png"
+              />
+            </div>
+          </div>
+          <div
+            className="t-shareholderCard_wrapper"
+          >
+            <div
+              className="t-shareholderCard_title"
+            >
+              <h2
+                className="a-heading a-heading-600 a-heading-arsenic a-heading-capitalize a-heading-fontNoto"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "Báo Cáo Tài Chính",
+                  }
+                }
+              />
+            </div>
+            <div
+              className="t-shareholderCard_content"
+            >
+              <p
+                className="a-text a-text-16x24 a-text-400 a-text-goldenBrown a-text-fontLexend"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "Báo cáo tài chính Quý 3",
+                  }
+                }
+              />
+              <div
+                className="t-shareholderCard_content_icon"
+              >
+                <i
+                  className="a-icon a-icon-arrowNextWhite2 a-icon-10"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="t-shareholderRelations_button"
+    >
+      <a
+        aria-current="page"
+        className="a-link   active"
+        href="/"
+        onClick={[Function]}
+        style={Object {}}
+        target="_self"
+      >
+        <button
+          className="a-button a-button-outline"
+          disabled={false}
+          type="button"
+        >
+          <p
+            className="a-text a-text-16x24 a-text-400 a-text-fontLexend a-text-center"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "Xem thêm báo cáo tài chính",
+              }
+            }
+          />
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/templates/ShareholderRelations Shareholder Card 1`] = `
+<div
+  style={
+    Object {
+      "margin": "30px",
+      "maxWidth": "547px",
+    }
+  }
+>
+  <div
+    className="t-shareholderCard"
+  >
+    <div
+      className="t-shareholderCard_thumbnail t-shareholderCard_thumbnail-stocks"
+    />
+    <div
+      className="t-shareholderCard_wrapper"
+    >
+      <div
+        className="t-shareholderCard_title"
+      >
+        <h2
+          className="a-heading a-heading-600 a-heading-arsenic a-heading-capitalize a-heading-fontNoto"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Cổ Phiếu",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/templates/ShareholderRelations Shareholder Card Second 1`] = `
+<div
+  style={
+    Object {
+      "margin": "30px",
+      "maxWidth": "547px",
+    }
+  }
+>
+  <div
+    className="t-shareholderCard"
+  >
+    <div
+      className="t-shareholderCard_thumbnail"
+    >
+      <div
+        className="a-image a-image-549x308"
+      >
+        <img
+          alt="ShareholderCard"
+          loading="lazy"
+          src="img_shareholderCard2.png"
+        />
+      </div>
+    </div>
+    <div
+      className="t-shareholderCard_wrapper"
+    >
+      <div
+        className="t-shareholderCard_title"
+      >
+        <h2
+          className="a-heading a-heading-600 a-heading-arsenic a-heading-capitalize a-heading-fontNoto"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Báo Cáo Tài Chính",
+            }
+          }
+        />
+      </div>
+      <div
+        className="t-shareholderCard_content"
+      >
+        <p
+          className="a-text a-text-16x24 a-text-400 a-text-goldenBrown a-text-fontLexend"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Báo cáo tài chính Quý 3",
+            }
+          }
+        />
+        <div
+          className="t-shareholderCard_content_icon"
+        >
+          <i
+            className="a-icon a-icon-arrowNextWhite2 a-icon-10"
+          />
         </div>
       </div>
     </div>
