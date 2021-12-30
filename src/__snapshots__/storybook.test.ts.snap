@@ -3583,6 +3583,7 @@ exports[`Storyshots Components/templates/HeroBanner Normal 1`] = `
     className="o-carousel o-carousel-hasarrow"
   >
     <div
+<<<<<<< HEAD
       className="slick-slider slick-initialized"
       dir="ltr"
     >
@@ -3590,6 +3591,53 @@ exports[`Storyshots Components/templates/HeroBanner Normal 1`] = `
         className="o-carousel_arrow o-carousel_arrow_prev slick-arrow slick-prev slick-disabled t-heroBanner_arrow-prev"
         onClick={null}
       />
+=======
+      className="t-homeNewsCard_thumbnail"
+    >
+      <a
+        aria-current="page"
+        className="a-link   active"
+        href="/"
+        onClick={[Function]}
+        style={Object {}}
+        target="_self"
+      >
+        <div
+          className="a-image a-image-1x1"
+        >
+          <img
+            alt="HomeNewsCard"
+            loading="lazy"
+            src="img_homeNewsCard.png"
+          />
+        </div>
+      </a>
+    </div>
+    <div
+      className="t-homeNewsCard_wrapper"
+    >
+      <div
+        className="t-homeNewsCard_title"
+      >
+        <a
+          aria-current="page"
+          className="a-link   active"
+          href="/"
+          onClick={[Function]}
+          style={Object {}}
+          target="_self"
+        >
+          <p
+            className="a-text a-text-16x24 a-text-600 a-text-arsenic"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "Người dân TP.HCM đón Giáng sinh sớm, check-in cùng cây thông 25 m",
+              }
+            }
+          />
+        </a>
+      </div>
+>>>>>>> :hammer:feat(NWL-17): fix conflict
       <div
         className="slick-list"
         onClick={[Function]}
@@ -3644,8 +3692,18 @@ exports[`Storyshots Components/templates/HeroBanner Normal 1`] = `
                 }
                 tabIndex={-1}
               >
+<<<<<<< HEAD
                 <div
                   className="o-carousel_item"
+=======
+                <a
+                  aria-current="page"
+                  className="a-link   active"
+                  href="/"
+                  onClick={[Function]}
+                  style={Object {}}
+                  target="_self"
+>>>>>>> :hammer:feat(NWL-17): fix conflict
                 >
                   <div
                     className="a-image a-image-1371x620"
@@ -5021,6 +5079,133 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
         >
           Xem tất cả bài viết
         </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/templates/InvestmentSector Card 1`] = `
+<div
+  style={
+    Object {
+      "maxWidth": "450px",
+    }
+  }
+>
+  <div
+    className="t-investmentCard"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="t-investmentCard_main"
+    >
+      <div
+        className="t-investmentCard_icon"
+      >
+        <i
+          className="a-icon a-icon-building a-icon-120"
+        />
+      </div>
+      <div
+        className="t-investmentCard_title"
+      >
+        <h2
+          className="a-heading a-heading-32x48 a-heading-700 a-heading-raisinBlack a-heading-uppercase a-heading-fontNoto"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "BĐS TRUNG TÂM",
+            }
+          }
+        />
+      </div>
+      <div
+        className="t-investmentCard_desc t-investmentCard_desc-main"
+      >
+        <p
+          className="a-text a-text-arsenic a-text-400 a-text-fontLexend"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.",
+            }
+          }
+        />
+      </div>
+      <div
+        className="t-investmentCard_thumbnail"
+      >
+        <div
+          className="a-image a-image-16x9"
+        >
+          <img
+            alt="InvestmentCard"
+            loading="lazy"
+            src="img_investmentSector.png"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="t-investmentCard_layer "
+    >
+      <div
+        className="t-investmentCard_icon"
+      >
+        <i
+          className="a-icon a-icon-buildingBlue a-icon-120"
+        />
+      </div>
+      <div
+        className="t-investmentCard_title"
+      >
+        <h2
+          className="a-heading a-heading-32x48 a-heading-700 a-heading-white a-heading-uppercase a-heading-fontNoto"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "BĐS TRUNG TÂM",
+            }
+          }
+        />
+      </div>
+      <div
+        className="t-investmentCard_desc t-investmentCard_desc-layer"
+      >
+        <p
+          className="a-text a-text-white a-text-400 a-text-fontLexend"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.",
+            }
+          }
+        />
+      </div>
+      <div
+        className="t-investmentCard_button"
+      >
+        <a
+          aria-current="page"
+          className="a-link   active"
+          href="/"
+          onClick={[Function]}
+          style={Object {}}
+          target="_self"
+        >
+          <button
+            className="a-button a-button-secondary"
+            disabled={false}
+            type="button"
+          >
+            <p
+              className="a-text a-text-16x24 a-text-black085 a-text-fontLexend a-text-400 a-text-capitalize a-text-center"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "Tìm Hiểu Thêm",
+                }
+              }
+            />
+          </button>
+        </a>
       </div>
     </div>
   </div>
@@ -11124,6 +11309,8 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               href="/"
                               onClick={[Function]}
                               style={Object {}}
+<<<<<<< HEAD
+=======
                               target="_self"
                             >
                               <div
@@ -11268,6 +11455,7 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               href="/"
                               onClick={[Function]}
                               style={Object {}}
+>>>>>>> :hammer:feat(NWL-17): fix conflict
                               target="_self"
                             >
                               <div
@@ -11309,6 +11497,698 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
               onClick={[Function]}
             />
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/templates/ProjectMap Normal 1`] = `
+<div
+  className="t-projectMap"
+>
+  <div
+    className="container o-container"
+  >
+    <div
+      className="t-projectMap_wrap"
+    >
+      <div
+        className="t-projectMap_info"
+      >
+        <div
+          className="t-projectMap_info_wrap"
+        >
+          <h3
+            className="a-heading a-heading-32x48 a-heading-white a-heading-700 a-heading-fontNoto a-heading-center"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "DỰ ÁN",
+              }
+            }
+          />
+          <div
+            className="t-projectMap_info_content"
+          >
+            <div
+              className="o-tabs o-tabs-white"
+            >
+              <div
+                className="o-tabs_labels"
+              >
+                <div
+                  className="o-tabs_tab o-tabs_tab-active"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="o-tabs_label"
+                  >
+                    Bất Động Sản Trung Tâm
+                  </span>
+                </div>
+                <div
+                  className="o-tabs_tab"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="o-tabs_label"
+                  >
+                    Đô Thị Nghỉ Dưỡng
+                  </span>
+                </div>
+                <div
+                  className="o-tabs_tab"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="o-tabs_label"
+                  >
+                    Đô Thị Vệ Tinh
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              className="t-projectMap_info_panel"
+            >
+              <div
+                className="o-tabs_panel o-tabs_panel-active"
+              >
+                <div
+                  className="t-projectMap_info_carousel"
+                >
+                  <div
+                    className="o-carousel"
+                  >
+                    <div
+                      className="slick-slider slick-initialized"
+                      dir="ltr"
+                    >
+                      <div
+                        className="slick-list"
+                        onClick={[Function]}
+                        onKeyDown={[Function]}
+                        onMouseDown={[Function]}
+                        onMouseLeave={null}
+                        onMouseMove={null}
+                        onMouseUp={[Function]}
+                        onTouchCancel={null}
+                        onTouchEnd={[Function]}
+                        onTouchMove={null}
+                        onTouchStart={[Function]}
+                        style={Object {}}
+                      >
+                        <div
+                          className="slick-track"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                          onMouseOver={[Function]}
+                          style={
+                            Object {
+                              "WebkitTransform": "translate3d(0px, 0px, 0px)",
+                              "WebkitTransition": "",
+                              "msTransform": "translateX(0px)",
+                              "opacity": 1,
+                              "transform": "translate3d(0px, 0px, 0px)",
+                              "transition": "",
+                            }
+                          }
+                        >
+                          <div
+                            aria-hidden={false}
+                            className="slick-slide slick-active slick-current"
+                            data-index={0}
+                            onClick={[Function]}
+                            style={
+                              Object {
+                                "outline": "none",
+                                "width": 0,
+                              }
+                            }
+                            tabIndex="-1"
+                          >
+                            <div>
+                              <div
+                                className="o-carousel_wrap"
+                                style={
+                                  Object {
+                                    "display": "inline-block",
+                                    "width": "50%",
+                                  }
+                                }
+                                tabIndex={-1}
+                              >
+                                <div
+                                  className="o-carousel_item"
+                                >
+                                  <div
+                                    className="t-projectMap_info_branch  "
+                                    onClick={[Function]}
+                                    onMouseEnter={[Function]}
+                                    onMouseLeave={[Function]}
+                                  >
+                                    <div
+                                      className="a-image a-image-354x88"
+                                    >
+                                      <img
+                                        alt="replacing"
+                                        loading="lazy"
+                                        src="branch_1.png"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                className="o-carousel_wrap"
+                                style={
+                                  Object {
+                                    "display": "inline-block",
+                                    "width": "50%",
+                                  }
+                                }
+                                tabIndex={-1}
+                              >
+                                <div
+                                  className="o-carousel_item"
+                                >
+                                  <div
+                                    className="t-projectMap_info_branch  "
+                                    onClick={[Function]}
+                                    onMouseEnter={[Function]}
+                                    onMouseLeave={[Function]}
+                                  >
+                                    <div
+                                      className="a-image a-image-354x88"
+                                    >
+                                      <img
+                                        alt="replacing"
+                                        loading="lazy"
+                                        src="branch_2.png"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div>
+                              <div
+                                className="o-carousel_wrap"
+                                style={
+                                  Object {
+                                    "display": "inline-block",
+                                    "width": "50%",
+                                  }
+                                }
+                                tabIndex={-1}
+                              >
+                                <div
+                                  className="o-carousel_item"
+                                >
+                                  <div
+                                    className="t-projectMap_info_branch  "
+                                    onClick={[Function]}
+                                    onMouseEnter={[Function]}
+                                    onMouseLeave={[Function]}
+                                  >
+                                    <div
+                                      className="a-image a-image-354x88"
+                                    >
+                                      <img
+                                        alt="replacing"
+                                        loading="lazy"
+                                        src="branch_3.png"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                className="o-carousel_wrap"
+                                style={
+                                  Object {
+                                    "display": "inline-block",
+                                    "width": "50%",
+                                  }
+                                }
+                                tabIndex={-1}
+                              >
+                                <div
+                                  className="o-carousel_item"
+                                >
+                                  <div
+                                    className="t-projectMap_info_branch  "
+                                    onClick={[Function]}
+                                    onMouseEnter={[Function]}
+                                    onMouseLeave={[Function]}
+                                  >
+                                    <div
+                                      className="a-image a-image-354x88"
+                                    >
+                                      <img
+                                        alt="replacing"
+                                        loading="lazy"
+                                        src="branch_4.png"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            aria-hidden={true}
+                            className="slick-slide"
+                            data-index={1}
+                            onClick={[Function]}
+                            style={
+                              Object {
+                                "outline": "none",
+                                "width": 0,
+                              }
+                            }
+                            tabIndex="-1"
+                          >
+                            <div>
+                              <div
+                                className="o-carousel_wrap"
+                                style={
+                                  Object {
+                                    "display": "inline-block",
+                                    "width": "50%",
+                                  }
+                                }
+                                tabIndex={-1}
+                              >
+                                <div
+                                  className="o-carousel_item"
+                                >
+                                  <div
+                                    className="t-projectMap_info_branch  "
+                                    onClick={[Function]}
+                                    onMouseEnter={[Function]}
+                                    onMouseLeave={[Function]}
+                                  >
+                                    <div
+                                      className="a-image a-image-354x88"
+                                    >
+                                      <img
+                                        alt="replacing"
+                                        loading="lazy"
+                                        src="branch_1.png"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div />
+                          </div>
+                        </div>
+                      </div>
+                      <ul
+                        className="slick-dots o-carousel_dots"
+                        onMouseEnter={null}
+                        onMouseLeave={null}
+                        onMouseOver={null}
+                        style={
+                          Object {
+                            "display": "block",
+                          }
+                        }
+                      >
+                        <li
+                          className="slick-active"
+                        >
+                          <span
+                            className="o-carousel_dot white"
+                            onClick={[Function]}
+                          />
+                        </li>
+                        <li
+                          className=""
+                        >
+                          <span
+                            className="o-carousel_dot white"
+                            onClick={[Function]}
+                          />
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="o-tabs_panel"
+              >
+                <div
+                  className="t-projectMap_info_carousel"
+                >
+                  <div
+                    className="o-carousel"
+                  >
+                    <div
+                      className="slick-slider slick-initialized"
+                    >
+                      
+                      <div
+                        className="slick-list"
+                      >
+                        <div
+                          className="slick-track"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                          onMouseOver={[Function]}
+                          style={
+                            Object {
+                              "WebkitTransform": "translate3d(0px, 0px, 0px)",
+                              "WebkitTransition": "",
+                              "msTransform": "translateX(0px)",
+                              "opacity": 1,
+                              "transform": "translate3d(0px, 0px, 0px)",
+                              "transition": "",
+                            }
+                          }
+                        >
+                          <div
+                            aria-hidden={false}
+                            className="slick-slide slick-active slick-current"
+                            data-index={0}
+                            onClick={[Function]}
+                            style={
+                              Object {
+                                "outline": "none",
+                                "width": 0,
+                              }
+                            }
+                            tabIndex="-1"
+                          >
+<<<<<<< HEAD
+                            <a
+                              aria-current="page"
+                              className="a-link   active"
+                              href="/"
+                              onClick={[Function]}
+                              style={Object {}}
+                              target="_self"
+                            >
+=======
+                            <div>
+>>>>>>> :hammer:feat(NWL-17): fix conflict
+                              <div
+                                className="o-carousel_wrap"
+                                style={
+                                  Object {
+                                    "display": "inline-block",
+                                    "width": "50%",
+                                  }
+                                }
+                                tabIndex={-1}
+                              >
+                                <div
+                                  className="o-carousel_item"
+                                >
+                                  <div
+                                    className="t-projectMap_info_branch  "
+                                    onClick={[Function]}
+                                    onMouseEnter={[Function]}
+                                    onMouseLeave={[Function]}
+                                  >
+                                    <div
+                                      className="a-image a-image-354x88"
+                                    >
+                                      <img
+                                        alt="replacing"
+                                        loading="lazy"
+                                        src="branch_1.png"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                className="o-carousel_wrap"
+                                style={
+                                  Object {
+                                    "display": "inline-block",
+                                    "width": "50%",
+                                  }
+                                }
+                                tabIndex={-1}
+                              >
+                                <div
+                                  className="o-carousel_item"
+                                >
+                                  <div
+                                    className="t-projectMap_info_branch  "
+                                    onClick={[Function]}
+                                    onMouseEnter={[Function]}
+                                    onMouseLeave={[Function]}
+                                  >
+                                    <div
+                                      className="a-image a-image-354x88"
+                                    >
+                                      <img
+                                        alt="replacing"
+                                        loading="lazy"
+                                        src="branch_2.png"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div>
+                              <div
+                                className="o-carousel_wrap"
+                                style={
+                                  Object {
+                                    "display": "inline-block",
+                                    "width": "50%",
+                                  }
+                                }
+                                tabIndex={-1}
+                              >
+                                <div
+                                  className="o-carousel_item"
+                                >
+                                  <div
+                                    className="t-projectMap_info_branch  "
+                                    onClick={[Function]}
+                                    onMouseEnter={[Function]}
+                                    onMouseLeave={[Function]}
+                                  >
+                                    <div
+                                      className="a-image a-image-354x88"
+                                    >
+                                      <img
+                                        alt="replacing"
+                                        loading="lazy"
+                                        src="branch_3.png"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="o-tabs_panel"
+              >
+                <div
+                  className="t-projectMap_info_carousel"
+                >
+                  <div
+                    className="o-carousel"
+                  >
+                    <div
+                      className="slick-slider slick-initialized"
+                    >
+                      
+                      <div
+                        className="slick-list"
+                      >
+                        <div
+                          className="slick-track"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                          onMouseOver={[Function]}
+                          style={
+                            Object {
+                              "WebkitTransform": "translate3d(0px, 0px, 0px)",
+                              "WebkitTransition": "",
+                              "msTransform": "translateX(0px)",
+                              "opacity": 1,
+                              "transform": "translate3d(0px, 0px, 0px)",
+                              "transition": "",
+                            }
+                          }
+                        >
+                          <div
+                            aria-hidden={false}
+                            className="slick-slide slick-active slick-current"
+                            data-index={0}
+                            onClick={[Function]}
+                            style={
+                              Object {
+                                "outline": "none",
+                                "width": 0,
+                              }
+                            }
+                            tabIndex="-1"
+                          >
+<<<<<<< HEAD
+                            <a
+                              aria-current="page"
+                              className="a-link   active"
+                              href="/"
+                              onClick={[Function]}
+                              style={Object {}}
+                              target="_self"
+                            >
+=======
+                            <div>
+>>>>>>> :hammer:feat(NWL-17): fix conflict
+                              <div
+                                className="o-carousel_wrap"
+                                style={
+                                  Object {
+                                    "display": "inline-block",
+                                    "width": "50%",
+                                  }
+                                }
+                                tabIndex={-1}
+                              >
+                                <div
+                                  className="o-carousel_item"
+                                >
+                                  <div
+                                    className="t-projectMap_info_branch  "
+                                    onClick={[Function]}
+                                    onMouseEnter={[Function]}
+                                    onMouseLeave={[Function]}
+                                  >
+                                    <div
+                                      className="a-image a-image-354x88"
+                                    >
+                                      <img
+                                        alt="replacing"
+                                        loading="lazy"
+                                        src="branch_1.png"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div />
+                          </div>
+                        </div>
+                      </div>
+                      
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="t-projectMap_map"
+      >
+        <div
+          className="t-projectMap_map_img"
+          style={
+            Object {
+              "paddingBottom": "153.92781316348197%",
+            }
+          }
+        >
+          <img
+            alt="map"
+            src="map.png"
+          />
+          <div
+            className="t-projectMap_map_area "
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={
+              Object {
+                "height": "4.137931034482759%",
+                "left": "59.660297239915074%",
+                "top": "66.62068965517241%",
+                "width": "4.8832271762208075%",
+              }
+            }
+          />
+          <div
+            className="t-projectMap_map_area "
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={
+              Object {
+                "height": "4.137931034482759%",
+                "left": "54.14012738853503%",
+                "top": "68.6896551724138%",
+                "width": "4.8832271762208075%",
+              }
+            }
+          />
+          <div
+            className="t-projectMap_map_area "
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={
+              Object {
+                "height": "4.137931034482759%",
+                "left": "59.023354564755834%",
+                "top": "71.72413793103448%",
+                "width": "4.8832271762208075%",
+              }
+            }
+          />
+          <div
+            className="t-projectMap_map_area "
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={
+              Object {
+                "height": "4.137931034482759%",
+                "left": "51.59235668789809%",
+                "top": "73.6551724137931%",
+                "width": "4.8832271762208075%",
+              }
+            }
+          />
+          <div
+            className="t-projectMap_map_area "
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={
+              Object {
+                "height": "4.137931034482759%",
+                "left": "44.5859872611465%",
+                "top": "75.86206896551724%",
+                "width": "4.8832271762208075%",
+              }
+            }
+          />
         </div>
       </div>
     </div>
