@@ -2,7 +2,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { MemoryRouter } from 'react-router-dom';
 
 import Footer, { FooterRegisterFormTypes } from '.';
 
@@ -14,6 +14,7 @@ export default {
   title: 'Components/organisms/Footer',
   component: Footer,
   argTypes: {},
+  decorators: [(story) => <MemoryRouter>{story()}</MemoryRouter>],
 } as Meta;
 
 export const Normal: Story = () => {
@@ -31,17 +32,15 @@ export const Normal: Story = () => {
     console.log(data);
   };
   return (
-    <Router>
-      <Footer
-        method={method}
-        submitForm={handleSubmit}
-        projectOptions={dummyOption}
-        externalLink={{
-          privacy: '/',
-          policy: '/',
-        }}
-        footerLink={footerMenuData}
-      />
-    </Router>
+    <Footer
+      method={method}
+      submitForm={handleSubmit}
+      projectOptions={dummyOption}
+      externalLink={{
+        privacy: '/',
+        policy: '/',
+      }}
+      footerLink={footerMenuData}
+    />
   );
 };
