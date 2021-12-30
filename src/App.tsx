@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import MainLayoutContainer from 'container/MainLayout';
+import AboutUs from 'pages/AboutUs';
 import Home from 'pages/Home';
 import { store } from 'store';
 
@@ -13,6 +14,7 @@ const App: React.FC = () => (
     <MainLayoutContainer>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/ve-chung-toi" element={<AboutUs />} />
         <Route path="*" element={<div />} />
       </Routes>
     </MainLayoutContainer>

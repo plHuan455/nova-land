@@ -13,7 +13,7 @@ export default {
   argTypes: {},
 } as Meta;
 
-const dataList = [
+export const dataList = [
   {
     title: 'TẦM NHÌN',
     desc: 'Tập đoàn kinh tế hàng đầu trong các lĩnh vực',

@@ -6,7 +6,7 @@ const headerMenuDummy: HeaderMenuTypes[] = [
     title: 'Trang chủ',
   },
   {
-    href: '/gioi-thieu',
+    href: '/ve-chung-toi',
     title: 'giới thiệu',
   },
   {
