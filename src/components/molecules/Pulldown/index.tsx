@@ -130,9 +130,9 @@ const PulldownRef: React.ForwardRefRenderFunction<HTMLDivElement, PulldownProps>
             alignItems: 'center',
             cursor: 'pointer',
             color: state.isSelected ? '#FFFFFF' : '#002137',
-            backgroundColor: state.isSelected ? '#002B60' : 'transparent',
+            backgroundColor: state.isSelected ? '#A26829' : 'transparent',
             '&:hover': {
-              backgroundColor: 'rgba(0, 43, 96, 0.2)',
+              backgroundColor: 'rgba(162, 104, 41, 0.2)',
             },
           }),
           menuList: (provided: any) => ({
