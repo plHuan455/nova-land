@@ -14664,6 +14664,2699 @@ exports[`Storyshots Components/templates/ShareholderRelations Shareholder Card S
 </div>
 `;
 
+exports[`Storyshots Components/templates/Leadership Card 1`] = `
+<div
+  className="t-leadershipCard"
+>
+  <div
+    className="t-leadershipCard_thumbnail"
+  >
+    <div
+      className="a-image a-image-1x1"
+    >
+      <img
+        alt="LeadershipCard"
+        loading="lazy"
+        src="img_leadership1.png"
+      />
+    </div>
+  </div>
+  <div
+    className="t-leadershipCard_content"
+  >
+    <div
+      className="t-leadershipCard_gender"
+    >
+      <p
+        className="a-text a-text-16x24 a-text-coolBlack a-text-400 a-text-fontLexend a-text-capitalize"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "Ông",
+          }
+        }
+      />
+    </div>
+    <div
+      className="t-leadershipCard_name"
+    >
+      <h2
+        className="a-heading a-heading-arsenic a-heading-600 a-heading-fontNoto a-heading-uppercase"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "Bùi Thành Nhơn",
+          }
+        }
+      />
+      <div
+        className="t-leadershipCard_icon"
+      >
+        <i
+          className="a-icon a-icon-arrowDownGrey a-icon-24"
+        />
+      </div>
+    </div>
+    <div
+      className="t-leadershipCard_wrapper"
+      style={
+        Object {
+          "maxHeight": 0,
+        }
+      }
+    >
+      <div
+        className="t-leadershipCard_position"
+      >
+        <p
+          className="a-text a-text-16x24 a-text-davysGrey a-text-400 a-text-fontLexend"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Nhà sáng lập - Chủ tịch Hội đồng Quản trị",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/templates/Leadership Card Detail 1`] = `
+<div
+  className="t-leadershipDetail"
+>
+  <div
+    className="t-leadershipDetail_wrapper"
+  >
+    <div
+      className="t-leadershipDetail_info"
+    >
+      <h2
+        className="a-heading a-heading-darkMidnightBlue a-heading-400 a-heading-fontLexend a-heading-capitalize"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "Ông",
+          }
+        }
+      />
+      <div
+        className="t-leadershipDetail_name"
+      >
+        <h2
+          className="a-heading a-heading-38x52 a-heading-700 a-heading-jet a-heading-capitalize a-heading-fontNoto"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Bùi Thành Nhơn",
+            }
+          }
+        />
+      </div>
+      <h2
+        className="a-heading a-heading-dimGray a-heading-400 a-heading-fontLexend"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "Nhà sáng lập - Chủ tịch Hội đồng Quản trị",
+          }
+        }
+      />
+    </div>
+    <div
+      className="t-leadershipDetail_thumbnail"
+    >
+      <div
+        className="a-image a-image-223x320"
+      >
+        <img
+          alt="leadershipDetail"
+          loading="lazy"
+          src="img_leadership1.png"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="t-leadershipDetail_achievement"
+  >
+    <div
+      className="t-leadershipDetail_item"
+    >
+      <div
+        className="t-leadershipDetail_item_icon"
+      >
+        <i
+          className="a-icon a-icon-circleCamel a-icon-13"
+        />
+      </div>
+      <div
+        className="t-leadershipDetail_item_content"
+      >
+        <p
+          className="a-text a-text-16x24 a-text-400 a-text-fontLexend a-text-dimGray"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Cử nhân Nông nghiệp. Tốt nghiệp Executive MBA, HSB-TUCK, Đại học Dartmouth, Hoa Kỳ.",
+            }
+          }
+        />
+      </div>
+    </div>
+    <div
+      className="t-leadershipDetail_item"
+    >
+      <div
+        className="t-leadershipDetail_item_icon"
+      >
+        <i
+          className="a-icon a-icon-circleCamel a-icon-13"
+        />
+      </div>
+      <div
+        className="t-leadershipDetail_item_content"
+      >
+        <p
+          className="a-text a-text-16x24 a-text-400 a-text-fontLexend a-text-dimGray"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Là một trong những chủ doanh nghiệp tư nhân đầu tiên tại TP.HCM từ những năm 1980. Thành viên Tổ chức doanh nhân thế giới (YPO - WPO).",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="t-leadershipDetail_slogan"
+  >
+    <div
+      className="t-leadershipDetail_slogan_detail"
+    >
+      <h2
+        className="a-heading a-heading-dimGray a-heading-400 a-heading-fontLexend"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được Sứ mạng, Hoài bão của Novaland Group.",
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/templates/Leadership Normal 1`] = `
+<div
+  className="t-leadership"
+>
+  <div
+    className="container o-container"
+  >
+    <h2
+      className="a-heading a-heading-32x48 a-heading-700 a-heading-uppercase a-heading-center a-heading-fontNoto"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "BAN LÃNH ĐẠO",
+        }
+      }
+    />
+    <div
+      className="t-leadership_wrapper"
+    >
+      <div
+        className="o-tabs"
+      >
+        <div
+          className="o-tabs_labels"
+        >
+          <div
+            className="o-tabs_tab o-tabs_tab-active"
+            onClick={[Function]}
+          >
+            <span
+              className="o-tabs_label"
+            >
+              Hội đồng quản trị
+            </span>
+          </div>
+          <div
+            className="o-tabs_tab"
+            onClick={[Function]}
+          >
+            <span
+              className="o-tabs_label"
+            >
+              Ban giám đốc
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        className="o-tabs_panel o-tabs_panel-active"
+      >
+        <div
+          className="t-leadership_item"
+        >
+          <div
+            className="t-leadership_item_left"
+          >
+            <div
+              className="t-leadership_item_card"
+              onClick={[Function]}
+            >
+              <div
+                className="t-leadershipCard t-leadershipCard-show"
+              >
+                <div
+                  className="t-leadershipCard_thumbnail"
+                >
+                  <div
+                    className="a-image a-image-1x1"
+                  >
+                    <img
+                      alt="LeadershipCard"
+                      loading="lazy"
+                      src="img_leadership1.png"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="t-leadershipCard_content"
+                >
+                  <div
+                    className="t-leadershipCard_gender"
+                  >
+                    <p
+                      className="a-text a-text-16x24 a-text-coolBlack a-text-400 a-text-fontLexend a-text-capitalize"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Ông",
+                        }
+                      }
+                    />
+                  </div>
+                  <div
+                    className="t-leadershipCard_name"
+                  >
+                    <h2
+                      className="a-heading a-heading-arsenic a-heading-600 a-heading-fontNoto a-heading-uppercase"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Bùi Thành Nhơn",
+                        }
+                      }
+                    />
+                    <div
+                      className="t-leadershipCard_icon"
+                    >
+                      <i
+                        className="a-icon a-icon-arrowDownGrey a-icon-24"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="t-leadershipCard_wrapper"
+                    style={
+                      Object {
+                        "maxHeight": undefined,
+                      }
+                    }
+                  >
+                    <div
+                      className="t-leadershipCard_position"
+                    >
+                      <p
+                        className="a-text a-text-16x24 a-text-davysGrey a-text-400 a-text-fontLexend"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Nhà sáng lập - Chủ tịch Hội đồng Quản trị",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="t-leadership_item_card"
+              onClick={[Function]}
+            >
+              <div
+                className="t-leadershipCard"
+              >
+                <div
+                  className="t-leadershipCard_thumbnail"
+                >
+                  <div
+                    className="a-image a-image-1x1"
+                  >
+                    <img
+                      alt="LeadershipCard"
+                      loading="lazy"
+                      src="img_leadership1.png"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="t-leadershipCard_content"
+                >
+                  <div
+                    className="t-leadershipCard_gender"
+                  >
+                    <p
+                      className="a-text a-text-16x24 a-text-coolBlack a-text-400 a-text-fontLexend a-text-capitalize"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Ông",
+                        }
+                      }
+                    />
+                  </div>
+                  <div
+                    className="t-leadershipCard_name"
+                  >
+                    <h2
+                      className="a-heading a-heading-arsenic a-heading-600 a-heading-fontNoto a-heading-uppercase"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Bùi Xuân Huy",
+                        }
+                      }
+                    />
+                    <div
+                      className="t-leadershipCard_icon"
+                    >
+                      <i
+                        className="a-icon a-icon-arrowDownGrey a-icon-24"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="t-leadershipCard_wrapper"
+                    style={
+                      Object {
+                        "maxHeight": 0,
+                      }
+                    }
+                  >
+                    <div
+                      className="t-leadershipCard_position"
+                    >
+                      <p
+                        className="a-text a-text-16x24 a-text-davysGrey a-text-400 a-text-fontLexend"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Thành viên Hội đồng Quản trị, Tổng Giám đốc",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="t-leadership_item_card"
+              onClick={[Function]}
+            >
+              <div
+                className="t-leadershipCard"
+              >
+                <div
+                  className="t-leadershipCard_thumbnail"
+                >
+                  <div
+                    className="a-image a-image-1x1"
+                  >
+                    <img
+                      alt="LeadershipCard"
+                      loading="lazy"
+                      src="img_leadership1.png"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="t-leadershipCard_content"
+                >
+                  <div
+                    className="t-leadershipCard_gender"
+                  >
+                    <p
+                      className="a-text a-text-16x24 a-text-coolBlack a-text-400 a-text-fontLexend a-text-capitalize"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Bà",
+                        }
+                      }
+                    />
+                  </div>
+                  <div
+                    className="t-leadershipCard_name"
+                  >
+                    <h2
+                      className="a-heading a-heading-arsenic a-heading-600 a-heading-fontNoto a-heading-uppercase"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Hoàng Thu Châu",
+                        }
+                      }
+                    />
+                    <div
+                      className="t-leadershipCard_icon"
+                    >
+                      <i
+                        className="a-icon a-icon-arrowDownGrey a-icon-24"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="t-leadershipCard_wrapper"
+                    style={
+                      Object {
+                        "maxHeight": 0,
+                      }
+                    }
+                  >
+                    <div
+                      className="t-leadershipCard_position"
+                    >
+                      <p
+                        className="a-text a-text-16x24 a-text-davysGrey a-text-400 a-text-fontLexend"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Thành viên Hội đồng Quản trị, Phó Tổng Giám đốc",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="t-leadership_item_card"
+              onClick={[Function]}
+            >
+              <div
+                className="t-leadershipCard"
+              >
+                <div
+                  className="t-leadershipCard_thumbnail"
+                >
+                  <div
+                    className="a-image a-image-1x1"
+                  >
+                    <img
+                      alt="LeadershipCard"
+                      loading="lazy"
+                      src="img_leadership1.png"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="t-leadershipCard_content"
+                >
+                  <div
+                    className="t-leadershipCard_gender"
+                  >
+                    <p
+                      className="a-text a-text-16x24 a-text-coolBlack a-text-400 a-text-fontLexend a-text-capitalize"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Ông",
+                        }
+                      }
+                    />
+                  </div>
+                  <div
+                    className="t-leadershipCard_name"
+                  >
+                    <h2
+                      className="a-heading a-heading-arsenic a-heading-600 a-heading-fontNoto a-heading-uppercase"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Phạm Tiến Vân",
+                        }
+                      }
+                    />
+                    <div
+                      className="t-leadershipCard_icon"
+                    >
+                      <i
+                        className="a-icon a-icon-arrowDownGrey a-icon-24"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="t-leadershipCard_wrapper"
+                    style={
+                      Object {
+                        "maxHeight": 0,
+                      }
+                    }
+                  >
+                    <div
+                      className="t-leadershipCard_position"
+                    >
+                      <p
+                        className="a-text a-text-16x24 a-text-davysGrey a-text-400 a-text-fontLexend"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Thành viên Hội đồng Quản trị Độc lập",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="t-leadership_item_card"
+              onClick={[Function]}
+            >
+              <div
+                className="t-leadershipCard"
+              >
+                <div
+                  className="t-leadershipCard_thumbnail"
+                >
+                  <div
+                    className="a-image a-image-1x1"
+                  >
+                    <img
+                      alt="LeadershipCard"
+                      loading="lazy"
+                      src="img_leadership1.png"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="t-leadershipCard_content"
+                >
+                  <div
+                    className="t-leadershipCard_gender"
+                  >
+                    <p
+                      className="a-text a-text-16x24 a-text-coolBlack a-text-400 a-text-fontLexend a-text-capitalize"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Ông",
+                        }
+                      }
+                    />
+                  </div>
+                  <div
+                    className="t-leadershipCard_name"
+                  >
+                    <h2
+                      className="a-heading a-heading-arsenic a-heading-600 a-heading-fontNoto a-heading-uppercase"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Lê Quốc Hùng",
+                        }
+                      }
+                    />
+                    <div
+                      className="t-leadershipCard_icon"
+                    >
+                      <i
+                        className="a-icon a-icon-arrowDownGrey a-icon-24"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="t-leadershipCard_wrapper"
+                    style={
+                      Object {
+                        "maxHeight": 0,
+                      }
+                    }
+                  >
+                    <div
+                      className="t-leadershipCard_position"
+                    >
+                      <p
+                        className="a-text a-text-16x24 a-text-davysGrey a-text-400 a-text-fontLexend"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Thành viên Hội đồng Quản trị Độc lập",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="t-leadership_item_card"
+              onClick={[Function]}
+            >
+              <div
+                className="t-leadershipCard"
+              >
+                <div
+                  className="t-leadershipCard_thumbnail"
+                >
+                  <div
+                    className="a-image a-image-1x1"
+                  >
+                    <img
+                      alt="LeadershipCard"
+                      loading="lazy"
+                      src="img_leadership1.png"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="t-leadershipCard_content"
+                >
+                  <div
+                    className="t-leadershipCard_gender"
+                  >
+                    <p
+                      className="a-text a-text-16x24 a-text-coolBlack a-text-400 a-text-fontLexend a-text-capitalize"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Bà",
+                        }
+                      }
+                    />
+                  </div>
+                  <div
+                    className="t-leadershipCard_name"
+                  >
+                    <h2
+                      className="a-heading a-heading-arsenic a-heading-600 a-heading-fontNoto a-heading-uppercase"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Nguyễn Mỹ Hạnh",
+                        }
+                      }
+                    />
+                    <div
+                      className="t-leadershipCard_icon"
+                    >
+                      <i
+                        className="a-icon a-icon-arrowDownGrey a-icon-24"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="t-leadershipCard_wrapper"
+                    style={
+                      Object {
+                        "maxHeight": 0,
+                      }
+                    }
+                  >
+                    <div
+                      className="t-leadershipCard_position"
+                    >
+                      <p
+                        className="a-text a-text-16x24 a-text-davysGrey a-text-400 a-text-fontLexend"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Thành viên Hội đồng Quản trị Độc lập",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="t-leadership_item_right"
+          >
+            <div
+              className="t-leadership_item_detail t-leadership_item_detail-show"
+            >
+              <div
+                className="t-leadershipDetail"
+              >
+                <div
+                  className="t-leadershipDetail_wrapper"
+                >
+                  <div
+                    className="t-leadershipDetail_info"
+                  >
+                    <h2
+                      className="a-heading a-heading-darkMidnightBlue a-heading-400 a-heading-fontLexend a-heading-capitalize"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Ông",
+                        }
+                      }
+                    />
+                    <div
+                      className="t-leadershipDetail_name"
+                    >
+                      <h2
+                        className="a-heading a-heading-38x52 a-heading-700 a-heading-jet a-heading-capitalize a-heading-fontNoto"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Bùi Thành Nhơn",
+                          }
+                        }
+                      />
+                    </div>
+                    <h2
+                      className="a-heading a-heading-dimGray a-heading-400 a-heading-fontLexend"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Nhà sáng lập - Chủ tịch Hội đồng Quản trị",
+                        }
+                      }
+                    />
+                  </div>
+                  <div
+                    className="t-leadershipDetail_thumbnail"
+                  >
+                    <div
+                      className="a-image a-image-223x320"
+                    >
+                      <img
+                        alt="leadershipDetail"
+                        loading="lazy"
+                        src="img_leadership1.png"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="t-leadershipDetail_achievement"
+                >
+                  <div
+                    className="t-leadershipDetail_item"
+                  >
+                    <div
+                      className="t-leadershipDetail_item_icon"
+                    >
+                      <i
+                        className="a-icon a-icon-circleCamel a-icon-13"
+                      />
+                    </div>
+                    <div
+                      className="t-leadershipDetail_item_content"
+                    >
+                      <p
+                        className="a-text a-text-16x24 a-text-400 a-text-fontLexend a-text-dimGray"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Cử nhân Nông nghiệp. Tốt nghiệp Executive MBA, HSB-TUCK, Đại học Dartmouth, Hoa Kỳ.",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="t-leadershipDetail_item"
+                  >
+                    <div
+                      className="t-leadershipDetail_item_icon"
+                    >
+                      <i
+                        className="a-icon a-icon-circleCamel a-icon-13"
+                      />
+                    </div>
+                    <div
+                      className="t-leadershipDetail_item_content"
+                    >
+                      <p
+                        className="a-text a-text-16x24 a-text-400 a-text-fontLexend a-text-dimGray"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Là một trong những chủ doanh nghiệp tư nhân đầu tiên tại TP.HCM từ những năm 1980. Thành viên Tổ chức doanh nhân thế giới (YPO - WPO).",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="t-leadershipDetail_slogan"
+                >
+                  <div
+                    className="t-leadershipDetail_slogan_detail"
+                  >
+                    <h2
+                      className="a-heading a-heading-dimGray a-heading-400 a-heading-fontLexend"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được Sứ mạng, Hoài bão của Novaland Group.",
+                        }
+                      }
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="t-leadership_item_detail"
+            >
+              <div
+                className="t-leadershipDetail"
+              >
+                <div
+                  className="t-leadershipDetail_wrapper"
+                >
+                  <div
+                    className="t-leadershipDetail_info"
+                  >
+                    <h2
+                      className="a-heading a-heading-darkMidnightBlue a-heading-400 a-heading-fontLexend a-heading-capitalize"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Ông",
+                        }
+                      }
+                    />
+                    <div
+                      className="t-leadershipDetail_name"
+                    >
+                      <h2
+                        className="a-heading a-heading-38x52 a-heading-700 a-heading-jet a-heading-capitalize a-heading-fontNoto"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Bùi Xuân Huy",
+                          }
+                        }
+                      />
+                    </div>
+                    <h2
+                      className="a-heading a-heading-dimGray a-heading-400 a-heading-fontLexend"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Thành viên Hội đồng Quản trị, Tổng Giám đốc",
+                        }
+                      }
+                    />
+                  </div>
+                  <div
+                    className="t-leadershipDetail_thumbnail"
+                  >
+                    <div
+                      className="a-image a-image-223x320"
+                    >
+                      <img
+                        alt="leadershipDetail"
+                        loading="lazy"
+                        src="img_leadership1.png"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="t-leadershipDetail_achievement"
+                >
+                  <div
+                    className="t-leadershipDetail_item"
+                  >
+                    <div
+                      className="t-leadershipDetail_item_icon"
+                    >
+                      <i
+                        className="a-icon a-icon-circleCamel a-icon-13"
+                      />
+                    </div>
+                    <div
+                      className="t-leadershipDetail_item_content"
+                    >
+                      <p
+                        className="a-text a-text-16x24 a-text-400 a-text-fontLexend a-text-dimGray"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Cử nhân Nông nghiệp. Tốt nghiệp Executive MBA, HSB-TUCK, Đại học Dartmouth, Hoa Kỳ.",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="t-leadershipDetail_item"
+                  >
+                    <div
+                      className="t-leadershipDetail_item_icon"
+                    >
+                      <i
+                        className="a-icon a-icon-circleCamel a-icon-13"
+                      />
+                    </div>
+                    <div
+                      className="t-leadershipDetail_item_content"
+                    >
+                      <p
+                        className="a-text a-text-16x24 a-text-400 a-text-fontLexend a-text-dimGray"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Là một trong những chủ doanh nghiệp tư nhân đầu tiên tại TP.HCM từ những năm 1980. Thành viên Tổ chức doanh nhân thế giới (YPO - WPO).",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="t-leadershipDetail_slogan"
+                >
+                  <div
+                    className="t-leadershipDetail_slogan_detail"
+                  >
+                    <h2
+                      className="a-heading a-heading-dimGray a-heading-400 a-heading-fontLexend"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được Sứ mạng, Hoài bão của Novaland Group.",
+                        }
+                      }
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="t-leadership_item_detail"
+            >
+              <div
+                className="t-leadershipDetail"
+              >
+                <div
+                  className="t-leadershipDetail_wrapper"
+                >
+                  <div
+                    className="t-leadershipDetail_info"
+                  >
+                    <h2
+                      className="a-heading a-heading-darkMidnightBlue a-heading-400 a-heading-fontLexend a-heading-capitalize"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Bà",
+                        }
+                      }
+                    />
+                    <div
+                      className="t-leadershipDetail_name"
+                    >
+                      <h2
+                        className="a-heading a-heading-38x52 a-heading-700 a-heading-jet a-heading-capitalize a-heading-fontNoto"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Hoàng Thu Châu",
+                          }
+                        }
+                      />
+                    </div>
+                    <h2
+                      className="a-heading a-heading-dimGray a-heading-400 a-heading-fontLexend"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Thành viên Hội đồng Quản trị, Phó Tổng Giám đốc",
+                        }
+                      }
+                    />
+                  </div>
+                  <div
+                    className="t-leadershipDetail_thumbnail"
+                  >
+                    <div
+                      className="a-image a-image-223x320"
+                    >
+                      <img
+                        alt="leadershipDetail"
+                        loading="lazy"
+                        src="img_leadership1.png"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="t-leadershipDetail_achievement"
+                >
+                  <div
+                    className="t-leadershipDetail_item"
+                  >
+                    <div
+                      className="t-leadershipDetail_item_icon"
+                    >
+                      <i
+                        className="a-icon a-icon-circleCamel a-icon-13"
+                      />
+                    </div>
+                    <div
+                      className="t-leadershipDetail_item_content"
+                    >
+                      <p
+                        className="a-text a-text-16x24 a-text-400 a-text-fontLexend a-text-dimGray"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Cử nhân Nông nghiệp. Tốt nghiệp Executive MBA, HSB-TUCK, Đại học Dartmouth, Hoa Kỳ.",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="t-leadershipDetail_item"
+                  >
+                    <div
+                      className="t-leadershipDetail_item_icon"
+                    >
+                      <i
+                        className="a-icon a-icon-circleCamel a-icon-13"
+                      />
+                    </div>
+                    <div
+                      className="t-leadershipDetail_item_content"
+                    >
+                      <p
+                        className="a-text a-text-16x24 a-text-400 a-text-fontLexend a-text-dimGray"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Là một trong những chủ doanh nghiệp tư nhân đầu tiên tại TP.HCM từ những năm 1980. Thành viên Tổ chức doanh nhân thế giới (YPO - WPO).",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="t-leadershipDetail_slogan"
+                >
+                  <div
+                    className="t-leadershipDetail_slogan_detail"
+                  >
+                    <h2
+                      className="a-heading a-heading-dimGray a-heading-400 a-heading-fontLexend"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được Sứ mạng, Hoài bão của Novaland Group.",
+                        }
+                      }
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="t-leadership_item_detail"
+            >
+              <div
+                className="t-leadershipDetail"
+              >
+                <div
+                  className="t-leadershipDetail_wrapper"
+                >
+                  <div
+                    className="t-leadershipDetail_info"
+                  >
+                    <h2
+                      className="a-heading a-heading-darkMidnightBlue a-heading-400 a-heading-fontLexend a-heading-capitalize"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Ông",
+                        }
+                      }
+                    />
+                    <div
+                      className="t-leadershipDetail_name"
+                    >
+                      <h2
+                        className="a-heading a-heading-38x52 a-heading-700 a-heading-jet a-heading-capitalize a-heading-fontNoto"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Phạm Tiến Vân",
+                          }
+                        }
+                      />
+                    </div>
+                    <h2
+                      className="a-heading a-heading-dimGray a-heading-400 a-heading-fontLexend"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Thành viên Hội đồng Quản trị Độc lập",
+                        }
+                      }
+                    />
+                  </div>
+                  <div
+                    className="t-leadershipDetail_thumbnail"
+                  >
+                    <div
+                      className="a-image a-image-223x320"
+                    >
+                      <img
+                        alt="leadershipDetail"
+                        loading="lazy"
+                        src="img_leadership1.png"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="t-leadershipDetail_achievement"
+                >
+                  <div
+                    className="t-leadershipDetail_item"
+                  >
+                    <div
+                      className="t-leadershipDetail_item_icon"
+                    >
+                      <i
+                        className="a-icon a-icon-circleCamel a-icon-13"
+                      />
+                    </div>
+                    <div
+                      className="t-leadershipDetail_item_content"
+                    >
+                      <p
+                        className="a-text a-text-16x24 a-text-400 a-text-fontLexend a-text-dimGray"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Cử nhân Nông nghiệp. Tốt nghiệp Executive MBA, HSB-TUCK, Đại học Dartmouth, Hoa Kỳ.",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="t-leadershipDetail_item"
+                  >
+                    <div
+                      className="t-leadershipDetail_item_icon"
+                    >
+                      <i
+                        className="a-icon a-icon-circleCamel a-icon-13"
+                      />
+                    </div>
+                    <div
+                      className="t-leadershipDetail_item_content"
+                    >
+                      <p
+                        className="a-text a-text-16x24 a-text-400 a-text-fontLexend a-text-dimGray"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Là một trong những chủ doanh nghiệp tư nhân đầu tiên tại TP.HCM từ những năm 1980. Thành viên Tổ chức doanh nhân thế giới (YPO - WPO).",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="t-leadershipDetail_slogan"
+                >
+                  <div
+                    className="t-leadershipDetail_slogan_detail"
+                  >
+                    <h2
+                      className="a-heading a-heading-dimGray a-heading-400 a-heading-fontLexend"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được Sứ mạng, Hoài bão của Novaland Group.",
+                        }
+                      }
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="t-leadership_item_detail"
+            >
+              <div
+                className="t-leadershipDetail"
+              >
+                <div
+                  className="t-leadershipDetail_wrapper"
+                >
+                  <div
+                    className="t-leadershipDetail_info"
+                  >
+                    <h2
+                      className="a-heading a-heading-darkMidnightBlue a-heading-400 a-heading-fontLexend a-heading-capitalize"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Ông",
+                        }
+                      }
+                    />
+                    <div
+                      className="t-leadershipDetail_name"
+                    >
+                      <h2
+                        className="a-heading a-heading-38x52 a-heading-700 a-heading-jet a-heading-capitalize a-heading-fontNoto"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Lê Quốc Hùng",
+                          }
+                        }
+                      />
+                    </div>
+                    <h2
+                      className="a-heading a-heading-dimGray a-heading-400 a-heading-fontLexend"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Thành viên Hội đồng Quản trị Độc lập",
+                        }
+                      }
+                    />
+                  </div>
+                  <div
+                    className="t-leadershipDetail_thumbnail"
+                  >
+                    <div
+                      className="a-image a-image-223x320"
+                    >
+                      <img
+                        alt="leadershipDetail"
+                        loading="lazy"
+                        src="img_leadership1.png"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="t-leadershipDetail_achievement"
+                >
+                  <div
+                    className="t-leadershipDetail_item"
+                  >
+                    <div
+                      className="t-leadershipDetail_item_icon"
+                    >
+                      <i
+                        className="a-icon a-icon-circleCamel a-icon-13"
+                      />
+                    </div>
+                    <div
+                      className="t-leadershipDetail_item_content"
+                    >
+                      <p
+                        className="a-text a-text-16x24 a-text-400 a-text-fontLexend a-text-dimGray"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Cử nhân Nông nghiệp. Tốt nghiệp Executive MBA, HSB-TUCK, Đại học Dartmouth, Hoa Kỳ.",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="t-leadershipDetail_item"
+                  >
+                    <div
+                      className="t-leadershipDetail_item_icon"
+                    >
+                      <i
+                        className="a-icon a-icon-circleCamel a-icon-13"
+                      />
+                    </div>
+                    <div
+                      className="t-leadershipDetail_item_content"
+                    >
+                      <p
+                        className="a-text a-text-16x24 a-text-400 a-text-fontLexend a-text-dimGray"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Là một trong những chủ doanh nghiệp tư nhân đầu tiên tại TP.HCM từ những năm 1980. Thành viên Tổ chức doanh nhân thế giới (YPO - WPO).",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="t-leadershipDetail_slogan"
+                >
+                  <div
+                    className="t-leadershipDetail_slogan_detail"
+                  >
+                    <h2
+                      className="a-heading a-heading-dimGray a-heading-400 a-heading-fontLexend"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được Sứ mạng, Hoài bão của Novaland Group.",
+                        }
+                      }
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="t-leadership_item_detail"
+            >
+              <div
+                className="t-leadershipDetail"
+              >
+                <div
+                  className="t-leadershipDetail_wrapper"
+                >
+                  <div
+                    className="t-leadershipDetail_info"
+                  >
+                    <h2
+                      className="a-heading a-heading-darkMidnightBlue a-heading-400 a-heading-fontLexend a-heading-capitalize"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Bà",
+                        }
+                      }
+                    />
+                    <div
+                      className="t-leadershipDetail_name"
+                    >
+                      <h2
+                        className="a-heading a-heading-38x52 a-heading-700 a-heading-jet a-heading-capitalize a-heading-fontNoto"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Nguyễn Mỹ Hạnh",
+                          }
+                        }
+                      />
+                    </div>
+                    <h2
+                      className="a-heading a-heading-dimGray a-heading-400 a-heading-fontLexend"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Thành viên Hội đồng Quản trị Độc lập",
+                        }
+                      }
+                    />
+                  </div>
+                  <div
+                    className="t-leadershipDetail_thumbnail"
+                  >
+                    <div
+                      className="a-image a-image-223x320"
+                    >
+                      <img
+                        alt="leadershipDetail"
+                        loading="lazy"
+                        src="img_leadership1.png"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="t-leadershipDetail_achievement"
+                >
+                  <div
+                    className="t-leadershipDetail_item"
+                  >
+                    <div
+                      className="t-leadershipDetail_item_icon"
+                    >
+                      <i
+                        className="a-icon a-icon-circleCamel a-icon-13"
+                      />
+                    </div>
+                    <div
+                      className="t-leadershipDetail_item_content"
+                    >
+                      <p
+                        className="a-text a-text-16x24 a-text-400 a-text-fontLexend a-text-dimGray"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Cử nhân Nông nghiệp. Tốt nghiệp Executive MBA, HSB-TUCK, Đại học Dartmouth, Hoa Kỳ.",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="t-leadershipDetail_item"
+                  >
+                    <div
+                      className="t-leadershipDetail_item_icon"
+                    >
+                      <i
+                        className="a-icon a-icon-circleCamel a-icon-13"
+                      />
+                    </div>
+                    <div
+                      className="t-leadershipDetail_item_content"
+                    >
+                      <p
+                        className="a-text a-text-16x24 a-text-400 a-text-fontLexend a-text-dimGray"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Là một trong những chủ doanh nghiệp tư nhân đầu tiên tại TP.HCM từ những năm 1980. Thành viên Tổ chức doanh nhân thế giới (YPO - WPO).",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="t-leadershipDetail_slogan"
+                >
+                  <div
+                    className="t-leadershipDetail_slogan_detail"
+                  >
+                    <h2
+                      className="a-heading a-heading-dimGray a-heading-400 a-heading-fontLexend"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được Sứ mạng, Hoài bão của Novaland Group.",
+                        }
+                      }
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="o-tabs_panel"
+      >
+        <div
+          className="t-leadership_item"
+        >
+          <div
+            className="t-leadership_item_left"
+          >
+            <div
+              className="t-leadership_item_card"
+              onClick={[Function]}
+            >
+              <div
+                className="t-leadershipCard t-leadershipCard-show"
+              >
+                <div
+                  className="t-leadershipCard_thumbnail"
+                >
+                  <div
+                    className="a-image a-image-1x1"
+                  >
+                    <img
+                      alt="LeadershipCard"
+                      loading="lazy"
+                      src="img_leadership1.png"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="t-leadershipCard_content"
+                >
+                  <div
+                    className="t-leadershipCard_gender"
+                  >
+                    <p
+                      className="a-text a-text-16x24 a-text-coolBlack a-text-400 a-text-fontLexend a-text-capitalize"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Ông",
+                        }
+                      }
+                    />
+                  </div>
+                  <div
+                    className="t-leadershipCard_name"
+                  >
+                    <h2
+                      className="a-heading a-heading-arsenic a-heading-600 a-heading-fontNoto a-heading-uppercase"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Bùi Thành Nhơn",
+                        }
+                      }
+                    />
+                    <div
+                      className="t-leadershipCard_icon"
+                    >
+                      <i
+                        className="a-icon a-icon-arrowDownGrey a-icon-24"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="t-leadershipCard_wrapper"
+                    style={
+                      Object {
+                        "maxHeight": undefined,
+                      }
+                    }
+                  >
+                    <div
+                      className="t-leadershipCard_position"
+                    >
+                      <p
+                        className="a-text a-text-16x24 a-text-davysGrey a-text-400 a-text-fontLexend"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Nhà sáng lập - Chủ tịch Hội đồng Quản trị",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="t-leadership_item_card"
+              onClick={[Function]}
+            >
+              <div
+                className="t-leadershipCard"
+              >
+                <div
+                  className="t-leadershipCard_thumbnail"
+                >
+                  <div
+                    className="a-image a-image-1x1"
+                  >
+                    <img
+                      alt="LeadershipCard"
+                      loading="lazy"
+                      src="img_leadership1.png"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="t-leadershipCard_content"
+                >
+                  <div
+                    className="t-leadershipCard_gender"
+                  >
+                    <p
+                      className="a-text a-text-16x24 a-text-coolBlack a-text-400 a-text-fontLexend a-text-capitalize"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Ông",
+                        }
+                      }
+                    />
+                  </div>
+                  <div
+                    className="t-leadershipCard_name"
+                  >
+                    <h2
+                      className="a-heading a-heading-arsenic a-heading-600 a-heading-fontNoto a-heading-uppercase"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Bùi Xuân Huy",
+                        }
+                      }
+                    />
+                    <div
+                      className="t-leadershipCard_icon"
+                    >
+                      <i
+                        className="a-icon a-icon-arrowDownGrey a-icon-24"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="t-leadershipCard_wrapper"
+                    style={
+                      Object {
+                        "maxHeight": 0,
+                      }
+                    }
+                  >
+                    <div
+                      className="t-leadershipCard_position"
+                    >
+                      <p
+                        className="a-text a-text-16x24 a-text-davysGrey a-text-400 a-text-fontLexend"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Thành viên Hội đồng Quản trị, Tổng Giám đốc",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="t-leadership_item_card"
+              onClick={[Function]}
+            >
+              <div
+                className="t-leadershipCard"
+              >
+                <div
+                  className="t-leadershipCard_thumbnail"
+                >
+                  <div
+                    className="a-image a-image-1x1"
+                  >
+                    <img
+                      alt="LeadershipCard"
+                      loading="lazy"
+                      src="img_leadership1.png"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="t-leadershipCard_content"
+                >
+                  <div
+                    className="t-leadershipCard_gender"
+                  >
+                    <p
+                      className="a-text a-text-16x24 a-text-coolBlack a-text-400 a-text-fontLexend a-text-capitalize"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Bà",
+                        }
+                      }
+                    />
+                  </div>
+                  <div
+                    className="t-leadershipCard_name"
+                  >
+                    <h2
+                      className="a-heading a-heading-arsenic a-heading-600 a-heading-fontNoto a-heading-uppercase"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Hoàng Thu Châu",
+                        }
+                      }
+                    />
+                    <div
+                      className="t-leadershipCard_icon"
+                    >
+                      <i
+                        className="a-icon a-icon-arrowDownGrey a-icon-24"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="t-leadershipCard_wrapper"
+                    style={
+                      Object {
+                        "maxHeight": 0,
+                      }
+                    }
+                  >
+                    <div
+                      className="t-leadershipCard_position"
+                    >
+                      <p
+                        className="a-text a-text-16x24 a-text-davysGrey a-text-400 a-text-fontLexend"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Thành viên Hội đồng Quản trị, Phó Tổng Giám đốc",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="t-leadership_item_card"
+              onClick={[Function]}
+            >
+              <div
+                className="t-leadershipCard"
+              >
+                <div
+                  className="t-leadershipCard_thumbnail"
+                >
+                  <div
+                    className="a-image a-image-1x1"
+                  >
+                    <img
+                      alt="LeadershipCard"
+                      loading="lazy"
+                      src="img_leadership1.png"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="t-leadershipCard_content"
+                >
+                  <div
+                    className="t-leadershipCard_gender"
+                  >
+                    <p
+                      className="a-text a-text-16x24 a-text-coolBlack a-text-400 a-text-fontLexend a-text-capitalize"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Ông",
+                        }
+                      }
+                    />
+                  </div>
+                  <div
+                    className="t-leadershipCard_name"
+                  >
+                    <h2
+                      className="a-heading a-heading-arsenic a-heading-600 a-heading-fontNoto a-heading-uppercase"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Phạm Tiến Vân",
+                        }
+                      }
+                    />
+                    <div
+                      className="t-leadershipCard_icon"
+                    >
+                      <i
+                        className="a-icon a-icon-arrowDownGrey a-icon-24"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="t-leadershipCard_wrapper"
+                    style={
+                      Object {
+                        "maxHeight": 0,
+                      }
+                    }
+                  >
+                    <div
+                      className="t-leadershipCard_position"
+                    >
+                      <p
+                        className="a-text a-text-16x24 a-text-davysGrey a-text-400 a-text-fontLexend"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Thành viên Hội đồng Quản trị Độc lập",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="t-leadership_item_card"
+              onClick={[Function]}
+            >
+              <div
+                className="t-leadershipCard"
+              >
+                <div
+                  className="t-leadershipCard_thumbnail"
+                >
+                  <div
+                    className="a-image a-image-1x1"
+                  >
+                    <img
+                      alt="LeadershipCard"
+                      loading="lazy"
+                      src="img_leadership1.png"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="t-leadershipCard_content"
+                >
+                  <div
+                    className="t-leadershipCard_gender"
+                  >
+                    <p
+                      className="a-text a-text-16x24 a-text-coolBlack a-text-400 a-text-fontLexend a-text-capitalize"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Ông",
+                        }
+                      }
+                    />
+                  </div>
+                  <div
+                    className="t-leadershipCard_name"
+                  >
+                    <h2
+                      className="a-heading a-heading-arsenic a-heading-600 a-heading-fontNoto a-heading-uppercase"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Lê Quốc Hùng",
+                        }
+                      }
+                    />
+                    <div
+                      className="t-leadershipCard_icon"
+                    >
+                      <i
+                        className="a-icon a-icon-arrowDownGrey a-icon-24"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="t-leadershipCard_wrapper"
+                    style={
+                      Object {
+                        "maxHeight": 0,
+                      }
+                    }
+                  >
+                    <div
+                      className="t-leadershipCard_position"
+                    >
+                      <p
+                        className="a-text a-text-16x24 a-text-davysGrey a-text-400 a-text-fontLexend"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Thành viên Hội đồng Quản trị Độc lập",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="t-leadership_item_card"
+              onClick={[Function]}
+            >
+              <div
+                className="t-leadershipCard"
+              >
+                <div
+                  className="t-leadershipCard_thumbnail"
+                >
+                  <div
+                    className="a-image a-image-1x1"
+                  >
+                    <img
+                      alt="LeadershipCard"
+                      loading="lazy"
+                      src="img_leadership1.png"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="t-leadershipCard_content"
+                >
+                  <div
+                    className="t-leadershipCard_gender"
+                  >
+                    <p
+                      className="a-text a-text-16x24 a-text-coolBlack a-text-400 a-text-fontLexend a-text-capitalize"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Bà",
+                        }
+                      }
+                    />
+                  </div>
+                  <div
+                    className="t-leadershipCard_name"
+                  >
+                    <h2
+                      className="a-heading a-heading-arsenic a-heading-600 a-heading-fontNoto a-heading-uppercase"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Nguyễn Mỹ Hạnh",
+                        }
+                      }
+                    />
+                    <div
+                      className="t-leadershipCard_icon"
+                    >
+                      <i
+                        className="a-icon a-icon-arrowDownGrey a-icon-24"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="t-leadershipCard_wrapper"
+                    style={
+                      Object {
+                        "maxHeight": 0,
+                      }
+                    }
+                  >
+                    <div
+                      className="t-leadershipCard_position"
+                    >
+                      <p
+                        className="a-text a-text-16x24 a-text-davysGrey a-text-400 a-text-fontLexend"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Thành viên Hội đồng Quản trị Độc lập",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="t-leadership_item_right"
+          >
+            <div
+              className="t-leadership_item_detail t-leadership_item_detail-show"
+            >
+              <div
+                className="t-leadershipDetail"
+              >
+                <div
+                  className="t-leadershipDetail_wrapper"
+                >
+                  <div
+                    className="t-leadershipDetail_info"
+                  >
+                    <h2
+                      className="a-heading a-heading-darkMidnightBlue a-heading-400 a-heading-fontLexend a-heading-capitalize"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Ông",
+                        }
+                      }
+                    />
+                    <div
+                      className="t-leadershipDetail_name"
+                    >
+                      <h2
+                        className="a-heading a-heading-38x52 a-heading-700 a-heading-jet a-heading-capitalize a-heading-fontNoto"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Bùi Thành Nhơn",
+                          }
+                        }
+                      />
+                    </div>
+                    <h2
+                      className="a-heading a-heading-dimGray a-heading-400 a-heading-fontLexend"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Nhà sáng lập - Chủ tịch Hội đồng Quản trị",
+                        }
+                      }
+                    />
+                  </div>
+                  <div
+                    className="t-leadershipDetail_thumbnail"
+                  >
+                    <div
+                      className="a-image a-image-223x320"
+                    >
+                      <img
+                        alt="leadershipDetail"
+                        loading="lazy"
+                        src="img_leadership1.png"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="t-leadershipDetail_achievement"
+                >
+                  <div
+                    className="t-leadershipDetail_item"
+                  >
+                    <div
+                      className="t-leadershipDetail_item_icon"
+                    >
+                      <i
+                        className="a-icon a-icon-circleCamel a-icon-13"
+                      />
+                    </div>
+                    <div
+                      className="t-leadershipDetail_item_content"
+                    >
+                      <p
+                        className="a-text a-text-16x24 a-text-400 a-text-fontLexend a-text-dimGray"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Cử nhân Nông nghiệp. Tốt nghiệp Executive MBA, HSB-TUCK, Đại học Dartmouth, Hoa Kỳ.",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="t-leadershipDetail_item"
+                  >
+                    <div
+                      className="t-leadershipDetail_item_icon"
+                    >
+                      <i
+                        className="a-icon a-icon-circleCamel a-icon-13"
+                      />
+                    </div>
+                    <div
+                      className="t-leadershipDetail_item_content"
+                    >
+                      <p
+                        className="a-text a-text-16x24 a-text-400 a-text-fontLexend a-text-dimGray"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Là một trong những chủ doanh nghiệp tư nhân đầu tiên tại TP.HCM từ những năm 1980. Thành viên Tổ chức doanh nhân thế giới (YPO - WPO).",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="t-leadershipDetail_slogan"
+                >
+                  <div
+                    className="t-leadershipDetail_slogan_detail"
+                  >
+                    <h2
+                      className="a-heading a-heading-dimGray a-heading-400 a-heading-fontLexend"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được Sứ mạng, Hoài bão của Novaland Group.",
+                        }
+                      }
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="t-leadership_item_detail"
+            >
+              <div
+                className="t-leadershipDetail"
+              >
+                <div
+                  className="t-leadershipDetail_wrapper"
+                >
+                  <div
+                    className="t-leadershipDetail_info"
+                  >
+                    <h2
+                      className="a-heading a-heading-darkMidnightBlue a-heading-400 a-heading-fontLexend a-heading-capitalize"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Ông",
+                        }
+                      }
+                    />
+                    <div
+                      className="t-leadershipDetail_name"
+                    >
+                      <h2
+                        className="a-heading a-heading-38x52 a-heading-700 a-heading-jet a-heading-capitalize a-heading-fontNoto"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Bùi Xuân Huy",
+                          }
+                        }
+                      />
+                    </div>
+                    <h2
+                      className="a-heading a-heading-dimGray a-heading-400 a-heading-fontLexend"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Thành viên Hội đồng Quản trị, Tổng Giám đốc",
+                        }
+                      }
+                    />
+                  </div>
+                  <div
+                    className="t-leadershipDetail_thumbnail"
+                  >
+                    <div
+                      className="a-image a-image-223x320"
+                    >
+                      <img
+                        alt="leadershipDetail"
+                        loading="lazy"
+                        src="img_leadership1.png"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="t-leadershipDetail_achievement"
+                >
+                  <div
+                    className="t-leadershipDetail_item"
+                  >
+                    <div
+                      className="t-leadershipDetail_item_icon"
+                    >
+                      <i
+                        className="a-icon a-icon-circleCamel a-icon-13"
+                      />
+                    </div>
+                    <div
+                      className="t-leadershipDetail_item_content"
+                    >
+                      <p
+                        className="a-text a-text-16x24 a-text-400 a-text-fontLexend a-text-dimGray"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Cử nhân Nông nghiệp. Tốt nghiệp Executive MBA, HSB-TUCK, Đại học Dartmouth, Hoa Kỳ.",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="t-leadershipDetail_item"
+                  >
+                    <div
+                      className="t-leadershipDetail_item_icon"
+                    >
+                      <i
+                        className="a-icon a-icon-circleCamel a-icon-13"
+                      />
+                    </div>
+                    <div
+                      className="t-leadershipDetail_item_content"
+                    >
+                      <p
+                        className="a-text a-text-16x24 a-text-400 a-text-fontLexend a-text-dimGray"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Là một trong những chủ doanh nghiệp tư nhân đầu tiên tại TP.HCM từ những năm 1980. Thành viên Tổ chức doanh nhân thế giới (YPO - WPO).",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="t-leadershipDetail_slogan"
+                >
+                  <div
+                    className="t-leadershipDetail_slogan_detail"
+                  >
+                    <h2
+                      className="a-heading a-heading-dimGray a-heading-400 a-heading-fontLexend"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được Sứ mạng, Hoài bão của Novaland Group.",
+                        }
+                      }
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="t-leadership_item_detail"
+            >
+              <div
+                className="t-leadershipDetail"
+              >
+                <div
+                  className="t-leadershipDetail_wrapper"
+                >
+                  <div
+                    className="t-leadershipDetail_info"
+                  >
+                    <h2
+                      className="a-heading a-heading-darkMidnightBlue a-heading-400 a-heading-fontLexend a-heading-capitalize"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Bà",
+                        }
+                      }
+                    />
+                    <div
+                      className="t-leadershipDetail_name"
+                    >
+                      <h2
+                        className="a-heading a-heading-38x52 a-heading-700 a-heading-jet a-heading-capitalize a-heading-fontNoto"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Hoàng Thu Châu",
+                          }
+                        }
+                      />
+                    </div>
+                    <h2
+                      className="a-heading a-heading-dimGray a-heading-400 a-heading-fontLexend"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Thành viên Hội đồng Quản trị, Phó Tổng Giám đốc",
+                        }
+                      }
+                    />
+                  </div>
+                  <div
+                    className="t-leadershipDetail_thumbnail"
+                  >
+                    <div
+                      className="a-image a-image-223x320"
+                    >
+                      <img
+                        alt="leadershipDetail"
+                        loading="lazy"
+                        src="img_leadership1.png"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="t-leadershipDetail_achievement"
+                >
+                  <div
+                    className="t-leadershipDetail_item"
+                  >
+                    <div
+                      className="t-leadershipDetail_item_icon"
+                    >
+                      <i
+                        className="a-icon a-icon-circleCamel a-icon-13"
+                      />
+                    </div>
+                    <div
+                      className="t-leadershipDetail_item_content"
+                    >
+                      <p
+                        className="a-text a-text-16x24 a-text-400 a-text-fontLexend a-text-dimGray"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Cử nhân Nông nghiệp. Tốt nghiệp Executive MBA, HSB-TUCK, Đại học Dartmouth, Hoa Kỳ.",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="t-leadershipDetail_item"
+                  >
+                    <div
+                      className="t-leadershipDetail_item_icon"
+                    >
+                      <i
+                        className="a-icon a-icon-circleCamel a-icon-13"
+                      />
+                    </div>
+                    <div
+                      className="t-leadershipDetail_item_content"
+                    >
+                      <p
+                        className="a-text a-text-16x24 a-text-400 a-text-fontLexend a-text-dimGray"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Là một trong những chủ doanh nghiệp tư nhân đầu tiên tại TP.HCM từ những năm 1980. Thành viên Tổ chức doanh nhân thế giới (YPO - WPO).",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="t-leadershipDetail_slogan"
+                >
+                  <div
+                    className="t-leadershipDetail_slogan_detail"
+                  >
+                    <h2
+                      className="a-heading a-heading-dimGray a-heading-400 a-heading-fontLexend"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được Sứ mạng, Hoài bão của Novaland Group.",
+                        }
+                      }
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="t-leadership_item_detail"
+            >
+              <div
+                className="t-leadershipDetail"
+              >
+                <div
+                  className="t-leadershipDetail_wrapper"
+                >
+                  <div
+                    className="t-leadershipDetail_info"
+                  >
+                    <h2
+                      className="a-heading a-heading-darkMidnightBlue a-heading-400 a-heading-fontLexend a-heading-capitalize"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Ông",
+                        }
+                      }
+                    />
+                    <div
+                      className="t-leadershipDetail_name"
+                    >
+                      <h2
+                        className="a-heading a-heading-38x52 a-heading-700 a-heading-jet a-heading-capitalize a-heading-fontNoto"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Phạm Tiến Vân",
+                          }
+                        }
+                      />
+                    </div>
+                    <h2
+                      className="a-heading a-heading-dimGray a-heading-400 a-heading-fontLexend"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Thành viên Hội đồng Quản trị Độc lập",
+                        }
+                      }
+                    />
+                  </div>
+                  <div
+                    className="t-leadershipDetail_thumbnail"
+                  >
+                    <div
+                      className="a-image a-image-223x320"
+                    >
+                      <img
+                        alt="leadershipDetail"
+                        loading="lazy"
+                        src="img_leadership1.png"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="t-leadershipDetail_achievement"
+                >
+                  <div
+                    className="t-leadershipDetail_item"
+                  >
+                    <div
+                      className="t-leadershipDetail_item_icon"
+                    >
+                      <i
+                        className="a-icon a-icon-circleCamel a-icon-13"
+                      />
+                    </div>
+                    <div
+                      className="t-leadershipDetail_item_content"
+                    >
+                      <p
+                        className="a-text a-text-16x24 a-text-400 a-text-fontLexend a-text-dimGray"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Cử nhân Nông nghiệp. Tốt nghiệp Executive MBA, HSB-TUCK, Đại học Dartmouth, Hoa Kỳ.",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="t-leadershipDetail_item"
+                  >
+                    <div
+                      className="t-leadershipDetail_item_icon"
+                    >
+                      <i
+                        className="a-icon a-icon-circleCamel a-icon-13"
+                      />
+                    </div>
+                    <div
+                      className="t-leadershipDetail_item_content"
+                    >
+                      <p
+                        className="a-text a-text-16x24 a-text-400 a-text-fontLexend a-text-dimGray"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Là một trong những chủ doanh nghiệp tư nhân đầu tiên tại TP.HCM từ những năm 1980. Thành viên Tổ chức doanh nhân thế giới (YPO - WPO).",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="t-leadershipDetail_slogan"
+                >
+                  <div
+                    className="t-leadershipDetail_slogan_detail"
+                  >
+                    <h2
+                      className="a-heading a-heading-dimGray a-heading-400 a-heading-fontLexend"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được Sứ mạng, Hoài bão của Novaland Group.",
+                        }
+                      }
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="t-leadership_item_detail"
+            >
+              <div
+                className="t-leadershipDetail"
+              >
+                <div
+                  className="t-leadershipDetail_wrapper"
+                >
+                  <div
+                    className="t-leadershipDetail_info"
+                  >
+                    <h2
+                      className="a-heading a-heading-darkMidnightBlue a-heading-400 a-heading-fontLexend a-heading-capitalize"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Ông",
+                        }
+                      }
+                    />
+                    <div
+                      className="t-leadershipDetail_name"
+                    >
+                      <h2
+                        className="a-heading a-heading-38x52 a-heading-700 a-heading-jet a-heading-capitalize a-heading-fontNoto"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Lê Quốc Hùng",
+                          }
+                        }
+                      />
+                    </div>
+                    <h2
+                      className="a-heading a-heading-dimGray a-heading-400 a-heading-fontLexend"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Thành viên Hội đồng Quản trị Độc lập",
+                        }
+                      }
+                    />
+                  </div>
+                  <div
+                    className="t-leadershipDetail_thumbnail"
+                  >
+                    <div
+                      className="a-image a-image-223x320"
+                    >
+                      <img
+                        alt="leadershipDetail"
+                        loading="lazy"
+                        src="img_leadership1.png"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="t-leadershipDetail_achievement"
+                >
+                  <div
+                    className="t-leadershipDetail_item"
+                  >
+                    <div
+                      className="t-leadershipDetail_item_icon"
+                    >
+                      <i
+                        className="a-icon a-icon-circleCamel a-icon-13"
+                      />
+                    </div>
+                    <div
+                      className="t-leadershipDetail_item_content"
+                    >
+                      <p
+                        className="a-text a-text-16x24 a-text-400 a-text-fontLexend a-text-dimGray"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Cử nhân Nông nghiệp. Tốt nghiệp Executive MBA, HSB-TUCK, Đại học Dartmouth, Hoa Kỳ.",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="t-leadershipDetail_item"
+                  >
+                    <div
+                      className="t-leadershipDetail_item_icon"
+                    >
+                      <i
+                        className="a-icon a-icon-circleCamel a-icon-13"
+                      />
+                    </div>
+                    <div
+                      className="t-leadershipDetail_item_content"
+                    >
+                      <p
+                        className="a-text a-text-16x24 a-text-400 a-text-fontLexend a-text-dimGray"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Là một trong những chủ doanh nghiệp tư nhân đầu tiên tại TP.HCM từ những năm 1980. Thành viên Tổ chức doanh nhân thế giới (YPO - WPO).",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="t-leadershipDetail_slogan"
+                >
+                  <div
+                    className="t-leadershipDetail_slogan_detail"
+                  >
+                    <h2
+                      className="a-heading a-heading-dimGray a-heading-400 a-heading-fontLexend"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được Sứ mạng, Hoài bão của Novaland Group.",
+                        }
+                      }
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="t-leadership_item_detail"
+            >
+              <div
+                className="t-leadershipDetail"
+              >
+                <div
+                  className="t-leadershipDetail_wrapper"
+                >
+                  <div
+                    className="t-leadershipDetail_info"
+                  >
+                    <h2
+                      className="a-heading a-heading-darkMidnightBlue a-heading-400 a-heading-fontLexend a-heading-capitalize"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Bà",
+                        }
+                      }
+                    />
+                    <div
+                      className="t-leadershipDetail_name"
+                    >
+                      <h2
+                        className="a-heading a-heading-38x52 a-heading-700 a-heading-jet a-heading-capitalize a-heading-fontNoto"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Nguyễn Mỹ Hạnh",
+                          }
+                        }
+                      />
+                    </div>
+                    <h2
+                      className="a-heading a-heading-dimGray a-heading-400 a-heading-fontLexend"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Thành viên Hội đồng Quản trị Độc lập",
+                        }
+                      }
+                    />
+                  </div>
+                  <div
+                    className="t-leadershipDetail_thumbnail"
+                  >
+                    <div
+                      className="a-image a-image-223x320"
+                    >
+                      <img
+                        alt="leadershipDetail"
+                        loading="lazy"
+                        src="img_leadership1.png"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="t-leadershipDetail_achievement"
+                >
+                  <div
+                    className="t-leadershipDetail_item"
+                  >
+                    <div
+                      className="t-leadershipDetail_item_icon"
+                    >
+                      <i
+                        className="a-icon a-icon-circleCamel a-icon-13"
+                      />
+                    </div>
+                    <div
+                      className="t-leadershipDetail_item_content"
+                    >
+                      <p
+                        className="a-text a-text-16x24 a-text-400 a-text-fontLexend a-text-dimGray"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Cử nhân Nông nghiệp. Tốt nghiệp Executive MBA, HSB-TUCK, Đại học Dartmouth, Hoa Kỳ.",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="t-leadershipDetail_item"
+                  >
+                    <div
+                      className="t-leadershipDetail_item_icon"
+                    >
+                      <i
+                        className="a-icon a-icon-circleCamel a-icon-13"
+                      />
+                    </div>
+                    <div
+                      className="t-leadershipDetail_item_content"
+                    >
+                      <p
+                        className="a-text a-text-16x24 a-text-400 a-text-fontLexend a-text-dimGray"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Là một trong những chủ doanh nghiệp tư nhân đầu tiên tại TP.HCM từ những năm 1980. Thành viên Tổ chức doanh nhân thế giới (YPO - WPO).",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="t-leadershipDetail_slogan"
+                >
+                  <div
+                    className="t-leadershipDetail_slogan_detail"
+                  >
+                    <h2
+                      className="a-heading a-heading-dimGray a-heading-400 a-heading-fontLexend"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được Sứ mạng, Hoài bão của Novaland Group.",
+                        }
+                      }
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Components/templates/TransportationInfrastructure Normal 1`] = `
 <div
   className="t-transportInfrastructure"
