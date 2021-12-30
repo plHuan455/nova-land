@@ -24,7 +24,7 @@ export const normal: Story = () => (
   </Router>
 );
 
-export const normalSmall: Story = () => (
+export const small: Story = () => (
   <Router>
     <InvestmentSector
       title="BẤT ĐỘNG SẢN"
@@ -34,7 +34,7 @@ export const normalSmall: Story = () => (
   </Router>
 );
 
-export const second: Story = () => (
+export const card: Story = () => (
   <Router>
     <div style={{ maxWidth: '450px' }}>
       <InvestmentCard
@@ -44,22 +44,7 @@ export const second: Story = () => (
         href="/"
         icon="building"
         iconActive="buildingBlue"
-      />
-    </div>
-  </Router>
-);
-
-export const small: Story = () => (
-  <Router>
-    <div style={{ maxWidth: '285px' }}>
-      <InvestmentCard
-        title="BĐS TRUNG TÂM"
-        desc="Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng."
-        thumbnail={imgInvestmentSector}
-        isSmall
-        href="/"
-        icon="building"
-        iconActive="buildingBlue"
+        btnText="Tìm Hiểu Thêm"
       />
     </div>
   </Router>

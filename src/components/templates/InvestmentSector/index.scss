@@ -149,7 +149,7 @@
       right: calc(-120 / 1366 * 100%);
 
       @include desktop-down {
-        right: calc(-140 / 1366 * 100%);
+        right: calc(-120 / 1366 * 100%);
       }
 
       @include tablet-down {

@@ -18,10 +18,11 @@ export interface InvestmentCardProps {
   href: string;
   icon: IconName;
   iconActive: IconName,
+  btnText?: string;
 }
 
 export const InvestmentCard: React.FC<InvestmentCardProps> = ({
-  title, desc, thumbnail, isSmall, href, icon, iconActive,
+  title, desc, thumbnail, isSmall, href, icon, iconActive, btnText,
 }) => {
   const [classHover, setClassHover] = useState('');
 
@@ -82,7 +83,7 @@ export const InvestmentCard: React.FC<InvestmentCardProps> = ({
             <Button modifiers="secondary" type="button">
               <Text
                 modifiers={['16x24', 'black085', 'fontLexend', '400', 'capitalize', 'center']}
-                content="Tìm Hiểu Thêm"
+                content={btnText}
               />
             </Button>
           </Link>
