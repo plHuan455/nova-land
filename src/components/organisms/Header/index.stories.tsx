@@ -1,6 +1,6 @@
 import { Story, Meta } from '@storybook/react';
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import Header from '.';
 
@@ -12,8 +12,8 @@ export default {
   argTypes: {},
 } as Meta;
 
-export const normal: Story = () => (
-  <BrowserRouter>
+export const Normal: Story = () => (
+  <Router>
     <div style={{
       height: '130vh',
       backgroundColor: '#dbdbdb',
@@ -23,5 +23,5 @@ export const normal: Story = () => (
         headerMenu={headerMenuDummy}
       />
     </div>
-  </BrowserRouter>
+  </Router>
 );
