@@ -1,0 +1,68 @@
+.t-projectListMap {
+  $width-in-container-value: 1126;
+
+  &_content {
+    display: flex;
+    margin-top: rem(52);
+  }
+
+  &_info {
+    flex: 0 0 calc(462 / #{$width-in-container-value} * 100%);
+
+    &_pulldown {
+      margin-top: rem(8);
+    }
+
+    &_select + &_select {
+      margin-top: rem(32);
+    }
+
+    &_wrap-list{
+      margin-top: rem(32);
+    }
+
+    &_list {
+      margin-top: rem(16);
+      li {
+        list-style: none;
+        padding: rem(16) 0;
+        border-bottom: $gainsboro 1px solid;
+        &:first-child {
+          border-top: $gainsboro 1px solid;
+        } 
+      }
+    }
+
+    &_item {
+      @include adjust-flex(space-between)
+    }
+  }
+
+  &_map {
+    margin-left: calc(182 / #{$width-in-container-value} * 100%);
+    flex: 0 0 calc(373 / #{$width-in-container-value} * 100%);
+
+    @include small-mobile {
+      margin: rem(10) auto 0;
+      max-width: rem(373);
+    }
+
+    &_img {
+      position: relative;
+      & > img {
+        height: 100%;
+        left: 0;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+    }
+    &_area {
+      background: url('~assets/images/logo_slide.png') no-repeat center/contain;
+      cursor: pointer;
+      position: absolute;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
