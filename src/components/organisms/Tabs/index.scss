@@ -3,9 +3,9 @@
 
   &_labels {
     border-radius: rem(3);
-    @include adjust-flex();
     overflow-x: auto;
     position: relative;
+    @include adjust-flex();
     @include scroll-bars(8);
 
     @include small-mobile {
@@ -16,9 +16,9 @@
   &_label {
     color: $black085;
     font-weight: 400;
-    @include font-base(24, 32);
     text-transform: capitalize;
     white-space: nowrap;
+    @include font-base(24, 32);
 
     &-16x24 {
       @include font-base(16, 24);

@@ -64,8 +64,8 @@
 
   &-blueLinear {
     background-image: $outstanding-number-linear;
-    @include prefixed(background-clip, text);
     -webkit-text-fill-color: transparent;
+    @include prefixed(background-clip, text);
   }
 
   @include style-color();
