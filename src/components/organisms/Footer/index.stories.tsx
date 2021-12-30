@@ -1,9 +1,8 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import Footer, { FooterRegisterFormTypes } from '.';
 
@@ -17,7 +16,7 @@ export default {
   argTypes: {},
 } as Meta;
 
-export const normal: Story = () => {
+export const Normal: Story = () => {
   const method = useForm<FooterRegisterFormTypes>({
     resolver: yupResolver(registerSchema),
     mode: 'onSubmit',
@@ -32,7 +31,7 @@ export const normal: Story = () => {
     console.log(data);
   };
   return (
-    <BrowserRouter>
+    <Router>
       <Footer
         method={method}
         submitForm={handleSubmit}
@@ -43,6 +42,6 @@ export const normal: Story = () => {
         }}
         footerLink={footerMenuData}
       />
-    </BrowserRouter>
+    </Router>
   );
 };
