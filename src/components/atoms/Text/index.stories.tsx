@@ -11,7 +11,9 @@ export default {
       control: {
         type: 'select',
         options: [
+          '14x22',
           '16x24',
+          '12x17',
         ],
       },
       defaultValue: 'mm',
@@ -28,6 +30,8 @@ export default {
         options: [
           'white',
           'raisinBlack',
+          'jet',
+          'darkMidnightBlue',
         ],
       },
       defaultValue: 'spanishGreen',
