@@ -3535,6 +3535,294 @@ exports[`Storyshots Components/templates/FieldActivity Normal 1`] = `
 </div>
 `;
 
+exports[`Storyshots Components/templates/HeroBanner Normal 1`] = `
+<div
+  className="t-heroBanner"
+>
+  <div
+    className="o-carousel o-carousel-hasarrow"
+  >
+    <div
+      className="slick-slider slick-initialized"
+      dir="ltr"
+    >
+      <div
+        className="o-carousel_arrow o-carousel_arrow_prev slick-arrow slick-prev slick-disabled t-heroBanner_arrow-prev"
+        onClick={null}
+      />
+      <div
+        className="slick-list"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={null}
+        onMouseMove={null}
+        onMouseUp={[Function]}
+        onTouchCancel={null}
+        onTouchEnd={[Function]}
+        onTouchMove={null}
+        onTouchStart={[Function]}
+        style={Object {}}
+      >
+        <div
+          className="slick-track"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          style={
+            Object {
+              "WebkitTransform": "translate3d(0px, 0px, 0px)",
+              "WebkitTransition": "",
+              "msTransform": "translateX(0px)",
+              "opacity": 1,
+              "transform": "translate3d(0px, 0px, 0px)",
+              "transition": "",
+            }
+          }
+        >
+          <div
+            aria-hidden={false}
+            className="slick-slide slick-active slick-current"
+            data-index={0}
+            onClick={[Function]}
+            style={
+              Object {
+                "outline": "none",
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="o-carousel_wrap"
+                style={
+                  Object {
+                    "display": "inline-block",
+                    "width": "100%",
+                  }
+                }
+                tabIndex={-1}
+              >
+                <div
+                  className="o-carousel_item"
+                >
+                  <div
+                    className="a-image a-image-1371x620"
+                  >
+                    <img
+                      alt="image-banner"
+                      loading="lazy"
+                      src="banner_1.png"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={true}
+            className="slick-slide"
+            data-index={1}
+            onClick={[Function]}
+            style={
+              Object {
+                "outline": "none",
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="o-carousel_wrap"
+                style={
+                  Object {
+                    "display": "inline-block",
+                    "width": "100%",
+                  }
+                }
+                tabIndex={-1}
+              >
+                <div
+                  className="o-carousel_item"
+                >
+                  <div
+                    className="a-image a-image-1371x620"
+                  >
+                    <img
+                      alt="image-banner"
+                      loading="lazy"
+                      src="banner_1.png"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={true}
+            className="slick-slide"
+            data-index={2}
+            onClick={[Function]}
+            style={
+              Object {
+                "outline": "none",
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="o-carousel_wrap"
+                style={
+                  Object {
+                    "display": "inline-block",
+                    "width": "100%",
+                  }
+                }
+                tabIndex={-1}
+              >
+                <div
+                  className="o-carousel_item"
+                >
+                  <div
+                    className="a-image a-image-1371x620"
+                  >
+                    <img
+                      alt="image-banner"
+                      loading="lazy"
+                      src="banner_1.png"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={true}
+            className="slick-slide"
+            data-index={3}
+            onClick={[Function]}
+            style={
+              Object {
+                "outline": "none",
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="o-carousel_wrap"
+                style={
+                  Object {
+                    "display": "inline-block",
+                    "width": "100%",
+                  }
+                }
+                tabIndex={-1}
+              >
+                <div
+                  className="o-carousel_item"
+                >
+                  <div
+                    className="a-image a-image-1371x620"
+                  >
+                    <img
+                      alt="image-banner"
+                      loading="lazy"
+                      src="banner_1.png"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={true}
+            className="slick-slide"
+            data-index={4}
+            onClick={[Function]}
+            style={
+              Object {
+                "outline": "none",
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="o-carousel_wrap"
+                style={
+                  Object {
+                    "display": "inline-block",
+                    "width": "100%",
+                  }
+                }
+                tabIndex={-1}
+              >
+                <div
+                  className="o-carousel_item"
+                >
+                  <div
+                    className="a-image a-image-1371x620"
+                  >
+                    <img
+                      alt="image-banner"
+                      loading="lazy"
+                      src="banner_1.png"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="o-carousel_arrow o-carousel_arrow_next slick-arrow slick-next t-heroBanner_arrow-next"
+        onClick={[Function]}
+      />
+    </div>
+  </div>
+  <div
+    className="t-heroBanner_info"
+  >
+    <div
+      className="t-heroBanner_info_content"
+    >
+      <div
+        className="t-heroBanner_info_title"
+      >
+        <h2
+          className="a-heading a-heading-center a-heading-700 a-heading-60x72 a-heading-fontNoto a-heading-white"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Cho cuộc sống bừng sáng",
+            }
+          }
+        />
+      </div>
+      <div
+        className="t-heroBanner_info_caption"
+      >
+        <h5
+          className="a-heading a-heading-center a-heading-white a-heading-400"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Kiến tạo cộng đồng -  Xây dựng điểm đến - Vun đắp niềm vui",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Components/templates/HomeNews Home News Card 1`] = `
 <div
   style={

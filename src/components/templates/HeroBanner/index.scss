@@ -1,0 +1,46 @@
+.t-heroBanner {
+  position: relative;
+  
+  .o-carousel {
+    .a-image {
+      height: 100vh;
+      min-height: rem(400);
+    }
+  }
+
+  &_info {
+    background: $dark-green-linear;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+
+    &_content {
+      padding: rem(32) 10%;
+      width: 100%;
+
+      @include small-mobile {
+        padding: rem(20) 5%;
+      }
+    }
+
+    &_title {
+      @include text-overflow();
+    }
+
+    &_caption {
+      @include text-overflow();
+      margin-top: rem(16);
+    }
+  }
+
+  &_arrow {
+    &-next {
+      right: calc(37 / 1366 * 100%);
+    }
+
+    &-prev {
+      left: calc(37 / 1366 * 100%);
+    }
+  }
+}
