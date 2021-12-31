@@ -180,11 +180,18 @@ exports[`Storyshots Components/atoms/Icon Normal 1`] = `
     }
   >
     <i
-<<<<<<< HEAD
       className="a-icon a-icon-arrowNextWhite2 a-icon-24"
-=======
+    />
+  </div>
+  <div
+    style={
+      Object {
+        "marginLeft": 7,
+      }
+    }
+  >
+    <i
       className="a-icon a-icon-arrowDownBrown a-icon-24"
->>>>>>> :zap:feat(NLW-28-projectListMap): run test
     />
   </div>
 </div>
@@ -2308,6 +2315,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
     >
       <p
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
         className="a-text a-text-center a-text-white a-text-16x24 a-text-400"
@@ -2319,14 +2327,19 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
       />
 =======
 >>>>>>> :zap:feat(NLW-28-projectListMap): run test
+=======
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
         className="a-text a-text-400 a-text-fontLexend a-text-davysGrey a-text-center"
       >
         Những thành tựu của Tập đoàn Novaland được ghi nhận, vinh danh qua nhiều giải thưởng, danh hiệu uy tín trong và ngoài nước; thể hiện nỗ lực không ngừng trong việc quy hoạch đồng bộ BĐS tại các vị trí chiến lược, kiến tạo cộng đồng nhân văn tiên tiến với môi trường sống tiện nghi, hiện đại, góp phần vào sự phát triển bền vững của xã hội.
       </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> :zap:feat(NLW-28-projectListMap): run test
 >>>>>>> :zap:feat(NLW-28-projectListMap): run test
+=======
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
     </div>
     <div
       className="t-awardList_tabs"
@@ -2617,38 +2630,6 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
-<div
-  className="t-ecoSystems"
->
-  <div
-    className="container o-container"
-  >
-    <h2
-      className="a-heading a-heading-32x48 a-heading-700 a-heading-fontNoto a-heading-arsenic a-heading-uppercase a-heading-center"
-    >
-      HỆ SINH THÁI NOVA
-    </h2>
-    <div
-      className="t-ecoSystems_desc"
-    >
-      <p
-        className="a-text a-text-400 a-text-center a-text-davysGrey a-text-16x24"
-      >
-        Hệ sinh thái Nova Group, mang những tinh hoa Văn Hóa, Ẩm Thực, Giáo Dục, Vui Chơi - Giải Trí, Du Lịch Nghỉ Dưỡng, Chăm Sóc Sức Khỏe, Y Tế hàng đầu thế giới và Việt Nam về hội tụ tại quần thể các dự án của Novaland nhằm phục vụ sự tiện nghi và thịnh vượng cho cộng đồng cư dân, tăng giá trị cho các sản phẩm bất động sản và hiệu quả cho các nhà đầu tư.
-      </p>
-    </div>
-    <div
-      className="t-ecoSystems_brands"
-    >
-=======
->>>>>>> :zap:feat(NLW-28-projectListMap): run test
       <div
         className="o-tabs_panel"
       >
@@ -2687,90 +2668,13 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                   <h2
                     className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
-<<<<<<< HEAD
-                    <div
-                      className="o-carousel_item"
-                    >
-                      <div
-                        className="t-ecoSystems_brands-item"
-                      >
-                        <div
-                          className="m-ecoCard"
-                        >
-                          <div
-                            className="m-ecoCard_field"
-                          >
-                            <img
-                              alt="brand"
-                              sizes="contain"
-                              src="nova_edu.png"
-                            />
-                          </div>
-                          <div
-                            className="m-ecoCard_brands"
-                          >
-                            <div
-                              className="m-ecoCard_brands-item"
-                            >
-                              <img
-                                alt="brand"
-                                sizes="contain"
-                                src="dynasty_house.png"
-                              />
-                            </div>
-                            <div
-                              className="m-ecoCard_brands-item"
-                            >
-                              <img
-                                alt="brand"
-                                sizes="contain"
-                                src="jumbo.png"
-                              />
-                            </div>
-                            <div
-                              className="m-ecoCard_brands-item"
-                            >
-                              <img
-                                alt="brand"
-                                sizes="contain"
-                                src="sgcasa.png"
-                              />
-                            </div>
-                            <div
-                              className="m-ecoCard_brands-item"
-                            >
-                              <img
-                                alt="brand"
-                                sizes="contain"
-                                src="phin_deli.png"
-                              />
-                            </div>
-                          </div>
-                          <a
-                            aria-current="page"
-                            className="a-link   active"
-                            href="/"
-                            onClick={[Function]}
-                            style={Object {}}
-                            target="_self"
-                          >
-                            <div
-                              className="m-ecoCard_btn"
-                            >
-                              <i
-                                className="a-icon a-icon-arrowNextWhite a-icon-24"
-                              />
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-=======
                     2020
                   </h2>
+<<<<<<< HEAD
 >>>>>>> :zap:feat(NLW-28-projectListMap): run test
 >>>>>>> :zap:feat(NLW-28-projectListMap): run test
+=======
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                 </div>
               </div>
             </div>
@@ -2825,6 +2729,7 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                   <h2
                     className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
+<<<<<<< HEAD
 <<<<<<< HEAD
                     2021
                   </h2>
@@ -2990,6 +2895,10 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                   >
                     2021
                   </h2>
+=======
+                    2020
+                  </h2>
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                 </div>
               </div>
             </div>
@@ -3005,6 +2914,7 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
               >
                 <img
                   alt="award-img"
+<<<<<<< HEAD
                   src="award_5.png"
 =======
 <<<<<<< HEAD
@@ -3102,6 +3012,9 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                   alt="award-img"
                   src="award_3.png"
 >>>>>>> :zap:feat(NLW-28-projectListMap): run test
+=======
+                  src="award_3.png"
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                 />
               </div>
               <div
@@ -3111,10 +3024,14 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                   className="a-text a-text-fontLexend a-text-arsenic a-text-center"
                 >
 <<<<<<< HEAD
+<<<<<<< HEAD
                   Nhà phát triển Bất động sản xuất sắc Việt Nam - Euromoney
 =======
                   Nhà phát triển BĐS hạng sang tốt nhất Việt Nam - Luxury Lifestyle Awards
 >>>>>>> :zap:feat(NLW-28-projectListMap): run test
+=======
+                  Nhà phát triển BĐS hạng sang tốt nhất Việt Nam - Luxury Lifestyle Awards
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                 </p>
               </div>
               <div
@@ -3132,8 +3049,11 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
 =======
                     2020
                   </h2>
+<<<<<<< HEAD
 >>>>>>> :zap:feat(NLW-28-projectListMap): run test
 >>>>>>> :zap:feat(NLW-28-projectListMap): run test
+=======
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                 </div>
               </div>
             </div>
@@ -3189,6 +3109,7 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                   <h2
                     className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
+<<<<<<< HEAD
 <<<<<<< HEAD
                     2020
                   </h2>
@@ -3277,6 +3198,10 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                   </h2>
 >>>>>>> :zap:feat(NLW-28-projectListMap): run test
 >>>>>>> :zap:feat(NLW-28-projectListMap): run test
+=======
+                    2020
+                  </h2>
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                 </div>
               </div>
             </div>
@@ -3365,6 +3290,7 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                   <h2
                     className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
+<<<<<<< HEAD
 <<<<<<< HEAD
                     2020
                   </h2>
@@ -3453,6 +3379,10 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                   </h2>
 >>>>>>> :zap:feat(NLW-28-projectListMap): run test
 >>>>>>> :zap:feat(NLW-28-projectListMap): run test
+=======
+                    2020
+                  </h2>
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                 </div>
               </div>
             </div>
@@ -3883,6 +3813,7 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
         </div>
       </div>
       <div
+<<<<<<< HEAD
 <<<<<<< HEAD
         className="o-tabs_panel"
 =======
@@ -3953,10 +3884,14 @@ exports[`Storyshots Components/templates/HomeNews Home News Card 1`] = `
         className="o-tabs_panel"
 >>>>>>> :zap:feat(NLW-28-projectListMap): run test
 >>>>>>> :zap:feat(NLW-28-projectListMap): run test
+=======
+        className="o-tabs_panel"
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
       >
         <div
           className="t-awardList_tabs_panelWrap"
         >
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div
             className="t-awardList_tabs_panelWrap-item"
@@ -4072,6 +4007,10 @@ exports[`Storyshots Components/templates/HomeNews Home News Card 1`] = `
             className="t-awardList_tabs_panelWrap-item"
 >>>>>>> :zap:feat(NLW-28-projectListMap): run test
 >>>>>>> :zap:feat(NLW-28-projectListMap): run test
+=======
+          <div
+            className="t-awardList_tabs_panelWrap-item"
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
           >
             <div
               className="t-awardList_card"
@@ -4437,6 +4376,7 @@ exports[`Storyshots Components/templates/DevelopmentHistory Normal 1`] = `
               <div
                 className="t-awardList_card_img"
               >
+<<<<<<< HEAD
                 <img
                   alt="award-img"
                   src="award_2.png"
@@ -4497,6 +4437,18 @@ exports[`Storyshots Components/templates/DevelopmentHistory Normal 1`] = `
                 >
                   <h2
                     className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+=======
+                <div>
+                  <div
+                    className="o-carousel_wrap"
+                    style={
+                      Object {
+                        "display": "inline-block",
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                   >
                     2018
                   </h2>
@@ -4521,6 +4473,7 @@ exports[`Storyshots Components/templates/DevelopmentHistory Normal 1`] = `
               <div
                 className="t-awardList_card_desc"
               >
+<<<<<<< HEAD
                 <p
                   className="a-text a-text-fontLexend a-text-arsenic a-text-center"
                 >
@@ -4767,12 +4720,17 @@ exports[`Storyshots Components/templates/DevelopmentHistory Normal 1`] = `
                     className="a-text a-text-400 a-text-arsenic"
                     dangerouslySetInnerHTML={
 =======
+=======
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                 <div>
                   <div
                     className="o-carousel_wrap"
                     style={
+<<<<<<< HEAD
 >>>>>>> :zap:feat(NLW-28-projectListMap): run test
 >>>>>>> :zap:feat(NLW-28-projectListMap): run test
+=======
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                       Object {
                         "display": "inline-block",
                         "width": "100%",
@@ -4858,6 +4816,7 @@ exports[`Storyshots Components/templates/DevelopmentHistory Normal 1`] = `
                 tabIndex="-1"
               >
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <div>
                   <div
                     className="o-carousel_wrap"
@@ -4914,12 +4873,17 @@ exports[`Storyshots Components/templates/DevelopmentHistory Normal 1`] = `
                     className="a-text a-text-400 a-text-arsenic"
                     dangerouslySetInnerHTML={
 =======
+=======
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                 <div>
                   <div
                     className="o-carousel_wrap"
                     style={
+<<<<<<< HEAD
 >>>>>>> :zap:feat(NLW-28-projectListMap): run test
 >>>>>>> :zap:feat(NLW-28-projectListMap): run test
+=======
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                       Object {
                         "display": "inline-block",
                         "width": "100%",
@@ -5005,6 +4969,7 @@ exports[`Storyshots Components/templates/DevelopmentHistory Normal 1`] = `
                 tabIndex="-1"
               >
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <div>
                   <div
                     className="o-carousel_wrap"
@@ -5061,12 +5026,17 @@ exports[`Storyshots Components/templates/DevelopmentHistory Normal 1`] = `
                     className="a-text a-text-400 a-text-arsenic"
                     dangerouslySetInnerHTML={
 =======
+=======
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                 <div>
                   <div
                     className="o-carousel_wrap"
                     style={
+<<<<<<< HEAD
 >>>>>>> :zap:feat(NLW-28-projectListMap): run test
 >>>>>>> :zap:feat(NLW-28-projectListMap): run test
+=======
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                       Object {
                         "display": "inline-block",
                         "width": "100%",
@@ -5152,6 +5122,7 @@ exports[`Storyshots Components/templates/DevelopmentHistory Normal 1`] = `
                 tabIndex="-1"
               >
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <div>
                   <div
                     className="o-carousel_wrap"
@@ -5208,12 +5179,17 @@ exports[`Storyshots Components/templates/DevelopmentHistory Normal 1`] = `
                     className="a-text a-text-400 a-text-arsenic"
                     dangerouslySetInnerHTML={
 =======
+=======
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                 <div>
                   <div
                     className="o-carousel_wrap"
                     style={
+<<<<<<< HEAD
 >>>>>>> :zap:feat(NLW-28-projectListMap): run test
 >>>>>>> :zap:feat(NLW-28-projectListMap): run test
+=======
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                       Object {
                         "display": "inline-block",
                         "width": "100%",
@@ -5297,6 +5273,7 @@ exports[`Storyshots Components/templates/DevelopmentHistory Normal 1`] = `
                 tabIndex="-1"
               >
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <a
                   aria-current="page"
                   className="a-link   active"
@@ -5361,14 +5338,19 @@ exports[`Storyshots Components/templates/DevelopmentHistory Normal 1`] = `
                     dangerouslySetInnerHTML={
 =======
 >>>>>>> :zap:feat(NLW-28-projectListMap): run test
+=======
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                 <div>
                   <div
                     className="o-carousel_wrap"
                     style={
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> :zap:feat(NLW-28-projectListMap): run test
 >>>>>>> :zap:feat(NLW-28-projectListMap): run test
+=======
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                       Object {
                         "display": "inline-block",
                         "width": "100%",
@@ -5447,6 +5429,7 @@ exports[`Storyshots Components/templates/DevelopmentHistory Normal 1`] = `
                 }
                 tabIndex="-1"
               >
+<<<<<<< HEAD
                 <div>
                   <div
 <<<<<<< HEAD
@@ -5550,12 +5533,17 @@ exports[`Storyshots Components/templates/DevelopmentHistory Normal 1`] = `
                     className="a-text a-text-400 a-text-arsenic"
                     dangerouslySetInnerHTML={
 =======
+=======
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                 <div>
                   <div
                     className="o-carousel_wrap"
                     style={
+<<<<<<< HEAD
 >>>>>>> :zap:feat(NLW-28-projectListMap): run test
 >>>>>>> :zap:feat(NLW-28-projectListMap): run test
+=======
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                       Object {
                         "display": "inline-block",
                         "width": "100%",
@@ -5569,6 +5557,7 @@ exports[`Storyshots Components/templates/DevelopmentHistory Normal 1`] = `
                       <div
                         className="t-processItem"
                       >
+<<<<<<< HEAD
                         <span
                           className="t-processItem_year"
                         >
@@ -5740,60 +5729,7 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                       loading="lazy"
                       src="img_homeNewsCard4.png"
                     />
-                  </div>
-                </a>
-              </div>
-              <div
-                className="t-homeNewsCard_wrapper"
-              >
-                <div
-                  className="t-homeNewsCard_title"
-                >
-                  <a
-                    aria-current="page"
-                    className="a-link   active"
-                    href="/"
-                    onClick={[Function]}
-                    style={Object {}}
-                    target="_self"
-                  >
-                    <p
-                      className="a-text a-text-16x24 a-text-600 a-text-arsenic"
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "Doanh nghiệp địa ốc bắt tay ngân hàng tăng lợi ích cho người mua",
-                        }
-                      }
-                    />
-                  </a>
-                </div>
-                <div
-                  className="t-homeNewsCard_content"
-                >
-                  <p
-                    className="a-text a-text-400 a-text-arsenic"
-                    dangerouslySetInnerHTML={
 =======
-                <div>
-                  <div
-                    className="o-carousel_wrap"
-                    style={
->>>>>>> :zap:feat(NLW-28-projectListMap): run test
->>>>>>> :zap:feat(NLW-28-projectListMap): run test
-                      Object {
-                        "display": "inline-block",
-                        "width": "100%",
-                      }
-                    }
-                    tabIndex={-1}
-                  >
-                    <div
-                      className="o-carousel_item"
-                    >
-                      <div
-<<<<<<< HEAD
-                        className="t-ecoSystems_brands-item"
-                      >
                         <div
                           className="m-ecoCard"
                         >
@@ -5864,6 +5800,151 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                         </div>
                       </div>
                     </div>
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-hidden={false}
+                className="slick-slide slick-active"
+                data-index={1}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "outline": "none",
+                    "width": 0,
+                  }
+                }
+                tabIndex="-1"
+              >
+<<<<<<< HEAD
+                <div
+                  className="t-homeNewsCard_title"
+                >
+                  <a
+                    aria-current="page"
+                    className="a-link   active"
+                    href="/"
+                    onClick={[Function]}
+                    style={Object {}}
+                    target="_self"
+                  >
+                    <p
+                      className="a-text a-text-16x24 a-text-600 a-text-arsenic"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Doanh nghiệp địa ốc bắt tay ngân hàng tăng lợi ích cho người mua",
+                        }
+                      }
+                    />
+                  </a>
+                </div>
+                <div
+                  className="t-homeNewsCard_content"
+                >
+                  <p
+                    className="a-text a-text-400 a-text-arsenic"
+                    dangerouslySetInnerHTML={
+=======
+=======
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
+                <div>
+                  <div
+                    className="o-carousel_wrap"
+                    style={
+<<<<<<< HEAD
+>>>>>>> :zap:feat(NLW-28-projectListMap): run test
+>>>>>>> :zap:feat(NLW-28-projectListMap): run test
+=======
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
+                      Object {
+                        "display": "inline-block",
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <div
+                      className="o-carousel_item"
+                    >
+                      <div
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
+                        className="t-ecoSystems_brands-item"
+                      >
+                        <div
+                          className="m-ecoCard"
+                        >
+                          <div
+                            className="m-ecoCard_field"
+                          >
+                            <img
+                              alt="brand"
+                              sizes="contain"
+                              src="nova_health_care.png"
+                            />
+                          </div>
+                          <div
+                            className="m-ecoCard_brands"
+                          >
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="dynasty_house.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="jumbo.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="sgcasa.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="phin_deli.png"
+                              />
+                            </div>
+                          </div>
+                          <a
+                            aria-current="page"
+                            className="a-link   active"
+                            href="/"
+                            onClick={[Function]}
+                            target="_self"
+                          >
+                            <div
+                              className="m-ecoCard_btn"
+                            >
+                              <i
+                                className="a-icon a-icon-arrowNextWhite a-icon-24"
+                              />
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+<<<<<<< HEAD
+                    </div>
 =======
                         className="t-processItem"
                       >
@@ -5909,10 +5990,13 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                           </div>
                         </div>
                       </div>
+=======
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                     </div>
                   </div>
                 </div>
               </div>
+<<<<<<< HEAD
             </div>
           </div>
         </div>
@@ -5987,6 +6071,12 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                 aria-hidden={false}
                 className="slick-slide slick-active slick-current"
                 data-index={0}
+=======
+              <div
+                aria-hidden={false}
+                className="slick-slide slick-active"
+                data-index={2}
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                 onClick={[Function]}
                 style={
                   Object {
@@ -6066,8 +6156,80 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                         className="t-ecoSystems_brands-item"
                       >
 <<<<<<< HEAD
+<<<<<<< HEAD
                         111
                       </p>
+=======
+                        <div
+                          className="m-ecoCard"
+                        >
+                          <div
+                            className="m-ecoCard_field"
+                          >
+                            <img
+                              alt="brand"
+                              sizes="contain"
+                              src="nova_hospitality.png"
+                            />
+                          </div>
+                          <div
+                            className="m-ecoCard_brands"
+                          >
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="dynasty_house.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="jumbo.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="sgcasa.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="phin_deli.png"
+                              />
+                            </div>
+                          </div>
+                          <a
+                            aria-current="page"
+                            className="a-link   active"
+                            href="/"
+                            onClick={[Function]}
+                            target="_self"
+                          >
+                            <div
+                              className="m-ecoCard_btn"
+                            >
+                              <i
+                                className="a-icon a-icon-arrowNextWhite a-icon-24"
+                              />
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                     </div>
                   </div>
                 </div>
@@ -6106,7 +6268,11 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
               <div
                 aria-hidden={false}
                 className="slick-slide slick-active"
+<<<<<<< HEAD
                 data-index={1}
+=======
+                data-index={3}
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                 onClick={[Function]}
                 style={
                   Object {
@@ -6212,6 +6378,7 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                   </div>
                 </div>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             </div>
           </div>
@@ -6434,6 +6601,12 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                 aria-hidden={false}
                 className="slick-slide slick-active"
                 data-index={1}
+=======
+              <div
+                aria-hidden={true}
+                className="slick-slide"
+                data-index={4}
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                 onClick={[Function]}
                 style={
                   Object {
@@ -6528,6 +6701,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                               />
                             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                           </a>
 =======
 <<<<<<< HEAD
@@ -6560,14 +6734,16 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                             </div>
                           </div>
 =======
+=======
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                           </a>
->>>>>>> :zap:feat(NLW-28-projectListMap): run test
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+<<<<<<< HEAD
               <div
                 aria-hidden={false}
                 className="slick-slide slick-active"
@@ -6702,286 +6878,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                   </div>
                 </div>
               </div>
-              <div
-                aria-hidden={false}
-                className="slick-slide slick-active"
-                data-index={3}
-                onClick={[Function]}
-                style={
-                  Object {
-                    "outline": "none",
-                    "width": 0,
-                  }
-                }
-                tabIndex="-1"
-              >
-                <div>
-                  <div
-                    className="o-carousel_wrap"
-                    style={
-                      Object {
-                        "display": "inline-block",
-                        "width": "100%",
-                      }
-                    }
-                    tabIndex={-1}
-                  >
-                    <div
-                      className="o-carousel_item"
-                    >
-                      <div
-                        className="t-ecoSystems_brands-item"
-                      >
-                        <div
-                          className="m-ecoCard"
-                        >
-                          <div
-                            className="m-ecoCard_field"
-                          >
-                            <img
-                              alt="brand"
-                              sizes="contain"
-                              src="nova_edu.png"
-                            />
-                          </div>
-                          <div
-                            className="m-ecoCard_brands"
-                          >
-                            <div
-                              className="m-ecoCard_brands-item"
-                            >
-                              <img
-                                alt="brand"
-                                sizes="contain"
-                                src="dynasty_house.png"
-                              />
-                            </div>
-                            <div
-                              className="m-ecoCard_brands-item"
-                            >
-                              <img
-                                alt="brand"
-                                sizes="contain"
-                                src="jumbo.png"
-                              />
-                            </div>
-                            <div
-                              className="m-ecoCard_brands-item"
-                            >
-                              <img
-                                alt="brand"
-                                sizes="contain"
-                                src="sgcasa.png"
-                              />
-                            </div>
-                            <div
-                              className="m-ecoCard_brands-item"
-                            >
-                              <img
-                                alt="brand"
-                                sizes="contain"
-                                src="phin_deli.png"
-                              />
-                            </div>
-                          </div>
-                          <a
-                            aria-current="page"
-                            className="a-link   active"
-                            href="/"
-                            onClick={[Function]}
-                            target="_self"
-                          >
-                            <div
-                              className="m-ecoCard_btn"
-                            >
-                              <i
-                                className="a-icon a-icon-arrowNextWhite a-icon-24"
-                              />
-                            </div>
-<<<<<<< HEAD
-                            <div
-                              className="t-investmentCard_button"
-                            >
-                              <a
-                                aria-current="page"
-                                className="a-link   active"
-                                href="/"
-                                onClick={[Function]}
-                                style={Object {}}
-                                target="_self"
-                              >
-                                <button
-                                  className="a-button a-button-secondary"
-                                  disabled={false}
-                                  type="button"
-                                >
-                                  <p
-                                    className="a-text a-text-16x24 a-text-black085 a-text-fontLexend a-text-400 a-text-capitalize a-text-center"
-                                    dangerouslySetInnerHTML={
-                                      Object {
-                                        "__html": "Tìm Hiểu Thêm",
-                                      }
-                                    }
-                                  />
-                                </button>
-                              </a>
-                            </div>
-                          </div>
 =======
-                          </a>
->>>>>>> :zap:feat(NLW-28-projectListMap): run test
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                aria-hidden={true}
-                className="slick-slide"
-                data-index={4}
-                onClick={[Function]}
-                style={
-                  Object {
-                    "outline": "none",
-                    "width": 0,
-                  }
-                }
-                tabIndex="-1"
-              >
-                <div>
-                  <div
-                    className="o-carousel_wrap"
-                    style={
-                      Object {
-                        "display": "inline-block",
-                        "width": "100%",
-                      }
-                    }
-                    tabIndex={-1}
-                  >
-                    <div
-                      className="o-carousel_item"
-                    >
-                      <div
-                        className="t-ecoSystems_brands-item"
-                      >
-                        <div
-                          className="m-ecoCard"
-                        >
-                          <div
-                            className="m-ecoCard_field"
-                          >
-                            <img
-                              alt="brand"
-                              sizes="contain"
-                              src="nova_health_care.png"
-                            />
-                          </div>
-                          <div
-                            className="m-ecoCard_brands"
-                          >
-                            <div
-                              className="m-ecoCard_brands-item"
-                            >
-                              <img
-                                alt="brand"
-                                sizes="contain"
-                                src="dynasty_house.png"
-                              />
-                            </div>
-                            <div
-                              className="m-ecoCard_brands-item"
-                            >
-                              <img
-                                alt="brand"
-                                sizes="contain"
-                                src="jumbo.png"
-                              />
-                            </div>
-                            <div
-                              className="m-ecoCard_brands-item"
-                            >
-                              <img
-                                alt="brand"
-                                sizes="contain"
-                                src="sgcasa.png"
-                              />
-                            </div>
-                            <div
-                              className="m-ecoCard_brands-item"
-                            >
-                              <img
-                                alt="brand"
-                                sizes="contain"
-                                src="phin_deli.png"
-                              />
-                            </div>
-                          </div>
-                          <a
-                            aria-current="page"
-                            className="a-link   active"
-                            href="/"
-                            onClick={[Function]}
-                            target="_self"
-                          >
-                            <div
-                              className="m-ecoCard_btn"
-                            >
-                              <i
-                                className="a-icon a-icon-arrowNextWhite a-icon-24"
-                              />
-                            </div>
-<<<<<<< HEAD
-                            <div
-                              className="t-investmentCard_desc t-investmentCard_desc-layer"
-                            >
-                              <p
-                                className="a-text a-text-white a-text-400 a-text-fontLexend"
-                                dangerouslySetInnerHTML={
-                                  Object {
-                                    "__html": "Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.",
-                                  }
-                                }
-                              />
-                            </div>
-                            <div
-                              className="t-investmentCard_button"
-                            >
-                              <a
-                                aria-current="page"
-                                className="a-link   active"
-                                href="/"
-                                onClick={[Function]}
-                                style={Object {}}
-                                target="_self"
-                              >
-                                <button
-                                  className="a-button a-button-secondary"
-                                  disabled={false}
-                                  type="button"
-                                >
-                                  <p
-                                    className="a-text a-text-16x24 a-text-black085 a-text-fontLexend a-text-400 a-text-capitalize a-text-center"
-                                    dangerouslySetInnerHTML={
-                                      Object {
-                                        "__html": "Tìm Hiểu Thêm",
-                                      }
-                                    }
-                                  />
-                                </button>
-                              </a>
-                            </div>
-                          </div>
-=======
-                          </a>
->>>>>>> :zap:feat(NLW-28-projectListMap): run test
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
           <ul
@@ -7110,6 +7007,438 @@ exports[`Storyshots Components/templates/HeroBanner Normal 1`] = `
             tabIndex="-1"
           >
             <div>
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
+              <div
+                aria-hidden={false}
+                className="slick-slide slick-active"
+                data-index={3}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "outline": "none",
+                    "width": 0,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div>
+                  <div
+                    className="o-carousel_wrap"
+                    style={
+                      Object {
+                        "display": "inline-block",
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+<<<<<<< HEAD
+                    <div
+                      className="o-carousel_item"
+                    >
+                      <div
+                        className="t-ecoSystems_brands-item"
+                      >
+                        <div
+                          className="m-ecoCard"
+                        >
+                          <div
+                            className="m-ecoCard_field"
+                          >
+                            <img
+                              alt="brand"
+                              sizes="contain"
+                              src="nova_edu.png"
+                            />
+                          </div>
+                          <div
+                            className="m-ecoCard_brands"
+                          >
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="dynasty_house.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="jumbo.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="sgcasa.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="phin_deli.png"
+                              />
+                            </div>
+                          </div>
+                          <a
+                            aria-current="page"
+                            className="a-link   active"
+                            href="/"
+                            onClick={[Function]}
+                            target="_self"
+                          >
+                            <div
+                              className="m-ecoCard_btn"
+                            >
+                              <i
+                                className="a-icon a-icon-arrowNextWhite a-icon-24"
+                              />
+                            </div>
+<<<<<<< HEAD
+                            <div
+                              className="t-investmentCard_button"
+                            >
+                              <a
+                                aria-current="page"
+                                className="a-link   active"
+                                href="/"
+                                onClick={[Function]}
+                                style={Object {}}
+                                target="_self"
+                              >
+                                <button
+                                  className="a-button a-button-secondary"
+                                  disabled={false}
+                                  type="button"
+                                >
+                                  <p
+                                    className="a-text a-text-16x24 a-text-black085 a-text-fontLexend a-text-400 a-text-capitalize a-text-center"
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "Tìm Hiểu Thêm",
+                                      }
+                                    }
+                                  />
+                                </button>
+                              </a>
+                            </div>
+                          </div>
+=======
+                          </a>
+>>>>>>> :zap:feat(NLW-28-projectListMap): run test
+                        </div>
+                      </div>
+                    </div>
+=======
+                    <img
+                      alt="image-banner"
+                      loading="lazy"
+                      src="banner_1.png"
+                    />
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-hidden={true}
+                className="slick-slide"
+                data-index={4}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "outline": "none",
+                    "width": 0,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div>
+                  <div
+                    className="o-carousel_wrap"
+                    style={
+                      Object {
+                        "display": "inline-block",
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+<<<<<<< HEAD
+                    <div
+                      className="o-carousel_item"
+                    >
+                      <div
+                        className="t-ecoSystems_brands-item"
+                      >
+                        <div
+                          className="m-ecoCard"
+                        >
+                          <div
+                            className="m-ecoCard_field"
+                          >
+                            <img
+                              alt="brand"
+                              sizes="contain"
+                              src="nova_health_care.png"
+                            />
+                          </div>
+                          <div
+                            className="m-ecoCard_brands"
+                          >
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="dynasty_house.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="jumbo.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="sgcasa.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="phin_deli.png"
+                              />
+                            </div>
+                          </div>
+                          <a
+                            aria-current="page"
+                            className="a-link   active"
+                            href="/"
+                            onClick={[Function]}
+                            target="_self"
+                          >
+                            <div
+                              className="m-ecoCard_btn"
+                            >
+                              <i
+                                className="a-icon a-icon-arrowNextWhite a-icon-24"
+                              />
+                            </div>
+<<<<<<< HEAD
+                            <div
+                              className="t-investmentCard_desc t-investmentCard_desc-layer"
+                            >
+                              <p
+                                className="a-text a-text-white a-text-400 a-text-fontLexend"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.",
+                                  }
+                                }
+                              />
+                            </div>
+                            <div
+                              className="t-investmentCard_button"
+                            >
+                              <a
+                                aria-current="page"
+                                className="a-link   active"
+                                href="/"
+                                onClick={[Function]}
+                                style={Object {}}
+                                target="_self"
+                              >
+                                <button
+                                  className="a-button a-button-secondary"
+                                  disabled={false}
+                                  type="button"
+                                >
+                                  <p
+                                    className="a-text a-text-16x24 a-text-black085 a-text-fontLexend a-text-400 a-text-capitalize a-text-center"
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "Tìm Hiểu Thêm",
+                                      }
+                                    }
+                                  />
+                                </button>
+                              </a>
+                            </div>
+                          </div>
+=======
+                          </a>
+>>>>>>> :zap:feat(NLW-28-projectListMap): run test
+                        </div>
+                      </div>
+                    </div>
+=======
+                    <img
+                      alt="image-banner"
+                      loading="lazy"
+                      src="banner_1.png"
+                    />
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<<<<<<< HEAD
+          <ul
+            className="slick-dots o-carousel_dots"
+            onMouseEnter={null}
+            onMouseLeave={null}
+            onMouseOver={null}
+            style={
+              Object {
+                "display": "block",
+              }
+            }
+          >
+            <li
+              className="slick-active"
+            >
+              <span
+                className="o-carousel_dot"
+                onClick={[Function]}
+              />
+            </li>
+            <li
+              className=""
+            >
+              <span
+                className="o-carousel_dot"
+                onClick={[Function]}
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/templates/FieldActivity Normal 1`] = `
+<div
+  className="t-fieldActivity"
+>
+  <div
+    className="container o-container"
+  >
+    <h2
+      className="a-heading a-heading-32x48 a-heading-700 a-heading-fontNoto a-heading-jet a-heading-uppercase a-heading-center"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "LĨNH VỰC HOẠT ĐỘNG",
+        }
+      }
+    />
+    <div
+      className="u-mt-16 u-mt-sm-24 u-mt-lg-32"
+    >
+      <div
+        className="a-image a-image-721x303"
+      >
+        <img
+          alt="field_activity"
+          loading="lazy"
+          src="img_field_activity.png"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/templates/HeroBanner Normal 1`] = `
+<div
+  className="t-heroBanner"
+>
+  <div
+    className="o-carousel o-carousel-hasarrow"
+  >
+    <div
+      className="slick-slider slick-initialized"
+      dir="ltr"
+    >
+      <div
+        className="o-carousel_arrow o-carousel_arrow_prev slick-arrow slick-prev slick-disabled t-heroBanner_arrow-prev"
+        onClick={null}
+      />
+      <div
+        className="slick-list"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={null}
+        onMouseMove={null}
+        onMouseUp={[Function]}
+        onTouchCancel={null}
+        onTouchEnd={[Function]}
+        onTouchMove={null}
+        onTouchStart={[Function]}
+        style={Object {}}
+      >
+        <div
+          className="slick-track"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          style={
+            Object {
+              "WebkitTransform": "translate3d(0px, 0px, 0px)",
+              "WebkitTransition": "",
+              "msTransform": "translateX(0px)",
+              "opacity": 1,
+              "transform": "translate3d(0px, 0px, 0px)",
+              "transition": "",
+            }
+          }
+        >
+          <div
+            aria-hidden={false}
+            className="slick-slide slick-active slick-current"
+            data-index={0}
+=======
+          <div
+            aria-hidden={true}
+            className="slick-slide"
+            data-index={2}
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
+            onClick={[Function]}
+            style={
+              Object {
+                "outline": "none",
+                "width": 0,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
               <div
                 className="o-carousel_wrap"
                 style={
@@ -7126,6 +7455,7 @@ exports[`Storyshots Components/templates/HeroBanner Normal 1`] = `
                   <div
                     className="a-image a-image-1371x620"
                   >
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <div
                       className="o-carousel_item"
@@ -7252,12 +7582,17 @@ exports[`Storyshots Components/templates/HeroBanner Normal 1`] = `
                       </div>
                     </div>
 =======
+=======
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                     <img
                       alt="image-banner"
                       loading="lazy"
                       src="banner_1.png"
                     />
+<<<<<<< HEAD
 >>>>>>> :zap:feat(NLW-28-projectListMap): run test
+=======
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                   </div>
                 </div>
               </div>
@@ -7266,7 +7601,11 @@ exports[`Storyshots Components/templates/HeroBanner Normal 1`] = `
           <div
             aria-hidden={true}
             className="slick-slide"
+<<<<<<< HEAD
             data-index={1}
+=======
+            data-index={3}
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
             onClick={[Function]}
             style={
               Object {
@@ -7293,6 +7632,7 @@ exports[`Storyshots Components/templates/HeroBanner Normal 1`] = `
                   <div
                     className="a-image a-image-1371x620"
                   >
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <div
                       className="o-carousel_item"
@@ -7419,12 +7759,17 @@ exports[`Storyshots Components/templates/HeroBanner Normal 1`] = `
                       </div>
                     </div>
 =======
+=======
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                     <img
                       alt="image-banner"
                       loading="lazy"
                       src="banner_1.png"
                     />
+<<<<<<< HEAD
 >>>>>>> :zap:feat(NLW-28-projectListMap): run test
+=======
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                   </div>
                 </div>
               </div>
@@ -7433,7 +7778,11 @@ exports[`Storyshots Components/templates/HeroBanner Normal 1`] = `
           <div
             aria-hidden={true}
             className="slick-slide"
+<<<<<<< HEAD
             data-index={2}
+=======
+            data-index={4}
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
             onClick={[Function]}
             style={
               Object {
@@ -7460,6 +7809,7 @@ exports[`Storyshots Components/templates/HeroBanner Normal 1`] = `
                   <div
                     className="a-image a-image-1371x620"
                   >
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <div
                       className="o-carousel_item"
@@ -7586,12 +7936,13 @@ exports[`Storyshots Components/templates/HeroBanner Normal 1`] = `
                       </div>
                     </div>
 =======
+=======
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                     <img
                       alt="image-banner"
                       loading="lazy"
                       src="banner_1.png"
                     />
->>>>>>> :zap:feat(NLW-28-projectListMap): run test
                   </div>
                 </div>
               </div>
@@ -10968,6 +11319,158 @@ exports[`Storyshots Components/templates/HeroBanner Normal 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
+<<<<<<< HEAD
+=======
+                                target="_self"
+                              >
+                                <button
+                                  className="a-button a-button-secondary"
+                                  disabled={false}
+                                  type="button"
+                                >
+                                  <p
+                                    className="a-text a-text-16x24 a-text-black085 a-text-fontLexend a-text-400 a-text-capitalize a-text-center"
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "Tìm Hiểu Thêm",
+                                      }
+                                    }
+                                  />
+                                </button>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-hidden={true}
+                className="slick-slide slick-cloned"
+                data-index={-4}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "width": 0,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div>
+                  <div
+                    className="o-carousel_wrap"
+                    style={
+                      Object {
+                        "display": "inline-block",
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <div
+                      className="o-carousel_item"
+                    >
+                      <div
+                        className="t-investmentSector_item"
+                      >
+                        <div
+                          className="t-investmentCard t-investmentCard-small"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          <div
+                            className="t-investmentCard_main"
+                          >
+                            <div
+                              className="t-investmentCard_icon"
+                            >
+                              <i
+                                className="a-icon a-icon-building a-icon-80"
+                              />
+                            </div>
+                            <div
+                              className="t-investmentCard_title"
+                            >
+                              <h2
+                                className="a-heading a-heading-20x30 a-heading-400 a-heading-raisinBlack a-heading-uppercase a-heading-fontNoto"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "BĐS TRUNG TÂM",
+                                  }
+                                }
+                              />
+                            </div>
+                            <div
+                              className="t-investmentCard_desc t-investmentCard_desc-main"
+                            >
+                              <p
+                                className="a-text a-text-arsenic a-text-400 a-text-fontLexend"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.",
+                                  }
+                                }
+                              />
+                            </div>
+                            <div
+                              className="t-investmentCard_thumbnail"
+                            >
+                              <div
+                                className="a-image a-image-16x9"
+                              >
+                                <img
+                                  alt="InvestmentCard"
+                                  loading="lazy"
+                                  src="img_investmentSector2.png"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            className="t-investmentCard_layer "
+                          >
+                            <div
+                              className="t-investmentCard_icon"
+                            >
+                              <i
+                                className="a-icon a-icon-buildingBlue a-icon-80"
+                              />
+                            </div>
+                            <div
+                              className="t-investmentCard_title"
+                            >
+                              <h2
+                                className="a-heading a-heading-20x30 a-heading-400 a-heading-white a-heading-uppercase a-heading-fontNoto"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "BĐS TRUNG TÂM",
+                                  }
+                                }
+                              />
+                            </div>
+                            <div
+                              className="t-investmentCard_desc t-investmentCard_desc-layer"
+                            >
+                              <p
+                                className="a-text a-text-white a-text-400 a-text-fontLexend"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.",
+                                  }
+                                }
+                              />
+                            </div>
+                            <div
+                              className="t-investmentCard_button"
+                            >
+                              <a
+                                aria-current="page"
+                                className="a-link   active"
+                                href="/"
+                                onClick={[Function]}
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                                 target="_self"
                               >
                                 <button
@@ -11036,6 +11539,7 @@ exports[`Storyshots Components/templates/HeroBanner Normal 1`] = `
                   <div
                     className="a-image a-image-1371x620"
                   >
+<<<<<<< HEAD
                     <img
                       alt="image-banner"
                       loading="lazy"
@@ -11269,6 +11773,134 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
             <div
               className="t-homeNewsCard"
             >
+=======
+                    <div
+                      className="o-carousel_item"
+                    >
+                      <div
+                        className="t-investmentSector_item"
+                      >
+                        <div
+                          className="t-investmentCard t-investmentCard-small"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          <div
+                            className="t-investmentCard_main"
+                          >
+                            <div
+                              className="t-investmentCard_icon"
+                            >
+                              <i
+                                className="a-icon a-icon-building a-icon-80"
+                              />
+                            </div>
+                            <div
+                              className="t-investmentCard_title"
+                            >
+                              <h2
+                                className="a-heading a-heading-20x30 a-heading-400 a-heading-raisinBlack a-heading-uppercase a-heading-fontNoto"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "BĐS TRUNG TÂM",
+                                  }
+                                }
+                              />
+                            </div>
+                            <div
+                              className="t-investmentCard_desc t-investmentCard_desc-main"
+                            >
+                              <p
+                                className="a-text a-text-arsenic a-text-400 a-text-fontLexend"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.",
+                                  }
+                                }
+                              />
+                            </div>
+                            <div
+                              className="t-investmentCard_thumbnail"
+                            >
+                              <div
+                                className="a-image a-image-16x9"
+                              >
+                                <img
+                                  alt="InvestmentCard"
+                                  loading="lazy"
+                                  src="img_investmentSector.png"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            className="t-investmentCard_layer "
+                          >
+                            <div
+                              className="t-investmentCard_icon"
+                            >
+                              <i
+                                className="a-icon a-icon-buildingBlue a-icon-80"
+                              />
+                            </div>
+                            <div
+                              className="t-investmentCard_title"
+                            >
+                              <h2
+                                className="a-heading a-heading-20x30 a-heading-400 a-heading-white a-heading-uppercase a-heading-fontNoto"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "BĐS TRUNG TÂM",
+                                  }
+                                }
+                              />
+                            </div>
+                            <div
+                              className="t-investmentCard_desc t-investmentCard_desc-layer"
+                            >
+                              <p
+                                className="a-text a-text-white a-text-400 a-text-fontLexend"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.",
+                                  }
+                                }
+                              />
+                            </div>
+                            <div
+                              className="t-investmentCard_button"
+                            >
+                              <a
+                                aria-current="page"
+                                className="a-link   active"
+                                href="/"
+                                onClick={[Function]}
+                                target="_self"
+                              >
+                                <button
+                                  className="a-button a-button-secondary"
+                                  disabled={false}
+                                  type="button"
+                                >
+                                  <p
+                                    className="a-text a-text-16x24 a-text-black085 a-text-fontLexend a-text-400 a-text-capitalize a-text-center"
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "Tìm Hiểu Thêm",
+                                      }
+                                    }
+                                  />
+                                </button>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
               <div
                 className="t-homeNewsCard_thumbnail"
               >
@@ -12451,6 +13083,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                     tabIndex={-1}
                   >
                     <div
+<<<<<<< HEAD
                       className="o-carousel_item"
                     >
                       <div
@@ -12573,6 +13206,191 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                         </div>
                       </div>
                     </div>
+=======
+                      className="a-input_wrap"
+                    >
+                      <input
+                        autoComplete="off"
+                        className="a-input_input"
+                        onKeyPress={[Function]}
+                        placeholder="Tìm kiếm"
+                        type="text"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="o-header_search_panel_input_icon"
+                    onClick={[Function]}
+                  >
+                    <i
+                      className="a-icon a-icon-search a-icon-24"
+                    />
+                  </div>
+                </div>
+              </div>
+              <li
+                className="o-header_nav_item"
+              >
+                <a
+                  aria-current="page"
+                  className="a-link o-header_nav_link  active"
+                  href="/"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  Trang chủ
+                </a>
+              </li>
+              <li
+                className="o-header_nav_item"
+              >
+                <a
+                  className="a-link o-header_nav_link "
+                  href="/gioi-thieu"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  giới thiệu
+                </a>
+              </li>
+              <li
+                className="o-header_nav_item"
+              >
+                <a
+                  className="a-link o-header_nav_link "
+                  href="/mua-ban"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  mua bán
+                </a>
+              </li>
+              <li
+                className="o-header_nav_item"
+              >
+                <a
+                  className="a-link o-header_nav_link "
+                  href="/quan-he-dau-tu"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  quan hệ đầu tư
+                </a>
+              </li>
+              <li
+                className="o-header_nav_item"
+              >
+                <a
+                  className="a-link o-header_nav_link "
+                  href="/tin-tuc"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  tin tức
+                </a>
+              </li>
+              <li
+                className="o-header_nav_item"
+              >
+                <a
+                  className="a-link o-header_nav_link "
+                  href="/tuyen-dung"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  tuyển dụng
+                </a>
+              </li>
+              <li
+                className="o-header_nav_item"
+              >
+                <a
+                  className="a-link o-header_nav_link "
+                  href="/lien-he"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  liên hệ
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div
+            className="o-header_languagePicker"
+          >
+            <div
+              className="o-header_languagePicker_value"
+              onClick={[Function]}
+            >
+              <p
+                className="a-text a-text-16x24 a-text-jet a-text-400 a-text-uppercase"
+              >
+                VN
+              </p>
+              <div
+                className="o-header_languagePicker_icon"
+              >
+                <i
+                  className="a-icon a-icon-carretDownBlack a-icon-24"
+                />
+              </div>
+            </div>
+            <ul
+              className="o-header_languagePicker_list"
+            >
+              <li
+                className="o-header_languagePicker_list_item active"
+                onClick={[Function]}
+              >
+                <p
+                  className="a-text a-text-16x24 a-text-jet a-text-400 a-text-uppercase"
+                >
+                  VN
+                </p>
+              </li>
+              <li
+                className="o-header_languagePicker_list_item "
+                onClick={[Function]}
+              >
+                <p
+                  className="a-text a-text-16x24 a-text-jet a-text-400 a-text-uppercase"
+                >
+                  EN
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div
+            className="o-header_search_wrap"
+          >
+            <div
+              className="o-header_search pc"
+              onClick={[Function]}
+            >
+              <i
+                className="a-icon a-icon-search a-icon-24"
+              />
+            </div>
+            <div
+              className="o-header_search_panel"
+            >
+              <div
+                className="o-header_search_panel_input"
+              >
+                <div
+                  className="a-input a-input-text"
+                >
+                  <div
+                    className="a-input_wrap"
+                  >
+                    <input
+                      autoComplete="off"
+                      className="a-input_input"
+                      onKeyPress={[Function]}
+                      placeholder="Tìm kiếm"
+                      type="text"
+                    />
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                   </div>
                 </div>
               </div>
@@ -12600,11 +13418,116 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                     tabIndex={-1}
                   >
                     <div
+<<<<<<< HEAD
                       className="o-carousel_item"
+=======
+                      className="a-image a-image-220x145"
+                    >
+                      <img
+                        alt="novaland logo"
+                        loading="lazy"
+                        src="footer-logo.png"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div
+                  className="o-footer_main_info"
+                >
+                  <p
+                    className="a-text a-text-400 a-text-white a-text-uppercase a-text-14x22"
+                  >
+                    CÔNG TY CỔ PHẦN TẬP ĐOÀN ĐẦU TƯ ĐỊA ỐC NOVA
+                  </p>
+                  <div
+                    className="mt-8"
+                  >
+                    <p
+                      className="a-text a-text-400 a-text-white a-text-opacity07"
+                    >
+                      Giấy chứng nhận đăng ký doanh nghiệp số 0301444753 do Sở Kế hoạch và Đầu tư TP.HCM cấp lần đầu ngày 18/09/1992
+                    </p>
+                    <br />
+                    <p
+                      className="a-text a-text-400 a-text-white a-text-opacity07"
+                    >
+                      Tòa nhà văn phòng Novaland, 65 Nguyễn Du, Phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh
+                    </p>
+                  </div>
+                  <div
+                    className="o-footer_main_contact"
+                  >
+                    <div
+                      className="o-footer_main_contact_item"
+                    >
+                      <p
+                        className="a-text a-text-400 a-text-white a-text-opacity07"
+                      >
+                        Email:
+                      </p>
+                      <a
+                        className="a-link  "
+                        href="mailto:info@novaland.com.vn"
+                        rel="noreferrer"
+                        target="_self"
+                      >
+                        <p
+                          className="a-text a-text-400 a-text-white a-text-700 a-text-inline"
+                        >
+                          info@novaland.com.vn
+                        </p>
+                      </a>
+                    </div>
+                    <div
+                      className="o-footer_main_contact_item"
+                    >
+                      <p
+                        className="a-text a-text-400 a-text-white a-text-opacity07"
+                      >
+                        Tổng đài CSKH:
+                      </p>
+                      <a
+                        className="a-link  "
+                        href="tel:1900636666"
+                        rel="noreferrer"
+                        target="_self"
+                      >
+                        <p
+                          className="a-text a-text-400 a-text-white a-text-700 a-text-inline"
+                        >
+                          1900 63 6666
+                        </p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="o-container_col col-lg-4"
+          >
+            <div
+              className="o-footer_main_form"
+            >
+              <div
+                className="o-form"
+              >
+                <form
+                  noValidate={true}
+                  onSubmit={[Function]}
+                >
+                  <div
+                    className="o-footer_main_form_input"
+                  >
+                    <div
+                      className="a-input a-input-text"
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                     >
                       <div
                         className="t-investmentSector_item"
                       >
+<<<<<<< HEAD
                         <div
                           className="t-investmentCard"
                           onMouseEnter={[Function]}
@@ -12720,6 +13643,59 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                             </div>
                           </div>
                         </div>
+=======
+                        <input
+                          className="a-input_input"
+                          name="fullname"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          placeholder="Họ và tên"
+                          type="text"
+                          value=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="o-footer_main_form_input"
+                  >
+                    <div
+                      className="a-input a-input-text"
+                    >
+                      <div
+                        className="a-input_wrap"
+                      >
+                        <input
+                          className="a-input_input"
+                          name="phone"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          placeholder="Số điện thoại"
+                          type="text"
+                          value=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="o-footer_main_form_input"
+                  >
+                    <div
+                      className="a-input a-input-text"
+                    >
+                      <div
+                        className="a-input_wrap"
+                      >
+                        <input
+                          className="a-input_input"
+                          name="email"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          placeholder="Email"
+                          type="text"
+                          value=""
+                        />
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                       </div>
                     </div>
                   </div>
@@ -12841,6 +13817,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                                 }
                               />
                             </div>
+<<<<<<< HEAD
                             <div
                               className="t-investmentCard_button"
                             >
@@ -12867,6 +13844,8 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                                 </button>
                               </a>
                             </div>
+=======
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                           </div>
                         </div>
                       </div>
@@ -13348,6 +14327,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                     }
                     tabIndex={-1}
                   >
+<<<<<<< HEAD
                     <div
                       className="o-carousel_item"
                     >
@@ -13473,6 +14453,111 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                     </div>
                   </div>
                 </div>
+=======
+                    Bất động sản Trung Tâm 
+                  </p>
+                </a>
+              </li>
+              <li
+                className="o-footer_main_menu_nav"
+              >
+                <a
+                  aria-current="page"
+                  className="a-link   active"
+                  href="/"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  <p
+                    className="a-text a-text-lavenderGray a-text-400 a-text-inline"
+                  >
+                    Đô Thị Vệ Tinh
+                  </p>
+                </a>
+              </li>
+              <li
+                className="o-footer_main_menu_nav"
+              >
+                <a
+                  aria-current="page"
+                  className="a-link   active"
+                  href="/"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  <p
+                    className="a-text a-text-lavenderGray a-text-400 a-text-inline"
+                  >
+                    Đô Thị Nghỉ Dưỡng
+                  </p>
+                </a>
+              </li>
+              <li
+                className="o-footer_main_menu_nav"
+              >
+                <a
+                  aria-current="page"
+                  className="a-link   active"
+                  href="/"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  <p
+                    className="a-text a-text-lavenderGray a-text-400 a-text-inline"
+                  >
+                    Bất Động Sản Công Nghiệp
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div
+            className="o-footer_main_menu_wrap"
+          >
+            <div
+              className="o-footer_main_menu_title"
+            >
+              <p
+                className="a-text a-text-white a-text-14x22 a-text-700 a-text-uppercase"
+              >
+                THEO DÕI NOVALAND TRÊN
+              </p>
+            </div>
+            <ul
+              className="o-footer_main_menu_icon"
+            >
+              <div
+                className="o-footer_main_menu_icon_item"
+              >
+                <a
+                  aria-current="page"
+                  className="a-link   active"
+                  href="/"
+                  onClick={[Function]}
+                  target="_self"
+                  title="zalo"
+                >
+                  <i
+                    className="a-icon a-icon-zalo a-icon-40"
+                  />
+                </a>
+              </div>
+              <div
+                className="o-footer_main_menu_icon_item"
+              >
+                <a
+                  aria-current="page"
+                  className="a-link   active"
+                  href="/"
+                  onClick={[Function]}
+                  target="_self"
+                  title="youtube"
+                >
+                  <i
+                    className="a-icon a-icon-youtube a-icon-40"
+                  />
+                </a>
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
               </div>
               <div
                 aria-hidden={true}
@@ -13636,6 +14721,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                 }
                 tabIndex="-1"
               >
+<<<<<<< HEAD
                 <div>
                   <div
                     className="o-carousel_wrap"
@@ -19102,6 +20188,8 @@ exports[`Storyshots Components/templates/MainLayout Normal 1`] = `
                 onClick={[Function]}
                 target="_self"
               >
+=======
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                 <p
                   className="a-text a-text-400 a-text-white a-text-opacity07"
                 >
@@ -19123,8 +20211,11 @@ exports[`Storyshots Components/templates/MainLayout Normal 1`] = `
       </div>
     </div>
   </footer>
+<<<<<<< HEAD
 >>>>>>> :zap:feat(NLW-28-projectListMap): run test
 >>>>>>> :zap:feat(NLW-28-projectListMap): run test
+=======
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
 </div>
 `;
 
@@ -21021,7 +22112,17 @@ exports[`Storyshots Components/templates/ProjectMap Normal 1`] = `
                             }
                             tabIndex="-1"
                           >
+<<<<<<< HEAD
                             <div>
+=======
+                            <a
+                              aria-current="page"
+                              className="a-link   active"
+                              href="/"
+                              onClick={[Function]}
+                              target="_self"
+                            >
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                               <div
                                 className="o-carousel_wrap"
                                 style={
@@ -21060,6 +22161,7 @@ exports[`Storyshots Components/templates/ProjectMap Normal 1`] = `
                                     "display": "inline-block",
                                     "width": "50%",
                                   }
+<<<<<<< HEAD
                                 }
                                 tabIndex={-1}
                               >
@@ -21086,6 +22188,56 @@ exports[`Storyshots Components/templates/ProjectMap Normal 1`] = `
                               </div>
                             </div>
                             <div>
+=======
+                                />
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  aria-hidden={true}
+                  className="slick-slide slick-cloned"
+                  data-index={13}
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "width": 0,
+                    }
+                  }
+                  tabIndex="-1"
+                >
+                  <div>
+                    <div
+                      className="o-carousel_wrap"
+                      style={
+                        Object {
+                          "display": "inline-block",
+                          "width": "100%",
+                        }
+                      }
+                      tabIndex={-1}
+                    >
+                      <div
+                        className="o-carousel_item"
+                      >
+                        <div
+                          className="t-outstandingProject_item"
+                        >
+                          <div
+                            className="t-outstandingProjectCard"
+                          >
+                            <a
+                              aria-current="page"
+                              className="a-link   active"
+                              href="/"
+                              onClick={[Function]}
+                              target="_self"
+                            >
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                               <div
                                 className="o-carousel_wrap"
                                 style={
@@ -21277,7 +22429,17 @@ exports[`Storyshots Components/templates/ProjectMap Normal 1`] = `
                             }
                             tabIndex="-1"
                           >
+<<<<<<< HEAD
                             <div>
+=======
+                            <a
+                              aria-current="page"
+                              className="a-link   active"
+                              href="/"
+                              onClick={[Function]}
+                              target="_self"
+                            >
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                               <div
                                 className="o-carousel_wrap"
                                 style={
@@ -21740,6 +22902,7 @@ exports[`Storyshots Components/templates/ProjectListMap Normal 1`] = `
                           }
                         >
 <<<<<<< HEAD
+<<<<<<< HEAD
                           <div
                             aria-hidden={false}
                             className="slick-slide slick-active slick-current"
@@ -21789,8 +22952,9 @@ exports[`Storyshots Components/templates/ProjectListMap Normal 1`] = `
                             <div />
                           </div>
 =======
+=======
+>>>>>>> :zap:feat(NLW-28-projectListMap): fix conflict
                           
->>>>>>> :zap:feat(NLW-28-projectListMap): run test
                         </div>
                       </div>
                       
