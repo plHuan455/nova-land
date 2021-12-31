@@ -18,6 +18,7 @@ export const iconList = {
   carretDownBlack: 'carretDownBlack',
   arrowNextWhite2: 'arrowNextWhite2',
   arrowDownBrown: 'arrowDownBrown',
+  arrowNextYellowBrown: 'arrowNextYellowBrown',
 };
 
 export type IconName = keyof typeof iconList;
