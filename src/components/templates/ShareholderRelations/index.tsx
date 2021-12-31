@@ -41,6 +41,7 @@ export const ShareholderCard: React.FC<ShareholderCardProps> = ({
     <div className="t-shareholderCard_wrapper">
       <div className="t-shareholderCard_title">
         <Heading
+          type="h3"
           modifiers={['600', 'arsenic', 'capitalize', 'fontNoto']}
           content={title}
         />
