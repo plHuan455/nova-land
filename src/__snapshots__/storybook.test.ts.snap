@@ -228,7 +228,6 @@ exports[`Storyshots Components/atoms/Input Normal 1`] = `
 exports[`Storyshots Components/atoms/Link Normal 1`] = `
 Array [
   <a
-    aria-current={null}
     className="a-link  "
     href="/home"
     onClick={[Function]}
@@ -238,7 +237,6 @@ Array [
   </a>,
   " ",
   <a
-    aria-current={null}
     className="a-link  "
     href="/about"
     onClick={[Function]}
@@ -256,7 +254,11 @@ exports[`Storyshots Components/atoms/Link Use External 1`] = `
   rel="noreferrer"
   target="_blank"
 >
-  Google
+  <p
+    className="a-text a-text-goldenBrown"
+  >
+    Google
+  </p>
 </a>
 `;
 
@@ -333,7 +335,6 @@ exports[`Storyshots Components/molecules/EcoCard Normal 1`] = `
       className="a-link   active"
       href="/"
       onClick={[Function]}
-      style={Object {}}
       target="_self"
     >
       <div
@@ -1257,7 +1258,6 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
                   className="a-link   active"
                   href="/"
                   onClick={[Function]}
-                  style={Object {}}
                   target="_self"
                 >
                   <div
@@ -1579,7 +1579,6 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
                 className="a-link   active"
                 href="/"
                 onClick={[Function]}
-                style={Object {}}
                 target="_self"
               >
                 <p
@@ -1597,7 +1596,6 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
                 className="a-link   active"
                 href="/"
                 onClick={[Function]}
-                style={Object {}}
                 target="_self"
               >
                 <p
@@ -1615,7 +1613,6 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
                 className="a-link   active"
                 href="/"
                 onClick={[Function]}
-                style={Object {}}
                 target="_self"
               >
                 <p
@@ -1633,7 +1630,6 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
                 className="a-link   active"
                 href="/"
                 onClick={[Function]}
-                style={Object {}}
                 target="_self"
               >
                 <p
@@ -1651,7 +1647,6 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
                 className="a-link   active"
                 href="/"
                 onClick={[Function]}
-                style={Object {}}
                 target="_self"
               >
                 <p
@@ -1669,7 +1664,6 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
                 className="a-link   active"
                 href="/"
                 onClick={[Function]}
-                style={Object {}}
                 target="_self"
               >
                 <p
@@ -1704,7 +1698,6 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
                 className="a-link   active"
                 href="/"
                 onClick={[Function]}
-                style={Object {}}
                 target="_self"
               >
                 <p
@@ -1722,7 +1715,6 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
                 className="a-link   active"
                 href="/"
                 onClick={[Function]}
-                style={Object {}}
                 target="_self"
               >
                 <p
@@ -1740,7 +1732,6 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
                 className="a-link   active"
                 href="/"
                 onClick={[Function]}
-                style={Object {}}
                 target="_self"
               >
                 <p
@@ -1758,7 +1749,6 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
                 className="a-link   active"
                 href="/"
                 onClick={[Function]}
-                style={Object {}}
                 target="_self"
               >
                 <p
@@ -1776,7 +1766,6 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
                 className="a-link   active"
                 href="/"
                 onClick={[Function]}
-                style={Object {}}
                 target="_self"
               >
                 <p
@@ -1794,7 +1783,6 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
                 className="a-link   active"
                 href="/"
                 onClick={[Function]}
-                style={Object {}}
                 target="_self"
               >
                 <p
@@ -1812,7 +1800,6 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
                 className="a-link   active"
                 href="/"
                 onClick={[Function]}
-                style={Object {}}
                 target="_self"
               >
                 <p
@@ -1847,7 +1834,6 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
                 className="a-link   active"
                 href="/"
                 onClick={[Function]}
-                style={Object {}}
                 target="_self"
                 title="zalo"
               >
@@ -1864,7 +1850,6 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
                 className="a-link   active"
                 href="/"
                 onClick={[Function]}
-                style={Object {}}
                 target="_self"
                 title="youtube"
               >
@@ -1881,7 +1866,6 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
                 className="a-link   active"
                 href="/"
                 onClick={[Function]}
-                style={Object {}}
                 target="_self"
                 title="facebook"
               >
@@ -1915,7 +1899,6 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
               className="a-link   active"
               href="/"
               onClick={[Function]}
-              style={Object {}}
               target="_self"
             >
               <p
@@ -1933,7 +1916,6 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
               className="a-link   active"
               href="/"
               onClick={[Function]}
-              style={Object {}}
               target="_self"
             >
               <p
@@ -1998,7 +1980,6 @@ exports[`Storyshots Components/organisms/Header normal 1`] = `
             className="a-link   active"
             href="/"
             onClick={[Function]}
-            style={Object {}}
             target="_self"
           >
             <div
@@ -2064,7 +2045,6 @@ exports[`Storyshots Components/organisms/Header normal 1`] = `
                   className="a-link o-header_nav_link  active"
                   href="/"
                   onClick={[Function]}
-                  style={Object {}}
                   target="_self"
                 >
                   Trang chủ
@@ -2074,7 +2054,6 @@ exports[`Storyshots Components/organisms/Header normal 1`] = `
                 className="o-header_nav_item"
               >
                 <a
-                  aria-current={null}
                   className="a-link o-header_nav_link "
                   href="/gioi-thieu"
                   onClick={[Function]}
@@ -2087,7 +2066,6 @@ exports[`Storyshots Components/organisms/Header normal 1`] = `
                 className="o-header_nav_item"
               >
                 <a
-                  aria-current={null}
                   className="a-link o-header_nav_link "
                   href="/mua-ban"
                   onClick={[Function]}
@@ -2100,7 +2078,6 @@ exports[`Storyshots Components/organisms/Header normal 1`] = `
                 className="o-header_nav_item"
               >
                 <a
-                  aria-current={null}
                   className="a-link o-header_nav_link "
                   href="/quan-he-dau-tu"
                   onClick={[Function]}
@@ -2113,7 +2090,6 @@ exports[`Storyshots Components/organisms/Header normal 1`] = `
                 className="o-header_nav_item"
               >
                 <a
-                  aria-current={null}
                   className="a-link o-header_nav_link "
                   href="/tin-tuc"
                   onClick={[Function]}
@@ -2126,7 +2102,6 @@ exports[`Storyshots Components/organisms/Header normal 1`] = `
                 className="o-header_nav_item"
               >
                 <a
-                  aria-current={null}
                   className="a-link o-header_nav_link "
                   href="/tuyen-dung"
                   onClick={[Function]}
@@ -2139,7 +2114,6 @@ exports[`Storyshots Components/organisms/Header normal 1`] = `
                 className="o-header_nav_item"
               >
                 <a
-                  aria-current={null}
                   className="a-link o-header_nav_link "
                   href="/lien-he"
                   onClick={[Function]}
@@ -2267,7 +2241,7 @@ exports[`Storyshots Components/organisms/Tabs Normal 1`] = `
           onClick={[Function]}
         >
           <span
-            className="o-tabs_label"
+            className="o-tabs_label "
           >
             Tin Tập Đoàn
           </span>
@@ -2277,7 +2251,7 @@ exports[`Storyshots Components/organisms/Tabs Normal 1`] = `
           onClick={[Function]}
         >
           <span
-            className="o-tabs_label"
+            className="o-tabs_label "
           >
             Tin Thị Trường
           </span>
@@ -2287,7 +2261,7 @@ exports[`Storyshots Components/organisms/Tabs Normal 1`] = `
           onClick={[Function]}
         >
           <span
-            className="o-tabs_label"
+            className="o-tabs_label "
           >
             Tin Dự án
           </span>
@@ -2308,6 +2282,1027 @@ exports[`Storyshots Components/organisms/Tabs Normal 1`] = `
       className="o-tabs_panel"
     >
       Content 3
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/templates/AwardList Normal 1`] = `
+<div
+  className="t-awardList"
+>
+  <div
+    className="container o-container"
+  >
+    <h2
+      className="a-heading a-heading-700 a-heading-fontNoto a-heading-uppercase a-heading-32x48 a-heading-arsenic a-heading-center"
+    >
+      GIẢI THƯỞNG
+    </h2>
+    <div
+      className="t-awardList_desc"
+    >
+      <p
+        className="a-text a-text-400 a-text-fontLexend a-text-davysGrey a-text-center"
+      >
+        Những thành tựu của Tập đoàn Novaland được ghi nhận, vinh danh qua nhiều giải thưởng, danh hiệu uy tín trong và ngoài nước; thể hiện nỗ lực không ngừng trong việc quy hoạch đồng bộ BĐS tại các vị trí chiến lược, kiến tạo cộng đồng nhân văn tiên tiến với môi trường sống tiện nghi, hiện đại, góp phần vào sự phát triển bền vững của xã hội.
+      </p>
+    </div>
+    <div
+      className="t-awardList_tabs"
+    >
+      <div
+        className="o-tabs"
+      >
+        <div
+          className="o-tabs_labels"
+        >
+          <div
+            className="o-tabs_tab o-tabs_tab-active"
+            onClick={[Function]}
+          >
+            <span
+              className="o-tabs_label o-tabs_label-16x24"
+            >
+              2021
+            </span>
+          </div>
+          <div
+            className="o-tabs_tab"
+            onClick={[Function]}
+          >
+            <span
+              className="o-tabs_label o-tabs_label-16x24"
+            >
+              2020
+            </span>
+          </div>
+          <div
+            className="o-tabs_tab"
+            onClick={[Function]}
+          >
+            <span
+              className="o-tabs_label o-tabs_label-16x24"
+            >
+              2019
+            </span>
+          </div>
+          <div
+            className="o-tabs_tab"
+            onClick={[Function]}
+          >
+            <span
+              className="o-tabs_label o-tabs_label-16x24"
+            >
+              2018
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        className="o-tabs_panel o-tabs_panel-active"
+      >
+        <div
+          className="t-awardList_tabs_panelWrap"
+        >
+          <div
+            className="t-awardList_tabs_panelWrap-item"
+          >
+            <div
+              className="t-awardList_card"
+            >
+              <div
+                className="t-awardList_card_img"
+              >
+                <img
+                  alt="award-img"
+                  src="award_1.png"
+                />
+              </div>
+              <div
+                className="t-awardList_card_desc"
+              >
+                <p
+                  className="a-text a-text-fontLexend a-text-arsenic a-text-center"
+                >
+                  Top 10 Chủ đầu tư Bất động sản uy tín
+                </p>
+              </div>
+              <div
+                className="t-awardList_card_year"
+              >
+                <div
+                  className="t-awardList_card_year-clip"
+                >
+                  <h2
+                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                  >
+                    2021
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="t-awardList_tabs_panelWrap-item"
+          >
+            <div
+              className="t-awardList_card"
+            >
+              <div
+                className="t-awardList_card_img"
+              >
+                <img
+                  alt="award-img"
+                  src="award_2.png"
+                />
+              </div>
+              <div
+                className="t-awardList_card_desc"
+              >
+                <p
+                  className="a-text a-text-fontLexend a-text-arsenic a-text-center"
+                >
+                  HR Asia - Nơi làm việc tốt nhất Châu Á
+                </p>
+              </div>
+              <div
+                className="t-awardList_card_year"
+              >
+                <div
+                  className="t-awardList_card_year-clip"
+                >
+                  <h2
+                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                  >
+                    2021
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="t-awardList_tabs_panelWrap-item"
+          >
+            <div
+              className="t-awardList_card"
+            >
+              <div
+                className="t-awardList_card_img"
+              >
+                <img
+                  alt="award-img"
+                  src="award_3.png"
+                />
+              </div>
+              <div
+                className="t-awardList_card_desc"
+              >
+                <p
+                  className="a-text a-text-fontLexend a-text-arsenic a-text-center"
+                >
+                  Nhà phát triển BĐS hạng sang tốt nhất Việt Nam - Luxury Lifestyle Awards
+                </p>
+              </div>
+              <div
+                className="t-awardList_card_year"
+              >
+                <div
+                  className="t-awardList_card_year-clip"
+                >
+                  <h2
+                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                  >
+                    2021
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="t-awardList_tabs_panelWrap-item"
+          >
+            <div
+              className="t-awardList_card"
+            >
+              <div
+                className="t-awardList_card_img"
+              >
+                <img
+                  alt="award-img"
+                  src="award_4.png"
+                />
+              </div>
+              <div
+                className="t-awardList_card_desc"
+              >
+                <p
+                  className="a-text a-text-fontLexend a-text-arsenic a-text-center"
+                >
+                  Chứng nhận Công trình tiêu biểu chào mừng 100 năm Liên Hiệp Quốc
+                </p>
+              </div>
+              <div
+                className="t-awardList_card_year"
+              >
+                <div
+                  className="t-awardList_card_year-clip"
+                >
+                  <h2
+                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                  >
+                    2021
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="t-awardList_tabs_panelWrap-item"
+          >
+            <div
+              className="t-awardList_card"
+            >
+              <div
+                className="t-awardList_card_img"
+              >
+                <img
+                  alt="award-img"
+                  src="award_5.png"
+                />
+              </div>
+              <div
+                className="t-awardList_card_desc"
+              >
+                <p
+                  className="a-text a-text-fontLexend a-text-arsenic a-text-center"
+                >
+                  Nhà phát triển và đầu tư. Bất động sản Tiêu biểu - Nhịp Cầu Đầu Tư
+                </p>
+              </div>
+              <div
+                className="t-awardList_card_year"
+              >
+                <div
+                  className="t-awardList_card_year-clip"
+                >
+                  <h2
+                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                  >
+                    2021
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="t-awardList_tabs_panelWrap-item"
+          >
+            <div
+              className="t-awardList_card"
+            >
+              <div
+                className="t-awardList_card_img"
+              >
+                <img
+                  alt="award-img"
+                  src="award_5.png"
+                />
+              </div>
+              <div
+                className="t-awardList_card_desc"
+              >
+                <p
+                  className="a-text a-text-fontLexend a-text-arsenic a-text-center"
+                >
+                  Nhà phát triển Bất động sản xuất sắc Việt Nam - Euromoney
+                </p>
+              </div>
+              <div
+                className="t-awardList_card_year"
+              >
+                <div
+                  className="t-awardList_card_year-clip"
+                >
+                  <h2
+                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                  >
+                    2021
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="o-tabs_panel"
+      >
+        <div
+          className="t-awardList_tabs_panelWrap"
+        >
+          <div
+            className="t-awardList_tabs_panelWrap-item"
+          >
+            <div
+              className="t-awardList_card"
+            >
+              <div
+                className="t-awardList_card_img"
+              >
+                <img
+                  alt="award-img"
+                  src="award_1.png"
+                />
+              </div>
+              <div
+                className="t-awardList_card_desc"
+              >
+                <p
+                  className="a-text a-text-fontLexend a-text-arsenic a-text-center"
+                >
+                  Top 10 Chủ đầu tư Bất động sản uy tín
+                </p>
+              </div>
+              <div
+                className="t-awardList_card_year"
+              >
+                <div
+                  className="t-awardList_card_year-clip"
+                >
+                  <h2
+                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                  >
+                    2020
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="t-awardList_tabs_panelWrap-item"
+          >
+            <div
+              className="t-awardList_card"
+            >
+              <div
+                className="t-awardList_card_img"
+              >
+                <img
+                  alt="award-img"
+                  src="award_2.png"
+                />
+              </div>
+              <div
+                className="t-awardList_card_desc"
+              >
+                <p
+                  className="a-text a-text-fontLexend a-text-arsenic a-text-center"
+                >
+                  HR Asia - Nơi làm việc tốt nhất Châu Á
+                </p>
+              </div>
+              <div
+                className="t-awardList_card_year"
+              >
+                <div
+                  className="t-awardList_card_year-clip"
+                >
+                  <h2
+                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                  >
+                    2020
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="t-awardList_tabs_panelWrap-item"
+          >
+            <div
+              className="t-awardList_card"
+            >
+              <div
+                className="t-awardList_card_img"
+              >
+                <img
+                  alt="award-img"
+                  src="award_3.png"
+                />
+              </div>
+              <div
+                className="t-awardList_card_desc"
+              >
+                <p
+                  className="a-text a-text-fontLexend a-text-arsenic a-text-center"
+                >
+                  Nhà phát triển BĐS hạng sang tốt nhất Việt Nam - Luxury Lifestyle Awards
+                </p>
+              </div>
+              <div
+                className="t-awardList_card_year"
+              >
+                <div
+                  className="t-awardList_card_year-clip"
+                >
+                  <h2
+                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                  >
+                    2020
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="t-awardList_tabs_panelWrap-item"
+          >
+            <div
+              className="t-awardList_card"
+            >
+              <div
+                className="t-awardList_card_img"
+              >
+                <img
+                  alt="award-img"
+                  src="award_4.png"
+                />
+              </div>
+              <div
+                className="t-awardList_card_desc"
+              >
+                <p
+                  className="a-text a-text-fontLexend a-text-arsenic a-text-center"
+                >
+                  Chứng nhận Công trình tiêu biểu chào mừng 100 năm Liên Hiệp Quốc
+                </p>
+              </div>
+              <div
+                className="t-awardList_card_year"
+              >
+                <div
+                  className="t-awardList_card_year-clip"
+                >
+                  <h2
+                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                  >
+                    2020
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="t-awardList_tabs_panelWrap-item"
+          >
+            <div
+              className="t-awardList_card"
+            >
+              <div
+                className="t-awardList_card_img"
+              >
+                <img
+                  alt="award-img"
+                  src="award_5.png"
+                />
+              </div>
+              <div
+                className="t-awardList_card_desc"
+              >
+                <p
+                  className="a-text a-text-fontLexend a-text-arsenic a-text-center"
+                >
+                  Nhà phát triển và đầu tư. Bất động sản Tiêu biểu - Nhịp Cầu Đầu Tư
+                </p>
+              </div>
+              <div
+                className="t-awardList_card_year"
+              >
+                <div
+                  className="t-awardList_card_year-clip"
+                >
+                  <h2
+                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                  >
+                    2020
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="t-awardList_tabs_panelWrap-item"
+          >
+            <div
+              className="t-awardList_card"
+            >
+              <div
+                className="t-awardList_card_img"
+              >
+                <img
+                  alt="award-img"
+                  src="award_5.png"
+                />
+              </div>
+              <div
+                className="t-awardList_card_desc"
+              >
+                <p
+                  className="a-text a-text-fontLexend a-text-arsenic a-text-center"
+                >
+                  Nhà phát triển Bất động sản xuất sắc Việt Nam - Euromoney
+                </p>
+              </div>
+              <div
+                className="t-awardList_card_year"
+              >
+                <div
+                  className="t-awardList_card_year-clip"
+                >
+                  <h2
+                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                  >
+                    2020
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="o-tabs_panel"
+      >
+        <div
+          className="t-awardList_tabs_panelWrap"
+        >
+          <div
+            className="t-awardList_tabs_panelWrap-item"
+          >
+            <div
+              className="t-awardList_card"
+            >
+              <div
+                className="t-awardList_card_img"
+              >
+                <img
+                  alt="award-img"
+                  src="award_1.png"
+                />
+              </div>
+              <div
+                className="t-awardList_card_desc"
+              >
+                <p
+                  className="a-text a-text-fontLexend a-text-arsenic a-text-center"
+                >
+                  Top 10 Chủ đầu tư Bất động sản uy tín
+                </p>
+              </div>
+              <div
+                className="t-awardList_card_year"
+              >
+                <div
+                  className="t-awardList_card_year-clip"
+                >
+                  <h2
+                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                  >
+                    2019
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="t-awardList_tabs_panelWrap-item"
+          >
+            <div
+              className="t-awardList_card"
+            >
+              <div
+                className="t-awardList_card_img"
+              >
+                <img
+                  alt="award-img"
+                  src="award_2.png"
+                />
+              </div>
+              <div
+                className="t-awardList_card_desc"
+              >
+                <p
+                  className="a-text a-text-fontLexend a-text-arsenic a-text-center"
+                >
+                  HR Asia - Nơi làm việc tốt nhất Châu Á
+                </p>
+              </div>
+              <div
+                className="t-awardList_card_year"
+              >
+                <div
+                  className="t-awardList_card_year-clip"
+                >
+                  <h2
+                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                  >
+                    2019
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="t-awardList_tabs_panelWrap-item"
+          >
+            <div
+              className="t-awardList_card"
+            >
+              <div
+                className="t-awardList_card_img"
+              >
+                <img
+                  alt="award-img"
+                  src="award_3.png"
+                />
+              </div>
+              <div
+                className="t-awardList_card_desc"
+              >
+                <p
+                  className="a-text a-text-fontLexend a-text-arsenic a-text-center"
+                >
+                  Nhà phát triển BĐS hạng sang tốt nhất Việt Nam - Luxury Lifestyle Awards
+                </p>
+              </div>
+              <div
+                className="t-awardList_card_year"
+              >
+                <div
+                  className="t-awardList_card_year-clip"
+                >
+                  <h2
+                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                  >
+                    2019
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="t-awardList_tabs_panelWrap-item"
+          >
+            <div
+              className="t-awardList_card"
+            >
+              <div
+                className="t-awardList_card_img"
+              >
+                <img
+                  alt="award-img"
+                  src="award_4.png"
+                />
+              </div>
+              <div
+                className="t-awardList_card_desc"
+              >
+                <p
+                  className="a-text a-text-fontLexend a-text-arsenic a-text-center"
+                >
+                  Chứng nhận Công trình tiêu biểu chào mừng 100 năm Liên Hiệp Quốc
+                </p>
+              </div>
+              <div
+                className="t-awardList_card_year"
+              >
+                <div
+                  className="t-awardList_card_year-clip"
+                >
+                  <h2
+                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                  >
+                    2019
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="t-awardList_tabs_panelWrap-item"
+          >
+            <div
+              className="t-awardList_card"
+            >
+              <div
+                className="t-awardList_card_img"
+              >
+                <img
+                  alt="award-img"
+                  src="award_5.png"
+                />
+              </div>
+              <div
+                className="t-awardList_card_desc"
+              >
+                <p
+                  className="a-text a-text-fontLexend a-text-arsenic a-text-center"
+                >
+                  Nhà phát triển và đầu tư. Bất động sản Tiêu biểu - Nhịp Cầu Đầu Tư
+                </p>
+              </div>
+              <div
+                className="t-awardList_card_year"
+              >
+                <div
+                  className="t-awardList_card_year-clip"
+                >
+                  <h2
+                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                  >
+                    2019
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="t-awardList_tabs_panelWrap-item"
+          >
+            <div
+              className="t-awardList_card"
+            >
+              <div
+                className="t-awardList_card_img"
+              >
+                <img
+                  alt="award-img"
+                  src="award_5.png"
+                />
+              </div>
+              <div
+                className="t-awardList_card_desc"
+              >
+                <p
+                  className="a-text a-text-fontLexend a-text-arsenic a-text-center"
+                >
+                  Nhà phát triển Bất động sản xuất sắc Việt Nam - Euromoney
+                </p>
+              </div>
+              <div
+                className="t-awardList_card_year"
+              >
+                <div
+                  className="t-awardList_card_year-clip"
+                >
+                  <h2
+                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                  >
+                    2019
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="o-tabs_panel"
+      >
+        <div
+          className="t-awardList_tabs_panelWrap"
+        >
+          <div
+            className="t-awardList_tabs_panelWrap-item"
+          >
+            <div
+              className="t-awardList_card"
+            >
+              <div
+                className="t-awardList_card_img"
+              >
+                <img
+                  alt="award-img"
+                  src="award_1.png"
+                />
+              </div>
+              <div
+                className="t-awardList_card_desc"
+              >
+                <p
+                  className="a-text a-text-fontLexend a-text-arsenic a-text-center"
+                >
+                  Top 10 Chủ đầu tư Bất động sản uy tín
+                </p>
+              </div>
+              <div
+                className="t-awardList_card_year"
+              >
+                <div
+                  className="t-awardList_card_year-clip"
+                >
+                  <h2
+                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                  >
+                    2018
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="t-awardList_tabs_panelWrap-item"
+          >
+            <div
+              className="t-awardList_card"
+            >
+              <div
+                className="t-awardList_card_img"
+              >
+                <img
+                  alt="award-img"
+                  src="award_2.png"
+                />
+              </div>
+              <div
+                className="t-awardList_card_desc"
+              >
+                <p
+                  className="a-text a-text-fontLexend a-text-arsenic a-text-center"
+                >
+                  HR Asia - Nơi làm việc tốt nhất Châu Á
+                </p>
+              </div>
+              <div
+                className="t-awardList_card_year"
+              >
+                <div
+                  className="t-awardList_card_year-clip"
+                >
+                  <h2
+                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                  >
+                    2018
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="t-awardList_tabs_panelWrap-item"
+          >
+            <div
+              className="t-awardList_card"
+            >
+              <div
+                className="t-awardList_card_img"
+              >
+                <img
+                  alt="award-img"
+                  src="award_3.png"
+                />
+              </div>
+              <div
+                className="t-awardList_card_desc"
+              >
+                <p
+                  className="a-text a-text-fontLexend a-text-arsenic a-text-center"
+                >
+                  Nhà phát triển BĐS hạng sang tốt nhất Việt Nam - Luxury Lifestyle Awards
+                </p>
+              </div>
+              <div
+                className="t-awardList_card_year"
+              >
+                <div
+                  className="t-awardList_card_year-clip"
+                >
+                  <h2
+                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                  >
+                    2018
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="t-awardList_tabs_panelWrap-item"
+          >
+            <div
+              className="t-awardList_card"
+            >
+              <div
+                className="t-awardList_card_img"
+              >
+                <img
+                  alt="award-img"
+                  src="award_4.png"
+                />
+              </div>
+              <div
+                className="t-awardList_card_desc"
+              >
+                <p
+                  className="a-text a-text-fontLexend a-text-arsenic a-text-center"
+                >
+                  Chứng nhận Công trình tiêu biểu chào mừng 100 năm Liên Hiệp Quốc
+                </p>
+              </div>
+              <div
+                className="t-awardList_card_year"
+              >
+                <div
+                  className="t-awardList_card_year-clip"
+                >
+                  <h2
+                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                  >
+                    2018
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="t-awardList_tabs_panelWrap-item"
+          >
+            <div
+              className="t-awardList_card"
+            >
+              <div
+                className="t-awardList_card_img"
+              >
+                <img
+                  alt="award-img"
+                  src="award_5.png"
+                />
+              </div>
+              <div
+                className="t-awardList_card_desc"
+              >
+                <p
+                  className="a-text a-text-fontLexend a-text-arsenic a-text-center"
+                >
+                  Nhà phát triển và đầu tư. Bất động sản Tiêu biểu - Nhịp Cầu Đầu Tư
+                </p>
+              </div>
+              <div
+                className="t-awardList_card_year"
+              >
+                <div
+                  className="t-awardList_card_year-clip"
+                >
+                  <h2
+                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                  >
+                    2018
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="t-awardList_tabs_panelWrap-item"
+          >
+            <div
+              className="t-awardList_card"
+            >
+              <div
+                className="t-awardList_card_img"
+              >
+                <img
+                  alt="award-img"
+                  src="award_5.png"
+                />
+              </div>
+              <div
+                className="t-awardList_card_desc"
+              >
+                <p
+                  className="a-text a-text-fontLexend a-text-arsenic a-text-center"
+                >
+                  Nhà phát triển Bất động sản xuất sắc Việt Nam - Euromoney
+                </p>
+              </div>
+              <div
+                className="t-awardList_card_year"
+              >
+                <div
+                  className="t-awardList_card_year-clip"
+                >
+                  <h2
+                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                  >
+                    2018
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -3073,7 +4068,6 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                             className="a-link   active"
                             href="/"
                             onClick={[Function]}
-                            style={Object {}}
                             target="_self"
                           >
                             <div
@@ -3177,7 +4171,6 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                             className="a-link   active"
                             href="/"
                             onClick={[Function]}
-                            style={Object {}}
                             target="_self"
                           >
                             <div
@@ -3281,7 +4274,6 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                             className="a-link   active"
                             href="/"
                             onClick={[Function]}
-                            style={Object {}}
                             target="_self"
                           >
                             <div
@@ -3385,7 +4377,6 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                             className="a-link   active"
                             href="/"
                             onClick={[Function]}
-                            style={Object {}}
                             target="_self"
                           >
                             <div
@@ -3489,7 +4480,6 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                             className="a-link   active"
                             href="/"
                             onClick={[Function]}
-                            style={Object {}}
                             target="_self"
                           >
                             <div
@@ -3583,7 +4573,6 @@ exports[`Storyshots Components/templates/HeroBanner Normal 1`] = `
     className="o-carousel o-carousel-hasarrow"
   >
     <div
-<<<<<<< HEAD
       className="slick-slider slick-initialized"
       dir="ltr"
     >
@@ -3591,53 +4580,6 @@ exports[`Storyshots Components/templates/HeroBanner Normal 1`] = `
         className="o-carousel_arrow o-carousel_arrow_prev slick-arrow slick-prev slick-disabled t-heroBanner_arrow-prev"
         onClick={null}
       />
-=======
-      className="t-homeNewsCard_thumbnail"
-    >
-      <a
-        aria-current="page"
-        className="a-link   active"
-        href="/"
-        onClick={[Function]}
-        style={Object {}}
-        target="_self"
-      >
-        <div
-          className="a-image a-image-1x1"
-        >
-          <img
-            alt="HomeNewsCard"
-            loading="lazy"
-            src="img_homeNewsCard.png"
-          />
-        </div>
-      </a>
-    </div>
-    <div
-      className="t-homeNewsCard_wrapper"
-    >
-      <div
-        className="t-homeNewsCard_title"
-      >
-        <a
-          aria-current="page"
-          className="a-link   active"
-          href="/"
-          onClick={[Function]}
-          style={Object {}}
-          target="_self"
-        >
-          <p
-            className="a-text a-text-16x24 a-text-600 a-text-arsenic"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "Người dân TP.HCM đón Giáng sinh sớm, check-in cùng cây thông 25 m",
-              }
-            }
-          />
-        </a>
-      </div>
->>>>>>> :hammer:feat(NWL-17): fix conflict
       <div
         className="slick-list"
         onClick={[Function]}
@@ -3692,18 +4634,8 @@ exports[`Storyshots Components/templates/HeroBanner Normal 1`] = `
                 }
                 tabIndex={-1}
               >
-<<<<<<< HEAD
                 <div
                   className="o-carousel_item"
-=======
-                <a
-                  aria-current="page"
-                  className="a-link   active"
-                  href="/"
-                  onClick={[Function]}
-                  style={Object {}}
-                  target="_self"
->>>>>>> :hammer:feat(NWL-17): fix conflict
                 >
                   <div
                     className="a-image a-image-1371x620"
@@ -3941,7 +4873,6 @@ exports[`Storyshots Components/templates/HomeNews Home News Card 1`] = `
         className="a-link   active"
         href="/"
         onClick={[Function]}
-        style={Object {}}
         target="_self"
       >
         <div
@@ -3966,7 +4897,6 @@ exports[`Storyshots Components/templates/HomeNews Home News Card 1`] = `
           className="a-link   active"
           href="/"
           onClick={[Function]}
-          style={Object {}}
           target="_self"
         >
           <p
@@ -4064,7 +4994,7 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
             onClick={[Function]}
           >
             <span
-              className="o-tabs_label"
+              className="o-tabs_label "
             >
               Tin Tập Đoàn
             </span>
@@ -4074,7 +5004,7 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
             onClick={[Function]}
           >
             <span
-              className="o-tabs_label"
+              className="o-tabs_label "
             >
               Tin Thị Trường
             </span>
@@ -4084,7 +5014,7 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
             onClick={[Function]}
           >
             <span
-              className="o-tabs_label"
+              className="o-tabs_label "
             >
               Tin Dự Án
             </span>
@@ -4111,7 +5041,6 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
                   className="a-link   active"
                   href="/"
                   onClick={[Function]}
-                  style={Object {}}
                   target="_self"
                 >
                   <div
@@ -4136,7 +5065,6 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
                     className="a-link   active"
                     href="/"
                     onClick={[Function]}
-                    style={Object {}}
                     target="_self"
                   >
                     <p
@@ -4217,7 +5145,6 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
                   className="a-link   active"
                   href="/"
                   onClick={[Function]}
-                  style={Object {}}
                   target="_self"
                 >
                   <div
@@ -4242,7 +5169,6 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
                     className="a-link   active"
                     href="/"
                     onClick={[Function]}
-                    style={Object {}}
                     target="_self"
                   >
                     <p
@@ -4323,7 +5249,6 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
                   className="a-link   active"
                   href="/"
                   onClick={[Function]}
-                  style={Object {}}
                   target="_self"
                 >
                   <div
@@ -4348,7 +5273,6 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
                     className="a-link   active"
                     href="/"
                     onClick={[Function]}
-                    style={Object {}}
                     target="_self"
                   >
                     <p
@@ -4437,7 +5361,6 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
                   className="a-link   active"
                   href="/"
                   onClick={[Function]}
-                  style={Object {}}
                   target="_self"
                 >
                   <div
@@ -4462,7 +5385,6 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
                     className="a-link   active"
                     href="/"
                     onClick={[Function]}
-                    style={Object {}}
                     target="_self"
                   >
                     <p
@@ -4543,7 +5465,6 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
                   className="a-link   active"
                   href="/"
                   onClick={[Function]}
-                  style={Object {}}
                   target="_self"
                 >
                   <div
@@ -4568,7 +5489,6 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
                     className="a-link   active"
                     href="/"
                     onClick={[Function]}
-                    style={Object {}}
                     target="_self"
                   >
                     <p
@@ -4649,7 +5569,6 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
                   className="a-link   active"
                   href="/"
                   onClick={[Function]}
-                  style={Object {}}
                   target="_self"
                 >
                   <div
@@ -4674,7 +5593,6 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
                     className="a-link   active"
                     href="/"
                     onClick={[Function]}
-                    style={Object {}}
                     target="_self"
                   >
                     <p
@@ -4755,7 +5673,6 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
                   className="a-link   active"
                   href="/"
                   onClick={[Function]}
-                  style={Object {}}
                   target="_self"
                 >
                   <div
@@ -4780,7 +5697,6 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
                     className="a-link   active"
                     href="/"
                     onClick={[Function]}
-                    style={Object {}}
                     target="_self"
                   >
                     <p
@@ -4869,7 +5785,6 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
                   className="a-link   active"
                   href="/"
                   onClick={[Function]}
-                  style={Object {}}
                   target="_self"
                 >
                   <div
@@ -4894,7 +5809,6 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
                     className="a-link   active"
                     href="/"
                     onClick={[Function]}
-                    style={Object {}}
                     target="_self"
                   >
                     <p
@@ -4975,7 +5889,6 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
                   className="a-link   active"
                   href="/"
                   onClick={[Function]}
-                  style={Object {}}
                   target="_self"
                 >
                   <div
@@ -5000,7 +5913,6 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
                     className="a-link   active"
                     href="/"
                     onClick={[Function]}
-                    style={Object {}}
                     target="_self"
                   >
                     <p
@@ -5188,134 +6100,6 @@ exports[`Storyshots Components/templates/InvestmentSector Card 1`] = `
           className="a-link   active"
           href="/"
           onClick={[Function]}
-          style={Object {}}
-          target="_self"
-        >
-          <button
-            className="a-button a-button-secondary"
-            disabled={false}
-            type="button"
-          >
-            <p
-              className="a-text a-text-16x24 a-text-black085 a-text-fontLexend a-text-400 a-text-capitalize a-text-center"
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "Tìm Hiểu Thêm",
-                }
-              }
-            />
-          </button>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Components/templates/InvestmentSector Card 1`] = `
-<div
-  style={
-    Object {
-      "maxWidth": "450px",
-    }
-  }
->
-  <div
-    className="t-investmentCard"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-  >
-    <div
-      className="t-investmentCard_main"
-    >
-      <div
-        className="t-investmentCard_icon"
-      >
-        <i
-          className="a-icon a-icon-building a-icon-120"
-        />
-      </div>
-      <div
-        className="t-investmentCard_title"
-      >
-        <h2
-          className="a-heading a-heading-32x48 a-heading-700 a-heading-raisinBlack a-heading-uppercase a-heading-fontNoto"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "BĐS TRUNG TÂM",
-            }
-          }
-        />
-      </div>
-      <div
-        className="t-investmentCard_desc t-investmentCard_desc-main"
-      >
-        <p
-          className="a-text a-text-arsenic a-text-400 a-text-fontLexend"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.",
-            }
-          }
-        />
-      </div>
-      <div
-        className="t-investmentCard_thumbnail"
-      >
-        <div
-          className="a-image a-image-16x9"
-        >
-          <img
-            alt="InvestmentCard"
-            loading="lazy"
-            src="img_investmentSector.png"
-          />
-        </div>
-      </div>
-    </div>
-    <div
-      className="t-investmentCard_layer "
-    >
-      <div
-        className="t-investmentCard_icon"
-      >
-        <i
-          className="a-icon a-icon-buildingBlue a-icon-120"
-        />
-      </div>
-      <div
-        className="t-investmentCard_title"
-      >
-        <h2
-          className="a-heading a-heading-32x48 a-heading-700 a-heading-white a-heading-uppercase a-heading-fontNoto"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "BĐS TRUNG TÂM",
-            }
-          }
-        />
-      </div>
-      <div
-        className="t-investmentCard_desc t-investmentCard_desc-layer"
-      >
-        <p
-          className="a-text a-text-white a-text-400 a-text-fontLexend"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.",
-            }
-          }
-        />
-      </div>
-      <div
-        className="t-investmentCard_button"
-      >
-        <a
-          aria-current="page"
-          className="a-link   active"
-          href="/"
-          onClick={[Function]}
-          style={Object {}}
           target="_self"
         >
           <button
@@ -5531,7 +6315,6 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
-                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -5681,7 +6464,6 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
-                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -5831,7 +6613,6 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
-                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -5982,7 +6763,6 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
-                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -6133,7 +6913,6 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
-                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -6284,7 +7063,6 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
-                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -6435,7 +7213,6 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
-                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -6586,7 +7363,6 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
-                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -6736,7 +7512,6 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
-                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -6886,7 +7661,6 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
-                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -7036,7 +7810,6 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
-                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -7186,7 +7959,6 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
-                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -7336,7 +8108,6 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
-                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -7566,7 +8337,6 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
-                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -7716,7 +8486,6 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
-                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -7866,7 +8635,6 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
-                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -8016,7 +8784,6 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
-                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -8166,7 +8933,6 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
-                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -8317,7 +9083,6 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
-                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -8468,7 +9233,6 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
-                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -8619,7 +9383,6 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
-                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -8770,7 +9533,6 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
-                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -8921,7 +9683,6 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
-                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -9071,7 +9832,6 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
-                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -9221,7 +9981,6 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
-                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -9371,7 +10130,6 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
-                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -9521,7 +10279,6 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
-                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -9671,7 +10428,6 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                                 className="a-link   active"
                                 href="/"
                                 onClick={[Function]}
-                                style={Object {}}
                                 target="_self"
                               >
                                 <button
@@ -9707,6 +10463,1011 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
       </div>
     </div>
   </div>
+</div>
+`;
+
+exports[`Storyshots Components/templates/MainLayout Normal 1`] = `
+<div
+  className="t-mainLayout"
+>
+  <header
+    className="o-header"
+  >
+    <div
+      className="container o-container"
+    >
+      <div
+        className="o-header_wrapper"
+      >
+        <div
+          className="o-header_iconMenu"
+          onClick={[Function]}
+        >
+          <span />
+          <span />
+          <span />
+        </div>
+        <div
+          className="o-header_left"
+        >
+          <a
+            aria-current="page"
+            className="a-link   active"
+            href="/"
+            onClick={[Function]}
+            target="_self"
+          >
+            <div
+              className="o-header_logo"
+            >
+              <div
+                className="a-image a-image-logo"
+              >
+                <img
+                  alt="replacing"
+                  loading="lazy"
+                  src="logo.svg"
+                />
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          className="o-header_right"
+        >
+          <div
+            className="o-header_menu"
+          >
+            <ul
+              className="o-header_nav"
+            >
+              <div
+                className="o-header_search mb"
+              >
+                <div
+                  className="o-header_search_panel_input"
+                >
+                  <div
+                    className="a-input a-input-text"
+                  >
+                    <div
+                      className="a-input_wrap"
+                    >
+                      <input
+                        autoComplete="off"
+                        className="a-input_input"
+                        onKeyPress={[Function]}
+                        placeholder="Tìm kiếm"
+                        type="text"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="o-header_search_panel_input_icon"
+                    onClick={[Function]}
+                  >
+                    <i
+                      className="a-icon a-icon-search a-icon-24"
+                    />
+                  </div>
+                </div>
+              </div>
+              <li
+                className="o-header_nav_item"
+              >
+                <a
+                  aria-current="page"
+                  className="a-link o-header_nav_link  active"
+                  href="/"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  Trang chủ
+                </a>
+              </li>
+              <li
+                className="o-header_nav_item"
+              >
+                <a
+                  className="a-link o-header_nav_link "
+                  href="/gioi-thieu"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  giới thiệu
+                </a>
+              </li>
+              <li
+                className="o-header_nav_item"
+              >
+                <a
+                  className="a-link o-header_nav_link "
+                  href="/mua-ban"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  mua bán
+                </a>
+              </li>
+              <li
+                className="o-header_nav_item"
+              >
+                <a
+                  className="a-link o-header_nav_link "
+                  href="/quan-he-dau-tu"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  quan hệ đầu tư
+                </a>
+              </li>
+              <li
+                className="o-header_nav_item"
+              >
+                <a
+                  className="a-link o-header_nav_link "
+                  href="/tin-tuc"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  tin tức
+                </a>
+              </li>
+              <li
+                className="o-header_nav_item"
+              >
+                <a
+                  className="a-link o-header_nav_link "
+                  href="/tuyen-dung"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  tuyển dụng
+                </a>
+              </li>
+              <li
+                className="o-header_nav_item"
+              >
+                <a
+                  className="a-link o-header_nav_link "
+                  href="/lien-he"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  liên hệ
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div
+            className="o-header_languagePicker"
+          >
+            <div
+              className="o-header_languagePicker_value"
+              onClick={[Function]}
+            >
+              <p
+                className="a-text a-text-16x24 a-text-jet a-text-400 a-text-uppercase"
+              >
+                VN
+              </p>
+              <div
+                className="o-header_languagePicker_icon"
+              >
+                <i
+                  className="a-icon a-icon-carretDownBlack a-icon-24"
+                />
+              </div>
+            </div>
+            <ul
+              className="o-header_languagePicker_list"
+            >
+              <li
+                className="o-header_languagePicker_list_item active"
+                onClick={[Function]}
+              >
+                <p
+                  className="a-text a-text-16x24 a-text-jet a-text-400 a-text-uppercase"
+                >
+                  VN
+                </p>
+              </li>
+              <li
+                className="o-header_languagePicker_list_item "
+                onClick={[Function]}
+              >
+                <p
+                  className="a-text a-text-16x24 a-text-jet a-text-400 a-text-uppercase"
+                >
+                  EN
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div
+            className="o-header_search_wrap"
+          >
+            <div
+              className="o-header_search pc"
+              onClick={[Function]}
+            >
+              <i
+                className="a-icon a-icon-search a-icon-24"
+              />
+            </div>
+            <div
+              className="o-header_search_panel"
+            >
+              <div
+                className="o-header_search_panel_input"
+              >
+                <div
+                  className="a-input a-input-text"
+                >
+                  <div
+                    className="a-input_wrap"
+                  >
+                    <input
+                      autoComplete="off"
+                      className="a-input_input"
+                      onKeyPress={[Function]}
+                      placeholder="Tìm kiếm"
+                      type="text"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="o-header_search_panel_input_icon"
+                  onClick={[Function]}
+                >
+                  <i
+                    className="a-icon a-icon-search a-icon-24"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main
+    className="main-layout"
+  >
+    <div
+      style={
+        Object {
+          "marginBottom": 100,
+          "marginTop": 100,
+        }
+      }
+    >
+      Wise man call me a crazy Loving foolishly Dream about you all the time Everynight I fall asleep Chasing and dreaming Looking for your eyes Daisy! I am the foolish Gatsby who is found drown in love Can not you see my heart burning right through my hands? Cos your smile lifts me above and beyond the blue sky In the darkest moments here I still can see your eyes Love you to the moon and back I can not let you know this fact Love you to the moon and back I am so freaking missing you Aim for the moon yet so far I can not land among the stars Love you to the moon and back I am so freaking missing you I will never let my love get so close to you cos it hurts Swear to God! I wish I could I am the foolish Gatsby who is found drown in love Can not you see my heart burning right through my hands? Cos your smile lifts me above and beyond the blue sky In the darkest moments here I still can see your eyes Love you to the moon and back I can not let you know this fact Love you to the moon and back I am so freaking missing you Aim for the moon yet so far I can not land among the stars Love you to the moon and back I am so freaking missing you Love you to the moon and back I can not let you know this fact Love you to the moon and back I am so freaking missing you Aim for the moon yet so far I can not land among the stars Love you to the moon and back I am so freaking missing you
+    </div>
+  </main>
+  <footer
+    className="o-footer"
+    style={
+      Object {
+        "backgroundImage": "url(bg-footer.png)",
+      }
+    }
+  >
+    <div
+      className="o-footer_background"
+    >
+      <img
+        alt="background footer"
+        src="bg-footer.png"
+      />
+    </div>
+    <div
+      className="container o-container"
+    >
+      <div
+        className="o-footer_main"
+      >
+        <div
+          className="o-container_row row"
+        >
+          <div
+            className="o-container_col col-lg-8"
+          >
+            <div
+              className="o-footer_main_menu"
+            >
+              <div
+                className="o-footer_main_menu_top"
+              >
+                <div
+                  className="o-footer_main_logo"
+                >
+                  <a
+                    aria-current="page"
+                    className="a-link   active"
+                    href="/"
+                    onClick={[Function]}
+                    target="_self"
+                  >
+                    <div
+                      className="a-image a-image-220x145"
+                    >
+                      <img
+                        alt="novaland logo"
+                        loading="lazy"
+                        src="footer-logo.png"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div
+                  className="o-footer_main_info"
+                >
+                  <p
+                    className="a-text a-text-400 a-text-white a-text-uppercase a-text-14x22"
+                  >
+                    CÔNG TY CỔ PHẦN TẬP ĐOÀN ĐẦU TƯ ĐỊA ỐC NOVA
+                  </p>
+                  <div
+                    className="mt-8"
+                  >
+                    <p
+                      className="a-text a-text-400 a-text-white a-text-opacity07"
+                    >
+                      Giấy chứng nhận đăng ký doanh nghiệp số 0301444753 do Sở Kế hoạch và Đầu tư TP.HCM cấp lần đầu ngày 18/09/1992
+                    </p>
+                    <br />
+                    <p
+                      className="a-text a-text-400 a-text-white a-text-opacity07"
+                    >
+                      Tòa nhà văn phòng Novaland, 65 Nguyễn Du, Phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh
+                    </p>
+                  </div>
+                  <div
+                    className="o-footer_main_contact"
+                  >
+                    <div
+                      className="o-footer_main_contact_item"
+                    >
+                      <p
+                        className="a-text a-text-400 a-text-white a-text-opacity07"
+                      >
+                        Email:
+                      </p>
+                      <a
+                        className="a-link  "
+                        href="mailto:info@novaland.com.vn"
+                        rel="noreferrer"
+                        target="_self"
+                      >
+                        <p
+                          className="a-text a-text-400 a-text-white a-text-700 a-text-inline"
+                        >
+                          info@novaland.com.vn
+                        </p>
+                      </a>
+                    </div>
+                    <div
+                      className="o-footer_main_contact_item"
+                    >
+                      <p
+                        className="a-text a-text-400 a-text-white a-text-opacity07"
+                      >
+                        Tổng đài CSKH:
+                      </p>
+                      <a
+                        className="a-link  "
+                        href="tel:1900636666"
+                        rel="noreferrer"
+                        target="_self"
+                      >
+                        <p
+                          className="a-text a-text-400 a-text-white a-text-700 a-text-inline"
+                        >
+                          1900 63 6666
+                        </p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="o-container_col col-lg-4"
+          >
+            <div
+              className="o-footer_main_form"
+            >
+              <div
+                className="o-form"
+              >
+                <form
+                  noValidate={true}
+                  onSubmit={[Function]}
+                >
+                  <div
+                    className="o-footer_main_form_input"
+                  >
+                    <div
+                      className="a-input a-input-text"
+                    >
+                      <div
+                        className="a-input_wrap"
+                      >
+                        <input
+                          className="a-input_input"
+                          name="fullname"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          placeholder="Họ và tên"
+                          type="text"
+                          value=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="o-footer_main_form_input"
+                  >
+                    <div
+                      className="a-input a-input-text"
+                    >
+                      <div
+                        className="a-input_wrap"
+                      >
+                        <input
+                          className="a-input_input"
+                          name="phone"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          placeholder="Số điện thoại"
+                          type="text"
+                          value=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="o-footer_main_form_input"
+                  >
+                    <div
+                      className="a-input a-input-text"
+                    >
+                      <div
+                        className="a-input_wrap"
+                      >
+                        <input
+                          className="a-input_input"
+                          name="email"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          placeholder="Email"
+                          type="text"
+                          value=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="o-footer_main_form_input"
+                  >
+                    <div
+                      className="m-pulldown"
+                    >
+                      <div
+                        className="m-pulldown css-2b097c-container"
+                        onKeyDown={[Function]}
+                      >
+                        <span
+                          aria-atomic="false"
+                          aria-live="polite"
+                          aria-relevant="additions text"
+                          className="css-1f43avz-a11yText-A11yText"
+                        />
+                        <div
+                          className="m-pulldown m-pulldown-default__control css-1wxtc0p-control"
+                          onMouseDown={[Function]}
+                          onTouchEnd={[Function]}
+                        >
+                          <div
+                            className="m-pulldown m-pulldown-default__value-container css-1733mh3-ValueContainer"
+                          >
+                            <div
+                              className="m-pulldown m-pulldown-default__placeholder css-2js46o-placeholder"
+                            >
+                              - Dự án khách hàng quan tâm -
+                            </div>
+                            <div
+                              className="css-b8ldur-Input"
+                            >
+                              <div
+                                className="m-pulldown m-pulldown-default__input"
+                                style={
+                                  Object {
+                                    "display": "inline-block",
+                                  }
+                                }
+                              >
+                                <input
+                                  aria-autocomplete="list"
+                                  autoCapitalize="none"
+                                  autoComplete="off"
+                                  autoCorrect="off"
+                                  disabled={false}
+                                  id="react-select-4-input"
+                                  onBlur={[Function]}
+                                  onChange={[Function]}
+                                  onFocus={[Function]}
+                                  spellCheck="false"
+                                  style={
+                                    Object {
+                                      "background": 0,
+                                      "border": 0,
+                                      "boxSizing": "content-box",
+                                      "color": "inherit",
+                                      "fontSize": "inherit",
+                                      "label": "input",
+                                      "opacity": 1,
+                                      "outline": 0,
+                                      "padding": 0,
+                                      "width": "1px",
+                                    }
+                                  }
+                                  tabIndex="0"
+                                  type="text"
+                                  value=""
+                                />
+                                <div
+                                  style={
+                                    Object {
+                                      "height": 0,
+                                      "left": 0,
+                                      "overflow": "scroll",
+                                      "position": "absolute",
+                                      "top": 0,
+                                      "visibility": "hidden",
+                                      "whiteSpace": "pre",
+                                    }
+                                  }
+                                >
+                                  
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            className="m-pulldown m-pulldown-default__indicators css-1hb7zxy-IndicatorsContainer"
+                          >
+                            <div
+                              aria-hidden="true"
+                              className="m-pulldown m-pulldown-default__indicator m-pulldown m-pulldown-default__dropdown-indicator css-xnkoxx-indicatorContainer"
+                              onMouseDown={[Function]}
+                              onTouchEnd={[Function]}
+                            >
+                              <img
+                                alt="icon-arrow"
+                                src="ic_carret_down.svg"
+                                style={
+                                  Object {
+                                    "transform": false,
+                                    "transition": "all 0.3s ease",
+                                  }
+                                }
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <input
+                          name="project"
+                          type="hidden"
+                          value=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="o-footer_main_form_button mt-32"
+                  >
+                    <button
+                      className="a-button a-button-primary"
+                      disabled={false}
+                      type="submit"
+                    >
+                      Đăng Ký
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="o-footer_main_menu_bottom"
+        >
+          <div
+            className="o-footer_main_menu_wrap"
+          >
+            <div
+              className="o-footer_main_menu_title"
+            >
+              <p
+                className="a-text a-text-white a-text-14x22 a-text-700 a-text-uppercase"
+              >
+                VỀ NOVALAND
+              </p>
+            </div>
+            <ul
+              className="o-footer_main_menu_list"
+            >
+              <li
+                className="o-footer_main_menu_nav"
+              >
+                <a
+                  aria-current="page"
+                  className="a-link   active"
+                  href="/"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  <p
+                    className="a-text a-text-lavenderGray a-text-400 a-text-inline"
+                  >
+                    Giới thiệu chung
+                  </p>
+                </a>
+              </li>
+              <li
+                className="o-footer_main_menu_nav"
+              >
+                <a
+                  aria-current="page"
+                  className="a-link   active"
+                  href="/"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  <p
+                    className="a-text a-text-lavenderGray a-text-400 a-text-inline"
+                  >
+                    Tầm nhìn - Sứ mệnh
+                  </p>
+                </a>
+              </li>
+              <li
+                className="o-footer_main_menu_nav"
+              >
+                <a
+                  aria-current="page"
+                  className="a-link   active"
+                  href="/"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  <p
+                    className="a-text a-text-lavenderGray a-text-400 a-text-inline"
+                  >
+                    Lĩnh Vực Hoạt Động
+                  </p>
+                </a>
+              </li>
+              <li
+                className="o-footer_main_menu_nav"
+              >
+                <a
+                  aria-current="page"
+                  className="a-link   active"
+                  href="/"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  <p
+                    className="a-text a-text-lavenderGray a-text-400 a-text-inline"
+                  >
+                    Lịch Sử Phát Triển
+                  </p>
+                </a>
+              </li>
+              <li
+                className="o-footer_main_menu_nav"
+              >
+                <a
+                  aria-current="page"
+                  className="a-link   active"
+                  href="/"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  <p
+                    className="a-text a-text-lavenderGray a-text-400 a-text-inline"
+                  >
+                    Ban lãnh đạo
+                  </p>
+                </a>
+              </li>
+              <li
+                className="o-footer_main_menu_nav"
+              >
+                <a
+                  aria-current="page"
+                  className="a-link   active"
+                  href="/"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  <p
+                    className="a-text a-text-lavenderGray a-text-400 a-text-inline"
+                  >
+                    Giải thưởng
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div
+            className="o-footer_main_menu_wrap"
+          >
+            <div
+              className="o-footer_main_menu_title"
+            >
+              <p
+                className="a-text a-text-white a-text-14x22 a-text-700 a-text-uppercase"
+              >
+                CÁC THÔNG TIN VÀ DỰ ÁN MỚI
+              </p>
+            </div>
+            <ul
+              className="o-footer_main_menu_list"
+            >
+              <li
+                className="o-footer_main_menu_nav"
+              >
+                <a
+                  aria-current="page"
+                  className="a-link   active"
+                  href="/"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  <p
+                    className="a-text a-text-lavenderGray a-text-400 a-text-inline"
+                  >
+                    Thông tin thị trường
+                  </p>
+                </a>
+              </li>
+              <li
+                className="o-footer_main_menu_nav"
+              >
+                <a
+                  aria-current="page"
+                  className="a-link   active"
+                  href="/"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  <p
+                    className="a-text a-text-lavenderGray a-text-400 a-text-inline"
+                  >
+                    Thông tin Novaland
+                  </p>
+                </a>
+              </li>
+              <li
+                className="o-footer_main_menu_nav"
+              >
+                <a
+                  aria-current="page"
+                  className="a-link   active"
+                  href="/"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  <p
+                    className="a-text a-text-lavenderGray a-text-400 a-text-inline"
+                  >
+                    Thông tin báo chí
+                  </p>
+                </a>
+              </li>
+              <li
+                className="o-footer_main_menu_nav"
+              >
+                <a
+                  aria-current="page"
+                  className="a-link   active"
+                  href="/"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  <p
+                    className="a-text a-text-lavenderGray a-text-400 a-text-inline"
+                  >
+                    Bất động sản Trung Tâm 
+                  </p>
+                </a>
+              </li>
+              <li
+                className="o-footer_main_menu_nav"
+              >
+                <a
+                  aria-current="page"
+                  className="a-link   active"
+                  href="/"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  <p
+                    className="a-text a-text-lavenderGray a-text-400 a-text-inline"
+                  >
+                    Đô Thị Vệ Tinh
+                  </p>
+                </a>
+              </li>
+              <li
+                className="o-footer_main_menu_nav"
+              >
+                <a
+                  aria-current="page"
+                  className="a-link   active"
+                  href="/"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  <p
+                    className="a-text a-text-lavenderGray a-text-400 a-text-inline"
+                  >
+                    Đô Thị Nghỉ Dưỡng
+                  </p>
+                </a>
+              </li>
+              <li
+                className="o-footer_main_menu_nav"
+              >
+                <a
+                  aria-current="page"
+                  className="a-link   active"
+                  href="/"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  <p
+                    className="a-text a-text-lavenderGray a-text-400 a-text-inline"
+                  >
+                    Bất Động Sản Công Nghiệp
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div
+            className="o-footer_main_menu_wrap"
+          >
+            <div
+              className="o-footer_main_menu_title"
+            >
+              <p
+                className="a-text a-text-white a-text-14x22 a-text-700 a-text-uppercase"
+              >
+                THEO DÕI NOVALAND TRÊN
+              </p>
+            </div>
+            <ul
+              className="o-footer_main_menu_icon"
+            >
+              <div
+                className="o-footer_main_menu_icon_item"
+              >
+                <a
+                  aria-current="page"
+                  className="a-link   active"
+                  href="/"
+                  onClick={[Function]}
+                  target="_self"
+                  title="zalo"
+                >
+                  <i
+                    className="a-icon a-icon-zalo a-icon-40"
+                  />
+                </a>
+              </div>
+              <div
+                className="o-footer_main_menu_icon_item"
+              >
+                <a
+                  aria-current="page"
+                  className="a-link   active"
+                  href="/"
+                  onClick={[Function]}
+                  target="_self"
+                  title="youtube"
+                >
+                  <i
+                    className="a-icon a-icon-youtube a-icon-40"
+                  />
+                </a>
+              </div>
+              <div
+                className="o-footer_main_menu_icon_item"
+              >
+                <a
+                  aria-current="page"
+                  className="a-link   active"
+                  href="/"
+                  onClick={[Function]}
+                  target="_self"
+                  title="facebook"
+                >
+                  <i
+                    className="a-icon a-icon-facebook a-icon-40"
+                  />
+                </a>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="o-footer_bottom"
+    >
+      <div
+        className="container o-container"
+      >
+        <div
+          className="o-footer_bottom_wrap"
+        >
+          <div
+            className="o-footer_bottom_policy"
+          >
+            <div
+              className="o-footer_bottom_policy_item"
+            >
+              <a
+                aria-current="page"
+                className="a-link   active"
+                href="/"
+                onClick={[Function]}
+                target="_self"
+              >
+                <p
+                  className="a-text a-text-400 a-text-white a-text-opacity07"
+                >
+                  Chính sách bảo mật
+                </p>
+              </a>
+            </div>
+            <div
+              className="o-footer_bottom_policy_item"
+            >
+              <a
+                aria-current="page"
+                className="a-link   active"
+                href="/"
+                onClick={[Function]}
+                target="_self"
+              >
+                <p
+                  className="a-text a-text-400 a-text-white a-text-opacity07"
+                >
+                  Điều khoản khách hàng
+                </p>
+              </a>
+            </div>
+          </div>
+          <div
+            className="o-footer_bottom_copyright"
+          >
+            <p
+              className="a-text a-text-400 a-text-white a-text-opacity07"
+            >
+              © 2021. Bản quyền thuộc về Tập đoàn Novaland (Việt Nam). Tất cả các quyền được bảo hộ.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 </div>
 `;
 
@@ -9864,7 +11625,6 @@ exports[`Storyshots Components/templates/OutstandingProject Card 1`] = `
       className="a-link   active"
       href="/"
       onClick={[Function]}
-      style={Object {}}
       target="_self"
     >
       <div
@@ -10004,7 +11764,6 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
-                              style={Object {}}
                               target="_self"
                             >
                               <div
@@ -10076,7 +11835,6 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
-                              style={Object {}}
                               target="_self"
                             >
                               <div
@@ -10148,7 +11906,6 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
-                              style={Object {}}
                               target="_self"
                             >
                               <div
@@ -10220,7 +11977,6 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
-                              style={Object {}}
                               target="_self"
                             >
                               <div
@@ -10292,7 +12048,6 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
-                              style={Object {}}
                               target="_self"
                             >
                               <div
@@ -10365,7 +12120,6 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
-                              style={Object {}}
                               target="_self"
                             >
                               <div
@@ -10438,7 +12192,6 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
-                              style={Object {}}
                               target="_self"
                             >
                               <div
@@ -10511,7 +12264,6 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
-                              style={Object {}}
                               target="_self"
                             >
                               <div
@@ -10584,7 +12336,6 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
-                              style={Object {}}
                               target="_self"
                             >
                               <div
@@ -10657,7 +12408,6 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
-                              style={Object {}}
                               target="_self"
                             >
                               <div
@@ -10730,7 +12480,6 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
-                              style={Object {}}
                               target="_self"
                             >
                               <div
@@ -10803,7 +12552,6 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
-                              style={Object {}}
                               target="_self"
                             >
                               <div
@@ -10876,7 +12624,6 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
-                              style={Object {}}
                               target="_self"
                             >
                               <div
@@ -10948,7 +12695,6 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
-                              style={Object {}}
                               target="_self"
                             >
                               <div
@@ -11020,7 +12766,6 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
-                              style={Object {}}
                               target="_self"
                             >
                               <div
@@ -11092,7 +12837,6 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
-                              style={Object {}}
                               target="_self"
                             >
                               <div
@@ -11164,7 +12908,6 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
-                              style={Object {}}
                               target="_self"
                             >
                               <div
@@ -11236,7 +12979,6 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
-                              style={Object {}}
                               target="_self"
                             >
                               <div
@@ -11308,9 +13050,6 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
-                              style={Object {}}
-<<<<<<< HEAD
-=======
                               target="_self"
                             >
                               <div
@@ -11382,7 +13121,6 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
-                              style={Object {}}
                               target="_self"
                             >
                               <div
@@ -11454,8 +13192,6 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                               className="a-link   active"
                               href="/"
                               onClick={[Function]}
-                              style={Object {}}
->>>>>>> :hammer:feat(NWL-17): fix conflict
                               target="_self"
                             >
                               <div
@@ -11542,7 +13278,7 @@ exports[`Storyshots Components/templates/ProjectMap Normal 1`] = `
                   onClick={[Function]}
                 >
                   <span
-                    className="o-tabs_label"
+                    className="o-tabs_label "
                   >
                     Bất Động Sản Trung Tâm
                   </span>
@@ -11552,7 +13288,7 @@ exports[`Storyshots Components/templates/ProjectMap Normal 1`] = `
                   onClick={[Function]}
                 >
                   <span
-                    className="o-tabs_label"
+                    className="o-tabs_label "
                   >
                     Đô Thị Nghỉ Dưỡng
                   </span>
@@ -11562,7 +13298,7 @@ exports[`Storyshots Components/templates/ProjectMap Normal 1`] = `
                   onClick={[Function]}
                 >
                   <span
-                    className="o-tabs_label"
+                    className="o-tabs_label "
                   >
                     Đô Thị Vệ Tinh
                   </span>
@@ -11884,18 +13620,7 @@ exports[`Storyshots Components/templates/ProjectMap Normal 1`] = `
                             }
                             tabIndex="-1"
                           >
-<<<<<<< HEAD
-                            <a
-                              aria-current="page"
-                              className="a-link   active"
-                              href="/"
-                              onClick={[Function]}
-                              style={Object {}}
-                              target="_self"
-                            >
-=======
                             <div>
->>>>>>> :hammer:feat(NWL-17): fix conflict
                               <div
                                 className="o-carousel_wrap"
                                 style={
@@ -12046,18 +13771,7 @@ exports[`Storyshots Components/templates/ProjectMap Normal 1`] = `
                             }
                             tabIndex="-1"
                           >
-<<<<<<< HEAD
-                            <a
-                              aria-current="page"
-                              className="a-link   active"
-                              href="/"
-                              onClick={[Function]}
-                              style={Object {}}
-                              target="_self"
-                            >
-=======
                             <div>
->>>>>>> :hammer:feat(NWL-17): fix conflict
                               <div
                                 className="o-carousel_wrap"
                                 style={
@@ -12243,7 +13957,7 @@ exports[`Storyshots Components/templates/ShareholderRelations Normal 1`] = `
             <div
               className="t-shareholderCard_title"
             >
-              <h2
+              <h3
                 className="a-heading a-heading-600 a-heading-arsenic a-heading-capitalize a-heading-fontNoto"
                 dangerouslySetInnerHTML={
                   Object {
@@ -12280,7 +13994,7 @@ exports[`Storyshots Components/templates/ShareholderRelations Normal 1`] = `
             <div
               className="t-shareholderCard_title"
             >
-              <h2
+              <h3
                 className="a-heading a-heading-600 a-heading-arsenic a-heading-capitalize a-heading-fontNoto"
                 dangerouslySetInnerHTML={
                   Object {
@@ -12320,7 +14034,6 @@ exports[`Storyshots Components/templates/ShareholderRelations Normal 1`] = `
         className="a-link   active"
         href="/"
         onClick={[Function]}
-        style={Object {}}
         target="_self"
       >
         <button
@@ -12364,7 +14077,7 @@ exports[`Storyshots Components/templates/ShareholderRelations Shareholder Card 1
       <div
         className="t-shareholderCard_title"
       >
-        <h2
+        <h3
           className="a-heading a-heading-600 a-heading-arsenic a-heading-capitalize a-heading-fontNoto"
           dangerouslySetInnerHTML={
             Object {
@@ -12409,7 +14122,7 @@ exports[`Storyshots Components/templates/ShareholderRelations Shareholder Card S
       <div
         className="t-shareholderCard_title"
       >
-        <h2
+        <h3
           className="a-heading a-heading-600 a-heading-arsenic a-heading-capitalize a-heading-fontNoto"
           dangerouslySetInnerHTML={
             Object {
