@@ -1,0 +1,40 @@
+.t-featuredProjects {
+  $root: &;
+  &_collapseList {
+    background-color: $snow;
+    margin-top: rem(52);
+    flex-wrap: wrap;
+    @include adjust-flex(center, stretch);
+    @include tablet-down {
+      margin-top: rem(24);
+    }
+    @include mobile-down {
+      margin-top: rem(16);
+    }
+
+    &_left,
+    &_right {
+      flex: 0 0 50%;
+    }
+
+    &_left {
+      padding: rem(27) rem(16) rem(27) rem(24);
+      @include tablet-down {
+        padding: rem(16);
+      }
+      @include mobile-down {
+        padding: rem(8) rem(16);
+        flex: 0 0 100%;
+      }
+    }
+
+    &_right {
+      .a-image {
+        height: 100%;
+      }
+      @include mobile-down {
+        display: none;
+      }
+    }
+  }
+}
