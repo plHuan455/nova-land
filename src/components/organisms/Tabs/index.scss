@@ -3,14 +3,14 @@
 
   &_labels {
     border-radius: rem(3);
+    align-items: center;
+    display: inline-flex;
     overflow-x: auto;
     position: relative;
-    @include adjust-flex();
     @include scroll-bars(8);
-
-    @include small-mobile {
-      @include adjust-flex(flex-start, center);
-    }
+    left: 50%;
+    max-width: 100%;
+    transform: translateX(-50%);
   }
 
   &_label {
@@ -23,22 +23,31 @@
     &-16x24 {
       @include font-base(16, 24);
     }
+
+    @include tablet-down {
+      @include font-base(18, 27);
+    }
+
     @include mobile-down {
       @include font-base(16, 20);
+    }
+
+    #{$root}-white & {
+      color: $white;
     }
   }
 
   &_tab {
     cursor: pointer;
-    margin-left: rem(24);
-    margin-right: rem(24);
     padding-bottom: rem(7);
     padding-top: rem(7);
     position: relative;
 
-    @include mobile-down {
-      margin-left: rem(10);
-      margin-right: rem(10);
+    & + &:not(:first-child)  {
+      margin-left: rem(24);
+      @include mobile-down {
+        margin-left: rem(10);
+      }
     }
 
     &::after {

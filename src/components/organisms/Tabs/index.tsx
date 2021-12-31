@@ -16,6 +16,7 @@ interface TabProps {
 interface TabsProps {
   variableMutate?: number | string;
   classTabsActive?: string;
+  variant?: 'white'
 }
 
 export const TabPanel: React.FC<TabPanelProps> = ({ active, children }) => (
@@ -31,7 +32,7 @@ export const Tab: React.FC<TabProps> = ({
 );
 
 export const Tabs: React.FC<TabsProps> = ({
-  children, variableMutate, classTabsActive,
+  children, variableMutate, classTabsActive, variant,
 }) => {
   const ref = useRef<HTMLDivElement | null>(null);
 
@@ -41,7 +42,7 @@ export const Tabs: React.FC<TabsProps> = ({
   }, [variableMutate]);
 
   return (
-    <div className="o-tabs">
+    <div className={mapModifiers('o-tabs', variant)}>
       <div ref={ref} className="o-tabs_labels">
         {children}
       </div>
@@ -63,6 +64,7 @@ Tab.defaultProps = {
 Tabs.defaultProps = {
   variableMutate: undefined,
   classTabsActive: '',
+  variant: undefined,
 };
 
 export default React.memo(Tabs);
