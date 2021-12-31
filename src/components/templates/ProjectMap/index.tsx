@@ -127,7 +127,7 @@ const InfoMap:React.FC<InfoProps> = ({
   return (
     <div className="t-projectMap_info">
       <div className="t-projectMap_info_wrap">
-        <Heading type="h3" modifiers={['32x48', 'white', '700', 'fontNoto', 'center']} content={title} />
+        <Heading type="h2" modifiers={['32x48', 'white', '700', 'fontNoto', 'center']} content={title} />
         <div className="t-projectMap_info_content">
           <Tabs variant="white" variableMutate={idActive}>
             {listCategory?.map((item, index) => (
