@@ -1,5 +1,4 @@
 import React, { useCallback, useMemo } from 'react';
-import { Container } from 'react-bootstrap';
 
 import Button from 'components/atoms/Button';
 import Heading from 'components/atoms/Heading';
@@ -7,6 +6,7 @@ import Icon from 'components/atoms/Icon';
 import Link from 'components/atoms/Link';
 import Text from 'components/atoms/Text';
 import Pulldown, { OptionType } from 'components/molecules/Pulldown';
+import Container from 'components/organisms/Container';
 
 interface ImageMap {
   path: string;
