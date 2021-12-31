@@ -1,18 +1,42 @@
 .p-aboutUSContainer {
   &_investmentSector {
     margin-top: rem(100);
+    @include desktop-down {
+      margin-top: rem(50);
+    }
+    @include mobile-down {
+      margin-top: rem(30);
+    }
   }
 
   &_transportationInfrastructure {
     margin-top: rem(100);
+    @include desktop-down {
+      margin-top: rem(50);
+    }
+    @include mobile-down {
+      margin-top: rem(30);
+    }
   }
 
   &_developmentHistory {
     margin-top: rem(134);
+    @include desktop-down {
+      margin-top: rem(50);
+    }
+    @include mobile-down {
+      margin-top: rem(30);
+    }
   }
   &_awardList {
     .t-awardList {
       padding: rem(100) 0;
+      @include desktop-down {
+        padding: rem(50) 0;
+      }
+      @include mobile-down {
+        padding: rem(30) 0;
+      }
     }
   }
 }
