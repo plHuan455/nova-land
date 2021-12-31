@@ -1,25 +1,12 @@
 import React, { useCallback, useMemo } from 'react';
 import { Container } from 'react-bootstrap';
 
-import dataDummy from 'assets/dataDummy/projectListMap';
-import img from 'assets/images/bg_project_list_map.png';
+import Button from 'components/atoms/Button';
 import Heading from 'components/atoms/Heading';
 import Icon from 'components/atoms/Icon';
 import Link from 'components/atoms/Link';
 import Text from 'components/atoms/Text';
 import Pulldown, { OptionType } from 'components/molecules/Pulldown';
-
-const dummyOption: OptionType[] = [
-  { value: 'Quan1', label: 'Quan 1' },
-  { value: 'Quan2', label: 'Quan 2' },
-  { value: 'Quan3', label: 'Quan 3' },
-  { value: 'Quan4', label: 'Quan 4' },
-  { value: 'Quan5', label: 'Quan 5' },
-  { value: 'Quan6', label: 'Quan 6' },
-  { value: 'Quan7', label: 'Quan 7' },
-  { value: 'Quan8', label: 'Quan 8' },
-  { value: 'Quan9', label: 'Quan 9' },
-];
 
 interface ImageMap {
   path: string;
@@ -35,18 +22,43 @@ interface ItemBranch {
   };
 }
 
-interface InfoProps {
+interface ItemProject {
+  title: string;
+  href: string;
 }
-const Info:React.FC<InfoProps> = () => (
+
+interface InfoProps {
+  provinceOptions: OptionType[];
+  projectOptions: OptionType[];
+  valueProvince: OptionType|null;
+  valueProject: OptionType|null;
+  listProject: ItemProject[];
+  hasButtonViewAll: boolean;
+  handleClickViewAll: () => void;
+  handleChangeProvince: (value: OptionType) => void;
+  handleChangeProject: (value: OptionType) => void;
+}
+
+export const ProjectListMapInfo:React.FC<InfoProps> = ({
+  provinceOptions,
+  projectOptions,
+  valueProvince,
+  valueProject,
+  listProject,
+  hasButtonViewAll,
+  handleClickViewAll,
+  handleChangeProvince,
+  handleChangeProject,
+}) => (
   <div className="t-projectListMap_info">
     <div className="t-projectListMap_info_select">
       <Text content="Tỉnh/Thành Phố" modifiers={['16x24', 'arsenic']} />
       <div className="t-projectListMap_info_pulldown">
         <Pulldown
-          options={dummyOption}
+          options={provinceOptions}
+          value={valueProvince}
           placeholder="Chọn Tỉnh / Thành Phố"
-      // eslint-disable-next-line no-console
-          handleChange={(value: OptionType) => console.log(value)}
+          handleChange={handleChangeProvince}
         />
       </div>
     </div>
@@ -54,41 +66,36 @@ const Info:React.FC<InfoProps> = () => (
       <Text content="Dự Án" modifiers={['16x24', 'arsenic']} />
       <div className="t-projectListMap_info_pulldown">
         <Pulldown
-          options={dummyOption}
+          options={projectOptions}
+          value={valueProject}
           placeholder="Chọn Dự Án"
-      // eslint-disable-next-line no-console
-          handleChange={(value: OptionType) => console.log(value)}
+          handleChange={handleChangeProject}
         />
       </div>
     </div>
     <div className="t-projectListMap_info_wrap-list">
       <Text content="Danh Sách Dự Án" modifiers={['16x24', 'arsenic']} />
+      {listProject.length && (
       <ul className="t-projectListMap_info_list">
-        <li>
-          <Link href="/">
-            <div className="t-projectListMap_info_item">
-              <Text content="Aqua City" modifiers={['16x24', 'taupeGray']} />
-              <Icon iconName="arrowNextGrey" />
-            </div>
-          </Link>
-        </li>
-        <li>
-          <Link href="/">
-            <div className="t-projectListMap_info_item">
-              <Text content="Aqua City" modifiers={['16x24', 'taupeGray']} />
-              <Icon iconName="arrowNextGrey" />
-            </div>
-          </Link>
-        </li>
-        <li>
-          <Link href="/">
-            <div className="t-projectListMap_info_item">
-              <Text content="Aqua City" modifiers={['16x24', 'taupeGray']} />
-              <Icon iconName="arrowNextGrey" />
-            </div>
-          </Link>
-        </li>
+        {listProject.map((item, index) => (
+          <li key={index.toString()}>
+            <Link href={item.href}>
+              <div className="t-projectListMap_info_item">
+                <Text content={item.title} modifiers={['16x24', 'taupeGray']} />
+                <Icon iconName="arrowNextGrey" />
+              </div>
+            </Link>
+          </li>
+        ))}
       </ul>
+      )}
+      {hasButtonViewAll && (
+        <div className="t-projectListMap_info_btn">
+          <Button onClick={handleClickViewAll} modifiers="with-icon" iconName="arrowDownBrown">
+            Xem Tất Cả Dự Án
+          </Button>
+        </div>
+      )}
     </div>
   </div>
 );
@@ -98,7 +105,7 @@ interface MapProps {
   listPoint: ItemBranch[];
 }
 
-const Map:React.FC<MapProps> = ({
+export const ProjectListMapGround:React.FC<MapProps> = ({
   image,
   listPoint,
 }) => {
@@ -138,28 +145,25 @@ const Map:React.FC<MapProps> = ({
 };
 
 interface ProjectListMapProps {
-
+  title?: string;
 }
-const ProjectListMap: React.FC<ProjectListMapProps> = () => (
+
+const ProjectListMap: React.FC<ProjectListMapProps> = ({
+  title,
+  children,
+}) => (
   <div className="t-projectListMap">
     <Container>
-      <Heading content="DỰ ÁN" modifiers={['32x48', 'jet', 'fontNoto', '700', 'center']} />
+      <Heading content={title} modifiers={['32x48', 'jet', 'fontNoto', '700', 'center']} />
       <div className="t-projectListMap_content">
-        <Info />
-        <Map
-          image={{
-            path: img,
-            width: 373,
-            height: 593,
-          }}
-          listPoint={dataDummy.listPoint}
-        />
+        {children}
       </div>
     </Container>
   </div>
 );
 
 ProjectListMap.defaultProps = {
+  title: undefined,
 };
 
 export default ProjectListMap;

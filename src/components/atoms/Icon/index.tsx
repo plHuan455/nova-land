@@ -17,6 +17,7 @@ export const iconList = {
   search: 'search',
   carretDownBlack: 'carretDownBlack',
   arrowNextWhite2: 'arrowNextWhite2',
+  arrowDownBrown: 'arrowDownBrown',
 };
 
 export type IconName = keyof typeof iconList;

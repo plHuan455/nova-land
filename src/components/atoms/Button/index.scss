@@ -114,6 +114,19 @@
     }
   }
 
+  &-with-icon {
+    background-color: transparent;
+    border: none;
+    color: $golden-brown;
+    @include font-base(14, 22);
+    height: rem(32);
+    width: auto;
+
+    .a-icon {
+      margin-right: rem(8);
+    }
+  }
+
   &:disabled,
   &-loading {
     cursor: no-drop;

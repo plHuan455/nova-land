@@ -2,15 +2,18 @@
 import React from 'react';
 
 import imgLoading from 'assets/images/loading.gif';
+import Icon, { IconName } from 'components/atoms/Icon';
 import mapModifiers from 'utils/functions';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  modifiers?: 'primary' | 'secondary' | 'outline';
+  modifiers?: 'primary' | 'secondary' | 'outline' | 'with-icon';
   isLoading?: boolean;
+  iconName?: IconName;
 }
 
 const Button: React.FC<ButtonProps> = ({
   children, modifiers, name, id, className, isLoading, disabled, type = 'button',
+  iconName,
   onClick,
 }) => (
   <button
@@ -25,8 +28,14 @@ const Button: React.FC<ButtonProps> = ({
       isLoading && 'loading')}
   >
     {
-      isLoading ? <img src={imgLoading} alt="loading" />
-        : children
+      isLoading
+        ? <img src={imgLoading} alt="loading" />
+        : (
+          <>
+            {iconName && <Icon iconName={iconName} size="14" />}
+            {children}
+          </>
+        )
     }
   </button>
 );
@@ -34,6 +43,7 @@ const Button: React.FC<ButtonProps> = ({
 Button.defaultProps = {
   modifiers: 'primary',
   isLoading: false,
+  iconName: undefined,
 };
 
 export default Button;

@@ -3,6 +3,8 @@ import React from 'react';
 
 import Button from '.';
 
+import { iconList } from 'components/atoms/Icon';
+
 export default {
   title: 'Components/atoms/Button',
   component: Button,
@@ -10,7 +12,7 @@ export default {
     modifiers: {
       control: {
         type: 'select',
-        options: ['primary', 'secondary', 'outline'],
+        options: ['primary', 'secondary', 'outline', 'with-icon'],
       },
       defaultValue: 'primary',
     },
@@ -34,18 +36,25 @@ export default {
       },
       defaultValue: false,
     },
+    iconName: {
+      control: {
+        type: 'select',
+        options: iconList,
+      },
+    },
     handleClick: { action: 'clicked' },
   },
 } as Meta;
 
 export const normal: Story = ({
-  modifiers, textButton, loading, handleClick, disabled,
+  modifiers, textButton, loading, handleClick, disabled, iconName,
 }) => (
   <Button
     isLoading={loading}
     modifiers={modifiers}
     onClick={handleClick}
     disabled={disabled}
+    iconName={iconName}
   >
     {textButton}
   </Button>
