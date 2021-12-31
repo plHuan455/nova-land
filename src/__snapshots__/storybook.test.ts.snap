@@ -183,6 +183,17 @@ exports[`Storyshots Components/atoms/Icon Normal 1`] = `
       className="a-icon a-icon-arrowNextWhite2 a-icon-24"
     />
   </div>
+  <div
+    style={
+      Object {
+        "marginLeft": 7,
+      }
+    }
+  >
+    <i
+      className="a-icon a-icon-arrowDownBrown a-icon-24"
+    />
+  </div>
 </div>
 `;
 
@@ -13240,6 +13251,504 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
 </div>
 `;
 
+exports[`Storyshots Components/templates/ProjectListMap Normal 1`] = `
+<div
+  className="t-projectListMap"
+>
+  <div
+    className="container o-container"
+  >
+    <h2
+      className="a-heading a-heading-32x48 a-heading-jet a-heading-fontNoto a-heading-700 a-heading-center"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "Dự Án",
+        }
+      }
+    />
+    <div
+      className="t-projectListMap_content"
+    >
+      <div
+        className="t-projectListMap_info"
+      >
+        <div
+          className="t-projectListMap_info_select"
+        >
+          <p
+            className="a-text a-text-16x24 a-text-arsenic"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "Tỉnh/Thành Phố",
+              }
+            }
+          />
+          <div
+            className="t-projectListMap_info_pulldown"
+          >
+            <div
+              className="m-pulldown"
+            >
+              <div
+                className="m-pulldown css-2b097c-container"
+                onKeyDown={[Function]}
+              >
+                <span
+                  aria-atomic="false"
+                  aria-live="polite"
+                  aria-relevant="additions text"
+                  className="css-1f43avz-a11yText-A11yText"
+                />
+                <div
+                  className="m-pulldown m-pulldown-default__control css-1wxtc0p-control"
+                  onMouseDown={[Function]}
+                  onTouchEnd={[Function]}
+                >
+                  <div
+                    className="m-pulldown m-pulldown-default__value-container css-1733mh3-ValueContainer"
+                  >
+                    <div
+                      className="m-pulldown m-pulldown-default__placeholder css-2js46o-placeholder"
+                    >
+                      Chọn Tỉnh / Thành Phố
+                    </div>
+                    <div
+                      className="css-b8ldur-Input"
+                    >
+                      <div
+                        className="m-pulldown m-pulldown-default__input"
+                        style={
+                          Object {
+                            "display": "inline-block",
+                          }
+                        }
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          autoCapitalize="none"
+                          autoComplete="off"
+                          autoCorrect="off"
+                          disabled={false}
+                          id="react-select-5-input"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          spellCheck="false"
+                          style={
+                            Object {
+                              "background": 0,
+                              "border": 0,
+                              "boxSizing": "content-box",
+                              "color": "inherit",
+                              "fontSize": "inherit",
+                              "label": "input",
+                              "opacity": 1,
+                              "outline": 0,
+                              "padding": 0,
+                              "width": "1px",
+                            }
+                          }
+                          tabIndex="0"
+                          type="text"
+                          value=""
+                        />
+                        <div
+                          style={
+                            Object {
+                              "height": 0,
+                              "left": 0,
+                              "overflow": "scroll",
+                              "position": "absolute",
+                              "top": 0,
+                              "visibility": "hidden",
+                              "whiteSpace": "pre",
+                            }
+                          }
+                        >
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="m-pulldown m-pulldown-default__indicators css-1hb7zxy-IndicatorsContainer"
+                  >
+                    <div
+                      aria-hidden="true"
+                      className="m-pulldown m-pulldown-default__indicator m-pulldown m-pulldown-default__dropdown-indicator css-xnkoxx-indicatorContainer"
+                      onMouseDown={[Function]}
+                      onTouchEnd={[Function]}
+                    >
+                      <img
+                        alt="icon-arrow"
+                        src="ic_carret_down.svg"
+                        style={
+                          Object {
+                            "transform": false,
+                            "transition": "all 0.3s ease",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="t-projectListMap_info_select"
+        >
+          <p
+            className="a-text a-text-16x24 a-text-arsenic"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "Dự Án",
+              }
+            }
+          />
+          <div
+            className="t-projectListMap_info_pulldown"
+          >
+            <div
+              className="m-pulldown"
+            >
+              <div
+                className="m-pulldown css-2b097c-container"
+                onKeyDown={[Function]}
+              >
+                <span
+                  aria-atomic="false"
+                  aria-live="polite"
+                  aria-relevant="additions text"
+                  className="css-1f43avz-a11yText-A11yText"
+                />
+                <div
+                  className="m-pulldown m-pulldown-default__control css-1wxtc0p-control"
+                  onMouseDown={[Function]}
+                  onTouchEnd={[Function]}
+                >
+                  <div
+                    className="m-pulldown m-pulldown-default__value-container css-1733mh3-ValueContainer"
+                  >
+                    <div
+                      className="m-pulldown m-pulldown-default__placeholder css-2js46o-placeholder"
+                    >
+                      Chọn Dự Án
+                    </div>
+                    <div
+                      className="css-b8ldur-Input"
+                    >
+                      <div
+                        className="m-pulldown m-pulldown-default__input"
+                        style={
+                          Object {
+                            "display": "inline-block",
+                          }
+                        }
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          autoCapitalize="none"
+                          autoComplete="off"
+                          autoCorrect="off"
+                          disabled={false}
+                          id="react-select-6-input"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          spellCheck="false"
+                          style={
+                            Object {
+                              "background": 0,
+                              "border": 0,
+                              "boxSizing": "content-box",
+                              "color": "inherit",
+                              "fontSize": "inherit",
+                              "label": "input",
+                              "opacity": 1,
+                              "outline": 0,
+                              "padding": 0,
+                              "width": "1px",
+                            }
+                          }
+                          tabIndex="0"
+                          type="text"
+                          value=""
+                        />
+                        <div
+                          style={
+                            Object {
+                              "height": 0,
+                              "left": 0,
+                              "overflow": "scroll",
+                              "position": "absolute",
+                              "top": 0,
+                              "visibility": "hidden",
+                              "whiteSpace": "pre",
+                            }
+                          }
+                        >
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="m-pulldown m-pulldown-default__indicators css-1hb7zxy-IndicatorsContainer"
+                  >
+                    <div
+                      aria-hidden="true"
+                      className="m-pulldown m-pulldown-default__indicator m-pulldown m-pulldown-default__dropdown-indicator css-xnkoxx-indicatorContainer"
+                      onMouseDown={[Function]}
+                      onTouchEnd={[Function]}
+                    >
+                      <img
+                        alt="icon-arrow"
+                        src="ic_carret_down.svg"
+                        style={
+                          Object {
+                            "transform": false,
+                            "transition": "all 0.3s ease",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="t-projectListMap_info_wrap-list"
+        >
+          <p
+            className="a-text a-text-16x24 a-text-arsenic"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "Danh Sách Dự Án",
+              }
+            }
+          />
+          <ul
+            className="t-projectListMap_info_list"
+          >
+            <li>
+              <a
+                aria-current="page"
+                className="a-link   active"
+                href="/"
+                onClick={[Function]}
+                target="_self"
+              >
+                <div
+                  className="t-projectListMap_info_item"
+                >
+                  <p
+                    className="a-text a-text-16x24 a-text-taupeGray"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "Aqua City",
+                      }
+                    }
+                  />
+                  <i
+                    className="a-icon a-icon-arrowNextGrey a-icon-24"
+                  />
+                </div>
+              </a>
+            </li>
+            <li>
+              <a
+                aria-current="page"
+                className="a-link   active"
+                href="/"
+                onClick={[Function]}
+                target="_self"
+              >
+                <div
+                  className="t-projectListMap_info_item"
+                >
+                  <p
+                    className="a-text a-text-16x24 a-text-taupeGray"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "NovaWorld Phan Thiet",
+                      }
+                    }
+                  />
+                  <i
+                    className="a-icon a-icon-arrowNextGrey a-icon-24"
+                  />
+                </div>
+              </a>
+            </li>
+            <li>
+              <a
+                aria-current="page"
+                className="a-link   active"
+                href="/"
+                onClick={[Function]}
+                target="_self"
+              >
+                <div
+                  className="t-projectListMap_info_item"
+                >
+                  <p
+                    className="a-text a-text-16x24 a-text-taupeGray"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "NovaWorld Ho Tram",
+                      }
+                    }
+                  />
+                  <i
+                    className="a-icon a-icon-arrowNextGrey a-icon-24"
+                  />
+                </div>
+              </a>
+            </li>
+            <li>
+              <a
+                aria-current="page"
+                className="a-link   active"
+                href="/"
+                onClick={[Function]}
+                target="_self"
+              >
+                <div
+                  className="t-projectListMap_info_item"
+                >
+                  <p
+                    className="a-text a-text-16x24 a-text-taupeGray"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "The Grand Manhattan",
+                      }
+                    }
+                  />
+                  <i
+                    className="a-icon a-icon-arrowNextGrey a-icon-24"
+                  />
+                </div>
+              </a>
+            </li>
+            <li>
+              <a
+                aria-current="page"
+                className="a-link   active"
+                href="/"
+                onClick={[Function]}
+                target="_self"
+              >
+                <div
+                  className="t-projectListMap_info_item"
+                >
+                  <p
+                    className="a-text a-text-16x24 a-text-taupeGray"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "The Park Avenue",
+                      }
+                    }
+                  />
+                  <i
+                    className="a-icon a-icon-arrowNextGrey a-icon-24"
+                  />
+                </div>
+              </a>
+            </li>
+            <li>
+              <a
+                aria-current="page"
+                className="a-link   active"
+                href="/"
+                onClick={[Function]}
+                target="_self"
+              >
+                <div
+                  className="t-projectListMap_info_item"
+                >
+                  <p
+                    className="a-text a-text-16x24 a-text-taupeGray"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "Aqua City 1",
+                      }
+                    }
+                  />
+                  <i
+                    className="a-icon a-icon-arrowNextGrey a-icon-24"
+                  />
+                </div>
+              </a>
+            </li>
+            <li>
+              <a
+                aria-current="page"
+                className="a-link   active"
+                href="/"
+                onClick={[Function]}
+                target="_self"
+              >
+                <div
+                  className="t-projectListMap_info_item"
+                >
+                  <p
+                    className="a-text a-text-16x24 a-text-taupeGray"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "Aqua City 2",
+                      }
+                    }
+                  />
+                  <i
+                    className="a-icon a-icon-arrowNextGrey a-icon-24"
+                  />
+                </div>
+              </a>
+            </li>
+          </ul>
+          <div
+            className="t-projectListMap_info_btn"
+          >
+            <button
+              className="a-button a-button-with-icon"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
+            >
+              <i
+                className="a-icon a-icon-arrowDownBrown a-icon-14"
+              />
+              Xem Tất Cả Dự Án
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        className="t-projectListMap_map"
+      >
+        <div
+          className="t-projectListMap_map_img"
+          style={
+            Object {
+              "paddingBottom": "158.98123324396784%",
+            }
+          }
+        >
+          <img
+            alt="map"
+            src="bg_project_list_map.png"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Components/templates/ProjectMap Normal 1`] = `
 <div
   className="t-projectMap"
@@ -13256,7 +13765,7 @@ exports[`Storyshots Components/templates/ProjectMap Normal 1`] = `
         <div
           className="t-projectMap_info_wrap"
         >
-          <h3
+          <h2
             className="a-heading a-heading-32x48 a-heading-white a-heading-700 a-heading-fontNoto a-heading-center"
             dangerouslySetInnerHTML={
               Object {

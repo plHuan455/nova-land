@@ -64,7 +64,8 @@ type ColorStyle =
   | 'darkMidnightBlue'
   | 'deer'
   | 'dimGray'
-  | 'lavenderGray';
+  | 'lavenderGray'
+  | 'taupeGray';
 
 type FontFamily = 'fontLexend' | 'fontNoto' | 'fontLato';
 
