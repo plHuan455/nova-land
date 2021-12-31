@@ -3,8 +3,8 @@
 
   &_content {
     display: flex;
-    margin-top: rem(52);
     flex-wrap: wrap;
+    margin-top: rem(52);
 
     @include mobile-down {
       margin-top: rem(20);
@@ -33,7 +33,7 @@
       }
     }
 
-    &_wrap-list{
+    &_wrap-list {
       margin-top: rem(32);
       @include mobile-down {
         margin-top: rem(16);
@@ -55,9 +55,9 @@
       }
 
       li {
+        border-bottom: $gainsboro 1px solid;
         list-style: none;
         padding: rem(16) 0;
-        border-bottom: $gainsboro 1px solid;
 
         @include mobile-down {
           padding: rem(7) 0;
@@ -74,10 +74,11 @@
       @include adjust-flex(space-between);
       @include mobile-down {
         .a-icon {
-          width: rem(16);
           height: rem(16);
+          width: rem(16);
         }
       }
+
       &:hover {
         opacity: 0.7;
       }
@@ -94,8 +95,8 @@
   }
 
   &_map {
-    margin-left: calc(194 / #{$width-in-container-value} * 100%);
     flex: 0 0 calc(373 / #{$width-in-container-value} * 100%);
+    margin-left: calc(194 / #{$width-in-container-value} * 100%);
 
     @include tablet-down {
       flex: 0 0 45%;
@@ -110,6 +111,7 @@
 
     &_img {
       position: relative;
+
       & > img {
         height: 100%;
         left: 0;
@@ -122,11 +124,12 @@
 
     &_area {
       background: url('~assets/images/logo_slide.png') no-repeat center/contain;
-      position: absolute;
-      transform: translate(-50%, -50%);
       cursor: pointer;
       opacity: 0.6;
+      position: absolute;
+      transform: translate(-50%, -50%);
       transition: $transition-long ease-in-out;
+
       &:hover {
         opacity: 1;
       }
