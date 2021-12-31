@@ -1,0 +1,59 @@
+.o-listFeatProjectCollapse {
+  $root: &;
+
+  &_item {
+    &-content {
+      @include text-overflow(3);
+    }
+
+    &-wrapLink {
+      display: flex;
+      align-items: center;
+      margin: rem(16) 0;
+      padding: rem(5) rem(16);
+
+      .a-icon {
+        margin-right: rem(8);
+      }
+
+      @include mobile-down {
+        margin: rem(8) 0;
+      }
+    }
+
+    &-img {
+      max-width: rem(507);
+      width: 100%;
+      display: none;
+      @include mobile-down {
+        display: block;
+      }
+    }
+
+    &-line {
+      position: relative;
+      padding: rem(11);
+
+      &::after {
+        position: absolute;
+        content: "";
+        left: rem(16);
+        right: rem(26);
+        height: 1px;
+        background-color: $gainsboro;
+        @include mobile-down {
+          left: rem(10);
+          right: rem(20);
+        }
+      }
+    }
+
+    &:last-child {
+      #{$root}_item-line {
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+}
