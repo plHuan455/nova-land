@@ -4,6 +4,8 @@ import {
   BrowserRouter as Router,
 } from 'react-router-dom';
 
+import Text from '../Text';
+
 import Link from '.';
 
 export default {
@@ -23,6 +25,8 @@ export const normal: Story = () => (
 
 export const useExternal: Story = () => (
   <Router>
-    <Link useExternal target="_blank" href="https://google.com.vn">Google</Link>
+    <Link useExternal target="_blank" href="https://google.com.vn">
+      <Text modifiers={['goldenBrown']}>Google</Text>
+    </Link>
   </Router>
 );
