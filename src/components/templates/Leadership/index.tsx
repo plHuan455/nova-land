@@ -1,4 +1,4 @@
-import React, { useRef, useState, useLayoutEffect } from 'react';
+import React, { useState } from 'react';
 
 import Heading from 'components/atoms/Heading';
 import Icon from 'components/atoms/Icon';
@@ -11,17 +11,16 @@ import mapModifiers from 'utils/functions';
 interface LeadershipCardProps {
   gender: string;
   name: string;
+  position: string;
   imgSrc: string;
   isShow?: boolean;
 }
 
 export const LeadershipCard: React.FC<LeadershipCardProps> = ({
-  gender, name, imgSrc, isShow, children,
-}) => {
-  const leaderShipRef = useRef<HTMLDivElement>(null);
-
-  return (
-    <div className={mapModifiers('t-leadershipCard', isShow && 'show')}>
+  gender, name, imgSrc, isShow, children, position,
+}) => (
+  <div className={mapModifiers('t-leadershipCard', isShow && 'show')}>
+    <div className="t-leadershipCard_wrapper">
       <div className="t-leadershipCard_thumbnail">
         <Image src={imgSrc} alt="LeadershipCard" ratio="1x1" />
       </div>
@@ -41,20 +40,19 @@ export const LeadershipCard: React.FC<LeadershipCardProps> = ({
             <Icon iconName="arrowDownGrey" size="24" />
           </div>
         </div>
-        <div
-          style={{
-            maxHeight: isShow ? leaderShipRef.current?.clientHeight : 0,
-          }}
-          className="t-leadershipCard_wrapper"
-        >
-          <div ref={leaderShipRef} className="t-leadershipCard_position">
-            {children}
-          </div>
+        <div className="t-leadershipCard_position">
+          <Text
+            modifiers={['16x24', 'davysGrey', '400', 'fontLexend']}
+            content={position}
+          />
         </div>
       </div>
     </div>
-  );
-};
+    <div className="t-leadershipCard_detail">
+      {children}
+    </div>
+  </div>
+);
 
 export interface LeadershipDetailProps {
   gender: string;
@@ -62,7 +60,7 @@ export interface LeadershipDetailProps {
   position: string;
   imgSrc: string;
   achievement: string[];
-  slogan: string;
+  slogan?: string;
 }
 
 export const LeadershipDetail: React.FC<LeadershipDetailProps> = ({
@@ -100,30 +98,31 @@ export const LeadershipDetail: React.FC<LeadershipDetailProps> = ({
       </div>
     </div>
     <div className="t-leadershipDetail_achievement">
-      {
-        achievement.map((item, index) => (
-          <div className="t-leadershipDetail_item" key={`leadershipDetail_${index.toString()}`}>
-            <div className="t-leadershipDetail_item_icon">
-              <Icon iconName="circleCamel" size="13" />
-            </div>
-            <div className="t-leadershipDetail_item_content">
+      <ul>
+        {
+          achievement.map((item, index) => (
+            <li className="t-leadershipDetail_item" key={`leadershipDetail_${index.toString()}`}>
               <Text
                 modifiers={['16x24', '400', 'fontLexend', 'dimGray']}
                 content={item}
               />
-            </div>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    {
+      slogan && (
+        <div className="t-leadershipDetail_slogan">
+          <div className="t-leadershipDetail_slogan_detail">
+            <Heading
+              modifiers={['dimGray', '400', 'fontLexend']}
+              content={slogan}
+            />
           </div>
-        ))
-      }
-    </div>
-    <div className="t-leadershipDetail_slogan">
-      <div className="t-leadershipDetail_slogan_detail">
-        <Heading
-          modifiers={['dimGray', '400', 'fontLexend']}
-          content={slogan}
-        />
-      </div>
-    </div>
+        </div>
+      )
+    }
   </div>
 );
 
@@ -142,16 +141,6 @@ const Leadership: React.FC<LeadershipProps> = ({
 }) => {
   const [indexActive, setIndexActive] = useState(0);
   const [indexShow, setIndexShow] = useState(0);
-  const [sizeScreen, setSizeScreen] = useState(0);
-
-  useLayoutEffect(() => {
-    function updateSize() {
-      setSizeScreen(window.innerWidth);
-    }
-    window.addEventListener('resize', updateSize);
-    updateSize();
-    return () => window.removeEventListener('resize', updateSize);
-  }, []);
 
   return (
     <div className="t-leadership">
@@ -168,7 +157,10 @@ const Leadership: React.FC<LeadershipProps> = ({
                   key={`tab-${index.toString()}`}
                   label={item.titleTab}
                   active={index === indexActive}
-                  handleClick={() => setIndexActive(index)}
+                  handleClick={() => {
+                    setIndexActive(index);
+                    setIndexShow(0);
+                  }}
                 />
               ))
             }
@@ -189,18 +181,9 @@ const Leadership: React.FC<LeadershipProps> = ({
                             {...item}
                             isShow={index === indexShow}
                           >
-                            {
-                              sizeScreen > 991 ? (
-                                <Text
-                                  modifiers={['16x24', 'davysGrey', '400', 'fontLexend']}
-                                  content={item.position}
-                                />
-                              ) : (
-                                <LeadershipDetail
-                                  {...item}
-                                />
-                              )
-                            }
+                            <LeadershipDetail
+                              {...item}
+                            />
                           </LeadershipCard>
                         </div>
                       ))
@@ -208,7 +191,7 @@ const Leadership: React.FC<LeadershipProps> = ({
                   </div>
                   <div className="t-leadership_item_right">
                     {
-                      sizeScreen > 991 && ele.dataTab.map((value, number) => (
+                      ele.dataTab.map((value, number) => (
                         <div
                           className={mapModifiers('t-leadership_item_detail', number === indexShow && 'show')}
                           key={`leadership-detail-${number.toString()}`}

@@ -25,6 +25,7 @@ export const card: Story = ({ isShow }) => (
   <LeadershipCard
     gender="Ông"
     name="Bùi Thành Nhơn"
+    position="Nhà sáng lập - Chủ tịch Hội đồng Quản trị"
     imgSrc={imgLeadership1}
     isShow={isShow}
   >

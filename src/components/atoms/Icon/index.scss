@@ -34,11 +34,6 @@
     width: rem(10);
   }
 
-  &-13 {
-    height: rem(13);
-    width: rem(13);
-  }
-
   &-search {
     background-image: url('~assets/icons/ic_search.svg');
   }
@@ -97,9 +92,5 @@
   
   &-arrowDownBrown {
     background-image: url('~assets/icons/ic_arrow_down_brown.svg');
-  }
-
-  &-circleCamel {
-    background-image: url('~assets/icons/ic_circle_camel.svg');
   }
 }
