@@ -59,7 +59,7 @@ const AwardList: React.FC<AwardListProps> = ({
 
   useEffect(() => {
     if (getActiveIdx) getActiveIdx(activeIdx);
-  }, [activeIdx]);
+  }, [activeIdx, getActiveIdx]);
 
   return (
     <div className="t-awardList">
