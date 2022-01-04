@@ -33,7 +33,8 @@ export const LeadershipCard: React.FC<LeadershipCardProps> = ({
         </div>
         <div className="t-leadershipCard_name">
           <Heading
-            modifiers={['arsenic', '600', 'fontNoto', 'uppercase']}
+            type="h3"
+            modifiers={['arsenic', '600', 'fontNoto']}
             content={name}
           />
           <div className="t-leadershipCard_icon">

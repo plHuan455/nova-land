@@ -13,10 +13,6 @@
 
   &:hover {
     background: $white-smoke3;
-
-    #{$root}_icon {
-      animation: changeY 1s ease infinite;
-    }
   }
 
   &_icon {
@@ -94,23 +90,13 @@
   }
 }
 
-@keyframes changeY {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(10px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
 .t-leadershipDetail {
   background: $white;
   border: rem(1) solid $golden-brown;
+  height: 100%;
+  max-height: rem(977);
+  overflow-y: auto;
+  @include scroll-bars(8);
 
   &_wrapper {
     display: flex;
@@ -285,6 +271,9 @@
     &_left {
       flex: 0 0 30%;
       position: relative;
+      max-height: rem(977);
+      overflow-y: auto;
+      @include scroll-bars(8);
     }
 
     &_right {
@@ -314,6 +303,7 @@
 
       &-show {
         display: block;
+        height: 100%;
       }
     }
   }
