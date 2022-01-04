@@ -1,6 +1,9 @@
 .a-heading {
   margin: 0;
   @include font-base(24, 32);
+  @include tablet-down {
+    @include font-base(21, 30);
+  }
   @include mobile-down {
     @include font-base(18, 28);
   }
