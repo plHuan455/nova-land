@@ -10,7 +10,7 @@ export default {
 } as Meta;
 
 export const normal: Story = () => (
-  <Collapses title="NovaWorld Ho Tram The Tropicana">
+  <Collapses active title="NovaWorld Ho Tram The Tropicana">
     <div>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit tristique tellus felis odio
       ut massa pellentesque massa condimentum. Lobortis eu lectus enim ullamcorper hac nibh. Nunc

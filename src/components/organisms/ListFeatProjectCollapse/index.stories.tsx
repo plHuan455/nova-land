@@ -10,5 +10,5 @@ export default {
 } as Meta;
 
 export const normal: Story = () => (
-  <ListFeatProjectCollapse list={[]} />
+  <ListFeatProjectCollapse indexActive={0} list={[]} />
 );
