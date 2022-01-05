@@ -1,0 +1,55 @@
+.t-featuredProjects {
+  $root: &;
+  &_collapseList {
+    background-color: $snow;
+    margin-top: rem(52);
+    flex-wrap: wrap;
+    @include adjust-flex(center, stretch);
+    @include tablet-down {
+      margin-top: rem(24);
+    }
+    @include mobile-down {
+      margin-top: rem(16);
+    }
+
+    &_left,
+    &_right {
+      flex: 0 0 50%;
+    }
+
+    &_left {
+      padding: rem(27) rem(16) rem(27) rem(24);
+
+      @include tablet-up {
+        max-height: rem(410);
+        overflow-y: auto;
+        @include scroll-bars(8);
+      }
+
+      @include tablet-down {
+        padding: rem(16);
+        flex: 0 0 100%;
+      }
+      @include mobile-down {
+        padding: rem(8);
+      }
+    }
+
+    &_right {
+      .a-image {
+        max-width: 100%;
+      }
+      @include tablet-down {
+        display: none;
+      }
+
+      &_image {
+        display: none;
+
+        &-show {
+          display: block;
+        }
+      }
+    }
+  }
+}

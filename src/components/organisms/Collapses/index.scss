@@ -1,0 +1,42 @@
+.o-collapses {
+  $root: &;
+  transition: all $transition linear;
+  background: transparent;
+
+  &_wrapTitle {
+    padding: rem(13) rem(16);
+    cursor: pointer;
+    @include adjust-flex(space-between, center);
+    transition: all $transition linear;
+    @include mobile-down {
+      padding: rem(8);
+    }
+  }
+
+  &_icon {
+    margin-right: rem(12);
+    transform: rotate(-180deg);
+    transition: all $transition linear;
+  }
+
+  &_wrapper {
+    max-height: 0;
+    overflow: hidden;
+    height: auto;
+    transition: all $transition linear;
+
+    &-active {
+      max-height: fit-content;
+    }
+  }
+
+  &_description {
+    padding: rem(3) rem(16);
+  }
+
+  &-active {
+    #{$root}_icon {
+      transform: rotate(0);
+    }
+  }
+}

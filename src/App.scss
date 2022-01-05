@@ -22,9 +22,11 @@
 @import 'components/organisms/Header/';
 @import 'components/organisms/Container/';
 @import 'components/organisms/Carousel/';
+@import 'components/organisms/Collapses/';
 @import 'components/organisms/Tabs';
 @import 'components/organisms/Footer/';
 @import 'components/organisms/Banner/';
+@import 'components/organisms/ListFeatProjectCollapse/';
 
 //Templates
 @import 'components/templates/HomeNews';
@@ -42,3 +44,4 @@
 @import 'components/templates/ProjectMap';
 @import 'components/templates/ProjectListMap';
 @import 'components/templates/Leadership';
+@import 'components/templates/FeaturedProjects/';
