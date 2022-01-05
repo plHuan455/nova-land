@@ -133,6 +133,7 @@ const Header: React.FC<HeaderProps> = ({
                       <Link
                         href={val.href}
                         customClassName="o-header_nav_link"
+                        handleClick={() => setIsOpenMenu(!isOpenMenu)}
                       >
                         {val.title}
                       </Link>

@@ -1,13 +1,19 @@
 import React from 'react';
 
+import LeaderShipContainer from './leaderShipContainer';
+import ProjectListMapContainer from './projectListMapContainer';
+
 import tabsData from 'assets/dataDummy/awardList';
 import listDevelopmentHistory from 'assets/dataDummy/developmentHistory';
 import { ecoCardList } from 'assets/dataDummy/ecoSystems';
 import investmentSectorData from 'assets/dataDummy/investmentSector';
 import dataOutstandingProjectCard from 'assets/dataDummy/outstandingProject';
 import img from 'assets/images/Banner/banner_home.png';
+import img3 from 'assets/images/assist_destination.png';
 import bannerImg from 'assets/images/banner2.png';
 import imgFieldActivity from 'assets/images/img_field_activity.png';
+import img2 from 'assets/images/infrastructure.png';
+import img1 from 'assets/images/real_estate.png';
 import Banner from 'components/organisms/Banner';
 import AwardList from 'components/templates/AwardList';
 import DevelopmentHistory from 'components/templates/DevelopmentHistory';
@@ -17,7 +23,63 @@ import InvestmentSector from 'components/templates/InvestmentSector';
 import OutstandingProject from 'components/templates/OutstandingProject';
 import TransportationInfrastructure from 'components/templates/TransportationInfrastructure';
 import VisionMissionValue from 'components/templates/VisionMissionValue';
-import { dataList } from 'components/templates/VisionMissionValue/index.stories';
+
+export const dataList = [
+  {
+    title: 'TẦM NHÌN',
+    desc: 'Tập đoàn kinh tế hàng đầu trong các lĩnh vực',
+    dataList: [
+      {
+        src: img1,
+        title: 'Bất động sản',
+      },
+      {
+        src: img2,
+        title: 'Phát triển hạ tầng',
+      },
+      {
+        src: img3,
+        title: 'Kiến tạo điểm đến',
+      },
+    ],
+  },
+  {
+    title: 'SỨ MỆNH',
+    desc: 'Tập đoàn tập trung cho các giá trị cộng đồng',
+    dataList: [
+      {
+        src: img1,
+        title: 'Bất động sản',
+      },
+      {
+        src: img2,
+        title: 'Phát triển hạ tầng',
+      },
+      {
+        src: img3,
+        title: 'Kiến tạo điểm đến',
+      },
+    ],
+  },
+  {
+    title: 'GIÁ TRỊ CỐT LÕI',
+    desc: 'Chìa khoá của sự Thành Công',
+    dataList: [
+      {
+        src: img1,
+        title: 'Bất động sản',
+      },
+      {
+        src: img2,
+        title: 'Phát triển hạ tầng',
+      },
+      {
+        src: img3,
+        title: 'Kiến tạo điểm đến',
+      },
+    ],
+  },
+];
 
 interface AboutUSContainerProps {
 }
@@ -30,7 +92,7 @@ const AboutUSContainer: React.FC<AboutUSContainerProps> = () => (
     <div className="p-aboutUSContainer_visionMission">
       <VisionMissionValue dataList={dataList} />
     </div>
-    <div className="p-aboutUSContainer_fieldActivity">
+    <div className="p-aboutUSContainer_fieldActivity pt-100">
       <FieldActivity
         title="LĨNH VỰC HOẠT ĐỘNG"
         imgSrc={imgFieldActivity}
@@ -69,6 +131,7 @@ const AboutUSContainer: React.FC<AboutUSContainerProps> = () => (
     </div>
     <div className="p-aboutUSContainer_">
       {/* 31.02 */}
+      <ProjectListMapContainer />
     </div>
     <div className="p-aboutUSContainer_">
       <EcoSystems
@@ -84,6 +147,7 @@ const AboutUSContainer: React.FC<AboutUSContainerProps> = () => (
     </div>
     <div className="p-aboutUSContainer_">
       {/* 10.01 */}
+      <LeaderShipContainer />
     </div>
     <div className="p-aboutUSContainer_awardList">
       <AwardList
