@@ -20,8 +20,14 @@
   }
 
   &_wrapper {
+    max-height: 0;
     overflow: hidden;
+    height: auto;
     transition: all $transition linear;
+
+    &-active {
+      max-height: fit-content;
+    }
   }
 
   &_description {

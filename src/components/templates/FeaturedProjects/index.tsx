@@ -4,6 +4,7 @@ import Heading from 'components/atoms/Heading';
 import Image from 'components/atoms/Image';
 import Container from 'components/organisms/Container';
 import ListFeatProjectCollapse from 'components/organisms/ListFeatProjectCollapse';
+import mapModifiers from 'utils/functions';
 
 export type FeaturedProjectTypes = {
   title: string;
@@ -22,28 +23,43 @@ const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
   title,
   featuredProjectList,
 }) => {
-  const [activeCollapse, setActiveCollapse] = useState<number>(0);
+  const [indexActive, setIndexActive] = useState(0);
+
+  const handleOnchange = (index: number) => {
+    if (index !== indexActive) {
+      setIndexActive(index);
+    }
+  };
+
   return (
     <div className="t-featuredProjects">
       <Container>
-        <div className="t-featuredProjects_wrapper">
-          <Heading modifiers={['32x48', 'jet', '800', 'fontNoto', 'center']}>
-            {title}
-          </Heading>
-        </div>
+        <Heading modifiers={['32x48', 'jet', '700', 'fontNoto', 'center']}>
+          {title}
+        </Heading>
         {featuredProjectList.length > 0 && (
           <div className="t-featuredProjects_collapseList">
             <div className="t-featuredProjects_collapseList_left">
               <ListFeatProjectCollapse
                 list={featuredProjectList}
-                handleOnchange={(idx) => setActiveCollapse(idx)}
+                handleOnchange={handleOnchange}
+                indexActive={indexActive}
               />
             </div>
             <div className="t-featuredProjects_collapseList_right">
-              <Image
-                src={featuredProjectList[activeCollapse].src}
-                ratio="547x410"
-              />
+              {
+                featuredProjectList.map((item, index) => (
+                  <div
+                    className={mapModifiers('t-featuredProjects_collapseList_right_image', index === indexActive && 'show')}
+                    key={`t-featuredProjects_collapseList_right_image-${index.toString()}`}
+                  >
+                    <Image
+                      src={item.src}
+                      ratio="547x410"
+                    />
+                  </div>
+                ))
+              }
             </div>
           </div>
         )}
