@@ -13,7 +13,7 @@ const App: React.FC = () => (
     <MainLayoutContainer>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="*" element={<div>Not found</div>} />
+        <Route path="*" element={<div />} />
       </Routes>
     </MainLayoutContainer>
   </Suspense>

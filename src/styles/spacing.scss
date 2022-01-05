@@ -14,3 +14,22 @@
   margin-top: rem(30);
 }
 
+.pt-100 {
+  padding-top: rem(100);
+  @include tablet-down {
+    padding-top: rem(50);
+  }
+  @include mobile-down {
+    padding-top: rem(24);
+  }
+}
+
+.pb-100 {
+  padding-bottom: rem(100);
+  @include tablet-down {
+    padding-bottom: rem(50);
+  }
+  @include mobile-down {
+    padding-bottom: rem(24);
+  }
+}

@@ -5,7 +5,7 @@ import Image from 'components/atoms/Image';
 import Text from 'components/atoms/Text';
 import Container from 'components/organisms/Container';
 
-interface TransportationInfrastructureProps {
+export interface TransportationInfrastructureProps {
   imgSrc: string;
   imgSrcTablet?: string;
   imgSrcMobile?: string;
@@ -36,10 +36,5 @@ const TransportationInfrastructure: React.FC<
     </Container>
   </div>
 );
-
-TransportationInfrastructure.defaultProps = {
-  imgSrcTablet: undefined,
-  imgSrcMobile: undefined,
-};
 
 export default TransportationInfrastructure;

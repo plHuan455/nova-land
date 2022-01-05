@@ -4,7 +4,7 @@ import Heading from 'components/atoms/Heading';
 import Text from 'components/atoms/Text';
 import Container from 'components/organisms/Container';
 
-interface OutStandingNumbersProps {
+export interface OutStandingNumbersProps {
   title: string;
   dataList: NumberBlockProps[];
 }

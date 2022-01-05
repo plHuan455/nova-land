@@ -6,7 +6,7 @@ import EcoCard, { EcoCardProps } from 'components/molecules/EcoCard';
 import Carousel, { NextArrow, PrevArrow } from 'components/organisms/Carousel';
 import Container from 'components/organisms/Container';
 
-interface EcoSystemsProps {
+export interface EcoSystemsProps {
   title: string;
   desc: string;
   dataList: EcoCardProps[];

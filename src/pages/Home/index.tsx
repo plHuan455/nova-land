@@ -1,7 +1,11 @@
 import React from 'react';
 
+import HomeContainer from 'container/Home';
+
 const Home: React.FC = () => (
-  <div style={{ height: 1000 }}>Page Home</div>
+  <div className="p-home">
+    <HomeContainer />
+  </div>
 );
 
 export default Home;
