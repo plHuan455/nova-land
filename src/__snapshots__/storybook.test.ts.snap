@@ -2112,7 +2112,7 @@ exports[`Storyshots Components/organisms/Header normal 1`] = `
               >
                 <a
                   className="a-link o-header_nav_link "
-                  href="/gioi-thieu"
+                  href="/ve-chung-toi"
                   onClick={[Function]}
                   target="_self"
                 >
@@ -14563,7 +14563,7 @@ exports[`Storyshots Components/templates/MainLayout Normal 1`] = `
               >
                 <a
                   className="a-link o-header_nav_link "
-                  href="/gioi-thieu"
+                  href="/ve-chung-toi"
                   onClick={[Function]}
                   target="_self"
                 >

@@ -194,7 +194,7 @@
         }
   
         @include mobile-down {
-          left: calc(-150 / 1366 * 100%);
+          left: calc(-100 / 1366 * 100%);
         }
       }
   
@@ -210,7 +210,7 @@
         }
   
         @include mobile-down {
-          right: calc(-150 / 1366 * 100%);
+          right: calc(-100 / 1366 * 100%);
         }
       }
     }

@@ -1,7 +1,6 @@
 import React from 'react';
 
 import EcoSystemContainer from './ecoSystemContainer';
-import FeaturedProjectsContainer from './featuredProjectsContainer';
 import HeroBannerContainer from './heroBannerContainer';
 import InvestmentSectorContainer from './investmentSectorContainer';
 import NewsContainer from './newsContainer';
@@ -18,7 +17,6 @@ const HomeContainer: React.FC = () => (
     <TransportationContainer />
     <ProjectMapContainer />
     <EcoSystemContainer />
-    <FeaturedProjectsContainer />
     <ShareHolderRelationsContainer />
     <NewsContainer />
   </>
