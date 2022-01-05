@@ -4,7 +4,7 @@ import { ecoCardList } from 'assets/dataDummy/ecoSystems';
 import EcoSystems from 'components/templates/EcoSystems';
 
 const EcoSystemContainer: React.FC = () => (
-  <div className="p-home_ecoSystem pt-100 pb-100">
+  <div className="p-home_ecoSystem pt-100">
     <EcoSystems
       title="HỆ SINH THÁI NOVA"
       desc="Hệ sinh thái Nova Group, mang những tinh hoa Văn Hóa, Ẩm Thực, Giáo Dục, Vui Chơi - Giải Trí, Du Lịch Nghỉ Dưỡng,
