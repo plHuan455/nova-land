@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import dataDummy from 'assets/dataDummy/projectListMap';
 import img from 'assets/images/bg_project_list_map.png';
 import { OptionType } from 'components/molecules/Pulldown';
-import ProjectListMap, { ProjectListMapGround, ProjectListMapInfo } from 'components/templates/ProjectListMap';
+import ProjectListMap,
+{ ProjectListMapGround, ProjectListMapInfo } from 'components/templates/ProjectListMap';
 
 const projectOptions = (_province:OptionType|null) => {
   if (_province?.value === '1') return dataDummy.projectHCM;
@@ -12,8 +13,8 @@ const projectOptions = (_province:OptionType|null) => {
 };
 
 const ProjectListMapContainer: React.FC = () => {
-  const [province, setProvince] = useState<OptionType | null>(null);
-  const [project, setProject] = useState<OptionType | null>(null);
+  const [province, setProvince] = useState<OptionType|null>(null);
+  const [project, setProject] = useState<OptionType|null>(null);
   const listProjectSelect = projectOptions(province);
 
   const customProjectOptions = listProjectSelect
@@ -26,7 +27,7 @@ const ProjectListMapContainer: React.FC = () => {
   };
 
   return (
-    <div className="p-aboutUs-projectlistmap pt-100 pb-100">
+    <div className="p-aboutUs_projectListMap pb-100">
       <ProjectListMap title="Dự Án">
         <ProjectListMapInfo
           listProject={dataDummy.listProject}
@@ -35,7 +36,7 @@ const ProjectListMapContainer: React.FC = () => {
           valueProvince={province}
           valueProject={project}
           hasButtonViewAll
-          // eslint-disable-next-line no-console
+            // eslint-disable-next-line no-console
           handleClickViewAll={() => console.log('see more')}
           handleChangeProvince={(value) => {
             setProvince(value);

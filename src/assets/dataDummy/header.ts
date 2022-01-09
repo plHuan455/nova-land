@@ -11,7 +11,7 @@ const headerMenuDummy: HeaderMenuTypes[] = [
   },
   {
     href: '/mua-ban',
-    title: 'mua&bán',
+    title: 'mua bán',
   },
   {
     href: '/quan-he-dau-tu',
