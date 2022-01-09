@@ -80,7 +80,7 @@ const Header: React.FC<HeaderProps> = ({
   return (
     <header className={mapModifiers('o-header', isScroll && 'scrolled')}>
       <Container>
-        <div className="o-header_wrapper">
+        <div className="o-header_wrapper animate animate-topDown">
           <div
             className={mapModifiers(
               'o-header_iconMenu',

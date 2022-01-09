@@ -32,7 +32,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
   caption,
   list,
 }) => (
-  <div className="t-heroBanner">
+  <div className="t-heroBanner animate animate-bottomToTop">
     <Carousel settings={settingBanner}>
       {list.map((item, index) => (
         <Image key={`index-${index.toString()}`} {...item} ratio="1371x620" alt="image-banner" />
@@ -44,7 +44,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
           <Heading modifiers={['center', '400', '60x72', 'fontNoto', 'white']} content={title} />
         </div>
         <div className="t-heroBanner_info_caption">
-          <Heading type="h5" modifiers={['center', 'white', '300']} content={caption} />
+          <Heading type="h5" modifiers={['center', 'white', '300', 'fontLexend']} content={caption} />
         </div>
       </div>
     </div>
