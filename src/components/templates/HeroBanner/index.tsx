@@ -41,10 +41,10 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
     <div className="t-heroBanner_info">
       <div className="t-heroBanner_info_content">
         <div className="t-heroBanner_info_title">
-          <Heading modifiers={['center', '700', '60x72', 'fontNoto', 'white']} content={title} />
+          <Heading modifiers={['center', '400', '60x72', 'fontNoto', 'white']} content={title} />
         </div>
         <div className="t-heroBanner_info_caption">
-          <Heading type="h5" modifiers={['center', 'white', '400']} content={caption} />
+          <Heading type="h5" modifiers={['center', 'white', '300']} content={caption} />
         </div>
       </div>
     </div>

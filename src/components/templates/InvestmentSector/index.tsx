@@ -29,8 +29,8 @@ export const InvestmentCard: React.FC<InvestmentCardProps> = ({
   return (
     <div
       className={mapModifiers('t-investmentCard', isSmall && 'small')}
-      onMouseEnter={() => setClassHover('animate animate-flipInY')}
-      onMouseLeave={() => setClassHover('animate animate-flipOutY')}
+      onMouseEnter={() => setClassHover('animate animate-backInLeft')}
+      onMouseLeave={() => setClassHover('animate animate-backOutLeft')}
     >
       <div className="t-investmentCard_main">
         <div className="t-investmentCard_icon">
