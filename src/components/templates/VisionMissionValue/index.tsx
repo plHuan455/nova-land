@@ -3,6 +3,7 @@ import React from 'react';
 import Heading from 'components/atoms/Heading';
 import Image from 'components/atoms/Image';
 import Text from 'components/atoms/Text';
+import Animate from 'components/organisms/Animate';
 import Container from 'components/organisms/Container';
 
 type DataTypes = {
@@ -47,7 +48,9 @@ const VisionMissionValue: React.FC<VisionMissionValueProps> = ({ dataList }) => 
       <div className="t-VMV_wrapper">
         {dataList?.map((item, idx) => (
           <div key={`VMV-item-${idx.toString()}`} className="t-VMV_block">
-            <ContentBlock {...item} />
+            <Animate type="fadeInUp" extendClassName={`t-VMV_block-animate-${idx + 1}`}>
+              <ContentBlock {...item} />
+            </Animate>
           </div>
         ))}
       </div>

@@ -4,6 +4,7 @@ import Heading from 'components/atoms/Heading';
 import Image from 'components/atoms/Image';
 import Link from 'components/atoms/Link';
 import Text from 'components/atoms/Text';
+import Animate from 'components/organisms/Animate';
 import Carousel, { PrevArrow, NextArrow } from 'components/organisms/Carousel';
 import Container from 'components/organisms/Container';
 
@@ -76,14 +77,17 @@ const OutstandingProject: React.FC<OutstandingProjectProps> = ({
     <Container>
       <div className="t-outstandingProject_wrapper">
         <div className="t-outstandingProject_title">
-          <Heading
-            modifiers={['32x48', 'deer', '700', 'fontNoto', 'uppercase']}
-            content={title}
-          />
+          <Animate type="fadeInLeft">
+            <Heading
+              modifiers={['32x48', 'deer', '700', 'fontNoto', 'uppercase']}
+              content={title}
+            />
+          </Animate>
         </div>
         <div className="t-outstandingProject_content">
-          <Carousel settings={setting}>
-            {
+          <Animate type="fadeInRight">
+            <Carousel settings={setting}>
+              {
               outstandingProjectList.map((item, index) => (
                 <div
                   className="t-outstandingProject_item"
@@ -95,7 +99,8 @@ const OutstandingProject: React.FC<OutstandingProjectProps> = ({
                 </div>
               ))
             }
-          </Carousel>
+            </Carousel>
+          </Animate>
         </div>
       </div>
     </Container>

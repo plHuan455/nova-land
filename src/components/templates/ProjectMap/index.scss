@@ -45,7 +45,7 @@
   }
 
   &_info {
-    max-width: calc(760 / #{$width-in-container-value} * 100%); // 760 not scroll 
+    max-width: calc(739 / #{$width-in-container-value} * 100%); // 760 not scroll 
     position: absolute;
     right: 0;
     top: calc(194 / #{$height-map} * 100%);

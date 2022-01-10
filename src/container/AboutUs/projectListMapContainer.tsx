@@ -3,8 +3,7 @@ import React, { useState } from 'react';
 import dataDummy from 'assets/dataDummy/projectListMap';
 import img from 'assets/images/bg_project_list_map.png';
 import { OptionType } from 'components/molecules/Pulldown';
-import ProjectListMap,
-{ ProjectListMapGround, ProjectListMapInfo } from 'components/templates/ProjectListMap';
+import ProjectListMap, { ProjectListMapGround, ProjectListMapInfo } from 'components/templates/ProjectListMap';
 
 const projectOptions = (_province:OptionType|null) => {
   if (_province?.value === '1') return dataDummy.projectHCM;
