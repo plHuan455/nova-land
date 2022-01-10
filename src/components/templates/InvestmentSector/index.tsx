@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import Button from 'components/atoms/Button';
 import Heading from 'components/atoms/Heading';
-import Icon, { IconName } from 'components/atoms/Icon';
 import Image from 'components/atoms/Image';
 import Link from 'components/atoms/Link';
 import Text from 'components/atoms/Text';
@@ -16,69 +15,37 @@ export interface InvestmentCardProps {
   thumbnail: string;
   isSmall?: boolean;
   href: string;
-  icon: IconName;
-  iconActive: IconName,
   btnText?: string;
 }
 
 export const InvestmentCard: React.FC<InvestmentCardProps> = ({
-  title, desc, thumbnail, isSmall, href, icon, iconActive, btnText,
-}) => {
-  const [classHover, setClassHover] = useState('');
-
-  return (
-    <div
-      className={mapModifiers('t-investmentCard', isSmall && 'small')}
-      onMouseEnter={() => setClassHover('animate animate-backInLeft')}
-      onMouseLeave={() => setClassHover('animate animate-backOutLeft')}
-    >
-      <div className="t-investmentCard_main">
-        <div className="t-investmentCard_icon">
-          <Icon iconName={icon} size={isSmall ? '80' : '120'} />
-        </div>
-        <div className="t-investmentCard_title">
-          <Heading
-            modifiers={
-                isSmall ? ['20x30', '400', 'raisinBlack', 'uppercase', 'fontNoto']
-                  : ['32x48', '700', 'raisinBlack', 'uppercase', 'fontNoto']
-              }
-            content={title}
-          />
-        </div>
-        <div className="t-investmentCard_desc t-investmentCard_desc-main">
-          <Text
-            modifiers={['arsenic', '400', 'fontLexend']}
-            content={desc}
-          />
-        </div>
-        <div className="t-investmentCard_thumbnail">
-          <Image
-            src={thumbnail}
-            alt="InvestmentCard"
-            ratio="16x9"
-          />
-        </div>
+  title, desc, thumbnail, isSmall, href, btnText,
+}) => (
+  <div className={mapModifiers('t-investmentCard', isSmall && 'small')}>
+    <div className="t-investmentCard_main">
+      <div className="t-investmentCard_icon" />
+      <div className="t-investmentCard_title">
+        <Heading
+          modifiers={
+              isSmall ? ['20x30', '400', 'raisinBlack', 'uppercase', 'fontNoto']
+                : ['32x48', '700', 'raisinBlack', 'uppercase', 'fontNoto']
+            }
+          content={title}
+        />
       </div>
-      <div className={`t-investmentCard_layer ${classHover}`}>
-        <div className="t-investmentCard_icon">
-          <Icon iconName={iconActive} size={isSmall ? '80' : '120'} />
-        </div>
-        <div className="t-investmentCard_title">
-          <Heading
-            modifiers={
-                isSmall ? ['20x30', '400', 'white', 'uppercase', 'fontNoto']
-                  : ['32x48', '700', 'white', 'uppercase', 'fontNoto']
-              }
-            content={title}
-          />
-        </div>
-        <div className="t-investmentCard_desc t-investmentCard_desc-layer">
-          <Text
-            modifiers={['white', '400', 'fontLexend']}
-            content={desc}
-          />
-        </div>
-        <div className="t-investmentCard_button">
+      <div className="t-investmentCard_desc">
+        <Text
+          modifiers={['arsenic', '400', 'fontLexend']}
+          content={desc}
+        />
+      </div>
+      <div className="t-investmentCard_thumbnail">
+        <Image
+          src={thumbnail}
+          alt="InvestmentCard"
+          ratio="16x9"
+        />
+        <div className="t-investmentCard_thumbnail_button">
           <Link href={href}>
             <Button modifiers="secondary" type="button">
               <Text
@@ -90,8 +57,8 @@ export const InvestmentCard: React.FC<InvestmentCardProps> = ({
         </div>
       </div>
     </div>
-  );
-};
+  </div>
+);
 
 interface InvestmentSectorProps {
   title: string;

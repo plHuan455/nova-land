@@ -373,6 +373,46 @@
   }
 }
 
+@keyframes goUp {
+  from {
+    -webkit-transform: translateY(20%);
+    transform: translateY(20%);
+  }
+
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes goUpHero {
+  from {
+    height: calc(100vh + 100%);
+    -webkit-transform: translateY(10%);
+    transform: translateY(10%);
+  }
+
+  to {
+    height: 100vh;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes topDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -10%, 0);
+    transform: translate3d(0, -10%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 /* ----------------------------------------------------------------------------------------- */
 /* -------------------------------------- Back exits --------------------------------------- */
 /* ----------------------------------------------------------------------------------------- */

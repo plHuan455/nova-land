@@ -2,6 +2,7 @@ import React from 'react';
 
 import Heading from 'components/atoms/Heading';
 import Image from 'components/atoms/Image';
+import Animate from 'components/organisms/Animate';
 import Carousel, { NextArrow, PrevArrow } from 'components/organisms/Carousel';
 
 type HeroBannerItem = {
@@ -32,22 +33,24 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
   caption,
   list,
 }) => (
-  <div className="t-heroBanner animate animate-bottomToTop">
-    <Carousel settings={settingBanner}>
-      {list.map((item, index) => (
-        <Image key={`index-${index.toString()}`} {...item} ratio="1371x620" alt="image-banner" />
-      ))}
-    </Carousel>
-    <div className="t-heroBanner_info">
-      <div className="t-heroBanner_info_content">
-        <div className="t-heroBanner_info_title">
-          <Heading modifiers={['center', '400', '60x72', 'fontNoto', 'white']} content={title} />
-        </div>
-        <div className="t-heroBanner_info_caption">
-          <Heading type="h5" modifiers={['center', 'white', '300', 'fontLexend']} content={caption} />
+  <div className="t-heroBanner">
+    <Animate type="goUpHero">
+      <Carousel settings={settingBanner}>
+        {list.map((item, index) => (
+          <Image key={`index-${index.toString()}`} {...item} ratio="1371x620" alt="image-banner" />
+        ))}
+      </Carousel>
+      <div className="t-heroBanner_info">
+        <div className="t-heroBanner_info_content">
+          <div className="t-heroBanner_info_title">
+            <Heading modifiers={['center', '400', '60x72', 'fontNoto', 'white']} content={title} />
+          </div>
+          <div className="t-heroBanner_info_caption">
+            <Heading type="h5" modifiers={['center', 'white', '300', 'fontLexend']} content={caption} />
+          </div>
         </div>
       </div>
-    </div>
+    </Animate>
   </div>
 );
 

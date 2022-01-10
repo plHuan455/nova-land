@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 
 import useScrollAnimate from 'hooks/useScrollAnimation';
 
-type AnimateType =
+ type AnimateType =
   // Attention seekers
   | 'bounce'
   | 'flash'
@@ -21,6 +21,9 @@ type AnimateType =
   | 'backInLeft'
   | 'backInRight'
   | 'backInUp'
+  | 'goUp'
+  | 'goUpHero'
+  | 'topDown'
   // Back exits
   | 'backOutDown'
   | 'backOutLeft'

@@ -93,6 +93,24 @@
     animation-name: backInUp;
   }
 
+  &-goUp {
+    animation-name: goUp;
+  }
+
+  &-goUpHero {
+    animation-name: goUpHero;
+  }
+
+  &-topDown {
+    animation-delay: 0.6s;
+    animation-duration: 0.3s;
+    animation-name: topDown;
+
+    @include tablet-down {
+      animation: none;
+    }
+  }
+
   /* ----------------------------------------------------------------------------------------- */
   /* -------------------------------------- Back exits --------------------------------------- */
   /* ----------------------------------------------------------------------------------------- */

@@ -6,7 +6,7 @@ import EcoSystemContainer from './ecoSystemContainer';
 import FieldActivityContainer from './fieldActivityContainer';
 import HeroBannerContainer from './heroBannerContainer';
 import InvestmentSectorContainer from './investmentSectorContainer';
-import LeadershipContainer from './leaderShipContainer';
+import LeadershipContainer from './leadershipContainer';
 import OutStandingNumbersContainer from './outStandingNumbersContainer';
 import OutstandingProjectContainer from './outstandingProjectContainer';
 import ProjectListMapContainer from './projectListMapContainer';

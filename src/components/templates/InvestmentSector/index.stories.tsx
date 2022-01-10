@@ -42,8 +42,6 @@ export const card: Story = () => (
         desc="Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng."
         thumbnail={imgInvestmentSector}
         href="/"
-        icon="building"
-        iconActive="buildingBlue"
         btnText="Tìm Hiểu Thêm"
       />
     </div>

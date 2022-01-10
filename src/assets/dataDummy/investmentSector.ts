@@ -8,8 +8,6 @@ const investmentSectorData: InvestmentCardProps[] = [
     thumbnail: imgInvestmentSector,
     desc: 'Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.',
     href: '/',
-    icon: 'building',
-    iconActive: 'buildingBlue',
     btnText: 'Tìm Hiểu Thêm',
   },
   {
@@ -17,8 +15,6 @@ const investmentSectorData: InvestmentCardProps[] = [
     thumbnail: imgInvestmentSector2,
     desc: 'Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.',
     href: '/',
-    icon: 'building',
-    iconActive: 'buildingBlue',
     btnText: 'Tìm Hiểu Thêm',
   },
   {
@@ -26,8 +22,6 @@ const investmentSectorData: InvestmentCardProps[] = [
     thumbnail: imgInvestmentSector,
     desc: 'Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.',
     href: '/',
-    icon: 'building',
-    iconActive: 'buildingBlue',
     btnText: 'Tìm Hiểu Thêm',
   },
   {
@@ -35,8 +29,6 @@ const investmentSectorData: InvestmentCardProps[] = [
     thumbnail: imgInvestmentSector2,
     desc: 'Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.',
     href: '/',
-    icon: 'building',
-    iconActive: 'buildingBlue',
     btnText: 'Tìm Hiểu Thêm',
   },
   {
@@ -44,8 +36,6 @@ const investmentSectorData: InvestmentCardProps[] = [
     thumbnail: imgInvestmentSector,
     desc: 'Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.',
     href: '/',
-    icon: 'building',
-    iconActive: 'buildingBlue',
     btnText: 'Tìm Hiểu Thêm',
   },
 ];
