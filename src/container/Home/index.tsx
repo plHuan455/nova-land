@@ -8,7 +8,7 @@ import NewsContainer from './newsContainer';
 import OutStandingNumbersContainer from './outStandingNumbersContainer';
 import ProjectMapContainer from './projectMapContainer';
 import ShareHolderRelationsContainer from './sharesHolderRelationsContainer';
-import TransportationContainer from './transportationInfrastructureContainer';
+import TransportationContainer from './transportationinfrastructureContainer';
 
 const HomeContainer: React.FC = () => (
   <>
