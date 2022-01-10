@@ -6,7 +6,7 @@ import EcoSystems from 'components/templates/EcoSystems';
 
 const EcoSystemContainer: React.FC = () => (
   <Animate type="goUp">
-    <div className="p-home_ecoSystem pt-100">
+    <div className="p-aboutUs_ecoSystem pt-100">
       <EcoSystems
         title="HỆ SINH THÁI NOVA"
         desc="Hệ sinh thái Nova Group, mang những tinh hoa Văn Hóa, Ẩm Thực, Giáo Dục, Vui Chơi - Giải Trí, Du Lịch Nghỉ Dưỡng,

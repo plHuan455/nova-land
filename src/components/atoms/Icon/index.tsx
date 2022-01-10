@@ -11,8 +11,6 @@ export const iconList = {
   arrowNextRed: 'arrowNextRed',
   arrowNextGrey: 'arrowNextGrey',
   eyeOpen: 'eyeOpen',
-  building: 'building',
-  buildingBlue: 'buildingBlue',
   arrowNextWhite: 'arrowNextWhite',
   search: 'search',
   carretDownBlack: 'carretDownBlack',
@@ -23,7 +21,7 @@ export const iconList = {
 
 export type IconName = keyof typeof iconList;
 
-export type IconSize = '14' | '24' |'40' | '80' | '120' | '10';
+export type IconSize = '14' | '24' |'40' | '10';
 
 interface IconProps {
   iconName: IconName;

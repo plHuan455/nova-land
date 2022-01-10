@@ -5,8 +5,21 @@
   position: relative;
   transition: all $transition ease-in-out;
 
-  &_main,
-  &_layer {
+  &::after {
+    background: url('~assets/images/InvestmentSector/img_general.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: '';
+    height: rem(5);
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: 0.4s;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &_main {
     padding: rem(52) rem(40);
 
     @include tablet-down {
@@ -22,18 +35,15 @@
     }
   }
 
-  &_layer {
-    height: 100%;
-    left: 0;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    transition: all $transition ease-in-out;
-    visibility: hidden;
-    width: 100%;
-  }
-
   &_icon {
+    background-image: url('~assets/icons/ic_building.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    height: rem(120);
+    width: rem(120);
+
     @include tablet-down {
       .a-icon {
         height: rem(100);
@@ -44,12 +54,11 @@
         }
       }
     }
-  }
 
-  &_layer {
-    background: url('~assets/images/InvestmentSector/img_general.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+    #{$root}-small & {
+      height: rem(80);
+      width: rem(80);
+    }
   }
 
   &_title {
@@ -69,14 +78,7 @@
 
   &_desc {
     margin-top: rem(8);
-
-    &-main {
-      @include text-overflow(3);
-    }
-
-    &-layer {
-      @include text-overflow(5);
-    }
+    @include text-overflow(3);
 
     #{$root}-small & {
       margin-top: rem(16);
@@ -88,25 +90,64 @@
 
   &_thumbnail {
     margin-top: rem(24);
+    position: relative;
     @include mobile-down {
       margin-top: rem(16);
     }
-  }
 
-  &_button {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: rem(24);
-    max-width: rem(150);
-
-    @include mobile-down {
-      margin-top: rem(16);
+    &_button {
+      left: 0;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: rem(24);
+      max-width: rem(150);
+      opacity: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+  
+      @include mobile-down {
+        margin-top: rem(16);
+      }
     }
   }
 
   &:hover {
-    #{$root}_main {
-      opacity: 0;
+    &::after {
+      height: 100%;
+    }
+
+    #{$root}_title {
+      position: relative;
+      z-index: 2;
+
+      .a-heading {
+        color: $white;
+      }
+    }
+
+    #{$root}_desc {
+      position: relative;
+      z-index: 2;
+
+      .a-text {
+        color: $white;
+      }
+    }
+
+    #{$root}_thumbnail {
+      &_button {
+        opacity: 1;
+        transition: all 0.3s linear 0.5s;
+        z-index: 2;
+      }
+    }
+
+    #{$root}_icon {
+      background-image: url('~assets/icons/ic_building_blue.svg');
+      position: relative;
+      transition: all 0.3s linear 0.06s;
+      z-index: 2;
     }
   }
 }

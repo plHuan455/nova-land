@@ -19,16 +19,6 @@
     width: rem(40);
   }
 
-  &-80 {
-    height: rem(80);
-    width: rem(80);
-  }
-
-  &-120 {
-    height: rem(120);
-    width: rem(120);
-  }
-
   &-10 {
     height: rem(10);
     width: rem(10);
@@ -72,14 +62,6 @@
 
   &-eyeOpen {
     background-image: url('~assets/icons/ic_eye_open.svg');
-  }
-
-  &-building {
-    background-image: url('~assets/icons/ic_building.svg');
-  }
-
-  &-buildingBlue {
-    background-image: url('~assets/icons/ic_building_blue.svg');
   }
 
   &-arrowNextWhite {

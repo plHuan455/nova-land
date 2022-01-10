@@ -3,7 +3,7 @@ import React from 'react';
 
 import VisionMissionValue from '.';
 
-import { dataList } from 'container/AboutUs';
+import dataList from 'assets/dataDummy/visionMissionValue';
 
 export default {
   title: 'Components/templates/VisionMissionValue',

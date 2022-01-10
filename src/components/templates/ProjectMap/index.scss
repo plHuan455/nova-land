@@ -45,7 +45,7 @@
   }
 
   &_info {
-    max-width: calc(760 / #{$width-in-container-value} * 100%); // 760 not scroll 
+    max-width: calc(739 / #{$width-in-container-value} * 100%); // 760 not scroll 
     position: absolute;
     right: 0;
     top: calc(194 / #{$height-map} * 100%);
@@ -74,7 +74,7 @@
     }
 
     &_panel {
-      margin-top: calc(52 / #{$height-map} * 100%);
+      margin-top: calc(40 / #{$height-map} * 100%);
       @include tablet-down {
         margin-top: rem(16);
       }
@@ -84,12 +84,12 @@
     }
 
     &_carousel {
-      margin: 0 rem(-16);
+      margin: 0 rem(45);
     }
 
     &_branch {
       cursor: pointer;
-      padding: rem(16);
+      padding: rem(18);
       transition: $transition-long ease-in-out;
 
       &.zoom-in {

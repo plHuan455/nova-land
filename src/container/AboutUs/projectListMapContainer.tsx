@@ -12,8 +12,8 @@ const projectOptions = (_province:OptionType|null) => {
 };
 
 const ProjectListMapContainer: React.FC = () => {
-  const [province, setProvince] = useState<OptionType | null>(null);
-  const [project, setProject] = useState<OptionType | null>(null);
+  const [province, setProvince] = useState<OptionType|null>(null);
+  const [project, setProject] = useState<OptionType|null>(null);
   const listProjectSelect = projectOptions(province);
 
   const customProjectOptions = listProjectSelect
@@ -26,7 +26,7 @@ const ProjectListMapContainer: React.FC = () => {
   };
 
   return (
-    <div className="p-aboutUs-projectlistmap pt-100 pb-100">
+    <div className="p-aboutUs_projectListMap pb-100">
       <ProjectListMap title="Dự Án">
         <ProjectListMapInfo
           listProject={dataDummy.listProject}
@@ -35,7 +35,7 @@ const ProjectListMapContainer: React.FC = () => {
           valueProvince={province}
           valueProject={project}
           hasButtonViewAll
-          // eslint-disable-next-line no-console
+            // eslint-disable-next-line no-console
           handleClickViewAll={() => console.log('see more')}
           handleChangeProvince={(value) => {
             setProvince(value);

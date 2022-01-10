@@ -14,7 +14,7 @@ const dataLeadershipList: dataTabsLeadershipType[] = [
           'Cử nhân Nông nghiệp. Tốt nghiệp Executive MBA, HSB-TUCK, Đại học Dartmouth, Hoa Kỳ.',
           'Là một trong những chủ doanh nghiệp tư nhân đầu tiên tại TP.HCM từ những năm 1980. Thành viên Tổ chức doanh nhân thế giới (YPO - WPO).',
         ],
-        slogan: 'Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được Sứ mạng, Hoài bão của Novaland Group.',
+        slogan: 'Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được sứ mạng, hoài bão của Novaland Group.',
       },
       {
         gender: 'Ông',
@@ -25,7 +25,7 @@ const dataLeadershipList: dataTabsLeadershipType[] = [
           'Cử nhân Nông nghiệp. Tốt nghiệp Executive MBA, HSB-TUCK, Đại học Dartmouth, Hoa Kỳ.',
           'Là một trong những chủ doanh nghiệp tư nhân đầu tiên tại TP.HCM từ những năm 1980. Thành viên Tổ chức doanh nhân thế giới (YPO - WPO).',
         ],
-        slogan: 'Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được Sứ mạng, Hoài bão của Novaland Group.',
+        slogan: 'Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được sứ mạng, hoài bão của Novaland Group.',
       },
       {
         gender: 'Bà',
@@ -36,7 +36,7 @@ const dataLeadershipList: dataTabsLeadershipType[] = [
           'Cử nhân Nông nghiệp. Tốt nghiệp Executive MBA, HSB-TUCK, Đại học Dartmouth, Hoa Kỳ.',
           'Là một trong những chủ doanh nghiệp tư nhân đầu tiên tại TP.HCM từ những năm 1980. Thành viên Tổ chức doanh nhân thế giới (YPO - WPO).',
         ],
-        slogan: 'Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được Sứ mạng, Hoài bão của Novaland Group.',
+        slogan: 'Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được sứ mạng, hoài bão của Novaland Group.',
       },
       {
         gender: 'Ông',
@@ -47,7 +47,7 @@ const dataLeadershipList: dataTabsLeadershipType[] = [
           'Cử nhân Nông nghiệp. Tốt nghiệp Executive MBA, HSB-TUCK, Đại học Dartmouth, Hoa Kỳ.',
           'Là một trong những chủ doanh nghiệp tư nhân đầu tiên tại TP.HCM từ những năm 1980. Thành viên Tổ chức doanh nhân thế giới (YPO - WPO).',
         ],
-        slogan: 'Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được Sứ mạng, Hoài bão của Novaland Group.',
+        slogan: 'Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được sứ mạng, hoài bão của Novaland Group.',
       },
       {
         gender: 'Ông',
@@ -58,7 +58,7 @@ const dataLeadershipList: dataTabsLeadershipType[] = [
           'Cử nhân Nông nghiệp. Tốt nghiệp Executive MBA, HSB-TUCK, Đại học Dartmouth, Hoa Kỳ.',
           'Là một trong những chủ doanh nghiệp tư nhân đầu tiên tại TP.HCM từ những năm 1980. Thành viên Tổ chức doanh nhân thế giới (YPO - WPO).',
         ],
-        slogan: 'Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được Sứ mạng, Hoài bão của Novaland Group.',
+        slogan: 'Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được sứ mạng, hoài bão của Novaland Group.',
       },
       {
         gender: 'Bà',
@@ -69,7 +69,7 @@ const dataLeadershipList: dataTabsLeadershipType[] = [
           'Cử nhân Nông nghiệp. Tốt nghiệp Executive MBA, HSB-TUCK, Đại học Dartmouth, Hoa Kỳ.',
           'Là một trong những chủ doanh nghiệp tư nhân đầu tiên tại TP.HCM từ những năm 1980. Thành viên Tổ chức doanh nhân thế giới (YPO - WPO).',
         ],
-        slogan: 'Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được Sứ mạng, Hoài bão của Novaland Group.',
+        slogan: 'Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được sứ mạng, hoài bão của Novaland Group.',
       },
     ],
   },
@@ -85,7 +85,7 @@ const dataLeadershipList: dataTabsLeadershipType[] = [
           'Cử nhân Nông nghiệp. Tốt nghiệp Executive MBA, HSB-TUCK, Đại học Dartmouth, Hoa Kỳ.',
           'Là một trong những chủ doanh nghiệp tư nhân đầu tiên tại TP.HCM từ những năm 1980. Thành viên Tổ chức doanh nhân thế giới (YPO - WPO).',
         ],
-        slogan: 'Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được Sứ mạng, Hoài bão của Novaland Group.',
+        slogan: 'Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được sứ mạng, hoài bão của Novaland Group.',
       },
       {
         gender: 'Ông',
@@ -96,7 +96,7 @@ const dataLeadershipList: dataTabsLeadershipType[] = [
           'Cử nhân Nông nghiệp. Tốt nghiệp Executive MBA, HSB-TUCK, Đại học Dartmouth, Hoa Kỳ.',
           'Là một trong những chủ doanh nghiệp tư nhân đầu tiên tại TP.HCM từ những năm 1980. Thành viên Tổ chức doanh nhân thế giới (YPO - WPO).',
         ],
-        slogan: 'Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được Sứ mạng, Hoài bão của Novaland Group.',
+        slogan: 'Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được sứ mạng, hoài bão của Novaland Group.',
       },
       {
         gender: 'Bà',
@@ -107,7 +107,7 @@ const dataLeadershipList: dataTabsLeadershipType[] = [
           'Cử nhân Nông nghiệp. Tốt nghiệp Executive MBA, HSB-TUCK, Đại học Dartmouth, Hoa Kỳ.',
           'Là một trong những chủ doanh nghiệp tư nhân đầu tiên tại TP.HCM từ những năm 1980. Thành viên Tổ chức doanh nhân thế giới (YPO - WPO).',
         ],
-        slogan: 'Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được Sứ mạng, Hoài bão của Novaland Group.',
+        slogan: 'Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được sứ mạng, hoài bão của Novaland Group.',
       },
       {
         gender: 'Ông',
@@ -118,7 +118,7 @@ const dataLeadershipList: dataTabsLeadershipType[] = [
           'Cử nhân Nông nghiệp. Tốt nghiệp Executive MBA, HSB-TUCK, Đại học Dartmouth, Hoa Kỳ.',
           'Là một trong những chủ doanh nghiệp tư nhân đầu tiên tại TP.HCM từ những năm 1980. Thành viên Tổ chức doanh nhân thế giới (YPO - WPO).',
         ],
-        slogan: 'Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được Sứ mạng, Hoài bão của Novaland Group.',
+        slogan: 'Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được sứ mạng, hoài bão của Novaland Group.',
       },
       {
         gender: 'Ông',
@@ -129,7 +129,7 @@ const dataLeadershipList: dataTabsLeadershipType[] = [
           'Cử nhân Nông nghiệp. Tốt nghiệp Executive MBA, HSB-TUCK, Đại học Dartmouth, Hoa Kỳ.',
           'Là một trong những chủ doanh nghiệp tư nhân đầu tiên tại TP.HCM từ những năm 1980. Thành viên Tổ chức doanh nhân thế giới (YPO - WPO).',
         ],
-        slogan: 'Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được Sứ mạng, Hoài bão của Novaland Group.',
+        slogan: 'Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được sứ mạng, hoài bão của Novaland Group.',
       },
       {
         gender: 'Bà',
@@ -140,7 +140,7 @@ const dataLeadershipList: dataTabsLeadershipType[] = [
           'Cử nhân Nông nghiệp. Tốt nghiệp Executive MBA, HSB-TUCK, Đại học Dartmouth, Hoa Kỳ.',
           'Là một trong những chủ doanh nghiệp tư nhân đầu tiên tại TP.HCM từ những năm 1980. Thành viên Tổ chức doanh nhân thế giới (YPO - WPO).',
         ],
-        slogan: 'Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được Sứ mạng, Hoài bão của Novaland Group.',
+        slogan: 'Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được sứ mạng, hoài bão của Novaland Group.',
       },
     ],
   },

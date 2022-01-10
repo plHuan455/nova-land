@@ -38,6 +38,18 @@
 
       }
     }
+
+    &-animate {
+      &-1 {
+        animation-delay: 0.25s;
+      }
+      &-2 {
+        animation-delay: 0.45s;
+      }
+      &-3 {
+        animation-delay: 0.65s;
+      }
+    }
   }
 
   &_content {
