@@ -10,8 +10,8 @@ const headerMenuDummy: HeaderMenuTypes[] = [
     title: 'giới thiệu',
   },
   {
-    href: '/mua-ban',
-    title: 'mua bán',
+    href: '/linh-vuc-hoat-dong',
+    title: 'Lĩnh vực hoạt động',
   },
   {
     href: '/quan-he-dau-tu',
