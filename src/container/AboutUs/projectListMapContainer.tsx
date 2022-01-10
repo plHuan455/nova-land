@@ -34,9 +34,6 @@ const ProjectListMapContainer: React.FC = () => {
           projectOptions={customProjectOptions}
           valueProvince={province}
           valueProject={project}
-          hasButtonViewAll
-            // eslint-disable-next-line no-console
-          handleClickViewAll={() => console.log('see more')}
           handleChangeProvince={(value) => {
             setProvince(value);
             setProject(null);

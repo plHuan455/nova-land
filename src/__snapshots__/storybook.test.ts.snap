@@ -16502,21 +16502,6 @@ exports[`Storyshots Components/templates/ProjectListMap Normal 1`] = `
               </a>
             </li>
           </ul>
-          <div
-            className="t-projectListMap_info_btn"
-          >
-            <button
-              className="a-button a-button-with-icon"
-              disabled={false}
-              onClick={[Function]}
-              type="button"
-            >
-              <i
-                className="a-icon a-icon-arrowDownBrown a-icon-14"
-              />
-              Xem Tất Cả Dự Án
-            </button>
-          </div>
         </div>
       </div>
       <div
