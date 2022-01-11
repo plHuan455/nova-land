@@ -28,7 +28,7 @@ export const InvestmentCard: React.FC<InvestmentCardProps> = ({
         <Heading
           modifiers={
               isSmall ? ['20x30', '400', 'raisinBlack', 'uppercase', 'fontNoto']
-                : ['32x48', '700', 'raisinBlack', 'uppercase', 'fontNoto']
+                : ['32x48', '600', 'raisinBlack', 'uppercase', 'fontNoto']
             }
           content={title}
         />
