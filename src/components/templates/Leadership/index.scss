@@ -274,6 +274,10 @@
       max-height: rem(977);
       overflow-y: auto;
       @include scroll-bars(8);
+
+      @include tablet-down {
+        max-height: max-content;
+      }
     }
 
     &_right {
