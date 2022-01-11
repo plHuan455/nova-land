@@ -4903,30 +4903,34 @@ exports[`Storyshots Components/templates/FeaturedProjects Normal 1`] = `
 
 exports[`Storyshots Components/templates/FieldActivity Normal 1`] = `
 <div
-  className="t-fieldActivity"
+  className="undefined animate animate-goUp"
 >
   <div
-    className="container o-container"
+    className="t-fieldActivity"
   >
-    <h2
-      className="a-heading a-heading-32x48 a-heading-700 a-heading-fontNoto a-heading-jet a-heading-uppercase a-heading-center"
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "LĨNH VỰC HOẠT ĐỘNG",
-        }
-      }
-    />
     <div
-      className="u-mt-16 u-mt-sm-24 u-mt-lg-32"
+      className="container o-container"
     >
+      <h2
+        className="a-heading a-heading-32x48 a-heading-700 a-heading-fontNoto a-heading-jet a-heading-uppercase a-heading-center"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "LĨNH VỰC HOẠT ĐỘNG",
+          }
+        }
+      />
       <div
-        className="a-image a-image-721x303"
+        className="u-mt-16 u-mt-sm-24 u-mt-lg-32"
       >
-        <img
-          alt="field_activity"
-          loading="lazy"
-          src="img_field_activity.png"
-        />
+        <div
+          className="a-image a-image-721x303"
+        >
+          <img
+            alt="field_activity"
+            loading="lazy"
+            src="img_field_activity.png"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -6390,7 +6394,7 @@ exports[`Storyshots Components/templates/InvestmentSector Card 1`] = `
         className="t-investmentCard_title"
       >
         <h2
-          className="a-heading a-heading-32x48 a-heading-700 a-heading-raisinBlack a-heading-uppercase a-heading-fontNoto"
+          className="a-heading a-heading-32x48 a-heading-600 a-heading-raisinBlack a-heading-uppercase a-heading-fontNoto"
           dangerouslySetInnerHTML={
             Object {
               "__html": "BĐS TRUNG TÂM",
@@ -6564,7 +6568,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                               className="t-investmentCard_title"
                             >
                               <h2
-                                className="a-heading a-heading-32x48 a-heading-700 a-heading-raisinBlack a-heading-uppercase a-heading-fontNoto"
+                                className="a-heading a-heading-32x48 a-heading-600 a-heading-raisinBlack a-heading-uppercase a-heading-fontNoto"
                                 dangerouslySetInnerHTML={
                                   Object {
                                     "__html": "BĐS TRUNG TÂM",
@@ -6672,7 +6676,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                               className="t-investmentCard_title"
                             >
                               <h2
-                                className="a-heading a-heading-32x48 a-heading-700 a-heading-raisinBlack a-heading-uppercase a-heading-fontNoto"
+                                className="a-heading a-heading-32x48 a-heading-600 a-heading-raisinBlack a-heading-uppercase a-heading-fontNoto"
                                 dangerouslySetInnerHTML={
                                   Object {
                                     "__html": "BĐS TRUNG TÂM",
@@ -6780,7 +6784,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                               className="t-investmentCard_title"
                             >
                               <h2
-                                className="a-heading a-heading-32x48 a-heading-700 a-heading-raisinBlack a-heading-uppercase a-heading-fontNoto"
+                                className="a-heading a-heading-32x48 a-heading-600 a-heading-raisinBlack a-heading-uppercase a-heading-fontNoto"
                                 dangerouslySetInnerHTML={
                                   Object {
                                     "__html": "BĐS TRUNG TÂM",
@@ -6889,7 +6893,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                               className="t-investmentCard_title"
                             >
                               <h2
-                                className="a-heading a-heading-32x48 a-heading-700 a-heading-raisinBlack a-heading-uppercase a-heading-fontNoto"
+                                className="a-heading a-heading-32x48 a-heading-600 a-heading-raisinBlack a-heading-uppercase a-heading-fontNoto"
                                 dangerouslySetInnerHTML={
                                   Object {
                                     "__html": "BĐS TRUNG TÂM",
@@ -6998,7 +7002,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                               className="t-investmentCard_title"
                             >
                               <h2
-                                className="a-heading a-heading-32x48 a-heading-700 a-heading-raisinBlack a-heading-uppercase a-heading-fontNoto"
+                                className="a-heading a-heading-32x48 a-heading-600 a-heading-raisinBlack a-heading-uppercase a-heading-fontNoto"
                                 dangerouslySetInnerHTML={
                                   Object {
                                     "__html": "BĐS TRUNG TÂM",
@@ -7107,7 +7111,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                               className="t-investmentCard_title"
                             >
                               <h2
-                                className="a-heading a-heading-32x48 a-heading-700 a-heading-raisinBlack a-heading-uppercase a-heading-fontNoto"
+                                className="a-heading a-heading-32x48 a-heading-600 a-heading-raisinBlack a-heading-uppercase a-heading-fontNoto"
                                 dangerouslySetInnerHTML={
                                   Object {
                                     "__html": "BĐS TRUNG TÂM",
@@ -7216,7 +7220,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                               className="t-investmentCard_title"
                             >
                               <h2
-                                className="a-heading a-heading-32x48 a-heading-700 a-heading-raisinBlack a-heading-uppercase a-heading-fontNoto"
+                                className="a-heading a-heading-32x48 a-heading-600 a-heading-raisinBlack a-heading-uppercase a-heading-fontNoto"
                                 dangerouslySetInnerHTML={
                                   Object {
                                     "__html": "BĐS TRUNG TÂM",
@@ -7325,7 +7329,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                               className="t-investmentCard_title"
                             >
                               <h2
-                                className="a-heading a-heading-32x48 a-heading-700 a-heading-raisinBlack a-heading-uppercase a-heading-fontNoto"
+                                className="a-heading a-heading-32x48 a-heading-600 a-heading-raisinBlack a-heading-uppercase a-heading-fontNoto"
                                 dangerouslySetInnerHTML={
                                   Object {
                                     "__html": "BĐS TRUNG TÂM",
@@ -7433,7 +7437,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                               className="t-investmentCard_title"
                             >
                               <h2
-                                className="a-heading a-heading-32x48 a-heading-700 a-heading-raisinBlack a-heading-uppercase a-heading-fontNoto"
+                                className="a-heading a-heading-32x48 a-heading-600 a-heading-raisinBlack a-heading-uppercase a-heading-fontNoto"
                                 dangerouslySetInnerHTML={
                                   Object {
                                     "__html": "BĐS TRUNG TÂM",
@@ -7541,7 +7545,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                               className="t-investmentCard_title"
                             >
                               <h2
-                                className="a-heading a-heading-32x48 a-heading-700 a-heading-raisinBlack a-heading-uppercase a-heading-fontNoto"
+                                className="a-heading a-heading-32x48 a-heading-600 a-heading-raisinBlack a-heading-uppercase a-heading-fontNoto"
                                 dangerouslySetInnerHTML={
                                   Object {
                                     "__html": "BĐS TRUNG TÂM",
@@ -7649,7 +7653,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                               className="t-investmentCard_title"
                             >
                               <h2
-                                className="a-heading a-heading-32x48 a-heading-700 a-heading-raisinBlack a-heading-uppercase a-heading-fontNoto"
+                                className="a-heading a-heading-32x48 a-heading-600 a-heading-raisinBlack a-heading-uppercase a-heading-fontNoto"
                                 dangerouslySetInnerHTML={
                                   Object {
                                     "__html": "BĐS TRUNG TÂM",
@@ -7757,7 +7761,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                               className="t-investmentCard_title"
                             >
                               <h2
-                                className="a-heading a-heading-32x48 a-heading-700 a-heading-raisinBlack a-heading-uppercase a-heading-fontNoto"
+                                className="a-heading a-heading-32x48 a-heading-600 a-heading-raisinBlack a-heading-uppercase a-heading-fontNoto"
                                 dangerouslySetInnerHTML={
                                   Object {
                                     "__html": "BĐS TRUNG TÂM",
@@ -7865,7 +7869,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                               className="t-investmentCard_title"
                             >
                               <h2
-                                className="a-heading a-heading-32x48 a-heading-700 a-heading-raisinBlack a-heading-uppercase a-heading-fontNoto"
+                                className="a-heading a-heading-32x48 a-heading-600 a-heading-raisinBlack a-heading-uppercase a-heading-fontNoto"
                                 dangerouslySetInnerHTML={
                                   Object {
                                     "__html": "BĐS TRUNG TÂM",
@@ -14473,1556 +14477,1564 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
       <div
         className="t-outstandingProject_title"
       >
-        <h2
-          className="a-heading a-heading-32x48 a-heading-deer a-heading-700 a-heading-fontNoto a-heading-uppercase"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "DỰ ÁN NỔI BẬT",
+        <div
+          className="undefined animate animate-fadeInLeft"
+        >
+          <h2
+            className="a-heading a-heading-32x48 a-heading-deer a-heading-700 a-heading-fontNoto a-heading-uppercase"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "DỰ ÁN NỔI BẬT",
+              }
             }
-          }
-        />
+          />
+        </div>
       </div>
       <div
         className="t-outstandingProject_content"
       >
         <div
-          className="o-carousel o-carousel-hasarrow"
+          className="undefined animate animate-fadeInRight"
         >
           <div
-            className="slick-slider slick-initialized"
-            dir="ltr"
+            className="o-carousel o-carousel-hasarrow"
           >
             <div
-              className="o-carousel_arrow o-carousel_arrow_prev slick-arrow slick-prev "
-              onClick={[Function]}
-            />
-            <div
-              className="slick-list"
-              onClick={[Function]}
-              onKeyDown={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={null}
-              onMouseMove={null}
-              onMouseUp={[Function]}
-              onTouchCancel={null}
-              onTouchEnd={[Function]}
-              onTouchMove={null}
-              onTouchStart={[Function]}
-              style={
-                Object {
-                  "padding": "0px 0",
-                }
-              }
+              className="slick-slider slick-initialized"
+              dir="ltr"
             >
               <div
-                className="slick-track"
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                onMouseOver={[Function]}
+                className="o-carousel_arrow o-carousel_arrow_prev slick-arrow slick-prev "
+                onClick={[Function]}
+              />
+              <div
+                className="slick-list"
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={null}
+                onMouseMove={null}
+                onMouseUp={[Function]}
+                onTouchCancel={null}
+                onTouchEnd={[Function]}
+                onTouchMove={null}
+                onTouchStart={[Function]}
                 style={
                   Object {
-                    "WebkitTransform": "translate3d(0px, 0px, 0px)",
-                    "WebkitTransition": "",
-                    "msTransform": "translateX(0px)",
-                    "opacity": 1,
-                    "transform": "translate3d(0px, 0px, 0px)",
-                    "transition": "",
+                    "padding": "0px 0",
                   }
                 }
               >
                 <div
-                  aria-hidden={true}
-                  className="slick-slide slick-cloned"
-                  data-index={-5}
-                  onClick={[Function]}
+                  className="slick-track"
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseOver={[Function]}
                   style={
                     Object {
-                      "width": 0,
+                      "WebkitTransform": "translate3d(0px, 0px, 0px)",
+                      "WebkitTransition": "",
+                      "msTransform": "translateX(0px)",
+                      "opacity": 1,
+                      "transform": "translate3d(0px, 0px, 0px)",
+                      "transition": "",
                     }
                   }
-                  tabIndex="-1"
                 >
-                  <div>
-                    <div
-                      className="o-carousel_wrap"
-                      style={
-                        Object {
-                          "display": "inline-block",
-                          "width": "100%",
-                        }
+                  <div
+                    aria-hidden={true}
+                    className="slick-slide slick-cloned"
+                    data-index={-5}
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "width": 0,
                       }
-                      tabIndex={-1}
-                    >
+                    }
+                    tabIndex="-1"
+                  >
+                    <div>
                       <div
-                        className="o-carousel_item"
+                        className="o-carousel_wrap"
+                        style={
+                          Object {
+                            "display": "inline-block",
+                            "width": "100%",
+                          }
+                        }
+                        tabIndex={-1}
                       >
                         <div
-                          className="t-outstandingProject_item"
+                          className="o-carousel_item"
                         >
                           <div
-                            className="t-outstandingProjectCard"
+                            className="t-outstandingProject_item"
                           >
-                            <a
-                              aria-current="page"
-                              className="a-link   active"
-                              href="/"
-                              onClick={[Function]}
-                              target="_self"
+                            <div
+                              className="t-outstandingProjectCard"
                             >
-                              <div
-                                className="t-outstandingProjectCard_thumbnail"
+                              <a
+                                aria-current="page"
+                                className="a-link   active"
+                                href="/"
+                                onClick={[Function]}
+                                target="_self"
                               >
                                 <div
-                                  className="a-image a-image-221x166"
+                                  className="t-outstandingProjectCard_thumbnail"
                                 >
-                                  <img
-                                    alt="OutstandingProjectCard"
-                                    loading="lazy"
-                                    src="img_outstanding_project4.png"
+                                  <div
+                                    className="a-image a-image-221x166"
+                                  >
+                                    <img
+                                      alt="OutstandingProjectCard"
+                                      loading="lazy"
+                                      src="img_outstanding_project4.png"
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="t-outstandingProjectCard_title"
+                                >
+                                  <p
+                                    className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "Sunrise City",
+                                      }
+                                    }
                                   />
                                 </div>
-                              </div>
-                              <div
-                                className="t-outstandingProjectCard_title"
-                              >
-                                <p
-                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
-                                  dangerouslySetInnerHTML={
-                                    Object {
-                                      "__html": "Sunrise City",
-                                    }
-                                  }
-                                />
-                              </div>
-                            </a>
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div
-                  aria-hidden={true}
-                  className="slick-slide slick-cloned"
-                  data-index={-4}
-                  onClick={[Function]}
-                  style={
-                    Object {
-                      "width": 0,
-                    }
-                  }
-                  tabIndex="-1"
-                >
-                  <div>
-                    <div
-                      className="o-carousel_wrap"
-                      style={
-                        Object {
-                          "display": "inline-block",
-                          "width": "100%",
-                        }
+                  <div
+                    aria-hidden={true}
+                    className="slick-slide slick-cloned"
+                    data-index={-4}
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "width": 0,
                       }
-                      tabIndex={-1}
-                    >
+                    }
+                    tabIndex="-1"
+                  >
+                    <div>
                       <div
-                        className="o-carousel_item"
+                        className="o-carousel_wrap"
+                        style={
+                          Object {
+                            "display": "inline-block",
+                            "width": "100%",
+                          }
+                        }
+                        tabIndex={-1}
                       >
                         <div
-                          className="t-outstandingProject_item"
+                          className="o-carousel_item"
                         >
                           <div
-                            className="t-outstandingProjectCard"
+                            className="t-outstandingProject_item"
                           >
-                            <a
-                              aria-current="page"
-                              className="a-link   active"
-                              href="/"
-                              onClick={[Function]}
-                              target="_self"
+                            <div
+                              className="t-outstandingProjectCard"
                             >
-                              <div
-                                className="t-outstandingProjectCard_thumbnail"
+                              <a
+                                aria-current="page"
+                                className="a-link   active"
+                                href="/"
+                                onClick={[Function]}
+                                target="_self"
                               >
                                 <div
-                                  className="a-image a-image-221x166"
+                                  className="t-outstandingProjectCard_thumbnail"
                                 >
-                                  <img
-                                    alt="OutstandingProjectCard"
-                                    loading="lazy"
-                                    src="img_outstanding_project.png"
+                                  <div
+                                    className="a-image a-image-221x166"
+                                  >
+                                    <img
+                                      alt="OutstandingProjectCard"
+                                      loading="lazy"
+                                      src="img_outstanding_project.png"
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="t-outstandingProjectCard_title"
+                                >
+                                  <p
+                                    className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "Aqua City",
+                                      }
+                                    }
                                   />
                                 </div>
-                              </div>
-                              <div
-                                className="t-outstandingProjectCard_title"
-                              >
-                                <p
-                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
-                                  dangerouslySetInnerHTML={
-                                    Object {
-                                      "__html": "Aqua City",
-                                    }
-                                  }
-                                />
-                              </div>
-                            </a>
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div
-                  aria-hidden={true}
-                  className="slick-slide slick-cloned"
-                  data-index={-3}
-                  onClick={[Function]}
-                  style={
-                    Object {
-                      "width": 0,
-                    }
-                  }
-                  tabIndex="-1"
-                >
-                  <div>
-                    <div
-                      className="o-carousel_wrap"
-                      style={
-                        Object {
-                          "display": "inline-block",
-                          "width": "100%",
-                        }
+                  <div
+                    aria-hidden={true}
+                    className="slick-slide slick-cloned"
+                    data-index={-3}
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "width": 0,
                       }
-                      tabIndex={-1}
-                    >
+                    }
+                    tabIndex="-1"
+                  >
+                    <div>
                       <div
-                        className="o-carousel_item"
+                        className="o-carousel_wrap"
+                        style={
+                          Object {
+                            "display": "inline-block",
+                            "width": "100%",
+                          }
+                        }
+                        tabIndex={-1}
                       >
                         <div
-                          className="t-outstandingProject_item"
+                          className="o-carousel_item"
                         >
                           <div
-                            className="t-outstandingProjectCard"
+                            className="t-outstandingProject_item"
                           >
-                            <a
-                              aria-current="page"
-                              className="a-link   active"
-                              href="/"
-                              onClick={[Function]}
-                              target="_self"
+                            <div
+                              className="t-outstandingProjectCard"
                             >
-                              <div
-                                className="t-outstandingProjectCard_thumbnail"
+                              <a
+                                aria-current="page"
+                                className="a-link   active"
+                                href="/"
+                                onClick={[Function]}
+                                target="_self"
                               >
                                 <div
-                                  className="a-image a-image-221x166"
+                                  className="t-outstandingProjectCard_thumbnail"
                                 >
-                                  <img
-                                    alt="OutstandingProjectCard"
-                                    loading="lazy"
-                                    src="img_outstanding_project2.png"
+                                  <div
+                                    className="a-image a-image-221x166"
+                                  >
+                                    <img
+                                      alt="OutstandingProjectCard"
+                                      loading="lazy"
+                                      src="img_outstanding_project2.png"
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="t-outstandingProjectCard_title"
+                                >
+                                  <p
+                                    className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "NovaWorld Phan Thiet",
+                                      }
+                                    }
                                   />
                                 </div>
-                              </div>
-                              <div
-                                className="t-outstandingProjectCard_title"
-                              >
-                                <p
-                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
-                                  dangerouslySetInnerHTML={
-                                    Object {
-                                      "__html": "NovaWorld Phan Thiet",
-                                    }
-                                  }
-                                />
-                              </div>
-                            </a>
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div
-                  aria-hidden={false}
-                  className="slick-slide slick-active slick-cloned"
-                  data-index={-2}
-                  onClick={[Function]}
-                  style={
-                    Object {
-                      "width": 0,
-                    }
-                  }
-                  tabIndex="-1"
-                >
-                  <div>
-                    <div
-                      className="o-carousel_wrap"
-                      style={
-                        Object {
-                          "display": "inline-block",
-                          "width": "100%",
-                        }
+                  <div
+                    aria-hidden={false}
+                    className="slick-slide slick-active slick-cloned"
+                    data-index={-2}
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "width": 0,
                       }
-                      tabIndex={-1}
-                    >
+                    }
+                    tabIndex="-1"
+                  >
+                    <div>
                       <div
-                        className="o-carousel_item"
+                        className="o-carousel_wrap"
+                        style={
+                          Object {
+                            "display": "inline-block",
+                            "width": "100%",
+                          }
+                        }
+                        tabIndex={-1}
                       >
                         <div
-                          className="t-outstandingProject_item"
+                          className="o-carousel_item"
                         >
                           <div
-                            className="t-outstandingProjectCard"
+                            className="t-outstandingProject_item"
                           >
-                            <a
-                              aria-current="page"
-                              className="a-link   active"
-                              href="/"
-                              onClick={[Function]}
-                              target="_self"
+                            <div
+                              className="t-outstandingProjectCard"
                             >
-                              <div
-                                className="t-outstandingProjectCard_thumbnail"
+                              <a
+                                aria-current="page"
+                                className="a-link   active"
+                                href="/"
+                                onClick={[Function]}
+                                target="_self"
                               >
                                 <div
-                                  className="a-image a-image-221x166"
+                                  className="t-outstandingProjectCard_thumbnail"
                                 >
-                                  <img
-                                    alt="OutstandingProjectCard"
-                                    loading="lazy"
-                                    src="img_outstanding_project3.png"
+                                  <div
+                                    className="a-image a-image-221x166"
+                                  >
+                                    <img
+                                      alt="OutstandingProjectCard"
+                                      loading="lazy"
+                                      src="img_outstanding_project3.png"
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="t-outstandingProjectCard_title"
+                                >
+                                  <p
+                                    className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "NovaWorld Ho Tram",
+                                      }
+                                    }
                                   />
                                 </div>
-                              </div>
-                              <div
-                                className="t-outstandingProjectCard_title"
-                              >
-                                <p
-                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
-                                  dangerouslySetInnerHTML={
-                                    Object {
-                                      "__html": "NovaWorld Ho Tram",
-                                    }
-                                  }
-                                />
-                              </div>
-                            </a>
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div
-                  aria-hidden={false}
-                  className="slick-slide slick-active slick-cloned"
-                  data-index={-1}
-                  onClick={[Function]}
-                  style={
-                    Object {
-                      "width": 0,
-                    }
-                  }
-                  tabIndex="-1"
-                >
-                  <div>
-                    <div
-                      className="o-carousel_wrap"
-                      style={
-                        Object {
-                          "display": "inline-block",
-                          "width": "100%",
-                        }
+                  <div
+                    aria-hidden={false}
+                    className="slick-slide slick-active slick-cloned"
+                    data-index={-1}
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "width": 0,
                       }
-                      tabIndex={-1}
-                    >
+                    }
+                    tabIndex="-1"
+                  >
+                    <div>
                       <div
-                        className="o-carousel_item"
+                        className="o-carousel_wrap"
+                        style={
+                          Object {
+                            "display": "inline-block",
+                            "width": "100%",
+                          }
+                        }
+                        tabIndex={-1}
                       >
                         <div
-                          className="t-outstandingProject_item"
+                          className="o-carousel_item"
                         >
                           <div
-                            className="t-outstandingProjectCard"
+                            className="t-outstandingProject_item"
                           >
-                            <a
-                              aria-current="page"
-                              className="a-link   active"
-                              href="/"
-                              onClick={[Function]}
-                              target="_self"
+                            <div
+                              className="t-outstandingProjectCard"
                             >
-                              <div
-                                className="t-outstandingProjectCard_thumbnail"
+                              <a
+                                aria-current="page"
+                                className="a-link   active"
+                                href="/"
+                                onClick={[Function]}
+                                target="_self"
                               >
                                 <div
-                                  className="a-image a-image-221x166"
+                                  className="t-outstandingProjectCard_thumbnail"
                                 >
-                                  <img
-                                    alt="OutstandingProjectCard"
-                                    loading="lazy"
-                                    src="img_outstanding_project4.png"
+                                  <div
+                                    className="a-image a-image-221x166"
+                                  >
+                                    <img
+                                      alt="OutstandingProjectCard"
+                                      loading="lazy"
+                                      src="img_outstanding_project4.png"
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="t-outstandingProjectCard_title"
+                                >
+                                  <p
+                                    className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "Sunrise City",
+                                      }
+                                    }
                                   />
                                 </div>
-                              </div>
-                              <div
-                                className="t-outstandingProjectCard_title"
-                              >
-                                <p
-                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
-                                  dangerouslySetInnerHTML={
-                                    Object {
-                                      "__html": "Sunrise City",
-                                    }
-                                  }
-                                />
-                              </div>
-                            </a>
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div
-                  aria-hidden={false}
-                  className="slick-slide slick-active slick-center slick-current"
-                  data-index={0}
-                  onClick={[Function]}
-                  style={
-                    Object {
-                      "outline": "none",
-                      "width": 0,
-                    }
-                  }
-                  tabIndex="-1"
-                >
-                  <div>
-                    <div
-                      className="o-carousel_wrap"
-                      style={
-                        Object {
-                          "display": "inline-block",
-                          "width": "100%",
-                        }
+                  <div
+                    aria-hidden={false}
+                    className="slick-slide slick-active slick-center slick-current"
+                    data-index={0}
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "outline": "none",
+                        "width": 0,
                       }
-                      tabIndex={-1}
-                    >
+                    }
+                    tabIndex="-1"
+                  >
+                    <div>
                       <div
-                        className="o-carousel_item"
+                        className="o-carousel_wrap"
+                        style={
+                          Object {
+                            "display": "inline-block",
+                            "width": "100%",
+                          }
+                        }
+                        tabIndex={-1}
                       >
                         <div
-                          className="t-outstandingProject_item"
+                          className="o-carousel_item"
                         >
                           <div
-                            className="t-outstandingProjectCard"
+                            className="t-outstandingProject_item"
                           >
-                            <a
-                              aria-current="page"
-                              className="a-link   active"
-                              href="/"
-                              onClick={[Function]}
-                              target="_self"
+                            <div
+                              className="t-outstandingProjectCard"
                             >
-                              <div
-                                className="t-outstandingProjectCard_thumbnail"
+                              <a
+                                aria-current="page"
+                                className="a-link   active"
+                                href="/"
+                                onClick={[Function]}
+                                target="_self"
                               >
                                 <div
-                                  className="a-image a-image-221x166"
+                                  className="t-outstandingProjectCard_thumbnail"
                                 >
-                                  <img
-                                    alt="OutstandingProjectCard"
-                                    loading="lazy"
-                                    src="img_outstanding_project.png"
+                                  <div
+                                    className="a-image a-image-221x166"
+                                  >
+                                    <img
+                                      alt="OutstandingProjectCard"
+                                      loading="lazy"
+                                      src="img_outstanding_project.png"
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="t-outstandingProjectCard_title"
+                                >
+                                  <p
+                                    className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "Aqua City",
+                                      }
+                                    }
                                   />
                                 </div>
-                              </div>
-                              <div
-                                className="t-outstandingProjectCard_title"
-                              >
-                                <p
-                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
-                                  dangerouslySetInnerHTML={
-                                    Object {
-                                      "__html": "Aqua City",
-                                    }
-                                  }
-                                />
-                              </div>
-                            </a>
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div
-                  aria-hidden={false}
-                  className="slick-slide slick-active"
-                  data-index={1}
-                  onClick={[Function]}
-                  style={
-                    Object {
-                      "outline": "none",
-                      "width": 0,
-                    }
-                  }
-                  tabIndex="-1"
-                >
-                  <div>
-                    <div
-                      className="o-carousel_wrap"
-                      style={
-                        Object {
-                          "display": "inline-block",
-                          "width": "100%",
-                        }
+                  <div
+                    aria-hidden={false}
+                    className="slick-slide slick-active"
+                    data-index={1}
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "outline": "none",
+                        "width": 0,
                       }
-                      tabIndex={-1}
-                    >
+                    }
+                    tabIndex="-1"
+                  >
+                    <div>
                       <div
-                        className="o-carousel_item"
+                        className="o-carousel_wrap"
+                        style={
+                          Object {
+                            "display": "inline-block",
+                            "width": "100%",
+                          }
+                        }
+                        tabIndex={-1}
                       >
                         <div
-                          className="t-outstandingProject_item"
+                          className="o-carousel_item"
                         >
                           <div
-                            className="t-outstandingProjectCard"
+                            className="t-outstandingProject_item"
                           >
-                            <a
-                              aria-current="page"
-                              className="a-link   active"
-                              href="/"
-                              onClick={[Function]}
-                              target="_self"
+                            <div
+                              className="t-outstandingProjectCard"
                             >
-                              <div
-                                className="t-outstandingProjectCard_thumbnail"
+                              <a
+                                aria-current="page"
+                                className="a-link   active"
+                                href="/"
+                                onClick={[Function]}
+                                target="_self"
                               >
                                 <div
-                                  className="a-image a-image-221x166"
+                                  className="t-outstandingProjectCard_thumbnail"
                                 >
-                                  <img
-                                    alt="OutstandingProjectCard"
-                                    loading="lazy"
-                                    src="img_outstanding_project2.png"
+                                  <div
+                                    className="a-image a-image-221x166"
+                                  >
+                                    <img
+                                      alt="OutstandingProjectCard"
+                                      loading="lazy"
+                                      src="img_outstanding_project2.png"
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="t-outstandingProjectCard_title"
+                                >
+                                  <p
+                                    className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "NovaWorld Phan Thiet",
+                                      }
+                                    }
                                   />
                                 </div>
-                              </div>
-                              <div
-                                className="t-outstandingProjectCard_title"
-                              >
-                                <p
-                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
-                                  dangerouslySetInnerHTML={
-                                    Object {
-                                      "__html": "NovaWorld Phan Thiet",
-                                    }
-                                  }
-                                />
-                              </div>
-                            </a>
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div
-                  aria-hidden={false}
-                  className="slick-slide slick-active"
-                  data-index={2}
-                  onClick={[Function]}
-                  style={
-                    Object {
-                      "outline": "none",
-                      "width": 0,
-                    }
-                  }
-                  tabIndex="-1"
-                >
-                  <div>
-                    <div
-                      className="o-carousel_wrap"
-                      style={
-                        Object {
-                          "display": "inline-block",
-                          "width": "100%",
-                        }
+                  <div
+                    aria-hidden={false}
+                    className="slick-slide slick-active"
+                    data-index={2}
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "outline": "none",
+                        "width": 0,
                       }
-                      tabIndex={-1}
-                    >
+                    }
+                    tabIndex="-1"
+                  >
+                    <div>
                       <div
-                        className="o-carousel_item"
+                        className="o-carousel_wrap"
+                        style={
+                          Object {
+                            "display": "inline-block",
+                            "width": "100%",
+                          }
+                        }
+                        tabIndex={-1}
                       >
                         <div
-                          className="t-outstandingProject_item"
+                          className="o-carousel_item"
                         >
                           <div
-                            className="t-outstandingProjectCard"
+                            className="t-outstandingProject_item"
                           >
-                            <a
-                              aria-current="page"
-                              className="a-link   active"
-                              href="/"
-                              onClick={[Function]}
-                              target="_self"
+                            <div
+                              className="t-outstandingProjectCard"
                             >
-                              <div
-                                className="t-outstandingProjectCard_thumbnail"
+                              <a
+                                aria-current="page"
+                                className="a-link   active"
+                                href="/"
+                                onClick={[Function]}
+                                target="_self"
                               >
                                 <div
-                                  className="a-image a-image-221x166"
+                                  className="t-outstandingProjectCard_thumbnail"
                                 >
-                                  <img
-                                    alt="OutstandingProjectCard"
-                                    loading="lazy"
-                                    src="img_outstanding_project3.png"
+                                  <div
+                                    className="a-image a-image-221x166"
+                                  >
+                                    <img
+                                      alt="OutstandingProjectCard"
+                                      loading="lazy"
+                                      src="img_outstanding_project3.png"
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="t-outstandingProjectCard_title"
+                                >
+                                  <p
+                                    className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "NovaWorld Ho Tram",
+                                      }
+                                    }
                                   />
                                 </div>
-                              </div>
-                              <div
-                                className="t-outstandingProjectCard_title"
-                              >
-                                <p
-                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
-                                  dangerouslySetInnerHTML={
-                                    Object {
-                                      "__html": "NovaWorld Ho Tram",
-                                    }
-                                  }
-                                />
-                              </div>
-                            </a>
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div
-                  aria-hidden={true}
-                  className="slick-slide"
-                  data-index={3}
-                  onClick={[Function]}
-                  style={
-                    Object {
-                      "outline": "none",
-                      "width": 0,
-                    }
-                  }
-                  tabIndex="-1"
-                >
-                  <div>
-                    <div
-                      className="o-carousel_wrap"
-                      style={
-                        Object {
-                          "display": "inline-block",
-                          "width": "100%",
-                        }
+                  <div
+                    aria-hidden={true}
+                    className="slick-slide"
+                    data-index={3}
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "outline": "none",
+                        "width": 0,
                       }
-                      tabIndex={-1}
-                    >
+                    }
+                    tabIndex="-1"
+                  >
+                    <div>
                       <div
-                        className="o-carousel_item"
+                        className="o-carousel_wrap"
+                        style={
+                          Object {
+                            "display": "inline-block",
+                            "width": "100%",
+                          }
+                        }
+                        tabIndex={-1}
                       >
                         <div
-                          className="t-outstandingProject_item"
+                          className="o-carousel_item"
                         >
                           <div
-                            className="t-outstandingProjectCard"
+                            className="t-outstandingProject_item"
                           >
-                            <a
-                              aria-current="page"
-                              className="a-link   active"
-                              href="/"
-                              onClick={[Function]}
-                              target="_self"
+                            <div
+                              className="t-outstandingProjectCard"
                             >
-                              <div
-                                className="t-outstandingProjectCard_thumbnail"
+                              <a
+                                aria-current="page"
+                                className="a-link   active"
+                                href="/"
+                                onClick={[Function]}
+                                target="_self"
                               >
                                 <div
-                                  className="a-image a-image-221x166"
+                                  className="t-outstandingProjectCard_thumbnail"
                                 >
-                                  <img
-                                    alt="OutstandingProjectCard"
-                                    loading="lazy"
-                                    src="img_outstanding_project4.png"
+                                  <div
+                                    className="a-image a-image-221x166"
+                                  >
+                                    <img
+                                      alt="OutstandingProjectCard"
+                                      loading="lazy"
+                                      src="img_outstanding_project4.png"
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="t-outstandingProjectCard_title"
+                                >
+                                  <p
+                                    className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "Sunrise City",
+                                      }
+                                    }
                                   />
                                 </div>
-                              </div>
-                              <div
-                                className="t-outstandingProjectCard_title"
-                              >
-                                <p
-                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
-                                  dangerouslySetInnerHTML={
-                                    Object {
-                                      "__html": "Sunrise City",
-                                    }
-                                  }
-                                />
-                              </div>
-                            </a>
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div
-                  aria-hidden={true}
-                  className="slick-slide"
-                  data-index={4}
-                  onClick={[Function]}
-                  style={
-                    Object {
-                      "outline": "none",
-                      "width": 0,
-                    }
-                  }
-                  tabIndex="-1"
-                >
-                  <div>
-                    <div
-                      className="o-carousel_wrap"
-                      style={
-                        Object {
-                          "display": "inline-block",
-                          "width": "100%",
-                        }
+                  <div
+                    aria-hidden={true}
+                    className="slick-slide"
+                    data-index={4}
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "outline": "none",
+                        "width": 0,
                       }
-                      tabIndex={-1}
-                    >
+                    }
+                    tabIndex="-1"
+                  >
+                    <div>
                       <div
-                        className="o-carousel_item"
+                        className="o-carousel_wrap"
+                        style={
+                          Object {
+                            "display": "inline-block",
+                            "width": "100%",
+                          }
+                        }
+                        tabIndex={-1}
                       >
                         <div
-                          className="t-outstandingProject_item"
+                          className="o-carousel_item"
                         >
                           <div
-                            className="t-outstandingProjectCard"
+                            className="t-outstandingProject_item"
                           >
-                            <a
-                              aria-current="page"
-                              className="a-link   active"
-                              href="/"
-                              onClick={[Function]}
-                              target="_self"
+                            <div
+                              className="t-outstandingProjectCard"
                             >
-                              <div
-                                className="t-outstandingProjectCard_thumbnail"
+                              <a
+                                aria-current="page"
+                                className="a-link   active"
+                                href="/"
+                                onClick={[Function]}
+                                target="_self"
                               >
                                 <div
-                                  className="a-image a-image-221x166"
+                                  className="t-outstandingProjectCard_thumbnail"
                                 >
-                                  <img
-                                    alt="OutstandingProjectCard"
-                                    loading="lazy"
-                                    src="img_outstanding_project.png"
+                                  <div
+                                    className="a-image a-image-221x166"
+                                  >
+                                    <img
+                                      alt="OutstandingProjectCard"
+                                      loading="lazy"
+                                      src="img_outstanding_project.png"
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="t-outstandingProjectCard_title"
+                                >
+                                  <p
+                                    className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "Aqua City",
+                                      }
+                                    }
                                   />
                                 </div>
-                              </div>
-                              <div
-                                className="t-outstandingProjectCard_title"
-                              >
-                                <p
-                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
-                                  dangerouslySetInnerHTML={
-                                    Object {
-                                      "__html": "Aqua City",
-                                    }
-                                  }
-                                />
-                              </div>
-                            </a>
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div
-                  aria-hidden={true}
-                  className="slick-slide"
-                  data-index={5}
-                  onClick={[Function]}
-                  style={
-                    Object {
-                      "outline": "none",
-                      "width": 0,
-                    }
-                  }
-                  tabIndex="-1"
-                >
-                  <div>
-                    <div
-                      className="o-carousel_wrap"
-                      style={
-                        Object {
-                          "display": "inline-block",
-                          "width": "100%",
-                        }
+                  <div
+                    aria-hidden={true}
+                    className="slick-slide"
+                    data-index={5}
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "outline": "none",
+                        "width": 0,
                       }
-                      tabIndex={-1}
-                    >
+                    }
+                    tabIndex="-1"
+                  >
+                    <div>
                       <div
-                        className="o-carousel_item"
+                        className="o-carousel_wrap"
+                        style={
+                          Object {
+                            "display": "inline-block",
+                            "width": "100%",
+                          }
+                        }
+                        tabIndex={-1}
                       >
                         <div
-                          className="t-outstandingProject_item"
+                          className="o-carousel_item"
                         >
                           <div
-                            className="t-outstandingProjectCard"
+                            className="t-outstandingProject_item"
                           >
-                            <a
-                              aria-current="page"
-                              className="a-link   active"
-                              href="/"
-                              onClick={[Function]}
-                              target="_self"
+                            <div
+                              className="t-outstandingProjectCard"
                             >
-                              <div
-                                className="t-outstandingProjectCard_thumbnail"
+                              <a
+                                aria-current="page"
+                                className="a-link   active"
+                                href="/"
+                                onClick={[Function]}
+                                target="_self"
                               >
                                 <div
-                                  className="a-image a-image-221x166"
+                                  className="t-outstandingProjectCard_thumbnail"
                                 >
-                                  <img
-                                    alt="OutstandingProjectCard"
-                                    loading="lazy"
-                                    src="img_outstanding_project2.png"
+                                  <div
+                                    className="a-image a-image-221x166"
+                                  >
+                                    <img
+                                      alt="OutstandingProjectCard"
+                                      loading="lazy"
+                                      src="img_outstanding_project2.png"
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="t-outstandingProjectCard_title"
+                                >
+                                  <p
+                                    className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "NovaWorld Phan Thiet",
+                                      }
+                                    }
                                   />
                                 </div>
-                              </div>
-                              <div
-                                className="t-outstandingProjectCard_title"
-                              >
-                                <p
-                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
-                                  dangerouslySetInnerHTML={
-                                    Object {
-                                      "__html": "NovaWorld Phan Thiet",
-                                    }
-                                  }
-                                />
-                              </div>
-                            </a>
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div
-                  aria-hidden={true}
-                  className="slick-slide"
-                  data-index={6}
-                  onClick={[Function]}
-                  style={
-                    Object {
-                      "outline": "none",
-                      "width": 0,
-                    }
-                  }
-                  tabIndex="-1"
-                >
-                  <div>
-                    <div
-                      className="o-carousel_wrap"
-                      style={
-                        Object {
-                          "display": "inline-block",
-                          "width": "100%",
-                        }
+                  <div
+                    aria-hidden={true}
+                    className="slick-slide"
+                    data-index={6}
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "outline": "none",
+                        "width": 0,
                       }
-                      tabIndex={-1}
-                    >
+                    }
+                    tabIndex="-1"
+                  >
+                    <div>
                       <div
-                        className="o-carousel_item"
+                        className="o-carousel_wrap"
+                        style={
+                          Object {
+                            "display": "inline-block",
+                            "width": "100%",
+                          }
+                        }
+                        tabIndex={-1}
                       >
                         <div
-                          className="t-outstandingProject_item"
+                          className="o-carousel_item"
                         >
                           <div
-                            className="t-outstandingProjectCard"
+                            className="t-outstandingProject_item"
                           >
-                            <a
-                              aria-current="page"
-                              className="a-link   active"
-                              href="/"
-                              onClick={[Function]}
-                              target="_self"
+                            <div
+                              className="t-outstandingProjectCard"
                             >
-                              <div
-                                className="t-outstandingProjectCard_thumbnail"
+                              <a
+                                aria-current="page"
+                                className="a-link   active"
+                                href="/"
+                                onClick={[Function]}
+                                target="_self"
                               >
                                 <div
-                                  className="a-image a-image-221x166"
+                                  className="t-outstandingProjectCard_thumbnail"
                                 >
-                                  <img
-                                    alt="OutstandingProjectCard"
-                                    loading="lazy"
-                                    src="img_outstanding_project3.png"
+                                  <div
+                                    className="a-image a-image-221x166"
+                                  >
+                                    <img
+                                      alt="OutstandingProjectCard"
+                                      loading="lazy"
+                                      src="img_outstanding_project3.png"
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="t-outstandingProjectCard_title"
+                                >
+                                  <p
+                                    className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "NovaWorld Ho Tram",
+                                      }
+                                    }
                                   />
                                 </div>
-                              </div>
-                              <div
-                                className="t-outstandingProjectCard_title"
-                              >
-                                <p
-                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
-                                  dangerouslySetInnerHTML={
-                                    Object {
-                                      "__html": "NovaWorld Ho Tram",
-                                    }
-                                  }
-                                />
-                              </div>
-                            </a>
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div
-                  aria-hidden={true}
-                  className="slick-slide"
-                  data-index={7}
-                  onClick={[Function]}
-                  style={
-                    Object {
-                      "outline": "none",
-                      "width": 0,
-                    }
-                  }
-                  tabIndex="-1"
-                >
-                  <div>
-                    <div
-                      className="o-carousel_wrap"
-                      style={
-                        Object {
-                          "display": "inline-block",
-                          "width": "100%",
-                        }
+                  <div
+                    aria-hidden={true}
+                    className="slick-slide"
+                    data-index={7}
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "outline": "none",
+                        "width": 0,
                       }
-                      tabIndex={-1}
-                    >
+                    }
+                    tabIndex="-1"
+                  >
+                    <div>
                       <div
-                        className="o-carousel_item"
+                        className="o-carousel_wrap"
+                        style={
+                          Object {
+                            "display": "inline-block",
+                            "width": "100%",
+                          }
+                        }
+                        tabIndex={-1}
                       >
                         <div
-                          className="t-outstandingProject_item"
+                          className="o-carousel_item"
                         >
                           <div
-                            className="t-outstandingProjectCard"
+                            className="t-outstandingProject_item"
                           >
-                            <a
-                              aria-current="page"
-                              className="a-link   active"
-                              href="/"
-                              onClick={[Function]}
-                              target="_self"
+                            <div
+                              className="t-outstandingProjectCard"
                             >
-                              <div
-                                className="t-outstandingProjectCard_thumbnail"
+                              <a
+                                aria-current="page"
+                                className="a-link   active"
+                                href="/"
+                                onClick={[Function]}
+                                target="_self"
                               >
                                 <div
-                                  className="a-image a-image-221x166"
+                                  className="t-outstandingProjectCard_thumbnail"
                                 >
-                                  <img
-                                    alt="OutstandingProjectCard"
-                                    loading="lazy"
-                                    src="img_outstanding_project4.png"
+                                  <div
+                                    className="a-image a-image-221x166"
+                                  >
+                                    <img
+                                      alt="OutstandingProjectCard"
+                                      loading="lazy"
+                                      src="img_outstanding_project4.png"
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="t-outstandingProjectCard_title"
+                                >
+                                  <p
+                                    className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "Sunrise City",
+                                      }
+                                    }
                                   />
                                 </div>
-                              </div>
-                              <div
-                                className="t-outstandingProjectCard_title"
-                              >
-                                <p
-                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
-                                  dangerouslySetInnerHTML={
-                                    Object {
-                                      "__html": "Sunrise City",
-                                    }
-                                  }
-                                />
-                              </div>
-                            </a>
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div
-                  aria-hidden={true}
-                  className="slick-slide slick-center slick-cloned"
-                  data-index={8}
-                  onClick={[Function]}
-                  style={
-                    Object {
-                      "width": 0,
-                    }
-                  }
-                  tabIndex="-1"
-                >
-                  <div>
-                    <div
-                      className="o-carousel_wrap"
-                      style={
-                        Object {
-                          "display": "inline-block",
-                          "width": "100%",
-                        }
+                  <div
+                    aria-hidden={true}
+                    className="slick-slide slick-center slick-cloned"
+                    data-index={8}
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "width": 0,
                       }
-                      tabIndex={-1}
-                    >
+                    }
+                    tabIndex="-1"
+                  >
+                    <div>
                       <div
-                        className="o-carousel_item"
+                        className="o-carousel_wrap"
+                        style={
+                          Object {
+                            "display": "inline-block",
+                            "width": "100%",
+                          }
+                        }
+                        tabIndex={-1}
                       >
                         <div
-                          className="t-outstandingProject_item"
+                          className="o-carousel_item"
                         >
                           <div
-                            className="t-outstandingProjectCard"
+                            className="t-outstandingProject_item"
                           >
-                            <a
-                              aria-current="page"
-                              className="a-link   active"
-                              href="/"
-                              onClick={[Function]}
-                              target="_self"
+                            <div
+                              className="t-outstandingProjectCard"
                             >
-                              <div
-                                className="t-outstandingProjectCard_thumbnail"
+                              <a
+                                aria-current="page"
+                                className="a-link   active"
+                                href="/"
+                                onClick={[Function]}
+                                target="_self"
                               >
                                 <div
-                                  className="a-image a-image-221x166"
+                                  className="t-outstandingProjectCard_thumbnail"
                                 >
-                                  <img
-                                    alt="OutstandingProjectCard"
-                                    loading="lazy"
-                                    src="img_outstanding_project.png"
+                                  <div
+                                    className="a-image a-image-221x166"
+                                  >
+                                    <img
+                                      alt="OutstandingProjectCard"
+                                      loading="lazy"
+                                      src="img_outstanding_project.png"
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="t-outstandingProjectCard_title"
+                                >
+                                  <p
+                                    className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "Aqua City",
+                                      }
+                                    }
                                   />
                                 </div>
-                              </div>
-                              <div
-                                className="t-outstandingProjectCard_title"
-                              >
-                                <p
-                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
-                                  dangerouslySetInnerHTML={
-                                    Object {
-                                      "__html": "Aqua City",
-                                    }
-                                  }
-                                />
-                              </div>
-                            </a>
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div
-                  aria-hidden={true}
-                  className="slick-slide slick-cloned"
-                  data-index={9}
-                  onClick={[Function]}
-                  style={
-                    Object {
-                      "width": 0,
-                    }
-                  }
-                  tabIndex="-1"
-                >
-                  <div>
-                    <div
-                      className="o-carousel_wrap"
-                      style={
-                        Object {
-                          "display": "inline-block",
-                          "width": "100%",
-                        }
+                  <div
+                    aria-hidden={true}
+                    className="slick-slide slick-cloned"
+                    data-index={9}
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "width": 0,
                       }
-                      tabIndex={-1}
-                    >
+                    }
+                    tabIndex="-1"
+                  >
+                    <div>
                       <div
-                        className="o-carousel_item"
+                        className="o-carousel_wrap"
+                        style={
+                          Object {
+                            "display": "inline-block",
+                            "width": "100%",
+                          }
+                        }
+                        tabIndex={-1}
                       >
                         <div
-                          className="t-outstandingProject_item"
+                          className="o-carousel_item"
                         >
                           <div
-                            className="t-outstandingProjectCard"
+                            className="t-outstandingProject_item"
                           >
-                            <a
-                              aria-current="page"
-                              className="a-link   active"
-                              href="/"
-                              onClick={[Function]}
-                              target="_self"
+                            <div
+                              className="t-outstandingProjectCard"
                             >
-                              <div
-                                className="t-outstandingProjectCard_thumbnail"
+                              <a
+                                aria-current="page"
+                                className="a-link   active"
+                                href="/"
+                                onClick={[Function]}
+                                target="_self"
                               >
                                 <div
-                                  className="a-image a-image-221x166"
+                                  className="t-outstandingProjectCard_thumbnail"
                                 >
-                                  <img
-                                    alt="OutstandingProjectCard"
-                                    loading="lazy"
-                                    src="img_outstanding_project2.png"
+                                  <div
+                                    className="a-image a-image-221x166"
+                                  >
+                                    <img
+                                      alt="OutstandingProjectCard"
+                                      loading="lazy"
+                                      src="img_outstanding_project2.png"
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="t-outstandingProjectCard_title"
+                                >
+                                  <p
+                                    className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "NovaWorld Phan Thiet",
+                                      }
+                                    }
                                   />
                                 </div>
-                              </div>
-                              <div
-                                className="t-outstandingProjectCard_title"
-                              >
-                                <p
-                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
-                                  dangerouslySetInnerHTML={
-                                    Object {
-                                      "__html": "NovaWorld Phan Thiet",
-                                    }
-                                  }
-                                />
-                              </div>
-                            </a>
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div
-                  aria-hidden={true}
-                  className="slick-slide slick-cloned"
-                  data-index={10}
-                  onClick={[Function]}
-                  style={
-                    Object {
-                      "width": 0,
-                    }
-                  }
-                  tabIndex="-1"
-                >
-                  <div>
-                    <div
-                      className="o-carousel_wrap"
-                      style={
-                        Object {
-                          "display": "inline-block",
-                          "width": "100%",
-                        }
+                  <div
+                    aria-hidden={true}
+                    className="slick-slide slick-cloned"
+                    data-index={10}
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "width": 0,
                       }
-                      tabIndex={-1}
-                    >
+                    }
+                    tabIndex="-1"
+                  >
+                    <div>
                       <div
-                        className="o-carousel_item"
+                        className="o-carousel_wrap"
+                        style={
+                          Object {
+                            "display": "inline-block",
+                            "width": "100%",
+                          }
+                        }
+                        tabIndex={-1}
                       >
                         <div
-                          className="t-outstandingProject_item"
+                          className="o-carousel_item"
                         >
                           <div
-                            className="t-outstandingProjectCard"
+                            className="t-outstandingProject_item"
                           >
-                            <a
-                              aria-current="page"
-                              className="a-link   active"
-                              href="/"
-                              onClick={[Function]}
-                              target="_self"
+                            <div
+                              className="t-outstandingProjectCard"
                             >
-                              <div
-                                className="t-outstandingProjectCard_thumbnail"
+                              <a
+                                aria-current="page"
+                                className="a-link   active"
+                                href="/"
+                                onClick={[Function]}
+                                target="_self"
                               >
                                 <div
-                                  className="a-image a-image-221x166"
+                                  className="t-outstandingProjectCard_thumbnail"
                                 >
-                                  <img
-                                    alt="OutstandingProjectCard"
-                                    loading="lazy"
-                                    src="img_outstanding_project3.png"
+                                  <div
+                                    className="a-image a-image-221x166"
+                                  >
+                                    <img
+                                      alt="OutstandingProjectCard"
+                                      loading="lazy"
+                                      src="img_outstanding_project3.png"
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="t-outstandingProjectCard_title"
+                                >
+                                  <p
+                                    className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "NovaWorld Ho Tram",
+                                      }
+                                    }
                                   />
                                 </div>
-                              </div>
-                              <div
-                                className="t-outstandingProjectCard_title"
-                              >
-                                <p
-                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
-                                  dangerouslySetInnerHTML={
-                                    Object {
-                                      "__html": "NovaWorld Ho Tram",
-                                    }
-                                  }
-                                />
-                              </div>
-                            </a>
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div
-                  aria-hidden={true}
-                  className="slick-slide slick-cloned"
-                  data-index={11}
-                  onClick={[Function]}
-                  style={
-                    Object {
-                      "width": 0,
-                    }
-                  }
-                  tabIndex="-1"
-                >
-                  <div>
-                    <div
-                      className="o-carousel_wrap"
-                      style={
-                        Object {
-                          "display": "inline-block",
-                          "width": "100%",
-                        }
+                  <div
+                    aria-hidden={true}
+                    className="slick-slide slick-cloned"
+                    data-index={11}
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "width": 0,
                       }
-                      tabIndex={-1}
-                    >
+                    }
+                    tabIndex="-1"
+                  >
+                    <div>
                       <div
-                        className="o-carousel_item"
+                        className="o-carousel_wrap"
+                        style={
+                          Object {
+                            "display": "inline-block",
+                            "width": "100%",
+                          }
+                        }
+                        tabIndex={-1}
                       >
                         <div
-                          className="t-outstandingProject_item"
+                          className="o-carousel_item"
                         >
                           <div
-                            className="t-outstandingProjectCard"
+                            className="t-outstandingProject_item"
                           >
-                            <a
-                              aria-current="page"
-                              className="a-link   active"
-                              href="/"
-                              onClick={[Function]}
-                              target="_self"
+                            <div
+                              className="t-outstandingProjectCard"
                             >
-                              <div
-                                className="t-outstandingProjectCard_thumbnail"
+                              <a
+                                aria-current="page"
+                                className="a-link   active"
+                                href="/"
+                                onClick={[Function]}
+                                target="_self"
                               >
                                 <div
-                                  className="a-image a-image-221x166"
+                                  className="t-outstandingProjectCard_thumbnail"
                                 >
-                                  <img
-                                    alt="OutstandingProjectCard"
-                                    loading="lazy"
-                                    src="img_outstanding_project4.png"
+                                  <div
+                                    className="a-image a-image-221x166"
+                                  >
+                                    <img
+                                      alt="OutstandingProjectCard"
+                                      loading="lazy"
+                                      src="img_outstanding_project4.png"
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="t-outstandingProjectCard_title"
+                                >
+                                  <p
+                                    className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "Sunrise City",
+                                      }
+                                    }
                                   />
                                 </div>
-                              </div>
-                              <div
-                                className="t-outstandingProjectCard_title"
-                              >
-                                <p
-                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
-                                  dangerouslySetInnerHTML={
-                                    Object {
-                                      "__html": "Sunrise City",
-                                    }
-                                  }
-                                />
-                              </div>
-                            </a>
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div
-                  aria-hidden={true}
-                  className="slick-slide slick-cloned"
-                  data-index={12}
-                  onClick={[Function]}
-                  style={
-                    Object {
-                      "width": 0,
-                    }
-                  }
-                  tabIndex="-1"
-                >
-                  <div>
-                    <div
-                      className="o-carousel_wrap"
-                      style={
-                        Object {
-                          "display": "inline-block",
-                          "width": "100%",
-                        }
+                  <div
+                    aria-hidden={true}
+                    className="slick-slide slick-cloned"
+                    data-index={12}
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "width": 0,
                       }
-                      tabIndex={-1}
-                    >
+                    }
+                    tabIndex="-1"
+                  >
+                    <div>
                       <div
-                        className="o-carousel_item"
+                        className="o-carousel_wrap"
+                        style={
+                          Object {
+                            "display": "inline-block",
+                            "width": "100%",
+                          }
+                        }
+                        tabIndex={-1}
                       >
                         <div
-                          className="t-outstandingProject_item"
+                          className="o-carousel_item"
                         >
                           <div
-                            className="t-outstandingProjectCard"
+                            className="t-outstandingProject_item"
                           >
-                            <a
-                              aria-current="page"
-                              className="a-link   active"
-                              href="/"
-                              onClick={[Function]}
-                              target="_self"
+                            <div
+                              className="t-outstandingProjectCard"
                             >
-                              <div
-                                className="t-outstandingProjectCard_thumbnail"
+                              <a
+                                aria-current="page"
+                                className="a-link   active"
+                                href="/"
+                                onClick={[Function]}
+                                target="_self"
                               >
                                 <div
-                                  className="a-image a-image-221x166"
+                                  className="t-outstandingProjectCard_thumbnail"
                                 >
-                                  <img
-                                    alt="OutstandingProjectCard"
-                                    loading="lazy"
-                                    src="img_outstanding_project.png"
+                                  <div
+                                    className="a-image a-image-221x166"
+                                  >
+                                    <img
+                                      alt="OutstandingProjectCard"
+                                      loading="lazy"
+                                      src="img_outstanding_project.png"
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="t-outstandingProjectCard_title"
+                                >
+                                  <p
+                                    className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "Aqua City",
+                                      }
+                                    }
                                   />
                                 </div>
-                              </div>
-                              <div
-                                className="t-outstandingProjectCard_title"
-                              >
-                                <p
-                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
-                                  dangerouslySetInnerHTML={
-                                    Object {
-                                      "__html": "Aqua City",
-                                    }
-                                  }
-                                />
-                              </div>
-                            </a>
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div
-                  aria-hidden={true}
-                  className="slick-slide slick-cloned"
-                  data-index={13}
-                  onClick={[Function]}
-                  style={
-                    Object {
-                      "width": 0,
-                    }
-                  }
-                  tabIndex="-1"
-                >
-                  <div>
-                    <div
-                      className="o-carousel_wrap"
-                      style={
-                        Object {
-                          "display": "inline-block",
-                          "width": "100%",
-                        }
+                  <div
+                    aria-hidden={true}
+                    className="slick-slide slick-cloned"
+                    data-index={13}
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "width": 0,
                       }
-                      tabIndex={-1}
-                    >
+                    }
+                    tabIndex="-1"
+                  >
+                    <div>
                       <div
-                        className="o-carousel_item"
+                        className="o-carousel_wrap"
+                        style={
+                          Object {
+                            "display": "inline-block",
+                            "width": "100%",
+                          }
+                        }
+                        tabIndex={-1}
                       >
                         <div
-                          className="t-outstandingProject_item"
+                          className="o-carousel_item"
                         >
                           <div
-                            className="t-outstandingProjectCard"
+                            className="t-outstandingProject_item"
                           >
-                            <a
-                              aria-current="page"
-                              className="a-link   active"
-                              href="/"
-                              onClick={[Function]}
-                              target="_self"
+                            <div
+                              className="t-outstandingProjectCard"
                             >
-                              <div
-                                className="t-outstandingProjectCard_thumbnail"
+                              <a
+                                aria-current="page"
+                                className="a-link   active"
+                                href="/"
+                                onClick={[Function]}
+                                target="_self"
                               >
                                 <div
-                                  className="a-image a-image-221x166"
+                                  className="t-outstandingProjectCard_thumbnail"
                                 >
-                                  <img
-                                    alt="OutstandingProjectCard"
-                                    loading="lazy"
-                                    src="img_outstanding_project2.png"
+                                  <div
+                                    className="a-image a-image-221x166"
+                                  >
+                                    <img
+                                      alt="OutstandingProjectCard"
+                                      loading="lazy"
+                                      src="img_outstanding_project2.png"
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="t-outstandingProjectCard_title"
+                                >
+                                  <p
+                                    className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "NovaWorld Phan Thiet",
+                                      }
+                                    }
                                   />
                                 </div>
-                              </div>
-                              <div
-                                className="t-outstandingProjectCard_title"
-                              >
-                                <p
-                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
-                                  dangerouslySetInnerHTML={
-                                    Object {
-                                      "__html": "NovaWorld Phan Thiet",
-                                    }
-                                  }
-                                />
-                              </div>
-                            </a>
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div
-                  aria-hidden={true}
-                  className="slick-slide slick-cloned"
-                  data-index={14}
-                  onClick={[Function]}
-                  style={
-                    Object {
-                      "width": 0,
-                    }
-                  }
-                  tabIndex="-1"
-                >
-                  <div>
-                    <div
-                      className="o-carousel_wrap"
-                      style={
-                        Object {
-                          "display": "inline-block",
-                          "width": "100%",
-                        }
+                  <div
+                    aria-hidden={true}
+                    className="slick-slide slick-cloned"
+                    data-index={14}
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "width": 0,
                       }
-                      tabIndex={-1}
-                    >
+                    }
+                    tabIndex="-1"
+                  >
+                    <div>
                       <div
-                        className="o-carousel_item"
+                        className="o-carousel_wrap"
+                        style={
+                          Object {
+                            "display": "inline-block",
+                            "width": "100%",
+                          }
+                        }
+                        tabIndex={-1}
                       >
                         <div
-                          className="t-outstandingProject_item"
+                          className="o-carousel_item"
                         >
                           <div
-                            className="t-outstandingProjectCard"
+                            className="t-outstandingProject_item"
                           >
-                            <a
-                              aria-current="page"
-                              className="a-link   active"
-                              href="/"
-                              onClick={[Function]}
-                              target="_self"
+                            <div
+                              className="t-outstandingProjectCard"
                             >
-                              <div
-                                className="t-outstandingProjectCard_thumbnail"
+                              <a
+                                aria-current="page"
+                                className="a-link   active"
+                                href="/"
+                                onClick={[Function]}
+                                target="_self"
                               >
                                 <div
-                                  className="a-image a-image-221x166"
+                                  className="t-outstandingProjectCard_thumbnail"
                                 >
-                                  <img
-                                    alt="OutstandingProjectCard"
-                                    loading="lazy"
-                                    src="img_outstanding_project3.png"
+                                  <div
+                                    className="a-image a-image-221x166"
+                                  >
+                                    <img
+                                      alt="OutstandingProjectCard"
+                                      loading="lazy"
+                                      src="img_outstanding_project3.png"
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="t-outstandingProjectCard_title"
+                                >
+                                  <p
+                                    className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "NovaWorld Ho Tram",
+                                      }
+                                    }
                                   />
                                 </div>
-                              </div>
-                              <div
-                                className="t-outstandingProjectCard_title"
-                              >
-                                <p
-                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
-                                  dangerouslySetInnerHTML={
-                                    Object {
-                                      "__html": "NovaWorld Ho Tram",
-                                    }
-                                  }
-                                />
-                              </div>
-                            </a>
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div
-                  aria-hidden={true}
-                  className="slick-slide slick-cloned"
-                  data-index={15}
-                  onClick={[Function]}
-                  style={
-                    Object {
-                      "width": 0,
-                    }
-                  }
-                  tabIndex="-1"
-                >
-                  <div>
-                    <div
-                      className="o-carousel_wrap"
-                      style={
-                        Object {
-                          "display": "inline-block",
-                          "width": "100%",
-                        }
+                  <div
+                    aria-hidden={true}
+                    className="slick-slide slick-cloned"
+                    data-index={15}
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "width": 0,
                       }
-                      tabIndex={-1}
-                    >
+                    }
+                    tabIndex="-1"
+                  >
+                    <div>
                       <div
-                        className="o-carousel_item"
+                        className="o-carousel_wrap"
+                        style={
+                          Object {
+                            "display": "inline-block",
+                            "width": "100%",
+                          }
+                        }
+                        tabIndex={-1}
                       >
                         <div
-                          className="t-outstandingProject_item"
+                          className="o-carousel_item"
                         >
                           <div
-                            className="t-outstandingProjectCard"
+                            className="t-outstandingProject_item"
                           >
-                            <a
-                              aria-current="page"
-                              className="a-link   active"
-                              href="/"
-                              onClick={[Function]}
-                              target="_self"
+                            <div
+                              className="t-outstandingProjectCard"
                             >
-                              <div
-                                className="t-outstandingProjectCard_thumbnail"
+                              <a
+                                aria-current="page"
+                                className="a-link   active"
+                                href="/"
+                                onClick={[Function]}
+                                target="_self"
                               >
                                 <div
-                                  className="a-image a-image-221x166"
+                                  className="t-outstandingProjectCard_thumbnail"
                                 >
-                                  <img
-                                    alt="OutstandingProjectCard"
-                                    loading="lazy"
-                                    src="img_outstanding_project4.png"
+                                  <div
+                                    className="a-image a-image-221x166"
+                                  >
+                                    <img
+                                      alt="OutstandingProjectCard"
+                                      loading="lazy"
+                                      src="img_outstanding_project4.png"
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="t-outstandingProjectCard_title"
+                                >
+                                  <p
+                                    className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "Sunrise City",
+                                      }
+                                    }
                                   />
                                 </div>
-                              </div>
-                              <div
-                                className="t-outstandingProjectCard_title"
-                              >
-                                <p
-                                  className="a-text a-text-16x24 a-text-arsenic a-text-400 a-text-fontLexend"
-                                  dangerouslySetInnerHTML={
-                                    Object {
-                                      "__html": "Sunrise City",
-                                    }
-                                  }
-                                />
-                              </div>
-                            </a>
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -16030,11 +16042,11 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                   </div>
                 </div>
               </div>
+              <div
+                className="o-carousel_arrow o-carousel_arrow_next slick-arrow slick-next "
+                onClick={[Function]}
+              />
             </div>
-            <div
-              className="o-carousel_arrow o-carousel_arrow_next slick-arrow slick-next "
-              onClick={[Function]}
-            />
           </div>
         </div>
       </div>
@@ -16671,7 +16683,7 @@ exports[`Storyshots Components/templates/ProjectMap Normal 1`] = `
                                     onMouseLeave={[Function]}
                                   >
                                     <div
-                                      className="a-image a-image-354x88"
+                                      className="a-image a-image-311x78"
                                     >
                                       <img
                                         alt="replacing"
@@ -16702,7 +16714,7 @@ exports[`Storyshots Components/templates/ProjectMap Normal 1`] = `
                                     onMouseLeave={[Function]}
                                   >
                                     <div
-                                      className="a-image a-image-354x88"
+                                      className="a-image a-image-311x78"
                                     >
                                       <img
                                         alt="replacing"
@@ -16735,7 +16747,7 @@ exports[`Storyshots Components/templates/ProjectMap Normal 1`] = `
                                     onMouseLeave={[Function]}
                                   >
                                     <div
-                                      className="a-image a-image-354x88"
+                                      className="a-image a-image-311x78"
                                     >
                                       <img
                                         alt="replacing"
@@ -16766,7 +16778,7 @@ exports[`Storyshots Components/templates/ProjectMap Normal 1`] = `
                                     onMouseLeave={[Function]}
                                   >
                                     <div
-                                      className="a-image a-image-354x88"
+                                      className="a-image a-image-311x78"
                                     >
                                       <img
                                         alt="replacing"
@@ -16813,7 +16825,7 @@ exports[`Storyshots Components/templates/ProjectMap Normal 1`] = `
                                     onMouseLeave={[Function]}
                                   >
                                     <div
-                                      className="a-image a-image-354x88"
+                                      className="a-image a-image-311x78"
                                     >
                                       <img
                                         alt="replacing"
@@ -16927,7 +16939,7 @@ exports[`Storyshots Components/templates/ProjectMap Normal 1`] = `
                                     onMouseLeave={[Function]}
                                   >
                                     <div
-                                      className="a-image a-image-354x88"
+                                      className="a-image a-image-311x78"
                                     >
                                       <img
                                         alt="replacing"
@@ -16958,7 +16970,7 @@ exports[`Storyshots Components/templates/ProjectMap Normal 1`] = `
                                     onMouseLeave={[Function]}
                                   >
                                     <div
-                                      className="a-image a-image-354x88"
+                                      className="a-image a-image-311x78"
                                     >
                                       <img
                                         alt="replacing"
@@ -16991,7 +17003,7 @@ exports[`Storyshots Components/templates/ProjectMap Normal 1`] = `
                                     onMouseLeave={[Function]}
                                   >
                                     <div
-                                      className="a-image a-image-354x88"
+                                      className="a-image a-image-311x78"
                                     >
                                       <img
                                         alt="replacing"
@@ -17078,7 +17090,7 @@ exports[`Storyshots Components/templates/ProjectMap Normal 1`] = `
                                     onMouseLeave={[Function]}
                                   >
                                     <div
-                                      className="a-image a-image-354x88"
+                                      className="a-image a-image-311x78"
                                     >
                                       <img
                                         alt="replacing"
@@ -17500,101 +17512,105 @@ exports[`Storyshots Components/templates/VisionMissionValue Normal 1`] = `
         className="t-VMV_block"
       >
         <div
-          className="t-VMV_content"
+          className="t-VMV_block-animate-1 animate animate-fadeInUp"
         >
-          <h2
-            className="a-heading a-heading-32x48 a-heading-700 a-heading-fontNoto a-heading-white a-heading-uppercase a-heading-center"
-          >
-            TẦM NHÌN
-          </h2>
           <div
-            className="u-mt-16 u-mt-md-24 u-mt-lg-32 u-mb-16 u-mb-md-24"
+            className="t-VMV_content"
           >
-            <p
-              className="a-text a-text-400 a-text-fontLexend a-text-white a-text-center a-text-16x24"
+            <h2
+              className="a-heading a-heading-32x48 a-heading-700 a-heading-fontNoto a-heading-white a-heading-uppercase a-heading-center"
             >
-              Tập đoàn kinh tế hàng đầu trong các lĩnh vực
-            </p>
-          </div>
-          <div
-            className="t-VMV_list"
-          >
+              TẦM NHÌN
+            </h2>
             <div
-              className="t-VMV_list-item"
+              className="u-mt-16 u-mt-md-24 u-mt-lg-32 u-mb-16 u-mb-md-24"
             >
-              <div
-                className="t-VMV_list-img"
+              <p
+                className="a-text a-text-400 a-text-fontLexend a-text-white a-text-center a-text-16x24"
               >
-                <div
-                  className="a-image a-image-1x1"
-                >
-                  <img
-                    alt="Bất động sản"
-                    loading="lazy"
-                    src="real_estate.png"
-                  />
-                </div>
-              </div>
-              <div
-                className="u-ml-12 u-ml-lg-16"
-              >
-                <p
-                  className="a-text a-text-400 a-text-fontLexend a-text-white a-text-left a-text-16x24"
-                >
-                  Bất động sản
-                </p>
-              </div>
+                Tập đoàn kinh tế hàng đầu trong các lĩnh vực
+              </p>
             </div>
             <div
-              className="t-VMV_list-item"
+              className="t-VMV_list"
             >
               <div
-                className="t-VMV_list-img"
+                className="t-VMV_list-item"
               >
                 <div
-                  className="a-image a-image-1x1"
+                  className="t-VMV_list-img"
                 >
-                  <img
-                    alt="Phát triển hạ tầng"
-                    loading="lazy"
-                    src="infrastructure.png"
-                  />
+                  <div
+                    className="a-image a-image-1x1"
+                  >
+                    <img
+                      alt="Bất động sản"
+                      loading="lazy"
+                      src="real_estate.png"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="u-ml-12 u-ml-lg-16"
+                >
+                  <p
+                    className="a-text a-text-400 a-text-fontLexend a-text-white a-text-left a-text-16x24"
+                  >
+                    Bất động sản
+                  </p>
                 </div>
               </div>
               <div
-                className="u-ml-12 u-ml-lg-16"
-              >
-                <p
-                  className="a-text a-text-400 a-text-fontLexend a-text-white a-text-left a-text-16x24"
-                >
-                  Phát triển hạ tầng
-                </p>
-              </div>
-            </div>
-            <div
-              className="t-VMV_list-item"
-            >
-              <div
-                className="t-VMV_list-img"
+                className="t-VMV_list-item"
               >
                 <div
-                  className="a-image a-image-1x1"
+                  className="t-VMV_list-img"
                 >
-                  <img
-                    alt="Kiến tạo điểm đến"
-                    loading="lazy"
-                    src="assist_destination.png"
-                  />
+                  <div
+                    className="a-image a-image-1x1"
+                  >
+                    <img
+                      alt="Phát triển hạ tầng"
+                      loading="lazy"
+                      src="infrastructure.png"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="u-ml-12 u-ml-lg-16"
+                >
+                  <p
+                    className="a-text a-text-400 a-text-fontLexend a-text-white a-text-left a-text-16x24"
+                  >
+                    Phát triển hạ tầng
+                  </p>
                 </div>
               </div>
               <div
-                className="u-ml-12 u-ml-lg-16"
+                className="t-VMV_list-item"
               >
-                <p
-                  className="a-text a-text-400 a-text-fontLexend a-text-white a-text-left a-text-16x24"
+                <div
+                  className="t-VMV_list-img"
                 >
-                  Kiến tạo điểm đến
-                </p>
+                  <div
+                    className="a-image a-image-1x1"
+                  >
+                    <img
+                      alt="Kiến tạo điểm đến"
+                      loading="lazy"
+                      src="assist_destination.png"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="u-ml-12 u-ml-lg-16"
+                >
+                  <p
+                    className="a-text a-text-400 a-text-fontLexend a-text-white a-text-left a-text-16x24"
+                  >
+                    Kiến tạo điểm đến
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -17604,101 +17620,105 @@ exports[`Storyshots Components/templates/VisionMissionValue Normal 1`] = `
         className="t-VMV_block"
       >
         <div
-          className="t-VMV_content"
+          className="t-VMV_block-animate-2 animate animate-fadeInUp"
         >
-          <h2
-            className="a-heading a-heading-32x48 a-heading-700 a-heading-fontNoto a-heading-white a-heading-uppercase a-heading-center"
-          >
-            SỨ MỆNH
-          </h2>
           <div
-            className="u-mt-16 u-mt-md-24 u-mt-lg-32 u-mb-16 u-mb-md-24"
+            className="t-VMV_content"
           >
-            <p
-              className="a-text a-text-400 a-text-fontLexend a-text-white a-text-center a-text-16x24"
+            <h2
+              className="a-heading a-heading-32x48 a-heading-700 a-heading-fontNoto a-heading-white a-heading-uppercase a-heading-center"
             >
-              Tập đoàn tập trung cho các giá trị cộng đồng
-            </p>
-          </div>
-          <div
-            className="t-VMV_list"
-          >
+              SỨ MỆNH
+            </h2>
             <div
-              className="t-VMV_list-item"
+              className="u-mt-16 u-mt-md-24 u-mt-lg-32 u-mb-16 u-mb-md-24"
             >
-              <div
-                className="t-VMV_list-img"
+              <p
+                className="a-text a-text-400 a-text-fontLexend a-text-white a-text-center a-text-16x24"
               >
-                <div
-                  className="a-image a-image-1x1"
-                >
-                  <img
-                    alt="Bất động sản"
-                    loading="lazy"
-                    src="real_estate.png"
-                  />
-                </div>
-              </div>
-              <div
-                className="u-ml-12 u-ml-lg-16"
-              >
-                <p
-                  className="a-text a-text-400 a-text-fontLexend a-text-white a-text-left a-text-16x24"
-                >
-                  Bất động sản
-                </p>
-              </div>
+                Tập đoàn tập trung cho các giá trị cộng đồng
+              </p>
             </div>
             <div
-              className="t-VMV_list-item"
+              className="t-VMV_list"
             >
               <div
-                className="t-VMV_list-img"
+                className="t-VMV_list-item"
               >
                 <div
-                  className="a-image a-image-1x1"
+                  className="t-VMV_list-img"
                 >
-                  <img
-                    alt="Phát triển hạ tầng"
-                    loading="lazy"
-                    src="infrastructure.png"
-                  />
+                  <div
+                    className="a-image a-image-1x1"
+                  >
+                    <img
+                      alt="Bất động sản"
+                      loading="lazy"
+                      src="real_estate.png"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="u-ml-12 u-ml-lg-16"
+                >
+                  <p
+                    className="a-text a-text-400 a-text-fontLexend a-text-white a-text-left a-text-16x24"
+                  >
+                    Bất động sản
+                  </p>
                 </div>
               </div>
               <div
-                className="u-ml-12 u-ml-lg-16"
-              >
-                <p
-                  className="a-text a-text-400 a-text-fontLexend a-text-white a-text-left a-text-16x24"
-                >
-                  Phát triển hạ tầng
-                </p>
-              </div>
-            </div>
-            <div
-              className="t-VMV_list-item"
-            >
-              <div
-                className="t-VMV_list-img"
+                className="t-VMV_list-item"
               >
                 <div
-                  className="a-image a-image-1x1"
+                  className="t-VMV_list-img"
                 >
-                  <img
-                    alt="Kiến tạo điểm đến"
-                    loading="lazy"
-                    src="assist_destination.png"
-                  />
+                  <div
+                    className="a-image a-image-1x1"
+                  >
+                    <img
+                      alt="Phát triển hạ tầng"
+                      loading="lazy"
+                      src="infrastructure.png"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="u-ml-12 u-ml-lg-16"
+                >
+                  <p
+                    className="a-text a-text-400 a-text-fontLexend a-text-white a-text-left a-text-16x24"
+                  >
+                    Phát triển hạ tầng
+                  </p>
                 </div>
               </div>
               <div
-                className="u-ml-12 u-ml-lg-16"
+                className="t-VMV_list-item"
               >
-                <p
-                  className="a-text a-text-400 a-text-fontLexend a-text-white a-text-left a-text-16x24"
+                <div
+                  className="t-VMV_list-img"
                 >
-                  Kiến tạo điểm đến
-                </p>
+                  <div
+                    className="a-image a-image-1x1"
+                  >
+                    <img
+                      alt="Kiến tạo điểm đến"
+                      loading="lazy"
+                      src="assist_destination.png"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="u-ml-12 u-ml-lg-16"
+                >
+                  <p
+                    className="a-text a-text-400 a-text-fontLexend a-text-white a-text-left a-text-16x24"
+                  >
+                    Kiến tạo điểm đến
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -17708,101 +17728,105 @@ exports[`Storyshots Components/templates/VisionMissionValue Normal 1`] = `
         className="t-VMV_block"
       >
         <div
-          className="t-VMV_content"
+          className="t-VMV_block-animate-3 animate animate-fadeInUp"
         >
-          <h2
-            className="a-heading a-heading-32x48 a-heading-700 a-heading-fontNoto a-heading-white a-heading-uppercase a-heading-center"
-          >
-            GIÁ TRỊ CỐT LÕI
-          </h2>
           <div
-            className="u-mt-16 u-mt-md-24 u-mt-lg-32 u-mb-16 u-mb-md-24"
+            className="t-VMV_content"
           >
-            <p
-              className="a-text a-text-400 a-text-fontLexend a-text-white a-text-center a-text-16x24"
+            <h2
+              className="a-heading a-heading-32x48 a-heading-700 a-heading-fontNoto a-heading-white a-heading-uppercase a-heading-center"
             >
-              Chìa khoá của sự Thành Công
-            </p>
-          </div>
-          <div
-            className="t-VMV_list"
-          >
+              GIÁ TRỊ CỐT LÕI
+            </h2>
             <div
-              className="t-VMV_list-item"
+              className="u-mt-16 u-mt-md-24 u-mt-lg-32 u-mb-16 u-mb-md-24"
             >
-              <div
-                className="t-VMV_list-img"
+              <p
+                className="a-text a-text-400 a-text-fontLexend a-text-white a-text-center a-text-16x24"
               >
-                <div
-                  className="a-image a-image-1x1"
-                >
-                  <img
-                    alt="Bất động sản"
-                    loading="lazy"
-                    src="real_estate.png"
-                  />
-                </div>
-              </div>
-              <div
-                className="u-ml-12 u-ml-lg-16"
-              >
-                <p
-                  className="a-text a-text-400 a-text-fontLexend a-text-white a-text-left a-text-16x24"
-                >
-                  Bất động sản
-                </p>
-              </div>
+                Chìa khoá của sự Thành Công
+              </p>
             </div>
             <div
-              className="t-VMV_list-item"
+              className="t-VMV_list"
             >
               <div
-                className="t-VMV_list-img"
+                className="t-VMV_list-item"
               >
                 <div
-                  className="a-image a-image-1x1"
+                  className="t-VMV_list-img"
                 >
-                  <img
-                    alt="Phát triển hạ tầng"
-                    loading="lazy"
-                    src="infrastructure.png"
-                  />
+                  <div
+                    className="a-image a-image-1x1"
+                  >
+                    <img
+                      alt="Bất động sản"
+                      loading="lazy"
+                      src="real_estate.png"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="u-ml-12 u-ml-lg-16"
+                >
+                  <p
+                    className="a-text a-text-400 a-text-fontLexend a-text-white a-text-left a-text-16x24"
+                  >
+                    Bất động sản
+                  </p>
                 </div>
               </div>
               <div
-                className="u-ml-12 u-ml-lg-16"
-              >
-                <p
-                  className="a-text a-text-400 a-text-fontLexend a-text-white a-text-left a-text-16x24"
-                >
-                  Phát triển hạ tầng
-                </p>
-              </div>
-            </div>
-            <div
-              className="t-VMV_list-item"
-            >
-              <div
-                className="t-VMV_list-img"
+                className="t-VMV_list-item"
               >
                 <div
-                  className="a-image a-image-1x1"
+                  className="t-VMV_list-img"
                 >
-                  <img
-                    alt="Kiến tạo điểm đến"
-                    loading="lazy"
-                    src="assist_destination.png"
-                  />
+                  <div
+                    className="a-image a-image-1x1"
+                  >
+                    <img
+                      alt="Phát triển hạ tầng"
+                      loading="lazy"
+                      src="infrastructure.png"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="u-ml-12 u-ml-lg-16"
+                >
+                  <p
+                    className="a-text a-text-400 a-text-fontLexend a-text-white a-text-left a-text-16x24"
+                  >
+                    Phát triển hạ tầng
+                  </p>
                 </div>
               </div>
               <div
-                className="u-ml-12 u-ml-lg-16"
+                className="t-VMV_list-item"
               >
-                <p
-                  className="a-text a-text-400 a-text-fontLexend a-text-white a-text-left a-text-16x24"
+                <div
+                  className="t-VMV_list-img"
                 >
-                  Kiến tạo điểm đến
-                </p>
+                  <div
+                    className="a-image a-image-1x1"
+                  >
+                    <img
+                      alt="Kiến tạo điểm đến"
+                      loading="lazy"
+                      src="assist_destination.png"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="u-ml-12 u-ml-lg-16"
+                >
+                  <p
+                    className="a-text a-text-400 a-text-fontLexend a-text-white a-text-left a-text-16x24"
+                  >
+                    Kiến tạo điểm đến
+                  </p>
+                </div>
               </div>
             </div>
           </div>
