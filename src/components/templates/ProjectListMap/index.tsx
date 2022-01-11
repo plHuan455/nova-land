@@ -1,6 +1,5 @@
 import React, { useCallback, useMemo } from 'react';
 
-import Button from 'components/atoms/Button';
 import Heading from 'components/atoms/Heading';
 import Icon from 'components/atoms/Icon';
 import Link from 'components/atoms/Link';
@@ -33,8 +32,6 @@ interface InfoProps {
   valueProvince: OptionType|null;
   valueProject: OptionType|null;
   listProject: ItemProject[];
-  hasButtonViewAll: boolean;
-  handleClickViewAll: () => void;
   handleChangeProvince: (value: OptionType) => void;
   handleChangeProject: (value: OptionType) => void;
 }
@@ -45,8 +42,6 @@ export const ProjectListMapInfo:React.FC<InfoProps> = ({
   valueProvince,
   valueProject,
   listProject,
-  hasButtonViewAll,
-  handleClickViewAll,
   handleChangeProvince,
   handleChangeProject,
 }) => (
@@ -88,13 +83,6 @@ export const ProjectListMapInfo:React.FC<InfoProps> = ({
           </li>
         ))}
       </ul>
-      )}
-      {hasButtonViewAll && (
-        <div className="t-projectListMap_info_btn">
-          <Button onClick={handleClickViewAll} modifiers="with-icon" iconName="arrowDownBrown">
-            Xem Tất Cả Dự Án
-          </Button>
-        </div>
       )}
     </div>
   </div>

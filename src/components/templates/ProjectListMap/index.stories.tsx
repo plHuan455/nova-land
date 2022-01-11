@@ -46,9 +46,6 @@ export const normal: Story = () => {
           projectOptions={customProjectOptions}
           valueProvince={province}
           valueProject={project}
-          hasButtonViewAll
-          // eslint-disable-next-line no-console
-          handleClickViewAll={() => console.log('see more')}
           handleChangeProvince={(value) => {
             setProvince(value);
             setProject(null);
