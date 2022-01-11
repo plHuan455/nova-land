@@ -17507,10 +17507,14 @@ exports[`Storyshots Components/templates/VisionMissionValue Normal 1`] = `
             <h2
               className="a-heading a-heading-32x48 a-heading-500 a-heading-fontNoto a-heading-white a-heading-uppercase a-heading-center"
             >
-              TẦM NHÌN
-            </h2>
+              <h2
+                className="a-heading a-heading-32x48 a-heading-700 a-heading-fontNoto a-heading-white a-heading-uppercase a-heading-center"
+              >
+                TẦM NHÌN
+              </h2>
+            </div>
             <div
-              className="u-mt-16 u-mt-md-24 u-mt-lg-32 u-mb-16 u-mb-md-24"
+              className="t-VMV_desc u-mt-16 u-mt-md-24 u-mt-lg-32 u-mb-16 u-mb-md-24"
             >
               <p
                 className="a-text a-text-300 a-text-white a-text-center a-text-16x24"
@@ -17615,10 +17619,14 @@ exports[`Storyshots Components/templates/VisionMissionValue Normal 1`] = `
             <h2
               className="a-heading a-heading-32x48 a-heading-500 a-heading-fontNoto a-heading-white a-heading-uppercase a-heading-center"
             >
-              SỨ MỆNH
-            </h2>
+              <h2
+                className="a-heading a-heading-32x48 a-heading-700 a-heading-fontNoto a-heading-white a-heading-uppercase a-heading-center"
+              >
+                SỨ MỆNH
+              </h2>
+            </div>
             <div
-              className="u-mt-16 u-mt-md-24 u-mt-lg-32 u-mb-16 u-mb-md-24"
+              className="t-VMV_desc u-mt-16 u-mt-md-24 u-mt-lg-32 u-mb-16 u-mb-md-24"
             >
               <p
                 className="a-text a-text-300 a-text-white a-text-center a-text-16x24"
@@ -17723,10 +17731,14 @@ exports[`Storyshots Components/templates/VisionMissionValue Normal 1`] = `
             <h2
               className="a-heading a-heading-32x48 a-heading-500 a-heading-fontNoto a-heading-white a-heading-uppercase a-heading-center"
             >
-              GIÁ TRỊ CỐT LÕI
-            </h2>
+              <h2
+                className="a-heading a-heading-32x48 a-heading-700 a-heading-fontNoto a-heading-white a-heading-uppercase a-heading-center"
+              >
+                GIÁ TRỊ CỐT LÕI
+              </h2>
+            </div>
             <div
-              className="u-mt-16 u-mt-md-24 u-mt-lg-32 u-mb-16 u-mb-md-24"
+              className="t-VMV_desc u-mt-16 u-mt-md-24 u-mt-lg-32 u-mb-16 u-mb-md-24"
             >
               <p
                 className="a-text a-text-300 a-text-white a-text-center a-text-16x24"

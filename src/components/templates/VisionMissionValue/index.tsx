@@ -5,6 +5,7 @@ import Image from 'components/atoms/Image';
 import Text from 'components/atoms/Text';
 import Animate from 'components/organisms/Animate';
 import Container from 'components/organisms/Container';
+import useMatchHeight from 'hooks/useMatchHeight';
 
 type DataTypes = {
   src: string;
@@ -19,9 +20,11 @@ export interface ContentBlockProps {
 
 const ContentBlock: React.FC<ContentBlockProps> = ({ title, desc, dataList }) => (
   <div className="t-VMV_content">
-    <Heading modifiers={['32x48', '500', 'fontNoto', 'white', 'uppercase', 'center']}>{title}</Heading>
-    <div className="u-mt-16 u-mt-md-24 u-mt-lg-32 u-mb-16 u-mb-md-24">
-      <Text modifiers={['300', 'white', 'center', '16x24']}>{desc}</Text>
+    <div className="t-VMV_title">
+      <Heading modifiers={['32x48', '500', 'fontNoto', 'white', 'uppercase', 'center']}>{title}</Heading>
+    </div>
+    <div className="t-VMV_desc u-mt-16 u-mt-md-24 u-mt-lg-32 u-mb-16 u-mb-md-24">
+      <Text modifiers={['300', 'fontLexend', 'white', 'center', '16x24']}>{desc}</Text>
     </div>
     <div className="t-VMV_list">
       {dataList?.map((item, idx) => (
@@ -42,20 +45,25 @@ interface VisionMissionValueProps {
   dataList: ContentBlockProps[];
 }
 
-const VisionMissionValue: React.FC<VisionMissionValueProps> = ({ dataList }) => (
-  <div className="t-VMV">
-    <Container>
-      <div className="t-VMV_wrapper">
-        {dataList?.map((item, idx) => (
-          <div key={`VMV-item-${idx.toString()}`} className="t-VMV_block">
-            <Animate type="fadeInUp" extendClassName={`t-VMV_block-animate-${idx + 1}`}>
-              <ContentBlock {...item} />
-            </Animate>
-          </div>
-        ))}
-      </div>
-    </Container>
-  </div>
-);
+const VisionMissionValue: React.FC<VisionMissionValueProps> = ({ dataList }) => {
+  useMatchHeight('.t-VMV_title');
+  useMatchHeight('.t-VMV_desc');
+
+  return (
+    <div className="t-VMV">
+      <Container>
+        <div className="t-VMV_wrapper">
+          {dataList?.map((item, idx) => (
+            <div key={`VMV-item-${idx.toString()}`} className="t-VMV_block">
+              <Animate type="fadeInUp" extendClassName={`t-VMV_block-animate-${idx + 1}`}>
+                <ContentBlock {...item} />
+              </Animate>
+            </div>
+          ))}
+        </div>
+      </Container>
+    </div>
+  );
+};
 
 export default VisionMissionValue;
