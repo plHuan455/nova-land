@@ -22,7 +22,7 @@ const AwardCard: React.FC<AwardCardProps> = ({
       <img src={src} alt={alt} />
     </div>
     <div className="t-awardList_card_desc">
-      <Text modifiers={['jet', 'center']}>{desc}</Text>
+      <Text modifiers={['16x24', 'fontLexend', 'arsenic', 'center']}>{desc}</Text>
     </div>
     <div className="t-awardList_card_year">
       <div className="t-awardList_card_year-clip">
@@ -77,7 +77,7 @@ const AwardList: React.FC<AwardListProps> = ({
           {title}
         </Heading>
         <div className="t-awardList_desc">
-          <Text modifiers={['300', 'dimGray', 'center']}>
+          <Text modifiers={['16x24', '300', 'fontLexend', 'davysGrey', 'center']}>
             {desc}
           </Text>
         </div>
