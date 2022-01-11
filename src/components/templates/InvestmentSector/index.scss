@@ -27,6 +27,10 @@
   &_main {
     padding: rem(52) rem(40);
 
+    @include desktop-down {
+      padding: rem(30) rem(28);
+    }
+
     @include tablet-down {
       padding: rem(22) rem(18);
     }
