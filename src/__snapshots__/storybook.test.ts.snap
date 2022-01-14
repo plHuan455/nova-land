@@ -4914,7 +4914,7 @@ exports[`Storyshots Components/templates/FieldActivity Normal 1`] = `
         }
       />
       <div
-        className="u-mt-16 u-mt-sm-24 u-mt-lg-32"
+        className="t-fieldActivity_thumbnail u-mt-16 u-mt-sm-24 u-mt-lg-32"
       >
         <div
           className="a-image a-image-721x303"
