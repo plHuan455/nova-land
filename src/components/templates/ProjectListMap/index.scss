@@ -44,7 +44,7 @@
       margin-top: rem(16);
       max-height: rem(278);
       overflow: auto;
-      @include scroll-bars(8);
+      @include scroll-bars(8, $gainsboro);
 
       @include desktop-down {
         max-height: rem(220);
