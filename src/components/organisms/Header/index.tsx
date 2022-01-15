@@ -161,7 +161,7 @@ const Header: React.FC<HeaderProps> = ({
                       isOpenLanguage && 'active',
                     )}
                   >
-                    <Icon iconName="carretDownBlack" size="24" />
+                    <Icon iconName="carretDownBlack" size="16" />
                   </div>
                 </div>
                 <ul className={mapModifiers('o-header_languagePicker_list', isOpenLanguage && 'open')}>
@@ -201,7 +201,7 @@ const Header: React.FC<HeaderProps> = ({
                     }, 500);
                   }}
                 >
-                  <Icon iconName="search" size="24" />
+                  <Icon iconName="search" size="20" />
                 </div>
                 <div
                   className={mapModifiers('o-header_search_panel', isOpenSearch && 'open')}

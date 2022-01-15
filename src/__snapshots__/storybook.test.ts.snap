@@ -2193,7 +2193,7 @@ exports[`Storyshots Components/organisms/Header normal 1`] = `
                   className="o-header_languagePicker_icon"
                 >
                   <i
-                    className="a-icon a-icon-carretDownBlack a-icon-24"
+                    className="a-icon a-icon-carretDownBlack a-icon-16"
                   />
                 </div>
               </div>
@@ -2230,7 +2230,7 @@ exports[`Storyshots Components/organisms/Header normal 1`] = `
                 onClick={[Function]}
               >
                 <i
-                  className="a-icon a-icon-search a-icon-24"
+                  className="a-icon a-icon-search a-icon-20"
                 />
               </div>
               <div
@@ -13461,7 +13461,7 @@ exports[`Storyshots Components/templates/MainLayout Normal 1`] = `
                   className="o-header_languagePicker_icon"
                 >
                   <i
-                    className="a-icon a-icon-carretDownBlack a-icon-24"
+                    className="a-icon a-icon-carretDownBlack a-icon-16"
                   />
                 </div>
               </div>
@@ -13498,7 +13498,7 @@ exports[`Storyshots Components/templates/MainLayout Normal 1`] = `
                 onClick={[Function]}
               >
                 <i
-                  className="a-icon a-icon-search a-icon-24"
+                  className="a-icon a-icon-search a-icon-20"
                 />
               </div>
               <div

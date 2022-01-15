@@ -121,7 +121,7 @@
       position: relative;
 
       &:not(:first-child) {
-        margin-left: rem(24);
+        margin-left: rem(18);
       }
 
       @include desktop-down {
@@ -142,11 +142,11 @@
     &_link {
       color: $jet;
       display: block;
-      padding: rem(8);
+      padding: rem(9);
       position: relative;
       text-transform: capitalize;
       z-index: $z-2;
-      @include font-base();
+      @include font-base(14, 20);
       @include style-font-family();
 
       @include desktop-down {
@@ -194,7 +194,7 @@
 
   &_search {
     cursor: pointer;
-    margin-left: rem(16);
+    margin-left: rem(12);
     position: relative;
 
     &.pc {
@@ -261,7 +261,7 @@
   }
 
   &_languagePicker {
-    margin-left: rem(40);
+    margin-left: rem(120);
     position: relative;
 
     @include desktop-down {
