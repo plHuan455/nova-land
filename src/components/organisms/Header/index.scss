@@ -11,7 +11,16 @@
   
   &-scrolled {
     background-color: $white;
-    box-shadow: 0 rem(3) rem(6) rem(-4) $black012, 0 rem(6) rem(16) $black088, 0 rem(9) rem(28) rem(8) $black005;
+
+    &::before {
+      background-color: $columbia-blue;
+      bottom: 0;
+      content: '';
+      height: rem(3);
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
   }
 
   &_iconMenu {
@@ -145,6 +154,7 @@
       padding: rem(9);
       position: relative;
       text-transform: capitalize;
+      font-weight: 300;
       z-index: $z-2;
       @include font-base(14, 20);
       @include style-font-family();
@@ -176,7 +186,6 @@
       &.active {
         color: $dark-midnight-blue;
         opacity: 1;
-        text-shadow: rem(0.5) rem(0.5) 0 $dark-midnight-blue, rem(0.5) rem(0.5) rem(0.5) $dark-midnight-blue;
 
         &::before {
           opacity: 1;
@@ -186,8 +195,7 @@
       }
 
       &.active {
-        font-weight: 700;
-        text-shadow: none !important;
+        font-weight: 600;
       }
     }
   }

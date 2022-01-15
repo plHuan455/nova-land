@@ -9,6 +9,7 @@
     height: 6px;
     transition: $transition-long ease;
     width: 6px;
+
     &.white {
       background-color: $white-smoke3;
       opacity: 0.4;
@@ -51,7 +52,7 @@
     }
 
     &:not(.slick-disabled):hover {
-      background: $metallic-sunburst;
+      background: $camel;
       &#{$arrow}_prev::before {
         background-image: url('~assets/icons/ic_arrow_prev_white.svg');
       }
@@ -64,7 +65,7 @@
       left: 0;
 
       &::before {
-        background-image: url('~assets/icons/ic_arrow_prev_red.svg');
+        background-image: url('~assets/icons/ic_arrow_prev_blue.svg');
       }
     }
   
@@ -72,7 +73,7 @@
       right: 0;
 
       &::before {
-        background-image: url('~assets/icons/ic_arrow_next_red.svg');
+        background-image: url('~assets/icons/ic_arrow_next_blue.svg');
       }
     }
 
@@ -114,6 +115,7 @@
       background-color: $cool-black;
       border-radius: 4px;
       width: rem(32);
+      
       &.white {
         background-color: $white;
         opacity: 1;

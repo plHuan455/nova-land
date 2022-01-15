@@ -3,7 +3,6 @@ import React from 'react';
 import shareholderCard1 from 'assets/images/ShareholderRelations/img_shareholderCard1.png';
 import Button from 'components/atoms/Button';
 import Heading from 'components/atoms/Heading';
-import Icon from 'components/atoms/Icon';
 import Image from 'components/atoms/Image';
 import Link from 'components/atoms/Link';
 import Text from 'components/atoms/Text';
@@ -42,7 +41,7 @@ export const ShareholderCard: React.FC<ShareholderCardProps> = ({
       <div className="t-shareholderCard_title">
         <Heading
           type="h3"
-          modifiers={['600', 'arsenic', 'capitalize', 'fontNoto']}
+          modifiers={['500', 'arsenic', 'capitalize', 'fontNoto']}
           content={title}
         />
       </div>
@@ -50,12 +49,10 @@ export const ShareholderCard: React.FC<ShareholderCardProps> = ({
         content && (
           <div className="t-shareholderCard_content" onClick={handleClick}>
             <Text
-              modifiers={['16x24', '400', 'goldenBrown', 'fontLexend']}
+              modifiers={['16x24', '300', 'camel', 'underline']}
               content={content}
             />
-            <div className="t-shareholderCard_content_icon">
-              <Icon iconName="arrowNextWhite2" size="10" />
-            </div>
+            <div className="t-shareholderCard_content_icon" />
           </div>
         )
       }
@@ -78,7 +75,7 @@ const ShareholderRelations: React.FC<ShareholderRelationsProps> = ({
     <Container>
       <div className="t-shareholderRelations_title">
         <Heading
-          modifiers={['32x48', '700', 'arsenic', 'uppercase', 'center', 'fontNoto']}
+          modifiers={['32x48', '500', 'arsenic', 'uppercase', 'center', 'fontNoto']}
           content={title}
         />
       </div>
@@ -103,7 +100,7 @@ const ShareholderRelations: React.FC<ShareholderRelationsProps> = ({
       </div>
       <div className="t-shareholderRelations_button">
         <Link href={href}>
-          <Button modifiers="outline" type="button">
+          <Button modifiers="outlineSpanishGray" type="button">
             <Text
               modifiers={['16x24', '400', 'fontLexend', 'center']}
               content="Xem thêm báo cáo tài chính"

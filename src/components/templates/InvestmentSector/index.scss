@@ -7,6 +7,7 @@
   overflow: hidden;
   position: relative;
   transition: all 0.4s ease-in-out;
+  height: 100%;
 
 
   &::after {
@@ -95,10 +96,13 @@
 
   &_desc {
     margin-top: rem(8);
+    opacity: 0.8;
+    letter-spacing: 0.015em;
     @include text-overflow(3);
 
     #{$root}-small & {
       margin-top: rem(16);
+      letter-spacing: 0;
       @include mobile-down {
         margin-top: rem(8);
       }
@@ -114,31 +118,15 @@
 
     &_button {
       left: 0;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: rem(24);
-      max-width: 90%;
       opacity: 0;
       position: absolute;
       right: 0;
       top: 0;
+    }
 
-      .a-button-secondary {
-        background: $white02;
-        border: rem(1) solid $white;
-        border-radius: rem(5);
-
-        &::before {
-          background: $white01;
-        }
-
-        .a-text {
-          color: $white;
-        }
-      }
-  
-      @include mobile-down {
-        margin-top: rem(16);
+    #{$root}-small & {
+      @include desktop-down {
+        margin-top: rem(14);
       }
     }
   }
@@ -166,6 +154,7 @@
     #{$root}_desc {
       position: relative;
       z-index: 2;
+      @include text-overflow(10);
 
       .a-text {
         color: $white;
@@ -175,6 +164,7 @@
     #{$root}_thumbnail {
       .a-image {
         opacity: 0;
+        display: none;
       }
 
       &_button {
@@ -189,6 +179,18 @@
       position: relative;
       transition: all 0.3s linear 0.06s;
       z-index: 2;
+    }
+  }
+
+  &-small {
+    &:hover {
+      #{$root}_desc {
+        @include text-overflow(6);
+
+        @include desktop-down {
+          @include text-overflow(5);
+        }
+      }
     }
   }
 }
@@ -260,6 +262,24 @@
         padding-right: rem(20);
       }
     }
+
+    .slick-track {
+      display: flex !important;
+    }
+
+    .slick-slide {
+      height: inherit !important;
+
+      &>div {
+        height: 100%;
+      }
+
+      .o-carousel_wrap,
+      .o-carousel_item {
+        height: 100%;
+      }
+
+    }
   }
 
   &-small {
@@ -299,6 +319,7 @@
   }
 
   &_item {
+    height: 100%;
     padding-bottom: rem(10);
     padding-left: rem(16);
     padding-right: rem(16);

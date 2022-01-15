@@ -1,11 +1,11 @@
 .o-collapses {
   $root: &;
-  transition: all $transition linear;
   background: transparent;
+  transition: all $transition linear;
 
   &_wrapTitle {
-    padding: rem(13) rem(16);
     cursor: pointer;
+    padding: rem(13) rem(16);
     @include adjust-flex(space-between, center);
     transition: all $transition linear;
     @include mobile-down {
@@ -21,8 +21,8 @@
 
   &_wrapper {
     max-height: 0;
-    overflow: hidden;
     height: auto;
+    overflow: hidden;
     transition: all $transition linear;
 
     &-active {

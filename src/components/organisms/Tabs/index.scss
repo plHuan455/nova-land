@@ -2,20 +2,20 @@
   $root: &;
 
   &_labels {
-    border-radius: rem(3);
     align-items: center;
+    border-radius: rem(3);
     display: inline-flex;
     overflow-x: auto;
+    left: 50%;
     position: relative;
     @include scroll-bars(8);
-    left: 50%;
     max-width: 100%;
     transform: translateX(-50%);
   }
 
   &_label {
-    color: $black085;
-    font-weight: 400;
+    color: $dim-gray;
+    font-weight: 300;
     text-transform: capitalize;
     white-space: nowrap;
     @include font-base(24, 32);
@@ -43,7 +43,7 @@
     padding-top: rem(7);
     position: relative;
 
-    & + &:not(:first-child)  {
+    & + &:not(:first-child) {
       margin-left: rem(24);
       @include mobile-down {
         margin-left: rem(10);
@@ -51,10 +51,10 @@
     }
 
     &::after {
-      background: $light-french-beige;
+      background: $camel;
       bottom: 0;
-      content: "";
-      height: rem(2);
+      content: '';
+      height: rem(3);
       left: 0;
       opacity: 0;
       position: absolute;
@@ -66,8 +66,8 @@
 
     &-active {
       #{$root}_label {
-        color: $light-french-beige;
-        font-weight: 700;
+        color: $camel;
+        font-weight: 600;
       }
 
       &::after {

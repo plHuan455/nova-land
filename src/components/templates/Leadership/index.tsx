@@ -27,14 +27,14 @@ export const LeadershipCard: React.FC<LeadershipCardProps> = ({
       <div className="t-leadershipCard_content">
         <div className="t-leadershipCard_gender">
           <Text
-            modifiers={['16x24', 'coolBlack', '400', 'fontLexend', 'capitalize']}
+            modifiers={['16x24', 'darkMidnightBlue', '300', 'capitalize']}
             content={gender}
           />
         </div>
         <div className="t-leadershipCard_name">
           <Heading
             type="h3"
-            modifiers={['arsenic', '600', 'fontNoto']}
+            modifiers={['jet', '500', 'fontNoto']}
             content={name}
           />
           <div className="t-leadershipCard_icon">
@@ -43,7 +43,7 @@ export const LeadershipCard: React.FC<LeadershipCardProps> = ({
         </div>
         <div className="t-leadershipCard_position">
           <Text
-            modifiers={['16x24', 'davysGrey', '400', 'fontLexend']}
+            modifiers={['16x24', 'dimGray', '300']}
             content={position}
           />
         </div>
@@ -76,17 +76,17 @@ export const LeadershipDetail: React.FC<LeadershipDetailProps> = ({
     <div className="t-leadershipDetail_wrapper">
       <div className="t-leadershipDetail_info">
         <Heading
-          modifiers={['darkMidnightBlue', '400', 'fontLexend', 'capitalize']}
+          modifiers={['darkMidnightBlue', '300', 'capitalize']}
           content={gender}
         />
         <div className="t-leadershipDetail_name">
           <Heading
-            modifiers={['38x52', '700', 'jet', 'capitalize', 'fontNoto']}
+            modifiers={['38x52', '500', 'jet', 'capitalize', 'fontNoto']}
             content={name}
           />
         </div>
         <Heading
-          modifiers={['dimGray', '400', 'fontLexend']}
+          modifiers={['dimGray', '300']}
           content={position}
         />
       </div>
@@ -104,7 +104,7 @@ export const LeadershipDetail: React.FC<LeadershipDetailProps> = ({
           achievement.map((item, index) => (
             <li className="t-leadershipDetail_item" key={`leadershipDetail_${index.toString()}`}>
               <Text
-                modifiers={['16x24', '400', 'fontLexend', 'dimGray']}
+                modifiers={['16x24', '300', 'dimGray']}
                 content={item}
               />
             </li>
@@ -117,7 +117,7 @@ export const LeadershipDetail: React.FC<LeadershipDetailProps> = ({
         <div className="t-leadershipDetail_slogan">
           <div className="t-leadershipDetail_slogan_detail">
             <Heading
-              modifiers={['dimGray', '400', 'fontLexend']}
+              modifiers={['dimGray', '300']}
               content={slogan}
             />
           </div>
@@ -147,7 +147,7 @@ const Leadership: React.FC<LeadershipProps> = ({
     <div className="t-leadership">
       <Container>
         <Heading
-          modifiers={['32x48', '700', 'uppercase', 'center', 'fontNoto']}
+          modifiers={['32x48', '500', 'uppercase', 'center', 'fontNoto', 'jet']}
           content={title}
         />
         <div className="t-leadership_wrapper">

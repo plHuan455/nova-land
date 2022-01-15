@@ -1,5 +1,5 @@
 .t-outStandingNumbers {
-  background-color: $white-smoke248;
+  background-color: $white-smoke-8f8;
   background-image: url('~assets/images/bg_outStandingNumbers.png');
   background-repeat: no-repeat;
   padding: rem(100) 0;
@@ -15,21 +15,16 @@
       @include adjust-flex;
     }
 
-    &-item,
-    &-line {
+    &-item {
       margin-top: rem(52);
       @include tablet-down {
+        flex: 0 0 30%;
         margin: rem(8) rem(-8) rem(-8);
-      }
-    }
 
-    &-item {
-      @include tablet-down {
         &-1,
         &-2 {
           flex: 0 0 40%;
         }
-        flex: 0 0 30%;
         padding: rem(8);
       }
       @include small-mobile {
@@ -40,16 +35,22 @@
     &-line {
       border-top: 1px solid $camel;
       height: 1px;
+      margin-top: rem(15);
       max-width: rem(60);
       width: 100%;
+
       @include desktop-down {
         max-width: rem(45);
       }
+
       @include tablet-down {
+        margin-top: rem(-16);
+
         &-2 {
           display: none;
         }
       }
+
       @include small-mobile {
         display: none;
       }

@@ -26,7 +26,7 @@ const Collapses: React.FC<CollapsesProps> = ({
         if (handleClickTab) handleClickTab();
       }}
     >
-      <Heading modifiers={['20x30', '400', 'arsenic', 'fontNoto']}>{title}</Heading>
+      <Heading modifiers={['20x30', '500', 'arsenic', 'fontNoto']}>{title}</Heading>
       <div className="o-collapses_icon">
         <Icon
           size="24"

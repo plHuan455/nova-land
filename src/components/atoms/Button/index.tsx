@@ -6,7 +6,15 @@ import Icon, { IconName } from 'components/atoms/Icon';
 import mapModifiers from 'utils/functions';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  modifiers?: 'primary' | 'secondary' | 'outline' | 'with-icon';
+  modifiers?:
+    | 'primary'
+    | 'secondary'
+    | 'outline'
+    | 'with-icon'
+    | 'outlinePaleGold'
+    | 'camel'
+    | 'outlineWhile'
+    | 'outlineSpanishGray';
   isLoading?: boolean;
   iconName?: IconName;
 }

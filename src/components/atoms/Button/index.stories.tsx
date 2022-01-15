@@ -12,7 +12,16 @@ export default {
     modifiers: {
       control: {
         type: 'select',
-        options: ['primary', 'secondary', 'outline', 'with-icon'],
+        options: [
+          'primary',
+          'secondary',
+          'outline',
+          'with-icon',
+          'outlinePaleGold',
+          'camel',
+          'outlineWhile',
+          'outlineSpanishGray',
+        ],
       },
       defaultValue: 'primary',
     },
@@ -49,13 +58,15 @@ export default {
 export const normal: Story = ({
   modifiers, textButton, loading, handleClick, disabled, iconName,
 }) => (
-  <Button
-    isLoading={loading}
-    modifiers={modifiers}
-    onClick={handleClick}
-    disabled={disabled}
-    iconName={iconName}
-  >
-    {textButton}
-  </Button>
+  <div style={{ height: '100vh', backgroundColor: '#4f6c94' }}>
+    <Button
+      isLoading={loading}
+      modifiers={modifiers}
+      onClick={handleClick}
+      disabled={disabled}
+      iconName={iconName}
+    >
+      {textButton}
+    </Button>
+  </div>
 );

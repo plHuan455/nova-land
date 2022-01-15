@@ -16,12 +16,12 @@ export interface NumberBlockProps {
 
 const NumberBlock: React.FC<NumberBlockProps> = ({ number, desc }) => (
   <div>
-    <Heading modifiers={['38x52', '700', 'blueLinear', 'center', 'fontNoto']}>
+    <Heading modifiers={['38x52', '600', 'blueLinear', 'center', 'fontNoto']}>
       {number}
       +
     </Heading>
     <div className="u-mt-sm-8 u-mt-md-16">
-      <Text modifiers={['16x24', '400', 'dimGray', 'center']}>{desc}</Text>
+      <Text modifiers={['16x24', '300', 'dimGray', 'center']}>{desc}</Text>
     </div>
   </div>
 );
@@ -32,7 +32,7 @@ const OutStandingNumbers: React.FC<OutStandingNumbersProps> = ({
 }) => (
   <div className="t-outStandingNumbers">
     <Container>
-      <Heading modifiers={['center', '700', '38x52', 'fontNoto', 'jet']}>
+      <Heading modifiers={['center', '500', '38x52', 'fontNoto', 'jet']}>
         {title}
       </Heading>
       <div className="t-outStandingNumbers_list">

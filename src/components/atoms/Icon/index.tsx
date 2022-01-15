@@ -13,7 +13,6 @@ export const iconList = {
   eyeOpen: 'eyeOpen',
   arrowNextWhite: 'arrowNextWhite',
   search: 'search',
-  carretDownBlack: 'carretDownBlack',
   arrowNextWhite2: 'arrowNextWhite2',
   arrowDownBrown: 'arrowDownBrown',
   arrowNextYellowBrown: 'arrowNextYellowBrown',

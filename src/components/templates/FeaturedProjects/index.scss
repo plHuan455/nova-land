@@ -1,9 +1,10 @@
 .t-featuredProjects {
   $root: &;
+
   &_collapseList {
-    background-color: $snow;
-    margin-top: rem(52);
+    background-color: $ghost-white;
     flex-wrap: wrap;
+    margin-top: rem(52);
     @include adjust-flex(center, stretch);
     @include tablet-down {
       margin-top: rem(24);
@@ -23,13 +24,14 @@
       @include tablet-up {
         max-height: rem(410);
         overflow-y: auto;
-        @include scroll-bars(8);
+        @include scroll-bars(8, $camel);
       }
 
       @include tablet-down {
-        padding: rem(16);
         flex: 0 0 100%;
+        padding: rem(16);
       }
+      
       @include mobile-down {
         padding: rem(8);
       }

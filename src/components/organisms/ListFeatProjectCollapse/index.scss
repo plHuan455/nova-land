@@ -7,14 +7,7 @@
     }
 
     &-wrapLink {
-      display: flex;
-      align-items: center;
-      margin: rem(16) 0;
-      padding: rem(5) rem(16);
-
-      .a-icon {
-        margin-right: rem(8);
-      }
+      margin: rem(12) 0 rem(16);
 
       @include mobile-down {
         margin: rem(8) 0;
@@ -22,27 +15,27 @@
     }
 
     &-img {
+      display: none;
       margin-left: auto;
       margin-right: auto;
       max-width: rem(507);
       width: 100%;
-      display: none;
       @include tablet-down {
         display: block;
       }
     }
 
     &-line {
-      position: relative;
       padding: rem(11);
+      position: relative;
 
       &::after {
-        position: absolute;
-        content: "";
-        left: rem(16);
-        right: rem(26);
-        height: 1px;
         background-color: $gainsboro;
+        content: "";
+        position: absolute;
+        left: rem(16);
+        height: 1px;
+        right: rem(26);
         @include mobile-down {
           left: rem(10);
           right: rem(20);

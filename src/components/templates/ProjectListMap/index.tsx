@@ -47,7 +47,7 @@ export const ProjectListMapInfo:React.FC<InfoProps> = ({
 }) => (
   <div className="t-projectListMap_info">
     <div className="t-projectListMap_info_select">
-      <Text content="Tỉnh/Thành Phố" modifiers={['16x24', 'arsenic']} />
+      <Text content="Tỉnh/Thành Phố" modifiers={['16x24', 'jet', '600']} />
       <div className="t-projectListMap_info_pulldown">
         <Pulldown
           options={provinceOptions}
@@ -58,7 +58,7 @@ export const ProjectListMapInfo:React.FC<InfoProps> = ({
       </div>
     </div>
     <div className="t-projectListMap_info_select">
-      <Text content="Dự Án" modifiers={['16x24', 'arsenic']} />
+      <Text content="Dự Án" modifiers={['16x24', 'jet', '600']} />
       <div className="t-projectListMap_info_pulldown">
         <Pulldown
           options={projectOptions}
@@ -69,14 +69,14 @@ export const ProjectListMapInfo:React.FC<InfoProps> = ({
       </div>
     </div>
     <div className="t-projectListMap_info_wrap-list">
-      <Text content="Danh Sách Dự Án" modifiers={['16x24', 'arsenic']} />
+      <Text content="Danh Sách Dự Án" modifiers={['16x24', 'jet', '600']} />
       {listProject.length && (
       <ul className="t-projectListMap_info_list">
         {listProject.map((item, index) => (
           <li key={index.toString()}>
             <Link href={item.href}>
               <div className="t-projectListMap_info_item">
-                <Text content={item.title} modifiers={['16x24', 'taupeGray']} />
+                <Text content={item.title} modifiers={['16x24', 'jet', '300']} />
                 <Icon iconName="arrowNextGrey" />
               </div>
             </Link>
@@ -142,7 +142,7 @@ const ProjectListMap: React.FC<ProjectListMapProps> = ({
 }) => (
   <div className="t-projectListMap">
     <Container>
-      <Heading content={title} modifiers={['32x48', 'jet', 'fontNoto', '700', 'center']} />
+      <Heading content={title} modifiers={['32x48', 'jet', 'fontNoto', '500', 'center']} />
       <div className="t-projectListMap_content">
         {children}
       </div>
