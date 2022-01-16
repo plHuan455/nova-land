@@ -2,27 +2,17 @@
   $root: &;
 
   &:hover {
-    #{$root}_thumbnail::before {
-      transform: translateX(300%) rotate(45deg);
+    #{$root}_thumbnail {
+      .a-image {
+        transform: scale(1.1);
+        transition: $transition-long ease;
+      }
     }
   }
 
   &_thumbnail {
     overflow: hidden;
     position: relative;
-
-    &::before {
-      background-color: rgba($white, 0.3);
-      content: '';
-      height: 200%;
-      left: 0;
-      position: absolute;
-      top: -20%;
-      transform: translateX(-100%);
-      transition: $transition-long ease;
-      width: 50%;
-      z-index: $z-1;
-    }
   }
 
   &_title {
