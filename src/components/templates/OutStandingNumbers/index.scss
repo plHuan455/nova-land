@@ -15,20 +15,18 @@
       @include adjust-flex;
     }
 
-    &-item {
+    &-item,
+    &-line {
       margin-top: rem(52);
       @include tablet-down {
-        flex: 0 0 30%;
         margin: rem(8) rem(-8) rem(-8);
-
-        &-1,
-        &-2 {
-          flex: 0 0 40%;
-        }
-        padding: rem(8);
       }
-      @include small-mobile {
+    }
+
+    &-item {
+      @include tablet-down {
         flex: 0 0 50%;
+        padding: rem(8);
       }
     }
 
@@ -45,8 +43,8 @@
 
       @include tablet-down {
         margin-top: rem(-16);
-
-        &-2 {
+        &-2,
+        &-4 {
           display: none;
         }
       }
