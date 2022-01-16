@@ -6,7 +6,7 @@ export type Sizes =
   | '24x32'
   | '16x24'
   | '14x22'
-  | '12x17'
+  | '12x17';
 
 export type LetterSpacing =
   | 'ls-005'
