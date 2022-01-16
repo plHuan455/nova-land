@@ -24,7 +24,7 @@ export const OutstandingProjectCard: React.FC<OutstandingProjectCardProps> = ({
       </div>
       <div className="t-outstandingProjectCard_title">
         <Text
-          modifiers={['16x24', 'arsenic', '400', 'fontLexend']}
+          modifiers={['16x24', 'arsenic', '300', 'fontLexend']}
           content={title}
         />
       </div>
@@ -79,7 +79,7 @@ const OutstandingProject: React.FC<OutstandingProjectProps> = ({
         <div className="t-outstandingProject_title">
           <Animate type="fadeInLeft">
             <Heading
-              modifiers={['32x48', 'deer', '700', 'fontNoto', 'uppercase']}
+              modifiers={['32x48', 'camel', '500', 'fontNoto', 'uppercase']}
               content={title}
             />
           </Animate>

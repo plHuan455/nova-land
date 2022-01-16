@@ -36,7 +36,7 @@
 }
 
 .t-outstandingProject {
-  background: $snow;
+  background: $white-smoke2;
   padding: rem(78) 0 rem(79);
 
   @include tablet-down {
@@ -70,9 +70,6 @@
     margin: 0 rem(-8);
     padding-left: rem(32);
     width: 85%;
-
-    @include desktop-up {
-    }
 
     @include tablet-down {
       padding-left: 0;

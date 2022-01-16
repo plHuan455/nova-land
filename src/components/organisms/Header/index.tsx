@@ -161,7 +161,7 @@ const Header: React.FC<HeaderProps> = ({
                       isOpenLanguage && 'active',
                     )}
                   >
-                    <Icon iconName="carretDownBlack" size="16" />
+                    <Icon iconName="arrowDownBlack" size="16" />
                   </div>
                 </div>
                 <ul className={mapModifiers('o-header_languagePicker_list', isOpenLanguage && 'open')}>

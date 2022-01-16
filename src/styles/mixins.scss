@@ -169,7 +169,9 @@ $colors-design: (
   'black085': $black085,
   'darkMidnightBlue': $dark-midnight-blue,
   'deer': $deer,
-  'taupeGray': $taupe-gray
+  'taupeGray': $taupe-gray,
+  'camel': $camel,
+  '$jet333': $jet-333,
 );
 
 @mixin style-color {

@@ -1,5 +1,6 @@
 .m-ecoCard {
   $root: &;
+  background-color: $white;
   border: 1px solid $gainsboro;
   height: rem(415);
   overflow: hidden;
@@ -8,7 +9,7 @@
   transition: 0.5s;
 
   &:hover {
-    border: 1px solid $golden-brown;
+    border: 1px solid $camel;
 
     #{$root}_brands {
       opacity: 1;
@@ -66,7 +67,7 @@
   }
 
   &_btn {
-    background-color: $golden-brown;
+    background-color: $camel;
     bottom: 0;
     height: rem(64);
     max-width: rem(64);

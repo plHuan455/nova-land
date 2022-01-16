@@ -27,15 +27,15 @@ export const InvestmentCard: React.FC<InvestmentCardProps> = ({
       <div className="t-investmentCard_title">
         <Heading
           modifiers={
-              isSmall ? ['20x30', '400', 'raisinBlack', 'uppercase', 'fontNoto']
-                : ['32x48', '600', 'raisinBlack', 'uppercase', 'fontNoto']
+              isSmall ? ['20x30', '500', 'jet', 'uppercase', 'fontNoto']
+                : ['32x48', '500', 'jet', 'uppercase', 'fontNoto']
             }
           content={title}
         />
       </div>
       <div className="t-investmentCard_desc">
         <Text
-          modifiers={['arsenic', '400', 'fontLexend']}
+          modifiers={['jet333', '300']}
           content={desc}
         />
       </div>
@@ -47,9 +47,9 @@ export const InvestmentCard: React.FC<InvestmentCardProps> = ({
         />
         <div className="t-investmentCard_thumbnail_button">
           <Link href={href}>
-            <Button modifiers="secondary" type="button">
+            <Button modifiers="outlineWhile" type="button">
               <Text
-                modifiers={['16x24', 'black085', 'fontLexend', '400', 'capitalize', 'center']}
+                modifiers={['16x24', '300', 'capitalize', 'center']}
                 content={btnText}
               />
             </Button>
@@ -140,7 +140,7 @@ const InvestmentSector: React.FC<InvestmentSectorProps> = ({
     <Container>
       <div className="u-mb-lg-52 u-mb-sm-40 u-mb-24">
         <Heading
-          modifiers={['32x48', 'jet', '700', 'uppercase', 'center', 'fontNoto']}
+          modifiers={['32x48', 'jet', '500', 'uppercase', 'center', 'fontNoto']}
           content={title}
         />
       </div>

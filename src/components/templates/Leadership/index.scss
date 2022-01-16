@@ -92,7 +92,7 @@
 
 .t-leadershipDetail {
   background: $white;
-  border: rem(1) solid $golden-brown;
+  border: rem(1) solid $camel;
   height: 100%;
   max-height: rem(977);
   overflow-y: auto;
@@ -252,10 +252,6 @@
     margin-top: rem(24);
   }
 
-  .o-tabs_tab-active .o-tabs_label {
-    font-weight: normal;
-  }
-
   .o-tabs_panel {
     margin-top: rem(40);
   }
@@ -287,7 +283,7 @@
     &_card {
       &:not(:first-child) {
         &::before {
-          background: $gainsboro;
+          background: $camel;
           content: '';
           height: rem(1);
           left: 50%;

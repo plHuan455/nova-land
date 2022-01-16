@@ -17,14 +17,16 @@
   @include font-base(16, 24);
 
   &-primary {
-    background-color: $golden-brown;
+    background-color: $camel;
+    border: 0;
+    border-radius: rem(5);
     box-shadow: 0 2px 0 $black0043;
     color: $white;
 
     &:hover {
       background-color: $white;
       border: 0;
-      color: $golden-brown;
+      color: $camel;
       
       &::before {
         transform: scaleY(1);
@@ -33,7 +35,7 @@
 
     &::before {
       background: transparent;
-      border: 4px solid $golden-brown;
+      border: 4px solid $camel;
       bottom: 0;
       content: '';
       left: 0;
@@ -127,6 +129,71 @@
     }
   }
 
+  &-outlinePaleGold {
+    background-color: transparent;
+    border-color: $pale-gold;
+    border-radius: rem(5);
+    color: $pale-gold;
+
+    &:hover {
+      background-color: rgba($spanish-gray, 0.1);
+    }
+
+    &:active {
+      background-color: transparent;
+      border-color: $cafe-au-lait;
+      color: $cafe-au-lait;
+    }
+  }
+
+  &-camel {
+    background-color: $camel;
+    border: none;
+    border-radius: rem(5);
+    color: $white;
+
+    &:hover {
+      background-color: $pale-gold;
+    }
+
+    &:active {
+      background-color: $cafe-au-lait;
+    }
+  }
+
+  &-outlineWhile {
+    background-color: rgba($white, 0.3);
+    border-color: $white;
+    border-radius: rem(5);
+    color: $white;
+
+    &:hover {
+      background-color: rgba($white, 0.5);
+    }
+
+    &:active {
+      background-color: $white;
+      color: $dark-midnight-blue;
+    }
+  }
+
+  &-outlineSpanishGray {
+    background-color: transparent;
+    border-color: $spanish-gray;
+    border-radius: rem(5);
+    color: $spanish-gray;
+
+    &:hover {
+      background-color: rgba($spanish-gray, 0.1);
+    }
+
+    &:active {
+      background-color: transparent;
+      border-color: $jet-333;
+      color: $jet-333;
+    }
+  }
+
   &:disabled,
   &-loading {
     cursor: no-drop;
@@ -139,6 +206,11 @@
     &#{$root}-outline {
       background-color: rgba($amazon, 0.2);
       border-color: rgba($amazon, 0.2);
+    }
+    &#{$root}-outlinePaleGold,
+    &#{$root}-camel,
+    &#{$root}-outlineWhile {
+      opacity: 0.5;
     }
 
     &::before {

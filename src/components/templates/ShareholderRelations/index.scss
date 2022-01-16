@@ -7,6 +7,12 @@
   &:hover {
     #{$root}_content_icon {
       animation: animationTranslateRight 1s ease infinite;
+      background: $camel;
+
+      &::before {
+        transition: all linear 0.2s;
+        background-image: url('~assets/icons/ic_arrow_next_white2.svg');
+      }
     }
 
     #{$root}_thumbnail {
@@ -56,9 +62,25 @@
     }
 
     &_icon {
-      background: $golden-brown;
+      background: transparent;
+      height: rem(20);
+      width: rem(20);
       margin-left: rem(8);
-      padding: rem(7);
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        background-image: url('~assets/icons/ic_arrow_next_red.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: rem(12);
+        width: rem(12);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
     }
   }
 }

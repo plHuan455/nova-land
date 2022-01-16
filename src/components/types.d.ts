@@ -69,7 +69,9 @@ type ColorStyle =
   | 'deer'
   | 'dimGray'
   | 'lavenderGray'
-  | 'taupeGray';
+  | 'taupeGray'
+  | 'camel'
+  | 'jet333';
 
 type FontFamily = 'fontLexend' | 'fontNoto' | 'fontLato';
 

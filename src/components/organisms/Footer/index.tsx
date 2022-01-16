@@ -63,18 +63,18 @@ const Footer: React.FC<FooterProps> = ({
                 </div>
                 {/* Info  */}
                 <div className="o-footer_main_info">
-                  <Text modifiers={['400', 'white', 'uppercase', '14x22']}>
+                  <Text modifiers={['600', 'white', 'uppercase', '14x22']}>
                     CÔNG TY CỔ PHẦN TẬP ĐOÀN ĐẦU TƯ ĐỊA ỐC NOVA
                   </Text>
                   <div className="mt-8">
                     <Text
-                      modifiers={['400', 'white', 'opacity07']}
+                      modifiers={['300', 'white', 'opacity07']}
                     >
                       Giấy chứng nhận đăng ký doanh nghiệp số 0301444753 do
                       Sở Kế hoạch và Đầu tư TP.HCM cấp lần đầu ngày 18/09/1992
                     </Text>
                     <br />
-                    <Text modifiers={['400', 'white', 'opacity07']}>
+                    <Text modifiers={['300', 'white', 'opacity07']}>
                       Tòa nhà văn phòng Novaland, 65 Nguyễn Du, Phường Bến Nghé,
                       Quận 1, Thành phố Hồ Chí Minh
                     </Text>
@@ -82,21 +82,21 @@ const Footer: React.FC<FooterProps> = ({
                   {/* Contact Link  */}
                   <div className="o-footer_main_contact">
                     <div className="o-footer_main_contact_item">
-                      <Text modifiers={['400', 'white', 'opacity07']}>
+                      <Text modifiers={['300', 'white', 'opacity07']}>
                         Email:
                       </Text>
                       <Link href="mailto:info@novaland.com.vn" useExternal>
-                        <Text modifiers={['400', 'white', '700']} isInline>
+                        <Text modifiers={['white', '600']} isInline>
                           info@novaland.com.vn
                         </Text>
                       </Link>
                     </div>
                     <div className="o-footer_main_contact_item">
-                      <Text modifiers={['400', 'white', 'opacity07']}>
+                      <Text modifiers={['300', 'white', 'opacity07']}>
                         Tổng đài CSKH:
                       </Text>
                       <Link href="tel:1900636666" useExternal>
-                        <Text modifiers={['400', 'white', '700']} isInline>
+                        <Text modifiers={['600', 'white', '700']} isInline>
                           1900 63 6666
                         </Text>
                       </Link>
@@ -144,7 +144,7 @@ const Footer: React.FC<FooterProps> = ({
               footerLink && footerLink.map((val, idx) => (
                 <div className="o-footer_main_menu_wrap" key={idx.toString()}>
                   <div className="o-footer_main_menu_title">
-                    <Text modifiers={['white', '14x22', '700', 'uppercase']}>
+                    <Text modifiers={['white', '14x22', '600', 'uppercase']}>
                       {val.title}
                     </Text>
                   </div>
@@ -163,7 +163,7 @@ const Footer: React.FC<FooterProps> = ({
                         return (
                           <li className="o-footer_main_menu_nav" key={i.toString()}>
                             <Link href={item.href}>
-                              <Text modifiers={['lavenderGray', '400']} isInline>
+                              <Text modifiers={['lavenderGray', '300']} isInline>
                                 {item.title}
                               </Text>
                             </Link>
@@ -185,21 +185,21 @@ const Footer: React.FC<FooterProps> = ({
           <div className="o-footer_bottom_policy">
             <div className="o-footer_bottom_policy_item">
               <Link href={externalLink?.privacy}>
-                <Text modifiers={['400', 'white', 'opacity07']}>
+                <Text modifiers={['300', 'white', 'opacity07']}>
                   Chính sách bảo mật
                 </Text>
               </Link>
             </div>
             <div className="o-footer_bottom_policy_item">
               <Link href={externalLink?.policy}>
-                <Text modifiers={['400', 'white', 'opacity07']}>
+                <Text modifiers={['300', 'white', 'opacity07']}>
                   Điều khoản khách hàng
                 </Text>
               </Link>
             </div>
           </div>
           <div className="o-footer_bottom_copyright">
-            <Text modifiers={['400', 'white', 'opacity07']}>
+            <Text modifiers={['300', 'white', 'opacity07']}>
               © 2021. Bản quyền thuộc về Tập đoàn Novaland (Việt Nam).
               Tất cả các quyền được bảo hộ.
             </Text>

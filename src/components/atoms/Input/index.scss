@@ -30,7 +30,7 @@
     border-radius: rem(4);
     color: $raisin-black;
     font: inherit;
-    font-weight: 400;
+    font-weight: 300;
     margin: 0;
     outline: none;
     padding: rem(7) rem(12);
@@ -40,7 +40,7 @@
 
     &::placeholder {
       color: $black025;
-      font-weight: 400;
+      font-weight: 300;
       @include font-base(16, 24);
 
       @include mobile-down {

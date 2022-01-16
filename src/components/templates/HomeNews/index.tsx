@@ -48,7 +48,7 @@ export const HomeNewsCard: React.FC<HomeNewsCardProps> = ({
         </div>
         <div className="t-homeNewsCard_content">
           <Text
-            modifiers={['400', 'arsenic']}
+            modifiers={['300', 'arsenic']}
             content={desc}
           />
         </div>
@@ -56,7 +56,7 @@ export const HomeNewsCard: React.FC<HomeNewsCardProps> = ({
         <div className="t-homeNewsCard_general">
           <div className="t-homeNewsCard_date">
             <Text
-              modifiers={['12x17', '400', 'ls-005', 'arsenic', 'fontLato']}
+              modifiers={['12x17', '300', 'ls-005', 'arsenic']}
               content={date}
             />
           </div>
@@ -65,7 +65,7 @@ export const HomeNewsCard: React.FC<HomeNewsCardProps> = ({
               <Icon iconName="eyeOpen" size="14" />
             </span>
             <div className="t-homeNewsCard_view_total">
-              <Text modifiers={['12x17', '400', 'ls-005', 'arsenic', 'fontLato']}>
+              <Text modifiers={['12x17', '300', 'ls-005', 'arsenic']}>
                 {
                   isOpenViews ? totalViews : '---'
                 }
@@ -98,7 +98,7 @@ const HomeNews: React.FC<HomeNewsProps> = ({
     <div className="t-homeNews">
       <Container>
         <Heading
-          modifiers={['32x48', '700', 'uppercase', 'arsenic', 'center', 'fontNoto']}
+          modifiers={['32x48', '500', 'uppercase', 'arsenic', 'center', 'fontNoto']}
           content={title}
         />
         <div className="t-homeNews_wrapper">
@@ -130,7 +130,7 @@ const HomeNews: React.FC<HomeNewsProps> = ({
             ))
           }
           <div className="t-homeNews_button">
-            <Button modifiers="outline" onClick={handleShowMore}>
+            <Button modifiers="outlineSpanishGray" onClick={handleShowMore}>
               Xem tất cả bài viết
             </Button>
           </div>

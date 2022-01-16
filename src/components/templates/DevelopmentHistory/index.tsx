@@ -32,7 +32,7 @@ const ProcessItem:React.FC<ProcessItemProps> = ({
     </div>
     <div className="t-processItem_card">
       <div className="t-processItem_card_description">
-        <Text modifiers={['davysGrey', 'center']} content={description} />
+        <Text modifiers={['300', 'davysGrey', 'center']} content={description} />
       </div>
       <div className="t-processItem_card_image">
         <Image src={image} ratio="350x197" />
@@ -62,9 +62,9 @@ const DevelopmentHistory: React.FC<DevelopmentHistoryProps> = ({
   return (
     <div className="t-developmentHistory">
       <Container>
-        <Heading type="h2" modifiers={['32x48', '700', 'white', 'center', 'fontNoto']} content={title} />
+        <Heading type="h2" modifiers={['32x48', '500', 'white', 'center', 'fontNoto']} content={title} />
         <div className="t-developmentHistory_description">
-          <Text modifiers={['center', 'white', '16x24', '400']} content={description} />
+          <Text modifiers={['center', 'white', '16x24', '300']} content={description} />
         </div>
         {list.length > 0 && (
         <div className="t-developmentHistory_process">
