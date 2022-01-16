@@ -1292,7 +1292,7 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
         className="o-container_row row"
       >
         <div
-          className="o-container_col col-lg-8"
+          className="o-container_col col-lg-7"
         >
           <div
             className="o-footer_main_menu"
@@ -1311,7 +1311,7 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
                   target="_self"
                 >
                   <div
-                    className="a-image a-image-220x145"
+                    className="a-image a-image-174x136"
                   >
                     <img
                       alt="novaland logo"
@@ -1395,7 +1395,7 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
           </div>
         </div>
         <div
-          className="o-container_col col-lg-4"
+          className="o-container_col col-lg-5"
         >
           <div
             className="o-footer_main_form"
@@ -2044,7 +2044,7 @@ exports[`Storyshots Components/organisms/Header normal 1`] = `
                   <img
                     alt="replacing"
                     loading="lazy"
-                    src="logo.svg"
+                    src="logo.png"
                   />
                 </div>
               </div>
@@ -3390,7 +3390,10 @@ exports[`Storyshots Components/templates/DevelopmentHistory Normal 1`] = `
         className="a-text a-text-center a-text-white a-text-16x24 a-text-400"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "Trên hành trình trở thành nhà Đầu tư - Phát triển bất động sản uy tín hàng đầu Việt Nam, bằng niềm đam mê, sự tập trung và kiên định thực hiện sứ mệnh của mình, Novaland đã và đang đa dạng hóa sản phẩm ở trung tâm TPHCM, đô thị vệ tinh và đô thị du lịch nghỉ dưỡng ở các tỉnh thành trọng điểm, kiến tạo nên những cộng đồng tinh hoa, thu hút khách du lịch trong và ngoài nước.",
+            "__html": "Trên hành trình trở thành nhà Đầu tư - Phát triển bất động sản uy tín hàng đầu Việt Nam, bằng niềm đam mê,
+ sự tập trung và kiên định thực hiện sứ mệnh của mình, Novaland đã và đang đa dạng hóa sản phẩm ở trung tâm TPHCM,
+ đô thị vệ tinh và đô thị du lịch nghỉ dưỡng ở các tỉnh thành trọng điểm, kiến tạo nên những cộng đồng tinh hoa,
+ thu hút khách du lịch trong và ngoài nước.",
           }
         }
       />
@@ -3998,7 +4001,9 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
       <p
         className="a-text a-text-400 a-text-center a-text-davysGrey a-text-16x24"
       >
-        Hệ sinh thái Nova Group, mang những tinh hoa Văn Hóa, Ẩm Thực, Giáo Dục, Vui Chơi - Giải Trí, Du Lịch Nghỉ Dưỡng, Chăm Sóc Sức Khỏe, Y Tế hàng đầu thế giới và Việt Nam về hội tụ tại quần thể các dự án của Novaland nhằm phục vụ sự tiện nghi và thịnh vượng cho cộng đồng cư dân, tăng giá trị cho các sản phẩm bất động sản và hiệu quả cho các nhà đầu tư.
+        Hệ sinh thái Nova Group, mang những tinh hoa Văn Hóa, Ẩm Thực, Giáo Dục, Vui Chơi - Giải Trí, Du Lịch Nghỉ Dưỡng,
+ Chăm Sóc Sức Khỏe, Y Tế hàng đầu thế giới và Việt Nam về hội tụ tại quần thể các dự án của Novaland nhằm phục vụ
+ sự tiện nghi và thịnh vượng cho cộng đồng cư dân, tăng giá trị cho các sản phẩm bất động sản và hiệu quả cho các nhà đầu tư.
       </p>
     </div>
     <div
@@ -9829,7 +9834,8 @@ exports[`Storyshots Components/templates/Leadership Card Detail 1`] = `
         className="a-heading a-heading-dimGray a-heading-400 a-heading-fontLexend"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được Sứ mạng, Hoài bão của Novaland Group.",
+            "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của
+ Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được Sứ mạng, Hoài bão của Novaland Group.",
           }
         }
       />
@@ -13312,7 +13318,7 @@ exports[`Storyshots Components/templates/MainLayout Normal 1`] = `
                   <img
                     alt="replacing"
                     loading="lazy"
-                    src="logo.svg"
+                    src="logo.png"
                   />
                 </div>
               </div>
@@ -13578,7 +13584,7 @@ exports[`Storyshots Components/templates/MainLayout Normal 1`] = `
           className="o-container_row row"
         >
           <div
-            className="o-container_col col-lg-8"
+            className="o-container_col col-lg-7"
           >
             <div
               className="o-footer_main_menu"
@@ -13597,7 +13603,7 @@ exports[`Storyshots Components/templates/MainLayout Normal 1`] = `
                     target="_self"
                   >
                     <div
-                      className="a-image a-image-220x145"
+                      className="a-image a-image-174x136"
                     >
                       <img
                         alt="novaland logo"
@@ -13681,7 +13687,7 @@ exports[`Storyshots Components/templates/MainLayout Normal 1`] = `
             </div>
           </div>
           <div
-            className="o-container_col col-lg-4"
+            className="o-container_col col-lg-5"
           >
             <div
               className="o-footer_main_form"
