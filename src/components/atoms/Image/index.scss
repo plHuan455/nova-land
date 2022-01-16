@@ -16,7 +16,7 @@
   }
 
   &-logo {
-    @include aspect-ratio(79, 52);
+    @include aspect-ratio(93, 73);
   }
 
   &-4x3 {
@@ -31,8 +31,8 @@
     @include aspect-ratio(1126, 376);
   }
 
-  &-220x145 {
-    @include aspect-ratio(220, 145);
+  &-174x136 {
+    @include aspect-ratio(174, 136);
   }
 
   &-93x59 {

@@ -31,10 +31,11 @@
   }
 
   &_main {
-    padding-bottom: rem(32);
+    padding-bottom: rem(100);
     padding-top: rem(100);
     @include mobile-down {
       padding-top: rem(40);
+      padding-bottom: rem(40);
     }
 
     &_menu {
@@ -121,11 +122,7 @@
 
     &_logo {
       margin: 0 auto;
-      max-width: rem(140);
-      @include mobile-up {
-        flex: 0 0 calc(220/708*100%);
-        max-width: calc(220/708*100%);
-      }
+      width: rem(174);
     }
 
     &_info {
@@ -138,12 +135,9 @@
     }
 
     &_contact {
-      margin-top: rem(30);
+      margin-top: rem(6);
       @include break-min(1200px) {
         @include adjust-flex(unset, center);
-      }
-      @include mobile-down {
-        margin-top: rem(14);
       }
 
       &_item {

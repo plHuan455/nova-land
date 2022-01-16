@@ -5,7 +5,7 @@ import React, {
 import Container from '../Container';
 
 import { LIST_LANGUAGE, LanguageType } from 'assets/dataDummy/header';
-import logo from 'assets/images/logo.svg';
+import logo from 'assets/images/logo.png';
 import Icon from 'components/atoms/Icon';
 import Image from 'components/atoms/Image';
 import Input from 'components/atoms/Input';
