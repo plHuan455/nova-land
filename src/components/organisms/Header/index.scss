@@ -67,15 +67,15 @@
   }
 
   &_logo {
-    width: rem(78.78);
+    width: rem(93);
   }
 
   &_wrapper {
     @include adjust-flex(space-between, center);
-    height: rem(80);
+    height: rem($height-desktop-header);
 
     @include tablet-down {
-      height: rem(60);
+      height: rem($height-mobile-header);
     }
   }
 
@@ -102,7 +102,7 @@
       padding: 0 rem(44) rem(100) rem(40);
       position: fixed;
       right: -100%;
-      top: rem(60);
+      top: rem(80);
       transition: right $transition-long linear;
       width: 100%;
       z-index: $z-menu-toggle;
@@ -120,12 +120,12 @@
       margin-bottom: 0;
       position: relative;
 
-      &:not(:first-child) {
-        margin-left: rem(24);
+      &:not(:nth-child(2)) {
+        margin-left: rem(18);
       }
 
       @include desktop-down {
-        &:not(:first-child) {
+        &:not(:nth-child(2)) {
           margin-left: rem(18);
         }
       }
@@ -133,7 +133,7 @@
       @include tablet-down {
         margin-top: rem(20);
 
-        &:not(:first-child) {
+        &:not(:nth-child(2)) {
           margin-left: 0;
         }
       }
@@ -142,11 +142,11 @@
     &_link {
       color: $jet;
       display: block;
-      padding: rem(8);
+      padding: rem(9);
       position: relative;
       text-transform: capitalize;
       z-index: $z-2;
-      @include font-base();
+      @include font-base(14, 20);
       @include style-font-family();
 
       @include desktop-down {
@@ -194,7 +194,7 @@
 
   &_search {
     cursor: pointer;
-    margin-left: rem(16);
+    margin-left: rem(12);
     position: relative;
 
     &.pc {
@@ -261,7 +261,7 @@
   }
 
   &_languagePicker {
-    margin-left: rem(40);
+    margin-left: rem(120);
     position: relative;
 
     @include desktop-down {

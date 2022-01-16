@@ -51,14 +51,14 @@ const Footer: React.FC<FooterProps> = ({
     <Container>
       <div className="o-footer_main">
         <CustomRow>
-          <CustomCol lg={8}>
+          <CustomCol lg={7}>
             {/* Main Menu Footer  */}
             <div className="o-footer_main_menu">
               <div className="o-footer_main_menu_top">
                 {/* Logo  */}
                 <div className="o-footer_main_logo">
                   <Link href="/">
-                    <Image src={logoImg} ratio="220x145" alt="novaland logo" />
+                    <Image src={logoImg} ratio="174x136" alt="novaland logo" />
                   </Link>
                 </div>
                 {/* Info  */}
@@ -106,7 +106,7 @@ const Footer: React.FC<FooterProps> = ({
               </div>
             </div>
           </CustomCol>
-          <CustomCol lg={4}>
+          <CustomCol lg={5}>
             {/* Register Form  */}
             <div className="o-footer_main_form">
               <Form

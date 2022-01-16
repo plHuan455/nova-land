@@ -3,8 +3,8 @@
     margin-left: auto;
     margin-right: auto;
     max-width: $standard-viewport;
-    padding-left: rem(120);
-    padding-right: rem(120);
+    padding-left: rem(86);
+    padding-right: rem(86);
   }
 
   &-noPaddingRight {
@@ -22,15 +22,15 @@
 
   &_row {
     @include break-min($standard-viewport) {
-      margin-left: rem(-16) !important;
-      margin-right: rem(-16) !important;
+      margin-left: rem(-15) !important;
+      margin-right: rem(-15) !important;
     }
   }
 
   &_col {
     @include break-min($standard-viewport) {
-      padding-left: rem(16) !important;
-      padding-right: rem(16) !important;
+      padding-left: rem(15) !important;
+      padding-right: rem(15) !important;
     }
   }
 }
