@@ -9,7 +9,7 @@ interface TabPanelProps {
 interface TabProps {
   label?: string;
   active?: boolean;
-  size?: '16x24';
+  size?: '16x24' | '20x28';
   handleClick?: () => void;
 }
 

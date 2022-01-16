@@ -88,7 +88,7 @@ const AwardList: React.FC<AwardListProps> = ({
                 key={item.year}
                 label={item.year}
                 active={idx === activeIdx}
-                size="16x24"
+                size="20x28"
                 handleClick={() => handleActiveTab(idx)}
               />
             ))}
