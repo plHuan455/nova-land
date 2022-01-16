@@ -21,7 +21,7 @@ const FieldActivity: React.FC<FieldActivityProps> = ({ title, imgSrc }) => (
         <div className="t-fieldActivity_thumbnail u-mt-16 u-mt-sm-24 u-mt-lg-32">
           <Image
             src={imgSrc}
-            ratio="721x303"
+            ratio="674x272"
             alt="field_activity"
           />
         </div>

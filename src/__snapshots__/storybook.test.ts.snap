@@ -2191,7 +2191,7 @@ exports[`Storyshots Components/organisms/Header normal 1`] = `
                   className="o-header_languagePicker_icon"
                 >
                   <i
-                    className="a-icon a-icon-carretDownBlack a-icon-16"
+                    className="a-icon a-icon-arrowDownBlack a-icon-16"
                   />
                 </div>
               </div>
@@ -2361,7 +2361,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
       className="t-awardList_desc"
     >
       <p
-        className="a-text a-text-300 a-text-dimGray a-text-center"
+        className="a-text a-text-16x24 a-text-300 a-text-fontLexend a-text-davysGrey a-text-center"
       >
         Những thành tựu của Tập đoàn Novaland được ghi nhận, vinh danh qua nhiều giải thưởng, danh hiệu uy tín trong và ngoài nước; thể hiện nỗ lực không ngừng trong việc quy hoạch đồng bộ BĐS tại các vị trí chiến lược, kiến tạo cộng đồng nhân văn tiên tiến với môi trường sống tiện nghi, hiện đại, góp phần vào sự phát triển bền vững của xã hội.
       </p>
@@ -2380,7 +2380,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
             onClick={[Function]}
           >
             <span
-              className="o-tabs_label o-tabs_label-16x24"
+              className="o-tabs_label o-tabs_label-20x28"
             >
               2021
             </span>
@@ -2390,7 +2390,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
             onClick={[Function]}
           >
             <span
-              className="o-tabs_label o-tabs_label-16x24"
+              className="o-tabs_label o-tabs_label-20x28"
             >
               2020
             </span>
@@ -2400,7 +2400,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
             onClick={[Function]}
           >
             <span
-              className="o-tabs_label o-tabs_label-16x24"
+              className="o-tabs_label o-tabs_label-20x28"
             >
               2019
             </span>
@@ -2410,7 +2410,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
             onClick={[Function]}
           >
             <span
-              className="o-tabs_label o-tabs_label-16x24"
+              className="o-tabs_label o-tabs_label-20x28"
             >
               2018
             </span>
@@ -2441,7 +2441,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                 className="t-awardList_card_desc"
               >
                 <p
-                  className="a-text a-text-jet a-text-center"
+                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
                 >
                   Top 10 Chủ đầu tư Bất động sản uy tín
                 </p>
@@ -2479,7 +2479,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                 className="t-awardList_card_desc"
               >
                 <p
-                  className="a-text a-text-jet a-text-center"
+                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
                 >
                   HR Asia - Nơi làm việc tốt nhất Châu Á
                 </p>
@@ -2517,7 +2517,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                 className="t-awardList_card_desc"
               >
                 <p
-                  className="a-text a-text-jet a-text-center"
+                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
                 >
                   Nhà phát triển BĐS hạng sang tốt nhất Việt Nam - Luxury Lifestyle Awards
                 </p>
@@ -2555,7 +2555,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                 className="t-awardList_card_desc"
               >
                 <p
-                  className="a-text a-text-jet a-text-center"
+                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
                 >
                   Chứng nhận Công trình tiêu biểu chào mừng 100 năm Liên Hiệp Quốc
                 </p>
@@ -2593,7 +2593,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                 className="t-awardList_card_desc"
               >
                 <p
-                  className="a-text a-text-jet a-text-center"
+                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
                 >
                   Nhà phát triển và đầu tư. Bất động sản Tiêu biểu - Nhịp Cầu Đầu Tư
                 </p>
@@ -2631,7 +2631,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                 className="t-awardList_card_desc"
               >
                 <p
-                  className="a-text a-text-jet a-text-center"
+                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
                 >
                   Nhà phát triển Bất động sản xuất sắc Việt Nam - Euromoney
                 </p>
@@ -2677,7 +2677,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                 className="t-awardList_card_desc"
               >
                 <p
-                  className="a-text a-text-jet a-text-center"
+                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
                 >
                   Top 10 Chủ đầu tư Bất động sản uy tín
                 </p>
@@ -2715,7 +2715,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                 className="t-awardList_card_desc"
               >
                 <p
-                  className="a-text a-text-jet a-text-center"
+                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
                 >
                   HR Asia - Nơi làm việc tốt nhất Châu Á
                 </p>
@@ -2753,7 +2753,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                 className="t-awardList_card_desc"
               >
                 <p
-                  className="a-text a-text-jet a-text-center"
+                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
                 >
                   Nhà phát triển BĐS hạng sang tốt nhất Việt Nam - Luxury Lifestyle Awards
                 </p>
@@ -2791,7 +2791,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                 className="t-awardList_card_desc"
               >
                 <p
-                  className="a-text a-text-jet a-text-center"
+                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
                 >
                   Chứng nhận Công trình tiêu biểu chào mừng 100 năm Liên Hiệp Quốc
                 </p>
@@ -2829,7 +2829,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                 className="t-awardList_card_desc"
               >
                 <p
-                  className="a-text a-text-jet a-text-center"
+                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
                 >
                   Nhà phát triển và đầu tư. Bất động sản Tiêu biểu - Nhịp Cầu Đầu Tư
                 </p>
@@ -2867,7 +2867,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                 className="t-awardList_card_desc"
               >
                 <p
-                  className="a-text a-text-jet a-text-center"
+                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
                 >
                   Nhà phát triển Bất động sản xuất sắc Việt Nam - Euromoney
                 </p>
@@ -2913,7 +2913,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                 className="t-awardList_card_desc"
               >
                 <p
-                  className="a-text a-text-jet a-text-center"
+                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
                 >
                   Top 10 Chủ đầu tư Bất động sản uy tín
                 </p>
@@ -2951,7 +2951,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                 className="t-awardList_card_desc"
               >
                 <p
-                  className="a-text a-text-jet a-text-center"
+                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
                 >
                   HR Asia - Nơi làm việc tốt nhất Châu Á
                 </p>
@@ -2989,7 +2989,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                 className="t-awardList_card_desc"
               >
                 <p
-                  className="a-text a-text-jet a-text-center"
+                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
                 >
                   Nhà phát triển BĐS hạng sang tốt nhất Việt Nam - Luxury Lifestyle Awards
                 </p>
@@ -3027,7 +3027,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                 className="t-awardList_card_desc"
               >
                 <p
-                  className="a-text a-text-jet a-text-center"
+                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
                 >
                   Chứng nhận Công trình tiêu biểu chào mừng 100 năm Liên Hiệp Quốc
                 </p>
@@ -3065,7 +3065,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                 className="t-awardList_card_desc"
               >
                 <p
-                  className="a-text a-text-jet a-text-center"
+                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
                 >
                   Nhà phát triển và đầu tư. Bất động sản Tiêu biểu - Nhịp Cầu Đầu Tư
                 </p>
@@ -3103,7 +3103,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                 className="t-awardList_card_desc"
               >
                 <p
-                  className="a-text a-text-jet a-text-center"
+                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
                 >
                   Nhà phát triển Bất động sản xuất sắc Việt Nam - Euromoney
                 </p>
@@ -3149,7 +3149,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                 className="t-awardList_card_desc"
               >
                 <p
-                  className="a-text a-text-jet a-text-center"
+                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
                 >
                   Top 10 Chủ đầu tư Bất động sản uy tín
                 </p>
@@ -3187,7 +3187,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                 className="t-awardList_card_desc"
               >
                 <p
-                  className="a-text a-text-jet a-text-center"
+                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
                 >
                   HR Asia - Nơi làm việc tốt nhất Châu Á
                 </p>
@@ -3225,7 +3225,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                 className="t-awardList_card_desc"
               >
                 <p
-                  className="a-text a-text-jet a-text-center"
+                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
                 >
                   Nhà phát triển BĐS hạng sang tốt nhất Việt Nam - Luxury Lifestyle Awards
                 </p>
@@ -3263,7 +3263,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                 className="t-awardList_card_desc"
               >
                 <p
-                  className="a-text a-text-jet a-text-center"
+                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
                 >
                   Chứng nhận Công trình tiêu biểu chào mừng 100 năm Liên Hiệp Quốc
                 </p>
@@ -3301,7 +3301,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                 className="t-awardList_card_desc"
               >
                 <p
-                  className="a-text a-text-jet a-text-center"
+                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
                 >
                   Nhà phát triển và đầu tư. Bất động sản Tiêu biểu - Nhịp Cầu Đầu Tư
                 </p>
@@ -3339,7 +3339,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                 className="t-awardList_card_desc"
               >
                 <p
-                  className="a-text a-text-jet a-text-center"
+                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
                 >
                   Nhà phát triển Bất động sản xuất sắc Việt Nam - Euromoney
                 </p>
@@ -4917,7 +4917,7 @@ exports[`Storyshots Components/templates/FieldActivity Normal 1`] = `
         className="t-fieldActivity_thumbnail u-mt-16 u-mt-sm-24 u-mt-lg-32"
       >
         <div
-          className="a-image a-image-721x303"
+          className="a-image a-image-674x272"
         >
           <img
             alt="field_activity"
@@ -13456,7 +13456,7 @@ exports[`Storyshots Components/templates/MainLayout Normal 1`] = `
                   className="o-header_languagePicker_icon"
                 >
                   <i
-                    className="a-icon a-icon-carretDownBlack a-icon-16"
+                    className="a-icon a-icon-arrowDownBlack a-icon-16"
                   />
                 </div>
               </div>
@@ -17504,11 +17504,11 @@ exports[`Storyshots Components/templates/VisionMissionValue Normal 1`] = `
           <div
             className="t-VMV_content"
           >
-            <h2
-              className="a-heading a-heading-32x48 a-heading-500 a-heading-fontNoto a-heading-white a-heading-uppercase a-heading-center"
+            <div
+              className="t-VMV_title"
             >
               <h2
-                className="a-heading a-heading-32x48 a-heading-700 a-heading-fontNoto a-heading-white a-heading-uppercase a-heading-center"
+                className="a-heading a-heading-32x48 a-heading-500 a-heading-fontNoto a-heading-white a-heading-uppercase a-heading-center"
               >
                 TẦM NHÌN
               </h2>
@@ -17517,7 +17517,7 @@ exports[`Storyshots Components/templates/VisionMissionValue Normal 1`] = `
               className="t-VMV_desc u-mt-16 u-mt-md-24 u-mt-lg-32 u-mb-16 u-mb-md-24"
             >
               <p
-                className="a-text a-text-300 a-text-white a-text-center a-text-16x24"
+                className="a-text a-text-300 a-text-fontLexend a-text-white a-text-center a-text-16x24"
               >
                 Tập đoàn kinh tế hàng đầu trong các lĩnh vực
               </p>
@@ -17616,11 +17616,11 @@ exports[`Storyshots Components/templates/VisionMissionValue Normal 1`] = `
           <div
             className="t-VMV_content"
           >
-            <h2
-              className="a-heading a-heading-32x48 a-heading-500 a-heading-fontNoto a-heading-white a-heading-uppercase a-heading-center"
+            <div
+              className="t-VMV_title"
             >
               <h2
-                className="a-heading a-heading-32x48 a-heading-700 a-heading-fontNoto a-heading-white a-heading-uppercase a-heading-center"
+                className="a-heading a-heading-32x48 a-heading-500 a-heading-fontNoto a-heading-white a-heading-uppercase a-heading-center"
               >
                 SỨ MỆNH
               </h2>
@@ -17629,7 +17629,7 @@ exports[`Storyshots Components/templates/VisionMissionValue Normal 1`] = `
               className="t-VMV_desc u-mt-16 u-mt-md-24 u-mt-lg-32 u-mb-16 u-mb-md-24"
             >
               <p
-                className="a-text a-text-300 a-text-white a-text-center a-text-16x24"
+                className="a-text a-text-300 a-text-fontLexend a-text-white a-text-center a-text-16x24"
               >
                 Tập đoàn tập trung cho các giá trị cộng đồng
               </p>
@@ -17728,11 +17728,11 @@ exports[`Storyshots Components/templates/VisionMissionValue Normal 1`] = `
           <div
             className="t-VMV_content"
           >
-            <h2
-              className="a-heading a-heading-32x48 a-heading-500 a-heading-fontNoto a-heading-white a-heading-uppercase a-heading-center"
+            <div
+              className="t-VMV_title"
             >
               <h2
-                className="a-heading a-heading-32x48 a-heading-700 a-heading-fontNoto a-heading-white a-heading-uppercase a-heading-center"
+                className="a-heading a-heading-32x48 a-heading-500 a-heading-fontNoto a-heading-white a-heading-uppercase a-heading-center"
               >
                 GIÁ TRỊ CỐT LÕI
               </h2>
@@ -17741,7 +17741,7 @@ exports[`Storyshots Components/templates/VisionMissionValue Normal 1`] = `
               className="t-VMV_desc u-mt-16 u-mt-md-24 u-mt-lg-32 u-mb-16 u-mb-md-24"
             >
               <p
-                className="a-text a-text-300 a-text-white a-text-center a-text-16x24"
+                className="a-text a-text-300 a-text-fontLexend a-text-white a-text-center a-text-16x24"
               >
                 Chìa khoá của sự Thành Công
               </p>
