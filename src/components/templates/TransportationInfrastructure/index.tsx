@@ -31,7 +31,7 @@ const TransportationInfrastructure: React.FC<
             src={imgSrc}
             srcTablet={imgSrcTablet}
             srcMobile={imgSrcMobile}
-            ratio="1126x376"
+            ratio="1194x191"
             alt="banner"
           />
         </div>
