@@ -55,5 +55,6 @@ export const normal: Story = () => (
   <Leadership
     title="BAN LÃNH ĐẠO"
     tabDataLeadership={dataLeadershipList}
+    hasButtonViewAll
   />
 );

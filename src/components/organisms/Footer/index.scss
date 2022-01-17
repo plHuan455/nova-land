@@ -33,6 +33,10 @@
   &_main {
     padding-bottom: rem(100);
     padding-top: rem(100);
+    @include tablet-down {
+      padding-top: rem(60);
+      padding-bottom: rem(60);
+    }
     @include mobile-down {
       padding-top: rem(40);
       padding-bottom: rem(40);
@@ -40,9 +44,9 @@
 
     &_menu {
       border-bottom: 1px solid $independence;
-      padding-bottom: rem(52);
-      @include mobile-down {
-        padding-bottom: rem(26);
+      padding-bottom: rem(32);
+      @include tablet-down {
+        padding-bottom: rem(16);
       }
 
       &_top {
@@ -54,26 +58,34 @@
       &_bottom {
         display: flex;
         flex-wrap: wrap;
-        margin-left: rem(-10);
-        margin-right: rem(-10);
-        margin-top: rem(15);
+        margin-left: rem(-7);
+        margin-right: rem(-7);
+        margin-top: rem(32);
+        @include tablet-down {
+          margin-top: rem(16);
+        }
       }
 
       &_wrap {
-        padding-left: rem(10);
-        padding-right: rem(10);
+        padding-left: rem(7);
+        padding-right: rem(7);
+        flex: 0 0 30%;
         @include tablet-down {
-          flex: 0 0 50%;
-          margin-top: rem(20);
-          max-width: 50%;
+          flex: 0 0 33.33333%;
         }
-        @include mobile-down {
-          margin-top: rem(12);
+        //xem xét
+        @include small-mobile {
+          flex: 0 0 50%;
+          margin-top: rem(16);
         }
       }
 
       &_wrap:last-child {
-        @include mobile-down {
+        margin-left: 10%;
+        @include tablet-down {
+          margin-left: 0;
+        }
+        @include small-mobile {
           flex: 0 0 100%;
           max-width: 100%;
         }
@@ -127,7 +139,8 @@
 
     &_info {
       flex: 1 0 0;
-      margin-left: rem(37);
+      margin-left: rem(30);
+      margin-top: rem(24);
       @include mobile-down {
         margin-left: 0;
         margin-top: rem(17);
@@ -169,6 +182,12 @@
     }
 
     &_form {
+      margin-top: rem(27);
+
+      @include tablet-down {
+        margin-top: rem(10);
+      }
+
       .o-form > form {
         display: flex;
         flex-wrap: wrap;
@@ -188,6 +207,10 @@
           flex: 0 0 50%;
           margin-top: rem(24);
         }
+        @include small-mobile {
+          flex: 0 0 100%;
+          margin-top: rem(14);
+        }
       }
 
       &_button {
@@ -200,8 +223,8 @@
 
   &_bottom {
     background-color: $oxford-blue;
-    padding-bottom: rem(15);
-    padding-top: rem(18);
+    padding-bottom: rem(12);
+    padding-top: rem(11);
 
     &_wrap {
       display: flex;
