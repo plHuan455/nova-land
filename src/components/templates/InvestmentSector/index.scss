@@ -22,10 +22,22 @@
   }
 
   &_main {
-    padding: rem(24);
+    padding: rem(52) rem(40);
 
     @include desktop-down {
-      padding: rem(18);
+      padding: rem(30) rem(28);
+    }
+
+    @include tablet-down {
+      padding: rem(22) rem(18);
+    }
+
+    #{$root}-small & {
+      padding: rem(24);
+
+      @include desktop-down {
+        padding: rem(18);
+      }
     }
   }
 
@@ -33,31 +45,49 @@
     background: $white;
     border: rem(1) solid $camel;
     border-radius: 50%;
-    height: rem(60);
+    height: rem(120);
     position: relative;
-    width: rem(60);
+    width: rem(120);
 
     .a-image img {
-      height: rem(30);
+      height: rem(60);
       left: 50%;
       position: absolute;
       top: 50%;
       transform: translate(-50%, -50%);
-      width: rem(30);
+      width: rem(60);
     }
 
     &-isHover {
       border: 0;
     }
+
+    #{$root}-small & {
+      height: rem(60);
+      width: rem(60);;
+
+      .a-image img {
+        height: rem(30);
+        width: rem(30);
+      }
+    }
   }
 
   &_title {
-    margin-top: rem(24);
+    margin-top: rem(32);
     max-width: max-content;
     position: relative;
 
     @include mobile-down {
-      margin-top: rem(16);
+      margin-top: rem(24);
+    }
+
+    #{$root}-small & {
+      margin-top: rem(24);
+  
+      @include mobile-down {
+        margin-top: rem(16);
+      }
     }
 
     &::after {
@@ -73,9 +103,16 @@
   }
 
   &_desc {
-    margin-top: rem(6);
+    margin-top: rem(8);
     opacity: 0.8;
-    @include text-overflow(2);
+    letter-spacing: 0.015em;
+    @include text-overflow(3);
+
+    #{$root}-small & {
+      margin-top: rem(6);
+      letter-spacing: 0;
+      @include text-overflow(2);
+    }
   }
 
   &_thumbnail {
@@ -149,34 +186,36 @@
 
   &_content {
     .slick-prev {
-      left: calc(-60 / 1366 * 100%);
+      background: $white-smoke2;
+      left: calc(-96 / 1366 * 100%);
 
       @include desktop-down {
-        left: calc(-72 / 1366 * 100%);
+        left: calc(-120 / 1366 * 100%);
       }
 
       @include tablet-down {
-        left: calc(-110 / 1366 * 100%);
+        left: calc(-90 / 1366 * 100%);
       }
 
-      @include small-mobile {
-        left: calc(-70 / 1366 * 100%);
+      @include mobile-down {
+        left: calc(-100 / 1366 * 100%);
       }
     }
 
     .slick-next {
-      right: calc(-60 / 1366 * 100%);
+      background: $white-smoke2;
+      right: calc(-120 / 1366 * 100%);
 
       @include desktop-down {
-        right: calc(-72 / 1366 * 100%);
+        right: calc(-120 / 1366 * 100%);
       }
 
       @include tablet-down {
-        right: calc(-110 / 1366 * 100%);
+        right: calc(-90 / 1366 * 100%);
       }
 
-      @include small-mobile {
-        right: calc(-70 / 1366 * 100%);
+      @include mobile-down {
+        right: calc(-100 / 1366 * 100%);
       }
     }
 
@@ -201,21 +240,14 @@
     }
 
     .o-carousel {
-      margin-left: rem(-15);
-      margin-right: rem(-15);
-      @include tablet-down {
+      @include max-desktop-down {
         padding-left: rem(50);
         padding-right: rem(50);
       }
 
-      @include mobile-down {
-        padding-left: 0;
-        padding-right: 0;
-      }
-
-      @include small-mobile {
-        padding-left: rem(30);
-        padding-right: rem(30);
+      @include tablet-down {
+        padding-left: rem(20);
+        padding-right: rem(20);
       }
     }
 
@@ -233,6 +265,62 @@
       .o-carousel_wrap,
       .o-carousel_item {
         height: 100%;
+      }
+    }
+  }
+
+  
+  &-small {
+    #{$root}_content {
+      .slick-prev {
+        left: calc(-60 / 1366 * 100%);
+  
+        @include desktop-down {
+          left: calc(-72 / 1366 * 100%);
+        }
+  
+        @include tablet-down {
+          left: calc(-110 / 1366 * 100%);
+        }
+  
+        @include small-mobile {
+          left: calc(-70 / 1366 * 100%);
+        }
+      }
+  
+      .slick-next {
+        right: calc(-60 / 1366 * 100%);
+  
+        @include desktop-down {
+          right: calc(-72 / 1366 * 100%);
+        }
+  
+        @include tablet-down {
+          right: calc(-110 / 1366 * 100%);
+        }
+  
+        @include small-mobile {
+          right: calc(-70 / 1366 * 100%);
+        }
+      }
+
+      .o-carousel {
+        margin-left: rem(-15);
+        margin-right: rem(-15);
+        @include tablet-down {
+          padding-left: rem(50);
+          padding-right: rem(50);
+        }
+  
+        @include mobile-down {
+          padding-left: 0;
+          padding-right: 0;
+        }
+  
+        @include small-mobile {
+          padding-left: rem(30);
+          padding-right: rem(30);
+        }
       }
     }
   }

@@ -8,6 +8,7 @@ const InvestmentSectorContainer: React.FC = () => (
     <InvestmentSector
       title="BẤT ĐỘNG SẢN"
       investmentSectorList={investmentSectorData}
+      isSmall
     />
   </div>
 );

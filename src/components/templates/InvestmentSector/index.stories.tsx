@@ -26,6 +26,16 @@ export const normal: Story = () => (
   </Router>
 );
 
+export const small: Story = () => (
+  <Router>
+    <InvestmentSector
+      title="BẤT ĐỘNG SẢN"
+      investmentSectorList={investmentSectorData}
+      isSmall
+    />
+  </Router>
+);
+
 export const card: Story = () => (
   <Router>
     <div style={{ maxWidth: '450px' }}>

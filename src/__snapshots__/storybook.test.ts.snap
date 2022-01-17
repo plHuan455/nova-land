@@ -6395,7 +6395,7 @@ exports[`Storyshots Components/templates/InvestmentSector Card 1`] = `
         className="t-investmentCard_title"
       >
         <h2
-          className="a-heading a-heading-20x30 a-heading-500 a-heading-jet a-heading-uppercase a-heading-fontNoto"
+          className="a-heading a-heading-32x48 a-heading-500 a-heading-jet a-heading-uppercase a-heading-fontNoto"
           dangerouslySetInnerHTML={
             Object {
               "__html": "BĐS TRUNG TÂM",
@@ -6506,6 +6506,1652 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
             onTouchStart={[Function]}
             style={
               Object {
+                "padding": "0px 90",
+              }
+            }
+          >
+            <div
+              className="slick-track"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              style={
+                Object {
+                  "WebkitTransform": "translate3d(180px, 0px, 0px)",
+                  "WebkitTransition": "",
+                  "msTransform": "translateX(180px)",
+                  "opacity": 1,
+                  "transform": "translate3d(180px, 0px, 0px)",
+                  "transition": "",
+                  "width": -1170,
+                }
+              }
+            >
+              <div
+                aria-hidden={true}
+                className="slick-slide slick-cloned"
+                data-index={-3}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "width": -90,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div>
+                  <div
+                    className="o-carousel_wrap"
+                    style={
+                      Object {
+                        "display": "inline-block",
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <div
+                      className="o-carousel_item"
+                    >
+                      <div
+                        className="t-investmentSector_item"
+                      >
+                        <div
+                          className="t-investmentCard"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          <div
+                            className="t-investmentCard_main"
+                          >
+                            <div
+                              className="t-investmentCard_icon"
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
+                            <div
+                              className="t-investmentCard_title"
+                            >
+                              <h2
+                                className="a-heading a-heading-32x48 a-heading-500 a-heading-jet a-heading-uppercase a-heading-fontNoto"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "BĐS TRUNG TÂM",
+                                  }
+                                }
+                              />
+                            </div>
+                            <div
+                              className="t-investmentCard_desc"
+                            >
+                              <p
+                                className="a-text a-text-jet333 a-text-300"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.",
+                                  }
+                                }
+                              />
+                            </div>
+                            <div
+                              className="t-investmentCard_thumbnail"
+                            >
+                              <div
+                                className="a-image a-image-228x145"
+                              >
+                                <img
+                                  alt="InvestmentCard"
+                                  loading="lazy"
+                                  src="img_investmentSector.png"
+                                />
+                              </div>
+                              <div
+                                className="t-investmentCard_thumbnail_button"
+                              >
+                                <a
+                                  aria-current="page"
+                                  className="a-link   active"
+                                  href="/"
+                                  onClick={[Function]}
+                                  target="_self"
+                                >
+                                  <button
+                                    className="a-button a-button-outlineWhile"
+                                    disabled={false}
+                                    type="button"
+                                  >
+                                    <p
+                                      className="a-text a-text-16x24 a-text-300 a-text-capitalize a-text-center"
+                                      dangerouslySetInnerHTML={
+                                        Object {
+                                          "__html": "Tìm Hiểu Thêm",
+                                        }
+                                      }
+                                    />
+                                  </button>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-hidden={true}
+                className="slick-slide slick-cloned"
+                data-index={-2}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "width": -90,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div>
+                  <div
+                    className="o-carousel_wrap"
+                    style={
+                      Object {
+                        "display": "inline-block",
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <div
+                      className="o-carousel_item"
+                    >
+                      <div
+                        className="t-investmentSector_item"
+                      >
+                        <div
+                          className="t-investmentCard"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          <div
+                            className="t-investmentCard_main"
+                          >
+                            <div
+                              className="t-investmentCard_icon"
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
+                            <div
+                              className="t-investmentCard_title"
+                            >
+                              <h2
+                                className="a-heading a-heading-32x48 a-heading-500 a-heading-jet a-heading-uppercase a-heading-fontNoto"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "BĐS TRUNG TÂM",
+                                  }
+                                }
+                              />
+                            </div>
+                            <div
+                              className="t-investmentCard_desc"
+                            >
+                              <p
+                                className="a-text a-text-jet333 a-text-300"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.",
+                                  }
+                                }
+                              />
+                            </div>
+                            <div
+                              className="t-investmentCard_thumbnail"
+                            >
+                              <div
+                                className="a-image a-image-228x145"
+                              >
+                                <img
+                                  alt="InvestmentCard"
+                                  loading="lazy"
+                                  src="img_investmentSector2.png"
+                                />
+                              </div>
+                              <div
+                                className="t-investmentCard_thumbnail_button"
+                              >
+                                <a
+                                  aria-current="page"
+                                  className="a-link   active"
+                                  href="/"
+                                  onClick={[Function]}
+                                  target="_self"
+                                >
+                                  <button
+                                    className="a-button a-button-outlineWhile"
+                                    disabled={false}
+                                    type="button"
+                                  >
+                                    <p
+                                      className="a-text a-text-16x24 a-text-300 a-text-capitalize a-text-center"
+                                      dangerouslySetInnerHTML={
+                                        Object {
+                                          "__html": "Tìm Hiểu Thêm",
+                                        }
+                                      }
+                                    />
+                                  </button>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-hidden={false}
+                className="slick-slide slick-active slick-cloned"
+                data-index={-1}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "width": -90,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div>
+                  <div
+                    className="o-carousel_wrap"
+                    style={
+                      Object {
+                        "display": "inline-block",
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <div
+                      className="o-carousel_item"
+                    >
+                      <div
+                        className="t-investmentSector_item"
+                      >
+                        <div
+                          className="t-investmentCard"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          <div
+                            className="t-investmentCard_main"
+                          >
+                            <div
+                              className="t-investmentCard_icon"
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
+                            <div
+                              className="t-investmentCard_title"
+                            >
+                              <h2
+                                className="a-heading a-heading-32x48 a-heading-500 a-heading-jet a-heading-uppercase a-heading-fontNoto"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "BĐS TRUNG TÂM",
+                                  }
+                                }
+                              />
+                            </div>
+                            <div
+                              className="t-investmentCard_desc"
+                            >
+                              <p
+                                className="a-text a-text-jet333 a-text-300"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.",
+                                  }
+                                }
+                              />
+                            </div>
+                            <div
+                              className="t-investmentCard_thumbnail"
+                            >
+                              <div
+                                className="a-image a-image-228x145"
+                              >
+                                <img
+                                  alt="InvestmentCard"
+                                  loading="lazy"
+                                  src="img_investmentSector.png"
+                                />
+                              </div>
+                              <div
+                                className="t-investmentCard_thumbnail_button"
+                              >
+                                <a
+                                  aria-current="page"
+                                  className="a-link   active"
+                                  href="/"
+                                  onClick={[Function]}
+                                  target="_self"
+                                >
+                                  <button
+                                    className="a-button a-button-outlineWhile"
+                                    disabled={false}
+                                    type="button"
+                                  >
+                                    <p
+                                      className="a-text a-text-16x24 a-text-300 a-text-capitalize a-text-center"
+                                      dangerouslySetInnerHTML={
+                                        Object {
+                                          "__html": "Tìm Hiểu Thêm",
+                                        }
+                                      }
+                                    />
+                                  </button>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-hidden={false}
+                className="slick-slide slick-active slick-center slick-current"
+                data-index={0}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "outline": "none",
+                    "width": -90,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div>
+                  <div
+                    className="o-carousel_wrap"
+                    style={
+                      Object {
+                        "display": "inline-block",
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <div
+                      className="o-carousel_item"
+                    >
+                      <div
+                        className="t-investmentSector_item"
+                      >
+                        <div
+                          className="t-investmentCard"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          <div
+                            className="t-investmentCard_main"
+                          >
+                            <div
+                              className="t-investmentCard_icon"
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
+                            <div
+                              className="t-investmentCard_title"
+                            >
+                              <h2
+                                className="a-heading a-heading-32x48 a-heading-500 a-heading-jet a-heading-uppercase a-heading-fontNoto"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "BĐS TRUNG TÂM",
+                                  }
+                                }
+                              />
+                            </div>
+                            <div
+                              className="t-investmentCard_desc"
+                            >
+                              <p
+                                className="a-text a-text-jet333 a-text-300"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.",
+                                  }
+                                }
+                              />
+                            </div>
+                            <div
+                              className="t-investmentCard_thumbnail"
+                            >
+                              <div
+                                className="a-image a-image-228x145"
+                              >
+                                <img
+                                  alt="InvestmentCard"
+                                  loading="lazy"
+                                  src="img_investmentSector.png"
+                                />
+                              </div>
+                              <div
+                                className="t-investmentCard_thumbnail_button"
+                              >
+                                <a
+                                  aria-current="page"
+                                  className="a-link   active"
+                                  href="/"
+                                  onClick={[Function]}
+                                  target="_self"
+                                >
+                                  <button
+                                    className="a-button a-button-outlineWhile"
+                                    disabled={false}
+                                    type="button"
+                                  >
+                                    <p
+                                      className="a-text a-text-16x24 a-text-300 a-text-capitalize a-text-center"
+                                      dangerouslySetInnerHTML={
+                                        Object {
+                                          "__html": "Tìm Hiểu Thêm",
+                                        }
+                                      }
+                                    />
+                                  </button>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-hidden={false}
+                className="slick-slide slick-active"
+                data-index={1}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "outline": "none",
+                    "width": -90,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div>
+                  <div
+                    className="o-carousel_wrap"
+                    style={
+                      Object {
+                        "display": "inline-block",
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <div
+                      className="o-carousel_item"
+                    >
+                      <div
+                        className="t-investmentSector_item"
+                      >
+                        <div
+                          className="t-investmentCard"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          <div
+                            className="t-investmentCard_main"
+                          >
+                            <div
+                              className="t-investmentCard_icon"
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
+                            <div
+                              className="t-investmentCard_title"
+                            >
+                              <h2
+                                className="a-heading a-heading-32x48 a-heading-500 a-heading-jet a-heading-uppercase a-heading-fontNoto"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "BĐS TRUNG TÂM",
+                                  }
+                                }
+                              />
+                            </div>
+                            <div
+                              className="t-investmentCard_desc"
+                            >
+                              <p
+                                className="a-text a-text-jet333 a-text-300"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.",
+                                  }
+                                }
+                              />
+                            </div>
+                            <div
+                              className="t-investmentCard_thumbnail"
+                            >
+                              <div
+                                className="a-image a-image-228x145"
+                              >
+                                <img
+                                  alt="InvestmentCard"
+                                  loading="lazy"
+                                  src="img_investmentSector2.png"
+                                />
+                              </div>
+                              <div
+                                className="t-investmentCard_thumbnail_button"
+                              >
+                                <a
+                                  aria-current="page"
+                                  className="a-link   active"
+                                  href="/"
+                                  onClick={[Function]}
+                                  target="_self"
+                                >
+                                  <button
+                                    className="a-button a-button-outlineWhile"
+                                    disabled={false}
+                                    type="button"
+                                  >
+                                    <p
+                                      className="a-text a-text-16x24 a-text-300 a-text-capitalize a-text-center"
+                                      dangerouslySetInnerHTML={
+                                        Object {
+                                          "__html": "Tìm Hiểu Thêm",
+                                        }
+                                      }
+                                    />
+                                  </button>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-hidden={true}
+                className="slick-slide"
+                data-index={2}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "outline": "none",
+                    "width": -90,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div>
+                  <div
+                    className="o-carousel_wrap"
+                    style={
+                      Object {
+                        "display": "inline-block",
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <div
+                      className="o-carousel_item"
+                    >
+                      <div
+                        className="t-investmentSector_item"
+                      >
+                        <div
+                          className="t-investmentCard"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          <div
+                            className="t-investmentCard_main"
+                          >
+                            <div
+                              className="t-investmentCard_icon"
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
+                            <div
+                              className="t-investmentCard_title"
+                            >
+                              <h2
+                                className="a-heading a-heading-32x48 a-heading-500 a-heading-jet a-heading-uppercase a-heading-fontNoto"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "BĐS TRUNG TÂM",
+                                  }
+                                }
+                              />
+                            </div>
+                            <div
+                              className="t-investmentCard_desc"
+                            >
+                              <p
+                                className="a-text a-text-jet333 a-text-300"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.",
+                                  }
+                                }
+                              />
+                            </div>
+                            <div
+                              className="t-investmentCard_thumbnail"
+                            >
+                              <div
+                                className="a-image a-image-228x145"
+                              >
+                                <img
+                                  alt="InvestmentCard"
+                                  loading="lazy"
+                                  src="img_investmentSector.png"
+                                />
+                              </div>
+                              <div
+                                className="t-investmentCard_thumbnail_button"
+                              >
+                                <a
+                                  aria-current="page"
+                                  className="a-link   active"
+                                  href="/"
+                                  onClick={[Function]}
+                                  target="_self"
+                                >
+                                  <button
+                                    className="a-button a-button-outlineWhile"
+                                    disabled={false}
+                                    type="button"
+                                  >
+                                    <p
+                                      className="a-text a-text-16x24 a-text-300 a-text-capitalize a-text-center"
+                                      dangerouslySetInnerHTML={
+                                        Object {
+                                          "__html": "Tìm Hiểu Thêm",
+                                        }
+                                      }
+                                    />
+                                  </button>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-hidden={true}
+                className="slick-slide"
+                data-index={3}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "outline": "none",
+                    "width": -90,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div>
+                  <div
+                    className="o-carousel_wrap"
+                    style={
+                      Object {
+                        "display": "inline-block",
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <div
+                      className="o-carousel_item"
+                    >
+                      <div
+                        className="t-investmentSector_item"
+                      >
+                        <div
+                          className="t-investmentCard"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          <div
+                            className="t-investmentCard_main"
+                          >
+                            <div
+                              className="t-investmentCard_icon"
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
+                            <div
+                              className="t-investmentCard_title"
+                            >
+                              <h2
+                                className="a-heading a-heading-32x48 a-heading-500 a-heading-jet a-heading-uppercase a-heading-fontNoto"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "BĐS TRUNG TÂM",
+                                  }
+                                }
+                              />
+                            </div>
+                            <div
+                              className="t-investmentCard_desc"
+                            >
+                              <p
+                                className="a-text a-text-jet333 a-text-300"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.",
+                                  }
+                                }
+                              />
+                            </div>
+                            <div
+                              className="t-investmentCard_thumbnail"
+                            >
+                              <div
+                                className="a-image a-image-228x145"
+                              >
+                                <img
+                                  alt="InvestmentCard"
+                                  loading="lazy"
+                                  src="img_investmentSector2.png"
+                                />
+                              </div>
+                              <div
+                                className="t-investmentCard_thumbnail_button"
+                              >
+                                <a
+                                  aria-current="page"
+                                  className="a-link   active"
+                                  href="/"
+                                  onClick={[Function]}
+                                  target="_self"
+                                >
+                                  <button
+                                    className="a-button a-button-outlineWhile"
+                                    disabled={false}
+                                    type="button"
+                                  >
+                                    <p
+                                      className="a-text a-text-16x24 a-text-300 a-text-capitalize a-text-center"
+                                      dangerouslySetInnerHTML={
+                                        Object {
+                                          "__html": "Tìm Hiểu Thêm",
+                                        }
+                                      }
+                                    />
+                                  </button>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-hidden={true}
+                className="slick-slide"
+                data-index={4}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "outline": "none",
+                    "width": -90,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div>
+                  <div
+                    className="o-carousel_wrap"
+                    style={
+                      Object {
+                        "display": "inline-block",
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <div
+                      className="o-carousel_item"
+                    >
+                      <div
+                        className="t-investmentSector_item"
+                      >
+                        <div
+                          className="t-investmentCard"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          <div
+                            className="t-investmentCard_main"
+                          >
+                            <div
+                              className="t-investmentCard_icon"
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
+                            <div
+                              className="t-investmentCard_title"
+                            >
+                              <h2
+                                className="a-heading a-heading-32x48 a-heading-500 a-heading-jet a-heading-uppercase a-heading-fontNoto"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "BĐS TRUNG TÂM",
+                                  }
+                                }
+                              />
+                            </div>
+                            <div
+                              className="t-investmentCard_desc"
+                            >
+                              <p
+                                className="a-text a-text-jet333 a-text-300"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.",
+                                  }
+                                }
+                              />
+                            </div>
+                            <div
+                              className="t-investmentCard_thumbnail"
+                            >
+                              <div
+                                className="a-image a-image-228x145"
+                              >
+                                <img
+                                  alt="InvestmentCard"
+                                  loading="lazy"
+                                  src="img_investmentSector.png"
+                                />
+                              </div>
+                              <div
+                                className="t-investmentCard_thumbnail_button"
+                              >
+                                <a
+                                  aria-current="page"
+                                  className="a-link   active"
+                                  href="/"
+                                  onClick={[Function]}
+                                  target="_self"
+                                >
+                                  <button
+                                    className="a-button a-button-outlineWhile"
+                                    disabled={false}
+                                    type="button"
+                                  >
+                                    <p
+                                      className="a-text a-text-16x24 a-text-300 a-text-capitalize a-text-center"
+                                      dangerouslySetInnerHTML={
+                                        Object {
+                                          "__html": "Tìm Hiểu Thêm",
+                                        }
+                                      }
+                                    />
+                                  </button>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-hidden={true}
+                className="slick-slide slick-center slick-cloned"
+                data-index={5}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "width": -90,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div>
+                  <div
+                    className="o-carousel_wrap"
+                    style={
+                      Object {
+                        "display": "inline-block",
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <div
+                      className="o-carousel_item"
+                    >
+                      <div
+                        className="t-investmentSector_item"
+                      >
+                        <div
+                          className="t-investmentCard"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          <div
+                            className="t-investmentCard_main"
+                          >
+                            <div
+                              className="t-investmentCard_icon"
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
+                            <div
+                              className="t-investmentCard_title"
+                            >
+                              <h2
+                                className="a-heading a-heading-32x48 a-heading-500 a-heading-jet a-heading-uppercase a-heading-fontNoto"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "BĐS TRUNG TÂM",
+                                  }
+                                }
+                              />
+                            </div>
+                            <div
+                              className="t-investmentCard_desc"
+                            >
+                              <p
+                                className="a-text a-text-jet333 a-text-300"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.",
+                                  }
+                                }
+                              />
+                            </div>
+                            <div
+                              className="t-investmentCard_thumbnail"
+                            >
+                              <div
+                                className="a-image a-image-228x145"
+                              >
+                                <img
+                                  alt="InvestmentCard"
+                                  loading="lazy"
+                                  src="img_investmentSector.png"
+                                />
+                              </div>
+                              <div
+                                className="t-investmentCard_thumbnail_button"
+                              >
+                                <a
+                                  aria-current="page"
+                                  className="a-link   active"
+                                  href="/"
+                                  onClick={[Function]}
+                                  target="_self"
+                                >
+                                  <button
+                                    className="a-button a-button-outlineWhile"
+                                    disabled={false}
+                                    type="button"
+                                  >
+                                    <p
+                                      className="a-text a-text-16x24 a-text-300 a-text-capitalize a-text-center"
+                                      dangerouslySetInnerHTML={
+                                        Object {
+                                          "__html": "Tìm Hiểu Thêm",
+                                        }
+                                      }
+                                    />
+                                  </button>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-hidden={true}
+                className="slick-slide slick-cloned"
+                data-index={6}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "width": -90,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div>
+                  <div
+                    className="o-carousel_wrap"
+                    style={
+                      Object {
+                        "display": "inline-block",
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <div
+                      className="o-carousel_item"
+                    >
+                      <div
+                        className="t-investmentSector_item"
+                      >
+                        <div
+                          className="t-investmentCard"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          <div
+                            className="t-investmentCard_main"
+                          >
+                            <div
+                              className="t-investmentCard_icon"
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
+                            <div
+                              className="t-investmentCard_title"
+                            >
+                              <h2
+                                className="a-heading a-heading-32x48 a-heading-500 a-heading-jet a-heading-uppercase a-heading-fontNoto"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "BĐS TRUNG TÂM",
+                                  }
+                                }
+                              />
+                            </div>
+                            <div
+                              className="t-investmentCard_desc"
+                            >
+                              <p
+                                className="a-text a-text-jet333 a-text-300"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.",
+                                  }
+                                }
+                              />
+                            </div>
+                            <div
+                              className="t-investmentCard_thumbnail"
+                            >
+                              <div
+                                className="a-image a-image-228x145"
+                              >
+                                <img
+                                  alt="InvestmentCard"
+                                  loading="lazy"
+                                  src="img_investmentSector2.png"
+                                />
+                              </div>
+                              <div
+                                className="t-investmentCard_thumbnail_button"
+                              >
+                                <a
+                                  aria-current="page"
+                                  className="a-link   active"
+                                  href="/"
+                                  onClick={[Function]}
+                                  target="_self"
+                                >
+                                  <button
+                                    className="a-button a-button-outlineWhile"
+                                    disabled={false}
+                                    type="button"
+                                  >
+                                    <p
+                                      className="a-text a-text-16x24 a-text-300 a-text-capitalize a-text-center"
+                                      dangerouslySetInnerHTML={
+                                        Object {
+                                          "__html": "Tìm Hiểu Thêm",
+                                        }
+                                      }
+                                    />
+                                  </button>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-hidden={true}
+                className="slick-slide slick-cloned"
+                data-index={7}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "width": -90,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div>
+                  <div
+                    className="o-carousel_wrap"
+                    style={
+                      Object {
+                        "display": "inline-block",
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <div
+                      className="o-carousel_item"
+                    >
+                      <div
+                        className="t-investmentSector_item"
+                      >
+                        <div
+                          className="t-investmentCard"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          <div
+                            className="t-investmentCard_main"
+                          >
+                            <div
+                              className="t-investmentCard_icon"
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
+                            <div
+                              className="t-investmentCard_title"
+                            >
+                              <h2
+                                className="a-heading a-heading-32x48 a-heading-500 a-heading-jet a-heading-uppercase a-heading-fontNoto"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "BĐS TRUNG TÂM",
+                                  }
+                                }
+                              />
+                            </div>
+                            <div
+                              className="t-investmentCard_desc"
+                            >
+                              <p
+                                className="a-text a-text-jet333 a-text-300"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.",
+                                  }
+                                }
+                              />
+                            </div>
+                            <div
+                              className="t-investmentCard_thumbnail"
+                            >
+                              <div
+                                className="a-image a-image-228x145"
+                              >
+                                <img
+                                  alt="InvestmentCard"
+                                  loading="lazy"
+                                  src="img_investmentSector.png"
+                                />
+                              </div>
+                              <div
+                                className="t-investmentCard_thumbnail_button"
+                              >
+                                <a
+                                  aria-current="page"
+                                  className="a-link   active"
+                                  href="/"
+                                  onClick={[Function]}
+                                  target="_self"
+                                >
+                                  <button
+                                    className="a-button a-button-outlineWhile"
+                                    disabled={false}
+                                    type="button"
+                                  >
+                                    <p
+                                      className="a-text a-text-16x24 a-text-300 a-text-capitalize a-text-center"
+                                      dangerouslySetInnerHTML={
+                                        Object {
+                                          "__html": "Tìm Hiểu Thêm",
+                                        }
+                                      }
+                                    />
+                                  </button>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-hidden={true}
+                className="slick-slide slick-cloned"
+                data-index={8}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "width": -90,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div>
+                  <div
+                    className="o-carousel_wrap"
+                    style={
+                      Object {
+                        "display": "inline-block",
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <div
+                      className="o-carousel_item"
+                    >
+                      <div
+                        className="t-investmentSector_item"
+                      >
+                        <div
+                          className="t-investmentCard"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          <div
+                            className="t-investmentCard_main"
+                          >
+                            <div
+                              className="t-investmentCard_icon"
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
+                            <div
+                              className="t-investmentCard_title"
+                            >
+                              <h2
+                                className="a-heading a-heading-32x48 a-heading-500 a-heading-jet a-heading-uppercase a-heading-fontNoto"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "BĐS TRUNG TÂM",
+                                  }
+                                }
+                              />
+                            </div>
+                            <div
+                              className="t-investmentCard_desc"
+                            >
+                              <p
+                                className="a-text a-text-jet333 a-text-300"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.",
+                                  }
+                                }
+                              />
+                            </div>
+                            <div
+                              className="t-investmentCard_thumbnail"
+                            >
+                              <div
+                                className="a-image a-image-228x145"
+                              >
+                                <img
+                                  alt="InvestmentCard"
+                                  loading="lazy"
+                                  src="img_investmentSector2.png"
+                                />
+                              </div>
+                              <div
+                                className="t-investmentCard_thumbnail_button"
+                              >
+                                <a
+                                  aria-current="page"
+                                  className="a-link   active"
+                                  href="/"
+                                  onClick={[Function]}
+                                  target="_self"
+                                >
+                                  <button
+                                    className="a-button a-button-outlineWhile"
+                                    disabled={false}
+                                    type="button"
+                                  >
+                                    <p
+                                      className="a-text a-text-16x24 a-text-300 a-text-capitalize a-text-center"
+                                      dangerouslySetInnerHTML={
+                                        Object {
+                                          "__html": "Tìm Hiểu Thêm",
+                                        }
+                                      }
+                                    />
+                                  </button>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-hidden={true}
+                className="slick-slide slick-cloned"
+                data-index={9}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "width": -90,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div>
+                  <div
+                    className="o-carousel_wrap"
+                    style={
+                      Object {
+                        "display": "inline-block",
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <div
+                      className="o-carousel_item"
+                    >
+                      <div
+                        className="t-investmentSector_item"
+                      >
+                        <div
+                          className="t-investmentCard"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          <div
+                            className="t-investmentCard_main"
+                          >
+                            <div
+                              className="t-investmentCard_icon"
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
+                            <div
+                              className="t-investmentCard_title"
+                            >
+                              <h2
+                                className="a-heading a-heading-32x48 a-heading-500 a-heading-jet a-heading-uppercase a-heading-fontNoto"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "BĐS TRUNG TÂM",
+                                  }
+                                }
+                              />
+                            </div>
+                            <div
+                              className="t-investmentCard_desc"
+                            >
+                              <p
+                                className="a-text a-text-jet333 a-text-300"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.",
+                                  }
+                                }
+                              />
+                            </div>
+                            <div
+                              className="t-investmentCard_thumbnail"
+                            >
+                              <div
+                                className="a-image a-image-228x145"
+                              >
+                                <img
+                                  alt="InvestmentCard"
+                                  loading="lazy"
+                                  src="img_investmentSector.png"
+                                />
+                              </div>
+                              <div
+                                className="t-investmentCard_thumbnail_button"
+                              >
+                                <a
+                                  aria-current="page"
+                                  className="a-link   active"
+                                  href="/"
+                                  onClick={[Function]}
+                                  target="_self"
+                                >
+                                  <button
+                                    className="a-button a-button-outlineWhile"
+                                    disabled={false}
+                                    type="button"
+                                  >
+                                    <p
+                                      className="a-text a-text-16x24 a-text-300 a-text-capitalize a-text-center"
+                                      dangerouslySetInnerHTML={
+                                        Object {
+                                          "__html": "Tìm Hiểu Thêm",
+                                        }
+                                      }
+                                    />
+                                  </button>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="o-carousel_arrow o-carousel_arrow_next slick-arrow slick-next "
+            onClick={[Function]}
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
+<div
+  className="t-investmentSector t-investmentSector-small"
+>
+  <div
+    className="container o-container"
+  >
+    <div
+      className="u-mb-lg-52 u-mb-sm-40 u-mb-24"
+    >
+      <h2
+        className="a-heading a-heading-32x48 a-heading-jet a-heading-500 a-heading-uppercase a-heading-center a-heading-fontNoto"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "BẤT ĐỘNG SẢN",
+          }
+        }
+      />
+    </div>
+    <div
+      className="t-investmentSector_content"
+    >
+      <div
+        className="o-carousel o-carousel-hasarrow"
+      >
+        <div
+          className="slick-slider slick-initialized"
+          dir="ltr"
+        >
+          <div
+            className="o-carousel_arrow o-carousel_arrow_prev slick-arrow slick-prev "
+            onClick={[Function]}
+          />
+          <div
+            className="slick-list"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={null}
+            onMouseMove={null}
+            onMouseUp={[Function]}
+            onTouchCancel={null}
+            onTouchEnd={[Function]}
+            onTouchMove={null}
+            onTouchStart={[Function]}
+            style={
+              Object {
                 "padding": "0px 0",
               }
             }
@@ -6556,7 +8202,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                         className="t-investmentSector_item"
                       >
                         <div
-                          className="t-investmentCard"
+                          className="t-investmentCard t-investmentCard-small"
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
                         >
@@ -6676,7 +8322,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                         className="t-investmentSector_item"
                       >
                         <div
-                          className="t-investmentCard"
+                          className="t-investmentCard t-investmentCard-small"
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
                         >
@@ -6796,7 +8442,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                         className="t-investmentSector_item"
                       >
                         <div
-                          className="t-investmentCard"
+                          className="t-investmentCard t-investmentCard-small"
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
                         >
@@ -6916,7 +8562,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                         className="t-investmentSector_item"
                       >
                         <div
-                          className="t-investmentCard"
+                          className="t-investmentCard t-investmentCard-small"
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
                         >
@@ -7036,7 +8682,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                         className="t-investmentSector_item"
                       >
                         <div
-                          className="t-investmentCard"
+                          className="t-investmentCard t-investmentCard-small"
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
                         >
@@ -7157,7 +8803,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                         className="t-investmentSector_item"
                       >
                         <div
-                          className="t-investmentCard"
+                          className="t-investmentCard t-investmentCard-small"
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
                         >
@@ -7278,7 +8924,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                         className="t-investmentSector_item"
                       >
                         <div
-                          className="t-investmentCard"
+                          className="t-investmentCard t-investmentCard-small"
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
                         >
@@ -7399,7 +9045,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                         className="t-investmentSector_item"
                       >
                         <div
-                          className="t-investmentCard"
+                          className="t-investmentCard t-investmentCard-small"
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
                         >
@@ -7520,7 +9166,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                         className="t-investmentSector_item"
                       >
                         <div
-                          className="t-investmentCard"
+                          className="t-investmentCard t-investmentCard-small"
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
                         >
@@ -7641,7 +9287,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                         className="t-investmentSector_item"
                       >
                         <div
-                          className="t-investmentCard"
+                          className="t-investmentCard t-investmentCard-small"
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
                         >
@@ -7761,7 +9407,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                         className="t-investmentSector_item"
                       >
                         <div
-                          className="t-investmentCard"
+                          className="t-investmentCard t-investmentCard-small"
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
                         >
@@ -7881,7 +9527,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                         className="t-investmentSector_item"
                       >
                         <div
-                          className="t-investmentCard"
+                          className="t-investmentCard t-investmentCard-small"
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
                         >
@@ -8001,7 +9647,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                         className="t-investmentSector_item"
                       >
                         <div
-                          className="t-investmentCard"
+                          className="t-investmentCard t-investmentCard-small"
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
                         >
@@ -8121,7 +9767,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                         className="t-investmentSector_item"
                       >
                         <div
-                          className="t-investmentCard"
+                          className="t-investmentCard t-investmentCard-small"
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
                         >
@@ -8241,7 +9887,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                         className="t-investmentSector_item"
                       >
                         <div
-                          className="t-investmentCard"
+                          className="t-investmentCard t-investmentCard-small"
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
                         >

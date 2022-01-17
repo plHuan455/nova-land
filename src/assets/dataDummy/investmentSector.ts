@@ -13,6 +13,7 @@ const investmentSectorData: InvestmentCardProps[] = [
     btnText: 'Tìm Hiểu Thêm',
     imgLogo: imgBuilding,
     imgLogoHover: imgBuildingBlue,
+    isSmall: true,
   },
   {
     title: 'BĐS TRUNG TÂM',
@@ -22,6 +23,7 @@ const investmentSectorData: InvestmentCardProps[] = [
     btnText: 'Tìm Hiểu Thêm',
     imgLogo: imgBuilding,
     imgLogoHover: imgBuildingBlue,
+    isSmall: true,
   },
   {
     title: 'BĐS TRUNG TÂM',
@@ -31,6 +33,7 @@ const investmentSectorData: InvestmentCardProps[] = [
     btnText: 'Tìm Hiểu Thêm',
     imgLogo: imgBuilding,
     imgLogoHover: imgBuildingBlue,
+    isSmall: true,
   },
   {
     title: 'BĐS TRUNG TÂM',
@@ -40,6 +43,7 @@ const investmentSectorData: InvestmentCardProps[] = [
     btnText: 'Tìm Hiểu Thêm',
     imgLogo: imgBuilding,
     imgLogoHover: imgBuildingBlue,
+    isSmall: true,
   },
   {
     title: 'BĐS TRUNG TÂM',
@@ -49,6 +53,7 @@ const investmentSectorData: InvestmentCardProps[] = [
     btnText: 'Tìm Hiểu Thêm',
     imgLogo: imgBuilding,
     imgLogoHover: imgBuildingBlue,
+    isSmall: true,
   },
 ];
 

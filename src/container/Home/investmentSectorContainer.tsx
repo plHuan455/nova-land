@@ -7,7 +7,11 @@ import InvestmentSector from 'components/templates/InvestmentSector';
 const InvestmentSectorContainer: React.FC = () => (
   <Animate type="goUp">
     <div className="p-home_investSector pt-100">
-      <InvestmentSector title="Bất động sản" investmentSectorList={investmentSectorData} />
+      <InvestmentSector
+        title="Bất động sản"
+        investmentSectorList={investmentSectorData}
+        isSmall
+      />
     </div>
   </Animate>
 );
