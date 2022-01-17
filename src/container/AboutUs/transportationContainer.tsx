@@ -1,6 +1,6 @@
 import React from 'react';
 
-import bannerImg from 'assets/images/banner2.png';
+import bannerImg from 'assets/images/transportationInfrastructure.png';
 import TransportationInfrastructure from 'components/templates/TransportationInfrastructure';
 
 const TransportationContainer: React.FC = () => (

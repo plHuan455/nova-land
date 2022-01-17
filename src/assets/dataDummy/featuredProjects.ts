@@ -1,5 +1,5 @@
 import img1 from 'assets/images/Banner/banner_home.png';
-import img2 from 'assets/images/banner2.png';
+import img2 from 'assets/images/transportationInfrastructure.png';
 import { FeaturedProjectTypes } from 'components/templates/FeaturedProjects';
 
 const dataList: FeaturedProjectTypes[] = [

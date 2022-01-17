@@ -3,7 +3,7 @@ import React from 'react';
 
 import TransportationInfrastructure from '.';
 
-import bannerImg from 'assets/images/banner2.png';
+import bannerImg from 'assets/images/transportationInfrastructure.png';
 
 export default {
   title: 'Components/templates/TransportationInfrastructure',
