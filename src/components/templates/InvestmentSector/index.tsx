@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Button from 'components/atoms/Button';
 import Heading from 'components/atoms/Heading';
@@ -16,49 +16,72 @@ export interface InvestmentCardProps {
   isSmall?: boolean;
   href: string;
   btnText?: string;
+  imgLogo: string;
+  imgLogoHover?: string;
 }
 
 export const InvestmentCard: React.FC<InvestmentCardProps> = ({
-  title, desc, thumbnail, isSmall, href, btnText,
-}) => (
-  <div className={mapModifiers('t-investmentCard', isSmall && 'small')}>
-    <div className="t-investmentCard_main">
-      <div className="t-investmentCard_icon" />
-      <div className="t-investmentCard_title">
-        <Heading
-          modifiers={
+  title,
+  desc,
+  thumbnail,
+  isSmall,
+  href,
+  btnText,
+  imgLogo,
+  imgLogoHover,
+}) => {
+  const [isHover, setIsHover] = useState<boolean>(false);
+
+  return (
+    <div
+      className={mapModifiers('t-investmentCard', isSmall && 'small')}
+      onMouseEnter={() => setIsHover(true)}
+      onMouseLeave={() => setIsHover(false)}
+    >
+      <div className="t-investmentCard_main">
+        <div className={mapModifiers('t-investmentCard_icon', isHover && 'isHover')}>
+          <Image
+            src={isHover ? imgLogoHover || imgLogo : imgLogo}
+            alt="InvestmentCard-Logo"
+            ratio="1x1"
+          />
+        </div>
+        <div className="t-investmentCard_title">
+          <Heading
+            modifiers={
               isSmall ? ['20x30', '500', 'jet', 'uppercase', 'fontNoto']
                 : ['32x48', '500', 'jet', 'uppercase', 'fontNoto']
             }
-          content={title}
-        />
-      </div>
-      <div className="t-investmentCard_desc">
-        <Text
-          modifiers={['jet333', '300']}
-          content={desc}
-        />
-      </div>
-      <div className="t-investmentCard_thumbnail">
-        <Image
-          src={thumbnail}
-          alt="InvestmentCard"
-          ratio="16x9"
-        />
-        <div className="t-investmentCard_thumbnail_button">
-          <Link href={href}>
-            <Button modifiers="outlineWhile" type="button">
-              <Text
-                modifiers={['16x24', '300', 'capitalize', 'center']}
-                content={btnText}
-              />
-            </Button>
-          </Link>
+            content={title}
+          />
+        </div>
+        <div className="t-investmentCard_desc">
+          <Text
+            modifiers={['jet333', '300']}
+            content={desc}
+          />
+        </div>
+        <div className="t-investmentCard_thumbnail">
+          <Image
+            src={thumbnail}
+            alt="InvestmentCard"
+            ratio="228x145"
+          />
+          <div className="t-investmentCard_thumbnail_button">
+            <Link href={href}>
+              <Button modifiers="outlineWhile" type="button">
+                <Text
+                  modifiers={['16x24', '300', 'capitalize', 'center']}
+                  content={btnText}
+                />
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 interface InvestmentSectorProps {
   title: string;
@@ -119,7 +142,7 @@ const settingSmall = {
       },
     },
     {
-      breakpoint: 768,
+      breakpoint: 991,
       settings: {
         slidesToShow: 2,
       },

@@ -19,6 +19,10 @@
     @include aspect-ratio(93, 73);
   }
 
+  &-1x1 {
+    @include aspect-ratio(1, 1);
+  }
+
   &-4x3 {
     @include aspect-ratio(4, 3);
   }
@@ -89,5 +93,9 @@
 
   &-311x78 {
     @include aspect-ratio(311,78);
+  }
+
+  &-228x145 {
+    @include aspect-ratio(228,145);
   }
 }

@@ -7,6 +7,8 @@ import {
 import InvestmentSector, { InvestmentCard } from '.';
 
 import investmentSectorData from 'assets/dataDummy/investmentSector';
+import imgBuilding from 'assets/images/InvestmentSector/img_building.png';
+import imgBuildingBlue from 'assets/images/InvestmentSector/img_building_blue.png';
 import imgInvestmentSector from 'assets/images/InvestmentSector/img_investmentSector.png';
 
 export default {
@@ -43,6 +45,8 @@ export const card: Story = () => (
         thumbnail={imgInvestmentSector}
         href="/"
         btnText="Tìm Hiểu Thêm"
+        imgLogo={imgBuilding}
+        imgLogoHover={imgBuildingBlue}
       />
     </div>
   </Router>

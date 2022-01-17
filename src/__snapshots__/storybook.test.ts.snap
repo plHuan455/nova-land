@@ -6372,13 +6372,25 @@ exports[`Storyshots Components/templates/InvestmentSector Card 1`] = `
 >
   <div
     className="t-investmentCard"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="t-investmentCard_main"
     >
       <div
         className="t-investmentCard_icon"
-      />
+      >
+        <div
+          className="a-image a-image-1x1"
+        >
+          <img
+            alt="InvestmentCard-Logo"
+            loading="lazy"
+            src="img_building.png"
+          />
+        </div>
+      </div>
       <div
         className="t-investmentCard_title"
       >
@@ -6407,7 +6419,7 @@ exports[`Storyshots Components/templates/InvestmentSector Card 1`] = `
         className="t-investmentCard_thumbnail"
       >
         <div
-          className="a-image a-image-16x9"
+          className="a-image a-image-228x145"
         >
           <img
             alt="InvestmentCard"
@@ -6546,13 +6558,25 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                       >
                         <div
                           className="t-investmentCard"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
                         >
                           <div
                             className="t-investmentCard_main"
                           >
                             <div
                               className="t-investmentCard_icon"
-                            />
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
                             <div
                               className="t-investmentCard_title"
                             >
@@ -6581,7 +6605,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                               className="t-investmentCard_thumbnail"
                             >
                               <div
-                                className="a-image a-image-16x9"
+                                className="a-image a-image-228x145"
                               >
                                 <img
                                   alt="InvestmentCard"
@@ -6654,13 +6678,25 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                       >
                         <div
                           className="t-investmentCard"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
                         >
                           <div
                             className="t-investmentCard_main"
                           >
                             <div
                               className="t-investmentCard_icon"
-                            />
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
                             <div
                               className="t-investmentCard_title"
                             >
@@ -6689,7 +6725,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                               className="t-investmentCard_thumbnail"
                             >
                               <div
-                                className="a-image a-image-16x9"
+                                className="a-image a-image-228x145"
                               >
                                 <img
                                   alt="InvestmentCard"
@@ -6762,13 +6798,25 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                       >
                         <div
                           className="t-investmentCard"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
                         >
                           <div
                             className="t-investmentCard_main"
                           >
                             <div
                               className="t-investmentCard_icon"
-                            />
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
                             <div
                               className="t-investmentCard_title"
                             >
@@ -6797,7 +6845,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                               className="t-investmentCard_thumbnail"
                             >
                               <div
-                                className="a-image a-image-16x9"
+                                className="a-image a-image-228x145"
                               >
                                 <img
                                   alt="InvestmentCard"
@@ -6871,13 +6919,25 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                       >
                         <div
                           className="t-investmentCard"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
                         >
                           <div
                             className="t-investmentCard_main"
                           >
                             <div
                               className="t-investmentCard_icon"
-                            />
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
                             <div
                               className="t-investmentCard_title"
                             >
@@ -6906,7 +6966,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                               className="t-investmentCard_thumbnail"
                             >
                               <div
-                                className="a-image a-image-16x9"
+                                className="a-image a-image-228x145"
                               >
                                 <img
                                   alt="InvestmentCard"
@@ -6980,13 +7040,25 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                       >
                         <div
                           className="t-investmentCard"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
                         >
                           <div
                             className="t-investmentCard_main"
                           >
                             <div
                               className="t-investmentCard_icon"
-                            />
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
                             <div
                               className="t-investmentCard_title"
                             >
@@ -7015,7 +7087,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                               className="t-investmentCard_thumbnail"
                             >
                               <div
-                                className="a-image a-image-16x9"
+                                className="a-image a-image-228x145"
                               >
                                 <img
                                   alt="InvestmentCard"
@@ -7089,13 +7161,25 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                       >
                         <div
                           className="t-investmentCard"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
                         >
                           <div
                             className="t-investmentCard_main"
                           >
                             <div
                               className="t-investmentCard_icon"
-                            />
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
                             <div
                               className="t-investmentCard_title"
                             >
@@ -7124,7 +7208,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                               className="t-investmentCard_thumbnail"
                             >
                               <div
-                                className="a-image a-image-16x9"
+                                className="a-image a-image-228x145"
                               >
                                 <img
                                   alt="InvestmentCard"
@@ -7198,13 +7282,25 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                       >
                         <div
                           className="t-investmentCard"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
                         >
                           <div
                             className="t-investmentCard_main"
                           >
                             <div
                               className="t-investmentCard_icon"
-                            />
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
                             <div
                               className="t-investmentCard_title"
                             >
@@ -7233,7 +7329,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                               className="t-investmentCard_thumbnail"
                             >
                               <div
-                                className="a-image a-image-16x9"
+                                className="a-image a-image-228x145"
                               >
                                 <img
                                   alt="InvestmentCard"
@@ -7307,13 +7403,25 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                       >
                         <div
                           className="t-investmentCard"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
                         >
                           <div
                             className="t-investmentCard_main"
                           >
                             <div
                               className="t-investmentCard_icon"
-                            />
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
                             <div
                               className="t-investmentCard_title"
                             >
@@ -7342,7 +7450,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                               className="t-investmentCard_thumbnail"
                             >
                               <div
-                                className="a-image a-image-16x9"
+                                className="a-image a-image-228x145"
                               >
                                 <img
                                   alt="InvestmentCard"
@@ -7415,13 +7523,25 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                       >
                         <div
                           className="t-investmentCard"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
                         >
                           <div
                             className="t-investmentCard_main"
                           >
                             <div
                               className="t-investmentCard_icon"
-                            />
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
                             <div
                               className="t-investmentCard_title"
                             >
@@ -7450,7 +7570,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                               className="t-investmentCard_thumbnail"
                             >
                               <div
-                                className="a-image a-image-16x9"
+                                className="a-image a-image-228x145"
                               >
                                 <img
                                   alt="InvestmentCard"
@@ -7523,13 +7643,25 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                       >
                         <div
                           className="t-investmentCard"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
                         >
                           <div
                             className="t-investmentCard_main"
                           >
                             <div
                               className="t-investmentCard_icon"
-                            />
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
                             <div
                               className="t-investmentCard_title"
                             >
@@ -7558,7 +7690,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                               className="t-investmentCard_thumbnail"
                             >
                               <div
-                                className="a-image a-image-16x9"
+                                className="a-image a-image-228x145"
                               >
                                 <img
                                   alt="InvestmentCard"
@@ -7631,13 +7763,25 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                       >
                         <div
                           className="t-investmentCard"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
                         >
                           <div
                             className="t-investmentCard_main"
                           >
                             <div
                               className="t-investmentCard_icon"
-                            />
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
                             <div
                               className="t-investmentCard_title"
                             >
@@ -7666,7 +7810,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                               className="t-investmentCard_thumbnail"
                             >
                               <div
-                                className="a-image a-image-16x9"
+                                className="a-image a-image-228x145"
                               >
                                 <img
                                   alt="InvestmentCard"
@@ -7739,13 +7883,25 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                       >
                         <div
                           className="t-investmentCard"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
                         >
                           <div
                             className="t-investmentCard_main"
                           >
                             <div
                               className="t-investmentCard_icon"
-                            />
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
                             <div
                               className="t-investmentCard_title"
                             >
@@ -7774,7 +7930,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                               className="t-investmentCard_thumbnail"
                             >
                               <div
-                                className="a-image a-image-16x9"
+                                className="a-image a-image-228x145"
                               >
                                 <img
                                   alt="InvestmentCard"
@@ -7847,13 +8003,25 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                       >
                         <div
                           className="t-investmentCard"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
                         >
                           <div
                             className="t-investmentCard_main"
                           >
                             <div
                               className="t-investmentCard_icon"
-                            />
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
                             <div
                               className="t-investmentCard_title"
                             >
@@ -7882,7 +8050,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                               className="t-investmentCard_thumbnail"
                             >
                               <div
-                                className="a-image a-image-16x9"
+                                className="a-image a-image-228x145"
                               >
                                 <img
                                   alt="InvestmentCard"
@@ -8035,13 +8203,25 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                       >
                         <div
                           className="t-investmentCard t-investmentCard-small"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
                         >
                           <div
                             className="t-investmentCard_main"
                           >
                             <div
                               className="t-investmentCard_icon"
-                            />
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
                             <div
                               className="t-investmentCard_title"
                             >
@@ -8070,7 +8250,7 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                               className="t-investmentCard_thumbnail"
                             >
                               <div
-                                className="a-image a-image-16x9"
+                                className="a-image a-image-228x145"
                               >
                                 <img
                                   alt="InvestmentCard"
@@ -8143,13 +8323,25 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                       >
                         <div
                           className="t-investmentCard t-investmentCard-small"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
                         >
                           <div
                             className="t-investmentCard_main"
                           >
                             <div
                               className="t-investmentCard_icon"
-                            />
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
                             <div
                               className="t-investmentCard_title"
                             >
@@ -8178,7 +8370,7 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                               className="t-investmentCard_thumbnail"
                             >
                               <div
-                                className="a-image a-image-16x9"
+                                className="a-image a-image-228x145"
                               >
                                 <img
                                   alt="InvestmentCard"
@@ -8251,13 +8443,25 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                       >
                         <div
                           className="t-investmentCard t-investmentCard-small"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
                         >
                           <div
                             className="t-investmentCard_main"
                           >
                             <div
                               className="t-investmentCard_icon"
-                            />
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
                             <div
                               className="t-investmentCard_title"
                             >
@@ -8286,7 +8490,7 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                               className="t-investmentCard_thumbnail"
                             >
                               <div
-                                className="a-image a-image-16x9"
+                                className="a-image a-image-228x145"
                               >
                                 <img
                                   alt="InvestmentCard"
@@ -8359,13 +8563,25 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                       >
                         <div
                           className="t-investmentCard t-investmentCard-small"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
                         >
                           <div
                             className="t-investmentCard_main"
                           >
                             <div
                               className="t-investmentCard_icon"
-                            />
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
                             <div
                               className="t-investmentCard_title"
                             >
@@ -8394,7 +8610,7 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                               className="t-investmentCard_thumbnail"
                             >
                               <div
-                                className="a-image a-image-16x9"
+                                className="a-image a-image-228x145"
                               >
                                 <img
                                   alt="InvestmentCard"
@@ -8467,13 +8683,25 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                       >
                         <div
                           className="t-investmentCard t-investmentCard-small"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
                         >
                           <div
                             className="t-investmentCard_main"
                           >
                             <div
                               className="t-investmentCard_icon"
-                            />
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
                             <div
                               className="t-investmentCard_title"
                             >
@@ -8502,7 +8730,7 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                               className="t-investmentCard_thumbnail"
                             >
                               <div
-                                className="a-image a-image-16x9"
+                                className="a-image a-image-228x145"
                               >
                                 <img
                                   alt="InvestmentCard"
@@ -8576,13 +8804,25 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                       >
                         <div
                           className="t-investmentCard t-investmentCard-small"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
                         >
                           <div
                             className="t-investmentCard_main"
                           >
                             <div
                               className="t-investmentCard_icon"
-                            />
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
                             <div
                               className="t-investmentCard_title"
                             >
@@ -8611,7 +8851,7 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                               className="t-investmentCard_thumbnail"
                             >
                               <div
-                                className="a-image a-image-16x9"
+                                className="a-image a-image-228x145"
                               >
                                 <img
                                   alt="InvestmentCard"
@@ -8685,13 +8925,25 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                       >
                         <div
                           className="t-investmentCard t-investmentCard-small"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
                         >
                           <div
                             className="t-investmentCard_main"
                           >
                             <div
                               className="t-investmentCard_icon"
-                            />
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
                             <div
                               className="t-investmentCard_title"
                             >
@@ -8720,7 +8972,7 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                               className="t-investmentCard_thumbnail"
                             >
                               <div
-                                className="a-image a-image-16x9"
+                                className="a-image a-image-228x145"
                               >
                                 <img
                                   alt="InvestmentCard"
@@ -8794,13 +9046,25 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                       >
                         <div
                           className="t-investmentCard t-investmentCard-small"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
                         >
                           <div
                             className="t-investmentCard_main"
                           >
                             <div
                               className="t-investmentCard_icon"
-                            />
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
                             <div
                               className="t-investmentCard_title"
                             >
@@ -8829,7 +9093,7 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                               className="t-investmentCard_thumbnail"
                             >
                               <div
-                                className="a-image a-image-16x9"
+                                className="a-image a-image-228x145"
                               >
                                 <img
                                   alt="InvestmentCard"
@@ -8903,13 +9167,25 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                       >
                         <div
                           className="t-investmentCard t-investmentCard-small"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
                         >
                           <div
                             className="t-investmentCard_main"
                           >
                             <div
                               className="t-investmentCard_icon"
-                            />
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
                             <div
                               className="t-investmentCard_title"
                             >
@@ -8938,7 +9214,7 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                               className="t-investmentCard_thumbnail"
                             >
                               <div
-                                className="a-image a-image-16x9"
+                                className="a-image a-image-228x145"
                               >
                                 <img
                                   alt="InvestmentCard"
@@ -9012,13 +9288,25 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                       >
                         <div
                           className="t-investmentCard t-investmentCard-small"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
                         >
                           <div
                             className="t-investmentCard_main"
                           >
                             <div
                               className="t-investmentCard_icon"
-                            />
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
                             <div
                               className="t-investmentCard_title"
                             >
@@ -9047,7 +9335,7 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                               className="t-investmentCard_thumbnail"
                             >
                               <div
-                                className="a-image a-image-16x9"
+                                className="a-image a-image-228x145"
                               >
                                 <img
                                   alt="InvestmentCard"
@@ -9120,13 +9408,25 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                       >
                         <div
                           className="t-investmentCard t-investmentCard-small"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
                         >
                           <div
                             className="t-investmentCard_main"
                           >
                             <div
                               className="t-investmentCard_icon"
-                            />
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
                             <div
                               className="t-investmentCard_title"
                             >
@@ -9155,7 +9455,7 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                               className="t-investmentCard_thumbnail"
                             >
                               <div
-                                className="a-image a-image-16x9"
+                                className="a-image a-image-228x145"
                               >
                                 <img
                                   alt="InvestmentCard"
@@ -9228,13 +9528,25 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                       >
                         <div
                           className="t-investmentCard t-investmentCard-small"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
                         >
                           <div
                             className="t-investmentCard_main"
                           >
                             <div
                               className="t-investmentCard_icon"
-                            />
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
                             <div
                               className="t-investmentCard_title"
                             >
@@ -9263,7 +9575,7 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                               className="t-investmentCard_thumbnail"
                             >
                               <div
-                                className="a-image a-image-16x9"
+                                className="a-image a-image-228x145"
                               >
                                 <img
                                   alt="InvestmentCard"
@@ -9336,13 +9648,25 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                       >
                         <div
                           className="t-investmentCard t-investmentCard-small"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
                         >
                           <div
                             className="t-investmentCard_main"
                           >
                             <div
                               className="t-investmentCard_icon"
-                            />
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
                             <div
                               className="t-investmentCard_title"
                             >
@@ -9371,7 +9695,7 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                               className="t-investmentCard_thumbnail"
                             >
                               <div
-                                className="a-image a-image-16x9"
+                                className="a-image a-image-228x145"
                               >
                                 <img
                                   alt="InvestmentCard"
@@ -9444,13 +9768,25 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                       >
                         <div
                           className="t-investmentCard t-investmentCard-small"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
                         >
                           <div
                             className="t-investmentCard_main"
                           >
                             <div
                               className="t-investmentCard_icon"
-                            />
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
                             <div
                               className="t-investmentCard_title"
                             >
@@ -9479,7 +9815,7 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                               className="t-investmentCard_thumbnail"
                             >
                               <div
-                                className="a-image a-image-16x9"
+                                className="a-image a-image-228x145"
                               >
                                 <img
                                   alt="InvestmentCard"
@@ -9552,13 +9888,25 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                       >
                         <div
                           className="t-investmentCard t-investmentCard-small"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
                         >
                           <div
                             className="t-investmentCard_main"
                           >
                             <div
                               className="t-investmentCard_icon"
-                            />
+                            >
+                              <div
+                                className="a-image a-image-1x1"
+                              >
+                                <img
+                                  alt="InvestmentCard-Logo"
+                                  loading="lazy"
+                                  src="img_building.png"
+                                />
+                              </div>
+                            </div>
                             <div
                               className="t-investmentCard_title"
                             >
@@ -9587,7 +9935,7 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                               className="t-investmentCard_thumbnail"
                             >
                               <div
-                                className="a-image a-image-16x9"
+                                className="a-image a-image-228x145"
                               >
                                 <img
                                   alt="InvestmentCard"
