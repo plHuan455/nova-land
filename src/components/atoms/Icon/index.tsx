@@ -25,11 +25,13 @@ export const iconList = {
   collapse: 'collapse',
   expand: 'expand',
   location: 'location',
+  facebookShare: 'facebookShare',
+  zaloShare: 'zaloShare',
 };
 
 export type IconName = keyof typeof iconList;
 
-export type IconSize = '14' | '24' |'40' | '10' | '16' | '20' | '18';
+export type IconSize = '14' | '24' |'40' | '10' | '16' | '20' | '18' | '71x25';
 
 interface IconProps {
   iconName: IconName;

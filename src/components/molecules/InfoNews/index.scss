@@ -1,0 +1,19 @@
+.m-infonews {
+  display: flex;
+  align-items: center;
+  
+  &_image {
+    max-width: rem(90);
+    width: 100%;
+  }
+
+  &_content {
+    margin-left: rem(10);
+
+    .a-text {
+      &:nth-child(2) {
+        margin-top: rem(4); 
+      }
+    }
+  }
+}

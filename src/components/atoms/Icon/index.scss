@@ -38,6 +38,11 @@
     height: rem(18);
     width: rem(18);
   }
+  
+  &-71x25 {
+    height: rem(25);
+    width: rem(71);
+  }
 
   &-search {
     background-image: url('~assets/icons/ic_search.svg');
@@ -125,5 +130,13 @@
 
   &-location {
     background-image: url('~assets/icons/ic_location.svg');
+  }
+  
+  &-facebookShare {
+    background-image: url('~assets/icons/ic_facebook_share.svg');
+  }
+
+  &-zaloShare {
+    background-image: url('~assets/icons/ic_zalo_share.svg');
   }
 }
