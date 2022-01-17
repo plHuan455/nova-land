@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Button from 'components/atoms/Button';
 import Heading from 'components/atoms/Heading';
@@ -13,95 +13,77 @@ export interface InvestmentCardProps {
   title: string;
   desc: string;
   thumbnail: string;
-  isSmall?: boolean;
   href: string;
   btnText?: string;
+  imgLogo: string;
+  imgLogoHover?: string;
 }
 
 export const InvestmentCard: React.FC<InvestmentCardProps> = ({
-  title, desc, thumbnail, isSmall, href, btnText,
-}) => (
-  <div className={mapModifiers('t-investmentCard', isSmall && 'small')}>
-    <div className="t-investmentCard_main">
-      <div className="t-investmentCard_icon" />
-      <div className="t-investmentCard_title">
-        <Heading
-          modifiers={
-              isSmall ? ['20x30', '500', 'jet', 'uppercase', 'fontNoto']
-                : ['32x48', '500', 'jet', 'uppercase', 'fontNoto']
-            }
-          content={title}
-        />
-      </div>
-      <div className="t-investmentCard_desc">
-        <Text
-          modifiers={['jet333', '300']}
-          content={desc}
-        />
-      </div>
-      <div className="t-investmentCard_thumbnail">
-        <Image
-          src={thumbnail}
-          alt="InvestmentCard"
-          ratio="16x9"
-        />
-        <div className="t-investmentCard_thumbnail_button">
-          <Link href={href}>
-            <Button modifiers="outlineWhile" type="button">
-              <Text
-                modifiers={['16x24', '300', 'capitalize', 'center']}
-                content={btnText}
-              />
-            </Button>
-          </Link>
+  title,
+  desc,
+  thumbnail,
+  href,
+  btnText,
+  imgLogo,
+  imgLogoHover,
+}) => {
+  const [isHover, setIsHover] = useState<boolean>(false);
+
+  return (
+    <div
+      className="t-investmentCard"
+      onMouseEnter={() => setIsHover(true)}
+      onMouseLeave={() => setIsHover(false)}
+    >
+      <div className="t-investmentCard_main">
+        <div className={mapModifiers('t-investmentCard_icon', isHover && 'isHover')}>
+          <Image
+            src={isHover ? imgLogoHover || imgLogo : imgLogo}
+            alt="InvestmentCard-Logo"
+            ratio="1x1"
+          />
+        </div>
+        <div className="t-investmentCard_title">
+          <Heading
+            modifiers={['20x30', '500', 'jet', 'uppercase', 'fontNoto']}
+            content={title}
+          />
+        </div>
+        <div className="t-investmentCard_desc">
+          <Text
+            modifiers={['jet333', '300']}
+            content={desc}
+          />
+        </div>
+        <div className="t-investmentCard_thumbnail">
+          <Image
+            src={thumbnail}
+            alt="InvestmentCard"
+            ratio="228x145"
+          />
+          <div className="t-investmentCard_thumbnail_button">
+            <Link href={href}>
+              <Button modifiers="outlineWhile" type="button">
+                <Text
+                  modifiers={['16x24', '300', 'capitalize', 'center']}
+                  content={btnText}
+                />
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 interface InvestmentSectorProps {
   title: string;
   investmentSectorList: InvestmentCardProps[];
-  isSmall?: boolean;
 }
 
 const setting = {
-  centerMode: true,
-  infinite: true,
-  slidesToShow: 2,
-  slidesToScroll: 1,
-  arrows: true,
-  prevArrow: <PrevArrow />,
-  nextArrow: <NextArrow />,
-  speed: 500,
-  centerPadding: '90',
-  slidesPerRow: 1,
-  responsive: [
-    {
-      breakpoint: 991,
-      settings: {
-        centerPadding: '0',
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        arrows: true,
-        slidesPerRow: 1,
-      },
-    },
-    {
-      breakpoint: 767,
-      settings: {
-        centerPadding: '0',
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: true,
-        slidesPerRow: 1,
-      },
-    },
-  ],
-};
-
-const settingSmall = {
   centerMode: true,
   infinite: true,
   slidesToShow: 4,
@@ -119,7 +101,7 @@ const settingSmall = {
       },
     },
     {
-      breakpoint: 768,
+      breakpoint: 991,
       settings: {
         slidesToShow: 2,
       },
@@ -134,9 +116,9 @@ const settingSmall = {
 };
 
 const InvestmentSector: React.FC<InvestmentSectorProps> = ({
-  title, investmentSectorList, isSmall,
+  title, investmentSectorList,
 }) => (
-  <div className={mapModifiers('t-investmentSector', isSmall && 'small')}>
+  <div className="t-investmentSector">
     <Container>
       <div className="u-mb-lg-52 u-mb-sm-40 u-mb-24">
         <Heading
@@ -145,13 +127,12 @@ const InvestmentSector: React.FC<InvestmentSectorProps> = ({
         />
       </div>
       <div className="t-investmentSector_content">
-        <Carousel settings={isSmall ? settingSmall : setting}>
+        <Carousel settings={setting}>
           {
             investmentSectorList.map((item, index) => (
               <div className="t-investmentSector_item" key={`_investmentSector_${index.toString()}`}>
                 <InvestmentCard
                   {...item}
-                  isSmall={isSmall}
                 />
               </div>
             ))
@@ -161,9 +142,5 @@ const InvestmentSector: React.FC<InvestmentSectorProps> = ({
     </Container>
   </div>
 );
-
-InvestmentSector.defaultProps = {
-  isSmall: false,
-};
 
 export default InvestmentSector;

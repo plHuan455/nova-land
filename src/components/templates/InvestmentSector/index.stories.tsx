@@ -7,6 +7,8 @@ import {
 import InvestmentSector, { InvestmentCard } from '.';
 
 import investmentSectorData from 'assets/dataDummy/investmentSector';
+import imgBuilding from 'assets/images/InvestmentSector/img_building.png';
+import imgBuildingBlue from 'assets/images/InvestmentSector/img_building_blue.png';
 import imgInvestmentSector from 'assets/images/InvestmentSector/img_investmentSector.png';
 
 export default {
@@ -24,16 +26,6 @@ export const normal: Story = () => (
   </Router>
 );
 
-export const small: Story = () => (
-  <Router>
-    <InvestmentSector
-      title="BẤT ĐỘNG SẢN"
-      investmentSectorList={investmentSectorData}
-      isSmall
-    />
-  </Router>
-);
-
 export const card: Story = () => (
   <Router>
     <div style={{ maxWidth: '450px' }}>
@@ -43,6 +35,8 @@ export const card: Story = () => (
         thumbnail={imgInvestmentSector}
         href="/"
         btnText="Tìm Hiểu Thêm"
+        imgLogo={imgBuilding}
+        imgLogoHover={imgBuildingBlue}
       />
     </div>
   </Router>
