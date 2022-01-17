@@ -210,9 +210,6 @@
         @include small-mobile {
           flex: 0 0 100%;
           margin-top: rem(14);
-          &:not(:first-child) {
-            margin-top: rem(14);
-          }
         }
       }
 
