@@ -68,8 +68,8 @@ const footerMenuData: MenuFooterTypes[] = [
     link: [
       {
         href: '/',
-        title: 'zalo',
-        icon: 'zalo',
+        title: 'facebook',
+        icon: 'facebook',
       },
       {
         href: '/',
@@ -78,8 +78,8 @@ const footerMenuData: MenuFooterTypes[] = [
       },
       {
         href: '/',
-        title: 'facebook',
-        icon: 'facebook',
+        title: 'zalo',
+        icon: 'zalo',
       },
     ],
   },

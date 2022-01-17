@@ -8,6 +8,7 @@ const LeadershipContainer: React.FC = () => (
     <Leadership
       title="BAN LÃNH ĐẠO"
       tabDataLeadership={dataLeadershipList}
+      hasButtonViewAll
     />
   </div>
 );

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
+import Button from 'components/atoms/Button';
 import Heading from 'components/atoms/Heading';
-import Icon from 'components/atoms/Icon';
 import Image from 'components/atoms/Image';
 import Text from 'components/atoms/Text';
 import Container from 'components/organisms/Container';
@@ -37,9 +37,9 @@ export const LeadershipCard: React.FC<LeadershipCardProps> = ({
             modifiers={['jet', '500', 'fontNoto']}
             content={name}
           />
-          <div className="t-leadershipCard_icon">
+          {/* <div className="t-leadershipCard_icon">
             <Icon iconName="arrowDownGrey" size="24" />
-          </div>
+          </div> */}
         </div>
         <div className="t-leadershipCard_position">
           <Text
@@ -85,6 +85,7 @@ export const LeadershipDetail: React.FC<LeadershipDetailProps> = ({
             content={name}
           />
         </div>
+        <div className="t-leadershipDetail_divider" />
         <Heading
           modifiers={['dimGray', '300']}
           content={position}
@@ -135,10 +136,12 @@ export interface dataTabsLeadershipType {
 interface LeadershipProps {
   title: string;
   tabDataLeadership: dataTabsLeadershipType[];
+  hasButtonViewAll: boolean;
+  handleClickViewAll?: () => void;
 }
 
 const Leadership: React.FC<LeadershipProps> = ({
-  title, tabDataLeadership,
+  title, tabDataLeadership, hasButtonViewAll, handleClickViewAll,
 }) => {
   const [indexActive, setIndexActive] = useState(0);
   const [indexShow, setIndexShow] = useState(0);
@@ -189,6 +192,11 @@ const Leadership: React.FC<LeadershipProps> = ({
                         </div>
                       ))
                     }
+                    {hasButtonViewAll && (
+                    <div className="t-leadership_item_btn">
+                      <Button onClick={handleClickViewAll} modifiers="with-icon" iconName="arrowDownBrown" />
+                    </div>
+                    )}
                   </div>
                   <div className="t-leadership_item_right">
                     {
@@ -216,6 +224,10 @@ const Leadership: React.FC<LeadershipProps> = ({
 
 LeadershipCard.defaultProps = {
   isShow: false,
+};
+
+Leadership.defaultProps = {
+  handleClickViewAll: undefined,
 };
 
 export default Leadership;

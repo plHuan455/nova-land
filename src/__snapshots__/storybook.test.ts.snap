@@ -1323,7 +1323,7 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
                 className="o-footer_main_info"
               >
                 <p
-                  className="a-text a-text-600 a-text-white a-text-uppercase a-text-14x22"
+                  className="a-text a-text-600 a-text-white a-text-uppercase a-text-12x17"
                 >
                   CÔNG TY CỔ PHẦN TẬP ĐOÀN ĐẦU TƯ ĐỊA ỐC NOVA
                 </p>
@@ -1331,13 +1331,12 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
                   className="mt-8"
                 >
                   <p
-                    className="a-text a-text-300 a-text-white a-text-opacity07"
+                    className="a-text a-text-300 a-text-white a-text-opacity07 a-text-12x17"
                   >
                     Giấy chứng nhận đăng ký doanh nghiệp số 0301444753 do Sở Kế hoạch và Đầu tư TP.HCM cấp lần đầu ngày 18/09/1992
                   </p>
-                  <br />
                   <p
-                    className="a-text a-text-300 a-text-white a-text-opacity07"
+                    className="a-text a-text-300 a-text-white a-text-opacity07 a-text-12x17"
                   >
                     Tòa nhà văn phòng Novaland, 65 Nguyễn Du, Phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh
                   </p>
@@ -1349,7 +1348,7 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
                     className="o-footer_main_contact_item"
                   >
                     <p
-                      className="a-text a-text-300 a-text-white a-text-opacity07"
+                      className="a-text a-text-300 a-text-white a-text-opacity07 a-text-12x17"
                     >
                       Email:
                     </p>
@@ -1360,7 +1359,7 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
                       target="_self"
                     >
                       <p
-                        className="a-text a-text-white a-text-600 a-text-inline"
+                        className="a-text a-text-white a-text-600 a-text-12x17 a-text-inline"
                       >
                         info@novaland.com.vn
                       </p>
@@ -1370,7 +1369,7 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
                     className="o-footer_main_contact_item"
                   >
                     <p
-                      className="a-text a-text-300 a-text-white a-text-opacity07"
+                      className="a-text a-text-300 a-text-white a-text-opacity07 a-text-12x17"
                     >
                       Tổng đài CSKH:
                     </p>
@@ -1381,7 +1380,7 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
                       target="_self"
                     >
                       <p
-                        className="a-text a-text-600 a-text-white a-text-700 a-text-inline"
+                        className="a-text a-text-600 a-text-white a-text-700 a-text-12x17 a-text-inline"
                       >
                         1900 63 6666
                       </p>
@@ -1389,6 +1388,330 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+          <div
+            className="o-footer_main_menu_bottom"
+          >
+            <div
+              className="o-footer_main_menu_wrap"
+            >
+              <div
+                className="o-footer_main_menu_title"
+              >
+                <p
+                  className="a-text a-text-white a-text-12x17 a-text-600 a-text-uppercase"
+                >
+                  VỀ NOVALAND
+                </p>
+              </div>
+              <ul
+                className="o-footer_main_menu_list"
+              >
+                <li
+                  className="o-footer_main_menu_nav"
+                >
+                  <a
+                    aria-current="page"
+                    className="a-link   active"
+                    href="/"
+                    onClick={[Function]}
+                    target="_self"
+                  >
+                    <p
+                      className="a-text a-text-12x17 a-text-lavenderGray a-text-300 a-text-inline"
+                    >
+                      Giới thiệu chung
+                    </p>
+                  </a>
+                </li>
+                <li
+                  className="o-footer_main_menu_nav"
+                >
+                  <a
+                    aria-current="page"
+                    className="a-link   active"
+                    href="/"
+                    onClick={[Function]}
+                    target="_self"
+                  >
+                    <p
+                      className="a-text a-text-12x17 a-text-lavenderGray a-text-300 a-text-inline"
+                    >
+                      Tầm nhìn - Sứ mệnh
+                    </p>
+                  </a>
+                </li>
+                <li
+                  className="o-footer_main_menu_nav"
+                >
+                  <a
+                    aria-current="page"
+                    className="a-link   active"
+                    href="/"
+                    onClick={[Function]}
+                    target="_self"
+                  >
+                    <p
+                      className="a-text a-text-12x17 a-text-lavenderGray a-text-300 a-text-inline"
+                    >
+                      Lĩnh Vực Hoạt Động
+                    </p>
+                  </a>
+                </li>
+                <li
+                  className="o-footer_main_menu_nav"
+                >
+                  <a
+                    aria-current="page"
+                    className="a-link   active"
+                    href="/"
+                    onClick={[Function]}
+                    target="_self"
+                  >
+                    <p
+                      className="a-text a-text-12x17 a-text-lavenderGray a-text-300 a-text-inline"
+                    >
+                      Lịch Sử Phát Triển
+                    </p>
+                  </a>
+                </li>
+                <li
+                  className="o-footer_main_menu_nav"
+                >
+                  <a
+                    aria-current="page"
+                    className="a-link   active"
+                    href="/"
+                    onClick={[Function]}
+                    target="_self"
+                  >
+                    <p
+                      className="a-text a-text-12x17 a-text-lavenderGray a-text-300 a-text-inline"
+                    >
+                      Ban lãnh đạo
+                    </p>
+                  </a>
+                </li>
+                <li
+                  className="o-footer_main_menu_nav"
+                >
+                  <a
+                    aria-current="page"
+                    className="a-link   active"
+                    href="/"
+                    onClick={[Function]}
+                    target="_self"
+                  >
+                    <p
+                      className="a-text a-text-12x17 a-text-lavenderGray a-text-300 a-text-inline"
+                    >
+                      Giải thưởng
+                    </p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div
+              className="o-footer_main_menu_wrap"
+            >
+              <div
+                className="o-footer_main_menu_title"
+              >
+                <p
+                  className="a-text a-text-white a-text-12x17 a-text-600 a-text-uppercase"
+                >
+                  CÁC THÔNG TIN VÀ DỰ ÁN MỚI
+                </p>
+              </div>
+              <ul
+                className="o-footer_main_menu_list"
+              >
+                <li
+                  className="o-footer_main_menu_nav"
+                >
+                  <a
+                    aria-current="page"
+                    className="a-link   active"
+                    href="/"
+                    onClick={[Function]}
+                    target="_self"
+                  >
+                    <p
+                      className="a-text a-text-12x17 a-text-lavenderGray a-text-300 a-text-inline"
+                    >
+                      Thông tin thị trường
+                    </p>
+                  </a>
+                </li>
+                <li
+                  className="o-footer_main_menu_nav"
+                >
+                  <a
+                    aria-current="page"
+                    className="a-link   active"
+                    href="/"
+                    onClick={[Function]}
+                    target="_self"
+                  >
+                    <p
+                      className="a-text a-text-12x17 a-text-lavenderGray a-text-300 a-text-inline"
+                    >
+                      Thông tin Novaland
+                    </p>
+                  </a>
+                </li>
+                <li
+                  className="o-footer_main_menu_nav"
+                >
+                  <a
+                    aria-current="page"
+                    className="a-link   active"
+                    href="/"
+                    onClick={[Function]}
+                    target="_self"
+                  >
+                    <p
+                      className="a-text a-text-12x17 a-text-lavenderGray a-text-300 a-text-inline"
+                    >
+                      Thông tin báo chí
+                    </p>
+                  </a>
+                </li>
+                <li
+                  className="o-footer_main_menu_nav"
+                >
+                  <a
+                    aria-current="page"
+                    className="a-link   active"
+                    href="/"
+                    onClick={[Function]}
+                    target="_self"
+                  >
+                    <p
+                      className="a-text a-text-12x17 a-text-lavenderGray a-text-300 a-text-inline"
+                    >
+                      Bất động sản Trung Tâm 
+                    </p>
+                  </a>
+                </li>
+                <li
+                  className="o-footer_main_menu_nav"
+                >
+                  <a
+                    aria-current="page"
+                    className="a-link   active"
+                    href="/"
+                    onClick={[Function]}
+                    target="_self"
+                  >
+                    <p
+                      className="a-text a-text-12x17 a-text-lavenderGray a-text-300 a-text-inline"
+                    >
+                      Đô Thị Vệ Tinh
+                    </p>
+                  </a>
+                </li>
+                <li
+                  className="o-footer_main_menu_nav"
+                >
+                  <a
+                    aria-current="page"
+                    className="a-link   active"
+                    href="/"
+                    onClick={[Function]}
+                    target="_self"
+                  >
+                    <p
+                      className="a-text a-text-12x17 a-text-lavenderGray a-text-300 a-text-inline"
+                    >
+                      Đô Thị Nghỉ Dưỡng
+                    </p>
+                  </a>
+                </li>
+                <li
+                  className="o-footer_main_menu_nav"
+                >
+                  <a
+                    aria-current="page"
+                    className="a-link   active"
+                    href="/"
+                    onClick={[Function]}
+                    target="_self"
+                  >
+                    <p
+                      className="a-text a-text-12x17 a-text-lavenderGray a-text-300 a-text-inline"
+                    >
+                      Bất Động Sản Công Nghiệp
+                    </p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div
+              className="o-footer_main_menu_wrap"
+            >
+              <div
+                className="o-footer_main_menu_title"
+              >
+                <p
+                  className="a-text a-text-white a-text-12x17 a-text-600 a-text-uppercase"
+                >
+                  THEO DÕI NOVALAND TRÊN
+                </p>
+              </div>
+              <ul
+                className="o-footer_main_menu_icon"
+              >
+                <div
+                  className="o-footer_main_menu_icon_item"
+                >
+                  <a
+                    aria-current="page"
+                    className="a-link   active"
+                    href="/"
+                    onClick={[Function]}
+                    target="_self"
+                    title="facebook"
+                  >
+                    <i
+                      className="a-icon a-icon-facebook a-icon-40"
+                    />
+                  </a>
+                </div>
+                <div
+                  className="o-footer_main_menu_icon_item"
+                >
+                  <a
+                    aria-current="page"
+                    className="a-link   active"
+                    href="/"
+                    onClick={[Function]}
+                    target="_self"
+                    title="youtube"
+                  >
+                    <i
+                      className="a-icon a-icon-youtube a-icon-40"
+                    />
+                  </a>
+                </div>
+                <div
+                  className="o-footer_main_menu_icon_item"
+                >
+                  <a
+                    aria-current="page"
+                    className="a-link   active"
+                    href="/"
+                    onClick={[Function]}
+                    target="_self"
+                    title="zalo"
+                  >
+                    <i
+                      className="a-icon a-icon-zalo a-icon-40"
+                    />
+                  </a>
+                </div>
+              </ul>
             </div>
           </div>
         </div>
@@ -1601,330 +1924,6 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
           </div>
         </div>
       </div>
-      <div
-        className="o-footer_main_menu_bottom"
-      >
-        <div
-          className="o-footer_main_menu_wrap"
-        >
-          <div
-            className="o-footer_main_menu_title"
-          >
-            <p
-              className="a-text a-text-white a-text-14x22 a-text-600 a-text-uppercase"
-            >
-              VỀ NOVALAND
-            </p>
-          </div>
-          <ul
-            className="o-footer_main_menu_list"
-          >
-            <li
-              className="o-footer_main_menu_nav"
-            >
-              <a
-                aria-current="page"
-                className="a-link   active"
-                href="/"
-                onClick={[Function]}
-                target="_self"
-              >
-                <p
-                  className="a-text a-text-lavenderGray a-text-300 a-text-inline"
-                >
-                  Giới thiệu chung
-                </p>
-              </a>
-            </li>
-            <li
-              className="o-footer_main_menu_nav"
-            >
-              <a
-                aria-current="page"
-                className="a-link   active"
-                href="/"
-                onClick={[Function]}
-                target="_self"
-              >
-                <p
-                  className="a-text a-text-lavenderGray a-text-300 a-text-inline"
-                >
-                  Tầm nhìn - Sứ mệnh
-                </p>
-              </a>
-            </li>
-            <li
-              className="o-footer_main_menu_nav"
-            >
-              <a
-                aria-current="page"
-                className="a-link   active"
-                href="/"
-                onClick={[Function]}
-                target="_self"
-              >
-                <p
-                  className="a-text a-text-lavenderGray a-text-300 a-text-inline"
-                >
-                  Lĩnh Vực Hoạt Động
-                </p>
-              </a>
-            </li>
-            <li
-              className="o-footer_main_menu_nav"
-            >
-              <a
-                aria-current="page"
-                className="a-link   active"
-                href="/"
-                onClick={[Function]}
-                target="_self"
-              >
-                <p
-                  className="a-text a-text-lavenderGray a-text-300 a-text-inline"
-                >
-                  Lịch Sử Phát Triển
-                </p>
-              </a>
-            </li>
-            <li
-              className="o-footer_main_menu_nav"
-            >
-              <a
-                aria-current="page"
-                className="a-link   active"
-                href="/"
-                onClick={[Function]}
-                target="_self"
-              >
-                <p
-                  className="a-text a-text-lavenderGray a-text-300 a-text-inline"
-                >
-                  Ban lãnh đạo
-                </p>
-              </a>
-            </li>
-            <li
-              className="o-footer_main_menu_nav"
-            >
-              <a
-                aria-current="page"
-                className="a-link   active"
-                href="/"
-                onClick={[Function]}
-                target="_self"
-              >
-                <p
-                  className="a-text a-text-lavenderGray a-text-300 a-text-inline"
-                >
-                  Giải thưởng
-                </p>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div
-          className="o-footer_main_menu_wrap"
-        >
-          <div
-            className="o-footer_main_menu_title"
-          >
-            <p
-              className="a-text a-text-white a-text-14x22 a-text-600 a-text-uppercase"
-            >
-              CÁC THÔNG TIN VÀ DỰ ÁN MỚI
-            </p>
-          </div>
-          <ul
-            className="o-footer_main_menu_list"
-          >
-            <li
-              className="o-footer_main_menu_nav"
-            >
-              <a
-                aria-current="page"
-                className="a-link   active"
-                href="/"
-                onClick={[Function]}
-                target="_self"
-              >
-                <p
-                  className="a-text a-text-lavenderGray a-text-300 a-text-inline"
-                >
-                  Thông tin thị trường
-                </p>
-              </a>
-            </li>
-            <li
-              className="o-footer_main_menu_nav"
-            >
-              <a
-                aria-current="page"
-                className="a-link   active"
-                href="/"
-                onClick={[Function]}
-                target="_self"
-              >
-                <p
-                  className="a-text a-text-lavenderGray a-text-300 a-text-inline"
-                >
-                  Thông tin Novaland
-                </p>
-              </a>
-            </li>
-            <li
-              className="o-footer_main_menu_nav"
-            >
-              <a
-                aria-current="page"
-                className="a-link   active"
-                href="/"
-                onClick={[Function]}
-                target="_self"
-              >
-                <p
-                  className="a-text a-text-lavenderGray a-text-300 a-text-inline"
-                >
-                  Thông tin báo chí
-                </p>
-              </a>
-            </li>
-            <li
-              className="o-footer_main_menu_nav"
-            >
-              <a
-                aria-current="page"
-                className="a-link   active"
-                href="/"
-                onClick={[Function]}
-                target="_self"
-              >
-                <p
-                  className="a-text a-text-lavenderGray a-text-300 a-text-inline"
-                >
-                  Bất động sản Trung Tâm 
-                </p>
-              </a>
-            </li>
-            <li
-              className="o-footer_main_menu_nav"
-            >
-              <a
-                aria-current="page"
-                className="a-link   active"
-                href="/"
-                onClick={[Function]}
-                target="_self"
-              >
-                <p
-                  className="a-text a-text-lavenderGray a-text-300 a-text-inline"
-                >
-                  Đô Thị Vệ Tinh
-                </p>
-              </a>
-            </li>
-            <li
-              className="o-footer_main_menu_nav"
-            >
-              <a
-                aria-current="page"
-                className="a-link   active"
-                href="/"
-                onClick={[Function]}
-                target="_self"
-              >
-                <p
-                  className="a-text a-text-lavenderGray a-text-300 a-text-inline"
-                >
-                  Đô Thị Nghỉ Dưỡng
-                </p>
-              </a>
-            </li>
-            <li
-              className="o-footer_main_menu_nav"
-            >
-              <a
-                aria-current="page"
-                className="a-link   active"
-                href="/"
-                onClick={[Function]}
-                target="_self"
-              >
-                <p
-                  className="a-text a-text-lavenderGray a-text-300 a-text-inline"
-                >
-                  Bất Động Sản Công Nghiệp
-                </p>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div
-          className="o-footer_main_menu_wrap"
-        >
-          <div
-            className="o-footer_main_menu_title"
-          >
-            <p
-              className="a-text a-text-white a-text-14x22 a-text-600 a-text-uppercase"
-            >
-              THEO DÕI NOVALAND TRÊN
-            </p>
-          </div>
-          <ul
-            className="o-footer_main_menu_icon"
-          >
-            <div
-              className="o-footer_main_menu_icon_item"
-            >
-              <a
-                aria-current="page"
-                className="a-link   active"
-                href="/"
-                onClick={[Function]}
-                target="_self"
-                title="zalo"
-              >
-                <i
-                  className="a-icon a-icon-zalo a-icon-40"
-                />
-              </a>
-            </div>
-            <div
-              className="o-footer_main_menu_icon_item"
-            >
-              <a
-                aria-current="page"
-                className="a-link   active"
-                href="/"
-                onClick={[Function]}
-                target="_self"
-                title="youtube"
-              >
-                <i
-                  className="a-icon a-icon-youtube a-icon-40"
-                />
-              </a>
-            </div>
-            <div
-              className="o-footer_main_menu_icon_item"
-            >
-              <a
-                aria-current="page"
-                className="a-link   active"
-                href="/"
-                onClick={[Function]}
-                target="_self"
-                title="facebook"
-              >
-                <i
-                  className="a-icon a-icon-facebook a-icon-40"
-                />
-              </a>
-            </div>
-          </ul>
-        </div>
-      </div>
     </div>
   </div>
   <div
@@ -1950,7 +1949,7 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
               target="_self"
             >
               <p
-                className="a-text a-text-300 a-text-white a-text-opacity07"
+                className="a-text a-text-300 a-text-white a-text-opacity07 a-text-12x17"
               >
                 Chính sách bảo mật
               </p>
@@ -1967,7 +1966,7 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
               target="_self"
             >
               <p
-                className="a-text a-text-300 a-text-white a-text-opacity07"
+                className="a-text a-text-300 a-text-white a-text-opacity07 a-text-12x17"
               >
                 Điều khoản khách hàng
               </p>
@@ -1978,7 +1977,7 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
           className="o-footer_bottom_copyright"
         >
           <p
-            className="a-text a-text-300 a-text-white a-text-opacity07"
+            className="a-text a-text-300 a-text-white a-text-opacity07 a-text-12x17"
           >
             © 2021. Bản quyền thuộc về Tập đoàn Novaland (Việt Nam). Tất cả các quyền được bảo hộ.
           </p>
@@ -10036,13 +10035,6 @@ exports[`Storyshots Components/templates/Leadership Card 1`] = `
             }
           }
         />
-        <div
-          className="t-leadershipCard_icon"
-        >
-          <i
-            className="a-icon a-icon-arrowDownGrey a-icon-24"
-          />
-        </div>
       </div>
       <div
         className="t-leadershipCard_position"
@@ -10103,6 +10095,9 @@ exports[`Storyshots Components/templates/Leadership Card Detail 1`] = `
           }
         />
       </div>
+      <div
+        className="t-leadershipDetail_divider"
+      />
       <h2
         className="a-heading a-heading-dimGray a-heading-300"
         dangerouslySetInnerHTML={
@@ -10279,13 +10274,6 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                           }
                         }
                       />
-                      <div
-                        className="t-leadershipCard_icon"
-                      >
-                        <i
-                          className="a-icon a-icon-arrowDownGrey a-icon-24"
-                        />
-                      </div>
                     </div>
                     <div
                       className="t-leadershipCard_position"
@@ -10333,6 +10321,9 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                             }
                           />
                         </div>
+                        <div
+                          className="t-leadershipDetail_divider"
+                        />
                         <h2
                           className="a-heading a-heading-dimGray a-heading-300"
                           dangerouslySetInnerHTML={
@@ -10455,13 +10446,6 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                           }
                         }
                       />
-                      <div
-                        className="t-leadershipCard_icon"
-                      >
-                        <i
-                          className="a-icon a-icon-arrowDownGrey a-icon-24"
-                        />
-                      </div>
                     </div>
                     <div
                       className="t-leadershipCard_position"
@@ -10509,6 +10493,9 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                             }
                           />
                         </div>
+                        <div
+                          className="t-leadershipDetail_divider"
+                        />
                         <h2
                           className="a-heading a-heading-dimGray a-heading-300"
                           dangerouslySetInnerHTML={
@@ -10631,13 +10618,6 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                           }
                         }
                       />
-                      <div
-                        className="t-leadershipCard_icon"
-                      >
-                        <i
-                          className="a-icon a-icon-arrowDownGrey a-icon-24"
-                        />
-                      </div>
                     </div>
                     <div
                       className="t-leadershipCard_position"
@@ -10685,6 +10665,9 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                             }
                           />
                         </div>
+                        <div
+                          className="t-leadershipDetail_divider"
+                        />
                         <h2
                           className="a-heading a-heading-dimGray a-heading-300"
                           dangerouslySetInnerHTML={
@@ -10759,532 +10742,17 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
               </div>
             </div>
             <div
-              className="t-leadership_item_card"
-              onClick={[Function]}
+              className="t-leadership_item_btn"
             >
-              <div
-                className="t-leadershipCard"
+              <button
+                className="a-button a-button-with-icon"
+                disabled={false}
+                type="button"
               >
-                <div
-                  className="t-leadershipCard_wrapper"
-                >
-                  <div
-                    className="t-leadershipCard_thumbnail"
-                  >
-                    <div
-                      className="a-image a-image-1x1"
-                    >
-                      <img
-                        alt="LeadershipCard"
-                        loading="lazy"
-                        src="img_leadership1.png"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    className="t-leadershipCard_content"
-                  >
-                    <div
-                      className="t-leadershipCard_gender"
-                    >
-                      <p
-                        className="a-text a-text-16x24 a-text-darkMidnightBlue a-text-300 a-text-capitalize"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "Ông",
-                          }
-                        }
-                      />
-                    </div>
-                    <div
-                      className="t-leadershipCard_name"
-                    >
-                      <h3
-                        className="a-heading a-heading-jet a-heading-500 a-heading-fontNoto"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "Phạm Tiến Vân",
-                          }
-                        }
-                      />
-                      <div
-                        className="t-leadershipCard_icon"
-                      >
-                        <i
-                          className="a-icon a-icon-arrowDownGrey a-icon-24"
-                        />
-                      </div>
-                    </div>
-                    <div
-                      className="t-leadershipCard_position"
-                    >
-                      <p
-                        className="a-text a-text-16x24 a-text-dimGray a-text-300"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "Thành viên Hội đồng Quản trị Độc lập",
-                          }
-                        }
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="t-leadershipCard_detail"
-                >
-                  <div
-                    className="t-leadershipDetail"
-                  >
-                    <div
-                      className="t-leadershipDetail_wrapper"
-                    >
-                      <div
-                        className="t-leadershipDetail_info"
-                      >
-                        <h2
-                          className="a-heading a-heading-darkMidnightBlue a-heading-300 a-heading-capitalize"
-                          dangerouslySetInnerHTML={
-                            Object {
-                              "__html": "Ông",
-                            }
-                          }
-                        />
-                        <div
-                          className="t-leadershipDetail_name"
-                        >
-                          <h2
-                            className="a-heading a-heading-38x52 a-heading-500 a-heading-jet a-heading-capitalize a-heading-fontNoto"
-                            dangerouslySetInnerHTML={
-                              Object {
-                                "__html": "Phạm Tiến Vân",
-                              }
-                            }
-                          />
-                        </div>
-                        <h2
-                          className="a-heading a-heading-dimGray a-heading-300"
-                          dangerouslySetInnerHTML={
-                            Object {
-                              "__html": "Thành viên Hội đồng Quản trị Độc lập",
-                            }
-                          }
-                        />
-                      </div>
-                      <div
-                        className="t-leadershipDetail_thumbnail"
-                      >
-                        <div
-                          className="a-image a-image-223x320"
-                        >
-                          <img
-                            alt="leadershipDetail"
-                            loading="lazy"
-                            src="img_leadership1.png"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="t-leadershipDetail_achievement"
-                    >
-                      <ul>
-                        <li
-                          className="t-leadershipDetail_item"
-                        >
-                          <p
-                            className="a-text a-text-16x24 a-text-300 a-text-dimGray"
-                            dangerouslySetInnerHTML={
-                              Object {
-                                "__html": "Cử nhân Nông nghiệp. Tốt nghiệp Executive MBA, HSB-TUCK, Đại học Dartmouth, Hoa Kỳ.",
-                              }
-                            }
-                          />
-                        </li>
-                        <li
-                          className="t-leadershipDetail_item"
-                        >
-                          <p
-                            className="a-text a-text-16x24 a-text-300 a-text-dimGray"
-                            dangerouslySetInnerHTML={
-                              Object {
-                                "__html": "Là một trong những chủ doanh nghiệp tư nhân đầu tiên tại TP.HCM từ những năm 1980. Thành viên Tổ chức doanh nhân thế giới (YPO - WPO).",
-                              }
-                            }
-                          />
-                        </li>
-                      </ul>
-                    </div>
-                    <div
-                      className="t-leadershipDetail_slogan"
-                    >
-                      <div
-                        className="t-leadershipDetail_slogan_detail"
-                      >
-                        <h2
-                          className="a-heading a-heading-dimGray a-heading-300"
-                          dangerouslySetInnerHTML={
-                            Object {
-                              "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được sứ mạng, hoài bão của Novaland Group.",
-                            }
-                          }
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="t-leadership_item_card"
-              onClick={[Function]}
-            >
-              <div
-                className="t-leadershipCard"
-              >
-                <div
-                  className="t-leadershipCard_wrapper"
-                >
-                  <div
-                    className="t-leadershipCard_thumbnail"
-                  >
-                    <div
-                      className="a-image a-image-1x1"
-                    >
-                      <img
-                        alt="LeadershipCard"
-                        loading="lazy"
-                        src="img_leadership1.png"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    className="t-leadershipCard_content"
-                  >
-                    <div
-                      className="t-leadershipCard_gender"
-                    >
-                      <p
-                        className="a-text a-text-16x24 a-text-darkMidnightBlue a-text-300 a-text-capitalize"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "Ông",
-                          }
-                        }
-                      />
-                    </div>
-                    <div
-                      className="t-leadershipCard_name"
-                    >
-                      <h3
-                        className="a-heading a-heading-jet a-heading-500 a-heading-fontNoto"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "Lê Quốc Hùng",
-                          }
-                        }
-                      />
-                      <div
-                        className="t-leadershipCard_icon"
-                      >
-                        <i
-                          className="a-icon a-icon-arrowDownGrey a-icon-24"
-                        />
-                      </div>
-                    </div>
-                    <div
-                      className="t-leadershipCard_position"
-                    >
-                      <p
-                        className="a-text a-text-16x24 a-text-dimGray a-text-300"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "Thành viên Hội đồng Quản trị Độc lập",
-                          }
-                        }
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="t-leadershipCard_detail"
-                >
-                  <div
-                    className="t-leadershipDetail"
-                  >
-                    <div
-                      className="t-leadershipDetail_wrapper"
-                    >
-                      <div
-                        className="t-leadershipDetail_info"
-                      >
-                        <h2
-                          className="a-heading a-heading-darkMidnightBlue a-heading-300 a-heading-capitalize"
-                          dangerouslySetInnerHTML={
-                            Object {
-                              "__html": "Ông",
-                            }
-                          }
-                        />
-                        <div
-                          className="t-leadershipDetail_name"
-                        >
-                          <h2
-                            className="a-heading a-heading-38x52 a-heading-500 a-heading-jet a-heading-capitalize a-heading-fontNoto"
-                            dangerouslySetInnerHTML={
-                              Object {
-                                "__html": "Lê Quốc Hùng",
-                              }
-                            }
-                          />
-                        </div>
-                        <h2
-                          className="a-heading a-heading-dimGray a-heading-300"
-                          dangerouslySetInnerHTML={
-                            Object {
-                              "__html": "Thành viên Hội đồng Quản trị Độc lập",
-                            }
-                          }
-                        />
-                      </div>
-                      <div
-                        className="t-leadershipDetail_thumbnail"
-                      >
-                        <div
-                          className="a-image a-image-223x320"
-                        >
-                          <img
-                            alt="leadershipDetail"
-                            loading="lazy"
-                            src="img_leadership1.png"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="t-leadershipDetail_achievement"
-                    >
-                      <ul>
-                        <li
-                          className="t-leadershipDetail_item"
-                        >
-                          <p
-                            className="a-text a-text-16x24 a-text-300 a-text-dimGray"
-                            dangerouslySetInnerHTML={
-                              Object {
-                                "__html": "Cử nhân Nông nghiệp. Tốt nghiệp Executive MBA, HSB-TUCK, Đại học Dartmouth, Hoa Kỳ.",
-                              }
-                            }
-                          />
-                        </li>
-                        <li
-                          className="t-leadershipDetail_item"
-                        >
-                          <p
-                            className="a-text a-text-16x24 a-text-300 a-text-dimGray"
-                            dangerouslySetInnerHTML={
-                              Object {
-                                "__html": "Là một trong những chủ doanh nghiệp tư nhân đầu tiên tại TP.HCM từ những năm 1980. Thành viên Tổ chức doanh nhân thế giới (YPO - WPO).",
-                              }
-                            }
-                          />
-                        </li>
-                      </ul>
-                    </div>
-                    <div
-                      className="t-leadershipDetail_slogan"
-                    >
-                      <div
-                        className="t-leadershipDetail_slogan_detail"
-                      >
-                        <h2
-                          className="a-heading a-heading-dimGray a-heading-300"
-                          dangerouslySetInnerHTML={
-                            Object {
-                              "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được sứ mạng, hoài bão của Novaland Group.",
-                            }
-                          }
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="t-leadership_item_card"
-              onClick={[Function]}
-            >
-              <div
-                className="t-leadershipCard"
-              >
-                <div
-                  className="t-leadershipCard_wrapper"
-                >
-                  <div
-                    className="t-leadershipCard_thumbnail"
-                  >
-                    <div
-                      className="a-image a-image-1x1"
-                    >
-                      <img
-                        alt="LeadershipCard"
-                        loading="lazy"
-                        src="img_leadership1.png"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    className="t-leadershipCard_content"
-                  >
-                    <div
-                      className="t-leadershipCard_gender"
-                    >
-                      <p
-                        className="a-text a-text-16x24 a-text-darkMidnightBlue a-text-300 a-text-capitalize"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "Bà",
-                          }
-                        }
-                      />
-                    </div>
-                    <div
-                      className="t-leadershipCard_name"
-                    >
-                      <h3
-                        className="a-heading a-heading-jet a-heading-500 a-heading-fontNoto"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "Nguyễn Mỹ Hạnh",
-                          }
-                        }
-                      />
-                      <div
-                        className="t-leadershipCard_icon"
-                      >
-                        <i
-                          className="a-icon a-icon-arrowDownGrey a-icon-24"
-                        />
-                      </div>
-                    </div>
-                    <div
-                      className="t-leadershipCard_position"
-                    >
-                      <p
-                        className="a-text a-text-16x24 a-text-dimGray a-text-300"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "Thành viên Hội đồng Quản trị Độc lập",
-                          }
-                        }
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="t-leadershipCard_detail"
-                >
-                  <div
-                    className="t-leadershipDetail"
-                  >
-                    <div
-                      className="t-leadershipDetail_wrapper"
-                    >
-                      <div
-                        className="t-leadershipDetail_info"
-                      >
-                        <h2
-                          className="a-heading a-heading-darkMidnightBlue a-heading-300 a-heading-capitalize"
-                          dangerouslySetInnerHTML={
-                            Object {
-                              "__html": "Bà",
-                            }
-                          }
-                        />
-                        <div
-                          className="t-leadershipDetail_name"
-                        >
-                          <h2
-                            className="a-heading a-heading-38x52 a-heading-500 a-heading-jet a-heading-capitalize a-heading-fontNoto"
-                            dangerouslySetInnerHTML={
-                              Object {
-                                "__html": "Nguyễn Mỹ Hạnh",
-                              }
-                            }
-                          />
-                        </div>
-                        <h2
-                          className="a-heading a-heading-dimGray a-heading-300"
-                          dangerouslySetInnerHTML={
-                            Object {
-                              "__html": "Thành viên Hội đồng Quản trị Độc lập",
-                            }
-                          }
-                        />
-                      </div>
-                      <div
-                        className="t-leadershipDetail_thumbnail"
-                      >
-                        <div
-                          className="a-image a-image-223x320"
-                        >
-                          <img
-                            alt="leadershipDetail"
-                            loading="lazy"
-                            src="img_leadership1.png"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="t-leadershipDetail_achievement"
-                    >
-                      <ul>
-                        <li
-                          className="t-leadershipDetail_item"
-                        >
-                          <p
-                            className="a-text a-text-16x24 a-text-300 a-text-dimGray"
-                            dangerouslySetInnerHTML={
-                              Object {
-                                "__html": "Cử nhân Nông nghiệp. Tốt nghiệp Executive MBA, HSB-TUCK, Đại học Dartmouth, Hoa Kỳ.",
-                              }
-                            }
-                          />
-                        </li>
-                        <li
-                          className="t-leadershipDetail_item"
-                        >
-                          <p
-                            className="a-text a-text-16x24 a-text-300 a-text-dimGray"
-                            dangerouslySetInnerHTML={
-                              Object {
-                                "__html": "Là một trong những chủ doanh nghiệp tư nhân đầu tiên tại TP.HCM từ những năm 1980. Thành viên Tổ chức doanh nhân thế giới (YPO - WPO).",
-                              }
-                            }
-                          />
-                        </li>
-                      </ul>
-                    </div>
-                    <div
-                      className="t-leadershipDetail_slogan"
-                    >
-                      <div
-                        className="t-leadershipDetail_slogan_detail"
-                      >
-                        <h2
-                          className="a-heading a-heading-dimGray a-heading-300"
-                          dangerouslySetInnerHTML={
-                            Object {
-                              "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được sứ mạng, hoài bão của Novaland Group.",
-                            }
-                          }
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                <i
+                  className="a-icon a-icon-arrowDownBrown a-icon-14"
+                />
+              </button>
             </div>
           </div>
           <div
@@ -11322,6 +10790,9 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                         }
                       />
                     </div>
+                    <div
+                      className="t-leadershipDetail_divider"
+                    />
                     <h2
                       className="a-heading a-heading-dimGray a-heading-300"
                       dangerouslySetInnerHTML={
@@ -11425,6 +10896,9 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                         }
                       />
                     </div>
+                    <div
+                      className="t-leadershipDetail_divider"
+                    />
                     <h2
                       className="a-heading a-heading-dimGray a-heading-300"
                       dangerouslySetInnerHTML={
@@ -11528,320 +11002,14 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                         }
                       />
                     </div>
+                    <div
+                      className="t-leadershipDetail_divider"
+                    />
                     <h2
                       className="a-heading a-heading-dimGray a-heading-300"
                       dangerouslySetInnerHTML={
                         Object {
                           "__html": "Thành viên Hội đồng Quản trị, Phó Tổng Giám đốc",
-                        }
-                      }
-                    />
-                  </div>
-                  <div
-                    className="t-leadershipDetail_thumbnail"
-                  >
-                    <div
-                      className="a-image a-image-223x320"
-                    >
-                      <img
-                        alt="leadershipDetail"
-                        loading="lazy"
-                        src="img_leadership1.png"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="t-leadershipDetail_achievement"
-                >
-                  <ul>
-                    <li
-                      className="t-leadershipDetail_item"
-                    >
-                      <p
-                        className="a-text a-text-16x24 a-text-300 a-text-dimGray"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "Cử nhân Nông nghiệp. Tốt nghiệp Executive MBA, HSB-TUCK, Đại học Dartmouth, Hoa Kỳ.",
-                          }
-                        }
-                      />
-                    </li>
-                    <li
-                      className="t-leadershipDetail_item"
-                    >
-                      <p
-                        className="a-text a-text-16x24 a-text-300 a-text-dimGray"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "Là một trong những chủ doanh nghiệp tư nhân đầu tiên tại TP.HCM từ những năm 1980. Thành viên Tổ chức doanh nhân thế giới (YPO - WPO).",
-                          }
-                        }
-                      />
-                    </li>
-                  </ul>
-                </div>
-                <div
-                  className="t-leadershipDetail_slogan"
-                >
-                  <div
-                    className="t-leadershipDetail_slogan_detail"
-                  >
-                    <h2
-                      className="a-heading a-heading-dimGray a-heading-300"
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được sứ mạng, hoài bão của Novaland Group.",
-                        }
-                      }
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="t-leadership_item_detail"
-            >
-              <div
-                className="t-leadershipDetail"
-              >
-                <div
-                  className="t-leadershipDetail_wrapper"
-                >
-                  <div
-                    className="t-leadershipDetail_info"
-                  >
-                    <h2
-                      className="a-heading a-heading-darkMidnightBlue a-heading-300 a-heading-capitalize"
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "Ông",
-                        }
-                      }
-                    />
-                    <div
-                      className="t-leadershipDetail_name"
-                    >
-                      <h2
-                        className="a-heading a-heading-38x52 a-heading-500 a-heading-jet a-heading-capitalize a-heading-fontNoto"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "Phạm Tiến Vân",
-                          }
-                        }
-                      />
-                    </div>
-                    <h2
-                      className="a-heading a-heading-dimGray a-heading-300"
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "Thành viên Hội đồng Quản trị Độc lập",
-                        }
-                      }
-                    />
-                  </div>
-                  <div
-                    className="t-leadershipDetail_thumbnail"
-                  >
-                    <div
-                      className="a-image a-image-223x320"
-                    >
-                      <img
-                        alt="leadershipDetail"
-                        loading="lazy"
-                        src="img_leadership1.png"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="t-leadershipDetail_achievement"
-                >
-                  <ul>
-                    <li
-                      className="t-leadershipDetail_item"
-                    >
-                      <p
-                        className="a-text a-text-16x24 a-text-300 a-text-dimGray"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "Cử nhân Nông nghiệp. Tốt nghiệp Executive MBA, HSB-TUCK, Đại học Dartmouth, Hoa Kỳ.",
-                          }
-                        }
-                      />
-                    </li>
-                    <li
-                      className="t-leadershipDetail_item"
-                    >
-                      <p
-                        className="a-text a-text-16x24 a-text-300 a-text-dimGray"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "Là một trong những chủ doanh nghiệp tư nhân đầu tiên tại TP.HCM từ những năm 1980. Thành viên Tổ chức doanh nhân thế giới (YPO - WPO).",
-                          }
-                        }
-                      />
-                    </li>
-                  </ul>
-                </div>
-                <div
-                  className="t-leadershipDetail_slogan"
-                >
-                  <div
-                    className="t-leadershipDetail_slogan_detail"
-                  >
-                    <h2
-                      className="a-heading a-heading-dimGray a-heading-300"
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được sứ mạng, hoài bão của Novaland Group.",
-                        }
-                      }
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="t-leadership_item_detail"
-            >
-              <div
-                className="t-leadershipDetail"
-              >
-                <div
-                  className="t-leadershipDetail_wrapper"
-                >
-                  <div
-                    className="t-leadershipDetail_info"
-                  >
-                    <h2
-                      className="a-heading a-heading-darkMidnightBlue a-heading-300 a-heading-capitalize"
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "Ông",
-                        }
-                      }
-                    />
-                    <div
-                      className="t-leadershipDetail_name"
-                    >
-                      <h2
-                        className="a-heading a-heading-38x52 a-heading-500 a-heading-jet a-heading-capitalize a-heading-fontNoto"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "Lê Quốc Hùng",
-                          }
-                        }
-                      />
-                    </div>
-                    <h2
-                      className="a-heading a-heading-dimGray a-heading-300"
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "Thành viên Hội đồng Quản trị Độc lập",
-                        }
-                      }
-                    />
-                  </div>
-                  <div
-                    className="t-leadershipDetail_thumbnail"
-                  >
-                    <div
-                      className="a-image a-image-223x320"
-                    >
-                      <img
-                        alt="leadershipDetail"
-                        loading="lazy"
-                        src="img_leadership1.png"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="t-leadershipDetail_achievement"
-                >
-                  <ul>
-                    <li
-                      className="t-leadershipDetail_item"
-                    >
-                      <p
-                        className="a-text a-text-16x24 a-text-300 a-text-dimGray"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "Cử nhân Nông nghiệp. Tốt nghiệp Executive MBA, HSB-TUCK, Đại học Dartmouth, Hoa Kỳ.",
-                          }
-                        }
-                      />
-                    </li>
-                    <li
-                      className="t-leadershipDetail_item"
-                    >
-                      <p
-                        className="a-text a-text-16x24 a-text-300 a-text-dimGray"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "Là một trong những chủ doanh nghiệp tư nhân đầu tiên tại TP.HCM từ những năm 1980. Thành viên Tổ chức doanh nhân thế giới (YPO - WPO).",
-                          }
-                        }
-                      />
-                    </li>
-                  </ul>
-                </div>
-                <div
-                  className="t-leadershipDetail_slogan"
-                >
-                  <div
-                    className="t-leadershipDetail_slogan_detail"
-                  >
-                    <h2
-                      className="a-heading a-heading-dimGray a-heading-300"
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được sứ mạng, hoài bão của Novaland Group.",
-                        }
-                      }
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="t-leadership_item_detail"
-            >
-              <div
-                className="t-leadershipDetail"
-              >
-                <div
-                  className="t-leadershipDetail_wrapper"
-                >
-                  <div
-                    className="t-leadershipDetail_info"
-                  >
-                    <h2
-                      className="a-heading a-heading-darkMidnightBlue a-heading-300 a-heading-capitalize"
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "Bà",
-                        }
-                      }
-                    />
-                    <div
-                      className="t-leadershipDetail_name"
-                    >
-                      <h2
-                        className="a-heading a-heading-38x52 a-heading-500 a-heading-jet a-heading-capitalize a-heading-fontNoto"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "Nguyễn Mỹ Hạnh",
-                          }
-                        }
-                      />
-                    </div>
-                    <h2
-                      className="a-heading a-heading-dimGray a-heading-300"
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "Thành viên Hội đồng Quản trị Độc lập",
                         }
                       }
                     />
@@ -11969,13 +11137,6 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                           }
                         }
                       />
-                      <div
-                        className="t-leadershipCard_icon"
-                      >
-                        <i
-                          className="a-icon a-icon-arrowDownGrey a-icon-24"
-                        />
-                      </div>
                     </div>
                     <div
                       className="t-leadershipCard_position"
@@ -12023,6 +11184,9 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                             }
                           />
                         </div>
+                        <div
+                          className="t-leadershipDetail_divider"
+                        />
                         <h2
                           className="a-heading a-heading-dimGray a-heading-300"
                           dangerouslySetInnerHTML={
@@ -12145,13 +11309,6 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                           }
                         }
                       />
-                      <div
-                        className="t-leadershipCard_icon"
-                      >
-                        <i
-                          className="a-icon a-icon-arrowDownGrey a-icon-24"
-                        />
-                      </div>
                     </div>
                     <div
                       className="t-leadershipCard_position"
@@ -12199,6 +11356,9 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                             }
                           />
                         </div>
+                        <div
+                          className="t-leadershipDetail_divider"
+                        />
                         <h2
                           className="a-heading a-heading-dimGray a-heading-300"
                           dangerouslySetInnerHTML={
@@ -12321,13 +11481,6 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                           }
                         }
                       />
-                      <div
-                        className="t-leadershipCard_icon"
-                      >
-                        <i
-                          className="a-icon a-icon-arrowDownGrey a-icon-24"
-                        />
-                      </div>
                     </div>
                     <div
                       className="t-leadershipCard_position"
@@ -12375,6 +11528,9 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                             }
                           />
                         </div>
+                        <div
+                          className="t-leadershipDetail_divider"
+                        />
                         <h2
                           className="a-heading a-heading-dimGray a-heading-300"
                           dangerouslySetInnerHTML={
@@ -12449,532 +11605,17 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
               </div>
             </div>
             <div
-              className="t-leadership_item_card"
-              onClick={[Function]}
+              className="t-leadership_item_btn"
             >
-              <div
-                className="t-leadershipCard"
+              <button
+                className="a-button a-button-with-icon"
+                disabled={false}
+                type="button"
               >
-                <div
-                  className="t-leadershipCard_wrapper"
-                >
-                  <div
-                    className="t-leadershipCard_thumbnail"
-                  >
-                    <div
-                      className="a-image a-image-1x1"
-                    >
-                      <img
-                        alt="LeadershipCard"
-                        loading="lazy"
-                        src="img_leadership1.png"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    className="t-leadershipCard_content"
-                  >
-                    <div
-                      className="t-leadershipCard_gender"
-                    >
-                      <p
-                        className="a-text a-text-16x24 a-text-darkMidnightBlue a-text-300 a-text-capitalize"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "Ông",
-                          }
-                        }
-                      />
-                    </div>
-                    <div
-                      className="t-leadershipCard_name"
-                    >
-                      <h3
-                        className="a-heading a-heading-jet a-heading-500 a-heading-fontNoto"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "Phạm Tiến Vân",
-                          }
-                        }
-                      />
-                      <div
-                        className="t-leadershipCard_icon"
-                      >
-                        <i
-                          className="a-icon a-icon-arrowDownGrey a-icon-24"
-                        />
-                      </div>
-                    </div>
-                    <div
-                      className="t-leadershipCard_position"
-                    >
-                      <p
-                        className="a-text a-text-16x24 a-text-dimGray a-text-300"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "Thành viên Hội đồng Quản trị Độc lập",
-                          }
-                        }
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="t-leadershipCard_detail"
-                >
-                  <div
-                    className="t-leadershipDetail"
-                  >
-                    <div
-                      className="t-leadershipDetail_wrapper"
-                    >
-                      <div
-                        className="t-leadershipDetail_info"
-                      >
-                        <h2
-                          className="a-heading a-heading-darkMidnightBlue a-heading-300 a-heading-capitalize"
-                          dangerouslySetInnerHTML={
-                            Object {
-                              "__html": "Ông",
-                            }
-                          }
-                        />
-                        <div
-                          className="t-leadershipDetail_name"
-                        >
-                          <h2
-                            className="a-heading a-heading-38x52 a-heading-500 a-heading-jet a-heading-capitalize a-heading-fontNoto"
-                            dangerouslySetInnerHTML={
-                              Object {
-                                "__html": "Phạm Tiến Vân",
-                              }
-                            }
-                          />
-                        </div>
-                        <h2
-                          className="a-heading a-heading-dimGray a-heading-300"
-                          dangerouslySetInnerHTML={
-                            Object {
-                              "__html": "Thành viên Hội đồng Quản trị Độc lập",
-                            }
-                          }
-                        />
-                      </div>
-                      <div
-                        className="t-leadershipDetail_thumbnail"
-                      >
-                        <div
-                          className="a-image a-image-223x320"
-                        >
-                          <img
-                            alt="leadershipDetail"
-                            loading="lazy"
-                            src="img_leadership1.png"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="t-leadershipDetail_achievement"
-                    >
-                      <ul>
-                        <li
-                          className="t-leadershipDetail_item"
-                        >
-                          <p
-                            className="a-text a-text-16x24 a-text-300 a-text-dimGray"
-                            dangerouslySetInnerHTML={
-                              Object {
-                                "__html": "Cử nhân Nông nghiệp. Tốt nghiệp Executive MBA, HSB-TUCK, Đại học Dartmouth, Hoa Kỳ.",
-                              }
-                            }
-                          />
-                        </li>
-                        <li
-                          className="t-leadershipDetail_item"
-                        >
-                          <p
-                            className="a-text a-text-16x24 a-text-300 a-text-dimGray"
-                            dangerouslySetInnerHTML={
-                              Object {
-                                "__html": "Là một trong những chủ doanh nghiệp tư nhân đầu tiên tại TP.HCM từ những năm 1980. Thành viên Tổ chức doanh nhân thế giới (YPO - WPO).",
-                              }
-                            }
-                          />
-                        </li>
-                      </ul>
-                    </div>
-                    <div
-                      className="t-leadershipDetail_slogan"
-                    >
-                      <div
-                        className="t-leadershipDetail_slogan_detail"
-                      >
-                        <h2
-                          className="a-heading a-heading-dimGray a-heading-300"
-                          dangerouslySetInnerHTML={
-                            Object {
-                              "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được sứ mạng, hoài bão của Novaland Group.",
-                            }
-                          }
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="t-leadership_item_card"
-              onClick={[Function]}
-            >
-              <div
-                className="t-leadershipCard"
-              >
-                <div
-                  className="t-leadershipCard_wrapper"
-                >
-                  <div
-                    className="t-leadershipCard_thumbnail"
-                  >
-                    <div
-                      className="a-image a-image-1x1"
-                    >
-                      <img
-                        alt="LeadershipCard"
-                        loading="lazy"
-                        src="img_leadership1.png"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    className="t-leadershipCard_content"
-                  >
-                    <div
-                      className="t-leadershipCard_gender"
-                    >
-                      <p
-                        className="a-text a-text-16x24 a-text-darkMidnightBlue a-text-300 a-text-capitalize"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "Ông",
-                          }
-                        }
-                      />
-                    </div>
-                    <div
-                      className="t-leadershipCard_name"
-                    >
-                      <h3
-                        className="a-heading a-heading-jet a-heading-500 a-heading-fontNoto"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "Lê Quốc Hùng",
-                          }
-                        }
-                      />
-                      <div
-                        className="t-leadershipCard_icon"
-                      >
-                        <i
-                          className="a-icon a-icon-arrowDownGrey a-icon-24"
-                        />
-                      </div>
-                    </div>
-                    <div
-                      className="t-leadershipCard_position"
-                    >
-                      <p
-                        className="a-text a-text-16x24 a-text-dimGray a-text-300"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "Thành viên Hội đồng Quản trị Độc lập",
-                          }
-                        }
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="t-leadershipCard_detail"
-                >
-                  <div
-                    className="t-leadershipDetail"
-                  >
-                    <div
-                      className="t-leadershipDetail_wrapper"
-                    >
-                      <div
-                        className="t-leadershipDetail_info"
-                      >
-                        <h2
-                          className="a-heading a-heading-darkMidnightBlue a-heading-300 a-heading-capitalize"
-                          dangerouslySetInnerHTML={
-                            Object {
-                              "__html": "Ông",
-                            }
-                          }
-                        />
-                        <div
-                          className="t-leadershipDetail_name"
-                        >
-                          <h2
-                            className="a-heading a-heading-38x52 a-heading-500 a-heading-jet a-heading-capitalize a-heading-fontNoto"
-                            dangerouslySetInnerHTML={
-                              Object {
-                                "__html": "Lê Quốc Hùng",
-                              }
-                            }
-                          />
-                        </div>
-                        <h2
-                          className="a-heading a-heading-dimGray a-heading-300"
-                          dangerouslySetInnerHTML={
-                            Object {
-                              "__html": "Thành viên Hội đồng Quản trị Độc lập",
-                            }
-                          }
-                        />
-                      </div>
-                      <div
-                        className="t-leadershipDetail_thumbnail"
-                      >
-                        <div
-                          className="a-image a-image-223x320"
-                        >
-                          <img
-                            alt="leadershipDetail"
-                            loading="lazy"
-                            src="img_leadership1.png"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="t-leadershipDetail_achievement"
-                    >
-                      <ul>
-                        <li
-                          className="t-leadershipDetail_item"
-                        >
-                          <p
-                            className="a-text a-text-16x24 a-text-300 a-text-dimGray"
-                            dangerouslySetInnerHTML={
-                              Object {
-                                "__html": "Cử nhân Nông nghiệp. Tốt nghiệp Executive MBA, HSB-TUCK, Đại học Dartmouth, Hoa Kỳ.",
-                              }
-                            }
-                          />
-                        </li>
-                        <li
-                          className="t-leadershipDetail_item"
-                        >
-                          <p
-                            className="a-text a-text-16x24 a-text-300 a-text-dimGray"
-                            dangerouslySetInnerHTML={
-                              Object {
-                                "__html": "Là một trong những chủ doanh nghiệp tư nhân đầu tiên tại TP.HCM từ những năm 1980. Thành viên Tổ chức doanh nhân thế giới (YPO - WPO).",
-                              }
-                            }
-                          />
-                        </li>
-                      </ul>
-                    </div>
-                    <div
-                      className="t-leadershipDetail_slogan"
-                    >
-                      <div
-                        className="t-leadershipDetail_slogan_detail"
-                      >
-                        <h2
-                          className="a-heading a-heading-dimGray a-heading-300"
-                          dangerouslySetInnerHTML={
-                            Object {
-                              "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được sứ mạng, hoài bão của Novaland Group.",
-                            }
-                          }
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="t-leadership_item_card"
-              onClick={[Function]}
-            >
-              <div
-                className="t-leadershipCard"
-              >
-                <div
-                  className="t-leadershipCard_wrapper"
-                >
-                  <div
-                    className="t-leadershipCard_thumbnail"
-                  >
-                    <div
-                      className="a-image a-image-1x1"
-                    >
-                      <img
-                        alt="LeadershipCard"
-                        loading="lazy"
-                        src="img_leadership1.png"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    className="t-leadershipCard_content"
-                  >
-                    <div
-                      className="t-leadershipCard_gender"
-                    >
-                      <p
-                        className="a-text a-text-16x24 a-text-darkMidnightBlue a-text-300 a-text-capitalize"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "Bà",
-                          }
-                        }
-                      />
-                    </div>
-                    <div
-                      className="t-leadershipCard_name"
-                    >
-                      <h3
-                        className="a-heading a-heading-jet a-heading-500 a-heading-fontNoto"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "Nguyễn Mỹ Hạnh",
-                          }
-                        }
-                      />
-                      <div
-                        className="t-leadershipCard_icon"
-                      >
-                        <i
-                          className="a-icon a-icon-arrowDownGrey a-icon-24"
-                        />
-                      </div>
-                    </div>
-                    <div
-                      className="t-leadershipCard_position"
-                    >
-                      <p
-                        className="a-text a-text-16x24 a-text-dimGray a-text-300"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "Thành viên Hội đồng Quản trị Độc lập",
-                          }
-                        }
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="t-leadershipCard_detail"
-                >
-                  <div
-                    className="t-leadershipDetail"
-                  >
-                    <div
-                      className="t-leadershipDetail_wrapper"
-                    >
-                      <div
-                        className="t-leadershipDetail_info"
-                      >
-                        <h2
-                          className="a-heading a-heading-darkMidnightBlue a-heading-300 a-heading-capitalize"
-                          dangerouslySetInnerHTML={
-                            Object {
-                              "__html": "Bà",
-                            }
-                          }
-                        />
-                        <div
-                          className="t-leadershipDetail_name"
-                        >
-                          <h2
-                            className="a-heading a-heading-38x52 a-heading-500 a-heading-jet a-heading-capitalize a-heading-fontNoto"
-                            dangerouslySetInnerHTML={
-                              Object {
-                                "__html": "Nguyễn Mỹ Hạnh",
-                              }
-                            }
-                          />
-                        </div>
-                        <h2
-                          className="a-heading a-heading-dimGray a-heading-300"
-                          dangerouslySetInnerHTML={
-                            Object {
-                              "__html": "Thành viên Hội đồng Quản trị Độc lập",
-                            }
-                          }
-                        />
-                      </div>
-                      <div
-                        className="t-leadershipDetail_thumbnail"
-                      >
-                        <div
-                          className="a-image a-image-223x320"
-                        >
-                          <img
-                            alt="leadershipDetail"
-                            loading="lazy"
-                            src="img_leadership1.png"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="t-leadershipDetail_achievement"
-                    >
-                      <ul>
-                        <li
-                          className="t-leadershipDetail_item"
-                        >
-                          <p
-                            className="a-text a-text-16x24 a-text-300 a-text-dimGray"
-                            dangerouslySetInnerHTML={
-                              Object {
-                                "__html": "Cử nhân Nông nghiệp. Tốt nghiệp Executive MBA, HSB-TUCK, Đại học Dartmouth, Hoa Kỳ.",
-                              }
-                            }
-                          />
-                        </li>
-                        <li
-                          className="t-leadershipDetail_item"
-                        >
-                          <p
-                            className="a-text a-text-16x24 a-text-300 a-text-dimGray"
-                            dangerouslySetInnerHTML={
-                              Object {
-                                "__html": "Là một trong những chủ doanh nghiệp tư nhân đầu tiên tại TP.HCM từ những năm 1980. Thành viên Tổ chức doanh nhân thế giới (YPO - WPO).",
-                              }
-                            }
-                          />
-                        </li>
-                      </ul>
-                    </div>
-                    <div
-                      className="t-leadershipDetail_slogan"
-                    >
-                      <div
-                        className="t-leadershipDetail_slogan_detail"
-                      >
-                        <h2
-                          className="a-heading a-heading-dimGray a-heading-300"
-                          dangerouslySetInnerHTML={
-                            Object {
-                              "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được sứ mạng, hoài bão của Novaland Group.",
-                            }
-                          }
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                <i
+                  className="a-icon a-icon-arrowDownBrown a-icon-14"
+                />
+              </button>
             </div>
           </div>
           <div
@@ -13012,6 +11653,9 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                         }
                       />
                     </div>
+                    <div
+                      className="t-leadershipDetail_divider"
+                    />
                     <h2
                       className="a-heading a-heading-dimGray a-heading-300"
                       dangerouslySetInnerHTML={
@@ -13115,6 +11759,9 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                         }
                       />
                     </div>
+                    <div
+                      className="t-leadershipDetail_divider"
+                    />
                     <h2
                       className="a-heading a-heading-dimGray a-heading-300"
                       dangerouslySetInnerHTML={
@@ -13218,320 +11865,14 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                         }
                       />
                     </div>
+                    <div
+                      className="t-leadershipDetail_divider"
+                    />
                     <h2
                       className="a-heading a-heading-dimGray a-heading-300"
                       dangerouslySetInnerHTML={
                         Object {
                           "__html": "Thành viên Hội đồng Quản trị, Phó Tổng Giám đốc",
-                        }
-                      }
-                    />
-                  </div>
-                  <div
-                    className="t-leadershipDetail_thumbnail"
-                  >
-                    <div
-                      className="a-image a-image-223x320"
-                    >
-                      <img
-                        alt="leadershipDetail"
-                        loading="lazy"
-                        src="img_leadership1.png"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="t-leadershipDetail_achievement"
-                >
-                  <ul>
-                    <li
-                      className="t-leadershipDetail_item"
-                    >
-                      <p
-                        className="a-text a-text-16x24 a-text-300 a-text-dimGray"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "Cử nhân Nông nghiệp. Tốt nghiệp Executive MBA, HSB-TUCK, Đại học Dartmouth, Hoa Kỳ.",
-                          }
-                        }
-                      />
-                    </li>
-                    <li
-                      className="t-leadershipDetail_item"
-                    >
-                      <p
-                        className="a-text a-text-16x24 a-text-300 a-text-dimGray"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "Là một trong những chủ doanh nghiệp tư nhân đầu tiên tại TP.HCM từ những năm 1980. Thành viên Tổ chức doanh nhân thế giới (YPO - WPO).",
-                          }
-                        }
-                      />
-                    </li>
-                  </ul>
-                </div>
-                <div
-                  className="t-leadershipDetail_slogan"
-                >
-                  <div
-                    className="t-leadershipDetail_slogan_detail"
-                  >
-                    <h2
-                      className="a-heading a-heading-dimGray a-heading-300"
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được sứ mạng, hoài bão của Novaland Group.",
-                        }
-                      }
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="t-leadership_item_detail"
-            >
-              <div
-                className="t-leadershipDetail"
-              >
-                <div
-                  className="t-leadershipDetail_wrapper"
-                >
-                  <div
-                    className="t-leadershipDetail_info"
-                  >
-                    <h2
-                      className="a-heading a-heading-darkMidnightBlue a-heading-300 a-heading-capitalize"
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "Ông",
-                        }
-                      }
-                    />
-                    <div
-                      className="t-leadershipDetail_name"
-                    >
-                      <h2
-                        className="a-heading a-heading-38x52 a-heading-500 a-heading-jet a-heading-capitalize a-heading-fontNoto"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "Phạm Tiến Vân",
-                          }
-                        }
-                      />
-                    </div>
-                    <h2
-                      className="a-heading a-heading-dimGray a-heading-300"
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "Thành viên Hội đồng Quản trị Độc lập",
-                        }
-                      }
-                    />
-                  </div>
-                  <div
-                    className="t-leadershipDetail_thumbnail"
-                  >
-                    <div
-                      className="a-image a-image-223x320"
-                    >
-                      <img
-                        alt="leadershipDetail"
-                        loading="lazy"
-                        src="img_leadership1.png"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="t-leadershipDetail_achievement"
-                >
-                  <ul>
-                    <li
-                      className="t-leadershipDetail_item"
-                    >
-                      <p
-                        className="a-text a-text-16x24 a-text-300 a-text-dimGray"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "Cử nhân Nông nghiệp. Tốt nghiệp Executive MBA, HSB-TUCK, Đại học Dartmouth, Hoa Kỳ.",
-                          }
-                        }
-                      />
-                    </li>
-                    <li
-                      className="t-leadershipDetail_item"
-                    >
-                      <p
-                        className="a-text a-text-16x24 a-text-300 a-text-dimGray"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "Là một trong những chủ doanh nghiệp tư nhân đầu tiên tại TP.HCM từ những năm 1980. Thành viên Tổ chức doanh nhân thế giới (YPO - WPO).",
-                          }
-                        }
-                      />
-                    </li>
-                  </ul>
-                </div>
-                <div
-                  className="t-leadershipDetail_slogan"
-                >
-                  <div
-                    className="t-leadershipDetail_slogan_detail"
-                  >
-                    <h2
-                      className="a-heading a-heading-dimGray a-heading-300"
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được sứ mạng, hoài bão của Novaland Group.",
-                        }
-                      }
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="t-leadership_item_detail"
-            >
-              <div
-                className="t-leadershipDetail"
-              >
-                <div
-                  className="t-leadershipDetail_wrapper"
-                >
-                  <div
-                    className="t-leadershipDetail_info"
-                  >
-                    <h2
-                      className="a-heading a-heading-darkMidnightBlue a-heading-300 a-heading-capitalize"
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "Ông",
-                        }
-                      }
-                    />
-                    <div
-                      className="t-leadershipDetail_name"
-                    >
-                      <h2
-                        className="a-heading a-heading-38x52 a-heading-500 a-heading-jet a-heading-capitalize a-heading-fontNoto"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "Lê Quốc Hùng",
-                          }
-                        }
-                      />
-                    </div>
-                    <h2
-                      className="a-heading a-heading-dimGray a-heading-300"
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "Thành viên Hội đồng Quản trị Độc lập",
-                        }
-                      }
-                    />
-                  </div>
-                  <div
-                    className="t-leadershipDetail_thumbnail"
-                  >
-                    <div
-                      className="a-image a-image-223x320"
-                    >
-                      <img
-                        alt="leadershipDetail"
-                        loading="lazy"
-                        src="img_leadership1.png"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="t-leadershipDetail_achievement"
-                >
-                  <ul>
-                    <li
-                      className="t-leadershipDetail_item"
-                    >
-                      <p
-                        className="a-text a-text-16x24 a-text-300 a-text-dimGray"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "Cử nhân Nông nghiệp. Tốt nghiệp Executive MBA, HSB-TUCK, Đại học Dartmouth, Hoa Kỳ.",
-                          }
-                        }
-                      />
-                    </li>
-                    <li
-                      className="t-leadershipDetail_item"
-                    >
-                      <p
-                        className="a-text a-text-16x24 a-text-300 a-text-dimGray"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "Là một trong những chủ doanh nghiệp tư nhân đầu tiên tại TP.HCM từ những năm 1980. Thành viên Tổ chức doanh nhân thế giới (YPO - WPO).",
-                          }
-                        }
-                      />
-                    </li>
-                  </ul>
-                </div>
-                <div
-                  className="t-leadershipDetail_slogan"
-                >
-                  <div
-                    className="t-leadershipDetail_slogan_detail"
-                  >
-                    <h2
-                      className="a-heading a-heading-dimGray a-heading-300"
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được sứ mạng, hoài bão của Novaland Group.",
-                        }
-                      }
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="t-leadership_item_detail"
-            >
-              <div
-                className="t-leadershipDetail"
-              >
-                <div
-                  className="t-leadershipDetail_wrapper"
-                >
-                  <div
-                    className="t-leadershipDetail_info"
-                  >
-                    <h2
-                      className="a-heading a-heading-darkMidnightBlue a-heading-300 a-heading-capitalize"
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "Bà",
-                        }
-                      }
-                    />
-                    <div
-                      className="t-leadershipDetail_name"
-                    >
-                      <h2
-                        className="a-heading a-heading-38x52 a-heading-500 a-heading-jet a-heading-capitalize a-heading-fontNoto"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "Nguyễn Mỹ Hạnh",
-                          }
-                        }
-                      />
-                    </div>
-                    <h2
-                      className="a-heading a-heading-dimGray a-heading-300"
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "Thành viên Hội đồng Quản trị Độc lập",
                         }
                       }
                     />
@@ -13948,7 +12289,7 @@ exports[`Storyshots Components/templates/MainLayout Normal 1`] = `
                   className="o-footer_main_info"
                 >
                   <p
-                    className="a-text a-text-600 a-text-white a-text-uppercase a-text-14x22"
+                    className="a-text a-text-600 a-text-white a-text-uppercase a-text-12x17"
                   >
                     CÔNG TY CỔ PHẦN TẬP ĐOÀN ĐẦU TƯ ĐỊA ỐC NOVA
                   </p>
@@ -13956,13 +12297,12 @@ exports[`Storyshots Components/templates/MainLayout Normal 1`] = `
                     className="mt-8"
                   >
                     <p
-                      className="a-text a-text-300 a-text-white a-text-opacity07"
+                      className="a-text a-text-300 a-text-white a-text-opacity07 a-text-12x17"
                     >
                       Giấy chứng nhận đăng ký doanh nghiệp số 0301444753 do Sở Kế hoạch và Đầu tư TP.HCM cấp lần đầu ngày 18/09/1992
                     </p>
-                    <br />
                     <p
-                      className="a-text a-text-300 a-text-white a-text-opacity07"
+                      className="a-text a-text-300 a-text-white a-text-opacity07 a-text-12x17"
                     >
                       Tòa nhà văn phòng Novaland, 65 Nguyễn Du, Phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh
                     </p>
@@ -13974,7 +12314,7 @@ exports[`Storyshots Components/templates/MainLayout Normal 1`] = `
                       className="o-footer_main_contact_item"
                     >
                       <p
-                        className="a-text a-text-300 a-text-white a-text-opacity07"
+                        className="a-text a-text-300 a-text-white a-text-opacity07 a-text-12x17"
                       >
                         Email:
                       </p>
@@ -13985,7 +12325,7 @@ exports[`Storyshots Components/templates/MainLayout Normal 1`] = `
                         target="_self"
                       >
                         <p
-                          className="a-text a-text-white a-text-600 a-text-inline"
+                          className="a-text a-text-white a-text-600 a-text-12x17 a-text-inline"
                         >
                           info@novaland.com.vn
                         </p>
@@ -13995,7 +12335,7 @@ exports[`Storyshots Components/templates/MainLayout Normal 1`] = `
                       className="o-footer_main_contact_item"
                     >
                       <p
-                        className="a-text a-text-300 a-text-white a-text-opacity07"
+                        className="a-text a-text-300 a-text-white a-text-opacity07 a-text-12x17"
                       >
                         Tổng đài CSKH:
                       </p>
@@ -14006,7 +12346,7 @@ exports[`Storyshots Components/templates/MainLayout Normal 1`] = `
                         target="_self"
                       >
                         <p
-                          className="a-text a-text-600 a-text-white a-text-700 a-text-inline"
+                          className="a-text a-text-600 a-text-white a-text-700 a-text-12x17 a-text-inline"
                         >
                           1900 63 6666
                         </p>
@@ -14014,6 +12354,330 @@ exports[`Storyshots Components/templates/MainLayout Normal 1`] = `
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+            <div
+              className="o-footer_main_menu_bottom"
+            >
+              <div
+                className="o-footer_main_menu_wrap"
+              >
+                <div
+                  className="o-footer_main_menu_title"
+                >
+                  <p
+                    className="a-text a-text-white a-text-12x17 a-text-600 a-text-uppercase"
+                  >
+                    VỀ NOVALAND
+                  </p>
+                </div>
+                <ul
+                  className="o-footer_main_menu_list"
+                >
+                  <li
+                    className="o-footer_main_menu_nav"
+                  >
+                    <a
+                      aria-current="page"
+                      className="a-link   active"
+                      href="/"
+                      onClick={[Function]}
+                      target="_self"
+                    >
+                      <p
+                        className="a-text a-text-12x17 a-text-lavenderGray a-text-300 a-text-inline"
+                      >
+                        Giới thiệu chung
+                      </p>
+                    </a>
+                  </li>
+                  <li
+                    className="o-footer_main_menu_nav"
+                  >
+                    <a
+                      aria-current="page"
+                      className="a-link   active"
+                      href="/"
+                      onClick={[Function]}
+                      target="_self"
+                    >
+                      <p
+                        className="a-text a-text-12x17 a-text-lavenderGray a-text-300 a-text-inline"
+                      >
+                        Tầm nhìn - Sứ mệnh
+                      </p>
+                    </a>
+                  </li>
+                  <li
+                    className="o-footer_main_menu_nav"
+                  >
+                    <a
+                      aria-current="page"
+                      className="a-link   active"
+                      href="/"
+                      onClick={[Function]}
+                      target="_self"
+                    >
+                      <p
+                        className="a-text a-text-12x17 a-text-lavenderGray a-text-300 a-text-inline"
+                      >
+                        Lĩnh Vực Hoạt Động
+                      </p>
+                    </a>
+                  </li>
+                  <li
+                    className="o-footer_main_menu_nav"
+                  >
+                    <a
+                      aria-current="page"
+                      className="a-link   active"
+                      href="/"
+                      onClick={[Function]}
+                      target="_self"
+                    >
+                      <p
+                        className="a-text a-text-12x17 a-text-lavenderGray a-text-300 a-text-inline"
+                      >
+                        Lịch Sử Phát Triển
+                      </p>
+                    </a>
+                  </li>
+                  <li
+                    className="o-footer_main_menu_nav"
+                  >
+                    <a
+                      aria-current="page"
+                      className="a-link   active"
+                      href="/"
+                      onClick={[Function]}
+                      target="_self"
+                    >
+                      <p
+                        className="a-text a-text-12x17 a-text-lavenderGray a-text-300 a-text-inline"
+                      >
+                        Ban lãnh đạo
+                      </p>
+                    </a>
+                  </li>
+                  <li
+                    className="o-footer_main_menu_nav"
+                  >
+                    <a
+                      aria-current="page"
+                      className="a-link   active"
+                      href="/"
+                      onClick={[Function]}
+                      target="_self"
+                    >
+                      <p
+                        className="a-text a-text-12x17 a-text-lavenderGray a-text-300 a-text-inline"
+                      >
+                        Giải thưởng
+                      </p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div
+                className="o-footer_main_menu_wrap"
+              >
+                <div
+                  className="o-footer_main_menu_title"
+                >
+                  <p
+                    className="a-text a-text-white a-text-12x17 a-text-600 a-text-uppercase"
+                  >
+                    CÁC THÔNG TIN VÀ DỰ ÁN MỚI
+                  </p>
+                </div>
+                <ul
+                  className="o-footer_main_menu_list"
+                >
+                  <li
+                    className="o-footer_main_menu_nav"
+                  >
+                    <a
+                      aria-current="page"
+                      className="a-link   active"
+                      href="/"
+                      onClick={[Function]}
+                      target="_self"
+                    >
+                      <p
+                        className="a-text a-text-12x17 a-text-lavenderGray a-text-300 a-text-inline"
+                      >
+                        Thông tin thị trường
+                      </p>
+                    </a>
+                  </li>
+                  <li
+                    className="o-footer_main_menu_nav"
+                  >
+                    <a
+                      aria-current="page"
+                      className="a-link   active"
+                      href="/"
+                      onClick={[Function]}
+                      target="_self"
+                    >
+                      <p
+                        className="a-text a-text-12x17 a-text-lavenderGray a-text-300 a-text-inline"
+                      >
+                        Thông tin Novaland
+                      </p>
+                    </a>
+                  </li>
+                  <li
+                    className="o-footer_main_menu_nav"
+                  >
+                    <a
+                      aria-current="page"
+                      className="a-link   active"
+                      href="/"
+                      onClick={[Function]}
+                      target="_self"
+                    >
+                      <p
+                        className="a-text a-text-12x17 a-text-lavenderGray a-text-300 a-text-inline"
+                      >
+                        Thông tin báo chí
+                      </p>
+                    </a>
+                  </li>
+                  <li
+                    className="o-footer_main_menu_nav"
+                  >
+                    <a
+                      aria-current="page"
+                      className="a-link   active"
+                      href="/"
+                      onClick={[Function]}
+                      target="_self"
+                    >
+                      <p
+                        className="a-text a-text-12x17 a-text-lavenderGray a-text-300 a-text-inline"
+                      >
+                        Bất động sản Trung Tâm 
+                      </p>
+                    </a>
+                  </li>
+                  <li
+                    className="o-footer_main_menu_nav"
+                  >
+                    <a
+                      aria-current="page"
+                      className="a-link   active"
+                      href="/"
+                      onClick={[Function]}
+                      target="_self"
+                    >
+                      <p
+                        className="a-text a-text-12x17 a-text-lavenderGray a-text-300 a-text-inline"
+                      >
+                        Đô Thị Vệ Tinh
+                      </p>
+                    </a>
+                  </li>
+                  <li
+                    className="o-footer_main_menu_nav"
+                  >
+                    <a
+                      aria-current="page"
+                      className="a-link   active"
+                      href="/"
+                      onClick={[Function]}
+                      target="_self"
+                    >
+                      <p
+                        className="a-text a-text-12x17 a-text-lavenderGray a-text-300 a-text-inline"
+                      >
+                        Đô Thị Nghỉ Dưỡng
+                      </p>
+                    </a>
+                  </li>
+                  <li
+                    className="o-footer_main_menu_nav"
+                  >
+                    <a
+                      aria-current="page"
+                      className="a-link   active"
+                      href="/"
+                      onClick={[Function]}
+                      target="_self"
+                    >
+                      <p
+                        className="a-text a-text-12x17 a-text-lavenderGray a-text-300 a-text-inline"
+                      >
+                        Bất Động Sản Công Nghiệp
+                      </p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div
+                className="o-footer_main_menu_wrap"
+              >
+                <div
+                  className="o-footer_main_menu_title"
+                >
+                  <p
+                    className="a-text a-text-white a-text-12x17 a-text-600 a-text-uppercase"
+                  >
+                    THEO DÕI NOVALAND TRÊN
+                  </p>
+                </div>
+                <ul
+                  className="o-footer_main_menu_icon"
+                >
+                  <div
+                    className="o-footer_main_menu_icon_item"
+                  >
+                    <a
+                      aria-current="page"
+                      className="a-link   active"
+                      href="/"
+                      onClick={[Function]}
+                      target="_self"
+                      title="facebook"
+                    >
+                      <i
+                        className="a-icon a-icon-facebook a-icon-40"
+                      />
+                    </a>
+                  </div>
+                  <div
+                    className="o-footer_main_menu_icon_item"
+                  >
+                    <a
+                      aria-current="page"
+                      className="a-link   active"
+                      href="/"
+                      onClick={[Function]}
+                      target="_self"
+                      title="youtube"
+                    >
+                      <i
+                        className="a-icon a-icon-youtube a-icon-40"
+                      />
+                    </a>
+                  </div>
+                  <div
+                    className="o-footer_main_menu_icon_item"
+                  >
+                    <a
+                      aria-current="page"
+                      className="a-link   active"
+                      href="/"
+                      onClick={[Function]}
+                      target="_self"
+                      title="zalo"
+                    >
+                      <i
+                        className="a-icon a-icon-zalo a-icon-40"
+                      />
+                    </a>
+                  </div>
+                </ul>
               </div>
             </div>
           </div>
@@ -14226,330 +12890,6 @@ exports[`Storyshots Components/templates/MainLayout Normal 1`] = `
             </div>
           </div>
         </div>
-        <div
-          className="o-footer_main_menu_bottom"
-        >
-          <div
-            className="o-footer_main_menu_wrap"
-          >
-            <div
-              className="o-footer_main_menu_title"
-            >
-              <p
-                className="a-text a-text-white a-text-14x22 a-text-600 a-text-uppercase"
-              >
-                VỀ NOVALAND
-              </p>
-            </div>
-            <ul
-              className="o-footer_main_menu_list"
-            >
-              <li
-                className="o-footer_main_menu_nav"
-              >
-                <a
-                  aria-current="page"
-                  className="a-link   active"
-                  href="/"
-                  onClick={[Function]}
-                  target="_self"
-                >
-                  <p
-                    className="a-text a-text-lavenderGray a-text-300 a-text-inline"
-                  >
-                    Giới thiệu chung
-                  </p>
-                </a>
-              </li>
-              <li
-                className="o-footer_main_menu_nav"
-              >
-                <a
-                  aria-current="page"
-                  className="a-link   active"
-                  href="/"
-                  onClick={[Function]}
-                  target="_self"
-                >
-                  <p
-                    className="a-text a-text-lavenderGray a-text-300 a-text-inline"
-                  >
-                    Tầm nhìn - Sứ mệnh
-                  </p>
-                </a>
-              </li>
-              <li
-                className="o-footer_main_menu_nav"
-              >
-                <a
-                  aria-current="page"
-                  className="a-link   active"
-                  href="/"
-                  onClick={[Function]}
-                  target="_self"
-                >
-                  <p
-                    className="a-text a-text-lavenderGray a-text-300 a-text-inline"
-                  >
-                    Lĩnh Vực Hoạt Động
-                  </p>
-                </a>
-              </li>
-              <li
-                className="o-footer_main_menu_nav"
-              >
-                <a
-                  aria-current="page"
-                  className="a-link   active"
-                  href="/"
-                  onClick={[Function]}
-                  target="_self"
-                >
-                  <p
-                    className="a-text a-text-lavenderGray a-text-300 a-text-inline"
-                  >
-                    Lịch Sử Phát Triển
-                  </p>
-                </a>
-              </li>
-              <li
-                className="o-footer_main_menu_nav"
-              >
-                <a
-                  aria-current="page"
-                  className="a-link   active"
-                  href="/"
-                  onClick={[Function]}
-                  target="_self"
-                >
-                  <p
-                    className="a-text a-text-lavenderGray a-text-300 a-text-inline"
-                  >
-                    Ban lãnh đạo
-                  </p>
-                </a>
-              </li>
-              <li
-                className="o-footer_main_menu_nav"
-              >
-                <a
-                  aria-current="page"
-                  className="a-link   active"
-                  href="/"
-                  onClick={[Function]}
-                  target="_self"
-                >
-                  <p
-                    className="a-text a-text-lavenderGray a-text-300 a-text-inline"
-                  >
-                    Giải thưởng
-                  </p>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div
-            className="o-footer_main_menu_wrap"
-          >
-            <div
-              className="o-footer_main_menu_title"
-            >
-              <p
-                className="a-text a-text-white a-text-14x22 a-text-600 a-text-uppercase"
-              >
-                CÁC THÔNG TIN VÀ DỰ ÁN MỚI
-              </p>
-            </div>
-            <ul
-              className="o-footer_main_menu_list"
-            >
-              <li
-                className="o-footer_main_menu_nav"
-              >
-                <a
-                  aria-current="page"
-                  className="a-link   active"
-                  href="/"
-                  onClick={[Function]}
-                  target="_self"
-                >
-                  <p
-                    className="a-text a-text-lavenderGray a-text-300 a-text-inline"
-                  >
-                    Thông tin thị trường
-                  </p>
-                </a>
-              </li>
-              <li
-                className="o-footer_main_menu_nav"
-              >
-                <a
-                  aria-current="page"
-                  className="a-link   active"
-                  href="/"
-                  onClick={[Function]}
-                  target="_self"
-                >
-                  <p
-                    className="a-text a-text-lavenderGray a-text-300 a-text-inline"
-                  >
-                    Thông tin Novaland
-                  </p>
-                </a>
-              </li>
-              <li
-                className="o-footer_main_menu_nav"
-              >
-                <a
-                  aria-current="page"
-                  className="a-link   active"
-                  href="/"
-                  onClick={[Function]}
-                  target="_self"
-                >
-                  <p
-                    className="a-text a-text-lavenderGray a-text-300 a-text-inline"
-                  >
-                    Thông tin báo chí
-                  </p>
-                </a>
-              </li>
-              <li
-                className="o-footer_main_menu_nav"
-              >
-                <a
-                  aria-current="page"
-                  className="a-link   active"
-                  href="/"
-                  onClick={[Function]}
-                  target="_self"
-                >
-                  <p
-                    className="a-text a-text-lavenderGray a-text-300 a-text-inline"
-                  >
-                    Bất động sản Trung Tâm 
-                  </p>
-                </a>
-              </li>
-              <li
-                className="o-footer_main_menu_nav"
-              >
-                <a
-                  aria-current="page"
-                  className="a-link   active"
-                  href="/"
-                  onClick={[Function]}
-                  target="_self"
-                >
-                  <p
-                    className="a-text a-text-lavenderGray a-text-300 a-text-inline"
-                  >
-                    Đô Thị Vệ Tinh
-                  </p>
-                </a>
-              </li>
-              <li
-                className="o-footer_main_menu_nav"
-              >
-                <a
-                  aria-current="page"
-                  className="a-link   active"
-                  href="/"
-                  onClick={[Function]}
-                  target="_self"
-                >
-                  <p
-                    className="a-text a-text-lavenderGray a-text-300 a-text-inline"
-                  >
-                    Đô Thị Nghỉ Dưỡng
-                  </p>
-                </a>
-              </li>
-              <li
-                className="o-footer_main_menu_nav"
-              >
-                <a
-                  aria-current="page"
-                  className="a-link   active"
-                  href="/"
-                  onClick={[Function]}
-                  target="_self"
-                >
-                  <p
-                    className="a-text a-text-lavenderGray a-text-300 a-text-inline"
-                  >
-                    Bất Động Sản Công Nghiệp
-                  </p>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div
-            className="o-footer_main_menu_wrap"
-          >
-            <div
-              className="o-footer_main_menu_title"
-            >
-              <p
-                className="a-text a-text-white a-text-14x22 a-text-600 a-text-uppercase"
-              >
-                THEO DÕI NOVALAND TRÊN
-              </p>
-            </div>
-            <ul
-              className="o-footer_main_menu_icon"
-            >
-              <div
-                className="o-footer_main_menu_icon_item"
-              >
-                <a
-                  aria-current="page"
-                  className="a-link   active"
-                  href="/"
-                  onClick={[Function]}
-                  target="_self"
-                  title="zalo"
-                >
-                  <i
-                    className="a-icon a-icon-zalo a-icon-40"
-                  />
-                </a>
-              </div>
-              <div
-                className="o-footer_main_menu_icon_item"
-              >
-                <a
-                  aria-current="page"
-                  className="a-link   active"
-                  href="/"
-                  onClick={[Function]}
-                  target="_self"
-                  title="youtube"
-                >
-                  <i
-                    className="a-icon a-icon-youtube a-icon-40"
-                  />
-                </a>
-              </div>
-              <div
-                className="o-footer_main_menu_icon_item"
-              >
-                <a
-                  aria-current="page"
-                  className="a-link   active"
-                  href="/"
-                  onClick={[Function]}
-                  target="_self"
-                  title="facebook"
-                >
-                  <i
-                    className="a-icon a-icon-facebook a-icon-40"
-                  />
-                </a>
-              </div>
-            </ul>
-          </div>
-        </div>
       </div>
     </div>
     <div
@@ -14575,7 +12915,7 @@ exports[`Storyshots Components/templates/MainLayout Normal 1`] = `
                 target="_self"
               >
                 <p
-                  className="a-text a-text-300 a-text-white a-text-opacity07"
+                  className="a-text a-text-300 a-text-white a-text-opacity07 a-text-12x17"
                 >
                   Chính sách bảo mật
                 </p>
@@ -14592,7 +12932,7 @@ exports[`Storyshots Components/templates/MainLayout Normal 1`] = `
                 target="_self"
               >
                 <p
-                  className="a-text a-text-300 a-text-white a-text-opacity07"
+                  className="a-text a-text-300 a-text-white a-text-opacity07 a-text-12x17"
                 >
                   Điều khoản khách hàng
                 </p>
@@ -14603,7 +12943,7 @@ exports[`Storyshots Components/templates/MainLayout Normal 1`] = `
             className="o-footer_bottom_copyright"
           >
             <p
-              className="a-text a-text-300 a-text-white a-text-opacity07"
+              className="a-text a-text-300 a-text-white a-text-opacity07 a-text-12x17"
             >
               © 2021. Bản quyền thuộc về Tập đoàn Novaland (Việt Nam). Tất cả các quyền được bảo hộ.
             </p>

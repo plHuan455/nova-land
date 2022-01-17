@@ -6,7 +6,7 @@ import Leadership from '.';
 describe('<Leadership />', () => {
   test('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<Leadership title="" tabDataLeadership={[]} />, div);
+    ReactDOM.render(<Leadership title="" tabDataLeadership={[]} hasButtonViewAll />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 });

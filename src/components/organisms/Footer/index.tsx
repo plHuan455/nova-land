@@ -63,18 +63,17 @@ const Footer: React.FC<FooterProps> = ({
                 </div>
                 {/* Info  */}
                 <div className="o-footer_main_info">
-                  <Text modifiers={['600', 'white', 'uppercase', '14x22']}>
+                  <Text modifiers={['600', 'white', 'uppercase', '12x17']}>
                     CÔNG TY CỔ PHẦN TẬP ĐOÀN ĐẦU TƯ ĐỊA ỐC NOVA
                   </Text>
                   <div className="mt-8">
                     <Text
-                      modifiers={['300', 'white', 'opacity07']}
+                      modifiers={['300', 'white', 'opacity07', '12x17']}
                     >
                       Giấy chứng nhận đăng ký doanh nghiệp số 0301444753 do
                       Sở Kế hoạch và Đầu tư TP.HCM cấp lần đầu ngày 18/09/1992
                     </Text>
-                    <br />
-                    <Text modifiers={['300', 'white', 'opacity07']}>
+                    <Text modifiers={['300', 'white', 'opacity07', '12x17']}>
                       Tòa nhà văn phòng Novaland, 65 Nguyễn Du, Phường Bến Nghé,
                       Quận 1, Thành phố Hồ Chí Minh
                     </Text>
@@ -82,21 +81,21 @@ const Footer: React.FC<FooterProps> = ({
                   {/* Contact Link  */}
                   <div className="o-footer_main_contact">
                     <div className="o-footer_main_contact_item">
-                      <Text modifiers={['300', 'white', 'opacity07']}>
+                      <Text modifiers={['300', 'white', 'opacity07', '12x17']}>
                         Email:
                       </Text>
                       <Link href="mailto:info@novaland.com.vn" useExternal>
-                        <Text modifiers={['white', '600']} isInline>
+                        <Text modifiers={['white', '600', '12x17']} isInline>
                           info@novaland.com.vn
                         </Text>
                       </Link>
                     </div>
                     <div className="o-footer_main_contact_item">
-                      <Text modifiers={['300', 'white', 'opacity07']}>
+                      <Text modifiers={['300', 'white', 'opacity07', '12x17']}>
                         Tổng đài CSKH:
                       </Text>
                       <Link href="tel:1900636666" useExternal>
-                        <Text modifiers={['600', 'white', '700']} isInline>
+                        <Text modifiers={['600', 'white', '700', '12x17']} isInline>
                           1900 63 6666
                         </Text>
                       </Link>
@@ -104,6 +103,44 @@ const Footer: React.FC<FooterProps> = ({
                   </div>
                 </div>
               </div>
+            </div>
+            {/* Bottom  */}
+            <div className="o-footer_main_menu_bottom">
+              {
+              footerLink && footerLink.map((val, idx) => (
+                <div className="o-footer_main_menu_wrap" key={idx.toString()}>
+                  <div className="o-footer_main_menu_title">
+                    <Text modifiers={['white', '12x17', '600', 'uppercase']}>
+                      {val.title}
+                    </Text>
+                  </div>
+                  <ul className={val.link?.find((e) => !!e.icon) ? 'o-footer_main_menu_icon' : 'o-footer_main_menu_list'}>
+                    {
+                      val.link && val.link.map((item, i) => {
+                        if (item.icon) {
+                          return (
+                            <div className="o-footer_main_menu_icon_item" key={i.toString()}>
+                              <Link href={item.href} title={item.title}>
+                                <Icon iconName={item.icon as IconName} size="40" />
+                              </Link>
+                            </div>
+                          );
+                        }
+                        return (
+                          <li className="o-footer_main_menu_nav" key={i.toString()}>
+                            <Link href={item.href}>
+                              <Text modifiers={['12x17', 'lavenderGray', '300']} isInline>
+                                {item.title}
+                              </Text>
+                            </Link>
+                          </li>
+                        );
+                      })
+                    }
+                  </ul>
+                </div>
+              ))
+            }
             </div>
           </CustomCol>
           <CustomCol lg={5}>
@@ -138,44 +175,6 @@ const Footer: React.FC<FooterProps> = ({
             </div>
           </CustomCol>
         </CustomRow>
-        {/* Bottom  */}
-        <div className="o-footer_main_menu_bottom">
-          {
-              footerLink && footerLink.map((val, idx) => (
-                <div className="o-footer_main_menu_wrap" key={idx.toString()}>
-                  <div className="o-footer_main_menu_title">
-                    <Text modifiers={['white', '14x22', '600', 'uppercase']}>
-                      {val.title}
-                    </Text>
-                  </div>
-                  <ul className={val.link?.find((e) => !!e.icon) ? 'o-footer_main_menu_icon' : 'o-footer_main_menu_list'}>
-                    {
-                      val.link && val.link.map((item, i) => {
-                        if (item.icon) {
-                          return (
-                            <div className="o-footer_main_menu_icon_item" key={i.toString()}>
-                              <Link href={item.href} title={item.title}>
-                                <Icon iconName={item.icon as IconName} size="40" />
-                              </Link>
-                            </div>
-                          );
-                        }
-                        return (
-                          <li className="o-footer_main_menu_nav" key={i.toString()}>
-                            <Link href={item.href}>
-                              <Text modifiers={['lavenderGray', '300']} isInline>
-                                {item.title}
-                              </Text>
-                            </Link>
-                          </li>
-                        );
-                      })
-                    }
-                  </ul>
-                </div>
-              ))
-            }
-        </div>
       </div>
 
     </Container>
@@ -185,21 +184,21 @@ const Footer: React.FC<FooterProps> = ({
           <div className="o-footer_bottom_policy">
             <div className="o-footer_bottom_policy_item">
               <Link href={externalLink?.privacy}>
-                <Text modifiers={['300', 'white', 'opacity07']}>
+                <Text modifiers={['300', 'white', 'opacity07', '12x17']}>
                   Chính sách bảo mật
                 </Text>
               </Link>
             </div>
             <div className="o-footer_bottom_policy_item">
               <Link href={externalLink?.policy}>
-                <Text modifiers={['300', 'white', 'opacity07']}>
+                <Text modifiers={['300', 'white', 'opacity07', '12x17']}>
                   Điều khoản khách hàng
                 </Text>
               </Link>
             </div>
           </div>
           <div className="o-footer_bottom_copyright">
-            <Text modifiers={['300', 'white', 'opacity07']}>
+            <Text modifiers={['300', 'white', 'opacity07', '12x17']}>
               © 2021. Bản quyền thuộc về Tập đoàn Novaland (Việt Nam).
               Tất cả các quyền được bảo hộ.
             </Text>
