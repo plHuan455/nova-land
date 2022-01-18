@@ -26,9 +26,10 @@ interface NewsType {
 interface NewsDetailProps {
   newsDetail: NewsType;
   relatedNews: Array<NewsType>;
+  keyword: Array<string>;
 }
 
-const NewsDetail: React.FC<NewsDetailProps> = ({ newsDetail, relatedNews }) => (
+const NewsDetail: React.FC<NewsDetailProps> = ({ newsDetail, relatedNews, keyword }) => (
   <Container>
     <div className="t-newsdetail">
       <CustomRow>
@@ -69,7 +70,7 @@ const NewsDetail: React.FC<NewsDetailProps> = ({ newsDetail, relatedNews }) => (
         </CustomCol>
         <CustomCol sm="12" md="12" lg="4">
           <Text modifiers={['14x22', '700', 'jet']}>Các tin mới nhất</Text>
-          <div className="t-newsdetail_relatednews">
+          <div className="t-newsdetail_subinfo">
             {relatedNews.slice(0, 3).map((item, idx) => (
               <>
                 <InfoNews
@@ -84,6 +85,33 @@ const NewsDetail: React.FC<NewsDetailProps> = ({ newsDetail, relatedNews }) => (
                 )}
               </>
             ))}
+          </div>
+          <div className="t-newsdetail_hotnews">
+            <Text modifiers={['14x22', '700', 'jet']}>Các tin nổi bật</Text>
+            <div className="t-newsdetail_subinfo">
+              {relatedNews.slice(0, 5).map((item, idx) => (
+                <>
+                  <InfoNews
+                    key={`news-${item.id}`}
+                    imageSrc={item.imageNews}
+                    title={item.title}
+                    status={item.status}
+                    href={item.href}
+                  />
+                  {(idx + 1) !== relatedNews.slice(0, 5).length && (
+                    <Divider />
+                  )}
+                </>
+              ))}
+            </div>
+          </div>
+          <div className="t-newsdetail_keyword">
+            <Text modifiers={['14x22', '700', 'jet']}>Từ khóa phổ biến</Text>
+            <div className="t-newsdetail_listkey">
+              {keyword.map((item, idx) => (
+                <Tag key={`key-${idx.toString()}`}>{item}</Tag>
+              ))}
+            </div>
           </div>
         </CustomCol>
       </CustomRow>
