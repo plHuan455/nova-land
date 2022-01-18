@@ -17,6 +17,7 @@ export const iconList = {
   arrowDownBrown: 'arrowDownBrown',
   arrowNextYellowBrown: 'arrowNextYellowBrown',
   arrowNextGray: 'arrowNextGray',
+  home: 'home',
 };
 
 export type IconName = keyof typeof iconList;

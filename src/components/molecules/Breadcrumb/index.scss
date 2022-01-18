@@ -1,0 +1,33 @@
+.m-breadcrumb {
+  &_wrapper {
+    @include adjust-flex(flex-start, center);
+    overflow-x: auto;
+    @include scroll-bars(7);
+  }
+
+  &_home {
+    display: flex;
+  }
+
+  &_item {
+    $root: &;
+    list-style-type: none;
+
+    &:last-child {
+      #{$root}_label {
+        .a-text {
+          color: $spanish-gray;
+          font-weight: 300;
+        }
+      }
+    }
+
+    &_wrapper {
+      @include adjust-flex;
+    }
+
+    &_label {
+      white-space: nowrap;
+    }
+  }
+}
