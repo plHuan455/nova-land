@@ -59,16 +59,23 @@ const FeaturedNews: React.FC<FeaturedNewsProps> = ({ dataFeaturedNews }) => (
   <div className="t-featuredNews">
     <Container>
       <div className="t-featuredNews_wrapper">
-        <div className="t-featuredNews_left">
-          <FeaturedNewsCard {...dataFeaturedNews[0]} />
-        </div>
-        <div className="t-featuredNews_right">
-          {dataFeaturedNews.slice(1).map((item, index) => (
-            <div className="t-featuredNews_right_item" key={`featuredNews-${index.toString()}`}>
-              <FeaturedNewsCard {...item} />
-            </div>
-          ))}
-        </div>
+        {
+          dataFeaturedNews.length > 0
+          && (
+            <>
+              <div className="t-featuredNews_left">
+                <FeaturedNewsCard {...dataFeaturedNews[0]} />
+              </div>
+              <div className="t-featuredNews_right">
+                {dataFeaturedNews.slice(1).map((item, index) => (
+                  <div className="t-featuredNews_right_item" key={`featuredNews-${index.toString()}`}>
+                    <FeaturedNewsCard {...item} />
+                  </div>
+                ))}
+              </div>
+            </>
+          )
+        }
       </div>
     </Container>
   </div>
