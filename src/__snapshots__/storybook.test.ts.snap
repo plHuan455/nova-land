@@ -192,6 +192,17 @@ exports[`Storyshots Components/atoms/Icon Normal 1`] = `
       className="a-icon a-icon-arrowNextGray a-icon-24"
     />
   </div>
+  <div
+    style={
+      Object {
+        "marginLeft": 7,
+      }
+    }
+  >
+    <i
+      className="a-icon a-icon-home a-icon-24"
+    />
+  </div>
 </div>
 `;
 
@@ -277,6 +288,135 @@ exports[`Storyshots Components/atoms/Text Normal 1`] = `
 >
   Dummy text
 </p>
+`;
+
+exports[`Storyshots Components/molecules/Breadcrumb Normal 1`] = `
+<div
+  className="m-breadcrumb"
+>
+  <div
+    className="container o-container"
+  >
+    <ul
+      className="m-breadcrumb_wrapper"
+    >
+      <li
+        className="m-breadcrumb_home"
+      >
+        <a
+          aria-current="page"
+          className="a-link   active"
+          href="/"
+          onClick={[Function]}
+          target="_self"
+        >
+          <i
+            className="a-icon a-icon-home a-icon-16"
+          />
+        </a>
+      </li>
+      <li
+        className="m-breadcrumb_item"
+      >
+        <a
+          className="a-link  "
+          href="/tin-tuc"
+          onClick={[Function]}
+          target="_self"
+        >
+          <div
+            className="m-breadcrumb_item_wrapper"
+          >
+            <div
+              className="u-ml-lg-8 u-mr-lg-8 u-ml-sm-6 u-mr-sm-6 u-mr-4 u-ml-4"
+            >
+              <p
+                className="a-text a-text-12x17 a-text-300 a-text-columbiaBlue"
+              >
+                /
+              </p>
+            </div>
+            <div
+              className="m-breadcrumb_item_label"
+            >
+              <p
+                className="a-text a-text-12x17 a-text-600 a-text-camel a-text-capitalize"
+              >
+                Tin Tức
+              </p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li
+        className="m-breadcrumb_item"
+      >
+        <a
+          className="a-link  "
+          href="/tin-du-an"
+          onClick={[Function]}
+          target="_self"
+        >
+          <div
+            className="m-breadcrumb_item_wrapper"
+          >
+            <div
+              className="u-ml-lg-8 u-mr-lg-8 u-ml-sm-6 u-mr-sm-6 u-mr-4 u-ml-4"
+            >
+              <p
+                className="a-text a-text-12x17 a-text-300 a-text-columbiaBlue"
+              >
+                /
+              </p>
+            </div>
+            <div
+              className="m-breadcrumb_item_label"
+            >
+              <p
+                className="a-text a-text-12x17 a-text-600 a-text-camel a-text-capitalize"
+              >
+                Tin Dự Án
+              </p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li
+        className="m-breadcrumb_item"
+      >
+        <a
+          className="a-link  "
+          href="/novaworld-phan-thiet"
+          onClick={[Function]}
+          target="_self"
+        >
+          <div
+            className="m-breadcrumb_item_wrapper"
+          >
+            <div
+              className="u-ml-lg-8 u-mr-lg-8 u-ml-sm-6 u-mr-sm-6 u-mr-4 u-ml-4"
+            >
+              <p
+                className="a-text a-text-12x17 a-text-300 a-text-columbiaBlue"
+              >
+                /
+              </p>
+            </div>
+            <div
+              className="m-breadcrumb_item_label"
+            >
+              <p
+                className="a-text a-text-12x17 a-text-600 a-text-camel a-text-capitalize"
+              >
+                NovaWorld Phan Thiet
+              </p>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
 `;
 
 exports[`Storyshots Components/molecules/EcoCard Normal 1`] = `
