@@ -5823,7 +5823,7 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
     className="container o-container"
   >
     <h2
-      className="a-heading a-heading-32x48 a-heading-500 a-heading-uppercase a-heading-arsenic a-heading-center a-heading-fontNoto"
+      className="a-heading a-heading-32x48 a-heading-500 a-heading-uppercase a-heading-jet a-heading-center a-heading-fontNoto"
       dangerouslySetInnerHTML={
         Object {
           "__html": "TIN TỨC",
@@ -10475,6 +10475,329 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
 </div>
 `;
 
+exports[`Storyshots Components/templates/LatestNews Horizontal 1`] = `
+<div
+  style={
+    Object {
+      "width": "582px",
+    }
+  }
+>
+  <div
+    className="t-latestNewsCard"
+  >
+    <a
+      aria-current="page"
+      className="a-link   active"
+      href="/"
+      onClick={[Function]}
+      target="_self"
+    >
+      <div
+        className="t-latestNewsCard_wrapper"
+      >
+        <div
+          className="t-latestNewsCard_image"
+        >
+          <div
+            className="a-image a-image-582x252"
+          >
+            <img
+              alt="ImgLatestNews2"
+              loading="lazy"
+              src="img_latestNews2.png"
+            />
+          </div>
+        </div>
+        <div
+          className="t-latestNewsCard_layer"
+        />
+        <div
+          className="t-latestNewsCard_content"
+        >
+          <div
+            className="t-latestNewsCard_content_title"
+          >
+            <h2
+              className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-uppercase"
+            >
+              Cao tốc Phan Thiết - Dầu Giây qua Đồng Nai phấn đấu vượt tiến độ...
+            </h2>
+          </div>
+          <div
+            className="mt-8"
+          >
+            <p
+              className="a-text a-text-12x17 a-text-300 a-text-columbiaBlue"
+            >
+              2 giờ trước
+            </p>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/templates/LatestNews Normal 1`] = `
+<div
+  className="t-latestNews"
+>
+  <div
+    className="container o-container"
+  >
+    <div
+      className="t-latestNews_wrapper"
+    >
+      <div
+        className="t-latestNews_left"
+      >
+        <div
+          className="t-latestNewsCard"
+        >
+          <a
+            aria-current="page"
+            className="a-link   active"
+            href="/"
+            onClick={[Function]}
+            target="_self"
+          >
+            <div
+              className="t-latestNewsCard_wrapper"
+            >
+              <div
+                className="t-latestNewsCard_image"
+              >
+                <div
+                  className="a-image a-image-582x534"
+                >
+                  <img
+                    alt="ImgLatestNews1"
+                    loading="lazy"
+                    src="img_latestNews1.png"
+                  />
+                </div>
+              </div>
+              <div
+                className="t-latestNewsCard_layer"
+              />
+              <div
+                className="t-latestNewsCard_content"
+              >
+                <div
+                  className="t-latestNewsCard_content_title"
+                >
+                  <h2
+                    className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-uppercase"
+                  >
+                    Bốn dự án thành phần cao tốc Bắc Nam sẽ hoàn thành năm 2022
+                  </h2>
+                </div>
+                <div
+                  className="mt-8"
+                >
+                  <p
+                    className="a-text a-text-12x17 a-text-300 a-text-columbiaBlue"
+                  >
+                    1 phút trước
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div
+        className="t-latestNews_right"
+      >
+        <div
+          className="t-latestNews_right_item"
+        >
+          <div
+            className="t-latestNewsCard"
+          >
+            <a
+              aria-current="page"
+              className="a-link   active"
+              href="/"
+              onClick={[Function]}
+              target="_self"
+            >
+              <div
+                className="t-latestNewsCard_wrapper"
+              >
+                <div
+                  className="t-latestNewsCard_image"
+                >
+                  <div
+                    className="a-image a-image-582x252"
+                  >
+                    <img
+                      alt="ImgLatestNews2"
+                      loading="lazy"
+                      src="img_latestNews2.png"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="t-latestNewsCard_layer"
+                />
+                <div
+                  className="t-latestNewsCard_content"
+                >
+                  <div
+                    className="t-latestNewsCard_content_title"
+                  >
+                    <h2
+                      className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-uppercase"
+                    >
+                      Cao tốc Phan Thiết - Dầu Giây qua Đồng Nai phấn đấu vượt tiến độ...
+                    </h2>
+                  </div>
+                  <div
+                    className="mt-8"
+                  >
+                    <p
+                      className="a-text a-text-12x17 a-text-300 a-text-columbiaBlue"
+                    >
+                      2 giờ trước
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div
+          className="t-latestNews_right_item"
+        >
+          <div
+            className="t-latestNewsCard"
+          >
+            <a
+              aria-current="page"
+              className="a-link   active"
+              href="/"
+              onClick={[Function]}
+              target="_self"
+            >
+              <div
+                className="t-latestNewsCard_wrapper"
+              >
+                <div
+                  className="t-latestNewsCard_image"
+                >
+                  <div
+                    className="a-image a-image-582x252"
+                  >
+                    <img
+                      alt="ImgLatestNews3"
+                      loading="lazy"
+                      src="img_latestNews3.png"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="t-latestNewsCard_layer"
+                />
+                <div
+                  className="t-latestNewsCard_content"
+                >
+                  <div
+                    className="t-latestNewsCard_content_title"
+                  >
+                    <h2
+                      className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-uppercase"
+                    >
+                      Novaland nằm trong Top 50 công ty niêm yết tốt nhất Việt Nam 2021
+                    </h2>
+                  </div>
+                  <div
+                    className="mt-8"
+                  >
+                    <p
+                      className="a-text a-text-12x17 a-text-300 a-text-columbiaBlue"
+                    >
+                      6 giờ trước
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/templates/LatestNews Vertical 1`] = `
+<div
+  style={
+    Object {
+      "width": "582px",
+    }
+  }
+>
+  <div
+    className="t-latestNewsCard"
+  >
+    <a
+      aria-current="page"
+      className="a-link   active"
+      href="/"
+      onClick={[Function]}
+      target="_self"
+    >
+      <div
+        className="t-latestNewsCard_wrapper"
+      >
+        <div
+          className="t-latestNewsCard_image"
+        >
+          <div
+            className="a-image a-image-582x534"
+          >
+            <img
+              alt="ImgLatestNews1"
+              loading="lazy"
+              src="img_latestNews1.png"
+            />
+          </div>
+        </div>
+        <div
+          className="t-latestNewsCard_layer"
+        />
+        <div
+          className="t-latestNewsCard_content"
+        >
+          <div
+            className="t-latestNewsCard_content_title"
+          >
+            <h2
+              className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-uppercase"
+            >
+              Bốn dự án thành phần cao tốc Bắc Nam sẽ hoàn thành năm 2022
+            </h2>
+          </div>
+          <div
+            className="mt-8"
+          >
+            <p
+              className="a-text a-text-12x17 a-text-300 a-text-columbiaBlue"
+            >
+              1 phút trước
+            </p>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Components/templates/Leadership Card 1`] = `
 <div
   className="t-leadershipCard"
@@ -13438,6 +13761,465 @@ exports[`Storyshots Components/templates/MainLayout Normal 1`] = `
       </div>
     </div>
   </footer>
+</div>
+`;
+
+exports[`Storyshots Components/templates/NewsList Normal 1`] = `
+<div
+  style={
+    Object {
+      "height": "100vh",
+    }
+  }
+>
+  <div
+    className="t-newsList"
+  >
+    <div
+      className="container o-container"
+    >
+      <div
+        className="u-mb-lg-40 u-mb-sm-30 u-mb-20"
+      >
+        <h2
+          className="a-heading a-heading-32x48 a-heading-500 a-heading-uppercase a-heading-jet a-heading-center a-heading-fontNoto"
+        >
+          Tin Tập đoàn
+        </h2>
+      </div>
+      <div
+        className="t-newsList_wrapper"
+      >
+        <div
+          className="t-newsList_item"
+        >
+          <div
+            className="t-homeNewsCard"
+          >
+            <div
+              className="t-homeNewsCard_thumbnail"
+            >
+              <a
+                aria-current="page"
+                className="a-link   active"
+                href="/"
+                onClick={[Function]}
+                target="_self"
+              >
+                <div
+                  className="a-image a-image-1x1"
+                >
+                  <img
+                    alt="HomeNewsCard"
+                    loading="lazy"
+                    src="img_corporate_news1.png"
+                  />
+                </div>
+              </a>
+            </div>
+            <div
+              className="t-homeNewsCard_wrapper"
+            >
+              <div
+                className="t-homeNewsCard_title"
+              >
+                <a
+                  aria-current="page"
+                  className="a-link   active"
+                  href="/"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  <p
+                    className="a-text a-text-16x24 a-text-600 a-text-arsenic"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "Novaland ký kết đồng hành cùng các đối tác trong lĩnh vực xây dựng",
+                      }
+                    }
+                  />
+                </a>
+              </div>
+              <div
+                className="t-homeNewsCard_content"
+              >
+                <p
+                  className="a-text a-text-300 a-text-arsenic"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "Ngày 05 - 06/01/2022, tại Novaland Gallery (2Bis Nguyễn Thị Minh Khai, Q.1, TP.HCM),...",
+                    }
+                  }
+                />
+              </div>
+              <div
+                className="t-homeNewsCard_divider"
+              />
+              <div
+                className="t-homeNewsCard_general"
+              >
+                <div
+                  className="t-homeNewsCard_date"
+                >
+                  <p
+                    className="a-text a-text-12x17 a-text-300 a-text-ls-005 a-text-arsenic"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "23/11/2021",
+                      }
+                    }
+                  />
+                </div>
+                <div
+                  className="t-homeNewsCard_view"
+                >
+                  <span
+                    onClick={[Function]}
+                  >
+                    <i
+                      className="a-icon a-icon-eyeOpen a-icon-14"
+                    />
+                  </span>
+                  <div
+                    className="t-homeNewsCard_view_total"
+                  >
+                    <p
+                      className="a-text a-text-12x17 a-text-300 a-text-ls-005 a-text-arsenic"
+                    >
+                      111
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="t-newsList_item"
+        >
+          <div
+            className="t-homeNewsCard"
+          >
+            <div
+              className="t-homeNewsCard_thumbnail"
+            >
+              <a
+                aria-current="page"
+                className="a-link   active"
+                href="/"
+                onClick={[Function]}
+                target="_self"
+              >
+                <div
+                  className="a-image a-image-1x1"
+                >
+                  <img
+                    alt="HomeNewsCard"
+                    loading="lazy"
+                    src="img_corporate_news2.png"
+                  />
+                </div>
+              </a>
+            </div>
+            <div
+              className="t-homeNewsCard_wrapper"
+            >
+              <div
+                className="t-homeNewsCard_title"
+              >
+                <a
+                  aria-current="page"
+                  className="a-link   active"
+                  href="/"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  <p
+                    className="a-text a-text-16x24 a-text-600 a-text-arsenic"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "Sắp khởi công đường Hàm Kiệm – Tiến Thành",
+                      }
+                    }
+                  />
+                </a>
+              </div>
+              <div
+                className="t-homeNewsCard_content"
+              >
+                <p
+                  className="a-text a-text-300 a-text-arsenic"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "Ban Quản lý Dự án và xây dựng công trình giao thông thuộc Sở Giao thông vận tải cho hay...",
+                    }
+                  }
+                />
+              </div>
+              <div
+                className="t-homeNewsCard_divider"
+              />
+              <div
+                className="t-homeNewsCard_general"
+              >
+                <div
+                  className="t-homeNewsCard_date"
+                >
+                  <p
+                    className="a-text a-text-12x17 a-text-300 a-text-ls-005 a-text-arsenic"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "23/11/2021",
+                      }
+                    }
+                  />
+                </div>
+                <div
+                  className="t-homeNewsCard_view"
+                >
+                  <span
+                    onClick={[Function]}
+                  >
+                    <i
+                      className="a-icon a-icon-eyeOpen a-icon-14"
+                    />
+                  </span>
+                  <div
+                    className="t-homeNewsCard_view_total"
+                  >
+                    <p
+                      className="a-text a-text-12x17 a-text-300 a-text-ls-005 a-text-arsenic"
+                    >
+                      111
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="t-newsList_item"
+        >
+          <div
+            className="t-homeNewsCard"
+          >
+            <div
+              className="t-homeNewsCard_thumbnail"
+            >
+              <a
+                aria-current="page"
+                className="a-link   active"
+                href="/"
+                onClick={[Function]}
+                target="_self"
+              >
+                <div
+                  className="a-image a-image-1x1"
+                >
+                  <img
+                    alt="HomeNewsCard"
+                    loading="lazy"
+                    src="img_corporate_news3.png"
+                  />
+                </div>
+              </a>
+            </div>
+            <div
+              className="t-homeNewsCard_wrapper"
+            >
+              <div
+                className="t-homeNewsCard_title"
+              >
+                <a
+                  aria-current="page"
+                  className="a-link   active"
+                  href="/"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  <p
+                    className="a-text a-text-16x24 a-text-600 a-text-arsenic"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "Phan Vũ tiếp tục đồng hành cùng Novaland thi công các cụm dự án...",
+                      }
+                    }
+                  />
+                </a>
+              </div>
+              <div
+                className="t-homeNewsCard_content"
+              >
+                <p
+                  className="a-text a-text-300 a-text-arsenic"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "Ngày 05/01/2022, tại Novaland Gallery (2Bis Nguyễn Thị Minh Khai, Q.1, TP.HCM), Công ty...",
+                    }
+                  }
+                />
+              </div>
+              <div
+                className="t-homeNewsCard_divider"
+              />
+              <div
+                className="t-homeNewsCard_general"
+              >
+                <div
+                  className="t-homeNewsCard_date"
+                >
+                  <p
+                    className="a-text a-text-12x17 a-text-300 a-text-ls-005 a-text-arsenic"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "23/11/2021",
+                      }
+                    }
+                  />
+                </div>
+                <div
+                  className="t-homeNewsCard_view"
+                >
+                  <span
+                    onClick={[Function]}
+                  >
+                    <i
+                      className="a-icon a-icon-eyeOpen a-icon-14"
+                    />
+                  </span>
+                  <div
+                    className="t-homeNewsCard_view_total"
+                  >
+                    <p
+                      className="a-text a-text-12x17 a-text-300 a-text-ls-005 a-text-arsenic"
+                    >
+                      111
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="t-newsList_item"
+        >
+          <div
+            className="t-homeNewsCard"
+          >
+            <div
+              className="t-homeNewsCard_thumbnail"
+            >
+              <a
+                aria-current="page"
+                className="a-link   active"
+                href="/"
+                onClick={[Function]}
+                target="_self"
+              >
+                <div
+                  className="a-image a-image-1x1"
+                >
+                  <img
+                    alt="HomeNewsCard"
+                    loading="lazy"
+                    src="img_corporate_news4.png"
+                  />
+                </div>
+              </a>
+            </div>
+            <div
+              className="t-homeNewsCard_wrapper"
+            >
+              <div
+                className="t-homeNewsCard_title"
+              >
+                <a
+                  aria-current="page"
+                  className="a-link   active"
+                  href="/"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  <p
+                    className="a-text a-text-16x24 a-text-600 a-text-arsenic"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "Novaland ký kết đồng hành cùng các đối tác trong lĩnh vực xây dựng",
+                      }
+                    }
+                  />
+                </a>
+              </div>
+              <div
+                className="t-homeNewsCard_content"
+              >
+                <p
+                  className="a-text a-text-300 a-text-arsenic"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "Hợp tác giữa doanh nghiệp bất động sản và ngân hàng tạo giải pháp tín dụng giàu ưu đãi,...",
+                    }
+                  }
+                />
+              </div>
+              <div
+                className="t-homeNewsCard_divider"
+              />
+              <div
+                className="t-homeNewsCard_general"
+              >
+                <div
+                  className="t-homeNewsCard_date"
+                >
+                  <p
+                    className="a-text a-text-12x17 a-text-300 a-text-ls-005 a-text-arsenic"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "23/11/2021",
+                      }
+                    }
+                  />
+                </div>
+                <div
+                  className="t-homeNewsCard_view"
+                >
+                  <span
+                    onClick={[Function]}
+                  >
+                    <i
+                      className="a-icon a-icon-eyeOpen a-icon-14"
+                    />
+                  </span>
+                  <div
+                    className="t-homeNewsCard_view_total"
+                  >
+                    <p
+                      className="a-text a-text-12x17 a-text-300 a-text-ls-005 a-text-arsenic"
+                    >
+                      111
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="t-newsList_button"
+        >
+          <button
+            className="a-button a-button-outlineSpanishGray"
+            disabled={false}
+            type="button"
+          >
+            Xem tất cả Tin tập đoàn
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 

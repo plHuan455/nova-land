@@ -9,6 +9,7 @@ import {
 import MainLayoutContainer from 'container/MainLayout';
 import AboutUs from 'pages/AboutUs';
 import Home from 'pages/Home';
+import News from 'pages/News';
 import { store } from 'store';
 
 const App: React.FC = () => {
@@ -24,6 +25,7 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/ve-chung-toi" element={<AboutUs />} />
+          <Route path="/tin-tuc" element={<News />} />
           <Route path="*" element={<div />} />
         </Routes>
       </MainLayoutContainer>

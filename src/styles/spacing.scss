@@ -18,6 +18,26 @@
   margin-top: rem(30);
 }
 
+.pt-80 {
+  padding-top: rem(80);
+  @include tablet-down {
+    padding-top: rem(40);
+  }
+  @include mobile-down {
+    padding-top: rem(28);
+  }
+}
+
+.pb-80 {
+  padding-bottom: rem(80);
+  @include tablet-down {
+    padding-bottom: rem(40);
+  }
+  @include mobile-down {
+    padding-bottom: rem(28);
+  }
+}
+
 .pt-100 {
   padding-top: rem(100);
   @include tablet-down {
