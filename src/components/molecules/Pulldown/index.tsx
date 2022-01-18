@@ -99,9 +99,9 @@ const PulldownRef: React.ForwardRefRenderFunction<HTMLDivElement, PulldownProps>
           }),
           control: (base: any, state) => ({
             ...base,
-            height: 40,
-            paddingLeft: 12,
-            paddingRight: 13,
+            height: 48,
+            paddingLeft: 20,
+            paddingRight: 10,
             color: '#002137',
             fontSize: 16,
             boxShadow: isSecondary ? '0px 2px 0px rgba(0, 0, 0, 0.016)' : 'none',

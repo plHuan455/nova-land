@@ -201,7 +201,7 @@
         padding-right: rem(12);
 
         &:not(:first-child) {
-          margin-top: rem(24);
+          margin-top: rem(16);
         }
         @include mobile-tablet {
           flex: 0 0 50%;
