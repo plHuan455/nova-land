@@ -1,7 +1,103 @@
 .t-latestNewsCard {
+  $root: &;
+  height: 100%;
   position: relative;
 
-  &_content {
+  &_image {
+    @include mobile-down {
+      .a-image {
+        @include aspect-ratio(582,252);
+      }
+    }
+  }
+
+  &_layer {
+    background: $oxford-dark-linear;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    max-height: rem(172);
     position: absolute;
+    transform: rotate(-180deg);
+    transition: all linear 0.1s;
+    width: 100%;
+
+    @include tablet-down {
+      max-height: 80%;
+    }
+  }
+
+  &_content {
+    bottom: 0;
+    left: 0;
+    padding: 0 rem(24) rem(22);
+    position: absolute;
+    transition: all linear 0.3s;
+    width: 100%;
+
+    &_title {
+      @include text-overflow();
+    }
+  }
+
+  &:hover {
+    #{$root}_content {
+      bottom: rem(10);
+    }
+
+    #{$root}_layer {
+      max-height: 100%;
+    }
+  }
+}
+
+.t-latestNews {
+  &_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: rem(30) rem(-15);
+
+    @include tablet-down {
+      margin: rem(20) rem(-8);
+    }
+
+    @include mobile-down {
+      margin: rem(20) 0;
+    }
+  }
+
+  &_left,
+  &_right {
+    flex: 0 0 50%;
+    padding: 0 rem(15);
+
+    @include tablet-down {
+      padding: 0 rem(8);
+    }
+
+    @include mobile-down {
+      flex: 0 0 100%;
+      padding: 0;
+    }
+  }
+
+  &_right {
+    @include mobile-down {
+      margin-top: rem(10);
+    }
+
+    &_item {
+      &:not(:first-child) {
+        margin-top: rem(30);
+
+        @include tablet-down {
+          margin-top: rem(16);
+        }
+
+        @include mobile-down {
+          margin-top: rem(10);
+        }
+      }
+    }
   }
 }

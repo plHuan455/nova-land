@@ -4,6 +4,7 @@ import Heading from 'components/atoms/Heading';
 import Image from 'components/atoms/Image';
 import Link from 'components/atoms/Link';
 import Text from 'components/atoms/Text';
+import Container from 'components/organisms/Container';
 
 export interface LatestNewsCardProps {
   imgSrc: string;
@@ -34,10 +35,12 @@ export const LatestNewsCard: React.FC<LatestNewsCardProps> = ({
         </div>
         <div className="t-latestNewsCard_layer" />
         <div className="t-latestNewsCard_content">
-          <Heading modifiers={['24x30', '600', 'white', 'uppercase']}>
-            {title}
-          </Heading>
-          <div className="t-latestNewsCard_content_time">
+          <div className="t-latestNewsCard_content_title">
+            <Heading modifiers={['24x30', '600', 'white', 'uppercase']}>
+              {title}
+            </Heading>
+          </div>
+          <div className="mt-8">
             <Text modifiers={['12x17', '300', 'columbiaBlue']}>
               {time}
             </Text>
@@ -49,13 +52,26 @@ export const LatestNewsCard: React.FC<LatestNewsCardProps> = ({
 );
 
 interface LatestNewsProps {
+  dataLatestNews: LatestNewsCardProps[];
 }
 
-const LatestNews: React.FC<LatestNewsProps> = ({ children }) => (
-  <div>{children}</div>
+const LatestNews: React.FC<LatestNewsProps> = ({ dataLatestNews }) => (
+  <div className="t-latestNews">
+    <Container>
+      <div className="t-latestNews_wrapper">
+        <div className="t-latestNews_left">
+          <LatestNewsCard {...dataLatestNews[0]} />
+        </div>
+        <div className="t-latestNews_right">
+          {dataLatestNews.slice(1).map((item, index) => (
+            <div className="t-latestNews_right_item" key={`latestNews-${index.toString()}`}>
+              <LatestNewsCard {...item} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </Container>
+  </div>
 );
-
-LatestNews.defaultProps = {
-};
 
 export default LatestNews;

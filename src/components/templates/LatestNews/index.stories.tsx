@@ -33,5 +33,9 @@ export const horizontal: Story = () => (
 );
 
 export const normal: Story = () => (
-  <LatestNews />
+  <Router>
+    <LatestNews
+      dataLatestNews={latestNewsCardList}
+    />
+  </Router>
 );
