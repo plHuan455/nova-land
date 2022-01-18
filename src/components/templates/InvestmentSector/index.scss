@@ -153,7 +153,7 @@
     #{$root}_desc {
       position: relative;
       z-index: 2;
-      @include text-overflow(7);
+      @include text-overflow(5);
 
       .a-text {
         color: $white;
