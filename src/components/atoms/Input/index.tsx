@@ -41,7 +41,7 @@ const InputRef: React.ForwardRefRenderFunction<HTMLInputElement, InputProps> = (
       />
     </div>
     {
-      error && <span className="a-input_message-error">{error}</span>
+      error && <span className="a-input_message">{error}</span>
     }
   </div>
 );

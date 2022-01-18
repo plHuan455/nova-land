@@ -16,11 +16,12 @@ export const iconList = {
   arrowNextWhite2: 'arrowNextWhite2',
   arrowDownBrown: 'arrowDownBrown',
   arrowNextYellowBrown: 'arrowNextYellowBrown',
+  arrowNextGray: 'arrowNextGray',
 };
 
 export type IconName = keyof typeof iconList;
 
-export type IconSize = '14' | '24' |'40' | '10' | '16' | '20';
+export type IconSize = '14' | '24' |'40' | '10' | '16' | '20' | '18';
 
 interface IconProps {
   iconName: IconName;

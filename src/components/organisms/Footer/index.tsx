@@ -166,7 +166,7 @@ const Footer: React.FC<FooterProps> = ({
                     placeholder="- Dự án khách hàng quan tâm -"
                   />
                 </div>
-                <div className="o-footer_main_form_button mt-32">
+                <div className="o-footer_main_form_button mt-28">
                   <Button type="submit" modifiers="primary">
                     Đăng Ký
                   </Button>

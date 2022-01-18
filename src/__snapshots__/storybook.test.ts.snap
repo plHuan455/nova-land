@@ -181,6 +181,17 @@ exports[`Storyshots Components/atoms/Icon Normal 1`] = `
       className="a-icon a-icon-arrowNextYellowBrown a-icon-24"
     />
   </div>
+  <div
+    style={
+      Object {
+        "marginLeft": 7,
+      }
+    }
+  >
+    <i
+      className="a-icon a-icon-arrowNextGray a-icon-24"
+    />
+  </div>
 </div>
 `;
 
@@ -278,6 +289,8 @@ exports[`Storyshots Components/molecules/EcoCard Normal 1`] = `
 >
   <div
     className="m-ecoCard"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="m-ecoCard_field"
@@ -339,7 +352,7 @@ exports[`Storyshots Components/molecules/EcoCard Normal 1`] = `
         className="m-ecoCard_btn"
       >
         <i
-          className="a-icon a-icon-arrowNextWhite a-icon-24"
+          className="a-icon a-icon-arrowNextGray a-icon-18"
         />
       </div>
     </a>
@@ -4070,6 +4083,8 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                       >
                         <div
                           className="m-ecoCard"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
                         >
                           <div
                             className="m-ecoCard_field"
@@ -4131,7 +4146,7 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                               className="m-ecoCard_btn"
                             >
                               <i
-                                className="a-icon a-icon-arrowNextWhite a-icon-24"
+                                className="a-icon a-icon-arrowNextGray a-icon-18"
                               />
                             </div>
                           </a>
@@ -4173,6 +4188,8 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                       >
                         <div
                           className="m-ecoCard"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
                         >
                           <div
                             className="m-ecoCard_field"
@@ -4234,7 +4251,7 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                               className="m-ecoCard_btn"
                             >
                               <i
-                                className="a-icon a-icon-arrowNextWhite a-icon-24"
+                                className="a-icon a-icon-arrowNextGray a-icon-18"
                               />
                             </div>
                           </a>
@@ -4276,6 +4293,8 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                       >
                         <div
                           className="m-ecoCard"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
                         >
                           <div
                             className="m-ecoCard_field"
@@ -4337,7 +4356,7 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                               className="m-ecoCard_btn"
                             >
                               <i
-                                className="a-icon a-icon-arrowNextWhite a-icon-24"
+                                className="a-icon a-icon-arrowNextGray a-icon-18"
                               />
                             </div>
                           </a>
@@ -4379,6 +4398,8 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                       >
                         <div
                           className="m-ecoCard"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
                         >
                           <div
                             className="m-ecoCard_field"
@@ -4440,7 +4461,7 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                               className="m-ecoCard_btn"
                             >
                               <i
-                                className="a-icon a-icon-arrowNextWhite a-icon-24"
+                                className="a-icon a-icon-arrowNextGray a-icon-18"
                               />
                             </div>
                           </a>
@@ -4482,6 +4503,8 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                       >
                         <div
                           className="m-ecoCard"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
                         >
                           <div
                             className="m-ecoCard_field"
@@ -4543,7 +4566,7 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                               className="m-ecoCard_btn"
                             >
                               <i
-                                className="a-icon a-icon-arrowNextWhite a-icon-24"
+                                className="a-icon a-icon-arrowNextGray a-icon-18"
                               />
                             </div>
                           </a>
@@ -4645,7 +4668,7 @@ exports[`Storyshots Components/templates/FeaturedProjects Normal 1`] = `
                     className="o-listFeatProjectCollapse_item-content"
                   >
                     <p
-                      className="a-text a-text-davysGrey a-text-16x24 a-text-300"
+                      className="a-text a-text-davysGrey a-text-300"
                     >
                       Là phân kỳ đầu tiên của dự án NovaWorld Ho Tram, với quy mô hơn 140 hecta, phân kỳ The Tropicana mang phong cách thiết kế miền nhiệt đới, nơi thiên nhiên giao hòa.
                     </p>
@@ -4721,7 +4744,7 @@ exports[`Storyshots Components/templates/FeaturedProjects Normal 1`] = `
                     className="o-listFeatProjectCollapse_item-content"
                   >
                     <p
-                      className="a-text a-text-davysGrey a-text-16x24 a-text-300"
+                      className="a-text a-text-davysGrey a-text-300"
                     >
                       Là phân kỳ đầu tiên của dự án NovaWorld Ho Tram, với quy mô hơn 140 hecta, phân kỳ The Tropicana mang phong cách thiết kế miền nhiệt đới, nơi thiên nhiên giao hòa.
                     </p>
@@ -4752,7 +4775,7 @@ exports[`Storyshots Components/templates/FeaturedProjects Normal 1`] = `
                       <img
                         alt="replacing"
                         loading="lazy"
-                        src="banner2.png"
+                        src="transportationInfrastructure.png"
                       />
                     </div>
                   </div>
@@ -4797,7 +4820,7 @@ exports[`Storyshots Components/templates/FeaturedProjects Normal 1`] = `
                     className="o-listFeatProjectCollapse_item-content"
                   >
                     <p
-                      className="a-text a-text-davysGrey a-text-16x24 a-text-300"
+                      className="a-text a-text-davysGrey a-text-300"
                     >
                       Là phân kỳ đầu tiên của dự án NovaWorld Ho Tram, với quy mô hơn 140 hecta, phân kỳ The Tropicana mang phong cách thiết kế miền nhiệt đới, nơi thiên nhiên giao hòa.
                     </p>
@@ -4848,7 +4871,7 @@ exports[`Storyshots Components/templates/FeaturedProjects Normal 1`] = `
           className="t-featuredProjects_collapseList_right_image t-featuredProjects_collapseList_right_image-show"
         >
           <div
-            className="a-image a-image-547x410"
+            className="a-image a-image-582x438"
           >
             <img
               alt="replacing"
@@ -4861,12 +4884,12 @@ exports[`Storyshots Components/templates/FeaturedProjects Normal 1`] = `
           className="t-featuredProjects_collapseList_right_image"
         >
           <div
-            className="a-image a-image-547x410"
+            className="a-image a-image-582x438"
           >
             <img
               alt="replacing"
               loading="lazy"
-              src="banner2.png"
+              src="transportationInfrastructure.png"
             />
           </div>
         </div>
@@ -4874,7 +4897,7 @@ exports[`Storyshots Components/templates/FeaturedProjects Normal 1`] = `
           className="t-featuredProjects_collapseList_right_image"
         >
           <div
-            className="a-image a-image-547x410"
+            className="a-image a-image-582x438"
           >
             <img
               alt="replacing"
@@ -16153,12 +16176,12 @@ exports[`Storyshots Components/templates/TransportationInfrastructure Normal 1`]
         className="u-mt-16 u-mt-sm-32"
       >
         <div
-          className="a-image a-image-1126x376"
+          className="a-image a-image-1194x191"
         >
           <img
             alt="banner"
             loading="lazy"
-            src="banner2.png"
+            src="transportationInfrastructure.png"
           />
         </div>
       </div>

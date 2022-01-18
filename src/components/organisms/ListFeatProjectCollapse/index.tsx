@@ -36,7 +36,7 @@ const ListFeatProjectCollapse: React.FC<ListFeatProjectCollapseProps> = ({
           active={indexActive === idx}
         >
           <div className="o-listFeatProjectCollapse_item-content">
-            <Text modifiers={['davysGrey', '16x24', '300']}>
+            <Text modifiers={['davysGrey', '300']}>
               {item.content}
             </Text>
           </div>

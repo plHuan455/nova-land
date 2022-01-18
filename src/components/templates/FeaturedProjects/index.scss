@@ -21,12 +21,6 @@
     &_left {
       padding: rem(27) rem(16) rem(27) rem(24);
 
-      @include tablet-up {
-        max-height: rem(410);
-        overflow-y: auto;
-        @include scroll-bars(8, $camel);
-      }
-
       @include tablet-down {
         flex: 0 0 100%;
         padding: rem(16);
@@ -39,6 +33,7 @@
 
     &_right {
       .a-image {
+        height: 100%;
         max-width: 100%;
       }
       @include tablet-down {
@@ -47,6 +42,7 @@
 
       &_image {
         display: none;
+        height: 100%;
 
         &-show {
           display: block;

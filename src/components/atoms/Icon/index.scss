@@ -34,6 +34,11 @@
     width: rem(20);
   }
 
+  &-18 {
+    height: rem(18);
+    width: rem(18);
+  }
+
   &-search {
     background-image: url('~assets/icons/ic_search.svg');
   }
@@ -84,5 +89,9 @@
   
   &-arrowDownBrown {
     background-image: url('~assets/icons/ic_arrow_down_brown.svg');
+  }
+
+  &-arrowNextGray {
+    background-image: url('~assets/icons/ic_arrow_next_gray.svg');
   }
 }
