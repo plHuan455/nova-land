@@ -382,7 +382,7 @@ exports[`Storyshots Components/molecules/Pulldown Normal 1`] = `
         className="css-1f43avz-a11yText-A11yText"
       />
       <div
-        className="m-pulldown m-pulldown-default__control css-1wxtc0p-control"
+        className="m-pulldown m-pulldown-default__control css-srovjr-control"
         onMouseDown={[Function]}
         onTouchEnd={[Function]}
       >
@@ -1821,7 +1821,7 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
                         className="css-1f43avz-a11yText-A11yText"
                       />
                       <div
-                        className="m-pulldown m-pulldown-default__control css-1wxtc0p-control"
+                        className="m-pulldown m-pulldown-default__control css-srovjr-control"
                         onMouseDown={[Function]}
                         onTouchEnd={[Function]}
                       >
@@ -1922,7 +1922,7 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
                   </div>
                 </div>
                 <div
-                  className="o-footer_main_form_button mt-32"
+                  className="o-footer_main_form_button mt-28"
                 >
                   <button
                     className="a-button a-button-primary"
@@ -4609,6 +4609,329 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
         </div>
       </div>
     </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/templates/FeaturedNews Horizontal 1`] = `
+<div
+  style={
+    Object {
+      "width": "582px",
+    }
+  }
+>
+  <div
+    className="t-featuredNewsCard"
+  >
+    <a
+      aria-current="page"
+      className="a-link   active"
+      href="/"
+      onClick={[Function]}
+      target="_self"
+    >
+      <div
+        className="t-featuredNewsCard_wrapper"
+      >
+        <div
+          className="t-featuredNewsCard_image"
+        >
+          <div
+            className="a-image a-image-582x252"
+          >
+            <img
+              alt="ImgFeaturedNews2"
+              loading="lazy"
+              src="img_featuredNews2.png"
+            />
+          </div>
+        </div>
+        <div
+          className="t-featuredNewsCard_layer"
+        />
+        <div
+          className="t-featuredNewsCard_content"
+        >
+          <div
+            className="t-featuredNewsCard_content_title"
+          >
+            <h2
+              className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-uppercase"
+            >
+              Cao tốc Phan Thiết - Dầu Giây qua Đồng Nai phấn đấu vượt tiến độ...
+            </h2>
+          </div>
+          <div
+            className="mt-8"
+          >
+            <p
+              className="a-text a-text-12x17 a-text-300 a-text-columbiaBlue"
+            >
+              2 giờ trước
+            </p>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/templates/FeaturedNews Normal 1`] = `
+<div
+  className="t-featuredNews"
+>
+  <div
+    className="container o-container"
+  >
+    <div
+      className="t-featuredNews_wrapper"
+    >
+      <div
+        className="t-featuredNews_left"
+      >
+        <div
+          className="t-featuredNewsCard"
+        >
+          <a
+            aria-current="page"
+            className="a-link   active"
+            href="/"
+            onClick={[Function]}
+            target="_self"
+          >
+            <div
+              className="t-featuredNewsCard_wrapper"
+            >
+              <div
+                className="t-featuredNewsCard_image"
+              >
+                <div
+                  className="a-image a-image-582x534"
+                >
+                  <img
+                    alt="ImgFeaturedNews1"
+                    loading="lazy"
+                    src="img_featuredNews1.png"
+                  />
+                </div>
+              </div>
+              <div
+                className="t-featuredNewsCard_layer"
+              />
+              <div
+                className="t-featuredNewsCard_content"
+              >
+                <div
+                  className="t-featuredNewsCard_content_title"
+                >
+                  <h2
+                    className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-uppercase"
+                  >
+                    Bốn dự án thành phần cao tốc Bắc Nam sẽ hoàn thành năm 2022
+                  </h2>
+                </div>
+                <div
+                  className="mt-8"
+                >
+                  <p
+                    className="a-text a-text-12x17 a-text-300 a-text-columbiaBlue"
+                  >
+                    1 phút trước
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div
+        className="t-featuredNews_right"
+      >
+        <div
+          className="t-featuredNews_right_item"
+        >
+          <div
+            className="t-featuredNewsCard"
+          >
+            <a
+              aria-current="page"
+              className="a-link   active"
+              href="/"
+              onClick={[Function]}
+              target="_self"
+            >
+              <div
+                className="t-featuredNewsCard_wrapper"
+              >
+                <div
+                  className="t-featuredNewsCard_image"
+                >
+                  <div
+                    className="a-image a-image-582x252"
+                  >
+                    <img
+                      alt="ImgFeaturedNews2"
+                      loading="lazy"
+                      src="img_featuredNews2.png"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="t-featuredNewsCard_layer"
+                />
+                <div
+                  className="t-featuredNewsCard_content"
+                >
+                  <div
+                    className="t-featuredNewsCard_content_title"
+                  >
+                    <h2
+                      className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-uppercase"
+                    >
+                      Cao tốc Phan Thiết - Dầu Giây qua Đồng Nai phấn đấu vượt tiến độ...
+                    </h2>
+                  </div>
+                  <div
+                    className="mt-8"
+                  >
+                    <p
+                      className="a-text a-text-12x17 a-text-300 a-text-columbiaBlue"
+                    >
+                      2 giờ trước
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div
+          className="t-featuredNews_right_item"
+        >
+          <div
+            className="t-featuredNewsCard"
+          >
+            <a
+              aria-current="page"
+              className="a-link   active"
+              href="/"
+              onClick={[Function]}
+              target="_self"
+            >
+              <div
+                className="t-featuredNewsCard_wrapper"
+              >
+                <div
+                  className="t-featuredNewsCard_image"
+                >
+                  <div
+                    className="a-image a-image-582x252"
+                  >
+                    <img
+                      alt="ImgFeaturedNews3"
+                      loading="lazy"
+                      src="img_featuredNews3.png"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="t-featuredNewsCard_layer"
+                />
+                <div
+                  className="t-featuredNewsCard_content"
+                >
+                  <div
+                    className="t-featuredNewsCard_content_title"
+                  >
+                    <h2
+                      className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-uppercase"
+                    >
+                      Novaland nằm trong Top 50 công ty niêm yết tốt nhất Việt Nam 2021
+                    </h2>
+                  </div>
+                  <div
+                    className="mt-8"
+                  >
+                    <p
+                      className="a-text a-text-12x17 a-text-300 a-text-columbiaBlue"
+                    >
+                      6 giờ trước
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/templates/FeaturedNews Vertical 1`] = `
+<div
+  style={
+    Object {
+      "width": "582px",
+    }
+  }
+>
+  <div
+    className="t-featuredNewsCard"
+  >
+    <a
+      aria-current="page"
+      className="a-link   active"
+      href="/"
+      onClick={[Function]}
+      target="_self"
+    >
+      <div
+        className="t-featuredNewsCard_wrapper"
+      >
+        <div
+          className="t-featuredNewsCard_image"
+        >
+          <div
+            className="a-image a-image-582x534"
+          >
+            <img
+              alt="ImgFeaturedNews1"
+              loading="lazy"
+              src="img_featuredNews1.png"
+            />
+          </div>
+        </div>
+        <div
+          className="t-featuredNewsCard_layer"
+        />
+        <div
+          className="t-featuredNewsCard_content"
+        >
+          <div
+            className="t-featuredNewsCard_content_title"
+          >
+            <h2
+              className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-uppercase"
+            >
+              Bốn dự án thành phần cao tốc Bắc Nam sẽ hoàn thành năm 2022
+            </h2>
+          </div>
+          <div
+            className="mt-8"
+          >
+            <p
+              className="a-text a-text-12x17 a-text-300 a-text-columbiaBlue"
+            >
+              1 phút trước
+            </p>
+          </div>
+        </div>
+      </div>
+    </a>
   </div>
 </div>
 `;
@@ -12797,7 +13120,7 @@ exports[`Storyshots Components/templates/MainLayout Normal 1`] = `
                           className="css-1f43avz-a11yText-A11yText"
                         />
                         <div
-                          className="m-pulldown m-pulldown-default__control css-1wxtc0p-control"
+                          className="m-pulldown m-pulldown-default__control css-srovjr-control"
                           onMouseDown={[Function]}
                           onTouchEnd={[Function]}
                         >
@@ -12898,7 +13221,7 @@ exports[`Storyshots Components/templates/MainLayout Normal 1`] = `
                     </div>
                   </div>
                   <div
-                    className="o-footer_main_form_button mt-32"
+                    className="o-footer_main_form_button mt-28"
                   >
                     <button
                       className="a-button a-button-primary"
@@ -14804,7 +15127,7 @@ exports[`Storyshots Components/templates/ProjectListMap Normal 1`] = `
                   className="css-1f43avz-a11yText-A11yText"
                 />
                 <div
-                  className="m-pulldown m-pulldown-default__control css-1wxtc0p-control"
+                  className="m-pulldown m-pulldown-default__control css-srovjr-control"
                   onMouseDown={[Function]}
                   onTouchEnd={[Function]}
                 >
@@ -14928,7 +15251,7 @@ exports[`Storyshots Components/templates/ProjectListMap Normal 1`] = `
                   className="css-1f43avz-a11yText-A11yText"
                 />
                 <div
-                  className="m-pulldown m-pulldown-default__control css-1wxtc0p-control"
+                  className="m-pulldown m-pulldown-default__control css-srovjr-control"
                   onMouseDown={[Function]}
                   onTouchEnd={[Function]}
                 >

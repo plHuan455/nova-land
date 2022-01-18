@@ -20,6 +20,13 @@
     @include font-base(20, 30);
   }
 
+  &-24x30 {
+    @include font-base(24, 30);
+    @include tablet-down {
+      @include font-base(18, 24);
+    }
+  }
+
   &-32x48 {
     @include font-base(32, 48);
     @include tablet-down {

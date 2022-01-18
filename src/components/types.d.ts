@@ -19,7 +19,9 @@ type Ratio =
   | '582x438'
   | '1366x600'
   | '311x78'
-  | '228x145';
+  | '228x145'
+  | '582x534'
+  | '582x252';
 
 type FontWeightStyle =
   | '100'
@@ -72,7 +74,8 @@ type ColorStyle =
   | 'lavenderGray'
   | 'taupeGray'
   | 'camel'
-  | 'jet333';
+  | 'jet333'
+  | 'columbiaBlue';
 
 type FontFamily = 'fontLexend' | 'fontNoto' | 'fontLato';
 
