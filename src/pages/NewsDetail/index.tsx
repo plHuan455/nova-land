@@ -1,18 +1,7 @@
-import { Story, Meta } from '@storybook/react';
 import React from 'react';
-import {
-  BrowserRouter as Router,
-} from 'react-router-dom';
-
-import NewsDetail from '.';
 
 import imgRelatedNews from 'assets/images/News/related-news.png';
-
-export default {
-  title: 'Components/templates/NewsDetail',
-  component: NewsDetail,
-  argTypes: {},
-} as Meta;
+import NewsDetail from 'components/templates/NewsDetail';
 
 const newsDetailData = {
   newsDetail: {
@@ -94,12 +83,14 @@ const newsDetailData = {
 
 const keywordList = ['Công viên giải Trí', 'đô thị vệ tinh', 'bến du thuyền', 'Aqua City', 'Novaland Gallery'];
 
-export const normal: Story = () => (
-  <Router>
+const NewsDetailPage: React.FC = () => (
+  <div className="p-newsdetail">
     <NewsDetail
       newsDetail={newsDetailData.newsDetail}
       relatedNews={newsDetailData.relatedNews}
       keyword={keywordList}
     />
-  </Router>
+  </div>
 );
+
+export default NewsDetailPage;

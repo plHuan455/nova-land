@@ -13,6 +13,7 @@ import Home from 'pages/Home';
 import InvestmentRelations from 'pages/InvestmentRelations';
 import News from 'pages/News';
 import NewsCategory from 'pages/NewsCategory';
+import NewsDetail from 'pages/NewsDetail';
 import { store } from 'store';
 
 const App: React.FC = () => {
@@ -32,6 +33,7 @@ const App: React.FC = () => {
           <Route path="/tin-tuc-du-an" element={<NewsCategory />} />
           <Route path="/quan-he-dau-tu" element={<InvestmentRelations />} />
           <Route path="/linh-vuc-hoat-dong" element={<FieldOfActivity />} />
+          <Route path="/tin-tuc-chi-tiet" element={<NewsDetail />} />
           <Route path="*" element={<div />} />
         </Routes>
       </MainLayoutContainer>
