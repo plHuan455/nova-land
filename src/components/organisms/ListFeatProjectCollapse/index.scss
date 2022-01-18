@@ -1,5 +1,11 @@
 .o-listFeatProjectCollapse {
   $root: &;
+  
+  @include tablet-up {
+    max-height: rem(410);
+    overflow-y: auto;
+    @include scroll-bars(8, $camel);
+  }
 
   &_item {
     &-content {

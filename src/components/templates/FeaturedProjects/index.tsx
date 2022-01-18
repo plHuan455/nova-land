@@ -55,7 +55,7 @@ const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
                   >
                     <Image
                       src={item.src}
-                      ratio="547x410"
+                      ratio="582x438"
                     />
                   </div>
                 ))
