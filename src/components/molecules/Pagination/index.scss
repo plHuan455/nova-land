@@ -1,0 +1,64 @@
+.o-pagination {
+  @include adjust-flex;
+
+  .main {
+    display: flex;
+  }
+
+  .page {
+    background: transparent;
+    border: rem(1) solid $anti-flash-white-4f9;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: rem(38);
+    min-width: rem(41);
+    position: relative;
+    list-style-type: none;
+    overflow: hidden;
+    padding-left: rem(4);
+    padding-right: rem(4);
+
+    &:not(.disabled):hover {
+      background: $ghost-white;
+    }
+
+    @include tablet-down {
+      height: rem(30);
+      min-width: rem(33);
+    }
+
+    @include small-mobile {
+      height: rem(25);
+      min-width: rem(28);
+
+    }
+
+    .link-page {
+      color: $slate-gray;
+      height: 100%;
+      padding: 0;
+      outline: none;
+      width: 100%;
+      @include adjust-flex;
+
+      @include font-base(12, 17);
+
+      @include tablet-down {
+        @include font-base(10, 15);
+      }
+    }
+  }
+
+  .disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  .active-page {
+    background: $ghost-white;
+  }
+
+  .break {
+    border-color: transparent;
+  }
+}

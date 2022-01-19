@@ -18,6 +18,8 @@ export const iconList = {
   arrowNextYellowBrown: 'arrowNextYellowBrown',
   arrowNextGray: 'arrowNextGray',
   home: 'home',
+  arrowNextSlateGray: 'arrowNextSlateGray',
+  arrowPrevSlateGray: 'arrowPrevSlateGray',
 };
 
 export type IconName = keyof typeof iconList;
