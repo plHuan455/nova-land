@@ -1,0 +1,33 @@
+.t-newsList {
+  &_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: rem(-15);
+
+    @include tablet-down {
+      margin: rem(-10) 0;
+    }
+  }
+
+  &_item {
+    flex: 0 0 50%;
+    padding: rem(15);
+
+    @include tablet-down {
+      flex: 0 0 100%;
+      padding: rem(10) 0;
+    }
+  }
+
+  &_button {
+    margin: rem(60) auto 0;
+
+    @include tablet-down {
+      margin: rem(35) auto 0;
+    }
+
+    @include mobile-down {
+      margin: rem(20) auto 0;
+    }
+  }
+}
