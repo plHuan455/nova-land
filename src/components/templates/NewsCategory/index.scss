@@ -31,21 +31,21 @@
     &_icon {
       background: transparent;
       height: rem(20);
-      width: rem(20);
       position: relative;
+      width: rem(20);
 
       &::before {
-        content: '';
-        position: absolute;
         background-image: url('~assets/icons/ic_arrow_next_red.svg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
+        content: '';
         height: rem(12);
-        width: rem(12);
-        top: 50%;
         left: 50%;
+        position: absolute;
+        top: 50%;
         transform: translate(-50%, -50%);
+        width: rem(12);
       }
     }
   }
@@ -59,12 +59,12 @@
 
     #{$root}_btn_icon {
       background: $camel;
-      transition: all linear 0.3s;
       transform: translateX(5px);
+      transition: all linear 0.3s;
 
       &::before {
-        transition: all linear 0.2s;
         background-image: url('~assets/icons/ic_arrow_next_white2.svg');
+        transition: all linear 0.2s;
       }
     }
   }
@@ -86,20 +86,20 @@
   }
 
   &_item {
-    padding: 0 rem(15);
-    margin-top: rem(30);
     flex: 0 0 33.3333%;
+    margin-top: rem(30);
+    padding: 0 rem(15);
 
     @include tablet-down {
-      padding: 0 rem(8);
-      margin-top: rem(16);
       flex: 0 0 50%;
+      margin-top: rem(16);
+      padding: 0 rem(8);
     }
 
     @include mobile-down {
-      padding: 0;
-      margin-top: rem(12);
       flex: 0 0 100%;
+      margin-top: rem(12);
+      padding: 0;
     }
   }
 }

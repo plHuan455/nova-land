@@ -203,6 +203,28 @@ exports[`Storyshots Components/atoms/Icon Normal 1`] = `
       className="a-icon a-icon-home a-icon-24"
     />
   </div>
+  <div
+    style={
+      Object {
+        "marginLeft": 7,
+      }
+    }
+  >
+    <i
+      className="a-icon a-icon-arrowNextSlateGray a-icon-24"
+    />
+  </div>
+  <div
+    style={
+      Object {
+        "marginLeft": 7,
+      }
+    }
+  >
+    <i
+      className="a-icon a-icon-arrowPrevSlateGray a-icon-24"
+    />
+  </div>
 </div>
 `;
 
@@ -496,6 +518,146 @@ exports[`Storyshots Components/molecules/EcoCard Normal 1`] = `
         />
       </div>
     </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/molecules/Pagination Normal 1`] = `
+<div>
+  <div
+    className="o-pagination"
+  >
+    <ul
+      className="main"
+    >
+      <li
+        className="page disabled"
+      >
+        <a
+          aria-disabled="true"
+          aria-label="Previous page"
+          className="link-page link-previous "
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          rel="prev"
+          role="button"
+          tabIndex="-1"
+        >
+          <i
+            className="a-icon a-icon-arrowPrevSlateGray a-icon-16"
+          />
+        </a>
+      </li>
+      <li
+        className="page active-page"
+      >
+        <a
+          aria-current="page"
+          aria-label="Page 1 is your current page"
+          className="link-page"
+          href="/?page=1"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          rel="canonical"
+          tabIndex="-1"
+        >
+          1
+        </a>
+      </li>
+      <li
+        className="page"
+      >
+        <a
+          aria-current={null}
+          aria-label="Page 2"
+          className="link-page"
+          href="/?page=2"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          rel="next"
+          tabIndex="0"
+        >
+          2
+        </a>
+      </li>
+      <li
+        className="page"
+      >
+        <a
+          aria-current={null}
+          aria-label="Page 3"
+          className="link-page"
+          href="/?page=3"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          tabIndex="0"
+        >
+          3
+        </a>
+      </li>
+      <li
+        className="page break"
+      >
+        <a
+          className="link-page link-break"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex="0"
+        >
+          ...
+        </a>
+      </li>
+      <li
+        className="page"
+      >
+        <a
+          aria-current={null}
+          aria-label="Page 9"
+          className="link-page"
+          href="/?page=9"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          tabIndex="0"
+        >
+          9
+        </a>
+      </li>
+      <li
+        className="page"
+      >
+        <a
+          aria-current={null}
+          aria-label="Page 10"
+          className="link-page"
+          href="/?page=10"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          tabIndex="0"
+        >
+          10
+        </a>
+      </li>
+      <li
+        className="page"
+      >
+        <a
+          aria-disabled="false"
+          aria-label="Next page"
+          className="link-page link-next"
+          href="/?page=2"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          rel="next"
+          role="button"
+          tabIndex="0"
+        >
+          <i
+            className="a-icon a-icon-arrowNextSlateGray a-icon-16"
+          />
+        </a>
+      </li>
+    </ul>
   </div>
 </div>
 `;
@@ -3540,10 +3702,7 @@ exports[`Storyshots Components/templates/DevelopmentHistory Normal 1`] = `
         className="a-text a-text-center a-text-white a-text-16x24 a-text-300"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "Trên hành trình trở thành nhà Đầu tư - Phát triển bất động sản uy tín hàng đầu Việt Nam, bằng niềm đam mê,
- sự tập trung và kiên định thực hiện sứ mệnh của mình, Novaland đã và đang đa dạng hóa sản phẩm ở trung tâm TPHCM,
- đô thị vệ tinh và đô thị du lịch nghỉ dưỡng ở các tỉnh thành trọng điểm, kiến tạo nên những cộng đồng tinh hoa,
- thu hút khách du lịch trong và ngoài nước.",
+            "__html": "Trên hành trình trở thành nhà Đầu tư - Phát triển bất động sản uy tín hàng đầu Việt Nam, bằng niềm đam mê, sự tập trung và kiên định thực hiện sứ mệnh của mình, Novaland đã và đang đa dạng hóa sản phẩm ở trung tâm TPHCM, đô thị vệ tinh và đô thị du lịch nghỉ dưỡng ở các tỉnh thành trọng điểm, kiến tạo nên những cộng đồng tinh hoa, thu hút khách du lịch trong và ngoài nước.",
           }
         }
       />
@@ -4151,9 +4310,7 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
       <p
         className="a-text a-text-300 a-text-center a-text-dimGray a-text-16x24"
       >
-        Hệ sinh thái Nova Group, mang những tinh hoa Văn Hóa, Ẩm Thực, Giáo Dục, Vui Chơi - Giải Trí, Du Lịch Nghỉ Dưỡng,
- Chăm Sóc Sức Khỏe, Y Tế hàng đầu thế giới và Việt Nam về hội tụ tại quần thể các dự án của Novaland nhằm phục vụ
- sự tiện nghi và thịnh vượng cho cộng đồng cư dân, tăng giá trị cho các sản phẩm bất động sản và hiệu quả cho các nhà đầu tư.
+        Hệ sinh thái Nova Group, mang những tinh hoa Văn Hóa, Ẩm Thực, Giáo Dục, Vui Chơi - Giải Trí, Du Lịch Nghỉ Dưỡng, Chăm Sóc Sức Khỏe, Y Tế hàng đầu thế giới và Việt Nam về hội tụ tại quần thể các dự án của Novaland nhằm phục vụ sự tiện nghi và thịnh vượng cho cộng đồng cư dân, tăng giá trị cho các sản phẩm bất động sản và hiệu quả cho các nhà đầu tư.
       </p>
     </div>
     <div
@@ -10975,8 +11132,7 @@ exports[`Storyshots Components/templates/Leadership Card Detail 1`] = `
         className="a-heading a-heading-dimGray a-heading-300"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của
- Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được Sứ mạng, Hoài bão của Novaland Group.",
+            "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được Sứ mạng, Hoài bão của Novaland Group.",
           }
         }
       />
@@ -13767,6 +13923,843 @@ exports[`Storyshots Components/templates/MainLayout Normal 1`] = `
       </div>
     </div>
   </footer>
+</div>
+`;
+
+exports[`Storyshots Components/templates/NewsCategory Card 1`] = `
+<div
+  style={
+    Object {
+      "margin": "30px",
+      "maxWidth": "378px",
+    }
+  }
+>
+  <div
+    className="t-newsCategoryCard"
+  >
+    <a
+      aria-current="page"
+      className="a-link   active"
+      href="/"
+      onClick={[Function]}
+      target="_self"
+    >
+      <div
+        className="t-newsCategoryCard_wrapper"
+      >
+        <div
+          className="t-newsCategoryCard_thumbnail"
+        >
+          <div
+            className="a-image a-image-376x212"
+          >
+            <img
+              alt="ImgNewsCategory4"
+              loading="lazy"
+              src="img_newsCategory4.png"
+            />
+          </div>
+        </div>
+        <div
+          className="t-newsCategoryCard_content"
+        >
+          <div
+            className="t-newsCategoryCard_title"
+          >
+            <h2
+              className="a-heading a-heading-20x30 a-heading-600 a-heading-jet"
+            >
+              Cụm sân golf PGA tại Novaworld Phan Thiet...
+            </h2>
+          </div>
+          <div
+            className="t-newsCategoryCard_desc u-mt-4"
+          >
+            <p
+              className="a-text a-text-300 a-text-dimGray"
+            >
+              Ngày 05 - 06/01/2022, tại Novaland Gallery (2Bis Nguyễn Thị Minh Khai, Q.1, TP.HCM),...
+            </p>
+          </div>
+          <div
+            className="t-newsCategoryCard_btn u-mt-lg-24 u-mt-sm-14 u-mt-10"
+          >
+            <p
+              className="a-text a-text-300 a-text-camel a-text-underline"
+            >
+              Xem thêm
+            </p>
+            <div
+              className="t-newsCategoryCard_btn_icon u-ml-10"
+            />
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/templates/NewsCategory Normal 1`] = `
+<div
+  style={
+    Object {
+      "height": "max-content",
+    }
+  }
+>
+  <div
+    className="t-newsCategory"
+  >
+    <div
+      className="t-newsCategory_top"
+    >
+      <div
+        className="t-featuredNews"
+      >
+        <div
+          className="container o-container"
+        >
+          <div
+            className="t-featuredNews_wrapper"
+          >
+            <div
+              className="t-featuredNews_left"
+            >
+              <div
+                className="t-featuredNewsCard"
+              >
+                <a
+                  aria-current="page"
+                  className="a-link   active"
+                  href="/"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  <div
+                    className="t-featuredNewsCard_wrapper"
+                  >
+                    <div
+                      className="t-featuredNewsCard_image"
+                    >
+                      <div
+                        className="a-image a-image-582x534"
+                      >
+                        <img
+                          alt="ImgNewsCategory1"
+                          loading="lazy"
+                          src="img_newsCategory1.png"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      className="t-featuredNewsCard_layer"
+                    />
+                    <div
+                      className="t-featuredNewsCard_content"
+                    >
+                      <div
+                        className="t-featuredNewsCard_content_title"
+                      >
+                        <h2
+                          className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-uppercase"
+                        >
+                          The Kingdom – Trái tim của NovaWorld Phan Thiet
+                        </h2>
+                      </div>
+                      <div
+                        className="mt-8"
+                      >
+                        <p
+                          className="a-text a-text-12x17 a-text-300 a-text-columbiaBlue"
+                        >
+                          1 phút trước
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div
+              className="t-featuredNews_right"
+            >
+              <div
+                className="t-featuredNews_right_item"
+              >
+                <div
+                  className="t-featuredNewsCard"
+                >
+                  <a
+                    aria-current="page"
+                    className="a-link   active"
+                    href="/"
+                    onClick={[Function]}
+                    target="_self"
+                  >
+                    <div
+                      className="t-featuredNewsCard_wrapper"
+                    >
+                      <div
+                        className="t-featuredNewsCard_image"
+                      >
+                        <div
+                          className="a-image a-image-582x252"
+                        >
+                          <img
+                            alt="ImgNewsCategory2"
+                            loading="lazy"
+                            src="img_newsCategory2.png"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        className="t-featuredNewsCard_layer"
+                      />
+                      <div
+                        className="t-featuredNewsCard_content"
+                      >
+                        <div
+                          className="t-featuredNewsCard_content_title"
+                        >
+                          <h2
+                            className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-uppercase"
+                          >
+                            Khám phá second home phong cách nghỉ dưỡng resort độc đáo bên...
+                          </h2>
+                        </div>
+                        <div
+                          className="mt-8"
+                        >
+                          <p
+                            className="a-text a-text-12x17 a-text-300 a-text-columbiaBlue"
+                          >
+                            2 giờ trước
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div
+                className="t-featuredNews_right_item"
+              >
+                <div
+                  className="t-featuredNewsCard"
+                >
+                  <a
+                    aria-current="page"
+                    className="a-link   active"
+                    href="/"
+                    onClick={[Function]}
+                    target="_self"
+                  >
+                    <div
+                      className="t-featuredNewsCard_wrapper"
+                    >
+                      <div
+                        className="t-featuredNewsCard_image"
+                      >
+                        <div
+                          className="a-image a-image-582x252"
+                        >
+                          <img
+                            alt="ImgNewsCategory3"
+                            loading="lazy"
+                            src="img_newsCategory3.png"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        className="t-featuredNewsCard_layer"
+                      />
+                      <div
+                        className="t-featuredNewsCard_content"
+                      >
+                        <div
+                          className="t-featuredNewsCard_content_title"
+                        >
+                          <h2
+                            className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-uppercase"
+                          >
+                            NovaWorld Phan Thiet - Siêu Thành Phố Biển Du Lịch & Sức Khỏe
+                          </h2>
+                        </div>
+                        <div
+                          className="mt-8"
+                        >
+                          <p
+                            className="a-text a-text-12x17 a-text-300 a-text-columbiaBlue"
+                          >
+                            6 giờ trước
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="t-newsCategory_bottom"
+    >
+      <div
+        className="container o-container"
+      >
+        <div
+          className="t-newsCategory_wrapper"
+        >
+          <div
+            className="t-newsCategory_item"
+          >
+            <div
+              className="t-newsCategoryCard"
+            >
+              <a
+                aria-current="page"
+                className="a-link   active"
+                href="/"
+                onClick={[Function]}
+                target="_self"
+              >
+                <div
+                  className="t-newsCategoryCard_wrapper"
+                >
+                  <div
+                    className="t-newsCategoryCard_thumbnail"
+                  >
+                    <div
+                      className="a-image a-image-376x212"
+                    >
+                      <img
+                        alt="ImgNewsCategory4"
+                        loading="lazy"
+                        src="img_newsCategory4.png"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="t-newsCategoryCard_content"
+                  >
+                    <div
+                      className="t-newsCategoryCard_title"
+                    >
+                      <h2
+                        className="a-heading a-heading-20x30 a-heading-600 a-heading-jet"
+                      >
+                        Cụm sân golf PGA tại Novaworld Phan Thiet...
+                      </h2>
+                    </div>
+                    <div
+                      className="t-newsCategoryCard_desc u-mt-4"
+                    >
+                      <p
+                        className="a-text a-text-300 a-text-dimGray"
+                      >
+                        Ngày 05 - 06/01/2022, tại Novaland Gallery (2Bis Nguyễn Thị Minh Khai, Q.1, TP.HCM),...
+                      </p>
+                    </div>
+                    <div
+                      className="t-newsCategoryCard_btn u-mt-lg-24 u-mt-sm-14 u-mt-10"
+                    >
+                      <p
+                        className="a-text a-text-300 a-text-camel a-text-underline"
+                      >
+                        Xem thêm
+                      </p>
+                      <div
+                        className="t-newsCategoryCard_btn_icon u-ml-10"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div
+            className="t-newsCategory_item"
+          >
+            <div
+              className="t-newsCategoryCard"
+            >
+              <a
+                aria-current="page"
+                className="a-link   active"
+                href="/"
+                onClick={[Function]}
+                target="_self"
+              >
+                <div
+                  className="t-newsCategoryCard_wrapper"
+                >
+                  <div
+                    className="t-newsCategoryCard_thumbnail"
+                  >
+                    <div
+                      className="a-image a-image-376x212"
+                    >
+                      <img
+                        alt="ImgNewsCategory5"
+                        loading="lazy"
+                        src="img_newsCategory5.png"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="t-newsCategoryCard_content"
+                  >
+                    <div
+                      className="t-newsCategoryCard_title"
+                    >
+                      <h2
+                        className="a-heading a-heading-20x30 a-heading-600 a-heading-jet"
+                      >
+                        Cụm sân golf PGA tại Novaworld Phan Thiet...
+                      </h2>
+                    </div>
+                    <div
+                      className="t-newsCategoryCard_desc u-mt-4"
+                    >
+                      <p
+                        className="a-text a-text-300 a-text-dimGray"
+                      >
+                        Ngày 05 - 06/01/2022, tại Novaland Gallery (2Bis Nguyễn Thị Minh Khai, Q.1, TP.HCM),...
+                      </p>
+                    </div>
+                    <div
+                      className="t-newsCategoryCard_btn u-mt-lg-24 u-mt-sm-14 u-mt-10"
+                    >
+                      <p
+                        className="a-text a-text-300 a-text-camel a-text-underline"
+                      >
+                        Xem thêm
+                      </p>
+                      <div
+                        className="t-newsCategoryCard_btn_icon u-ml-10"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div
+            className="t-newsCategory_item"
+          >
+            <div
+              className="t-newsCategoryCard"
+            >
+              <a
+                aria-current="page"
+                className="a-link   active"
+                href="/"
+                onClick={[Function]}
+                target="_self"
+              >
+                <div
+                  className="t-newsCategoryCard_wrapper"
+                >
+                  <div
+                    className="t-newsCategoryCard_thumbnail"
+                  >
+                    <div
+                      className="a-image a-image-376x212"
+                    >
+                      <img
+                        alt="ImgNewsCategory6"
+                        loading="lazy"
+                        src="img_newsCategory6.png"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="t-newsCategoryCard_content"
+                  >
+                    <div
+                      className="t-newsCategoryCard_title"
+                    >
+                      <h2
+                        className="a-heading a-heading-20x30 a-heading-600 a-heading-jet"
+                      >
+                        Cụm sân golf PGA tại Novaworld Phan Thiet...
+                      </h2>
+                    </div>
+                    <div
+                      className="t-newsCategoryCard_desc u-mt-4"
+                    >
+                      <p
+                        className="a-text a-text-300 a-text-dimGray"
+                      >
+                        Ngày 05 - 06/01/2022, tại Novaland Gallery (2Bis Nguyễn Thị Minh Khai, Q.1, TP.HCM),...
+                      </p>
+                    </div>
+                    <div
+                      className="t-newsCategoryCard_btn u-mt-lg-24 u-mt-sm-14 u-mt-10"
+                    >
+                      <p
+                        className="a-text a-text-300 a-text-camel a-text-underline"
+                      >
+                        Xem thêm
+                      </p>
+                      <div
+                        className="t-newsCategoryCard_btn_icon u-ml-10"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div
+            className="t-newsCategory_item"
+          >
+            <div
+              className="t-newsCategoryCard"
+            >
+              <a
+                aria-current="page"
+                className="a-link   active"
+                href="/"
+                onClick={[Function]}
+                target="_self"
+              >
+                <div
+                  className="t-newsCategoryCard_wrapper"
+                >
+                  <div
+                    className="t-newsCategoryCard_thumbnail"
+                  >
+                    <div
+                      className="a-image a-image-376x212"
+                    >
+                      <img
+                        alt="ImgNewsCategory7"
+                        loading="lazy"
+                        src="img_newsCategory7.png"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="t-newsCategoryCard_content"
+                  >
+                    <div
+                      className="t-newsCategoryCard_title"
+                    >
+                      <h2
+                        className="a-heading a-heading-20x30 a-heading-600 a-heading-jet"
+                      >
+                        Cụm sân golf PGA tại Novaworld Phan Thiet...
+                      </h2>
+                    </div>
+                    <div
+                      className="t-newsCategoryCard_desc u-mt-4"
+                    >
+                      <p
+                        className="a-text a-text-300 a-text-dimGray"
+                      >
+                        Ngày 05 - 06/01/2022, tại Novaland Gallery (2Bis Nguyễn Thị Minh Khai, Q.1, TP.HCM),...
+                      </p>
+                    </div>
+                    <div
+                      className="t-newsCategoryCard_btn u-mt-lg-24 u-mt-sm-14 u-mt-10"
+                    >
+                      <p
+                        className="a-text a-text-300 a-text-camel a-text-underline"
+                      >
+                        Xem thêm
+                      </p>
+                      <div
+                        className="t-newsCategoryCard_btn_icon u-ml-10"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div
+            className="t-newsCategory_item"
+          >
+            <div
+              className="t-newsCategoryCard"
+            >
+              <a
+                aria-current="page"
+                className="a-link   active"
+                href="/"
+                onClick={[Function]}
+                target="_self"
+              >
+                <div
+                  className="t-newsCategoryCard_wrapper"
+                >
+                  <div
+                    className="t-newsCategoryCard_thumbnail"
+                  >
+                    <div
+                      className="a-image a-image-376x212"
+                    >
+                      <img
+                        alt="ImgNewsCategory8"
+                        loading="lazy"
+                        src="img_newsCategory8.png"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="t-newsCategoryCard_content"
+                  >
+                    <div
+                      className="t-newsCategoryCard_title"
+                    >
+                      <h2
+                        className="a-heading a-heading-20x30 a-heading-600 a-heading-jet"
+                      >
+                        Cụm sân golf PGA tại Novaworld Phan Thiet...
+                      </h2>
+                    </div>
+                    <div
+                      className="t-newsCategoryCard_desc u-mt-4"
+                    >
+                      <p
+                        className="a-text a-text-300 a-text-dimGray"
+                      >
+                        Ngày 05 - 06/01/2022, tại Novaland Gallery (2Bis Nguyễn Thị Minh Khai, Q.1, TP.HCM),...
+                      </p>
+                    </div>
+                    <div
+                      className="t-newsCategoryCard_btn u-mt-lg-24 u-mt-sm-14 u-mt-10"
+                    >
+                      <p
+                        className="a-text a-text-300 a-text-camel a-text-underline"
+                      >
+                        Xem thêm
+                      </p>
+                      <div
+                        className="t-newsCategoryCard_btn_icon u-ml-10"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div
+            className="t-newsCategory_item"
+          >
+            <div
+              className="t-newsCategoryCard"
+            >
+              <a
+                aria-current="page"
+                className="a-link   active"
+                href="/"
+                onClick={[Function]}
+                target="_self"
+              >
+                <div
+                  className="t-newsCategoryCard_wrapper"
+                >
+                  <div
+                    className="t-newsCategoryCard_thumbnail"
+                  >
+                    <div
+                      className="a-image a-image-376x212"
+                    >
+                      <img
+                        alt="ImgNewsCategory9"
+                        loading="lazy"
+                        src="img_newsCategory9.png"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="t-newsCategoryCard_content"
+                  >
+                    <div
+                      className="t-newsCategoryCard_title"
+                    >
+                      <h2
+                        className="a-heading a-heading-20x30 a-heading-600 a-heading-jet"
+                      >
+                        Cụm sân golf PGA tại Novaworld Phan Thiet...
+                      </h2>
+                    </div>
+                    <div
+                      className="t-newsCategoryCard_desc u-mt-4"
+                    >
+                      <p
+                        className="a-text a-text-300 a-text-dimGray"
+                      >
+                        Ngày 05 - 06/01/2022, tại Novaland Gallery (2Bis Nguyễn Thị Minh Khai, Q.1, TP.HCM),...
+                      </p>
+                    </div>
+                    <div
+                      className="t-newsCategoryCard_btn u-mt-lg-24 u-mt-sm-14 u-mt-10"
+                    >
+                      <p
+                        className="a-text a-text-300 a-text-camel a-text-underline"
+                      >
+                        Xem thêm
+                      </p>
+                      <div
+                        className="t-newsCategoryCard_btn_icon u-ml-10"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="t-newsCategory_pagination u-mt-md-40 u-mt-28"
+    >
+      <div
+        className="o-pagination"
+      >
+        <ul
+          className="main"
+        >
+          <li
+            className="page disabled"
+          >
+            <a
+              aria-disabled="true"
+              aria-label="Previous page"
+              className="link-page link-previous "
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              rel="prev"
+              role="button"
+              tabIndex="-1"
+            >
+              <i
+                className="a-icon a-icon-arrowPrevSlateGray a-icon-16"
+              />
+            </a>
+          </li>
+          <li
+            className="page active-page"
+          >
+            <a
+              aria-current="page"
+              aria-label="Page 1 is your current page"
+              className="link-page"
+              href="/?page=1"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              rel="canonical"
+              tabIndex="-1"
+            >
+              1
+            </a>
+          </li>
+          <li
+            className="page"
+          >
+            <a
+              aria-current={null}
+              aria-label="Page 2"
+              className="link-page"
+              href="/?page=2"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              rel="next"
+              tabIndex="0"
+            >
+              2
+            </a>
+          </li>
+          <li
+            className="page"
+          >
+            <a
+              aria-current={null}
+              aria-label="Page 3"
+              className="link-page"
+              href="/?page=3"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              tabIndex="0"
+            >
+              3
+            </a>
+          </li>
+          <li
+            className="page break"
+          >
+            <a
+              className="link-page link-break"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              role="button"
+              tabIndex="0"
+            >
+              ...
+            </a>
+          </li>
+          <li
+            className="page"
+          >
+            <a
+              aria-current={null}
+              aria-label="Page 9"
+              className="link-page"
+              href="/?page=9"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              tabIndex="0"
+            >
+              9
+            </a>
+          </li>
+          <li
+            className="page"
+          >
+            <a
+              aria-current={null}
+              aria-label="Page 10"
+              className="link-page"
+              href="/?page=10"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              tabIndex="0"
+            >
+              10
+            </a>
+          </li>
+          <li
+            className="page"
+          >
+            <a
+              aria-disabled="false"
+              aria-label="Next page"
+              className="link-page link-next"
+              href="/?page=2"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              rel="next"
+              role="button"
+              tabIndex="0"
+            >
+              <i
+                className="a-icon a-icon-arrowNextSlateGray a-icon-16"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
