@@ -15,6 +15,8 @@ interface HeroBannerProps {
   title?: string;
   caption?: string;
   list: HeroBannerItem[];
+  imgLogo?: string;
+  ratioLogo?: Ratio;
 }
 
 const settingBanner = {
@@ -32,6 +34,8 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
   title,
   caption,
   list,
+  imgLogo,
+  ratioLogo,
 }) => (
   <div className="t-heroBanner">
     <Animate type="goUpHero">
@@ -49,6 +53,11 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
             <Heading type="h5" modifiers={['center', 'white', '300', 'fontLexend']} content={caption} />
           </div>
         </div>
+        {imgLogo && (
+          <div className="t-heroBanner_info_image">
+            <Image src={imgLogo} ratio={ratioLogo || '386x98'} />
+          </div>
+        )}
       </div>
     </Animate>
   </div>
@@ -57,6 +66,8 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
 HeroBanner.defaultProps = {
   title: undefined,
   caption: undefined,
+  imgLogo: undefined,
+  ratioLogo: undefined,
 };
 
 export default HeroBanner;

@@ -55,14 +55,14 @@
   &_wrapper {
     display: flex;
     flex-wrap: wrap;
-    margin: rem(30) rem(-15);
+    margin: 0 rem(-15);
 
     @include tablet-down {
-      margin: rem(20) rem(-8);
+      margin: 0 rem(-8);
     }
 
     @include mobile-down {
-      margin: rem(20) 0;
+      margin: 0;
     }
   }
 
@@ -83,7 +83,7 @@
 
   &_right {
     @include mobile-down {
-      margin-top: rem(10);
+      margin-top: rem(12);
     }
 
     &_item {
@@ -95,7 +95,7 @@
         }
 
         @include mobile-down {
-          margin-top: rem(10);
+          margin-top: rem(12);
         }
       }
     }
