@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Heading from 'components/atoms/Heading';
 import Image from 'components/atoms/Image';
 import Animate from 'components/organisms/Animate';
 import Carousel, { NextArrow, PrevArrow } from 'components/organisms/Carousel';
@@ -12,11 +11,7 @@ type HeroBannerItem = {
 }
 
 interface HeroBannerProps {
-  title?: string;
-  caption?: string;
   list: HeroBannerItem[];
-  imgLogo?: string;
-  ratioLogo?: Ratio;
 }
 
 const settingBanner = {
@@ -31,11 +26,8 @@ const settingBanner = {
 };
 
 const HeroBanner: React.FC<HeroBannerProps> = ({
-  title,
-  caption,
   list,
-  imgLogo,
-  ratioLogo,
+  children,
 }) => (
   <div className="t-heroBanner">
     <Animate type="goUpHero">
@@ -45,29 +37,10 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
         ))}
       </Carousel>
       <div className="t-heroBanner_info">
-        <div className="t-heroBanner_info_content">
-          <div className="t-heroBanner_info_title">
-            <Heading modifiers={['center', '400', '60x72', 'fontNoto', 'white']} content={title} />
-          </div>
-          <div className="t-heroBanner_info_caption">
-            <Heading type="h5" modifiers={['center', 'white', '300', 'fontLexend']} content={caption} />
-          </div>
-        </div>
-        {imgLogo && (
-          <div className="t-heroBanner_info_image">
-            <Image src={imgLogo} ratio={ratioLogo || '386x98'} />
-          </div>
-        )}
+        {children}
       </div>
     </Animate>
   </div>
 );
-
-HeroBanner.defaultProps = {
-  title: undefined,
-  caption: undefined,
-  imgLogo: undefined,
-  ratioLogo: undefined,
-};
 
 export default HeroBanner;

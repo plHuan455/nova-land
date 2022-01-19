@@ -5831,36 +5831,7 @@ exports[`Storyshots Components/templates/HeroBanner Normal 1`] = `
     </div>
     <div
       className="t-heroBanner_info"
-    >
-      <div
-        className="t-heroBanner_info_content"
-      >
-        <div
-          className="t-heroBanner_info_title"
-        >
-          <h2
-            className="a-heading a-heading-center a-heading-400 a-heading-60x72 a-heading-fontNoto a-heading-white"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "Cho cuộc sống bừng sáng",
-              }
-            }
-          />
-        </div>
-        <div
-          className="t-heroBanner_info_caption"
-        >
-          <h5
-            className="a-heading a-heading-center a-heading-white a-heading-300 a-heading-fontLexend"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "Kiến tạo cộng đồng -  Xây dựng điểm đến - Vun đắp niềm vui",
-              }
-            }
-          />
-        </div>
-      </div>
-    </div>
+    />
   </div>
 </div>
 `;

@@ -1,0 +1,9 @@
+.p-newsCategory {
+  &_heroBanner {
+    &_image {
+      margin: auto auto rem(40);
+      padding: 0 rem(10);
+      max-width: rem(396);
+    }
+  }
+}

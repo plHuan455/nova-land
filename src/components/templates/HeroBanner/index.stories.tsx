@@ -14,7 +14,5 @@ export default {
 export const normal: Story = () => (
   <HeroBanner
     list={new Array(5).fill({ src: img })}
-    title="Cho cuộc sống bừng sáng"
-    caption="Kiến tạo cộng đồng -  Xây dựng điểm đến - Vun đắp niềm vui"
   />
 );
