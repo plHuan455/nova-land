@@ -4,6 +4,7 @@ import Heading from 'components/atoms/Heading';
 import Image from 'components/atoms/Image';
 import Link from 'components/atoms/Link';
 import Text from 'components/atoms/Text';
+import Pagination from 'components/molecules/Pagination';
 import Container from 'components/organisms/Container';
 import FeaturedNews from 'components/templates/FeaturedNews';
 
@@ -65,9 +66,17 @@ export interface NewsCategoryItemTypes {
 
 interface NewsCategoryProps {
   dataNewsCategory: NewsCategoryItemTypes[];
+  totalPage: number;
+  currentPage?: number;
+  handleChangePage?: (page: number) => void;
 }
 
-const NewsCategory: React.FC<NewsCategoryProps> = ({ dataNewsCategory }) => (
+const NewsCategory: React.FC<NewsCategoryProps> = ({
+  dataNewsCategory,
+  totalPage,
+  currentPage,
+  handleChangePage,
+}) => (
   <div className="t-newsCategory">
     <div className="t-newsCategory_top">
       {dataNewsCategory.length > 0 && (
@@ -87,7 +96,21 @@ const NewsCategory: React.FC<NewsCategoryProps> = ({ dataNewsCategory }) => (
         </div>
       </Container>
     </div>
+    {totalPage > 0 && (
+      <div className="t-newsCategory_pagination u-mt-md-40 u-mt-28">
+        <Pagination
+          totalPage={totalPage}
+          pageCurrent={currentPage}
+          handleChangePage={(page: number) => handleChangePage && handleChangePage(page)}
+        />
+      </div>
+    )}
   </div>
 );
+
+NewsCategory.defaultProps = {
+  currentPage: undefined,
+  handleChangePage: undefined,
+};
 
 export default NewsCategory;

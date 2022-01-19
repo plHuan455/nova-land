@@ -1,5 +1,5 @@
 import { Story, Meta } from '@storybook/react';
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 import NewsCategory, { NewsCategoryCard } from '.';
@@ -10,7 +10,14 @@ import imgNewsCategory4 from 'assets/images/NewsCategory/img_newsCategory4.png';
 export default {
   title: 'Components/templates/NewsCategory',
   component: NewsCategory,
-  argTypes: {},
+  argTypes: {
+    totalPage: {
+      control: {
+        type: 'number',
+      },
+      defaultValue: 10,
+    },
+  },
 } as Meta;
 
 export const card: Story = () => (
@@ -28,12 +35,21 @@ export const card: Story = () => (
   </div>
 );
 
-export const normal: Story = () => (
-  <div style={{ height: 'max-content' }}>
-    <Router>
-      <NewsCategory
-        dataNewsCategory={dataNewsCategoryList}
-      />
-    </Router>
-  </div>
-);
+export const Normal: Story = ({
+  totalPage,
+}) => {
+  const [currentPage, setCurrentPage] = useState(1);
+
+  return (
+    <div style={{ height: 'max-content' }}>
+      <Router>
+        <NewsCategory
+          dataNewsCategory={dataNewsCategoryList}
+          totalPage={totalPage}
+          currentPage={currentPage}
+          handleChangePage={(page: number) => setCurrentPage(page)}
+        />
+      </Router>
+    </div>
+  );
+};

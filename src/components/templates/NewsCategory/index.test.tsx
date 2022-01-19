@@ -9,7 +9,10 @@ describe('<NewsCategory />', () => {
     const div = document.createElement('div');
     ReactDOM.render(
       <Router>
-        <NewsCategory dataNewsCategory={[]} />
+        <NewsCategory
+          dataNewsCategory={[]}
+          totalPage={0}
+        />
       </Router>,
       div,
     );
