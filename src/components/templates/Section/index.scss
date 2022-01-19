@@ -1,0 +1,14 @@
+.t-section {
+  padding-bottom: rem(80);
+  padding-top: rem(80);
+
+  @include tablet-down {
+    padding-bottom: rem(60);
+    padding-top: rem(60);
+  }
+
+  @include mobile-down {
+    padding-bottom: rem(40);
+    padding-top: rem(40);
+  }
+}
