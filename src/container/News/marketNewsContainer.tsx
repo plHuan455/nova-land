@@ -3,16 +3,19 @@ import React from 'react';
 import { dataMarketNews } from 'assets/dataDummy/newsList';
 import Animate from 'components/organisms/Animate';
 import NewsList from 'components/templates/NewsList';
+import Section from 'components/templates/Section';
 
 const MarketNewsContainer: React.FC = () => (
   <Animate type="goUp">
-    <div className="p-news_marketNewsContainer pt-80 pb-80">
-      <NewsList
-        title="Tin Thị Trường"
-        dataNewsList={dataMarketNews}
-        btnName="Xem tất cả Tin thị trường"
-      />
-    </div>
+    <Section>
+      <div className="p-news_marketNewsContainer">
+        <NewsList
+          title="Tin Thị Trường"
+          dataNewsList={dataMarketNews}
+          btnName="Xem tất cả Tin thị trường"
+        />
+      </div>
+    </Section>
   </Animate>
 );
 
