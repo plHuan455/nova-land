@@ -3,10 +3,14 @@ export type SystemData = {
   footScripts: string;
   gaId: string;
   gtmId: string;
+  locales: LocalesResponse;
   og: OGData;
-  gmapId: string;
-  footImage: string;
+  chatScripts: string
   receiverContact: string[];
+  logo: string;
+  favicon: string;
+  header: HeaderData;
+  footer: FooterData;
   googleRecaptchaSiteKey: string;
 };
 

@@ -1,10 +1,13 @@
 import { yupResolver } from '@hookform/resolvers/yup';
-import React, { useCallback } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 
 import footerMenuData from 'assets/dataDummy/footer';
 import { OptionType } from 'components/molecules/Pulldown';
 import Footer, { FooterRegisterFormTypes } from 'components/organisms/Footer';
+import { useAppDispatch, useAppSelector } from 'store/hooks';
+import { getSystemAsync } from 'store/system';
+import { getImageURL } from 'utils/functions';
 import registerSchema from 'utils/schemas';
 
 interface FooterContainerProps {
@@ -23,6 +26,10 @@ export const dummyOption: OptionType[] = [
 ];
 
 const FooterContainer: React.FC<FooterContainerProps> = () => {
+  const { dataSystem } = useAppSelector((state) => state.system);
+
+  const dispatch = useAppDispatch();
+
   const method = useForm<FooterRegisterFormTypes>({
     resolver: yupResolver(registerSchema),
     mode: 'onSubmit',
@@ -38,16 +45,33 @@ const FooterContainer: React.FC<FooterContainerProps> = () => {
     console.log(data);
   }, []);
 
+  useEffect(() => {
+    dispatch(getSystemAsync());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <Footer
+      imgLogo={getImageURL(dataSystem?.logo)}
       projectOptions={dummyOption}
-      externalLink={{
-        privacy: '/',
-        policy: '/',
-      }}
       footerLink={footerMenuData}
       method={method}
       submitForm={handleSubmit}
+      externalPolicyLink={{
+        namePolicy: dataSystem?.footer.policy.text,
+        policyLink: dataSystem?.footer.policy.url,
+        target: dataSystem?.footer.policy.target,
+      }}
+      externalPrivacyLink={{
+        namePrivacy: dataSystem?.footer.terms.text,
+        privacyLink: dataSystem?.footer.terms.url,
+        target: dataSystem?.footer.terms.target,
+      }}
+      copyright={dataSystem?.footer.copyright}
+      title={dataSystem?.footer.title}
+      description={dataSystem?.footer.description}
+      email={dataSystem?.header.email}
+      phoneCskh={dataSystem?.header.phoneCskh}
     />
   );
 };

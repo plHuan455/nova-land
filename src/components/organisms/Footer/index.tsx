@@ -31,18 +31,41 @@ export type FooterRegisterFormTypes = {
 }
 
 interface FooterProps {
+  imgLogo?: string;
   footerLink?: MenuFooterTypes[];
   method?: UseFormReturn<FooterRegisterFormTypes>;
   submitForm?: SubmitHandler<FooterRegisterFormTypes>;
   projectOptions: OptionType[];
-  externalLink?: {
-    policy: string;
-    privacy: string;
+  externalPolicyLink?: {
+    namePolicy?: string;
+    policyLink?: string;
+    target?: string;
   }
+  externalPrivacyLink?: {
+    namePrivacy?: string;
+    privacyLink?: string;
+    target?: string;
+  }
+  copyright?: string;
+  title?: string;
+  description?: string;
+  email?: string;
+  phoneCskh?: string;
 }
 
 const Footer: React.FC<FooterProps> = ({
-  footerLink, externalLink, method, submitForm, projectOptions,
+  imgLogo,
+  footerLink,
+  externalPolicyLink,
+  externalPrivacyLink,
+  method,
+  submitForm,
+  projectOptions,
+  copyright,
+  title,
+  description,
+  email,
+  phoneCskh,
 }) => (
   <footer className="o-footer" style={{ backgroundImage: `url(${bgFooter})` }}>
     <Container>
@@ -55,25 +78,19 @@ const Footer: React.FC<FooterProps> = ({
                 {/* Logo  */}
                 <div className="o-footer_main_logo">
                   <Link href="/">
-                    <Image src={logoImg} ratio="174x136" alt="novaland logo" />
+                    <Image src={imgLogo || logoImg} ratio="174x136" alt="novaland logo" />
                   </Link>
                 </div>
                 {/* Info  */}
                 <div className="o-footer_main_info">
                   <Text modifiers={['600', 'white', 'uppercase', '12x17']}>
-                    CÔNG TY CỔ PHẦN TẬP ĐOÀN ĐẦU TƯ ĐỊA ỐC NOVA
+                    {title}
                   </Text>
                   <div className="mt-8">
                     <Text
+                      content={description}
                       modifiers={['300', 'white', 'opacity07', '12x17']}
-                    >
-                      Giấy chứng nhận đăng ký doanh nghiệp số 0301444753 do
-                      Sở Kế hoạch và Đầu tư TP.HCM cấp lần đầu ngày 18/09/1992
-                    </Text>
-                    <Text modifiers={['300', 'white', 'opacity07', '12x17']}>
-                      Tòa nhà văn phòng Novaland, 65 Nguyễn Du, Phường Bến Nghé,
-                      Quận 1, Thành phố Hồ Chí Minh
-                    </Text>
+                    />
                   </div>
                   {/* Contact Link  */}
                   <div className="o-footer_main_contact">
@@ -81,9 +98,9 @@ const Footer: React.FC<FooterProps> = ({
                       <Text modifiers={['300', 'white', 'opacity07', '12x17']}>
                         Email:
                       </Text>
-                      <Link href="mailto:info@novaland.com.vn" useExternal>
+                      <Link href={`mailto:${email}`} useExternal>
                         <Text modifiers={['white', '600', '12x17']} isInline>
-                          info@novaland.com.vn
+                          {email}
                         </Text>
                       </Link>
                     </div>
@@ -91,9 +108,10 @@ const Footer: React.FC<FooterProps> = ({
                       <Text modifiers={['300', 'white', 'opacity07', '12x17']}>
                         Tổng đài CSKH:
                       </Text>
-                      <Link href="tel:1900636666" useExternal>
+                      <Link href={`tel:${phoneCskh}`} useExternal>
                         <Text modifiers={['600', 'white', '700', '12x17']} isInline>
-                          1900 63 6666
+                          {/* 1900 63 6666 */}
+                          {phoneCskh}
                         </Text>
                       </Link>
                     </div>
@@ -186,25 +204,25 @@ const Footer: React.FC<FooterProps> = ({
         <div className="o-footer_bottom_wrap">
           <div className="o-footer_bottom_policy">
             <div className="o-footer_bottom_policy_item">
-              <Link href={externalLink?.privacy}>
+              <Link href={externalPolicyLink?.policyLink} target={externalPolicyLink?.target}>
                 <Text modifiers={['300', 'white', 'opacity07', '12x17']}>
-                  Chính sách bảo mật
+                  {externalPolicyLink?.namePolicy}
                 </Text>
               </Link>
             </div>
             <div className="o-footer_bottom_policy_item">
-              <Link href={externalLink?.policy}>
+              <Link href={externalPrivacyLink?.privacyLink} target={externalPrivacyLink?.target}>
                 <Text modifiers={['300', 'white', 'opacity07', '12x17']}>
-                  Điều khoản khách hàng
+                  {externalPrivacyLink?.namePrivacy}
                 </Text>
               </Link>
             </div>
           </div>
           <div className="o-footer_bottom_copyright">
-            <Text modifiers={['300', 'white', 'opacity07', '12x17']}>
-              © 2021. Bản quyền thuộc về Tập đoàn Novaland (Việt Nam).
-              Tất cả các quyền được bảo hộ.
-            </Text>
+            <Text
+              content={copyright}
+              modifiers={['300', 'white', 'opacity07', '12x17']}
+            />
           </div>
         </div>
       </Container>
@@ -213,10 +231,17 @@ const Footer: React.FC<FooterProps> = ({
 );
 
 Footer.defaultProps = {
+  imgLogo: undefined,
   footerLink: undefined,
-  externalLink: undefined,
+  externalPolicyLink: undefined,
+  externalPrivacyLink: undefined,
   method: undefined,
   submitForm: undefined,
+  copyright: undefined,
+  title: undefined,
+  description: undefined,
+  email: undefined,
+  phoneCskh: undefined,
 };
 
 export default Footer;

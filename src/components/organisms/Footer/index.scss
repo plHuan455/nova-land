@@ -141,6 +141,10 @@
     &_logo {
       margin: 0 auto;
       width: rem(174);
+
+      img {
+        height: auto;
+      }
     }
 
     &_info {
@@ -162,6 +166,10 @@
       &_item {
         position: relative;
         @include adjust-flex(unset, center);
+
+        .a-link {
+          display: flex;
+        }
   
         .a-text + * {
           margin-left: rem(8);
