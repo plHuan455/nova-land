@@ -3,10 +3,8 @@
   background: linear-gradient(180deg, $dark-midnight-blue00 38.27%, $oxford-blue 79.08%), $dark-midnight-blue;
 
   .a-image {
-    .a-image {
-      height: 100vh;
-      min-height: rem(400);
-    }
+    height: 100vh;
+    max-height: rem(250);
   }
 
   &_info {
