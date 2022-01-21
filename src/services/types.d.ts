@@ -1,3 +1,5 @@
+type ErrorResponse = { code: number; message: string };
+
 type ErrorCodeResponse = {
   code: string;
   title: string;

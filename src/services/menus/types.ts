@@ -1,17 +1,12 @@
-export type MenusTypes = {
-  code: string;
-  items: MenusItemsTypes[];
-}
-
-type MenusItemsTypes = {
+export type MenuItemTypes = {
   id: number;
   menuId: number;
   title: string;
-  link: string;
+  link?: string;
   type: string;
-  referenceId: string;
-  cssClass: string;
-  icon: string;
+  referenceId?: number;
+  cssClass?: string;
+  icon?: string;
   target: string;
   parentId: number;
   lft: number;
@@ -19,5 +14,16 @@ type MenusItemsTypes = {
   depth: number;
   createdAt: string;
   updatedAt: string;
-  reference: string;
+  reference?: {
+    slug: string;
+  };
 }
+
+export type MenuDataTypes = {
+  code: string;
+  items: MenuItemTypes[];
+}
+
+export type MenuItemDataTypes = {
+  subMenu?: MenuItemDataTypes[];
+} & MenuItemTypes;

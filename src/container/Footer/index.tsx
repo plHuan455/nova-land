@@ -1,10 +1,9 @@
 import { yupResolver } from '@hookform/resolvers/yup';
-import React, { useCallback, useEffect } from 'react';
+import React, { useCallback, useEffect, useMemo } from 'react';
 import { useForm } from 'react-hook-form';
 
-import footerMenuData from 'assets/dataDummy/footer';
 import { OptionType } from 'components/molecules/Pulldown';
-import Footer, { FooterRegisterFormTypes } from 'components/organisms/Footer';
+import Footer, { FooterRegisterFormTypes, SocialListTypes } from 'components/organisms/Footer';
 import { useAppDispatch, useAppSelector } from 'store/hooks';
 import { getSystemAsync } from 'store/system';
 import { getImageURL } from 'utils/functions';
@@ -27,6 +26,7 @@ export const dummyOption: OptionType[] = [
 
 const FooterContainer: React.FC<FooterContainerProps> = () => {
   const { dataSystem } = useAppSelector((state) => state.system);
+  const menuList = useAppSelector((state) => state.menus.groupedFooter);
 
   const dispatch = useAppDispatch();
 
@@ -45,6 +45,15 @@ const FooterContainer: React.FC<FooterContainerProps> = () => {
     console.log(data);
   }, []);
 
+  const socialLink: SocialListTypes[] | undefined = useMemo(
+    () => dataSystem?.header.social?.map((val) => ({
+      iconName: val.icon,
+      url: val.link?.url,
+      target: val.link?.target,
+    })),
+    [dataSystem],
+  );
+
   useEffect(() => {
     dispatch(getSystemAsync());
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -54,7 +63,7 @@ const FooterContainer: React.FC<FooterContainerProps> = () => {
     <Footer
       imgLogo={getImageURL(dataSystem?.logo)}
       projectOptions={dummyOption}
-      footerLink={footerMenuData}
+      footerLink={menuList}
       method={method}
       submitForm={handleSubmit}
       externalPolicyLink={{
@@ -72,6 +81,7 @@ const FooterContainer: React.FC<FooterContainerProps> = () => {
       description={dataSystem?.footer.description}
       email={dataSystem?.header.email}
       phoneCskh={dataSystem?.header.phoneCskh}
+      socialList={socialLink}
     />
   );
 };

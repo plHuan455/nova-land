@@ -1,10 +1,10 @@
-import { MenusTypes } from './types';
+import { MenuDataTypes } from './types';
 
 import axiosInstance from 'services/common/instance';
 
-const getMenusService = async (): Promise<MenusTypes[]> => {
-  const res = await axiosInstance.get('menus');
-  return res.data.data;
+const getMenusService = async (): Promise<MenuDataTypes[]> => {
+  const response = await axiosInstance.get('menus');
+  return response.data.data;
 };
 
 export default getMenusService;

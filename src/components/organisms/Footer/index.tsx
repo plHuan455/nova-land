@@ -7,20 +7,18 @@ import Form from '../Form';
 import bgFooter from 'assets/images/bg-footer.png';
 import logoImg from 'assets/images/footer-logo.png';
 import Button from 'components/atoms/Button';
-import Icon, { IconName } from 'components/atoms/Icon';
 import Image from 'components/atoms/Image';
 import { InputHookForm } from 'components/atoms/Input';
 import Link from 'components/atoms/Link';
 import Text from 'components/atoms/Text';
 import { OptionType, PulldownHookForm } from 'components/molecules/Pulldown';
+import { MenuItemDataTypes } from 'services/menus/types';
+import { getImageURL } from 'utils/functions';
 
-export type MenuFooterTypes = {
-  title: string;
-  link?: {
-    href: string;
-    title?: string;
-    icon?: string;
-  }[]
+export type SocialListTypes = {
+  iconName?: string;
+  url?: string;
+  target?: string;
 }
 
 export type FooterRegisterFormTypes = {
@@ -32,7 +30,7 @@ export type FooterRegisterFormTypes = {
 
 interface FooterProps {
   imgLogo?: string;
-  footerLink?: MenuFooterTypes[];
+  footerLink?: MenuItemDataTypes[];
   method?: UseFormReturn<FooterRegisterFormTypes>;
   submitForm?: SubmitHandler<FooterRegisterFormTypes>;
   projectOptions: OptionType[];
@@ -51,6 +49,7 @@ interface FooterProps {
   description?: string;
   email?: string;
   phoneCskh?: string;
+  socialList?: SocialListTypes[];
 }
 
 const Footer: React.FC<FooterProps> = ({
@@ -66,6 +65,7 @@ const Footer: React.FC<FooterProps> = ({
   description,
   email,
   phoneCskh,
+  socialList,
 }) => (
   <footer className="o-footer" style={{ backgroundImage: `url(${bgFooter})` }}>
     <Container>
@@ -110,7 +110,6 @@ const Footer: React.FC<FooterProps> = ({
                       </Text>
                       <Link href={`tel:${phoneCskh}`} useExternal>
                         <Text modifiers={['600', 'white', '700', '12x17']} isInline>
-                          {/* 1900 63 6666 */}
                           {phoneCskh}
                         </Text>
                       </Link>
@@ -129,33 +128,44 @@ const Footer: React.FC<FooterProps> = ({
                       {val.title}
                     </Text>
                   </div>
-                  <ul className={val.link?.find((e) => !!e.icon) ? 'o-footer_main_menu_icon' : 'o-footer_main_menu_list'}>
+                  <ul className="o-footer_main_menu_list">
                     {
-                      val.link && val.link.map((item, i) => {
-                        if (item.icon) {
-                          return (
-                            <div className="o-footer_main_menu_icon_item" key={i.toString()}>
-                              <Link href={item.href} title={item.title}>
-                                <Icon iconName={item.icon as IconName} size="40" />
-                              </Link>
-                            </div>
-                          );
-                        }
-                        return (
-                          <li className="o-footer_main_menu_nav" key={i.toString()}>
-                            <Link href={item.href}>
-                              <Text modifiers={['12x17', 'lavenderGray', '300']} isInline>
-                                {item.title}
-                              </Text>
-                            </Link>
-                          </li>
-                        );
-                      })
+                      val.subMenu && val.subMenu.map((item, i) => (
+                        <li className="o-footer_main_menu_nav" key={i.toString()}>
+                          <Link href={item.link}>
+                            <Text modifiers={['12x17', 'lavenderGray', '300']} isInline>
+                              {item.title}
+                            </Text>
+                          </Link>
+                        </li>
+                      ))
                     }
                   </ul>
                 </div>
               ))
-            }
+              }
+              {
+                socialList && socialList.length > 0 && (
+                  <div className="o-footer_main_menu_wrap">
+                    <div className="o-footer_main_menu_title">
+                      <Text modifiers={['white', '12x17', '600', 'uppercase']}>
+                        THEO DÕI NOVALAND TRÊN
+                      </Text>
+                    </div>
+                    <ul className="o-footer_main_menu_icon">
+                      {
+                        socialList.map((item, index) => (
+                          <div className="o-footer_main_menu_icon_item" key={index.toString()}>
+                            <Link href={item.url} target={item.target}>
+                              <img src={getImageURL(item.iconName)} alt="icon" />
+                            </Link>
+                          </div>
+                        ))
+                      }
+                    </ul>
+                  </div>
+                )
+              }
             </div>
           </CustomCol>
           <CustomCol lg={5}>
@@ -242,6 +252,7 @@ Footer.defaultProps = {
   description: undefined,
   email: undefined,
   phoneCskh: undefined,
+  socialList: undefined,
 };
 
 export default Footer;

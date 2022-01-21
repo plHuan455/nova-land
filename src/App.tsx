@@ -1,12 +1,13 @@
 import 'App.scss';
 
-import React, { Suspense, useEffect } from 'react';
+import React, { Suspense } from 'react';
 import { Provider } from 'react-redux';
 import {
-  BrowserRouter, Route, Routes, useLocation,
+  BrowserRouter, Route, Routes,
 } from 'react-router-dom';
 
 import MainLayoutContainer from 'container/MainLayout';
+import useInitializeRender from 'hooks/useInitializeRender';
 import AboutUs from 'pages/AboutUs';
 import FieldOfActivity from 'pages/FieldOfActivity';
 import Home from 'pages/Home';
@@ -17,11 +18,7 @@ import NewsDetail from 'pages/NewsDetail';
 import { store } from 'store';
 
 const App: React.FC = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location.pathname]);
+  useInitializeRender();
 
   return (
     <Suspense fallback>

@@ -1,35 +1,56 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 import getMenusService from 'services/menus';
-import { MenusTypes } from 'services/menus/types';
+import { MenuDataTypes, MenuItemDataTypes } from 'services/menus/types';
+import { MENU_CODE } from 'utils/constants';
+import groupMenus, { prefixGroupMenu } from 'utils/menus';
 
-type Menus = {
-  menus: MenusTypes[];
+interface MenusState {
+  header: MenuItemDataTypes[];
+  groupedHeader: MenuItemDataTypes[];
+  footer: MenuItemDataTypes[];
+  groupedFooter: MenuItemDataTypes[];
 }
 
-const initialState: Menus = {
-  menus: [],
+const initialState: MenusState = {
+  header: [],
+  groupedHeader: [],
+  footer: [],
+  groupedFooter: [],
 };
 
-export const getMenusAction = createAsyncThunk(
-  'menusReducer/getMenusAction',
-  async (_, { rejectWithValue }) => {
-    try {
-      const res = await getMenusService();
-      return res;
-    } catch (error) {
-      return rejectWithValue(error);
-    }
-  },
-);
+export const getMenusAction = createAsyncThunk<
+  MenuDataTypes[],
+  void,
+  { rejectValue: ErrorResponse }
+>('menusReducer/getMenusAction', async (_, { rejectWithValue }) => {
+  try {
+    const response = await getMenusService();
+    return response;
+  } catch (error) {
+    return rejectWithValue(error as ErrorResponse);
+  }
+});
 
-const menusSlice = createSlice({
+export const menusSlice = createSlice({
   name: 'menusReducer',
   initialState,
   reducers: {},
   extraReducers(builder) {
     builder.addCase(getMenusAction.fulfilled, ($state, action) => {
-      $state.menus = action.payload;
+      // Header
+      $state.header = action.payload.find((item) => item.code === MENU_CODE.MENU_HEADER)
+        ?.items || [];
+      $state.groupedHeader = prefixGroupMenu(groupMenus(action.payload.find(
+        (item) => item.code === MENU_CODE.MENU_HEADER,
+      )?.items));
+      // Footer
+      $state.footer = action.payload.find((item) => item.code === MENU_CODE.MENU_FOOTER)
+        ?.items || [];
+      $state.groupedFooter = prefixGroupMenu(groupMenus(
+        action.payload.find((item) => item.code === MENU_CODE.MENU_FOOTER)
+          ?.items,
+      ));
     });
   },
 });

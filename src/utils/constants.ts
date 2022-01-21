@@ -13,3 +13,8 @@ export const DEFAULT_QUERY_OPTION = {
   refetchOnWindowFocus: false,
   refetchOnReconnect: false,
 };
+
+export const MENU_CODE = {
+  MENU_HEADER: 'menu',
+  MENU_FOOTER: 'main-footer',
+};

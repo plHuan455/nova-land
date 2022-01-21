@@ -6,7 +6,7 @@ import { MemoryRouter } from 'react-router-dom';
 
 import Footer, { FooterRegisterFormTypes } from '.';
 
-import footerMenuData from 'assets/dataDummy/footer';
+import headerMenuDummy from 'assets/dataDummy/header';
 import { dummyOption } from 'container/Footer';
 import registerSchema from 'utils/schemas';
 
@@ -33,7 +33,7 @@ storiesOf('Components/organisms/Footer', module)
         method={method}
         submitForm={handleSubmit}
         projectOptions={dummyOption}
-        footerLink={footerMenuData}
+        footerLink={headerMenuDummy}
         externalPolicyLink={{
           namePolicy: 'Chính sách bảo mật ',
           policyLink: '/',

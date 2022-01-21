@@ -5,7 +5,6 @@ import React, {
 import Container from '../Container';
 
 import { LIST_LANGUAGE, LanguageType } from 'assets/dataDummy/header';
-import logo from 'assets/images/logo.png';
 import Icon from 'components/atoms/Icon';
 import Image from 'components/atoms/Image';
 import Input from 'components/atoms/Input';
@@ -14,6 +13,7 @@ import Text from 'components/atoms/Text';
 import Animate from 'components/organisms/Animate';
 import useClickOutside from 'hooks/useClickOutside';
 import useWindowScroll from 'hooks/useWindowScroll';
+import { MenuItemDataTypes } from 'services/menus/types';
 import mapModifiers from 'utils/functions';
 
 export type HeaderMenuTypes = {
@@ -22,13 +22,16 @@ export type HeaderMenuTypes = {
 }
 
 interface HeaderProps {
-  headerMenu?: HeaderMenuTypes[];
+  headerMenu?: MenuItemDataTypes[];
+  logoSrc: string;
   handleLanguage?: (val: LanguageType) => void;
 
 }
 
 const Header: React.FC<HeaderProps> = ({
-  headerMenu, handleLanguage,
+  headerMenu,
+  logoSrc,
+  handleLanguage,
 }) => {
   // STATE
   const [isOpenSearch, setIsOpenSearch] = useState(false);
@@ -101,7 +104,7 @@ const Header: React.FC<HeaderProps> = ({
             <div className="o-header_left">
               <Link href="/">
                 <div className="o-header_logo">
-                  <Image src={logo} ratio="logo" />
+                  <Image src={logoSrc} ratio="logo" />
                 </div>
               </Link>
             </div>
@@ -133,7 +136,7 @@ const Header: React.FC<HeaderProps> = ({
                     headerMenu && headerMenu.map((val, idx) => (
                       <li className="o-header_nav_item" key={idx.toString()}>
                         <Link
-                          href={val.href}
+                          href={val.reference?.slug}
                           customClassName="o-header_nav_link"
                           handleClick={() => setIsOpenMenu(!isOpenMenu)}
                         >
