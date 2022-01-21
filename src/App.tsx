@@ -10,6 +10,7 @@ import MainLayoutContainer from 'container/MainLayout';
 import AboutUs from 'pages/AboutUs';
 import Home from 'pages/Home';
 import News from 'pages/News';
+import NewsCategory from 'pages/NewsCategory';
 import { store } from 'store';
 
 const App: React.FC = () => {
@@ -26,6 +27,7 @@ const App: React.FC = () => {
           <Route path="/" element={<Home />} />
           <Route path="/ve-chung-toi" element={<AboutUs />} />
           <Route path="/tin-tuc" element={<News />} />
+          <Route path="/tin-tuc-du-an" element={<NewsCategory />} />
           <Route path="*" element={<div />} />
         </Routes>
       </MainLayoutContainer>

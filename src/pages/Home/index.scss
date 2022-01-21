@@ -14,4 +14,24 @@
   &_shareholderRelations {
     background-color: $white-smoke2;
   }
+
+  &_heroBanner {
+    &_info {
+      padding: rem(32) 10% rem(60);
+      width: 100%;
+
+      @include small-mobile {
+        padding: rem(20) 5%;
+      }
+
+      &_title {
+        @include text-overflow();
+      }
+  
+      &_caption {
+        @include text-overflow();
+        margin-top: rem(16);
+      }
+    }
+  }
 }

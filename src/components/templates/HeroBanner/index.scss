@@ -14,24 +14,6 @@
     left: 0;
     position: absolute;
     width: 100%;
-
-    &_content {
-      padding: rem(32) 10% rem(60);
-      width: 100%;
-
-      @include small-mobile {
-        padding: rem(20) 5%;
-      }
-    }
-
-    &_title {
-      @include text-overflow();
-    }
-
-    &_caption {
-      @include text-overflow();
-      margin-top: rem(16);
-    }
   }
 
   &_arrow {
