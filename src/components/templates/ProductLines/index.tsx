@@ -43,24 +43,21 @@ const ProductLines: React.FC<ProductLinesProps> = ({ title, dataProductLines }) 
     },
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1199,
         settings: {
-          slidesToShow: 4,
-          slidesToScroll: 2,
+          slidesToShow: 3,
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 991,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
         },
       },
       {
         breakpoint: 767,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
+          slidesToShow: 1,
         },
       },
     ],
@@ -92,7 +89,7 @@ const ProductLines: React.FC<ProductLinesProps> = ({ title, dataProductLines }) 
           dataProductLines.map((item, index) => (
             <TabBgPanel key={`tab-panel-${index.toString()}`} active={index === indexActive}>
               <InfoProduct
-                title="Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM với dòng sản phẩm:"
+                title="Test Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM với dòng sản phẩm:"
                 imgSrc={item.content.imgSrc}
                 listInfo={item.content.desc}
               />

@@ -17,7 +17,7 @@ export default {
 
 const dummyData = [
   {
-    label: 'BĐS Trung Tâm',
+    label: 'BĐS Trung Tâm BĐS Trung Tâm BĐS Trung Tâm',
     imgActive: icActiveTab,
     imgInActive: icInActiveTab,
     content: {
@@ -93,7 +93,7 @@ const dummyData = [
     },
   },
   {
-    label: 'BĐS CÔNG NGHIỆP A',
+    label: 'BĐS CÔNG NGHIỆP A BĐS CÔNG NGHIỆP A BĐS CÔNG NGHIỆP A',
     imgActive: icActiveTab,
     imgInActive: icInActiveTab,
     content: {
@@ -112,7 +112,7 @@ const dummyData = [
     },
   },
   {
-    label: 'BĐS CÔNG NGHIỆP B',
+    label: 'BĐS CÔNG NGHIỆP B BĐS CÔNG NGHIỆP B BĐS CÔNG NGHIỆP B',
     imgActive: icActiveTab,
     imgInActive: icInActiveTab,
     content: {
