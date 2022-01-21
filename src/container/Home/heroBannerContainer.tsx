@@ -1,31 +1,52 @@
 import React from 'react';
 
-import imgHeroBanner from 'assets/images/Banner/banner_1.png';
 import Heading from 'components/atoms/Heading';
-import Text from 'components/atoms/Text';
 import HeroBanner from 'components/templates/HeroBanner';
+import { getImageURL } from 'utils/functions';
 
-const HeroBannerContainer: React.FC = () => (
-  <div className="p-home_heroBanner">
-    <HeroBanner
-      list={new Array(1).fill({ src: imgHeroBanner })}
-    >
-      <div className="p-home_heroBanner_info">
-        <div className="p-home_heroBanner_info_title">
-          <Heading modifiers={['center', '400', '64x83', 'fontNoto', 'white']}>
-            Cho cuộc sống bừng sáng
-          </Heading>
+interface BannerProps {
+  banners: BannersDataTypes[];
+}
+
+const HeroBannerContainer: React.FC<BannerProps> = ({
+  banners,
+}) => {
+  const convertBanner = () => {
+    if (banners.length > 0) {
+      return banners.map((item) => ({
+        src: getImageURL(item.data.imageDesktop),
+        srcTablet: getImageURL(item.data.imageMobile),
+        srcMobile: getImageURL(item.data.imageTablet),
+      }));
+    }
+    return [];
+  };
+
+  return (
+    <div className="p-home_heroBanner">
+      <HeroBanner list={convertBanner()}>
+        <div className="p-home_heroBanner_info">
+          {banners && banners.map((item) => (
+            <>
+              <div className="p-home_heroBanner_info_title">
+                <Heading modifiers={['center', '400', '64x83', 'fontNoto', 'white']}>
+                  {item.data.title}
+                </Heading>
+              </div>
+              <div className="p-home_heroBanner_info_caption">
+                <Heading
+                  type="h5"
+                  modifiers={['center', 'white', '300', 'fontLexend', '18x28']}
+                >
+                  {item.data.subTitle}
+                </Heading>
+              </div>
+            </>
+          ))}
         </div>
-        <div className="p-home_heroBanner_info_caption">
-          <Text
-            modifiers={['center', 'white', '300', 'fontLexend', '18x28']}
-          >
-            Kiến tạo cộng đồng -  Xây dựng điểm đến - Vun đắp niềm vui
-          </Text>
-        </div>
-      </div>
-    </HeroBanner>
-  </div>
-);
+      </HeroBanner>
+    </div>
+  );
+};
 
 export default HeroBannerContainer;

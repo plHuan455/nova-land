@@ -17,6 +17,7 @@ export const normal: Story = () => (
   <BrowserRouter>
     <HomeNews
       title="TIN TỨC"
+      href="/"
       tabDataHomeNews={tabDataHomeNewsList}
     />
   </BrowserRouter>

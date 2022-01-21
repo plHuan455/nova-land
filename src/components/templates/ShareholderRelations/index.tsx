@@ -64,12 +64,16 @@ interface ShareholderRelationsProps {
   title: string;
   href: string;
   dataShareholderRelations: ShareholderCardProps,
+  target?: string;
+  namebtn?: string;
 }
 
 const ShareholderRelations: React.FC<ShareholderRelationsProps> = ({
   title,
   href,
   dataShareholderRelations,
+  target,
+  namebtn,
 }) => (
   <div className="t-shareholderRelations">
     <Container>
@@ -99,17 +103,21 @@ const ShareholderRelations: React.FC<ShareholderRelationsProps> = ({
         </div>
       </div>
       <div className="t-shareholderRelations_button">
-        <Link href={href}>
+        <Link href={href} target={target}>
           <Button modifiers="outlineSpanishGray" type="button">
-            <Text
-              modifiers={['14x20', '400', 'fontLexend', 'center']}
-              content="Xem tất cả quan hệ cổ đông"
-            />
+            <Text modifiers={['14x20', '400', 'fontLexend', 'center']}>
+              {namebtn || 'Xem thêm báo cáo tài chính'}
+            </Text>
           </Button>
         </Link>
       </div>
     </Container>
   </div>
 );
+
+ShareholderRelations.defaultProps = {
+  target: undefined,
+  namebtn: undefined,
+};
 
 export default ShareholderRelations;

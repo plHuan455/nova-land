@@ -1,18 +1,45 @@
 import React from 'react';
 
-import outStandingNumbersData from 'assets/dataDummy/outStandingNumbers';
 import Animate from 'components/organisms/Animate';
 import OutStandingNumbers from 'components/templates/OutStandingNumbers';
 
-const OutStandingNumbersContainer: React.FC = () => (
-  <Animate type="goUp">
-    <div className="p-home_outStandingNumbers">
-      <OutStandingNumbers
-        title="Novaland là thương hiệu uy tín hàng đầu Việt Nam trong lĩnh vực đầu tư & phát triển bất động sản"
-        dataList={outStandingNumbersData}
-      />
-    </div>
-  </Animate>
-);
+interface ItemsList {
+  textNumber: string,
+  descriptionNumber: string;
+}
+
+export interface OutStandingNumbersTypes {
+  items: ItemsList[],
+  titleSection: string;
+}
+
+interface OutStandingNumbersBlock {
+  blocks: OutStandingNumbersTypes;
+}
+
+const OutStandingNumbersContainer: React.FC<OutStandingNumbersBlock> = ({
+  blocks,
+}) => {
+  const convertData = () => {
+    if (blocks.items.length > 0) {
+      return blocks.items.map((item) => ({
+        number: item.textNumber,
+        desc: item.descriptionNumber,
+      }));
+    }
+    return [];
+  };
+
+  return (
+    <Animate type="goUp">
+      <div className="p-home_outStandingNumbers">
+        <OutStandingNumbers
+          title={blocks.titleSection}
+          dataList={convertData()}
+        />
+      </div>
+    </Animate>
+  );
+};
 
 export default OutStandingNumbersContainer;

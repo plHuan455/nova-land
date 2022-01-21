@@ -85,12 +85,14 @@ export interface dataTabsType {
 
 interface HomeNewsProps {
   title: string,
+  href: string;
+  target?: string;
+  nameButton?: string;
   tabDataHomeNews: dataTabsType[],
-  handleShowMore?: () => void;
 }
 
 const HomeNews: React.FC<HomeNewsProps> = ({
-  title, tabDataHomeNews, handleShowMore,
+  title, tabDataHomeNews, href, target, nameButton,
 }) => {
   const [indexActive, setIndexActive] = useState(0);
 
@@ -131,9 +133,11 @@ const HomeNews: React.FC<HomeNewsProps> = ({
             ))
           }
           <div className="t-homeNews_button">
-            <Button modifiers="outlineSpanishGray" onClick={handleShowMore}>
-              Xem tất cả bài viết
-            </Button>
+            <Link href={href} target={target}>
+              <Button modifiers="outlineSpanishGray">
+                {nameButton || 'Xem tất cả bài viết'}
+              </Button>
+            </Link>
           </div>
         </div>
       </Container>
@@ -142,7 +146,8 @@ const HomeNews: React.FC<HomeNewsProps> = ({
 };
 
 HomeNews.defaultProps = {
-  handleShowMore: undefined,
+  target: undefined,
+  nameButton: undefined,
 };
 
 export default HomeNews;

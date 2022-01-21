@@ -4,11 +4,21 @@ import dataList from 'assets/dataDummy/featuredProjects';
 import FeaturedProjects from 'components/templates/FeaturedProjects';
 import Section from 'components/templates/Section';
 
-const FeaturedProjectsContainer: React.FC = () => (
+export interface FeaturedProjectsTypes {
+  titleSection: string;
+}
+
+interface FeaturedProjectsBlock {
+  blocks: FeaturedProjectsTypes;
+}
+
+const FeaturedProjectsContainer: React.FC<FeaturedProjectsBlock> = ({
+  blocks,
+}) => (
   <div className="p-home_featuredProjects">
     <Section>
       <FeaturedProjects
-        title="NHỮNG DỰ ÁN NỔI BẬT"
+        title={blocks.titleSection}
         featuredProjectList={dataList}
       />
     </Section>

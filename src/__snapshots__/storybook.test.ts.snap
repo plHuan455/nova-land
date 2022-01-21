@@ -611,42 +611,11 @@ exports[`Storyshots Components/molecules/EcoCard Normal 1`] = `
     <div
       className="m-ecoCard_brands"
     >
-      <div
-        className="m-ecoCard_brands-item"
-      >
-        <img
-          alt="brand"
-          sizes="contain"
-          src="dynasty_house.png"
-        />
-      </div>
-      <div
-        className="m-ecoCard_brands-item"
-      >
-        <img
-          alt="brand"
-          sizes="contain"
-          src="jumbo.png"
-        />
-      </div>
-      <div
-        className="m-ecoCard_brands-item"
-      >
-        <img
-          alt="brand"
-          sizes="contain"
-          src="sgcasa.png"
-        />
-      </div>
-      <div
-        className="m-ecoCard_brands-item"
-      >
-        <img
-          alt="brand"
-          sizes="contain"
-          src="phin_deli.png"
-        />
-      </div>
+      <img
+        alt="brand"
+        sizes="contain"
+        src="img_eco_hover.png"
+      />
     </div>
     <a
       aria-current="page"
@@ -5757,42 +5726,11 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                           <div
                             className="m-ecoCard_brands"
                           >
-                            <div
-                              className="m-ecoCard_brands-item"
-                            >
-                              <img
-                                alt="brand"
-                                sizes="contain"
-                                src="dynasty_house.png"
-                              />
-                            </div>
-                            <div
-                              className="m-ecoCard_brands-item"
-                            >
-                              <img
-                                alt="brand"
-                                sizes="contain"
-                                src="jumbo.png"
-                              />
-                            </div>
-                            <div
-                              className="m-ecoCard_brands-item"
-                            >
-                              <img
-                                alt="brand"
-                                sizes="contain"
-                                src="sgcasa.png"
-                              />
-                            </div>
-                            <div
-                              className="m-ecoCard_brands-item"
-                            >
-                              <img
-                                alt="brand"
-                                sizes="contain"
-                                src="phin_deli.png"
-                              />
-                            </div>
+                            <img
+                              alt="brand"
+                              sizes="contain"
+                              src="img_eco_hover.png"
+                            />
                           </div>
                           <a
                             aria-current="page"
@@ -5862,42 +5800,11 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                           <div
                             className="m-ecoCard_brands"
                           >
-                            <div
-                              className="m-ecoCard_brands-item"
-                            >
-                              <img
-                                alt="brand"
-                                sizes="contain"
-                                src="dynasty_house.png"
-                              />
-                            </div>
-                            <div
-                              className="m-ecoCard_brands-item"
-                            >
-                              <img
-                                alt="brand"
-                                sizes="contain"
-                                src="jumbo.png"
-                              />
-                            </div>
-                            <div
-                              className="m-ecoCard_brands-item"
-                            >
-                              <img
-                                alt="brand"
-                                sizes="contain"
-                                src="sgcasa.png"
-                              />
-                            </div>
-                            <div
-                              className="m-ecoCard_brands-item"
-                            >
-                              <img
-                                alt="brand"
-                                sizes="contain"
-                                src="phin_deli.png"
-                              />
-                            </div>
+                            <img
+                              alt="brand"
+                              sizes="contain"
+                              src="img_eco_hover.png"
+                            />
                           </div>
                           <a
                             aria-current="page"
@@ -5967,42 +5874,11 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                           <div
                             className="m-ecoCard_brands"
                           >
-                            <div
-                              className="m-ecoCard_brands-item"
-                            >
-                              <img
-                                alt="brand"
-                                sizes="contain"
-                                src="dynasty_house.png"
-                              />
-                            </div>
-                            <div
-                              className="m-ecoCard_brands-item"
-                            >
-                              <img
-                                alt="brand"
-                                sizes="contain"
-                                src="jumbo.png"
-                              />
-                            </div>
-                            <div
-                              className="m-ecoCard_brands-item"
-                            >
-                              <img
-                                alt="brand"
-                                sizes="contain"
-                                src="sgcasa.png"
-                              />
-                            </div>
-                            <div
-                              className="m-ecoCard_brands-item"
-                            >
-                              <img
-                                alt="brand"
-                                sizes="contain"
-                                src="phin_deli.png"
-                              />
-                            </div>
+                            <img
+                              alt="brand"
+                              sizes="contain"
+                              src="img_eco_hover.png"
+                            />
                           </div>
                           <a
                             aria-current="page"
@@ -6072,42 +5948,11 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                           <div
                             className="m-ecoCard_brands"
                           >
-                            <div
-                              className="m-ecoCard_brands-item"
-                            >
-                              <img
-                                alt="brand"
-                                sizes="contain"
-                                src="dynasty_house.png"
-                              />
-                            </div>
-                            <div
-                              className="m-ecoCard_brands-item"
-                            >
-                              <img
-                                alt="brand"
-                                sizes="contain"
-                                src="jumbo.png"
-                              />
-                            </div>
-                            <div
-                              className="m-ecoCard_brands-item"
-                            >
-                              <img
-                                alt="brand"
-                                sizes="contain"
-                                src="sgcasa.png"
-                              />
-                            </div>
-                            <div
-                              className="m-ecoCard_brands-item"
-                            >
-                              <img
-                                alt="brand"
-                                sizes="contain"
-                                src="phin_deli.png"
-                              />
-                            </div>
+                            <img
+                              alt="brand"
+                              sizes="contain"
+                              src="img_eco_hover.png"
+                            />
                           </div>
                           <a
                             aria-current="page"
@@ -6177,42 +6022,11 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                           <div
                             className="m-ecoCard_brands"
                           >
-                            <div
-                              className="m-ecoCard_brands-item"
-                            >
-                              <img
-                                alt="brand"
-                                sizes="contain"
-                                src="dynasty_house.png"
-                              />
-                            </div>
-                            <div
-                              className="m-ecoCard_brands-item"
-                            >
-                              <img
-                                alt="brand"
-                                sizes="contain"
-                                src="jumbo.png"
-                              />
-                            </div>
-                            <div
-                              className="m-ecoCard_brands-item"
-                            >
-                              <img
-                                alt="brand"
-                                sizes="contain"
-                                src="sgcasa.png"
-                              />
-                            </div>
-                            <div
-                              className="m-ecoCard_brands-item"
-                            >
-                              <img
-                                alt="brand"
-                                sizes="contain"
-                                src="phin_deli.png"
-                              />
-                            </div>
+                            <img
+                              alt="brand"
+                              sizes="contain"
+                              src="img_eco_hover.png"
+                            />
                           </div>
                           <a
                             aria-current="page"
@@ -6603,7 +6417,7 @@ exports[`Storyshots Components/templates/FeaturedProjects Normal 1`] = `
     className="container o-container"
   >
     <h2
-      className="a-heading a-heading-32x48 a-heading-jet a-heading-500 a-heading-fontNoto a-heading-center"
+      className="a-heading a-heading-32x48 a-heading-jet a-heading-500 a-heading-fontNoto a-heading-center a-heading-uppercase"
     >
       NHỮNG DỰ ÁN NỔI BẬT
     </h2>
@@ -8511,13 +8325,21 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
       <div
         className="t-homeNews_button"
       >
-        <button
-          className="a-button a-button-outlineSpanishGray"
-          disabled={false}
-          type="button"
+        <a
+          aria-current="page"
+          className="a-link   active"
+          href="/"
+          onClick={[Function]}
+          target="_self"
         >
-          Xem tất cả bài viết
-        </button>
+          <button
+            className="a-button a-button-outlineSpanishGray"
+            disabled={false}
+            type="button"
+          >
+            Xem tất cả bài viết
+          </button>
+        </a>
       </div>
     </div>
   </div>

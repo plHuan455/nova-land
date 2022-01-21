@@ -34,7 +34,7 @@ const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
   return (
     <div className="t-featuredProjects">
       <Container>
-        <Heading modifiers={['32x48', 'jet', '500', 'fontNoto', 'center']}>
+        <Heading modifiers={['32x48', 'jet', '500', 'fontNoto', 'center', 'uppercase']}>
           {title}
         </Heading>
         {featuredProjectList.length > 0 && (

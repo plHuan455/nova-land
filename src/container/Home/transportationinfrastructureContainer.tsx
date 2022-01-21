@@ -1,16 +1,28 @@
 import React from 'react';
 
-import bannerImg from 'assets/images/transportationInfrastructure.png';
 import Animate from 'components/organisms/Animate';
 import TransportationInfrastructure from 'components/templates/TransportationInfrastructure';
+import { getImageURL } from 'utils/functions';
 
-const TransportationContainer: React.FC = () => (
+export interface TransportationTypes {
+  image: string;
+  description: string;
+  titleSection: string;
+}
+
+interface TransportationBlock {
+  blocks: TransportationTypes;
+}
+
+const TransportationContainer: React.FC<TransportationBlock> = ({
+  blocks,
+}) => (
   <Animate type="goUp">
     <div className="p-home_investSector">
       <TransportationInfrastructure
-        title="Hạ tầng giao thông"
-        desc="Nâng cấp, phát triển hạ tầng giao thông tại nơi có dự án nhằm gia tăng tính kết nối vào hạ tầng giao thông trọng điểm quốc gia."
-        imgSrc={bannerImg}
+        title={blocks.titleSection}
+        desc={blocks.description}
+        imgSrc={getImageURL(blocks.image)}
       />
     </div>
   </Animate>

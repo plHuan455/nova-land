@@ -104,6 +104,7 @@ type Translation = {
 
 type BlockComponents<T> = {
   code: string;
+  active: boolean;
   blocks: T;
 }
 

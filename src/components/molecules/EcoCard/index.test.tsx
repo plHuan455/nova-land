@@ -7,7 +7,7 @@ import EcoCard from '.';
 describe('<EcoCard />', () => {
   test('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<BrowserRouter><EcoCard brandList={[]} fieldImgSrc="" href="/" /></BrowserRouter>, div);
+    ReactDOM.render(<BrowserRouter><EcoCard brandImage="" fieldImgSrc="" href="/" /></BrowserRouter>, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 });
