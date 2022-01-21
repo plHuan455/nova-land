@@ -24,7 +24,7 @@ const ContentBlock: React.FC<ContentBlockProps> = ({ title, desc, dataList }) =>
       <Heading modifiers={['32x48', '500', 'fontNoto', 'white', 'uppercase', 'center']}>{title}</Heading>
     </div>
     <div className="t-VMV_desc u-mt-16 u-mt-md-24 u-mt-lg-32 u-mb-16 u-mb-md-24">
-      <Text modifiers={['300', 'fontLexend', 'white', 'center', '16x24']}>{desc}</Text>
+      <Text modifiers={['300', 'fontLexend', 'white', 'center', '14x20']}>{desc}</Text>
     </div>
     <div className="t-VMV_list">
       {dataList?.map((item, idx) => (

@@ -11,8 +11,8 @@ import Select, {
   ValueType,
 } from 'react-select';
 
-import iconArrowDown2 from 'assets/icons/ic_arrow_down_small.svg';
-import iconArrowDown from 'assets/icons/ic_carret_down.svg';
+import iconArrowDown from 'assets/icons/ic_blue_arrow_down.svg';
+import iconArrowDown2 from 'assets/icons/ic_grey_arrow_down.svg';
 import { useDerivedStateFromProps } from 'helpers/react-hook';
 import mapModifiers from 'utils/functions';
 
@@ -110,13 +110,14 @@ const PulldownRef: React.ForwardRefRenderFunction<HTMLDivElement, PulldownProps>
             '&:hover': {
               borderColor: error ? '#d73b37' : '#DFE6E8',
             },
-            borderRadius: 2,
+            borderRadius: 5,
             cursor: 'pointer',
             backgroundColor: state.isDisabled ? '#efefef' : '#fff',
           }),
           placeholder: (base: any) => ({
             ...base,
             fontSize: 16,
+            fontWeight: 400,
             color: isSecondary ? 'rgba(0, 0, 0, 0.45)' : 'rgba(0, 0, 0, 0.25)',
           }),
           valueContainer: (base: any) => ({

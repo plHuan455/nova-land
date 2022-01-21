@@ -16,7 +16,7 @@
       background-color: $columbia-blue;
       bottom: 0;
       content: '';
-      height: rem(3);
+      height: rem(1);
       left: 0;
       position: absolute;
       width: 100%;
@@ -321,6 +321,10 @@
           .a-text {
             font-weight: 700;
           }
+        }
+
+        &:not(:first-child) {
+          margin-top: rem(4);
         }
       }
     }

@@ -102,7 +102,7 @@ const ShareholderRelations: React.FC<ShareholderRelationsProps> = ({
         <Link href={href}>
           <Button modifiers="outlineSpanishGray" type="button">
             <Text
-              modifiers={['16x24', '400', 'fontLexend', 'center']}
+              modifiers={['14x20', '400', 'fontLexend', 'center']}
               content="Xem thêm báo cáo tài chính"
             />
           </Button>

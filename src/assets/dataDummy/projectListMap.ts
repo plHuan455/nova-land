@@ -86,22 +86,22 @@ const listProject = [
     title: 'NovaWorld Ho Tram',
     href: '/',
   },
-  {
-    title: 'The Grand Manhattan',
-    href: '/',
-  },
-  {
-    title: 'The Park Avenue',
-    href: '/',
-  },
-  {
-    title: 'Aqua City 1',
-    href: '/',
-  },
-  {
-    title: 'Aqua City 2',
-    href: '/',
-  },
+  // {
+  //   title: 'The Grand Manhattan',
+  //   href: '/',
+  // },
+  // {
+  //   title: 'The Park Avenue',
+  //   href: '/',
+  // },
+  // {
+  //   title: 'Aqua City 1',
+  //   href: '/',
+  // },
+  // {
+  //   title: 'Aqua City 2',
+  //   href: '/',
+  // },
 ];
 
 export default {

@@ -20,6 +20,8 @@ export const iconList = {
   home: 'home',
   arrowNextSlateGray: 'arrowNextSlateGray',
   arrowPrevSlateGray: 'arrowPrevSlateGray',
+  blackArrowDown: 'blackArrowDown',
+  greyArrowRight: 'greyArrowRight',
 };
 
 export type IconName = keyof typeof iconList;

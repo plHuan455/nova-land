@@ -15,8 +15,8 @@
 
   &_block {
     flex: 0 0 calc(100% / 3);
-    padding-left: rem(44);
-    padding-right: rem(44);
+    padding-left: rem(16);
+    padding-right: rem(16);
 
     @include small-mobile-up {
       &:not(:last-child) {
@@ -25,8 +25,8 @@
     }
 
     @include desktop-down {
-      padding-left: rem(20);
-      padding-right: rem(20);
+      padding-left: rem(12);
+      padding-right: rem(12);
     }
 
     @include small-mobile {

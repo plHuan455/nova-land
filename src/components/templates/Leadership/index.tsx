@@ -27,14 +27,13 @@ export const LeadershipCard: React.FC<LeadershipCardProps> = ({
       <div className="t-leadershipCard_content">
         <div className="t-leadershipCard_gender">
           <Text
-            modifiers={['16x24', 'darkMidnightBlue', '300', 'capitalize']}
+            modifiers={['14x20', 'darkMidnightBlue', '300', 'capitalize']}
             content={gender}
           />
         </div>
         <div className="t-leadershipCard_name">
-          <Heading
-            type="h3"
-            modifiers={['jet', '500', 'fontNoto']}
+          <Text
+            modifiers={['jet', '500', 'fontNoto', '18x28']}
             content={name}
           />
           {/* <div className="t-leadershipCard_icon">
@@ -43,7 +42,7 @@ export const LeadershipCard: React.FC<LeadershipCardProps> = ({
         </div>
         <div className="t-leadershipCard_position">
           <Text
-            modifiers={['16x24', 'dimGray', '300']}
+            modifiers={['14x20', 'dimGray', '300']}
             content={position}
           />
         </div>
@@ -86,8 +85,8 @@ export const LeadershipDetail: React.FC<LeadershipDetailProps> = ({
           />
         </div>
         <div className="t-leadershipDetail_divider" />
-        <Heading
-          modifiers={['dimGray', '300']}
+        <Text
+          modifiers={['dimGray', '300', '20x28']}
           content={position}
         />
       </div>
@@ -117,8 +116,8 @@ export const LeadershipDetail: React.FC<LeadershipDetailProps> = ({
       slogan && (
         <div className="t-leadershipDetail_slogan">
           <div className="t-leadershipDetail_slogan_detail">
-            <Heading
-              modifiers={['dimGray', '300']}
+            <Text
+              modifiers={['dimGray', '300', '20x28']}
               content={slogan}
             />
           </div>

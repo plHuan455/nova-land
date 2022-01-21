@@ -30,7 +30,7 @@ const Collapses: React.FC<CollapsesProps> = ({
       <div className="o-collapses_icon">
         <Icon
           size="24"
-          iconName="arrowDownGrey"
+          iconName="blackArrowDown"
         />
       </div>
     </div>

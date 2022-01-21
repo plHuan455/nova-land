@@ -45,7 +45,7 @@
   }
 
   &_info {
-    max-width: calc(739 / #{$width-in-container-value} * 100%); // 760 not scroll 
+    width: calc(739 / #{$width-in-container-value} * 100%); // 760 not scroll 
     position: absolute;
     right: 0;
     top: calc(194 / #{$height-map} * 100%);
@@ -98,6 +98,11 @@
 
       &.zoom-out {
         transform: scale(1.1);
+      }
+
+      img {
+        max-height: rem(64);
+        max-width: rem(257);
       }
     }
   }
