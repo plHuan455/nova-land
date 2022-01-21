@@ -1,0 +1,35 @@
+.t-recruitmentDetail {
+  &_related {
+    margin-top: rem(40);
+  }
+
+  &_right {
+    margin-top: rem(-200);
+  
+    @include tablet-down {
+      margin-top: rem(100);
+    }
+  }
+
+  &_content {
+    max-height: rem(1000);
+    overflow-y: auto;
+    @include scroll-bars(20);
+
+    &::-webkit-scrollbar-track {
+      background-color: $white;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $silverSand;
+      border-radius: 0;
+    }
+  }
+
+  &_related {
+    .a-divider {
+      margin-top: rem(12);
+      margin-bottom: rem(12);
+    }
+  }
+}

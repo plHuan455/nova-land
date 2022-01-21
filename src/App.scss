@@ -26,6 +26,8 @@
 @import 'components/molecules/InfoProduct/';
 @import 'components/molecules/ListLogoProject/';
 @import 'components/molecules/InfoNews/';
+@import 'components/molecules/InfoContactRecruitment/';
+@import 'components/molecules/RelatedRecruitment/';
 
 //Organisms
 @import 'components/organisms/Header/';
@@ -83,6 +85,8 @@
 @import 'components/templates/LatestJobs/';
 @import 'components/templates/CompanyProfile/';
 @import 'components/templates/WorkEnvironment/';
+@import 'components/templates/BannerRecruitmentDetail/';
+@import 'components/templates/RecruitmentDetail/';
 
 // Pages
 @import 'pages/Home/';
@@ -95,3 +99,4 @@
 @import 'pages/ReportList/';
 @import 'pages/RecruitmentList';
 @import 'pages/Recruitment';
+@import 'pages/RecruitmentDetail/';

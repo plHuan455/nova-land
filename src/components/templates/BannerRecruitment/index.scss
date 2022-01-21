@@ -1,6 +1,7 @@
 .t-bannerRecruitment {
   position: relative;
-  background: linear-gradient(180deg, $dark-midnight-blue00 38.27%, $oxford-blue 79.08%), $dark-midnight-blue;
+  background: $dark-midnight;
+  z-index: -1;
 
   .a-image {
     max-height: rem(250);

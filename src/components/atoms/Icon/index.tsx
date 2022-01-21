@@ -30,6 +30,7 @@ export const iconList = {
   filter: 'filter',
   closeWhite: 'closeWhite',
   arrowRightGolden: 'arrowRightGolden',
+  locationWhite: 'locationWhite',
 };
 
 export type IconName = keyof typeof iconList;
