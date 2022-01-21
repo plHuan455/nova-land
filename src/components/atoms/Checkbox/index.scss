@@ -1,0 +1,31 @@
+.a-checkbox {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 34px;
+
+  &_input {
+    appearance: none;
+    background: url('~assets/icons/ic_check.svg') 0 0 no-repeat;
+    cursor: inherit;
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: $transition;
+
+    
+    &:checked {
+      background: url('~assets/icons/ic_checked.svg') 0 0 no-repeat;
+    }
+  }
+
+  &_label {
+    @include font-base(12, 17);
+    color: $dim-gray;
+    cursor: inherit;
+    display: inline-block;
+    font-weight: 300;
+  }
+}
