@@ -12,12 +12,14 @@
   &_button {
     max-width: rem(282);
     margin: auto;
-    margin-top: rem(40);
+    margin-top: rem(48);
     @include mobile-down {
       margin-top: rem(20);
     }
     .a-button {
       height: rem(55);
+      @include font-base(18, 28);
+      
     }
   }
 }
