@@ -1,0 +1,15 @@
+.t-bannerRecruitment {
+  position: relative;
+  background: linear-gradient(180deg, $dark-midnight-blue00 38.27%, $oxford-blue 79.08%), $dark-midnight-blue;
+
+  .a-image {
+    max-height: rem(250);
+  }
+
+  &_info {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+  }
+}
