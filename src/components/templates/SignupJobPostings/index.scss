@@ -1,0 +1,25 @@
+.t-signupJobPostings {
+  padding: rem(80) 0 ;
+  @include tablet-down {
+    padding: rem(60) 0 ;
+  }
+  @include mobile-down {
+    padding: rem(24) 0 ;
+  }
+  &_desc {
+    margin-top: rem(20);
+  }
+  &_button {
+    max-width: rem(282);
+    margin: auto;
+    margin-top: rem(48);
+    @include mobile-down {
+      margin-top: rem(20);
+    }
+    .a-button {
+      height: rem(55);
+      @include font-base(18, 28);
+      
+    }
+  }
+}
