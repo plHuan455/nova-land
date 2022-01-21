@@ -18,11 +18,13 @@ const AwardCard: React.FC<AwardCardProps> = ({
   awardYear,
 }) => (
   <div className="t-awardList_card">
-    <div className="t-awardList_card_img">
-      <img src={src} alt={alt} />
-    </div>
-    <div className="t-awardList_card_desc">
-      <Text modifiers={['16x24', 'fontLexend', 'arsenic', 'center']}>{desc}</Text>
+    <div className="t-awardList_card_wrap">
+      <div className="t-awardList_card_img">
+        <img src={src} alt={alt} />
+      </div>
+      <div className="t-awardList_card_desc">
+        <Text modifiers={['18x22', 'fontLexend', 'arsenic', 'center']}>{desc}</Text>
+      </div>
     </div>
     <div className="t-awardList_card_year">
       <div className="t-awardList_card_year-clip">

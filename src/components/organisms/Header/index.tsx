@@ -152,7 +152,7 @@ const Header: React.FC<HeaderProps> = ({
                     setIsOpenLanguage(!isOpenLanguage);
                   }}
                 >
-                  <Text modifiers={['16x24', 'jet', '400', 'uppercase']}>
+                  <Text modifiers={['14x18', 'jet', '400', 'uppercase']}>
                     {languageSelected}
                   </Text>
                   <div
@@ -180,7 +180,7 @@ const Header: React.FC<HeaderProps> = ({
                         }`}
                         key={idx.toString()}
                       >
-                        <Text modifiers={['16x24', 'jet', '400', 'uppercase']}>
+                        <Text modifiers={['14x18', 'jet', '400', 'uppercase']}>
                           {val.label}
                         </Text>
                       </li>

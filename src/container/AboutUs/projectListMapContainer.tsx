@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import dataDummy from 'assets/dataDummy/projectListMap';
-import img from 'assets/images/bg_project_list_map.png';
+import img from 'assets/images/bg_project_list_map.svg';
 import { OptionType } from 'components/molecules/Pulldown';
 import ProjectListMap, { ProjectListMapGround, ProjectListMapInfo } from 'components/templates/ProjectListMap';
 

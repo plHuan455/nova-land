@@ -27,14 +27,14 @@
     }
 
     &_select + &_select {
-      margin-top: rem(32);
+      margin-top: rem(24);
       @include mobile-down {
         margin-top: rem(16);
       }
     }
 
     &_wrap-list {
-      margin-top: rem(32);
+      margin-top: rem(40);
       @include mobile-down {
         margin-top: rem(16);
       }
@@ -42,6 +42,7 @@
 
     &_list {
       margin-top: rem(16);
+      padding-right: rem(16);
       max-height: rem(278);
       overflow: auto;
       @include scroll-bars(8, $gainsboro);
@@ -105,11 +106,8 @@
 
       & > img {
         height: 100%;
-        left: 0;
-        object-fit: cover;
-        position: absolute;
-        top: 0;
         width: 100%;
+        max-height: rem(508);
       }
     }
 

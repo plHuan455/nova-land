@@ -254,6 +254,7 @@
     border-color: $spanish-gray;
     border-radius: rem(5);
     color: $spanish-gray;
+    padding: rem(12) rem(30);
     @include prefixed(transition-property, color);
     @include prefixed(transition-duration, 0.3s);
     @include prefixed(transform, perspective(1px) translateZ(0));

@@ -10,7 +10,7 @@
   &_list {
     flex-wrap: wrap;
     @include adjust-flex(space-between, center);
-    @include tablet-down {
+    @include desktop-down {
       margin: rem(8) rem(-8) rem(-8);
       @include adjust-flex;
     }
@@ -18,13 +18,13 @@
     &-item,
     &-line {
       margin-top: rem(52);
-      @include tablet-down {
+      @include desktop-down {
         margin: rem(8) rem(-8) rem(-8);
       }
     }
 
     &-item {
-      @include tablet-down {
+      @include desktop-down {
         flex: 0 0 50%;
         padding: rem(8);
       }
@@ -41,7 +41,7 @@
         max-width: rem(45);
       }
 
-      @include tablet-down {
+      @include desktop-down {
         margin-top: rem(-16);
         &-2,
         &-4 {

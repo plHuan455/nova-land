@@ -219,10 +219,10 @@
     }
 
     &_detail {
-      padding: rem(30) rem(32) rem(30) rem(86);
+      padding: rem(12) rem(32) rem(30) rem(86);
 
       @include tablet-down {
-        padding: rem(30);
+        padding: rem(12) rem(30) rem(30);
       }
 
       @include small-mobile {

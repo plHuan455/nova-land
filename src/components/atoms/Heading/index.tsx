@@ -10,7 +10,9 @@ export type Sizes =
   | '32x48'
   | '36x40'
   | '38x52'
+  | '52x65'
   | '60x72'
+  | '64x83'
   | '30x42';
 
 type Variant = 'blueLinear';

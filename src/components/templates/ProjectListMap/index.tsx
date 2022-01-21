@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo } from 'react';
+import React, { useCallback } from 'react';
 
 import Heading from 'components/atoms/Heading';
 import Icon from 'components/atoms/Icon';
@@ -47,29 +47,31 @@ export const ProjectListMapInfo:React.FC<InfoProps> = ({
 }) => (
   <div className="t-projectListMap_info">
     <div className="t-projectListMap_info_select">
-      <Text content="Tỉnh/Thành Phố" modifiers={['16x24', 'jet', '600']} />
+      <Text content="Tỉnh/Thành Phố" modifiers={['18x28', 'jet', '600']} />
       <div className="t-projectListMap_info_pulldown">
         <Pulldown
           options={provinceOptions}
           value={valueProvince}
           placeholder="Chọn Tỉnh / Thành Phố"
           handleChange={handleChangeProvince}
+          isSecondary
         />
       </div>
     </div>
     <div className="t-projectListMap_info_select">
-      <Text content="Dự Án" modifiers={['16x24', 'jet', '600']} />
+      <Text content="Dự Án" modifiers={['18x28', 'jet', '600']} />
       <div className="t-projectListMap_info_pulldown">
         <Pulldown
           options={projectOptions}
           value={valueProject}
           placeholder="Chọn Dự Án"
           handleChange={handleChangeProject}
+          isSecondary
         />
       </div>
     </div>
     <div className="t-projectListMap_info_wrap-list">
-      <Text content="Danh Sách Dự Án" modifiers={['16x24', 'jet', '600']} />
+      <Text content="Danh Sách Dự Án" modifiers={['18x28', 'jet', '600']} />
       {listProject.length && (
       <ul className="t-projectListMap_info_list">
         {listProject.map((item, index) => (
@@ -77,7 +79,7 @@ export const ProjectListMapInfo:React.FC<InfoProps> = ({
             <Link href={item.href}>
               <div className="t-projectListMap_info_item">
                 <Text content={item.title} modifiers={['16x24', 'jet', '300']} />
-                <Icon iconName="arrowNextGrey" />
+                <Icon iconName="greyArrowRight" />
               </div>
             </Link>
           </li>
@@ -107,14 +109,14 @@ export const ProjectListMapGround:React.FC<MapProps> = ({
     [image.height, image.width],
   );
 
-  const paddingBottomMap = useMemo(() => ((image.height / image.width) * 100),
-    [image.height, image.width]);
+  // const paddingBottomMap = useMemo(() => ((image.height / image.width) * 100),
+  //   [image.height, image.width]);
 
   return (
     <div className="t-projectListMap_map">
       <div
         className="t-projectListMap_map_img"
-        style={{ paddingBottom: `${paddingBottomMap}%` }}
+        // style={{ paddingBottom: `${paddingBottomMap}%` }}
       >
         <img
           src={image.path}
