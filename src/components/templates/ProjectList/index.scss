@@ -1,0 +1,15 @@
+.t-projectList {
+  &_project {
+    &:nth-child(n+2) {
+      margin-top: rem(60);
+
+      @include tablet-down {
+        margin-top: rem(40);
+      }
+    
+      @include mobile-down {
+        margin-top: rem(20);
+      }
+    }
+  }
+}
