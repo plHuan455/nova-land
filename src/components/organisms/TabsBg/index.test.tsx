@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import TabsBg from '.';
+import { TabsBg } from '.';
 
 describe('<TabsBg />', () => {
   test('renders without crashing', () => {
