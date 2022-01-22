@@ -2303,6 +2303,292 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
 </footer>
 `;
 
+exports[`Storyshots Components/organisms/FooterRecruitment Normal 1`] = `
+<div
+  className="o-footer"
+>
+  <div
+    className="container o-container"
+  >
+    <div
+      className="o-footer_wrapper"
+    >
+      <div
+        className="o-footer_left"
+      >
+        <div
+          className="o-footer_left_logo"
+        >
+          <a
+            aria-current="page"
+            className="a-link   active"
+            href="/"
+            onClick={[Function]}
+            target="_self"
+          >
+            <div
+              className="a-image a-image-174x136"
+            >
+              <img
+                alt="novaland logo"
+                loading="lazy"
+                src="footer-logo.png"
+              />
+            </div>
+          </a>
+        </div>
+        <div
+          className="o-footer_left_info"
+        >
+          <p
+            className="a-text a-text-600 a-text-white a-text-uppercase a-text-12x17"
+          >
+            CÔNG TY CỔ PHẦN TẬP ĐOÀN ĐẦU TƯ ĐỊA ỐC NO VA
+          </p>
+          <div
+            className="u-mt-2"
+          >
+            <p
+              className="a-text a-text-300 a-text-white a-text-lavenderGray a-text-12x17"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "Giấy chứng nhận đăng ký doanh nghiệp số 0301444753 do Sở Kế hoạch và Đầu tư TP.HCM cấp lần đầu ngày 18/09/1992 </br> Tòa nhà văn phòng Novaland, 65 Nguyễn Du, Phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh",
+                }
+              }
+            />
+          </div>
+          <div
+            className="o-footer_left_contact u-mt-6"
+          >
+            <div
+              className="o-footer_left_contact_item"
+            >
+              <p
+                className="a-text a-text-300 a-text-white a-text-lavenderGray a-text-12x17"
+              >
+                Email:
+              </p>
+              <a
+                className="a-link  "
+                href="mailto:info@novaland.com.vn"
+                rel="noreferrer"
+                target="_self"
+              >
+                <p
+                  className="a-text a-text-white a-text-600 a-text-12x17 a-text-inline"
+                >
+                  info@novaland.com.vn
+                </p>
+              </a>
+            </div>
+            <div
+              className="o-footer_left_contact_item"
+            >
+              <p
+                className="a-text a-text-300 a-text-white a-text-lavenderGray a-text-12x17"
+              >
+                Tổng đài CSKH:
+              </p>
+              <a
+                className="a-link  "
+                href="tel:0902 960 132"
+                rel="noreferrer"
+                target="_self"
+              >
+                <p
+                  className="a-text a-text-600 a-text-white a-text-700 a-text-12x17 a-text-inline"
+                >
+                  0902 960 132
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="o-footer_right"
+      >
+        <div
+          className="o-footer_right_menus"
+        >
+          <div
+            className="o-footer_right_menus_title"
+          >
+            <p
+              className="a-text a-text-white a-text-12x17 a-text-600 a-text-uppercase"
+            >
+              VỀ NOVALAND
+            </p>
+          </div>
+          <ul
+            className="o-footer_right_menus_list u-mt-16"
+          >
+            <li
+              className="o-footer_right_menus_nav"
+            >
+              <a
+                aria-current="page"
+                className="a-link   active"
+                href="/"
+                onClick={[Function]}
+                target="_self"
+              >
+                <p
+                  className="a-text a-text-12x17 a-text-lavenderGray a-text-300 a-text-inline"
+                >
+                  Về Novaland
+                </p>
+              </a>
+            </li>
+            <li
+              className="o-footer_right_menus_nav"
+            >
+              <a
+                className="a-link  "
+                href="/1"
+                onClick={[Function]}
+                target="_self"
+              >
+                <p
+                  className="a-text a-text-12x17 a-text-lavenderGray a-text-300 a-text-inline"
+                >
+                  Môi trường làm việc
+                </p>
+              </a>
+            </li>
+            <li
+              className="o-footer_right_menus_nav"
+            >
+              <a
+                className="a-link  "
+                href="/2"
+                onClick={[Function]}
+                target="_self"
+              >
+                <p
+                  className="a-text a-text-12x17 a-text-lavenderGray a-text-300 a-text-inline"
+                >
+                  Cơ hội nghề nghiệp
+                </p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          className="o-footer_right_social"
+        >
+          <div
+            className="o-footer_right_social_title"
+          >
+            <p
+              className="a-text a-text-white a-text-12x17 a-text-600 a-text-uppercase"
+            >
+              THEO DÕI NOVALAND TRÊN
+            </p>
+          </div>
+          <div
+            className="o-footer_right_social_icon u-mt-lg-21 u-mt-16"
+          >
+            <div
+              className="o-footer_right_social_item"
+            >
+              <a
+                className="a-link  "
+                href="/facebook"
+                onClick={[Function]}
+                target="_blank"
+              >
+                <img
+                  alt="icon"
+                  src="img_social_facebook.png"
+                />
+              </a>
+            </div>
+            <div
+              className="o-footer_right_social_item"
+            >
+              <a
+                className="a-link  "
+                href="/in"
+                onClick={[Function]}
+                target="_blank"
+              >
+                <img
+                  alt="icon"
+                  src="img_socaial_in.png"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="o-footer_copyRight"
+  >
+    <div
+      className="container o-container"
+    >
+      <div
+        className="o-footer_copyRight_container"
+      >
+        <div
+          className="o-footer_copyRight_wrapper"
+        >
+          <div
+            className="o-footer_copyRight_item"
+          >
+            <div
+              className="o-footer_copyRight_divider-0"
+            />
+            <a
+              className="a-link  "
+              href="/chinh-sach-bao-mat"
+              onClick={[Function]}
+              target="_blank"
+            >
+              <p
+                className="a-text a-text-columbiaBlue a-text-300 a-text-12x17"
+              >
+                Chính sách bảo mật
+              </p>
+            </a>
+          </div>
+          <div
+            className="o-footer_copyRight_item"
+          >
+            <div
+              className="o-footer_copyRight_divider-1"
+            />
+            <a
+              className="a-link  "
+              href="/dieu-khoan-khch-hang"
+              onClick={[Function]}
+              target="_blank"
+            >
+              <p
+                className="a-text a-text-columbiaBlue a-text-300 a-text-12x17"
+              >
+                 Điều khoản khách hàng
+              </p>
+            </a>
+          </div>
+        </div>
+        <p
+          className="a-text a-text-columbiaBlue a-text-300 a-text-12x17"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "© 2021. Bản quyền thuộc về Tập đoàn Novaland (Việt Nam). Tất cả các quyền được bảo hộ.",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Components/organisms/Form Normal 1`] = `
 <div
   className="o-form"
@@ -3676,6 +3962,31 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
         </div>
       </div>
     </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/templates/BannerRecruitment Normal 1`] = `
+<div
+  className="t-bannerRecruitment"
+>
+  <div
+    className="a-image a-image-1366x250"
+  >
+    <img
+      alt="image-banner"
+      loading="lazy"
+      src="recruitment-banner.png"
+    />
+  </div>
+  <div
+    className="t-bannerRecruitment_info"
+  >
+    <h2
+      className="a-heading a-heading-38x52 a-heading-white a-heading-center"
+    >
+      Cơ hội nghề nghiệp
+    </h2>
   </div>
 </div>
 `;
@@ -13897,6 +14208,577 @@ exports[`Storyshots Components/templates/MainLayout Normal 1`] = `
 </div>
 `;
 
+exports[`Storyshots Components/templates/MainLayoutRecruitment Normal 1`] = `
+<div
+  className="t-mainLayoutRecruitment"
+>
+  <header
+    className="o-header"
+  >
+    <div
+      className="container o-container"
+    >
+      <div
+        className="undefined animate animate-topDown"
+      >
+        <div
+          className="o-header_wrapper"
+        >
+          <div
+            className="o-header_iconMenu"
+            onClick={[Function]}
+          >
+            <span />
+            <span />
+            <span />
+          </div>
+          <div
+            className="o-header_left"
+          >
+            <a
+              aria-current="page"
+              className="a-link   active"
+              href="/"
+              onClick={[Function]}
+              target="_self"
+            >
+              <div
+                className="o-header_logo"
+              >
+                <div
+                  className="a-image a-image-logo"
+                >
+                  <img
+                    alt="replacing"
+                    loading="lazy"
+                    src="logo.png"
+                  />
+                </div>
+              </div>
+            </a>
+          </div>
+          <div
+            className="o-header_right"
+          >
+            <div
+              className="o-header_menu"
+            >
+              <ul
+                className="o-header_nav"
+              >
+                <div
+                  className="o-header_search mb"
+                >
+                  <div
+                    className="o-header_search_panel_input"
+                  >
+                    <div
+                      className="a-input a-input-text"
+                    >
+                      <div
+                        className="a-input_wrap"
+                      >
+                        <input
+                          autoComplete="off"
+                          className="a-input_input"
+                          onKeyPress={[Function]}
+                          placeholder="Tìm kiếm"
+                          type="text"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      className="o-header_search_panel_input_icon"
+                      onClick={[Function]}
+                    >
+                      <i
+                        className="a-icon a-icon-search a-icon-24"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <li
+                  className="o-header_nav_item"
+                >
+                  <a
+                    aria-current="page"
+                    className="a-link o-header_nav_link  active"
+                    href="/"
+                    onClick={[Function]}
+                    target="_self"
+                  >
+                    Trang chủ
+                  </a>
+                </li>
+                <li
+                  className="o-header_nav_item"
+                >
+                  <a
+                    className="a-link o-header_nav_link "
+                    href="/ve-chung-toi"
+                    onClick={[Function]}
+                    target="_self"
+                  >
+                    giới thiệu
+                  </a>
+                </li>
+                <li
+                  className="o-header_nav_item"
+                >
+                  <a
+                    className="a-link o-header_nav_link "
+                    href="/linh-vuc-hoat-dong"
+                    onClick={[Function]}
+                    target="_self"
+                  >
+                    Lĩnh vực hoạt động
+                  </a>
+                </li>
+                <li
+                  className="o-header_nav_item"
+                >
+                  <a
+                    className="a-link o-header_nav_link "
+                    href="/quan-he-dau-tu"
+                    onClick={[Function]}
+                    target="_self"
+                  >
+                    quan hệ đầu tư
+                  </a>
+                </li>
+                <li
+                  className="o-header_nav_item"
+                >
+                  <a
+                    className="a-link o-header_nav_link "
+                    href="/tin-tuc"
+                    onClick={[Function]}
+                    target="_self"
+                  >
+                    tin tức
+                  </a>
+                </li>
+                <li
+                  className="o-header_nav_item"
+                >
+                  <a
+                    className="a-link o-header_nav_link "
+                    href="/tuyen-dung"
+                    onClick={[Function]}
+                    target="_self"
+                  >
+                    tuyển dụng
+                  </a>
+                </li>
+                <li
+                  className="o-header_nav_item"
+                >
+                  <a
+                    className="a-link o-header_nav_link "
+                    href="/lien-he"
+                    onClick={[Function]}
+                    target="_self"
+                  >
+                    liên hệ
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div
+              className="o-header_languagePicker"
+            >
+              <div
+                className="o-header_languagePicker_value"
+                onClick={[Function]}
+              >
+                <p
+                  className="a-text a-text-16x24 a-text-jet a-text-400 a-text-uppercase"
+                >
+                  VN
+                </p>
+                <div
+                  className="o-header_languagePicker_icon"
+                >
+                  <i
+                    className="a-icon a-icon-arrowDownBlack a-icon-16"
+                  />
+                </div>
+              </div>
+              <ul
+                className="o-header_languagePicker_list"
+              >
+                <li
+                  className="o-header_languagePicker_list_item active"
+                  onClick={[Function]}
+                >
+                  <p
+                    className="a-text a-text-16x24 a-text-jet a-text-400 a-text-uppercase"
+                  >
+                    VN
+                  </p>
+                </li>
+                <li
+                  className="o-header_languagePicker_list_item "
+                  onClick={[Function]}
+                >
+                  <p
+                    className="a-text a-text-16x24 a-text-jet a-text-400 a-text-uppercase"
+                  >
+                    EN
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div
+              className="o-header_search_wrap"
+            >
+              <div
+                className="o-header_search pc"
+                onClick={[Function]}
+              >
+                <i
+                  className="a-icon a-icon-search a-icon-20"
+                />
+              </div>
+              <div
+                className="o-header_search_panel"
+              >
+                <div
+                  className="o-header_search_panel_input"
+                >
+                  <div
+                    className="a-input a-input-text"
+                  >
+                    <div
+                      className="a-input_wrap"
+                    >
+                      <input
+                        autoComplete="off"
+                        className="a-input_input"
+                        onKeyPress={[Function]}
+                        placeholder="Tìm kiếm"
+                        type="text"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="o-header_search_panel_input_icon"
+                    onClick={[Function]}
+                  >
+                    <i
+                      className="a-icon a-icon-search a-icon-24"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main
+    className="main-layout"
+  >
+    <div
+      style={
+        Object {
+          "marginBottom": 100,
+          "marginTop": 100,
+        }
+      }
+    >
+      Wise man call me a crazy Loving foolishly Dream about you all the time Everynight I fall asleep Chasing and dreaming Looking for your eyes Daisy! I am the foolish Gatsby who is found drown in love Can not you see my heart burning right through my hands? Cos your smile lifts me above and beyond the blue sky In the darkest moments here I still can see your eyes Love you to the moon and back I can not let you know this fact Love you to the moon and back I am so freaking missing you Aim for the moon yet so far I can not land among the stars Love you to the moon and back I am so freaking missing you I will never let my love get so close to you cos it hurts Swear to God! I wish I could I am the foolish Gatsby who is found drown in love Can not you see my heart burning right through my hands? Cos your smile lifts me above and beyond the blue sky In the darkest moments here I still can see your eyes Love you to the moon and back I can not let you know this fact Love you to the moon and back I am so freaking missing you Aim for the moon yet so far I can not land among the stars Love you to the moon and back I am so freaking missing you Love you to the moon and back I can not let you know this fact Love you to the moon and back I am so freaking missing you Aim for the moon yet so far I can not land among the stars Love you to the moon and back I am so freaking missing you
+    </div>
+  </main>
+  <div
+    className="o-footer"
+  >
+    <div
+      className="container o-container"
+    >
+      <div
+        className="o-footer_wrapper"
+      >
+        <div
+          className="o-footer_left"
+        >
+          <div
+            className="o-footer_left_logo"
+          >
+            <a
+              aria-current="page"
+              className="a-link   active"
+              href="/"
+              onClick={[Function]}
+              target="_self"
+            >
+              <div
+                className="a-image a-image-174x136"
+              >
+                <img
+                  alt="novaland logo"
+                  loading="lazy"
+                  src="footer-logo.png"
+                />
+              </div>
+            </a>
+          </div>
+          <div
+            className="o-footer_left_info"
+          >
+            <p
+              className="a-text a-text-600 a-text-white a-text-uppercase a-text-12x17"
+            >
+              CÔNG TY CỔ PHẦN TẬP ĐOÀN ĐẦU TƯ ĐỊA ỐC NO VA
+            </p>
+            <div
+              className="u-mt-2"
+            >
+              <p
+                className="a-text a-text-300 a-text-white a-text-lavenderGray a-text-12x17"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "Giấy chứng nhận đăng ký doanh nghiệp số 0301444753 do
+ Sở Kế hoạch và Đầu tư TP.HCM cấp lần đầu ngày 18/09/1992 </br>
+ Tòa nhà văn phòng Novaland, 65 Nguyễn Du, Phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh",
+                  }
+                }
+              />
+            </div>
+            <div
+              className="o-footer_left_contact u-mt-6"
+            >
+              <div
+                className="o-footer_left_contact_item"
+              >
+                <p
+                  className="a-text a-text-300 a-text-white a-text-lavenderGray a-text-12x17"
+                >
+                  Email:
+                </p>
+                <a
+                  className="a-link  "
+                  href="mailto:info@novaland.com.vn"
+                  rel="noreferrer"
+                  target="_self"
+                >
+                  <p
+                    className="a-text a-text-white a-text-600 a-text-12x17 a-text-inline"
+                  >
+                    info@novaland.com.vn
+                  </p>
+                </a>
+              </div>
+              <div
+                className="o-footer_left_contact_item"
+              >
+                <p
+                  className="a-text a-text-300 a-text-white a-text-lavenderGray a-text-12x17"
+                >
+                  Tổng đài CSKH:
+                </p>
+                <a
+                  className="a-link  "
+                  href="tel:0902 960 132"
+                  rel="noreferrer"
+                  target="_self"
+                >
+                  <p
+                    className="a-text a-text-600 a-text-white a-text-700 a-text-12x17 a-text-inline"
+                  >
+                    0902 960 132
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="o-footer_right"
+        >
+          <div
+            className="o-footer_right_menus"
+          >
+            <div
+              className="o-footer_right_menus_title"
+            >
+              <p
+                className="a-text a-text-white a-text-12x17 a-text-600 a-text-uppercase"
+              >
+                VỀ NOVALAND
+              </p>
+            </div>
+            <ul
+              className="o-footer_right_menus_list u-mt-16"
+            >
+              <li
+                className="o-footer_right_menus_nav"
+              >
+                <a
+                  aria-current="page"
+                  className="a-link   active"
+                  href="/"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  <p
+                    className="a-text a-text-12x17 a-text-lavenderGray a-text-300 a-text-inline"
+                  >
+                    Về Novaland
+                  </p>
+                </a>
+              </li>
+              <li
+                className="o-footer_right_menus_nav"
+              >
+                <a
+                  className="a-link  "
+                  href="/1"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  <p
+                    className="a-text a-text-12x17 a-text-lavenderGray a-text-300 a-text-inline"
+                  >
+                    Môi trường làm việc
+                  </p>
+                </a>
+              </li>
+              <li
+                className="o-footer_right_menus_nav"
+              >
+                <a
+                  className="a-link  "
+                  href="/2"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  <p
+                    className="a-text a-text-12x17 a-text-lavenderGray a-text-300 a-text-inline"
+                  >
+                    Cơ hội nghề nghiệp
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div
+            className="o-footer_right_social"
+          >
+            <div
+              className="o-footer_right_social_title"
+            >
+              <p
+                className="a-text a-text-white a-text-12x17 a-text-600 a-text-uppercase"
+              >
+                THEO DÕI NOVALAND TRÊN
+              </p>
+            </div>
+            <div
+              className="o-footer_right_social_icon u-mt-lg-21 u-mt-16"
+            >
+              <div
+                className="o-footer_right_social_item"
+              >
+                <a
+                  className="a-link  "
+                  href="/facebook"
+                  onClick={[Function]}
+                  target="_blank"
+                >
+                  <img
+                    alt="icon"
+                    src="img_social_facebook.png"
+                  />
+                </a>
+              </div>
+              <div
+                className="o-footer_right_social_item"
+              >
+                <a
+                  className="a-link  "
+                  href="/in"
+                  onClick={[Function]}
+                  target="_blank"
+                >
+                  <img
+                    alt="icon"
+                    src="img_socaial_in.png"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="o-footer_copyRight"
+    >
+      <div
+        className="container o-container"
+      >
+        <div
+          className="o-footer_copyRight_container"
+        >
+          <div
+            className="o-footer_copyRight_wrapper"
+          >
+            <div
+              className="o-footer_copyRight_item"
+            >
+              <div
+                className="o-footer_copyRight_divider-0"
+              />
+              <a
+                className="a-link  "
+                href="/chinh-sach-bao-mat"
+                onClick={[Function]}
+                target="_blank"
+              >
+                <p
+                  className="a-text a-text-columbiaBlue a-text-300 a-text-12x17"
+                >
+                  Chính sách bảo mật
+                </p>
+              </a>
+            </div>
+            <div
+              className="o-footer_copyRight_item"
+            >
+              <div
+                className="o-footer_copyRight_divider-1"
+              />
+              <a
+                className="a-link  "
+                href="/dieu-khoan-khch-hang"
+                onClick={[Function]}
+                target="_blank"
+              >
+                <p
+                  className="a-text a-text-columbiaBlue a-text-300 a-text-12x17"
+                >
+                   Điều khoản khách hàng
+                </p>
+              </a>
+            </div>
+          </div>
+          <p
+            className="a-text a-text-columbiaBlue a-text-300 a-text-12x17"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "© 2021. Bản quyền thuộc về Tập đoàn Novaland (Việt Nam). Tất cả các quyền được bảo hộ.",
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Components/templates/NewsCategory Card 1`] = `
 <div
   style={
@@ -18123,6 +19005,12 @@ exports[`Storyshots Components/templates/ProjectMap Normal 1`] = `
 </div>
 `;
 
+exports[`Storyshots Components/templates/Section Normal 1`] = `
+<div
+  className="t-section"
+/>
+`;
+
 exports[`Storyshots Components/templates/ShareholderRelations Normal 1`] = `
 <div
   className="t-shareholderRelations"
@@ -18355,6 +19243,52 @@ exports[`Storyshots Components/templates/ShareholderRelations Shareholder Card S
           className="t-shareholderCard_content_icon"
         />
       </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/templates/SignupJobPostings Normal 1`] = `
+<div
+  className="t-signupJobPostings"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="t-signupJobPostings_heading"
+    >
+      <h2
+        className="a-heading a-heading-600 a-heading-center a-heading-30x42 a-heading-fontNoto a-heading-jet a-heading-uppercase"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "Đăng ký nhận tin tuyển dụng",
+          }
+        }
+      />
+    </div>
+    <div
+      className="t-signupJobPostings_desc"
+    >
+      <p
+        className="a-text a-text-400 a-text-fontLexend a-text-18x28 a-text-center a-text-dimGray"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "Trong chiến lược phát triển bền vững, Novaland luôn xem việc đầu tư phát triển nguồn nhân lực chất lượng cao và tạo dựng môi trường làm việc tốt nhất là nhiệm vụ hàng đầu của mình.",
+          }
+        }
+      />
+    </div>
+    <div
+      className="t-signupJobPostings_button"
+    >
+      <button
+        className="a-button a-button-primary"
+        disabled={false}
+        type="button"
+      >
+        Đăng ký ngay
+      </button>
     </div>
   </div>
 </div>
