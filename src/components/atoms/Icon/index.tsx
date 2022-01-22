@@ -22,6 +22,9 @@ export const iconList = {
   arrowPrevSlateGray: 'arrowPrevSlateGray',
   blackArrowDown: 'blackArrowDown',
   greyArrowRight: 'greyArrowRight',
+  collapse: 'collapse',
+  expand: 'expand',
+  location: 'location',
 };
 
 export type IconName = keyof typeof iconList;

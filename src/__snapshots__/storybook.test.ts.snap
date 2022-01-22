@@ -19,6 +19,56 @@ exports[`Storyshots Components/atoms/Button Normal 1`] = `
 </div>
 `;
 
+exports[`Storyshots Components/atoms/Checkbox Normal 1`] = `
+<div
+  className=""
+>
+  <div
+    className="a-checkbox"
+  >
+    <input
+      className="a-checkbox_input"
+      id="1"
+      name="1"
+      onChange={[Function]}
+      type="checkbox"
+      value="1"
+    />
+    <label
+      className="a-checkbox_label"
+      htmlFor="1"
+    >
+      
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/atoms/Checkbox With Label 1`] = `
+<div
+  className=""
+>
+  <div
+    className="a-checkbox"
+  >
+    <input
+      className="a-checkbox_input"
+      id="2"
+      name="2"
+      onChange={[Function]}
+      type="checkbox"
+      value="2"
+    />
+    <label
+      className="a-checkbox_label"
+      htmlFor="2"
+    >
+      ABC
+    </label>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Components/atoms/Heading Normal 1`] = `
 <h2
   className="a-heading a-heading-raisinBlack a-heading-400 a-heading-uppercase a-heading-undefined"
@@ -223,6 +273,61 @@ exports[`Storyshots Components/atoms/Icon Normal 1`] = `
   >
     <i
       className="a-icon a-icon-arrowPrevSlateGray a-icon-24"
+    />
+  </div>
+  <div
+    style={
+      Object {
+        "marginLeft": 7,
+      }
+    }
+  >
+    <i
+      className="a-icon a-icon-blackArrowDown a-icon-24"
+    />
+  </div>
+  <div
+    style={
+      Object {
+        "marginLeft": 7,
+      }
+    }
+  >
+    <i
+      className="a-icon a-icon-greyArrowRight a-icon-24"
+    />
+  </div>
+  <div
+    style={
+      Object {
+        "marginLeft": 7,
+      }
+    }
+  >
+    <i
+      className="a-icon a-icon-collapse a-icon-24"
+    />
+  </div>
+  <div
+    style={
+      Object {
+        "marginLeft": 7,
+      }
+    }
+  >
+    <i
+      className="a-icon a-icon-expand a-icon-24"
+    />
+  </div>
+  <div
+    style={
+      Object {
+        "marginLeft": 7,
+      }
+    }
+  >
+    <i
+      className="a-icon a-icon-location a-icon-24"
     />
   </div>
 </div>
@@ -684,7 +789,7 @@ exports[`Storyshots Components/molecules/Pulldown Normal 1`] = `
         className="css-1f43avz-a11yText-A11yText"
       />
       <div
-        className="m-pulldown m-pulldown-default__control css-srovjr-control"
+        className="m-pulldown m-pulldown-default__control css-sopo7f-control"
         onMouseDown={[Function]}
         onTouchEnd={[Function]}
       >
@@ -692,7 +797,7 @@ exports[`Storyshots Components/molecules/Pulldown Normal 1`] = `
           className="m-pulldown m-pulldown-default__value-container css-1733mh3-ValueContainer"
         >
           <div
-            className="m-pulldown m-pulldown-default__placeholder css-2js46o-placeholder"
+            className="m-pulldown m-pulldown-default__placeholder css-1y0viib-placeholder"
           >
             Chọn Quận/Huyện
           </div>
@@ -765,7 +870,7 @@ exports[`Storyshots Components/molecules/Pulldown Normal 1`] = `
           >
             <img
               alt="icon-arrow"
-              src="ic_carret_down.svg"
+              src="ic_blue_arrow_down.svg"
               style={
                 Object {
                   "transform": false,
@@ -1520,7 +1625,7 @@ exports[`Storyshots Components/organisms/Collapses Normal 1`] = `
       className="o-collapses_icon"
     >
       <i
-        className="a-icon a-icon-arrowDownGrey a-icon-24"
+        className="a-icon a-icon-blackArrowDown a-icon-24"
       />
     </div>
   </div>
@@ -1573,6 +1678,188 @@ exports[`Storyshots Components/organisms/Container Row Container 1`] = `
       <p>
         What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
       </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/organisms/FilterGroup Normal 1`] = `
+<div
+  style={
+    Object {
+      "marginLeft": "30px",
+      "maxWidth": "240px",
+    }
+  }
+>
+  <div
+    className="o-filterGroup"
+  >
+    <div
+      className="o-filterGroup_wrapTitle u-mb-lg-12 u-mb-8"
+    >
+      <div
+        className="o-filterGroup_wrapTitle_title"
+      >
+        <p
+          className="a-text a-text-14x20 a-text-600 a-text-jet"
+        >
+          Bộ phận
+        </p>
+      </div>
+      <div
+        className="o-filterGroup_wrapTitle_icon"
+        onClick={[Function]}
+      >
+        <i
+          className="a-icon a-icon-expand a-icon-24"
+        />
+      </div>
+    </div>
+    <div
+      className="o-filterGroup_wrapperContent"
+      style={
+        Object {
+          "maxHeight": 0,
+        }
+      }
+    >
+      <div
+        className="o-filterGroup_wrapperContent_content"
+      >
+        <div
+          className="o-filterGroup_wrapperContent_item"
+        >
+          <div
+            className="a-checkbox"
+          >
+            <input
+              className="a-checkbox_input"
+              content="Tất cả"
+              id="1"
+              name="tatca"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="a-checkbox_label"
+              htmlFor="1"
+            >
+              Tất cả
+            </label>
+          </div>
+        </div>
+        <div
+          className="o-filterGroup_wrapperContent_item"
+        >
+          <div
+            className="a-checkbox"
+          >
+            <input
+              className="a-checkbox_input"
+              content="Kỹ thuật"
+              id="2"
+              name="kythuat"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="a-checkbox_label"
+              htmlFor="2"
+            >
+              Kỹ thuật
+            </label>
+          </div>
+        </div>
+        <div
+          className="o-filterGroup_wrapperContent_item"
+        >
+          <div
+            className="a-checkbox"
+          >
+            <input
+              className="a-checkbox_input"
+              content="Kế hoạch Dự án"
+              id="3"
+              name="kehoachduan"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="a-checkbox_label"
+              htmlFor="3"
+            >
+              Kế hoạch Dự án
+            </label>
+          </div>
+        </div>
+        <div
+          className="o-filterGroup_wrapperContent_item"
+        >
+          <div
+            className="a-checkbox"
+          >
+            <input
+              className="a-checkbox_input"
+              content="Thiết kế"
+              id="4"
+              name="thietke"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="a-checkbox_label"
+              htmlFor="4"
+            >
+              Thiết kế
+            </label>
+          </div>
+        </div>
+        <div
+          className="o-filterGroup_wrapperContent_item"
+        >
+          <div
+            className="a-checkbox"
+          >
+            <input
+              className="a-checkbox_input"
+              content="Kinh doanh & Bán hàng"
+              id="5"
+              name="kinhdoanh&banhang"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="a-checkbox_label"
+              htmlFor="5"
+            >
+              Kinh doanh & Bán hàng
+            </label>
+          </div>
+        </div>
+        <div
+          className="o-filterGroup_wrapperContent_item"
+        >
+          <div
+            className="a-checkbox"
+          >
+            <input
+              className="a-checkbox_input"
+              content="Marketing"
+              id="6"
+              name="marketing"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="a-checkbox_label"
+              htmlFor="6"
+            >
+              Marketing
+            </label>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -2123,7 +2410,7 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
                         className="css-1f43avz-a11yText-A11yText"
                       />
                       <div
-                        className="m-pulldown m-pulldown-default__control css-srovjr-control"
+                        className="m-pulldown m-pulldown-default__control css-sopo7f-control"
                         onMouseDown={[Function]}
                         onTouchEnd={[Function]}
                       >
@@ -2131,7 +2418,7 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
                           className="m-pulldown m-pulldown-default__value-container css-1733mh3-ValueContainer"
                         >
                           <div
-                            className="m-pulldown m-pulldown-default__placeholder css-2js46o-placeholder"
+                            className="m-pulldown m-pulldown-default__placeholder css-1y0viib-placeholder"
                           >
                             - Dự án khách hàng quan tâm -
                           </div>
@@ -2204,7 +2491,7 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
                           >
                             <img
                               alt="icon-arrow"
-                              src="ic_carret_down.svg"
+                              src="ic_blue_arrow_down.svg"
                               style={
                                 Object {
                                   "transform": false,
@@ -2783,7 +3070,7 @@ exports[`Storyshots Components/organisms/Header normal 1`] = `
                 onClick={[Function]}
               >
                 <p
-                  className="a-text a-text-16x24 a-text-jet a-text-400 a-text-uppercase"
+                  className="a-text a-text-14x18 a-text-jet a-text-400 a-text-uppercase"
                 >
                   VN
                 </p>
@@ -2803,7 +3090,7 @@ exports[`Storyshots Components/organisms/Header normal 1`] = `
                   onClick={[Function]}
                 >
                   <p
-                    className="a-text a-text-16x24 a-text-jet a-text-400 a-text-uppercase"
+                    className="a-text a-text-14x18 a-text-jet a-text-400 a-text-uppercase"
                   >
                     VN
                   </p>
@@ -2813,7 +3100,7 @@ exports[`Storyshots Components/organisms/Header normal 1`] = `
                   onClick={[Function]}
                 >
                   <p
-                    className="a-text a-text-16x24 a-text-jet a-text-400 a-text-uppercase"
+                    className="a-text a-text-14x18 a-text-jet a-text-400 a-text-uppercase"
                   >
                     EN
                   </p>
@@ -2875,6 +3162,145 @@ exports[`Storyshots Components/organisms/ListFeatProjectCollapse Normal 1`] = `
 <div
   className="o-listFeatProjectCollapse"
 />
+`;
+
+exports[`Storyshots Components/organisms/RecruitmentPositionCard Normal 1`] = `
+<div
+  style={
+    Object {
+      "margin": "30px",
+      "maxWidth": "864px",
+    }
+  }
+>
+  <div
+    className="o-recruitmentPositionCard"
+  >
+    <div
+      className="o-recruitmentPositionCard_left"
+    >
+      <ul
+        className="o-recruitmentPositionCard_breadcrumbs"
+      >
+        <li
+          className="o-recruitmentPositionCard_breadcrumbs_location u-mr-4"
+        >
+          <i
+            className="a-icon a-icon-location a-icon-20"
+          />
+        </li>
+        <li
+          className="o-recruitmentPositionCard_breadcrumbs_item"
+        >
+          <div
+            className="o-recruitmentPositionCard_breadcrumbs_item_label"
+          >
+            <p
+              className="a-text a-text-12x17 a-text-300 a-text-spanishGray"
+            >
+              Ho Chi Minh, City
+            </p>
+          </div>
+        </li>
+        <li
+          className="o-recruitmentPositionCard_breadcrumbs_item"
+        >
+          <div
+            className="o-recruitmentPositionCard_breadcrumbs_item_circle"
+          />
+          <div
+            className="o-recruitmentPositionCard_breadcrumbs_item_label"
+          >
+            <p
+              className="a-text a-text-12x17 a-text-300 a-text-spanishGray"
+            >
+              Kế Hoạch Dự Án
+            </p>
+          </div>
+        </li>
+        <li
+          className="o-recruitmentPositionCard_breadcrumbs_item"
+        >
+          <div
+            className="o-recruitmentPositionCard_breadcrumbs_item_circle"
+          />
+          <div
+            className="o-recruitmentPositionCard_breadcrumbs_item_label"
+          >
+            <p
+              className="a-text a-text-12x17 a-text-300 a-text-spanishGray"
+            >
+              Toàn thời gian
+            </p>
+          </div>
+        </li>
+      </ul>
+      <div
+        className="o-recruitmentPositionCard_content u-mt-lg-24 u-mt-16"
+      >
+        <div
+          className="o-recruitmentPositionCard_content_title"
+        >
+          <h2
+            className="a-heading a-heading-24x30 a-heading-600 a-heading-jet a-heading-capitalize"
+          >
+            Quản lý Điều hành Dự án
+          </h2>
+        </div>
+        <div
+          className="o-recruitmentPositionCard_content_desc u-mt-4"
+        >
+          <p
+            className="a-text a-text-18x28 a-text-300 a-text-dimGray"
+          >
+            Lập và theo dõi kế hoạch tổng thể tiến độ thực hiện các dự án quản lý gồm pháp lý, thiết kế, thi công, kinh doanh và...
+          </p>
+        </div>
+        <a
+          aria-current="page"
+          className="a-link   active"
+          href="/"
+          onClick={[Function]}
+          target="_self"
+        >
+          <div
+            className="o-recruitmentPositionCard_content_btn u-mt-lg-24 u-mt-16"
+          >
+            <p
+              className="a-text a-text-14x20 a-text-300 a-text-camel"
+            >
+              Tìm hiểu thêm
+            </p>
+            <div
+              className="o-recruitmentPositionCard_content_btnIcon"
+            />
+          </div>
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-recruitmentPositionCard_right"
+    >
+      <p
+        className="a-text a-text-12x17 a-text-300 a-text-jet"
+      >
+        Hạn chót nộp hồ sơ
+      </p>
+      <div
+        className="o-recruitmentPositionCard_expDate"
+      >
+        <h2
+          className="a-heading a-heading-24x30 a-heading-jet a-heading-300"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "26/02/2022",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`Storyshots Components/organisms/Tabs Normal 1`] = `
@@ -3030,21 +3456,25 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
               className="t-awardList_card"
             >
               <div
-                className="t-awardList_card_img"
+                className="t-awardList_card_wrap"
               >
-                <img
-                  alt="award-img"
-                  src="award_1.png"
-                />
-              </div>
-              <div
-                className="t-awardList_card_desc"
-              >
-                <p
-                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
+                <div
+                  className="t-awardList_card_img"
                 >
-                  Top 10 Chủ đầu tư Bất động sản uy tín
-                </p>
+                  <img
+                    alt="award-img"
+                    src="award_1.png"
+                  />
+                </div>
+                <div
+                  className="t-awardList_card_desc"
+                >
+                  <p
+                    className="a-text a-text-18x22 a-text-fontLexend a-text-arsenic a-text-center"
+                  >
+                    Top 10 Chủ đầu tư Bất động sản uy tín
+                  </p>
+                </div>
               </div>
               <div
                 className="t-awardList_card_year"
@@ -3068,21 +3498,25 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
               className="t-awardList_card"
             >
               <div
-                className="t-awardList_card_img"
+                className="t-awardList_card_wrap"
               >
-                <img
-                  alt="award-img"
-                  src="award_2.png"
-                />
-              </div>
-              <div
-                className="t-awardList_card_desc"
-              >
-                <p
-                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
+                <div
+                  className="t-awardList_card_img"
                 >
-                  HR Asia - Nơi làm việc tốt nhất Châu Á
-                </p>
+                  <img
+                    alt="award-img"
+                    src="award_2.png"
+                  />
+                </div>
+                <div
+                  className="t-awardList_card_desc"
+                >
+                  <p
+                    className="a-text a-text-18x22 a-text-fontLexend a-text-arsenic a-text-center"
+                  >
+                    HR Asia - Nơi làm việc tốt nhất Châu Á
+                  </p>
+                </div>
               </div>
               <div
                 className="t-awardList_card_year"
@@ -3106,21 +3540,25 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
               className="t-awardList_card"
             >
               <div
-                className="t-awardList_card_img"
+                className="t-awardList_card_wrap"
               >
-                <img
-                  alt="award-img"
-                  src="award_3.png"
-                />
-              </div>
-              <div
-                className="t-awardList_card_desc"
-              >
-                <p
-                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
+                <div
+                  className="t-awardList_card_img"
                 >
-                  Nhà phát triển BĐS hạng sang tốt nhất Việt Nam - Luxury Lifestyle Awards
-                </p>
+                  <img
+                    alt="award-img"
+                    src="award_3.png"
+                  />
+                </div>
+                <div
+                  className="t-awardList_card_desc"
+                >
+                  <p
+                    className="a-text a-text-18x22 a-text-fontLexend a-text-arsenic a-text-center"
+                  >
+                    Nhà phát triển BĐS hạng sang tốt nhất Việt Nam - Luxury Lifestyle Awards
+                  </p>
+                </div>
               </div>
               <div
                 className="t-awardList_card_year"
@@ -3144,21 +3582,25 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
               className="t-awardList_card"
             >
               <div
-                className="t-awardList_card_img"
+                className="t-awardList_card_wrap"
               >
-                <img
-                  alt="award-img"
-                  src="award_4.png"
-                />
-              </div>
-              <div
-                className="t-awardList_card_desc"
-              >
-                <p
-                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
+                <div
+                  className="t-awardList_card_img"
                 >
-                  Chứng nhận Công trình tiêu biểu chào mừng 100 năm Liên Hiệp Quốc
-                </p>
+                  <img
+                    alt="award-img"
+                    src="award_4.png"
+                  />
+                </div>
+                <div
+                  className="t-awardList_card_desc"
+                >
+                  <p
+                    className="a-text a-text-18x22 a-text-fontLexend a-text-arsenic a-text-center"
+                  >
+                    Chứng nhận Công trình tiêu biểu chào mừng 100 năm Liên Hiệp Quốc
+                  </p>
+                </div>
               </div>
               <div
                 className="t-awardList_card_year"
@@ -3182,21 +3624,25 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
               className="t-awardList_card"
             >
               <div
-                className="t-awardList_card_img"
+                className="t-awardList_card_wrap"
               >
-                <img
-                  alt="award-img"
-                  src="award_5.png"
-                />
-              </div>
-              <div
-                className="t-awardList_card_desc"
-              >
-                <p
-                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
+                <div
+                  className="t-awardList_card_img"
                 >
-                  Nhà phát triển và đầu tư. Bất động sản Tiêu biểu - Nhịp Cầu Đầu Tư
-                </p>
+                  <img
+                    alt="award-img"
+                    src="award_5.png"
+                  />
+                </div>
+                <div
+                  className="t-awardList_card_desc"
+                >
+                  <p
+                    className="a-text a-text-18x22 a-text-fontLexend a-text-arsenic a-text-center"
+                  >
+                    Nhà phát triển và đầu tư. Bất động sản Tiêu biểu - Nhịp Cầu Đầu Tư
+                  </p>
+                </div>
               </div>
               <div
                 className="t-awardList_card_year"
@@ -3220,21 +3666,25 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
               className="t-awardList_card"
             >
               <div
-                className="t-awardList_card_img"
+                className="t-awardList_card_wrap"
               >
-                <img
-                  alt="award-img"
-                  src="award_5.png"
-                />
-              </div>
-              <div
-                className="t-awardList_card_desc"
-              >
-                <p
-                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
+                <div
+                  className="t-awardList_card_img"
                 >
-                  Nhà phát triển Bất động sản xuất sắc Việt Nam - Euromoney
-                </p>
+                  <img
+                    alt="award-img"
+                    src="award_5.png"
+                  />
+                </div>
+                <div
+                  className="t-awardList_card_desc"
+                >
+                  <p
+                    className="a-text a-text-18x22 a-text-fontLexend a-text-arsenic a-text-center"
+                  >
+                    Nhà phát triển Bất động sản xuất sắc Việt Nam - Euromoney
+                  </p>
+                </div>
               </div>
               <div
                 className="t-awardList_card_year"
@@ -3266,21 +3716,25 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
               className="t-awardList_card"
             >
               <div
-                className="t-awardList_card_img"
+                className="t-awardList_card_wrap"
               >
-                <img
-                  alt="award-img"
-                  src="award_1.png"
-                />
-              </div>
-              <div
-                className="t-awardList_card_desc"
-              >
-                <p
-                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
+                <div
+                  className="t-awardList_card_img"
                 >
-                  Top 10 Chủ đầu tư Bất động sản uy tín
-                </p>
+                  <img
+                    alt="award-img"
+                    src="award_1.png"
+                  />
+                </div>
+                <div
+                  className="t-awardList_card_desc"
+                >
+                  <p
+                    className="a-text a-text-18x22 a-text-fontLexend a-text-arsenic a-text-center"
+                  >
+                    Top 10 Chủ đầu tư Bất động sản uy tín
+                  </p>
+                </div>
               </div>
               <div
                 className="t-awardList_card_year"
@@ -3304,21 +3758,25 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
               className="t-awardList_card"
             >
               <div
-                className="t-awardList_card_img"
+                className="t-awardList_card_wrap"
               >
-                <img
-                  alt="award-img"
-                  src="award_2.png"
-                />
-              </div>
-              <div
-                className="t-awardList_card_desc"
-              >
-                <p
-                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
+                <div
+                  className="t-awardList_card_img"
                 >
-                  HR Asia - Nơi làm việc tốt nhất Châu Á
-                </p>
+                  <img
+                    alt="award-img"
+                    src="award_2.png"
+                  />
+                </div>
+                <div
+                  className="t-awardList_card_desc"
+                >
+                  <p
+                    className="a-text a-text-18x22 a-text-fontLexend a-text-arsenic a-text-center"
+                  >
+                    HR Asia - Nơi làm việc tốt nhất Châu Á
+                  </p>
+                </div>
               </div>
               <div
                 className="t-awardList_card_year"
@@ -3342,21 +3800,25 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
               className="t-awardList_card"
             >
               <div
-                className="t-awardList_card_img"
+                className="t-awardList_card_wrap"
               >
-                <img
-                  alt="award-img"
-                  src="award_3.png"
-                />
-              </div>
-              <div
-                className="t-awardList_card_desc"
-              >
-                <p
-                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
+                <div
+                  className="t-awardList_card_img"
                 >
-                  Nhà phát triển BĐS hạng sang tốt nhất Việt Nam - Luxury Lifestyle Awards
-                </p>
+                  <img
+                    alt="award-img"
+                    src="award_3.png"
+                  />
+                </div>
+                <div
+                  className="t-awardList_card_desc"
+                >
+                  <p
+                    className="a-text a-text-18x22 a-text-fontLexend a-text-arsenic a-text-center"
+                  >
+                    Nhà phát triển BĐS hạng sang tốt nhất Việt Nam - Luxury Lifestyle Awards
+                  </p>
+                </div>
               </div>
               <div
                 className="t-awardList_card_year"
@@ -3380,21 +3842,25 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
               className="t-awardList_card"
             >
               <div
-                className="t-awardList_card_img"
+                className="t-awardList_card_wrap"
               >
-                <img
-                  alt="award-img"
-                  src="award_4.png"
-                />
-              </div>
-              <div
-                className="t-awardList_card_desc"
-              >
-                <p
-                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
+                <div
+                  className="t-awardList_card_img"
                 >
-                  Chứng nhận Công trình tiêu biểu chào mừng 100 năm Liên Hiệp Quốc
-                </p>
+                  <img
+                    alt="award-img"
+                    src="award_4.png"
+                  />
+                </div>
+                <div
+                  className="t-awardList_card_desc"
+                >
+                  <p
+                    className="a-text a-text-18x22 a-text-fontLexend a-text-arsenic a-text-center"
+                  >
+                    Chứng nhận Công trình tiêu biểu chào mừng 100 năm Liên Hiệp Quốc
+                  </p>
+                </div>
               </div>
               <div
                 className="t-awardList_card_year"
@@ -3418,21 +3884,25 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
               className="t-awardList_card"
             >
               <div
-                className="t-awardList_card_img"
+                className="t-awardList_card_wrap"
               >
-                <img
-                  alt="award-img"
-                  src="award_5.png"
-                />
-              </div>
-              <div
-                className="t-awardList_card_desc"
-              >
-                <p
-                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
+                <div
+                  className="t-awardList_card_img"
                 >
-                  Nhà phát triển và đầu tư. Bất động sản Tiêu biểu - Nhịp Cầu Đầu Tư
-                </p>
+                  <img
+                    alt="award-img"
+                    src="award_5.png"
+                  />
+                </div>
+                <div
+                  className="t-awardList_card_desc"
+                >
+                  <p
+                    className="a-text a-text-18x22 a-text-fontLexend a-text-arsenic a-text-center"
+                  >
+                    Nhà phát triển và đầu tư. Bất động sản Tiêu biểu - Nhịp Cầu Đầu Tư
+                  </p>
+                </div>
               </div>
               <div
                 className="t-awardList_card_year"
@@ -3456,21 +3926,25 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
               className="t-awardList_card"
             >
               <div
-                className="t-awardList_card_img"
+                className="t-awardList_card_wrap"
               >
-                <img
-                  alt="award-img"
-                  src="award_5.png"
-                />
-              </div>
-              <div
-                className="t-awardList_card_desc"
-              >
-                <p
-                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
+                <div
+                  className="t-awardList_card_img"
                 >
-                  Nhà phát triển Bất động sản xuất sắc Việt Nam - Euromoney
-                </p>
+                  <img
+                    alt="award-img"
+                    src="award_5.png"
+                  />
+                </div>
+                <div
+                  className="t-awardList_card_desc"
+                >
+                  <p
+                    className="a-text a-text-18x22 a-text-fontLexend a-text-arsenic a-text-center"
+                  >
+                    Nhà phát triển Bất động sản xuất sắc Việt Nam - Euromoney
+                  </p>
+                </div>
               </div>
               <div
                 className="t-awardList_card_year"
@@ -3502,21 +3976,25 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
               className="t-awardList_card"
             >
               <div
-                className="t-awardList_card_img"
+                className="t-awardList_card_wrap"
               >
-                <img
-                  alt="award-img"
-                  src="award_1.png"
-                />
-              </div>
-              <div
-                className="t-awardList_card_desc"
-              >
-                <p
-                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
+                <div
+                  className="t-awardList_card_img"
                 >
-                  Top 10 Chủ đầu tư Bất động sản uy tín
-                </p>
+                  <img
+                    alt="award-img"
+                    src="award_1.png"
+                  />
+                </div>
+                <div
+                  className="t-awardList_card_desc"
+                >
+                  <p
+                    className="a-text a-text-18x22 a-text-fontLexend a-text-arsenic a-text-center"
+                  >
+                    Top 10 Chủ đầu tư Bất động sản uy tín
+                  </p>
+                </div>
               </div>
               <div
                 className="t-awardList_card_year"
@@ -3540,21 +4018,25 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
               className="t-awardList_card"
             >
               <div
-                className="t-awardList_card_img"
+                className="t-awardList_card_wrap"
               >
-                <img
-                  alt="award-img"
-                  src="award_2.png"
-                />
-              </div>
-              <div
-                className="t-awardList_card_desc"
-              >
-                <p
-                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
+                <div
+                  className="t-awardList_card_img"
                 >
-                  HR Asia - Nơi làm việc tốt nhất Châu Á
-                </p>
+                  <img
+                    alt="award-img"
+                    src="award_2.png"
+                  />
+                </div>
+                <div
+                  className="t-awardList_card_desc"
+                >
+                  <p
+                    className="a-text a-text-18x22 a-text-fontLexend a-text-arsenic a-text-center"
+                  >
+                    HR Asia - Nơi làm việc tốt nhất Châu Á
+                  </p>
+                </div>
               </div>
               <div
                 className="t-awardList_card_year"
@@ -3578,21 +4060,25 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
               className="t-awardList_card"
             >
               <div
-                className="t-awardList_card_img"
+                className="t-awardList_card_wrap"
               >
-                <img
-                  alt="award-img"
-                  src="award_3.png"
-                />
-              </div>
-              <div
-                className="t-awardList_card_desc"
-              >
-                <p
-                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
+                <div
+                  className="t-awardList_card_img"
                 >
-                  Nhà phát triển BĐS hạng sang tốt nhất Việt Nam - Luxury Lifestyle Awards
-                </p>
+                  <img
+                    alt="award-img"
+                    src="award_3.png"
+                  />
+                </div>
+                <div
+                  className="t-awardList_card_desc"
+                >
+                  <p
+                    className="a-text a-text-18x22 a-text-fontLexend a-text-arsenic a-text-center"
+                  >
+                    Nhà phát triển BĐS hạng sang tốt nhất Việt Nam - Luxury Lifestyle Awards
+                  </p>
+                </div>
               </div>
               <div
                 className="t-awardList_card_year"
@@ -3616,21 +4102,25 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
               className="t-awardList_card"
             >
               <div
-                className="t-awardList_card_img"
+                className="t-awardList_card_wrap"
               >
-                <img
-                  alt="award-img"
-                  src="award_4.png"
-                />
-              </div>
-              <div
-                className="t-awardList_card_desc"
-              >
-                <p
-                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
+                <div
+                  className="t-awardList_card_img"
                 >
-                  Chứng nhận Công trình tiêu biểu chào mừng 100 năm Liên Hiệp Quốc
-                </p>
+                  <img
+                    alt="award-img"
+                    src="award_4.png"
+                  />
+                </div>
+                <div
+                  className="t-awardList_card_desc"
+                >
+                  <p
+                    className="a-text a-text-18x22 a-text-fontLexend a-text-arsenic a-text-center"
+                  >
+                    Chứng nhận Công trình tiêu biểu chào mừng 100 năm Liên Hiệp Quốc
+                  </p>
+                </div>
               </div>
               <div
                 className="t-awardList_card_year"
@@ -3654,21 +4144,25 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
               className="t-awardList_card"
             >
               <div
-                className="t-awardList_card_img"
+                className="t-awardList_card_wrap"
               >
-                <img
-                  alt="award-img"
-                  src="award_5.png"
-                />
-              </div>
-              <div
-                className="t-awardList_card_desc"
-              >
-                <p
-                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
+                <div
+                  className="t-awardList_card_img"
                 >
-                  Nhà phát triển và đầu tư. Bất động sản Tiêu biểu - Nhịp Cầu Đầu Tư
-                </p>
+                  <img
+                    alt="award-img"
+                    src="award_5.png"
+                  />
+                </div>
+                <div
+                  className="t-awardList_card_desc"
+                >
+                  <p
+                    className="a-text a-text-18x22 a-text-fontLexend a-text-arsenic a-text-center"
+                  >
+                    Nhà phát triển và đầu tư. Bất động sản Tiêu biểu - Nhịp Cầu Đầu Tư
+                  </p>
+                </div>
               </div>
               <div
                 className="t-awardList_card_year"
@@ -3692,21 +4186,25 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
               className="t-awardList_card"
             >
               <div
-                className="t-awardList_card_img"
+                className="t-awardList_card_wrap"
               >
-                <img
-                  alt="award-img"
-                  src="award_5.png"
-                />
-              </div>
-              <div
-                className="t-awardList_card_desc"
-              >
-                <p
-                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
+                <div
+                  className="t-awardList_card_img"
                 >
-                  Nhà phát triển Bất động sản xuất sắc Việt Nam - Euromoney
-                </p>
+                  <img
+                    alt="award-img"
+                    src="award_5.png"
+                  />
+                </div>
+                <div
+                  className="t-awardList_card_desc"
+                >
+                  <p
+                    className="a-text a-text-18x22 a-text-fontLexend a-text-arsenic a-text-center"
+                  >
+                    Nhà phát triển Bất động sản xuất sắc Việt Nam - Euromoney
+                  </p>
+                </div>
               </div>
               <div
                 className="t-awardList_card_year"
@@ -3738,21 +4236,25 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
               className="t-awardList_card"
             >
               <div
-                className="t-awardList_card_img"
+                className="t-awardList_card_wrap"
               >
-                <img
-                  alt="award-img"
-                  src="award_1.png"
-                />
-              </div>
-              <div
-                className="t-awardList_card_desc"
-              >
-                <p
-                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
+                <div
+                  className="t-awardList_card_img"
                 >
-                  Top 10 Chủ đầu tư Bất động sản uy tín
-                </p>
+                  <img
+                    alt="award-img"
+                    src="award_1.png"
+                  />
+                </div>
+                <div
+                  className="t-awardList_card_desc"
+                >
+                  <p
+                    className="a-text a-text-18x22 a-text-fontLexend a-text-arsenic a-text-center"
+                  >
+                    Top 10 Chủ đầu tư Bất động sản uy tín
+                  </p>
+                </div>
               </div>
               <div
                 className="t-awardList_card_year"
@@ -3776,21 +4278,25 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
               className="t-awardList_card"
             >
               <div
-                className="t-awardList_card_img"
+                className="t-awardList_card_wrap"
               >
-                <img
-                  alt="award-img"
-                  src="award_2.png"
-                />
-              </div>
-              <div
-                className="t-awardList_card_desc"
-              >
-                <p
-                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
+                <div
+                  className="t-awardList_card_img"
                 >
-                  HR Asia - Nơi làm việc tốt nhất Châu Á
-                </p>
+                  <img
+                    alt="award-img"
+                    src="award_2.png"
+                  />
+                </div>
+                <div
+                  className="t-awardList_card_desc"
+                >
+                  <p
+                    className="a-text a-text-18x22 a-text-fontLexend a-text-arsenic a-text-center"
+                  >
+                    HR Asia - Nơi làm việc tốt nhất Châu Á
+                  </p>
+                </div>
               </div>
               <div
                 className="t-awardList_card_year"
@@ -3814,21 +4320,25 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
               className="t-awardList_card"
             >
               <div
-                className="t-awardList_card_img"
+                className="t-awardList_card_wrap"
               >
-                <img
-                  alt="award-img"
-                  src="award_3.png"
-                />
-              </div>
-              <div
-                className="t-awardList_card_desc"
-              >
-                <p
-                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
+                <div
+                  className="t-awardList_card_img"
                 >
-                  Nhà phát triển BĐS hạng sang tốt nhất Việt Nam - Luxury Lifestyle Awards
-                </p>
+                  <img
+                    alt="award-img"
+                    src="award_3.png"
+                  />
+                </div>
+                <div
+                  className="t-awardList_card_desc"
+                >
+                  <p
+                    className="a-text a-text-18x22 a-text-fontLexend a-text-arsenic a-text-center"
+                  >
+                    Nhà phát triển BĐS hạng sang tốt nhất Việt Nam - Luxury Lifestyle Awards
+                  </p>
+                </div>
               </div>
               <div
                 className="t-awardList_card_year"
@@ -3852,21 +4362,25 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
               className="t-awardList_card"
             >
               <div
-                className="t-awardList_card_img"
+                className="t-awardList_card_wrap"
               >
-                <img
-                  alt="award-img"
-                  src="award_4.png"
-                />
-              </div>
-              <div
-                className="t-awardList_card_desc"
-              >
-                <p
-                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
+                <div
+                  className="t-awardList_card_img"
                 >
-                  Chứng nhận Công trình tiêu biểu chào mừng 100 năm Liên Hiệp Quốc
-                </p>
+                  <img
+                    alt="award-img"
+                    src="award_4.png"
+                  />
+                </div>
+                <div
+                  className="t-awardList_card_desc"
+                >
+                  <p
+                    className="a-text a-text-18x22 a-text-fontLexend a-text-arsenic a-text-center"
+                  >
+                    Chứng nhận Công trình tiêu biểu chào mừng 100 năm Liên Hiệp Quốc
+                  </p>
+                </div>
               </div>
               <div
                 className="t-awardList_card_year"
@@ -3890,21 +4404,25 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
               className="t-awardList_card"
             >
               <div
-                className="t-awardList_card_img"
+                className="t-awardList_card_wrap"
               >
-                <img
-                  alt="award-img"
-                  src="award_5.png"
-                />
-              </div>
-              <div
-                className="t-awardList_card_desc"
-              >
-                <p
-                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
+                <div
+                  className="t-awardList_card_img"
                 >
-                  Nhà phát triển và đầu tư. Bất động sản Tiêu biểu - Nhịp Cầu Đầu Tư
-                </p>
+                  <img
+                    alt="award-img"
+                    src="award_5.png"
+                  />
+                </div>
+                <div
+                  className="t-awardList_card_desc"
+                >
+                  <p
+                    className="a-text a-text-18x22 a-text-fontLexend a-text-arsenic a-text-center"
+                  >
+                    Nhà phát triển và đầu tư. Bất động sản Tiêu biểu - Nhịp Cầu Đầu Tư
+                  </p>
+                </div>
               </div>
               <div
                 className="t-awardList_card_year"
@@ -3928,21 +4446,25 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
               className="t-awardList_card"
             >
               <div
-                className="t-awardList_card_img"
+                className="t-awardList_card_wrap"
               >
-                <img
-                  alt="award-img"
-                  src="award_5.png"
-                />
-              </div>
-              <div
-                className="t-awardList_card_desc"
-              >
-                <p
-                  className="a-text a-text-16x24 a-text-fontLexend a-text-arsenic a-text-center"
+                <div
+                  className="t-awardList_card_img"
                 >
-                  Nhà phát triển Bất động sản xuất sắc Việt Nam - Euromoney
-                </p>
+                  <img
+                    alt="award-img"
+                    src="award_5.png"
+                  />
+                </div>
+                <div
+                  className="t-awardList_card_desc"
+                >
+                  <p
+                    className="a-text a-text-18x22 a-text-fontLexend a-text-arsenic a-text-center"
+                  >
+                    Nhà phát triển Bất động sản xuất sắc Việt Nam - Euromoney
+                  </p>
+                </div>
               </div>
               <div
                 className="t-awardList_card_year"
@@ -5590,7 +6112,7 @@ exports[`Storyshots Components/templates/FeaturedProjects Normal 1`] = `
                   className="o-collapses_icon"
                 >
                   <i
-                    className="a-icon a-icon-arrowDownGrey a-icon-24"
+                    className="a-icon a-icon-blackArrowDown a-icon-24"
                   />
                 </div>
               </div>
@@ -5666,7 +6188,7 @@ exports[`Storyshots Components/templates/FeaturedProjects Normal 1`] = `
                   className="o-collapses_icon"
                 >
                   <i
-                    className="a-icon a-icon-arrowDownGrey a-icon-24"
+                    className="a-icon a-icon-blackArrowDown a-icon-24"
                   />
                 </div>
               </div>
@@ -5742,7 +6264,7 @@ exports[`Storyshots Components/templates/FeaturedProjects Normal 1`] = `
                   className="o-collapses_icon"
                 >
                   <i
-                    className="a-icon a-icon-arrowDownGrey a-icon-24"
+                    className="a-icon a-icon-blackArrowDown a-icon-24"
                   />
                 </div>
               </div>
@@ -11269,7 +11791,7 @@ exports[`Storyshots Components/templates/Leadership Card 1`] = `
         className="t-leadershipCard_gender"
       >
         <p
-          className="a-text a-text-16x24 a-text-darkMidnightBlue a-text-300 a-text-capitalize"
+          className="a-text a-text-14x20 a-text-darkMidnightBlue a-text-300 a-text-capitalize"
           dangerouslySetInnerHTML={
             Object {
               "__html": "Ông",
@@ -11280,8 +11802,8 @@ exports[`Storyshots Components/templates/Leadership Card 1`] = `
       <div
         className="t-leadershipCard_name"
       >
-        <h3
-          className="a-heading a-heading-jet a-heading-500 a-heading-fontNoto"
+        <p
+          className="a-text a-text-jet a-text-500 a-text-fontNoto a-text-18x28"
           dangerouslySetInnerHTML={
             Object {
               "__html": "Bùi Thành Nhơn",
@@ -11293,7 +11815,7 @@ exports[`Storyshots Components/templates/Leadership Card 1`] = `
         className="t-leadershipCard_position"
       >
         <p
-          className="a-text a-text-16x24 a-text-dimGray a-text-300"
+          className="a-text a-text-14x20 a-text-dimGray a-text-300"
           dangerouslySetInnerHTML={
             Object {
               "__html": "Nhà sáng lập - Chủ tịch Hội đồng Quản trị",
@@ -11351,8 +11873,8 @@ exports[`Storyshots Components/templates/Leadership Card Detail 1`] = `
       <div
         className="t-leadershipDetail_divider"
       />
-      <h2
-        className="a-heading a-heading-dimGray a-heading-300"
+      <p
+        className="a-text a-text-dimGray a-text-300 a-text-20x28"
         dangerouslySetInnerHTML={
           Object {
             "__html": "Nhà sáng lập - Chủ tịch Hội đồng Quản trị",
@@ -11410,8 +11932,8 @@ exports[`Storyshots Components/templates/Leadership Card Detail 1`] = `
     <div
       className="t-leadershipDetail_slogan_detail"
     >
-      <h2
-        className="a-heading a-heading-dimGray a-heading-300"
+      <p
+        className="a-text a-text-dimGray a-text-300 a-text-20x28"
         dangerouslySetInnerHTML={
           Object {
             "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được Sứ mạng, Hoài bão của Novaland Group.",
@@ -11508,7 +12030,7 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                       className="t-leadershipCard_gender"
                     >
                       <p
-                        className="a-text a-text-16x24 a-text-darkMidnightBlue a-text-300 a-text-capitalize"
+                        className="a-text a-text-14x20 a-text-darkMidnightBlue a-text-300 a-text-capitalize"
                         dangerouslySetInnerHTML={
                           Object {
                             "__html": "Ông",
@@ -11519,8 +12041,8 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                     <div
                       className="t-leadershipCard_name"
                     >
-                      <h3
-                        className="a-heading a-heading-jet a-heading-500 a-heading-fontNoto"
+                      <p
+                        className="a-text a-text-jet a-text-500 a-text-fontNoto a-text-18x28"
                         dangerouslySetInnerHTML={
                           Object {
                             "__html": "Bùi Thành Nhơn",
@@ -11532,7 +12054,7 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                       className="t-leadershipCard_position"
                     >
                       <p
-                        className="a-text a-text-16x24 a-text-dimGray a-text-300"
+                        className="a-text a-text-14x20 a-text-dimGray a-text-300"
                         dangerouslySetInnerHTML={
                           Object {
                             "__html": "Nhà sáng lập - Chủ tịch Hội đồng Quản trị",
@@ -11577,8 +12099,8 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                         <div
                           className="t-leadershipDetail_divider"
                         />
-                        <h2
-                          className="a-heading a-heading-dimGray a-heading-300"
+                        <p
+                          className="a-text a-text-dimGray a-text-300 a-text-20x28"
                           dangerouslySetInnerHTML={
                             Object {
                               "__html": "Nhà sáng lập - Chủ tịch Hội đồng Quản trị",
@@ -11636,8 +12158,8 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                       <div
                         className="t-leadershipDetail_slogan_detail"
                       >
-                        <h2
-                          className="a-heading a-heading-dimGray a-heading-300"
+                        <p
+                          className="a-text a-text-dimGray a-text-300 a-text-20x28"
                           dangerouslySetInnerHTML={
                             Object {
                               "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được sứ mạng, hoài bão của Novaland Group.",
@@ -11680,7 +12202,7 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                       className="t-leadershipCard_gender"
                     >
                       <p
-                        className="a-text a-text-16x24 a-text-darkMidnightBlue a-text-300 a-text-capitalize"
+                        className="a-text a-text-14x20 a-text-darkMidnightBlue a-text-300 a-text-capitalize"
                         dangerouslySetInnerHTML={
                           Object {
                             "__html": "Ông",
@@ -11691,8 +12213,8 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                     <div
                       className="t-leadershipCard_name"
                     >
-                      <h3
-                        className="a-heading a-heading-jet a-heading-500 a-heading-fontNoto"
+                      <p
+                        className="a-text a-text-jet a-text-500 a-text-fontNoto a-text-18x28"
                         dangerouslySetInnerHTML={
                           Object {
                             "__html": "Bùi Xuân Huy",
@@ -11704,7 +12226,7 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                       className="t-leadershipCard_position"
                     >
                       <p
-                        className="a-text a-text-16x24 a-text-dimGray a-text-300"
+                        className="a-text a-text-14x20 a-text-dimGray a-text-300"
                         dangerouslySetInnerHTML={
                           Object {
                             "__html": "Thành viên Hội đồng Quản trị, Tổng Giám đốc",
@@ -11749,8 +12271,8 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                         <div
                           className="t-leadershipDetail_divider"
                         />
-                        <h2
-                          className="a-heading a-heading-dimGray a-heading-300"
+                        <p
+                          className="a-text a-text-dimGray a-text-300 a-text-20x28"
                           dangerouslySetInnerHTML={
                             Object {
                               "__html": "Thành viên Hội đồng Quản trị, Tổng Giám đốc",
@@ -11808,8 +12330,8 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                       <div
                         className="t-leadershipDetail_slogan_detail"
                       >
-                        <h2
-                          className="a-heading a-heading-dimGray a-heading-300"
+                        <p
+                          className="a-text a-text-dimGray a-text-300 a-text-20x28"
                           dangerouslySetInnerHTML={
                             Object {
                               "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được sứ mạng, hoài bão của Novaland Group.",
@@ -11852,7 +12374,7 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                       className="t-leadershipCard_gender"
                     >
                       <p
-                        className="a-text a-text-16x24 a-text-darkMidnightBlue a-text-300 a-text-capitalize"
+                        className="a-text a-text-14x20 a-text-darkMidnightBlue a-text-300 a-text-capitalize"
                         dangerouslySetInnerHTML={
                           Object {
                             "__html": "Bà",
@@ -11863,8 +12385,8 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                     <div
                       className="t-leadershipCard_name"
                     >
-                      <h3
-                        className="a-heading a-heading-jet a-heading-500 a-heading-fontNoto"
+                      <p
+                        className="a-text a-text-jet a-text-500 a-text-fontNoto a-text-18x28"
                         dangerouslySetInnerHTML={
                           Object {
                             "__html": "Hoàng Thu Châu",
@@ -11876,7 +12398,7 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                       className="t-leadershipCard_position"
                     >
                       <p
-                        className="a-text a-text-16x24 a-text-dimGray a-text-300"
+                        className="a-text a-text-14x20 a-text-dimGray a-text-300"
                         dangerouslySetInnerHTML={
                           Object {
                             "__html": "Thành viên Hội đồng Quản trị, Phó Tổng Giám đốc",
@@ -11921,8 +12443,8 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                         <div
                           className="t-leadershipDetail_divider"
                         />
-                        <h2
-                          className="a-heading a-heading-dimGray a-heading-300"
+                        <p
+                          className="a-text a-text-dimGray a-text-300 a-text-20x28"
                           dangerouslySetInnerHTML={
                             Object {
                               "__html": "Thành viên Hội đồng Quản trị, Phó Tổng Giám đốc",
@@ -11980,8 +12502,8 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                       <div
                         className="t-leadershipDetail_slogan_detail"
                       >
-                        <h2
-                          className="a-heading a-heading-dimGray a-heading-300"
+                        <p
+                          className="a-text a-text-dimGray a-text-300 a-text-20x28"
                           dangerouslySetInnerHTML={
                             Object {
                               "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được sứ mạng, hoài bão của Novaland Group.",
@@ -12046,8 +12568,8 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                     <div
                       className="t-leadershipDetail_divider"
                     />
-                    <h2
-                      className="a-heading a-heading-dimGray a-heading-300"
+                    <p
+                      className="a-text a-text-dimGray a-text-300 a-text-20x28"
                       dangerouslySetInnerHTML={
                         Object {
                           "__html": "Nhà sáng lập - Chủ tịch Hội đồng Quản trị",
@@ -12105,8 +12627,8 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                   <div
                     className="t-leadershipDetail_slogan_detail"
                   >
-                    <h2
-                      className="a-heading a-heading-dimGray a-heading-300"
+                    <p
+                      className="a-text a-text-dimGray a-text-300 a-text-20x28"
                       dangerouslySetInnerHTML={
                         Object {
                           "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được sứ mạng, hoài bão của Novaland Group.",
@@ -12152,8 +12674,8 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                     <div
                       className="t-leadershipDetail_divider"
                     />
-                    <h2
-                      className="a-heading a-heading-dimGray a-heading-300"
+                    <p
+                      className="a-text a-text-dimGray a-text-300 a-text-20x28"
                       dangerouslySetInnerHTML={
                         Object {
                           "__html": "Thành viên Hội đồng Quản trị, Tổng Giám đốc",
@@ -12211,8 +12733,8 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                   <div
                     className="t-leadershipDetail_slogan_detail"
                   >
-                    <h2
-                      className="a-heading a-heading-dimGray a-heading-300"
+                    <p
+                      className="a-text a-text-dimGray a-text-300 a-text-20x28"
                       dangerouslySetInnerHTML={
                         Object {
                           "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được sứ mạng, hoài bão của Novaland Group.",
@@ -12258,8 +12780,8 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                     <div
                       className="t-leadershipDetail_divider"
                     />
-                    <h2
-                      className="a-heading a-heading-dimGray a-heading-300"
+                    <p
+                      className="a-text a-text-dimGray a-text-300 a-text-20x28"
                       dangerouslySetInnerHTML={
                         Object {
                           "__html": "Thành viên Hội đồng Quản trị, Phó Tổng Giám đốc",
@@ -12317,8 +12839,8 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                   <div
                     className="t-leadershipDetail_slogan_detail"
                   >
-                    <h2
-                      className="a-heading a-heading-dimGray a-heading-300"
+                    <p
+                      className="a-text a-text-dimGray a-text-300 a-text-20x28"
                       dangerouslySetInnerHTML={
                         Object {
                           "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được sứ mạng, hoài bão của Novaland Group.",
@@ -12371,7 +12893,7 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                       className="t-leadershipCard_gender"
                     >
                       <p
-                        className="a-text a-text-16x24 a-text-darkMidnightBlue a-text-300 a-text-capitalize"
+                        className="a-text a-text-14x20 a-text-darkMidnightBlue a-text-300 a-text-capitalize"
                         dangerouslySetInnerHTML={
                           Object {
                             "__html": "Ông",
@@ -12382,8 +12904,8 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                     <div
                       className="t-leadershipCard_name"
                     >
-                      <h3
-                        className="a-heading a-heading-jet a-heading-500 a-heading-fontNoto"
+                      <p
+                        className="a-text a-text-jet a-text-500 a-text-fontNoto a-text-18x28"
                         dangerouslySetInnerHTML={
                           Object {
                             "__html": "Bùi Thành Nhơn",
@@ -12395,7 +12917,7 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                       className="t-leadershipCard_position"
                     >
                       <p
-                        className="a-text a-text-16x24 a-text-dimGray a-text-300"
+                        className="a-text a-text-14x20 a-text-dimGray a-text-300"
                         dangerouslySetInnerHTML={
                           Object {
                             "__html": "Nhà sáng lập - Chủ tịch Hội đồng Quản trị",
@@ -12440,8 +12962,8 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                         <div
                           className="t-leadershipDetail_divider"
                         />
-                        <h2
-                          className="a-heading a-heading-dimGray a-heading-300"
+                        <p
+                          className="a-text a-text-dimGray a-text-300 a-text-20x28"
                           dangerouslySetInnerHTML={
                             Object {
                               "__html": "Nhà sáng lập - Chủ tịch Hội đồng Quản trị",
@@ -12499,8 +13021,8 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                       <div
                         className="t-leadershipDetail_slogan_detail"
                       >
-                        <h2
-                          className="a-heading a-heading-dimGray a-heading-300"
+                        <p
+                          className="a-text a-text-dimGray a-text-300 a-text-20x28"
                           dangerouslySetInnerHTML={
                             Object {
                               "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được sứ mạng, hoài bão của Novaland Group.",
@@ -12543,7 +13065,7 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                       className="t-leadershipCard_gender"
                     >
                       <p
-                        className="a-text a-text-16x24 a-text-darkMidnightBlue a-text-300 a-text-capitalize"
+                        className="a-text a-text-14x20 a-text-darkMidnightBlue a-text-300 a-text-capitalize"
                         dangerouslySetInnerHTML={
                           Object {
                             "__html": "Ông",
@@ -12554,8 +13076,8 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                     <div
                       className="t-leadershipCard_name"
                     >
-                      <h3
-                        className="a-heading a-heading-jet a-heading-500 a-heading-fontNoto"
+                      <p
+                        className="a-text a-text-jet a-text-500 a-text-fontNoto a-text-18x28"
                         dangerouslySetInnerHTML={
                           Object {
                             "__html": "Bùi Xuân Huy",
@@ -12567,7 +13089,7 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                       className="t-leadershipCard_position"
                     >
                       <p
-                        className="a-text a-text-16x24 a-text-dimGray a-text-300"
+                        className="a-text a-text-14x20 a-text-dimGray a-text-300"
                         dangerouslySetInnerHTML={
                           Object {
                             "__html": "Thành viên Hội đồng Quản trị, Tổng Giám đốc",
@@ -12612,8 +13134,8 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                         <div
                           className="t-leadershipDetail_divider"
                         />
-                        <h2
-                          className="a-heading a-heading-dimGray a-heading-300"
+                        <p
+                          className="a-text a-text-dimGray a-text-300 a-text-20x28"
                           dangerouslySetInnerHTML={
                             Object {
                               "__html": "Thành viên Hội đồng Quản trị, Tổng Giám đốc",
@@ -12671,8 +13193,8 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                       <div
                         className="t-leadershipDetail_slogan_detail"
                       >
-                        <h2
-                          className="a-heading a-heading-dimGray a-heading-300"
+                        <p
+                          className="a-text a-text-dimGray a-text-300 a-text-20x28"
                           dangerouslySetInnerHTML={
                             Object {
                               "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được sứ mạng, hoài bão của Novaland Group.",
@@ -12715,7 +13237,7 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                       className="t-leadershipCard_gender"
                     >
                       <p
-                        className="a-text a-text-16x24 a-text-darkMidnightBlue a-text-300 a-text-capitalize"
+                        className="a-text a-text-14x20 a-text-darkMidnightBlue a-text-300 a-text-capitalize"
                         dangerouslySetInnerHTML={
                           Object {
                             "__html": "Bà",
@@ -12726,8 +13248,8 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                     <div
                       className="t-leadershipCard_name"
                     >
-                      <h3
-                        className="a-heading a-heading-jet a-heading-500 a-heading-fontNoto"
+                      <p
+                        className="a-text a-text-jet a-text-500 a-text-fontNoto a-text-18x28"
                         dangerouslySetInnerHTML={
                           Object {
                             "__html": "Hoàng Thu Châu",
@@ -12739,7 +13261,7 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                       className="t-leadershipCard_position"
                     >
                       <p
-                        className="a-text a-text-16x24 a-text-dimGray a-text-300"
+                        className="a-text a-text-14x20 a-text-dimGray a-text-300"
                         dangerouslySetInnerHTML={
                           Object {
                             "__html": "Thành viên Hội đồng Quản trị, Phó Tổng Giám đốc",
@@ -12784,8 +13306,8 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                         <div
                           className="t-leadershipDetail_divider"
                         />
-                        <h2
-                          className="a-heading a-heading-dimGray a-heading-300"
+                        <p
+                          className="a-text a-text-dimGray a-text-300 a-text-20x28"
                           dangerouslySetInnerHTML={
                             Object {
                               "__html": "Thành viên Hội đồng Quản trị, Phó Tổng Giám đốc",
@@ -12843,8 +13365,8 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                       <div
                         className="t-leadershipDetail_slogan_detail"
                       >
-                        <h2
-                          className="a-heading a-heading-dimGray a-heading-300"
+                        <p
+                          className="a-text a-text-dimGray a-text-300 a-text-20x28"
                           dangerouslySetInnerHTML={
                             Object {
                               "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được sứ mạng, hoài bão của Novaland Group.",
@@ -12909,8 +13431,8 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                     <div
                       className="t-leadershipDetail_divider"
                     />
-                    <h2
-                      className="a-heading a-heading-dimGray a-heading-300"
+                    <p
+                      className="a-text a-text-dimGray a-text-300 a-text-20x28"
                       dangerouslySetInnerHTML={
                         Object {
                           "__html": "Nhà sáng lập - Chủ tịch Hội đồng Quản trị",
@@ -12968,8 +13490,8 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                   <div
                     className="t-leadershipDetail_slogan_detail"
                   >
-                    <h2
-                      className="a-heading a-heading-dimGray a-heading-300"
+                    <p
+                      className="a-text a-text-dimGray a-text-300 a-text-20x28"
                       dangerouslySetInnerHTML={
                         Object {
                           "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được sứ mạng, hoài bão của Novaland Group.",
@@ -13015,8 +13537,8 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                     <div
                       className="t-leadershipDetail_divider"
                     />
-                    <h2
-                      className="a-heading a-heading-dimGray a-heading-300"
+                    <p
+                      className="a-text a-text-dimGray a-text-300 a-text-20x28"
                       dangerouslySetInnerHTML={
                         Object {
                           "__html": "Thành viên Hội đồng Quản trị, Tổng Giám đốc",
@@ -13074,8 +13596,8 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                   <div
                     className="t-leadershipDetail_slogan_detail"
                   >
-                    <h2
-                      className="a-heading a-heading-dimGray a-heading-300"
+                    <p
+                      className="a-text a-text-dimGray a-text-300 a-text-20x28"
                       dangerouslySetInnerHTML={
                         Object {
                           "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được sứ mạng, hoài bão của Novaland Group.",
@@ -13121,8 +13643,8 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                     <div
                       className="t-leadershipDetail_divider"
                     />
-                    <h2
-                      className="a-heading a-heading-dimGray a-heading-300"
+                    <p
+                      className="a-text a-text-dimGray a-text-300 a-text-20x28"
                       dangerouslySetInnerHTML={
                         Object {
                           "__html": "Thành viên Hội đồng Quản trị, Phó Tổng Giám đốc",
@@ -13180,8 +13702,8 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
                   <div
                     className="t-leadershipDetail_slogan_detail"
                   >
-                    <h2
-                      className="a-heading a-heading-dimGray a-heading-300"
+                    <p
+                      className="a-text a-text-dimGray a-text-300 a-text-20x28"
                       dangerouslySetInnerHTML={
                         Object {
                           "__html": "Con người Novaland với giá trị cốt lõi: Hiệu quả - Chính trực - Chuyên nghiệp là tài sản quý báu của Tập đoàn; là chìa khóa của sự thành công sẽ sớm hiện thực được sứ mạng, hoài bão của Novaland Group.",
@@ -13384,7 +13906,7 @@ exports[`Storyshots Components/templates/MainLayout Normal 1`] = `
                 onClick={[Function]}
               >
                 <p
-                  className="a-text a-text-16x24 a-text-jet a-text-400 a-text-uppercase"
+                  className="a-text a-text-14x18 a-text-jet a-text-400 a-text-uppercase"
                 >
                   VN
                 </p>
@@ -13404,7 +13926,7 @@ exports[`Storyshots Components/templates/MainLayout Normal 1`] = `
                   onClick={[Function]}
                 >
                   <p
-                    className="a-text a-text-16x24 a-text-jet a-text-400 a-text-uppercase"
+                    className="a-text a-text-14x18 a-text-jet a-text-400 a-text-uppercase"
                   >
                     VN
                   </p>
@@ -13414,7 +13936,7 @@ exports[`Storyshots Components/templates/MainLayout Normal 1`] = `
                   onClick={[Function]}
                 >
                   <p
-                    className="a-text a-text-16x24 a-text-jet a-text-400 a-text-uppercase"
+                    className="a-text a-text-14x18 a-text-jet a-text-400 a-text-uppercase"
                   >
                     EN
                   </p>
@@ -14027,7 +14549,7 @@ exports[`Storyshots Components/templates/MainLayout Normal 1`] = `
                           className="css-1f43avz-a11yText-A11yText"
                         />
                         <div
-                          className="m-pulldown m-pulldown-default__control css-srovjr-control"
+                          className="m-pulldown m-pulldown-default__control css-sopo7f-control"
                           onMouseDown={[Function]}
                           onTouchEnd={[Function]}
                         >
@@ -14035,7 +14557,7 @@ exports[`Storyshots Components/templates/MainLayout Normal 1`] = `
                             className="m-pulldown m-pulldown-default__value-container css-1733mh3-ValueContainer"
                           >
                             <div
-                              className="m-pulldown m-pulldown-default__placeholder css-2js46o-placeholder"
+                              className="m-pulldown m-pulldown-default__placeholder css-1y0viib-placeholder"
                             >
                               - Dự án khách hàng quan tâm -
                             </div>
@@ -14108,7 +14630,7 @@ exports[`Storyshots Components/templates/MainLayout Normal 1`] = `
                             >
                               <img
                                 alt="icon-arrow"
-                                src="ic_carret_down.svg"
+                                src="ic_blue_arrow_down.svg"
                                 style={
                                   Object {
                                     "transform": false,
@@ -14392,7 +14914,7 @@ exports[`Storyshots Components/templates/MainLayoutRecruitment Normal 1`] = `
                 onClick={[Function]}
               >
                 <p
-                  className="a-text a-text-16x24 a-text-jet a-text-400 a-text-uppercase"
+                  className="a-text a-text-14x18 a-text-jet a-text-400 a-text-uppercase"
                 >
                   VN
                 </p>
@@ -14412,7 +14934,7 @@ exports[`Storyshots Components/templates/MainLayoutRecruitment Normal 1`] = `
                   onClick={[Function]}
                 >
                   <p
-                    className="a-text a-text-16x24 a-text-jet a-text-400 a-text-uppercase"
+                    className="a-text a-text-14x18 a-text-jet a-text-400 a-text-uppercase"
                   >
                     VN
                   </p>
@@ -14422,7 +14944,7 @@ exports[`Storyshots Components/templates/MainLayoutRecruitment Normal 1`] = `
                   onClick={[Function]}
                 >
                   <p
-                    className="a-text a-text-16x24 a-text-jet a-text-400 a-text-uppercase"
+                    className="a-text a-text-14x18 a-text-jet a-text-400 a-text-uppercase"
                   >
                     EN
                   </p>
@@ -14539,9 +15061,7 @@ exports[`Storyshots Components/templates/MainLayoutRecruitment Normal 1`] = `
                 className="a-text a-text-300 a-text-white a-text-lavenderGray a-text-12x17"
                 dangerouslySetInnerHTML={
                   Object {
-                    "__html": "Giấy chứng nhận đăng ký doanh nghiệp số 0301444753 do
- Sở Kế hoạch và Đầu tư TP.HCM cấp lần đầu ngày 18/09/1992 </br>
- Tòa nhà văn phòng Novaland, 65 Nguyễn Du, Phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh",
+                    "__html": "Giấy chứng nhận đăng ký doanh nghiệp số 0301444753 do Sở Kế hoạch và Đầu tư TP.HCM cấp lần đầu ngày 18/09/1992 </br> Tòa nhà văn phòng Novaland, 65 Nguyễn Du, Phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh",
                   }
                 }
               />
@@ -16083,7 +16603,7 @@ exports[`Storyshots Components/templates/OutStandingNumbers Normal 1`] = `
     className="container o-container"
   >
     <h2
-      className="a-heading a-heading-center a-heading-500 a-heading-38x52 a-heading-fontNoto a-heading-jet"
+      className="a-heading a-heading-center a-heading-500 a-heading-30x42 a-heading-fontNoto a-heading-jet"
     >
       Novaland là thương hiệu uy tín hàng đầu Việt Nam trong lĩnh vực đầu tư & phát triển bất động sản
     </h2>
@@ -16095,7 +16615,7 @@ exports[`Storyshots Components/templates/OutStandingNumbers Normal 1`] = `
       >
         <div>
           <h2
-            className="a-heading a-heading-38x52 a-heading-600 a-heading-blueLinear a-heading-center a-heading-fontNoto"
+            className="a-heading a-heading-52x65 a-heading-600 a-heading-blueLinear a-heading-center a-heading-fontNoto"
           >
             50
             +
@@ -16104,7 +16624,7 @@ exports[`Storyshots Components/templates/OutStandingNumbers Normal 1`] = `
             className="u-mt-sm-8 u-mt-md-16"
           >
             <p
-              className="a-text a-text-16x24 a-text-300 a-text-dimGray a-text-center"
+              className="a-text a-text-16x20 a-text-300 a-text-dimGray a-text-center a-text-uppercase"
             >
               Dự án
             </p>
@@ -16119,7 +16639,7 @@ exports[`Storyshots Components/templates/OutStandingNumbers Normal 1`] = `
       >
         <div>
           <h2
-            className="a-heading a-heading-38x52 a-heading-600 a-heading-blueLinear a-heading-center a-heading-fontNoto"
+            className="a-heading a-heading-52x65 a-heading-600 a-heading-blueLinear a-heading-center a-heading-fontNoto"
           >
             5.400
             +
@@ -16128,7 +16648,7 @@ exports[`Storyshots Components/templates/OutStandingNumbers Normal 1`] = `
             className="u-mt-sm-8 u-mt-md-16"
           >
             <p
-              className="a-text a-text-16x24 a-text-300 a-text-dimGray a-text-center"
+              className="a-text a-text-16x20 a-text-300 a-text-dimGray a-text-center a-text-uppercase"
             >
               Hecta Đất
             </p>
@@ -16143,7 +16663,7 @@ exports[`Storyshots Components/templates/OutStandingNumbers Normal 1`] = `
       >
         <div>
           <h2
-            className="a-heading a-heading-38x52 a-heading-600 a-heading-blueLinear a-heading-center a-heading-fontNoto"
+            className="a-heading a-heading-52x65 a-heading-600 a-heading-blueLinear a-heading-center a-heading-fontNoto"
           >
             60.000
             +
@@ -16152,7 +16672,7 @@ exports[`Storyshots Components/templates/OutStandingNumbers Normal 1`] = `
             className="u-mt-sm-8 u-mt-md-16"
           >
             <p
-              className="a-text a-text-16x24 a-text-300 a-text-dimGray a-text-center"
+              className="a-text a-text-16x20 a-text-300 a-text-dimGray a-text-center a-text-uppercase"
             >
               Sản Phẩm
             </p>
@@ -16167,7 +16687,7 @@ exports[`Storyshots Components/templates/OutStandingNumbers Normal 1`] = `
       >
         <div>
           <h2
-            className="a-heading a-heading-38x52 a-heading-600 a-heading-blueLinear a-heading-center a-heading-fontNoto"
+            className="a-heading a-heading-52x65 a-heading-600 a-heading-blueLinear a-heading-center a-heading-fontNoto"
           >
             350.000
             +
@@ -16176,7 +16696,7 @@ exports[`Storyshots Components/templates/OutStandingNumbers Normal 1`] = `
             className="u-mt-sm-8 u-mt-md-16"
           >
             <p
-              className="a-text a-text-16x24 a-text-300 a-text-dimGray a-text-center"
+              className="a-text a-text-16x20 a-text-300 a-text-dimGray a-text-center a-text-uppercase"
             >
               Khách Hàng
             </p>
@@ -16191,7 +16711,7 @@ exports[`Storyshots Components/templates/OutStandingNumbers Normal 1`] = `
       >
         <div>
           <h2
-            className="a-heading a-heading-38x52 a-heading-600 a-heading-blueLinear a-heading-center a-heading-fontNoto"
+            className="a-heading a-heading-52x65 a-heading-600 a-heading-blueLinear a-heading-center a-heading-fontNoto"
           >
             1.000
             +
@@ -16200,7 +16720,7 @@ exports[`Storyshots Components/templates/OutStandingNumbers Normal 1`] = `
             className="u-mt-sm-8 u-mt-md-16"
           >
             <p
-              className="a-text a-text-16x24 a-text-300 a-text-dimGray a-text-center"
+              className="a-text a-text-16x20 a-text-300 a-text-dimGray a-text-center a-text-uppercase"
             >
               Giải Thưởng
             </p>
@@ -17877,7 +18397,7 @@ exports[`Storyshots Components/templates/ProjectListMap Normal 1`] = `
           className="t-projectListMap_info_select"
         >
           <p
-            className="a-text a-text-16x24 a-text-jet a-text-600"
+            className="a-text a-text-18x28 a-text-jet a-text-600"
             dangerouslySetInnerHTML={
               Object {
                 "__html": "Tỉnh/Thành Phố",
@@ -17901,7 +18421,7 @@ exports[`Storyshots Components/templates/ProjectListMap Normal 1`] = `
                   className="css-1f43avz-a11yText-A11yText"
                 />
                 <div
-                  className="m-pulldown m-pulldown-default__control css-srovjr-control"
+                  className="m-pulldown m-pulldown-default__control css-xptbj9-control"
                   onMouseDown={[Function]}
                   onTouchEnd={[Function]}
                 >
@@ -17909,7 +18429,7 @@ exports[`Storyshots Components/templates/ProjectListMap Normal 1`] = `
                     className="m-pulldown m-pulldown-default__value-container css-1733mh3-ValueContainer"
                   >
                     <div
-                      className="m-pulldown m-pulldown-default__placeholder css-2js46o-placeholder"
+                      className="m-pulldown m-pulldown-default__placeholder css-ux58s9-placeholder"
                     >
                       Chọn Tỉnh / Thành Phố
                     </div>
@@ -17982,7 +18502,7 @@ exports[`Storyshots Components/templates/ProjectListMap Normal 1`] = `
                     >
                       <img
                         alt="icon-arrow"
-                        src="ic_carret_down.svg"
+                        src="ic_grey_arrow_down.svg"
                         style={
                           Object {
                             "transform": false,
@@ -18001,7 +18521,7 @@ exports[`Storyshots Components/templates/ProjectListMap Normal 1`] = `
           className="t-projectListMap_info_select"
         >
           <p
-            className="a-text a-text-16x24 a-text-jet a-text-600"
+            className="a-text a-text-18x28 a-text-jet a-text-600"
             dangerouslySetInnerHTML={
               Object {
                 "__html": "Dự Án",
@@ -18025,7 +18545,7 @@ exports[`Storyshots Components/templates/ProjectListMap Normal 1`] = `
                   className="css-1f43avz-a11yText-A11yText"
                 />
                 <div
-                  className="m-pulldown m-pulldown-default__control css-srovjr-control"
+                  className="m-pulldown m-pulldown-default__control css-xptbj9-control"
                   onMouseDown={[Function]}
                   onTouchEnd={[Function]}
                 >
@@ -18033,7 +18553,7 @@ exports[`Storyshots Components/templates/ProjectListMap Normal 1`] = `
                     className="m-pulldown m-pulldown-default__value-container css-1733mh3-ValueContainer"
                   >
                     <div
-                      className="m-pulldown m-pulldown-default__placeholder css-2js46o-placeholder"
+                      className="m-pulldown m-pulldown-default__placeholder css-ux58s9-placeholder"
                     >
                       Chọn Dự Án
                     </div>
@@ -18106,7 +18626,7 @@ exports[`Storyshots Components/templates/ProjectListMap Normal 1`] = `
                     >
                       <img
                         alt="icon-arrow"
-                        src="ic_carret_down.svg"
+                        src="ic_grey_arrow_down.svg"
                         style={
                           Object {
                             "transform": false,
@@ -18125,7 +18645,7 @@ exports[`Storyshots Components/templates/ProjectListMap Normal 1`] = `
           className="t-projectListMap_info_wrap-list"
         >
           <p
-            className="a-text a-text-16x24 a-text-jet a-text-600"
+            className="a-text a-text-18x28 a-text-jet a-text-600"
             dangerouslySetInnerHTML={
               Object {
                 "__html": "Danh Sách Dự Án",
@@ -18155,7 +18675,7 @@ exports[`Storyshots Components/templates/ProjectListMap Normal 1`] = `
                     }
                   />
                   <i
-                    className="a-icon a-icon-arrowNextGrey a-icon-24"
+                    className="a-icon a-icon-greyArrowRight a-icon-24"
                   />
                 </div>
               </a>
@@ -18180,7 +18700,7 @@ exports[`Storyshots Components/templates/ProjectListMap Normal 1`] = `
                     }
                   />
                   <i
-                    className="a-icon a-icon-arrowNextGrey a-icon-24"
+                    className="a-icon a-icon-greyArrowRight a-icon-24"
                   />
                 </div>
               </a>
@@ -18205,107 +18725,7 @@ exports[`Storyshots Components/templates/ProjectListMap Normal 1`] = `
                     }
                   />
                   <i
-                    className="a-icon a-icon-arrowNextGrey a-icon-24"
-                  />
-                </div>
-              </a>
-            </li>
-            <li>
-              <a
-                aria-current="page"
-                className="a-link   active"
-                href="/"
-                onClick={[Function]}
-                target="_self"
-              >
-                <div
-                  className="t-projectListMap_info_item"
-                >
-                  <p
-                    className="a-text a-text-16x24 a-text-jet a-text-300"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "The Grand Manhattan",
-                      }
-                    }
-                  />
-                  <i
-                    className="a-icon a-icon-arrowNextGrey a-icon-24"
-                  />
-                </div>
-              </a>
-            </li>
-            <li>
-              <a
-                aria-current="page"
-                className="a-link   active"
-                href="/"
-                onClick={[Function]}
-                target="_self"
-              >
-                <div
-                  className="t-projectListMap_info_item"
-                >
-                  <p
-                    className="a-text a-text-16x24 a-text-jet a-text-300"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "The Park Avenue",
-                      }
-                    }
-                  />
-                  <i
-                    className="a-icon a-icon-arrowNextGrey a-icon-24"
-                  />
-                </div>
-              </a>
-            </li>
-            <li>
-              <a
-                aria-current="page"
-                className="a-link   active"
-                href="/"
-                onClick={[Function]}
-                target="_self"
-              >
-                <div
-                  className="t-projectListMap_info_item"
-                >
-                  <p
-                    className="a-text a-text-16x24 a-text-jet a-text-300"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "Aqua City 1",
-                      }
-                    }
-                  />
-                  <i
-                    className="a-icon a-icon-arrowNextGrey a-icon-24"
-                  />
-                </div>
-              </a>
-            </li>
-            <li>
-              <a
-                aria-current="page"
-                className="a-link   active"
-                href="/"
-                onClick={[Function]}
-                target="_self"
-              >
-                <div
-                  className="t-projectListMap_info_item"
-                >
-                  <p
-                    className="a-text a-text-16x24 a-text-jet a-text-300"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "Aqua City 2",
-                      }
-                    }
-                  />
-                  <i
-                    className="a-icon a-icon-arrowNextGrey a-icon-24"
+                    className="a-icon a-icon-greyArrowRight a-icon-24"
                   />
                 </div>
               </a>
@@ -18318,15 +18738,10 @@ exports[`Storyshots Components/templates/ProjectListMap Normal 1`] = `
       >
         <div
           className="t-projectListMap_map_img"
-          style={
-            Object {
-              "paddingBottom": "158.98123324396784%",
-            }
-          }
         >
           <img
             alt="map"
-            src="bg_project_list_map.png"
+            src="bg_project_list_map.svg"
           />
         </div>
       </div>
@@ -18480,7 +18895,7 @@ exports[`Storyshots Components/templates/ProjectMap Normal 1`] = `
                                     onMouseLeave={[Function]}
                                   >
                                     <div
-                                      className="a-image a-image-311x78"
+                                      className="a-image a-image-257x64"
                                     >
                                       <img
                                         alt="replacing"
@@ -18511,7 +18926,7 @@ exports[`Storyshots Components/templates/ProjectMap Normal 1`] = `
                                     onMouseLeave={[Function]}
                                   >
                                     <div
-                                      className="a-image a-image-311x78"
+                                      className="a-image a-image-257x64"
                                     >
                                       <img
                                         alt="replacing"
@@ -18544,7 +18959,7 @@ exports[`Storyshots Components/templates/ProjectMap Normal 1`] = `
                                     onMouseLeave={[Function]}
                                   >
                                     <div
-                                      className="a-image a-image-311x78"
+                                      className="a-image a-image-257x64"
                                     >
                                       <img
                                         alt="replacing"
@@ -18575,7 +18990,7 @@ exports[`Storyshots Components/templates/ProjectMap Normal 1`] = `
                                     onMouseLeave={[Function]}
                                   >
                                     <div
-                                      className="a-image a-image-311x78"
+                                      className="a-image a-image-257x64"
                                     >
                                       <img
                                         alt="replacing"
@@ -18622,7 +19037,7 @@ exports[`Storyshots Components/templates/ProjectMap Normal 1`] = `
                                     onMouseLeave={[Function]}
                                   >
                                     <div
-                                      className="a-image a-image-311x78"
+                                      className="a-image a-image-257x64"
                                     >
                                       <img
                                         alt="replacing"
@@ -18736,7 +19151,7 @@ exports[`Storyshots Components/templates/ProjectMap Normal 1`] = `
                                     onMouseLeave={[Function]}
                                   >
                                     <div
-                                      className="a-image a-image-311x78"
+                                      className="a-image a-image-257x64"
                                     >
                                       <img
                                         alt="replacing"
@@ -18767,7 +19182,7 @@ exports[`Storyshots Components/templates/ProjectMap Normal 1`] = `
                                     onMouseLeave={[Function]}
                                   >
                                     <div
-                                      className="a-image a-image-311x78"
+                                      className="a-image a-image-257x64"
                                     >
                                       <img
                                         alt="replacing"
@@ -18800,7 +19215,7 @@ exports[`Storyshots Components/templates/ProjectMap Normal 1`] = `
                                     onMouseLeave={[Function]}
                                   >
                                     <div
-                                      className="a-image a-image-311x78"
+                                      className="a-image a-image-257x64"
                                     >
                                       <img
                                         alt="replacing"
@@ -18887,7 +19302,7 @@ exports[`Storyshots Components/templates/ProjectMap Normal 1`] = `
                                     onMouseLeave={[Function]}
                                   >
                                     <div
-                                      className="a-image a-image-311x78"
+                                      className="a-image a-image-257x64"
                                     >
                                       <img
                                         alt="replacing"
@@ -19139,7 +19554,7 @@ exports[`Storyshots Components/templates/ShareholderRelations Normal 1`] = `
           type="button"
         >
           <p
-            className="a-text a-text-16x24 a-text-400 a-text-fontLexend a-text-center"
+            className="a-text a-text-14x20 a-text-400 a-text-fontLexend a-text-center"
             dangerouslySetInnerHTML={
               Object {
                 "__html": "Xem thêm báo cáo tài chính",
@@ -19371,7 +19786,7 @@ exports[`Storyshots Components/templates/VisionMissionValue Normal 1`] = `
               className="t-VMV_desc u-mt-16 u-mt-md-24 u-mt-lg-32 u-mb-16 u-mb-md-24"
             >
               <p
-                className="a-text a-text-300 a-text-fontLexend a-text-white a-text-center a-text-16x24"
+                className="a-text a-text-300 a-text-fontLexend a-text-white a-text-center a-text-14x20"
               >
                 Tập đoàn kinh tế hàng đầu trong các lĩnh vực
               </p>
@@ -19483,7 +19898,7 @@ exports[`Storyshots Components/templates/VisionMissionValue Normal 1`] = `
               className="t-VMV_desc u-mt-16 u-mt-md-24 u-mt-lg-32 u-mb-16 u-mb-md-24"
             >
               <p
-                className="a-text a-text-300 a-text-fontLexend a-text-white a-text-center a-text-16x24"
+                className="a-text a-text-300 a-text-fontLexend a-text-white a-text-center a-text-14x20"
               >
                 Tập đoàn tập trung cho các giá trị cộng đồng
               </p>
@@ -19595,7 +20010,7 @@ exports[`Storyshots Components/templates/VisionMissionValue Normal 1`] = `
               className="t-VMV_desc u-mt-16 u-mt-md-24 u-mt-lg-32 u-mb-16 u-mb-md-24"
             >
               <p
-                className="a-text a-text-300 a-text-fontLexend a-text-white a-text-center a-text-16x24"
+                className="a-text a-text-300 a-text-fontLexend a-text-white a-text-center a-text-14x20"
               >
                 Chìa khoá của sự Thành Công
               </p>
