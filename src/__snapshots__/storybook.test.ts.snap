@@ -14914,7 +14914,7 @@ exports[`Storyshots Components/templates/MainLayoutRecruitment Normal 1`] = `
                 onClick={[Function]}
               >
                 <p
-                  className="a-text a-text-16x24 a-text-jet a-text-400 a-text-uppercase"
+                  className="a-text a-text-14x18 a-text-jet a-text-400 a-text-uppercase"
                 >
                   VN
                 </p>
@@ -14934,7 +14934,7 @@ exports[`Storyshots Components/templates/MainLayoutRecruitment Normal 1`] = `
                   onClick={[Function]}
                 >
                   <p
-                    className="a-text a-text-16x24 a-text-jet a-text-400 a-text-uppercase"
+                    className="a-text a-text-14x18 a-text-jet a-text-400 a-text-uppercase"
                   >
                     VN
                   </p>
@@ -14944,7 +14944,7 @@ exports[`Storyshots Components/templates/MainLayoutRecruitment Normal 1`] = `
                   onClick={[Function]}
                 >
                   <p
-                    className="a-text a-text-16x24 a-text-jet a-text-400 a-text-uppercase"
+                    className="a-text a-text-14x18 a-text-jet a-text-400 a-text-uppercase"
                   >
                     EN
                   </p>
@@ -15061,9 +15061,7 @@ exports[`Storyshots Components/templates/MainLayoutRecruitment Normal 1`] = `
                 className="a-text a-text-300 a-text-white a-text-lavenderGray a-text-12x17"
                 dangerouslySetInnerHTML={
                   Object {
-                    "__html": "Giấy chứng nhận đăng ký doanh nghiệp số 0301444753 do
- Sở Kế hoạch và Đầu tư TP.HCM cấp lần đầu ngày 18/09/1992 </br>
- Tòa nhà văn phòng Novaland, 65 Nguyễn Du, Phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh",
+                    "__html": "Giấy chứng nhận đăng ký doanh nghiệp số 0301444753 do Sở Kế hoạch và Đầu tư TP.HCM cấp lần đầu ngày 18/09/1992 </br> Tòa nhà văn phòng Novaland, 65 Nguyễn Du, Phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh",
                   }
                 }
               />
