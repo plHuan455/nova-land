@@ -1,19 +1,20 @@
 .a-checkbox {
-  display: inline-block;
   cursor: pointer;
+  display: inline-block;
+  min-height: rem(24);
+  padding-left: rem(34);
   position: relative;
-  padding-left: 34px;
 
   &_input {
     appearance: none;
     background: url('~assets/icons/ic_check.svg') 0 0 no-repeat;
     cursor: inherit;
-    height: 24px;
-    width: 24px;
-    position: absolute;
+    height: rem(24);
     left: 0;
-    bottom: 0;
+    position: absolute;
+    top: rem(-3);
     transition: $transition;
+    width: rem(24);
 
     
     &:checked {
@@ -27,5 +28,6 @@
     cursor: inherit;
     display: inline-block;
     font-weight: 300;
+    padding: rem(3.5) 0;
   }
 }

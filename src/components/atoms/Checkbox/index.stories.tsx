@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { Story, Meta } from '@storybook/react';
 import React, { ChangeEvent } from 'react';
 
@@ -10,21 +11,25 @@ export default {
 } as Meta;
 
 export const normal: Story = () => (
-  <Checkbox
-    id="1"
-    name="1"
-    value="1"
-    onChange={(event: ChangeEvent<HTMLInputElement>) => console.log(event.target.checked)}
-  />
+  <div className="">
+    <Checkbox
+      id="1"
+      name="1"
+      value="1"
+      onChange={(event: ChangeEvent<HTMLInputElement>) => console.log(event.target.checked)}
+    />
+  </div>
 );
 
 export const withLabel: Story = () => (
-  <Checkbox
-    id="2"
-    name="2"
-    value="2"
-    onChange={(event: ChangeEvent<HTMLInputElement>) => console.log(event.target.checked)}
-  >
-    ABC
-  </Checkbox>
+  <div className="">
+    <Checkbox
+      id="2"
+      name="2"
+      value="2"
+      onChange={(event: ChangeEvent<HTMLInputElement>) => console.log(event.target.id)}
+    >
+      ABC
+    </Checkbox>
+  </div>
 );

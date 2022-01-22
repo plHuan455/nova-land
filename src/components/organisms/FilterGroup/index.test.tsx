@@ -6,7 +6,7 @@ import FilterGroup from '.';
 describe('<FilterGroup />', () => {
   test('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<FilterGroup />, div);
+    ReactDOM.render(<FilterGroup title="" />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 });

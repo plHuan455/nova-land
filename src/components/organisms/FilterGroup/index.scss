@@ -1,0 +1,23 @@
+.o-filterGroup {
+  transition: all $transition linear;
+
+  &_wrapTitle {
+    @include adjust-flex(space-between, center);
+  }
+
+  &_wrapperContent {
+    overflow: hidden;
+    transition: all $transition linear;
+
+    &_content {
+      border-left: rem(1) solid $anti-flash-white-4f9;
+      padding: 0 rem(12);
+    }
+
+    &_item {
+      &:not(:first-child) {
+        margin: rem(8) 0;
+      }
+    }
+  }
+}

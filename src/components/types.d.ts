@@ -79,7 +79,8 @@ type ColorStyle =
   | 'taupeGray'
   | 'camel'
   | 'jet333'
-  | 'columbiaBlue';
+  | 'columbiaBlue'
+  | 'spanishGray';
 
 type FontFamily = 'fontLexend' | 'fontNoto' | 'fontLato';
 
