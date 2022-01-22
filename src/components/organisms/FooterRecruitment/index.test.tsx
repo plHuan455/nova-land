@@ -1,0 +1,17 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+
+import FooterRecruitment from '.';
+
+describe('<FooterRecruitment />', () => {
+  test('renders without crashing', () => {
+    const div = document.createElement('div');
+    ReactDOM.render(
+      <Router>
+        <FooterRecruitment />
+      </Router>, div,
+    );
+    ReactDOM.unmountComponentAtNode(div);
+  });
+});

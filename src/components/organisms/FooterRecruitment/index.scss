@@ -1,0 +1,195 @@
+.o-footer {
+  background-image: url('~assets/images/bg_footerRecruitment.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding: rem(100) 0;
+
+    @include tablet-down {
+      padding: rem(50) 0;
+    }
+    @include mobile-down {
+      padding: rem(30) 0;
+    }
+  }
+
+  &_left {
+    display: flex;
+    flex: 0 0 55%;
+    @include tablet-down {
+      flex: 0 0 100%;
+    }
+
+    @include small-mobile {
+      display: block;
+    }
+
+    &_logo {
+      max-width: rem(174);
+      width: 100%;
+
+      @include mobile-down {
+        max-width: rem(130);
+      }
+
+      @include small-mobile {
+        margin: 0 auto;
+        max-width: rem(170);
+      }
+    }
+
+    &_info {
+      margin-top: rem(24);
+      padding-left: rem(30);
+      @include mobile-down {
+        margin-left: 0;
+        margin-top: rem(17);
+      }
+
+      @include small-mobile {
+        padding-left: 0;
+      }
+    }
+
+    &_contact {
+      @include break-min(1200px) {
+        @include adjust-flex(unset, center);
+      }
+
+      &_item {
+        position: relative;
+        @include adjust-flex(unset, center);
+  
+        .a-text + * {
+          margin-left: rem(8);
+        }
+
+        .a-link {
+          display: flex;
+        }
+      }
+
+      &_item:last-child {
+        @include desktop-up {
+          padding-left: rem(30);
+        }
+      }
+
+      &_item:last-child::before {
+        @include desktop-up {
+          background-color: $white07;
+          bottom: rem(3);
+          content: '';
+          left: rem(14);
+          position: absolute;
+          top: rem(3);
+          width: rem(1.5);
+        }
+      }
+    }
+  }
+
+  &_right {
+    display: flex;
+    flex: 0 0 45%;
+    justify-content: flex-end;
+    margin-top: rem(24);
+    padding-left: rem(14);
+    @include tablet-down {
+      flex: 0 0 100%;
+      justify-content: flex-start;
+      padding-left: 0;
+    }
+
+    @include mobile-down {
+      margin-top: rem(17);
+    }
+
+    &_menus {
+      max-width: rem(190);
+      width: 100%;
+
+      &_list {
+        list-style: none;
+      }
+
+      &_nav {
+        padding-left: rem(24);
+        position: relative;
+        
+        &:not(:first-child) {
+          margin-top: rem(8);
+
+          @include mobile-down {
+            margin-top: rem(4);
+          }
+        }
+
+        &::before {
+          border-right: rem(1) solid $white;
+          border-top: rem(1) solid $white;
+          content: '';
+          height: rem(6);
+          left: 0;
+          position: absolute;
+          top: rem(7);
+          transform: rotate(45deg);
+          width: rem(6);
+        }
+      }
+    }
+
+    &_social {
+      margin-left: rem(32);
+
+      &_icon {
+        align-items: center;
+        display: flex;
+      }
+
+      &_item {
+        &:not(:first-child) {
+          margin-left: rem(20);
+        }
+      }
+    }
+  }
+
+  &_copyRight {
+    background-color: $oxford-blue;
+    padding: rem(12) 0;
+
+    &_container {
+      @include adjust-flex(space-between, center);
+
+      @include tablet-down {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    &_wrapper {
+      @include adjust-flex(flex-start, center);
+      @include tablet-down {
+        margin-bottom: rem(6);
+      }
+    }
+
+    &_item {
+      align-items: center;
+      display: flex;
+    }
+
+    &_divider {
+      &-1 {
+        background: $ucla-blue;
+        height: rem(10);
+        margin: 0 rem(10);
+        width: rem(2);
+      }
+    }
+  }
+}
