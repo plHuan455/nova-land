@@ -3,6 +3,18 @@
   height: 100%;
   position: relative;
 
+  &_heading {
+    margin-bottom: rem(36);
+    @include text-overflow(2);
+    @include tablet-down {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &_wrapper {
+    position: relative;
+  }
+
   &_image {
     @include mobile-down {
       .a-image {
@@ -40,6 +52,41 @@
     }
   }
 
+  &_file {
+    align-items: center;
+    background: $white;
+    display: flex;
+    margin-top: rem(20);
+    padding: rem(10) rem(20);
+    @include text-overflow(3);
+  }
+
+  &_icon {
+    max-width: rem(50);
+    width: 100%;
+  }
+
+  &_fileName {
+    margin-left: rem(20);
+    @include mobile-down {
+      margin-left: rem(10);
+      @include text-overflow(2);
+    }
+  }
+
+  &_button {
+    margin: auto;
+    margin-top: rem(36);
+    max-width: rem(129);
+
+    .a-button {
+      height: rem(44);
+    }
+    @include tablet-down {
+      margin-top: rem(20);
+    }
+  }
+
   &:hover {
     #{$root}_content {
       bottom: rem(10);
@@ -52,6 +99,8 @@
 }
 
 .t-latestNews {
+  $root: &;
+
   &_wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -96,6 +145,28 @@
 
         @include mobile-down {
           margin-top: rem(10);
+        }
+      }
+    }
+  }
+
+  &-hasLine {
+    padding: rem(80) 0;
+    #{$root} {
+      &_left {
+        border-right: 1px solid $columbia-blue;
+        padding: 0 rem(30);
+        @include tablet-down {
+          padding: 0 rem(23);
+        }
+        @include mobile-down {
+          border: none;
+        }
+      }
+
+      &_right {
+        &_item {
+          padding: 0 rem(15);
         }
       }
     }

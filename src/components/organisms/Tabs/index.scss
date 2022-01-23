@@ -5,12 +5,12 @@
     align-items: center;
     border-radius: rem(3);
     display: inline-flex;
-    overflow-x: auto;
     left: 50%;
-    position: relative;
-    @include scroll-bars(8);
     max-width: 100%;
+    overflow-x: auto;
+    position: relative;
     transform: translateX(-50%);
+    @include scroll-bars(8);
   }
 
   &_label {

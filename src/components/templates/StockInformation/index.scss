@@ -1,0 +1,55 @@
+.t-stockInformation {
+  &_content {
+    border: 1px solid $columbia-blue;
+    display: flex;
+    margin-top: rem(36);
+    padding: rem(36);
+    @include tablet-down {
+      padding: rem(20);
+    }
+    @include mobile-down {
+      display: block;
+      margin-top: rem(25);
+    }
+  }
+
+  &_leftContent {
+    display: grid;
+    flex: 0 0 50%;
+    grid-gap: rem(40) rem(52);
+    grid-template-columns: auto auto;
+    @include tablet-down {
+      grid-gap: rem(25);
+    }
+    @include mobile-down {
+      flex: 0 0 100%;
+      grid-gap: rem(15);
+    }
+  }
+
+  &_rightContent {
+    flex: 0 0 50%;
+    @include mobile-down {
+      flex: 0 0 100%;
+      margin-top: rem(15);
+    }
+  }
+
+  &_desc {
+    @include mobile-down {
+      @include text-overflow(2);
+    }
+  }
+
+  &_number {
+    margin-top: rem(8);
+  }
+
+  &_note {
+    margin-top: rem(40);
+    @include text-overflow(3);
+    @include tablet-down {
+      margin-top: rem(20);
+    }
+  }
+}

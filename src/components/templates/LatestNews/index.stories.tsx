@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 import LatestNews, { LatestNewsCard } from '.';
 
-import latestNewsCardList from 'assets/dataDummy/latestNews';
+import latestNewsCardList, { investmentRelationsData } from 'assets/dataDummy/latestNews';
 
 export default {
   title: 'Components/templates/LatestNews',
@@ -38,4 +38,15 @@ export const normal: Story = () => (
       dataLatestNews={latestNewsCardList}
     />
   </Router>
+);
+
+export const ABC: Story = () => (
+  <div style={{ background: '#F8F8F8', paddingBottom: 80, paddingTop: 80 }}>
+    <Router>
+      <LatestNews
+        hasLine
+        dataLatestNews={investmentRelationsData}
+      />
+    </Router>
+  </div>
 );

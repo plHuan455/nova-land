@@ -1,0 +1,78 @@
+.t-schedule {
+  &_content {
+    display: flex;
+    flex-wrap: wrap;
+    margin: rem(30) rem(-15);
+
+    @include tablet-down {
+      margin: rem(20) rem(-8);
+    }
+
+    @include mobile-down {
+      margin: rem(20) 0;
+    }
+  }
+
+  &_left,
+  &_right {
+    flex: 0 0 50%;
+    padding: 0 rem(15);
+
+    @include tablet-down {
+      padding: 0 rem(8);
+    }
+
+    @include mobile-down {
+      flex: 0 0 100%;
+      padding: 0;
+    }
+  }
+
+  &_one {
+    margin: auto;
+    max-width: rem(582);
+    width: 100%;
+  }
+
+  &_tow {
+    margin: auto;
+  }
+
+  &_right {
+    @include mobile-down {
+      margin-top: rem(10);
+    }
+
+    &_item {
+      &:not(:first-child) {
+        margin-top: rem(30);
+        @include tablet-down {
+          margin-top: rem(16);
+        }
+
+        @include mobile-down {
+          margin-top: rem(10);
+        }
+      }
+
+      &-fourItem {
+        &:not(:first-child) {
+          margin-top: rem(18);
+        }
+      }
+    }
+  }
+
+  &_button {
+    margin: auto;
+    margin-top: rem(36);
+    max-width: rem(233);
+
+    .a-button {
+      height: rem(44);
+    }
+    @include tablet-down {
+      margin-top: rem(20);
+    }
+  }
+}
