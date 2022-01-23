@@ -1,6 +1,7 @@
 import imgLatestNews1 from 'assets/images/LatestNews/img_latestNews1.png';
 import imgLatestNews2 from 'assets/images/LatestNews/img_latestNews2.png';
 import imgLatestNews3 from 'assets/images/LatestNews/img_latestNews3.png';
+import imgPdf from 'assets/images/pdf.png';
 import { LatestNewsCardProps } from 'components/templates/LatestNews';
 
 const latestNewsCardList: LatestNewsCardProps[] = [
@@ -31,3 +32,32 @@ const latestNewsCardList: LatestNewsCardProps[] = [
 ];
 
 export default latestNewsCardList;
+
+export const investmentRelationsData: LatestNewsCardProps[] = [
+  {
+    imgSrc: imgLatestNews2,
+    ratio: '567x246',
+    heading: 'Quản Trị Doanh Nghiệp',
+    alt: 'Quản Trị Doanh Nghiệp',
+    title: 'Tóm Tắt Kết Quả Kinh Doanh Quý 4-2021',
+    time: '2 giờ trước',
+    href: '/',
+    btnText: 'Xem thêm',
+    fileName: 'Tóm Tắt Kết Quả Kinh Doanh Quý 3-2021',
+    pdfImg: imgPdf,
+    hrefLink: 'google.com/',
+  },
+  {
+    imgSrc: imgLatestNews2,
+    ratio: '567x246',
+    heading: 'Báo Cáo Thường Niên',
+    alt: 'Báo Cáo Thường Niên',
+    title: 'Báo Cáo Thường Niên 2021',
+    time: '2 giờ trước',
+    href: '/',
+    btnText: 'Xem thêm',
+    fileName: 'Báo Cáo Thường Niên 2021',
+    pdfImg: imgPdf,
+    hrefLink: 'google.com/',
+  },
+];

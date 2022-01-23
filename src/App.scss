@@ -33,6 +33,7 @@
 @import 'components/organisms/FooterRecruitment';
 @import 'components/organisms/FilterGroup';
 @import 'components/organisms/RecruitmentPositionCard';
+@import 'components/organisms/NewsCard/';
 
 //Templates
 @import 'components/templates/HomeNews';
@@ -59,6 +60,8 @@
 @import 'components/templates/SignupJobPostings/';
 @import 'components/templates/BannerRecruitment/';
 @import 'components/templates/StockInformation';
+@import 'components/templates/Schedule';
+@import 'components/templates/OtherDocuments/';
 
 // Pages
 @import 'pages/Home/';
