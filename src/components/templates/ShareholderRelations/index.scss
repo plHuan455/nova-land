@@ -9,8 +9,8 @@
       background: $camel;
 
       &::before {
-        transition: all linear 0.2s;
         background-image: url('~assets/icons/ic_arrow_next_white2.svg');
+        transition: all linear 0.2s;
       }
     }
 
@@ -63,22 +63,22 @@
     &_icon {
       background: transparent;
       height: rem(20);
-      width: rem(20);
       margin-left: rem(8);
       position: relative;
+      width: rem(20);
 
       &::before {
-        content: '';
-        position: absolute;
         background-image: url('~assets/icons/ic_arrow_next_red.svg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
+        content: '';
         height: rem(12);
-        width: rem(12);
-        top: 50%;
         left: 50%;
+        position: absolute;
+        top: 50%;
         transform: translate(-50%, -50%);
+        width: rem(12);
       }
     }
   }

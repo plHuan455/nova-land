@@ -151,10 +151,10 @@
     &_link {
       color: $jet;
       display: block;
+      font-weight: 300;
       padding: rem(9);
       position: relative;
       text-transform: capitalize;
-      font-weight: 300;
       z-index: $z-2;
       @include font-base(14, 20);
       @include style-font-family();

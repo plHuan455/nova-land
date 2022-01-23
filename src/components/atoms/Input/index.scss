@@ -56,7 +56,7 @@
 
   &_message {
     color: $sinopia;
-    @include font-base(12, 16);
     margin-top: rem(4);
+    @include font-base(12, 16);
   }
 }

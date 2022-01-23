@@ -3,7 +3,6 @@
 /* ----------------------------------------------------------------------------------------- */
 
 @keyframes bounce {
-
   from,
   20%,
   53%,
@@ -34,7 +33,6 @@
 }
 
 @keyframes flash {
-
   from,
   50%,
   to {
@@ -96,7 +94,6 @@
 }
 
 @keyframes jello {
-
   from,
   11.1%,
   to {
@@ -177,7 +174,6 @@
 }
 
 @keyframes shakeX {
-
   from,
   to {
     transform: translate3d(0, 0, 0);
@@ -200,7 +196,6 @@
 }
 
 @keyframes shakeY {
-
   from,
   to {
     transform: translate3d(0, 0, 0);
@@ -488,7 +483,6 @@
 /* ---------------------------------- Bouncing entrances ----------------------------------- */
 /* ----------------------------------------------------------------------------------------- */
 @keyframes bounceIn {
-
   from,
   20%,
   40%,
@@ -527,7 +521,6 @@
 }
 
 @keyframes bounceInDown {
-
   from,
   60%,
   75%,
@@ -560,7 +553,6 @@
 }
 
 @keyframes bounceInLeft {
-
   from,
   60%,
   75%,
@@ -593,7 +585,6 @@
 }
 
 @keyframes bounceInRight {
-
   from,
   60%,
   75%,
@@ -626,7 +617,6 @@
 }
 
 @keyframes bounceInUp {
-
   from,
   60%,
   75%,

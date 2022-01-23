@@ -51,6 +51,7 @@
 
       @include desktop-down {
         margin-top: rem(-16);
+
         &-2,
         &-4 {
           display: none;

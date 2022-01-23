@@ -127,9 +127,9 @@
     background-color: transparent;
     border: 0;
     color: $golden-brown;
-    @include font-base(14, 22);
     height: rem(32);
     width: auto;
+    @include font-base(14, 22);
 
     .a-icon {
       margin-right: rem(8);

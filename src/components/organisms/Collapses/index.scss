@@ -6,8 +6,8 @@
   &_wrapTitle {
     cursor: pointer;
     padding: rem(13) rem(16);
-    @include adjust-flex(space-between, center);
     transition: all $transition linear;
+    @include adjust-flex(space-between, center);
     @include mobile-down {
       padding: rem(8);
     }
@@ -20,8 +20,8 @@
   }
 
   &_wrapper {
-    max-height: 0;
     height: auto;
+    max-height: 0;
     overflow: hidden;
     transition: all $transition linear;
 

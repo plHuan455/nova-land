@@ -37,10 +37,10 @@
 
       &::after {
         background-color: $gainsboro;
-        content: "";
-        position: absolute;
-        left: rem(16);
+        content: '';
         height: 1px;
+        left: rem(16);
+        position: absolute;
         right: rem(26);
         @include mobile-down {
           left: rem(10);
