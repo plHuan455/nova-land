@@ -6,7 +6,7 @@ import TransportationInfrastructure from 'components/templates/TransportationInf
 
 const TransportationContainer: React.FC = () => (
   <Animate type="goUp">
-    <div className="p-home_investSector pt-100">
+    <div className="p-home_investSector">
       <TransportationInfrastructure
         title="Hạ tầng giao thông"
         desc="Nâng cấp, phát triển hạ tầng giao thông tại nơi có dự án nhằm gia tăng tính kết nối vào hạ tầng giao thông trọng điểm quốc gia."

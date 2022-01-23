@@ -1,43 +1,36 @@
 .p-aboutUs {
-  &_investSector {
-    padding-top: rem(114);
+  &_investmentSector, 
+  &_investSector,
+  &_developmentHistory {
+    padding-bottom: rem(80);
+
     @include tablet-down {
+      padding-bottom: rem(60);
+    }
+
+    @include mobile-down {
+      padding-bottom: rem(40);
+    }
+  }
+
+  &_awardList, 
+  &_ecoSystem {
+    padding-bottom: rem(80);
+    padding-top: rem(80);
+  
+    @include tablet-down {
+      padding-bottom: rem(60);
       padding-top: rem(60);
     }
+  
     @include mobile-down {
-      padding-top: rem(34);
-    }
-  }
-
-  &_developmentHistory {
-    padding-top: rem(137);
-    @include tablet-down {
-      padding-top: rem(80);
-    }
-    @include mobile-down {
-      padding-top: rem(44);
-    }
-  }
-
-  &_projectListMap {
-    padding-top: rem(111);
-    @include tablet-down {
-      padding-top: rem(55);
-    }
-    @include mobile-down {
-      padding-top: rem(28);
+      padding-bottom: rem(40);
+      padding-top: rem(40);
     }
   }
 
   &_ecoSystem {
     background-color: $white-smoke2;
-    padding-bottom: rem(156);
-    @include tablet-down {
-      padding-bottom: rem(80);
-    }
-    @include mobile-down {
-      padding-bottom: rem(65);
-    }
   }
 
   &_awardList {

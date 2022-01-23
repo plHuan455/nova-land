@@ -4,7 +4,7 @@ import investmentSectorData from 'assets/dataDummy/investmentSector';
 import InvestmentSector from 'components/templates/InvestmentSector';
 
 const InvestmentSectorContainer: React.FC = () => (
-  <div className="p-aboutUs_investmentSector pt-100">
+  <div className="p-aboutUs_investmentSector">
     <InvestmentSector
       title="BẤT ĐỘNG SẢN"
       investmentSectorList={investmentSectorData}
