@@ -75,17 +75,15 @@ const dummyData = [
 interface FilterRecruitmentProps {
   heading?: string;
   desc?: string;
-  backgroundSrc?: string;
 }
 
 const FilterRecruitment: React.FC<FilterRecruitmentProps> = ({
   heading,
   desc,
-  backgroundSrc,
 }) => {
   const [indexActive, setIndexActive] = useState(0);
   return (
-    <div className="t-filterRecruitment" style={{ backgroundImage: `url(${backgroundSrc})` }}>
+    <div className="t-filterRecruitment">
       <div className="t-filterRecruitment_heading">
         <Heading modifiers={['400', '64x83', 'center', 'fontNoto', 'white']} content={heading} />
       </div>
@@ -137,7 +135,6 @@ const FilterRecruitment: React.FC<FilterRecruitmentProps> = ({
 FilterRecruitment.defaultProps = {
   heading: undefined,
   desc: undefined,
-  backgroundSrc: undefined,
 };
 
 export default FilterRecruitment;
