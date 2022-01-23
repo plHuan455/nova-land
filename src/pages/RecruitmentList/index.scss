@@ -1,0 +1,27 @@
+.p-recruitmentList {
+  &_wrapper {
+    display: flex;
+  }
+
+  &_filterGroupRecruitment {
+    flex: 0 0 30%;
+    max-width: 30%;
+    padding-right: rem(90);
+
+    @include tablet-down {
+      flex: 0 0 0;
+      max-width: 0;
+      padding-right: 0;
+    }
+  }
+
+  &_recruitmentPositionList {
+    flex: 0 0 70%;
+    max-width: 70%;
+
+    @include tablet-down {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+}

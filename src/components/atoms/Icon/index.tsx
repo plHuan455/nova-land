@@ -27,6 +27,8 @@ export const iconList = {
   location: 'location',
   facebookShare: 'facebookShare',
   zaloShare: 'zaloShare',
+  filter: 'filter',
+  closeWhite: 'closeWhite',
 };
 
 export type IconName = keyof typeof iconList;

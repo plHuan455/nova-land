@@ -11,7 +11,7 @@ interface FilterGroupItem {
   content: string;
 }
 
-interface FilterGroupProps {
+export interface FilterGroupProps {
   title: string;
   dataFilterGroup?: FilterGroupItem[];
   handleOnChange?: (e: ChangeEvent<HTMLInputElement>) => void;
@@ -61,11 +61,6 @@ const FilterGroup: React.FC<FilterGroupProps> = ({
       </div>
     </div>
   );
-};
-
-FilterGroup.defaultProps = {
-  dataFilterGroup: undefined,
-  handleOnChange: undefined,
 };
 
 export default FilterGroup;

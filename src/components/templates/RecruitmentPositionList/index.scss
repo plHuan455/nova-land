@@ -1,0 +1,41 @@
+.t-recruitmentPositionList {
+  &_top {
+    @include adjust-flex(space-between, center);
+
+    @include small-mobile {
+      display: block;
+    }
+
+    &_pagination {
+      @include small-mobile {
+        margin-top: rem(10);
+      }
+    }
+  }
+
+  &_between {
+    &_item {
+      &:not(:first-child) {
+        margin-top: rem(20);
+
+        @include small-mobile {
+          margin-top: rem(15);
+        }
+      }
+    }
+  }
+
+  &_bottom {
+    width: 100%;
+
+    &_wrapper {
+      display: flex;
+      flex-direction: row-reverse;
+
+      @include small-mobile {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+  }
+}

@@ -122,6 +122,21 @@ const headerMenuDummy: MenuItemDataTypes[] = [
   },
 ];
 
+export const headerRecruitmentMenuDummy: HeaderMenuTypes[] = [
+  {
+    href: '/danh-sach-tuyen-dung',
+    title: 'Novaland Tuyển dụng',
+  },
+  {
+    href: '/moi-truong-lam-viec',
+    title: 'Môi trường làm việc',
+  },
+  {
+    href: '/co-hoi-nghe-nghiep',
+    title: 'Cơ hội nghề nghiệp',
+  },
+];
+
 export type LanguageType = 'VN'|'EN';
 
 export const LIST_LANGUAGE:Array<{label:LanguageType, value: string}> = [

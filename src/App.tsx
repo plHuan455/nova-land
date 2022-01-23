@@ -14,6 +14,7 @@ import InvestmentRelations from 'pages/InvestmentRelations';
 import News from 'pages/News';
 import NewsCategory from 'pages/NewsCategory';
 import NewsDetail from 'pages/NewsDetail';
+import RecruitmentList from 'pages/RecruitmentList';
 import ReportList from 'pages/ReportList';
 import { store } from 'store';
 
@@ -51,6 +52,10 @@ const routes = [
   {
     path: '/bao-cao-thuong-nien',
     element: <ReportList />,
+  },
+  {
+    path: 'danh-sach-tuyen-dung',
+    element: <RecruitmentList />,
   },
   {
     path: ':slug',
