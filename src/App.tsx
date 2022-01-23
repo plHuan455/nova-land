@@ -29,7 +29,7 @@ const App: React.FC = () => {
           <Route path="/ve-chung-toi" element={<AboutUs />} />
           <Route path="/tin-tuc" element={<News />} />
           <Route path="/tin-tuc-du-an" element={<NewsCategory />} />
-          <Route path="/quan-he-dau-tu_event" element={<InvestmentRelations />} />
+          <Route path="/quan-he-dau-tu" element={<InvestmentRelations />} />
           <Route path="*" element={<div />} />
         </Routes>
       </MainLayoutContainer>
