@@ -24273,6 +24273,292 @@ exports[`Storyshots Components/templates/Schedule Normal 1`] = `
 </div>
 `;
 
+exports[`Storyshots Components/templates/Schedule Normal 1`] = `
+<div
+  className="t-schedule"
+>
+  <div
+    className="t-schedule_heading"
+  >
+    <h2
+      className="a-heading a-heading-jet a-heading-30x42 a-heading-center a-heading-600 a-heading-fontNoto"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "Lịch Sự Kiện",
+        }
+      }
+    />
+  </div>
+  <div
+    className="t-schedule_subTitle"
+  >
+    <p
+      className="a-text a-text-fontLexend a-text-400 a-text-18x28 a-text-center a-text-dimGray"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "Chuỗi sự kiện đón Giáng sinh và năm mới tại Novaland",
+        }
+      }
+    />
+  </div>
+  <div
+    className="container o-container"
+  >
+    <div
+      className="t-schedule_content"
+    >
+      <div
+        className="t-schedule_left"
+      >
+        <div
+          className="o-newsCard o-newsCard-vertical"
+        >
+          <a
+            aria-current="page"
+            className="a-link   active"
+            href="/"
+            onClick={[Function]}
+            target="_self"
+          >
+            <div
+              className="o-newsCard_wrapper"
+            >
+              <div
+                className="o-newsCard_image"
+              >
+                <div
+                  className="a-image a-image-582x534"
+                >
+                  <img
+                    alt="ImgLatestNews1"
+                    loading="lazy"
+                    src="img_latestNews1.png"
+                  />
+                </div>
+              </div>
+              <div
+                className="o-newsCard_layer"
+              />
+              <div
+                className="o-newsCard_content"
+              >
+                <div
+                  className="o-newsCard_content_title"
+                >
+                  <h2
+                    className="a-heading a-heading-white a-heading-fontLexend a-heading-600 a-heading-24x30"
+                  >
+                    Bốn dự án thành phần cao tốc Bắc Nam sẽ hoàn thành năm 2022
+                  </h2>
+                </div>
+                <div
+                  className="mt-8"
+                >
+                  <p
+                    className="a-text a-text-columbiaBlue a-text-12x17 a-text-400 a-text-fontLexend"
+                  >
+                    1 phút trước
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div
+        className="t-schedule_right"
+      >
+        <div
+          className="t-schedule_right_item t-schedule_right_item-fourItem"
+        >
+          <div
+            className="o-newsCard o-newsCard-smallVertical"
+          >
+            <a
+              aria-current="page"
+              className="a-link   active"
+              href="/"
+              onClick={[Function]}
+              target="_self"
+            >
+              <div
+                className="o-newsCard_wrapper"
+              >
+                <div
+                  className="o-newsCard_image"
+                >
+                  <div
+                    className="a-image a-image-185x142"
+                  >
+                    <img
+                      alt="ImgLatestNews2"
+                      loading="lazy"
+                      src="img_latestNews2.png"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="o-newsCard_layer"
+                />
+                <div
+                  className="o-newsCard_content"
+                >
+                  <div
+                    className="o-newsCard_content_title"
+                  >
+                    <h2
+                      className="a-heading a-heading-jet a-heading-24x30 a-heading-400 a-heading-fontLexend"
+                    >
+                      Cao tốc Phan Thiết - Dầu Giây qua Đồng Nai phấn đấu vượt tiến độ...
+                    </h2>
+                  </div>
+                  <div
+                    className="mt-8"
+                  >
+                    <p
+                      className="a-text a-text-dimGray a-text-12x17 a-text-400 a-text-fontLexend"
+                    >
+                      2 giờ trước
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div
+          className="t-schedule_right_item t-schedule_right_item-fourItem"
+        >
+          <div
+            className="o-newsCard o-newsCard-smallVertical"
+          >
+            <a
+              aria-current="page"
+              className="a-link   active"
+              href="/"
+              onClick={[Function]}
+              target="_self"
+            >
+              <div
+                className="o-newsCard_wrapper"
+              >
+                <div
+                  className="o-newsCard_image"
+                >
+                  <div
+                    className="a-image a-image-185x142"
+                  >
+                    <img
+                      alt="ImgLatestNews3"
+                      loading="lazy"
+                      src="img_latestNews3.png"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="o-newsCard_layer"
+                />
+                <div
+                  className="o-newsCard_content"
+                >
+                  <div
+                    className="o-newsCard_content_title"
+                  >
+                    <h2
+                      className="a-heading a-heading-jet a-heading-24x30 a-heading-400 a-heading-fontLexend"
+                    >
+                      Novaland nằm trong Top 50 công ty niêm yết tốt nhất Việt Nam 2021
+                    </h2>
+                  </div>
+                  <div
+                    className="mt-8"
+                  >
+                    <p
+                      className="a-text a-text-dimGray a-text-12x17 a-text-400 a-text-fontLexend"
+                    >
+                      6 giờ trước
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div
+          className="t-schedule_right_item t-schedule_right_item-fourItem"
+        >
+          <div
+            className="o-newsCard o-newsCard-smallVertical"
+          >
+            <a
+              aria-current="page"
+              className="a-link   active"
+              href="/"
+              onClick={[Function]}
+              target="_self"
+            >
+              <div
+                className="o-newsCard_wrapper"
+              >
+                <div
+                  className="o-newsCard_image"
+                >
+                  <div
+                    className="a-image a-image-185x142"
+                  >
+                    <img
+                      alt="ImgLatestNews3"
+                      loading="lazy"
+                      src="img_latestNews3.png"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="o-newsCard_layer"
+                />
+                <div
+                  className="o-newsCard_content"
+                >
+                  <div
+                    className="o-newsCard_content_title"
+                  >
+                    <h2
+                      className="a-heading a-heading-jet a-heading-24x30 a-heading-400 a-heading-fontLexend"
+                    >
+                      Novaland nằm trong Top 50 công ty niêm yết tốt nhất Việt Nam 2021
+                    </h2>
+                  </div>
+                  <div
+                    className="mt-8"
+                  >
+                    <p
+                      className="a-text a-text-dimGray a-text-12x17 a-text-400 a-text-fontLexend"
+                    >
+                      6 giờ trước
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        className="t-schedule_button"
+      >
+        <button
+          className="a-button a-button-outlineSpanishGray"
+          disabled={false}
+          type="button"
+        >
+          Xem tất cả lịch sự kiện
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Components/templates/Section Normal 1`] = `
 <div
   className="t-section"
