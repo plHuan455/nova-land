@@ -151,9 +151,10 @@
   }
 
   &-hasLine {
+    padding: rem(80) 0;
     #{$root} {
       &_left {
-        border-right: 1px solid #cbd5e1;
+        border-right: 1px solid $columbia-blue;
         padding: 0 rem(30);
         @include tablet-down {
           padding: 0 rem(23);

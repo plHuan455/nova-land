@@ -29,5 +29,6 @@ export const normal: Story = () => (
   <OtherDocuments
     heading="Tài Liệu Khác"
     data={dataList}
+    btnText="Xem tất cả Tài liệu khác"
   />
 );

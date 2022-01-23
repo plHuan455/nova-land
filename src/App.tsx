@@ -9,6 +9,7 @@ import {
 import MainLayoutContainer from 'container/MainLayout';
 import AboutUs from 'pages/AboutUs';
 import Home from 'pages/Home';
+import InvestmentRelations from 'pages/InvestmentRelations';
 import News from 'pages/News';
 import NewsCategory from 'pages/NewsCategory';
 import { store } from 'store';
@@ -28,6 +29,7 @@ const App: React.FC = () => {
           <Route path="/ve-chung-toi" element={<AboutUs />} />
           <Route path="/tin-tuc" element={<News />} />
           <Route path="/tin-tuc-du-an" element={<NewsCategory />} />
+          <Route path="/quan-he-dau-tu_event" element={<InvestmentRelations />} />
           <Route path="*" element={<div />} />
         </Routes>
       </MainLayoutContainer>

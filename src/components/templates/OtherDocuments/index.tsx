@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Button from 'components/atoms/Button';
 import Heading from 'components/atoms/Heading';
 import Image from 'components/atoms/Image';
 import Text from 'components/atoms/Text';
@@ -13,11 +14,15 @@ export interface dataType {
 interface OtherDocumentsProps {
   heading?: string,
   data?: dataType[],
+  btnText?: string;
+  handleSeeMore?: () => void;
 }
 
 const OtherDocuments: React.FC<OtherDocumentsProps> = ({
   heading,
   data,
+  btnText,
+  handleSeeMore,
 }) => (
   <div className="t-otherDocuments">
     <div className="t-otherDocuments_heading">
@@ -37,6 +42,9 @@ const OtherDocuments: React.FC<OtherDocumentsProps> = ({
             </div>
           ))
         }
+        <div className="t-otherDocuments_button" onClick={handleSeeMore}>
+          <Button modifiers="outlineSpanishGray">{btnText}</Button>
+        </div>
       </div>
     </Container>
   </div>
@@ -45,6 +53,8 @@ const OtherDocuments: React.FC<OtherDocumentsProps> = ({
 OtherDocuments.defaultProps = {
   data: undefined,
   heading: undefined,
+  btnText: undefined,
+  handleSeeMore: undefined,
 };
 
 export default OtherDocuments;
