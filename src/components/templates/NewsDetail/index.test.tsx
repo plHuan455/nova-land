@@ -22,7 +22,13 @@ const newsDetailData = {
 describe('<NewsDetail />', () => {
   test('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<NewsDetail newsDetail={newsDetailData} relatedNews={[]} keyword={[]} />, div);
+    ReactDOM.render(<NewsDetail
+      newsDetail={newsDetailData}
+      relatedNews={[]}
+      keyword={[]}
+      titleLatest="Các tin mới nhất"
+      titleHot="Các tin nổi bật"
+    />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 });

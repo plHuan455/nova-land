@@ -27,9 +27,13 @@ interface NewsDetailProps {
   newsDetail: NewsType;
   relatedNews: Array<NewsType>;
   keyword: Array<string>;
+  titleLatest : string;
+  titleHot:string;
 }
 
-const NewsDetail: React.FC<NewsDetailProps> = ({ newsDetail, relatedNews, keyword }) => (
+const NewsDetail: React.FC<NewsDetailProps> = ({
+  newsDetail, relatedNews, keyword, titleLatest, titleHot,
+}) => (
   <Container>
     <div className="t-newsdetail">
       <CustomRow>
@@ -69,7 +73,7 @@ const NewsDetail: React.FC<NewsDetailProps> = ({ newsDetail, relatedNews, keywor
           </div>
         </CustomCol>
         <CustomCol sm="12" md="12" lg="4">
-          <Text modifiers={['14x22', '700', 'jet']}>Các tin mới nhất</Text>
+          <Text modifiers={['14x22', '700', 'jet']}>{titleLatest}</Text>
           <div className="t-newsdetail_subinfo">
             {relatedNews.slice(0, 3).map((item, idx) => (
               <>
@@ -87,7 +91,7 @@ const NewsDetail: React.FC<NewsDetailProps> = ({ newsDetail, relatedNews, keywor
             ))}
           </div>
           <div className="t-newsdetail_hotnews">
-            <Text modifiers={['14x22', '700', 'jet']}>Các tin nổi bật</Text>
+            <Text modifiers={['14x22', '700', 'jet']}>{titleHot}</Text>
             <div className="t-newsdetail_subinfo">
               {relatedNews.slice(0, 5).map((item, idx) => (
                 <>
