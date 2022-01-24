@@ -157,6 +157,7 @@ const Leadership: React.FC<LeadershipProps> = ({
             {
               tabDataLeadership.map((item, index) => (
                 <Tab
+                  size="20x28"
                   key={`tab-${index.toString()}`}
                   label={item.titleTab}
                   active={index === indexActive}

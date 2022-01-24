@@ -45,9 +45,6 @@ const Footer: React.FC<FooterProps> = ({
   footerLink, externalLink, method, submitForm, projectOptions,
 }) => (
   <footer className="o-footer" style={{ backgroundImage: `url(${bgFooter})` }}>
-    <div className="o-footer_background">
-      <img src={bgFooter} alt="background footer" />
-    </div>
     <Container>
       <div className="o-footer_main">
         <CustomRow>
@@ -170,6 +167,12 @@ const Footer: React.FC<FooterProps> = ({
                   <Button type="submit" modifiers="primary">
                     Đăng Ký
                   </Button>
+                </div>
+                <div className="o-footer_main_form_notify u-mt-12">
+                  <Text modifiers={['12x17', '300', 'lavenderGray']}>
+                    Quý khách đăng ký nhận email quảng cáo về các chương trình ưu
+                    đãi, khuyến mại và tin tức mới nhất từ Novaland.
+                  </Text>
                 </div>
               </Form>
             </div>

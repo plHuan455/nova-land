@@ -22,7 +22,7 @@ const newsDetailData = {
 describe('<NewsDetail />', () => {
   test('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<NewsDetail newsDetail={newsDetailData} relatedNews={[]} />, div);
+    ReactDOM.render(<NewsDetail newsDetail={newsDetailData} relatedNews={[]} keyword={[]} />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 });
