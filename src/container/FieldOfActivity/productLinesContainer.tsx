@@ -123,10 +123,14 @@ const dummyData = [
   },
 ];
 
-const ProductLinesContainer: React.FC = () => (
+interface ProductLinesTypes {
+  title: string;
+}
+
+const ProductLinesContainer: React.FC<ProductLinesTypes> = ({ title }) => (
   <div className="p-fieldOfActivity_productLines">
     <ProductLines
-      title="các dòng sản phẩm"
+      title={title}
       dataProductLines={dummyData}
     />
   </div>
