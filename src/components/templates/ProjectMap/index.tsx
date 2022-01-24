@@ -136,6 +136,7 @@ const InfoMap:React.FC<InfoProps> = ({
                 label={item.title}
                 active={item.id === idActive}
                 handleClick={() => handleClick && handleClick(item.id)}
+                size="20x28"
               />
             ))}
           </Tabs>

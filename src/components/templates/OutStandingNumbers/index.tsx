@@ -32,9 +32,11 @@ const OutStandingNumbers: React.FC<OutStandingNumbersProps> = ({
 }) => (
   <div className="t-outStandingNumbers">
     <Container>
-      <Heading modifiers={['center', '500', '30x42', 'fontNoto', 'jet']}>
-        {title}
-      </Heading>
+      <div className="t-outStandingNumbers_heading">
+        <Heading modifiers={['center', '500', '30x42', 'fontNoto', 'jet']}>
+          {title}
+        </Heading>
+      </div>
       <div className="t-outStandingNumbers_list">
         {dataList?.map((item, idx) => (
           <React.Fragment key={`number-item-${idx.toString()}`}>

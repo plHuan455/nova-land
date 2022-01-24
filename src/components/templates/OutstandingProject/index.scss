@@ -51,7 +51,11 @@
   }
 
   &_title {
-    width: 15%;
+    width: 13%;
+    
+    @include desktop-down {
+      width: 15%;
+    }
 
     @include tablet-down {
       margin-bottom: rem(10);
