@@ -36,7 +36,7 @@ export const FeaturedNewsCard: React.FC<FeaturedNewsCardProps> = ({
         <div className="t-featuredNewsCard_layer" />
         <div className="t-featuredNewsCard_content">
           <div className="t-featuredNewsCard_content_title">
-            <Heading modifiers={['24x30', '600', 'white', 'uppercase']}>
+            <Heading modifiers={['24x30', '600', 'white', 'capitalize']}>
               {title}
             </Heading>
           </div>

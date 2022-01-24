@@ -3949,6 +3949,373 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
               className="t-awardList_card"
             >
               <div
+                aria-hidden={true}
+                className="slick-slide"
+                data-index={4}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "outline": "none",
+                    "width": 0,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div
+                  className="t-awardList_card_img"
+                >
+                  <img
+                    alt="award-img"
+                    src="award_1.png"
+                  />
+                </div>
+                <div
+                  className="t-awardList_card_desc"
+                >
+                  <p
+                    className="a-text a-text-18x22 a-text-fontLexend a-text-arsenic a-text-center"
+                  >
+                    Top 10 Chủ đầu tư Bất động sản uy tín
+                  </p>
+                </div>
+              </div>
+              <div
+                aria-hidden={true}
+                className="slick-slide"
+                data-index={5}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "outline": "none",
+                    "width": 0,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div
+                  className="t-awardList_card_year-clip"
+                >
+                  <h2
+                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                  >
+                    <div
+                      className="o-carousel_item"
+                    >
+                      <div
+                        className="o-tabsBg_tab"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="o-tabsBg_label "
+                        >
+                          <div
+                            className="o-tabsBg_image"
+                          >
+                            <div
+                              className="a-image a-image-1x1"
+                            >
+                              <img
+                                alt="replacing"
+                                loading="lazy"
+                                src="ic_inActiveTab.png"
+                              />
+                            </div>
+                          </div>
+                          <span>
+                            BĐS CÔNG NGHIỆP B
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="o-tabsBg_panel o-tabsBg_panel-active"
+  >
+    Content 1
+  </div>
+  <div
+    className="o-tabsBg_panel"
+  >
+    Content 2
+  </div>
+  <div
+    className="o-tabsBg_panel"
+  >
+    Content 3
+  </div>
+  <div
+    className="o-tabsBg_panel"
+  >
+    Content 4
+  </div>
+  <div
+    className="o-tabsBg_panel"
+  >
+    Content 5
+  </div>
+  <div
+    className="o-tabsBg_panel"
+  >
+    Content 6
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/organisms/Tabs Normal 1`] = `
+<div
+  style={
+    Object {
+      "background": "#bfbfbf",
+    }
+  }
+>
+  <div
+    className="container o-container"
+  >
+    <div
+      className="o-tabs"
+    >
+      <div
+        className="o-tabs_labels"
+      >
+        <div
+          className="o-tabs_tab o-tabs_tab-active"
+          onClick={[Function]}
+        >
+          <span
+            className="o-tabs_label "
+          >
+            <div
+              className="t-awardList_card"
+            >
+              <div
+                className="t-awardList_card_wrap"
+              >
+                <div
+                  className="t-awardList_card_img"
+                >
+                  <img
+                    alt="award-img"
+                    src="award_2.png"
+                  />
+                </div>
+                <div
+                  className="t-awardList_card_desc"
+                >
+                  <p
+                    className="a-text a-text-18x22 a-text-fontLexend a-text-arsenic a-text-center"
+                  >
+                    HR Asia - Nơi làm việc tốt nhất Châu Á
+                  </p>
+                </div>
+              </div>
+              <div
+                className="t-awardList_card_year"
+              >
+                <div
+                  className="t-awardList_card_year-clip"
+                >
+                  <h2
+                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                  >
+                    2021
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="o-tabs_tab"
+            onClick={[Function]}
+          >
+            <span
+              className="o-tabs_label o-tabs_label-20x28"
+            >
+              <div
+                className="t-awardList_card_wrap"
+              >
+                <div
+                  className="t-awardList_card_img"
+                >
+                  <img
+                    alt="award-img"
+                    src="award_3.png"
+                  />
+                </div>
+                <div
+                  className="t-awardList_card_desc"
+                >
+                  <p
+                    className="a-text a-text-18x22 a-text-fontLexend a-text-arsenic a-text-center"
+                  >
+                    Nhà phát triển BĐS hạng sang tốt nhất Việt Nam - Luxury Lifestyle Awards
+                  </p>
+                </div>
+              </div>
+              <div
+                className="t-awardList_card_year"
+              >
+                <div
+                  className="t-awardList_card_year-clip"
+                >
+                  <h2
+                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                  >
+                    2021
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="t-awardList_tabs_panelWrap-item"
+          >
+            <div
+              className="t-awardList_card"
+            >
+              <div
+                className="t-awardList_card_wrap"
+              >
+                <div
+                  className="t-awardList_card_img"
+                >
+                  <img
+                    alt="award-img"
+                    src="award_4.png"
+                  />
+                </div>
+                <div
+                  className="t-awardList_card_desc"
+                >
+                  <p
+                    className="a-text a-text-18x22 a-text-fontLexend a-text-arsenic a-text-center"
+                  >
+                    Chứng nhận Công trình tiêu biểu chào mừng 100 năm Liên Hiệp Quốc
+                  </p>
+                </div>
+              </div>
+              <div
+                className="t-awardList_card_year"
+              >
+                <div
+                  className="t-awardList_card_year-clip"
+                >
+                  <h2
+                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                  >
+                    2021
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="t-awardList_tabs_panelWrap-item"
+          >
+            <div
+              className="t-awardList_card"
+            >
+              <div
+                className="t-awardList_card_wrap"
+              >
+                <div
+                  className="t-awardList_card_img"
+                >
+                  <img
+                    alt="award-img"
+                    src="award_5.png"
+                  />
+                </div>
+                <div
+                  className="t-awardList_card_desc"
+                >
+                  <p
+                    className="a-text a-text-18x22 a-text-fontLexend a-text-arsenic a-text-center"
+                  >
+                    Nhà phát triển và đầu tư. Bất động sản Tiêu biểu - Nhịp Cầu Đầu Tư
+                  </p>
+                </div>
+              </div>
+              <div
+                className="t-awardList_card_year"
+              >
+                <div
+                  className="t-awardList_card_year-clip"
+                >
+                  <h2
+                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                  >
+                    2021
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="t-awardList_tabs_panelWrap-item"
+          >
+            <div
+              className="t-awardList_card"
+            >
+              <div
+                className="t-awardList_card_wrap"
+              >
+                <div
+                  className="t-awardList_card_img"
+                >
+                  <img
+                    alt="award-img"
+                    src="award_5.png"
+                  />
+                </div>
+                <div
+                  className="t-awardList_card_desc"
+                >
+                  <p
+                    className="a-text a-text-18x22 a-text-fontLexend a-text-arsenic a-text-center"
+                  >
+                    Nhà phát triển Bất động sản xuất sắc Việt Nam - Euromoney
+                  </p>
+                </div>
+              </div>
+              <div
+                className="t-awardList_card_year"
+              >
+                <div
+                  className="t-awardList_card_year-clip"
+                >
+                  <h2
+                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                  >
+                    2021
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="o-tabs_panel o-tabs_panel-active"
+      >
+        <div
+          className="t-awardList_tabs_panelWrap"
+        >
+          <div
+            className="t-awardList_tabs_panelWrap-item"
+          >
+            <div
+              className="t-awardList_card"
+            >
+              <div
                 className="t-awardList_card_wrap"
               >
                 <div
@@ -4756,7 +5123,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                   className="t-awardList_card_year-clip"
                 >
                   <h2
-                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
                     2018
                   </h2>
@@ -4798,7 +5165,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                   className="t-awardList_card_year-clip"
                 >
                   <h2
-                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
                     2018
                   </h2>
@@ -4840,7 +5207,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                   className="t-awardList_card_year-clip"
                 >
                   <h2
-                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
                     2018
                   </h2>
@@ -4882,7 +5249,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                   className="t-awardList_card_year-clip"
                 >
                   <h2
-                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
                     2018
                   </h2>
@@ -4924,7 +5291,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                   className="t-awardList_card_year-clip"
                 >
                   <h2
-                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
                     2018
                   </h2>
@@ -4966,7 +5333,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                   className="t-awardList_card_year-clip"
                 >
                   <h2
-                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
                     2018
                   </h2>
@@ -5137,15 +5504,11 @@ exports[`Storyshots Components/templates/DevelopmentHistory Normal 1`] = `
                           <div
                             className="t-processItem_card_image"
                           >
-                            <div
-                              className="a-image a-image-350x197"
-                            >
-                              <img
-                                alt="replacing"
-                                loading="lazy"
-                                src="card_slide.png"
-                              />
-                            </div>
+                            <img
+                              alt="brand"
+                              sizes="contain"
+                              src="img_eco_hover.png"
+                            />
                           </div>
                         </div>
                       </div>
@@ -5213,15 +5576,11 @@ exports[`Storyshots Components/templates/DevelopmentHistory Normal 1`] = `
                           <div
                             className="t-processItem_card_image"
                           >
-                            <div
-                              className="a-image a-image-350x197"
-                            >
-                              <img
-                                alt="replacing"
-                                loading="lazy"
-                                src="card_slide.png"
-                              />
-                            </div>
+                            <img
+                              alt="brand"
+                              sizes="contain"
+                              src="img_eco_hover.png"
+                            />
                           </div>
                         </div>
                       </div>
@@ -5289,15 +5648,11 @@ exports[`Storyshots Components/templates/DevelopmentHistory Normal 1`] = `
                           <div
                             className="t-processItem_card_image"
                           >
-                            <div
-                              className="a-image a-image-350x197"
-                            >
-                              <img
-                                alt="replacing"
-                                loading="lazy"
-                                src="card_slide.png"
-                              />
-                            </div>
+                            <img
+                              alt="brand"
+                              sizes="contain"
+                              src="img_eco_hover.png"
+                            />
                           </div>
                         </div>
                       </div>
@@ -5365,15 +5720,11 @@ exports[`Storyshots Components/templates/DevelopmentHistory Normal 1`] = `
                           <div
                             className="t-processItem_card_image"
                           >
-                            <div
-                              className="a-image a-image-350x197"
-                            >
-                              <img
-                                alt="replacing"
-                                loading="lazy"
-                                src="card_slide.png"
-                              />
-                            </div>
+                            <img
+                              alt="brand"
+                              sizes="contain"
+                              src="img_eco_hover.png"
+                            />
                           </div>
                         </div>
                       </div>
@@ -5441,15 +5792,11 @@ exports[`Storyshots Components/templates/DevelopmentHistory Normal 1`] = `
                           <div
                             className="t-processItem_card_image"
                           >
-                            <div
-                              className="a-image a-image-350x197"
-                            >
-                              <img
-                                alt="replacing"
-                                loading="lazy"
-                                src="card_slide.png"
-                              />
-                            </div>
+                            <img
+                              alt="brand"
+                              sizes="contain"
+                              src="img_eco_hover.png"
+                            />
                           </div>
                         </div>
                       </div>
@@ -5726,11 +6073,42 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                           <div
                             className="m-ecoCard_brands"
                           >
-                            <img
-                              alt="brand"
-                              sizes="contain"
-                              src="img_eco_hover.png"
-                            />
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="dynasty_house.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="jumbo.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="sgcasa.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="phin_deli.png"
+                              />
+                            </div>
                           </div>
                           <a
                             aria-current="page"
@@ -5800,11 +6178,42 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                           <div
                             className="m-ecoCard_brands"
                           >
-                            <img
-                              alt="brand"
-                              sizes="contain"
-                              src="img_eco_hover.png"
-                            />
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="dynasty_house.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="jumbo.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="sgcasa.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="phin_deli.png"
+                              />
+                            </div>
                           </div>
                           <a
                             aria-current="page"
@@ -5874,11 +6283,42 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                           <div
                             className="m-ecoCard_brands"
                           >
-                            <img
-                              alt="brand"
-                              sizes="contain"
-                              src="img_eco_hover.png"
-                            />
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="dynasty_house.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="jumbo.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="sgcasa.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="phin_deli.png"
+                              />
+                            </div>
                           </div>
                           <a
                             aria-current="page"
@@ -5948,11 +6388,42 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                           <div
                             className="m-ecoCard_brands"
                           >
-                            <img
-                              alt="brand"
-                              sizes="contain"
-                              src="img_eco_hover.png"
-                            />
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="dynasty_house.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="jumbo.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="sgcasa.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="phin_deli.png"
+                              />
+                            </div>
                           </div>
                           <a
                             aria-current="page"
@@ -6022,11 +6493,42 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                           <div
                             className="m-ecoCard_brands"
                           >
-                            <img
-                              alt="brand"
-                              sizes="contain"
-                              src="img_eco_hover.png"
-                            />
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="dynasty_house.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="jumbo.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="sgcasa.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="phin_deli.png"
+                              />
+                            </div>
                           </div>
                           <a
                             aria-current="page"
@@ -6130,7 +6632,7 @@ exports[`Storyshots Components/templates/FeaturedNews Horizontal 1`] = `
             className="t-featuredNewsCard_content_title"
           >
             <h2
-              className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-uppercase"
+              className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-capitalize"
             >
               Cao tốc Phan Thiết - Dầu Giây qua Đồng Nai phấn đấu vượt tiến độ...
             </h2>
@@ -6158,6 +6660,11 @@ exports[`Storyshots Components/templates/FeaturedNews Normal 1`] = `
   <div
     className="container o-container"
   >
+    <h2
+      className="a-heading a-heading-32x48 a-heading-jet a-heading-500 a-heading-fontNoto a-heading-center a-heading-uppercase"
+    >
+      NHỮNG DỰ ÁN NỔI BẬT
+    </h2>
     <div
       className="t-featuredNews_wrapper"
     >
@@ -6200,7 +6707,7 @@ exports[`Storyshots Components/templates/FeaturedNews Normal 1`] = `
                   className="t-featuredNewsCard_content_title"
                 >
                   <h2
-                    className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-uppercase"
+                    className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-capitalize"
                   >
                     Bốn dự án thành phần cao tốc Bắc Nam sẽ hoàn thành năm 2022
                   </h2>
@@ -6261,7 +6768,7 @@ exports[`Storyshots Components/templates/FeaturedNews Normal 1`] = `
                     className="t-featuredNewsCard_content_title"
                   >
                     <h2
-                      className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-uppercase"
+                      className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-capitalize"
                     >
                       Cao tốc Phan Thiết - Dầu Giây qua Đồng Nai phấn đấu vượt tiến độ...
                     </h2>
@@ -6319,7 +6826,7 @@ exports[`Storyshots Components/templates/FeaturedNews Normal 1`] = `
                     className="t-featuredNewsCard_content_title"
                   >
                     <h2
-                      className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-uppercase"
+                      className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-capitalize"
                     >
                       Novaland nằm trong Top 50 công ty niêm yết tốt nhất Việt Nam 2021
                     </h2>
@@ -6388,7 +6895,7 @@ exports[`Storyshots Components/templates/FeaturedNews Vertical 1`] = `
             className="t-featuredNewsCard_content_title"
           >
             <h2
-              className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-uppercase"
+              className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-capitalize"
             >
               Bốn dự án thành phần cao tốc Bắc Nam sẽ hoàn thành năm 2022
             </h2>
@@ -6417,18 +6924,252 @@ exports[`Storyshots Components/templates/FeaturedProjects Normal 1`] = `
     className="container o-container"
   >
     <h2
-      className="a-heading a-heading-32x48 a-heading-jet a-heading-500 a-heading-fontNoto a-heading-center a-heading-uppercase"
+      className="a-heading a-heading-32x48 a-heading-jet a-heading-500 a-heading-fontNoto a-heading-center"
     >
-      NHỮNG DỰ ÁN NỔI BẬT
-    </h2>
-    <div
-      className="t-featuredProjects_collapseList"
-    >
+      <h2
+        className="a-heading a-heading-32x48 a-heading-500 a-heading-fontNoto a-heading-jet a-heading-uppercase a-heading-center"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "LĨNH VỰC HOẠT ĐỘNG",
+          }
+        }
+      />
       <div
-        className="t-featuredProjects_collapseList_left"
+        className="t-fieldActivity_thumbnail u-mt-16 u-mt-sm-24 u-mt-lg-32"
       >
         <div
-          className="o-listFeatProjectCollapse"
+          className="a-image a-image-674x272"
+        >
+          <img
+            alt="field_activity"
+            loading="lazy"
+            src="img_field_activity.png"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/templates/FieldActivityDetailsTab Normal 1`] = `
+<div
+  className="t-fieldActivityDetailsTab"
+>
+  <div
+    className="undefined animate animate-goUp"
+  >
+    <div
+      className="o-tabs"
+    >
+      <div
+        className="o-tabs_labels"
+      >
+        <div
+          className="o-tabs_tab o-tabs_tab-active"
+          onClick={[Function]}
+        >
+          <span
+            className="o-tabs_label o-tabs_label-20x28"
+          >
+            Tin Tập Đoàn
+          </span>
+        </div>
+        <div
+          className="o-tabs_tab"
+          onClick={[Function]}
+        >
+          <span
+            className="o-tabs_label o-tabs_label-20x28"
+          >
+            Tin Thị Trường
+          </span>
+        </div>
+        <div
+          className="o-tabs_tab"
+          onClick={[Function]}
+        >
+          <span
+            className="o-tabs_label o-tabs_label-20x28"
+          >
+            Tin Dự án
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="o-tabs_panel o-tabs_panel-active"
+    >
+      <div
+        className="t-transportInfrastructure"
+      >
+        <div
+          className="undefined animate animate-goUp"
+        >
+          <div
+            className="container o-container"
+          >
+            <h2
+              className="a-heading a-heading-32x48 a-heading-500 a-heading-fontNoto a-heading-jet a-heading-uppercase a-heading-center"
+            >
+              HẠ TẦNG GIAO THÔNG
+            </h2>
+            <div
+              className="u-mt-8 u-mt-sm-16"
+            >
+              <div
+                className="a-text a-text-dimGray a-text-300 a-text-center a-text-16x24"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "Nâng cấp, phát triển hạ tầng giao thông tại nơi có dự án nhằm gia tăng tính kết nối vào hạ tầng giao thông trọng điểm quốc gia.",
+                  }
+                }
+              />
+            </div>
+            <div
+              className="u-mt-16 u-mt-sm-32"
+            >
+              <div
+                className="a-image a-image-1194x191"
+              >
+                <img
+                  alt="banner"
+                  loading="lazy"
+                  src="transportationInfrastructure.png"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="o-tabs_panel"
+    >
+      <div
+        className="t-transportInfrastructure"
+      >
+        <div
+          className="undefined animate animate-goUp"
+        >
+          <div
+            className="container o-container"
+          >
+            <h2
+              className="a-heading a-heading-32x48 a-heading-500 a-heading-fontNoto a-heading-jet a-heading-uppercase a-heading-center"
+            >
+              HẠ TẦNG GIAO THÔNG
+            </h2>
+            <div
+              className="u-mt-8 u-mt-sm-16"
+            >
+              <div
+                className="a-text a-text-dimGray a-text-300 a-text-center a-text-16x24"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "Nâng cấp, phát triển hạ tầng giao thông tại nơi có dự án nhằm gia tăng tính kết nối vào hạ tầng giao thông trọng điểm quốc gia.",
+                  }
+                }
+              />
+            </div>
+            <div
+              className="u-mt-16 u-mt-sm-32"
+            >
+              <div
+                className="a-image a-image-1194x191"
+              >
+                <img
+                  alt="banner"
+                  loading="lazy"
+                  src="transportationInfrastructure.png"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="o-tabs_panel"
+    >
+      <div
+        className="t-transportInfrastructure"
+      >
+        <div
+          className="undefined animate animate-goUp"
+        >
+          <div
+            className="container o-container"
+          >
+            <h2
+              className="a-heading a-heading-32x48 a-heading-500 a-heading-fontNoto a-heading-jet a-heading-uppercase a-heading-center"
+            >
+              HẠ TẦNG GIAO THÔNG
+            </h2>
+            <div
+              className="u-mt-8 u-mt-sm-16"
+            >
+              <div
+                className="a-text a-text-dimGray a-text-300 a-text-center a-text-16x24"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "Nâng cấp, phát triển hạ tầng giao thông tại nơi có dự án nhằm gia tăng tính kết nối vào hạ tầng giao thông trọng điểm quốc gia.",
+                  }
+                }
+              />
+            </div>
+            <div
+              className="u-mt-16 u-mt-sm-32"
+            >
+              <div
+                className="a-image a-image-1194x191"
+              >
+                <img
+                  alt="banner"
+                  loading="lazy"
+                  src="transportationInfrastructure.png"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/templates/HeroBanner Normal 1`] = `
+<div
+  className="t-heroBanner"
+>
+  <div
+    className="undefined animate animate-goUpHero"
+  >
+    <div
+      className="o-carousel o-carousel-hasarrow"
+    >
+      <div
+        className="slick-slider slick-initialized"
+        dir="ltr"
+      >
+        <div
+          className="o-carousel_arrow o-carousel_arrow_prev slick-arrow slick-prev slick-disabled t-heroBanner_arrow-prev"
+          onClick={null}
+        />
+        <div
+          className="slick-list"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={null}
+          onMouseMove={null}
+          onMouseUp={[Function]}
+          onTouchCancel={null}
+          onTouchEnd={[Function]}
+          onTouchMove={null}
+          onTouchStart={[Function]}
+          style={Object {}}
         >
           <div
             className="o-listFeatProjectCollapse_item"
@@ -6801,25 +7542,28 @@ exports[`Storyshots Components/templates/FieldActivityDetailsTab Normal 1`] = `
           <div
             className="container o-container"
           >
-            <h2
-              className="a-heading a-heading-32x48 a-heading-500 a-heading-fontNoto a-heading-jet a-heading-uppercase a-heading-center"
+            <span
+              className="o-tabs_label o-tabs_label-20x28"
             >
-              HẠ TẦNG GIAO THÔNG
-            </h2>
-            <div
-              className="u-mt-8 u-mt-sm-16"
+              Tin Tập Đoàn
+            </span>
+          </div>
+          <div
+            className="o-tabs_tab"
+            onClick={[Function]}
+          >
+            <span
+              className="o-tabs_label o-tabs_label-20x28"
             >
-              <div
-                className="a-text a-text-dimGray a-text-300 a-text-center a-text-16x24"
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "Nâng cấp, phát triển hạ tầng giao thông tại nơi có dự án nhằm gia tăng tính kết nối vào hạ tầng giao thông trọng điểm quốc gia.",
-                  }
-                }
-              />
-            </div>
-            <div
-              className="u-mt-16 u-mt-sm-32"
+              Tin Thị Trường
+            </span>
+          </div>
+          <div
+            className="o-tabs_tab"
+            onClick={[Function]}
+          >
+            <span
+              className="o-tabs_label o-tabs_label-20x28"
             >
               <div
                 className="a-image a-image-1194x191"
@@ -7335,7 +8079,7 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
             onClick={[Function]}
           >
             <span
-              className="o-tabs_label o-tabs_label-20x28"
+              className="o-tabs_label "
             >
               Tin Tập Đoàn
             </span>
@@ -7345,7 +8089,7 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
             onClick={[Function]}
           >
             <span
-              className="o-tabs_label o-tabs_label-20x28"
+              className="o-tabs_label "
             >
               Tin Thị Trường
             </span>
@@ -7355,7 +8099,7 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
             onClick={[Function]}
           >
             <span
-              className="o-tabs_label o-tabs_label-20x28"
+              className="o-tabs_label "
             >
               Tin Dự Án
             </span>
@@ -8000,6 +8744,162 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div
+        className="t-homeNews_button"
+      >
+        <a
+          aria-current="page"
+          className="a-link   active"
+          href="/"
+          onClick={[Function]}
+          target="_self"
+        >
+          <button
+            className="a-button a-button-outlineSpanishGray"
+            disabled={false}
+            type="button"
+          >
+            Xem tất cả bài viết
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/templates/InvestmentSector Card 1`] = `
+<div
+  style={
+    Object {
+      "maxWidth": "450px",
+    }
+  }
+>
+  <div
+    className="t-investmentCard"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="t-investmentCard_main"
+    >
+      <div
+        className="t-investmentCard_icon"
+      >
+        <div
+          className="a-image a-image-1x1"
+        >
+          <img
+            alt="InvestmentCard-Logo"
+            loading="lazy"
+            src="img_building.png"
+          />
+        </div>
+      </div>
+      <div
+        className="t-investmentCard_title"
+      >
+        <h2
+          className="a-heading a-heading-32x48 a-heading-500 a-heading-jet a-heading-uppercase a-heading-fontNoto"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "BĐS TRUNG TÂM",
+            }
+          }
+        />
+      </div>
+      <div
+        className="t-investmentCard_desc"
+      >
+        <p
+          className="a-text a-text-jet333 a-text-300"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.",
+            }
+          }
+        />
+      </div>
+      <div
+        className="t-investmentCard_thumbnail"
+      >
+        <div
+          className="a-image a-image-228x145"
+        >
+          <img
+            alt="InvestmentCard"
+            loading="lazy"
+            src="img_investmentSector.png"
+          />
+        </div>
+        <div
+          className="t-investmentCard_thumbnail_button"
+        >
+          <a
+            aria-current="page"
+            className="a-link   active"
+            href="/"
+            onClick={[Function]}
+            target="_self"
+          >
+            <button
+              className="a-button a-button-outlineWhile"
+              disabled={false}
+              type="button"
+            >
+              <p
+                className="a-text a-text-16x24 a-text-300 a-text-capitalize a-text-center"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "Tìm Hiểu Thêm",
+                  }
+                }
+              />
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
+<div
+  className="t-investmentSector"
+>
+  <div
+    className="container o-container"
+  >
+    <div
+      className="u-mb-lg-52 u-mb-sm-40 u-mb-24"
+    >
+      <h2
+        className="a-heading a-heading-32x48 a-heading-jet a-heading-500 a-heading-uppercase a-heading-center a-heading-fontNoto"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "BẤT ĐỘNG SẢN",
+          }
+        }
+      />
+    </div>
+    <div
+      className="t-investmentSector_content"
+    >
+      <div
+        className="o-carousel o-carousel-hasarrow"
+      >
+        <div
+          className="slick-slider slick-initialized"
+          dir="ltr"
+        >
+          <div
+            className="o-carousel_arrow o-carousel_arrow_prev slick-arrow slick-prev "
+            onClick={[Function]}
+          />
           <div
             className="t-homeNews_item"
           >
@@ -8325,21 +9225,13 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
       <div
         className="t-homeNews_button"
       >
-        <a
-          aria-current="page"
-          className="a-link   active"
-          href="/"
-          onClick={[Function]}
-          target="_self"
+        <button
+          className="a-button a-button-outlineSpanishGray"
+          disabled={false}
+          type="button"
         >
-          <button
-            className="a-button a-button-outlineSpanishGray"
-            disabled={false}
-            type="button"
-          >
-            Xem tất cả bài viết
-          </button>
-        </a>
+          Xem tất cả bài viết
+        </button>
       </div>
     </div>
   </div>
@@ -11601,366 +12493,6 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
                   </div>
                 </div>
               </div>
-              <div
-                aria-hidden={true}
-                className="slick-slide slick-cloned"
-                data-index={7}
-                onClick={[Function]}
-                style={
-                  Object {
-                    "width": 0,
-                  }
-                }
-                tabIndex="-1"
-              >
-                <div>
-                  <div
-                    className="o-carousel_wrap"
-                    style={
-                      Object {
-                        "display": "inline-block",
-                        "width": "100%",
-                      }
-                    }
-                    tabIndex={-1}
-                  >
-                    <div
-                      className="o-carousel_item"
-                    >
-                      <div
-                        className="t-investmentSector_item"
-                      >
-                        <div
-                          className="t-investmentCard t-investmentCard-small"
-                          onMouseEnter={[Function]}
-                          onMouseLeave={[Function]}
-                        >
-                          <div
-                            className="t-investmentCard_main"
-                          >
-                            <div
-                              className="t-investmentCard_icon"
-                            >
-                              <div
-                                className="a-image a-image-1x1"
-                              >
-                                <img
-                                  alt="InvestmentCard-Logo"
-                                  loading="lazy"
-                                  src="img_building.png"
-                                />
-                              </div>
-                            </div>
-                            <div
-                              className="t-investmentCard_title"
-                            >
-                              <h2
-                                className="a-heading a-heading-20x30 a-heading-500 a-heading-jet a-heading-uppercase a-heading-fontNoto"
-                                dangerouslySetInnerHTML={
-                                  Object {
-                                    "__html": "BĐS TRUNG TÂM",
-                                  }
-                                }
-                              />
-                            </div>
-                            <div
-                              className="t-investmentCard_desc"
-                            >
-                              <p
-                                className="a-text a-text-jet333 a-text-300"
-                                dangerouslySetInnerHTML={
-                                  Object {
-                                    "__html": "Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.",
-                                  }
-                                }
-                              />
-                            </div>
-                            <div
-                              className="t-investmentCard_thumbnail"
-                            >
-                              <div
-                                className="a-image a-image-228x145"
-                              >
-                                <img
-                                  alt="InvestmentCard"
-                                  loading="lazy"
-                                  src="img_investmentSector.png"
-                                />
-                              </div>
-                              <div
-                                className="t-investmentCard_thumbnail_button"
-                              >
-                                <a
-                                  aria-current="page"
-                                  className="a-link   active"
-                                  href="/"
-                                  onClick={[Function]}
-                                  target="_self"
-                                >
-                                  <button
-                                    className="a-button a-button-outlineWhile"
-                                    disabled={false}
-                                    type="button"
-                                  >
-                                    <p
-                                      className="a-text a-text-16x24 a-text-300 a-text-capitalize a-text-center"
-                                      dangerouslySetInnerHTML={
-                                        Object {
-                                          "__html": "Tìm Hiểu Thêm",
-                                        }
-                                      }
-                                    />
-                                  </button>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                aria-hidden={true}
-                className="slick-slide slick-cloned"
-                data-index={8}
-                onClick={[Function]}
-                style={
-                  Object {
-                    "width": 0,
-                  }
-                }
-                tabIndex="-1"
-              >
-                <div>
-                  <div
-                    className="o-carousel_wrap"
-                    style={
-                      Object {
-                        "display": "inline-block",
-                        "width": "100%",
-                      }
-                    }
-                    tabIndex={-1}
-                  >
-                    <div
-                      className="o-carousel_item"
-                    >
-                      <div
-                        className="t-investmentSector_item"
-                      >
-                        <div
-                          className="t-investmentCard t-investmentCard-small"
-                          onMouseEnter={[Function]}
-                          onMouseLeave={[Function]}
-                        >
-                          <div
-                            className="t-investmentCard_main"
-                          >
-                            <div
-                              className="t-investmentCard_icon"
-                            >
-                              <div
-                                className="a-image a-image-1x1"
-                              >
-                                <img
-                                  alt="InvestmentCard-Logo"
-                                  loading="lazy"
-                                  src="img_building.png"
-                                />
-                              </div>
-                            </div>
-                            <div
-                              className="t-investmentCard_title"
-                            >
-                              <h2
-                                className="a-heading a-heading-20x30 a-heading-500 a-heading-jet a-heading-uppercase a-heading-fontNoto"
-                                dangerouslySetInnerHTML={
-                                  Object {
-                                    "__html": "BĐS TRUNG TÂM",
-                                  }
-                                }
-                              />
-                            </div>
-                            <div
-                              className="t-investmentCard_desc"
-                            >
-                              <p
-                                className="a-text a-text-jet333 a-text-300"
-                                dangerouslySetInnerHTML={
-                                  Object {
-                                    "__html": "Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.",
-                                  }
-                                }
-                              />
-                            </div>
-                            <div
-                              className="t-investmentCard_thumbnail"
-                            >
-                              <div
-                                className="a-image a-image-228x145"
-                              >
-                                <img
-                                  alt="InvestmentCard"
-                                  loading="lazy"
-                                  src="img_investmentSector2.png"
-                                />
-                              </div>
-                              <div
-                                className="t-investmentCard_thumbnail_button"
-                              >
-                                <a
-                                  aria-current="page"
-                                  className="a-link   active"
-                                  href="/"
-                                  onClick={[Function]}
-                                  target="_self"
-                                >
-                                  <button
-                                    className="a-button a-button-outlineWhile"
-                                    disabled={false}
-                                    type="button"
-                                  >
-                                    <p
-                                      className="a-text a-text-16x24 a-text-300 a-text-capitalize a-text-center"
-                                      dangerouslySetInnerHTML={
-                                        Object {
-                                          "__html": "Tìm Hiểu Thêm",
-                                        }
-                                      }
-                                    />
-                                  </button>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                aria-hidden={true}
-                className="slick-slide slick-cloned"
-                data-index={9}
-                onClick={[Function]}
-                style={
-                  Object {
-                    "width": 0,
-                  }
-                }
-                tabIndex="-1"
-              >
-                <div>
-                  <div
-                    className="o-carousel_wrap"
-                    style={
-                      Object {
-                        "display": "inline-block",
-                        "width": "100%",
-                      }
-                    }
-                    tabIndex={-1}
-                  >
-                    <div
-                      className="o-carousel_item"
-                    >
-                      <div
-                        className="t-investmentSector_item"
-                      >
-                        <div
-                          className="t-investmentCard t-investmentCard-small"
-                          onMouseEnter={[Function]}
-                          onMouseLeave={[Function]}
-                        >
-                          <div
-                            className="t-investmentCard_main"
-                          >
-                            <div
-                              className="t-investmentCard_icon"
-                            >
-                              <div
-                                className="a-image a-image-1x1"
-                              >
-                                <img
-                                  alt="InvestmentCard-Logo"
-                                  loading="lazy"
-                                  src="img_building.png"
-                                />
-                              </div>
-                            </div>
-                            <div
-                              className="t-investmentCard_title"
-                            >
-                              <h2
-                                className="a-heading a-heading-20x30 a-heading-500 a-heading-jet a-heading-uppercase a-heading-fontNoto"
-                                dangerouslySetInnerHTML={
-                                  Object {
-                                    "__html": "BĐS TRUNG TÂM",
-                                  }
-                                }
-                              />
-                            </div>
-                            <div
-                              className="t-investmentCard_desc"
-                            >
-                              <p
-                                className="a-text a-text-jet333 a-text-300"
-                                dangerouslySetInnerHTML={
-                                  Object {
-                                    "__html": "Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng. Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM vớidòng sản phẩm nhà ởcao tầng & thương mại; khu đô thị thấp tầng.",
-                                  }
-                                }
-                              />
-                            </div>
-                            <div
-                              className="t-investmentCard_thumbnail"
-                            >
-                              <div
-                                className="a-image a-image-228x145"
-                              >
-                                <img
-                                  alt="InvestmentCard"
-                                  loading="lazy"
-                                  src="img_investmentSector.png"
-                                />
-                              </div>
-                              <div
-                                className="t-investmentCard_thumbnail_button"
-                              >
-                                <a
-                                  aria-current="page"
-                                  className="a-link   active"
-                                  href="/"
-                                  onClick={[Function]}
-                                  target="_self"
-                                >
-                                  <button
-                                    className="a-button a-button-outlineWhile"
-                                    disabled={false}
-                                    type="button"
-                                  >
-                                    <p
-                                      className="a-text a-text-16x24 a-text-300 a-text-capitalize a-text-center"
-                                      dangerouslySetInnerHTML={
-                                        Object {
-                                          "__html": "Tìm Hiểu Thêm",
-                                        }
-                                      }
-                                    />
-                                  </button>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
           <div
@@ -12041,7 +12573,7 @@ exports[`Storyshots Components/templates/LatestNews ABC 1`] = `
                     className="t-latestNewsCard_content_title"
                   >
                     <h2
-                      className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-uppercase"
+                      className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-capitalize"
                     >
                       Tóm Tắt Kết Quả Kinh Doanh Quý 4-2021
                     </h2>
@@ -12269,7 +12801,7 @@ exports[`Storyshots Components/templates/LatestNews Horizontal 1`] = `
             className="t-latestNewsCard_content_title"
           >
             <h2
-              className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-uppercase"
+              className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-capitalize"
             >
               Cao tốc Phan Thiết - Dầu Giây qua Đồng Nai phấn đấu vượt tiến độ...
             </h2>
@@ -12528,6 +13060,289 @@ exports[`Storyshots Components/templates/LatestNews Vertical 1`] = `
           >
             <h2
               className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-uppercase"
+            >
+              Bốn dự án thành phần cao tốc Bắc Nam sẽ hoàn thành năm 2022
+            </h2>
+          </div>
+          <div
+            className="mt-8"
+          >
+            <p
+              className="a-text a-text-12x17 a-text-300 a-text-columbiaBlue"
+            >
+              1 phút trước
+            </p>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/templates/Leadership Card 1`] = `
+<div
+  className="t-leadershipCard"
+>
+  <div
+    className="t-leadershipCard_wrapper"
+  >
+    <div
+      className="t-leadershipCard_thumbnail"
+    >
+      <div
+        className="a-image a-image-1x1"
+      >
+        <img
+          alt="LeadershipCard"
+          loading="lazy"
+          src="img_leadership1.png"
+        />
+      </div>
+    </div>
+    <div
+      className="t-leadershipCard_content"
+    >
+      <div
+        className="t-leadershipCard_gender"
+      >
+        <p
+          className="a-text a-text-14x20 a-text-darkMidnightBlue a-text-300 a-text-capitalize"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Ông",
+            }
+          }
+        />
+      </div>
+      <div
+        className="t-leadershipCard_name"
+      >
+        <div
+          className="t-latestNewsCard"
+        >
+          <a
+            aria-current="page"
+            className="a-link   active"
+            href="/"
+            onClick={[Function]}
+            target="_self"
+          >
+            <div
+              className="t-latestNewsCard_wrapper"
+            >
+              <div
+                className="t-latestNewsCard_image"
+              >
+                <div
+                  className="a-image a-image-582x534"
+                >
+                  <img
+                    alt="ImgLatestNews1"
+                    loading="lazy"
+                    src="img_latestNews1.png"
+                  />
+                </div>
+              </div>
+              <div
+                className="t-latestNewsCard_layer"
+              />
+              <div
+                className="t-latestNewsCard_content"
+              >
+                <div
+                  className="t-latestNewsCard_content_title"
+                >
+                  <h2
+                    className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-capitalize"
+                  >
+                    Bốn dự án thành phần cao tốc Bắc Nam sẽ hoàn thành năm 2022
+                  </h2>
+                </div>
+                <div
+                  className="mt-8"
+                >
+                  <p
+                    className="a-text a-text-12x17 a-text-300 a-text-columbiaBlue"
+                  >
+                    1 phút trước
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div
+        className="t-latestNews_right"
+      >
+        <div
+          className="t-latestNews_right_item"
+        >
+          <div
+            className="t-latestNewsCard"
+          >
+            <a
+              aria-current="page"
+              className="a-link   active"
+              href="/"
+              onClick={[Function]}
+              target="_self"
+            >
+              <div
+                className="t-latestNewsCard_wrapper"
+              >
+                <div
+                  className="t-latestNewsCard_image"
+                >
+                  <div
+                    className="a-image a-image-582x252"
+                  >
+                    <img
+                      alt="ImgLatestNews2"
+                      loading="lazy"
+                      src="img_latestNews2.png"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="t-latestNewsCard_layer"
+                />
+                <div
+                  className="t-latestNewsCard_content"
+                >
+                  <div
+                    className="t-latestNewsCard_content_title"
+                  >
+                    <h2
+                      className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-capitalize"
+                    >
+                      Cao tốc Phan Thiết - Dầu Giây qua Đồng Nai phấn đấu vượt tiến độ...
+                    </h2>
+                  </div>
+                  <div
+                    className="mt-8"
+                  >
+                    <p
+                      className="a-text a-text-12x17 a-text-300 a-text-columbiaBlue"
+                    >
+                      2 giờ trước
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div
+          className="t-latestNews_right_item"
+        >
+          <div
+            className="t-latestNewsCard"
+          >
+            <a
+              aria-current="page"
+              className="a-link   active"
+              href="/"
+              onClick={[Function]}
+              target="_self"
+            >
+              <div
+                className="t-latestNewsCard_wrapper"
+              >
+                <div
+                  className="t-latestNewsCard_image"
+                >
+                  <div
+                    className="a-image a-image-582x252"
+                  >
+                    <img
+                      alt="ImgLatestNews3"
+                      loading="lazy"
+                      src="img_latestNews3.png"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="t-latestNewsCard_layer"
+                />
+                <div
+                  className="t-latestNewsCard_content"
+                >
+                  <div
+                    className="t-latestNewsCard_content_title"
+                  >
+                    <h2
+                      className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-capitalize"
+                    >
+                      Novaland nằm trong Top 50 công ty niêm yết tốt nhất Việt Nam 2021
+                    </h2>
+                  </div>
+                  <div
+                    className="mt-8"
+                  >
+                    <p
+                      className="a-text a-text-12x17 a-text-300 a-text-columbiaBlue"
+                    >
+                      6 giờ trước
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/templates/LatestNews Vertical 1`] = `
+<div
+  style={
+    Object {
+      "width": "582px",
+    }
+  }
+>
+  <div
+    className="t-latestNewsCard"
+  >
+    <a
+      aria-current="page"
+      className="a-link   active"
+      href="/"
+      onClick={[Function]}
+      target="_self"
+    >
+      <div
+        className="t-latestNewsCard_wrapper"
+      >
+        <div
+          className="t-latestNewsCard_image"
+        >
+          <div
+            className="a-image a-image-582x534"
+          >
+            <img
+              alt="ImgLatestNews1"
+              loading="lazy"
+              src="img_latestNews1.png"
+            />
+          </div>
+        </div>
+        <div
+          className="t-latestNewsCard_layer"
+        />
+        <div
+          className="t-latestNewsCard_content"
+        >
+          <div
+            className="t-latestNewsCard_content_title"
+          >
+            <h2
+              className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-capitalize"
             >
               Bốn dự án thành phần cao tốc Bắc Nam sẽ hoàn thành năm 2022
             </h2>
@@ -16221,7 +17036,7 @@ exports[`Storyshots Components/templates/NewsCategory Normal 1`] = `
                         className="t-featuredNewsCard_content_title"
                       >
                         <h2
-                          className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-uppercase"
+                          className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-capitalize"
                         >
                           The Kingdom – Trái tim của NovaWorld Phan Thiet
                         </h2>
@@ -16282,7 +17097,7 @@ exports[`Storyshots Components/templates/NewsCategory Normal 1`] = `
                           className="t-featuredNewsCard_content_title"
                         >
                           <h2
-                            className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-uppercase"
+                            className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-capitalize"
                           >
                             Khám phá second home phong cách nghỉ dưỡng resort độc đáo bên...
                           </h2>
@@ -16340,7 +17155,7 @@ exports[`Storyshots Components/templates/NewsCategory Normal 1`] = `
                           className="t-featuredNewsCard_content_title"
                         >
                           <h2
-                            className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-uppercase"
+                            className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-capitalize"
                           >
                             NovaWorld Phan Thiet - Siêu Thành Phố Biển Du Lịch & Sức Khỏe
                           </h2>
