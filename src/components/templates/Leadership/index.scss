@@ -206,12 +206,12 @@
   }
 
   &_slogan {
-    background: url('~assets/images/Leadership/img_leadership_background2.png');
-    background-position: 5% 15%;
+    background: url('~assets/images/Leadership/background2.png');
+    background-position: 5% 62%;
     background-repeat: no-repeat;
 
     @include tablet-down {
-      background-position: 5% 10%;
+      background-position: 5% 55%;
     }
 
     @include small-mobile {

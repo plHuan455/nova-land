@@ -15,6 +15,11 @@
     padding-top: rem(40);
   }
 
+  &_heading {
+    max-width: rem(735);
+    margin: auto;
+  }
+
   &_list {
     flex-wrap: wrap;
     @include adjust-flex(space-between, center);
