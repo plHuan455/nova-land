@@ -1,0 +1,13 @@
+.p-reportList {
+  &_list {
+    padding-bottom: rem(80);
+  
+    @include tablet-down {
+      padding-bottom: rem(60);
+    }
+  
+    @include mobile-down {
+      padding-bottom: rem(40);
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.t-reportList {
+  .o-reportCard {
+    margin-bottom: rem(30);
+    
+    @include small-mobile {
+      margin-bottom: rem(20);
+    }
+  }
+}

@@ -14,6 +14,7 @@ import InvestmentRelations from 'pages/InvestmentRelations';
 import News from 'pages/News';
 import NewsCategory from 'pages/NewsCategory';
 import NewsDetail from 'pages/NewsDetail';
+import ReportList from 'pages/ReportList';
 import { store } from 'store';
 
 const PageNav = lazy(() => import('navigations/PageNav'));
@@ -46,6 +47,10 @@ const routes = [
   {
     path: 'tin-tuc-chi-tiet',
     element: <NewsDetail />,
+  },
+  {
+    path: '/bao-cao-thuong-nien',
+    element: <ReportList />,
   },
   {
     path: ':slug',
