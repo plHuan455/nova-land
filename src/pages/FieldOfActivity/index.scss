@@ -1,0 +1,14 @@
+.p-fieldOfActivity {
+  &_productLines,
+  &_projectList {
+    padding-bottom: rem(80);
+  
+    @include tablet-down {
+      padding-bottom: rem(60);
+    }
+  
+    @include mobile-down {
+      padding-bottom: rem(40);
+    }
+  }
+}

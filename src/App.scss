@@ -20,6 +20,8 @@
 @import 'components/molecules/EcoCard/';
 @import 'components/molecules/Breadcrumb';
 @import 'components/molecules/Pagination';
+@import 'components/molecules/InfoProduct/';
+@import 'components/molecules/ListLogoProject/';
 
 //Organisms
 @import 'components/organisms/Header/';
@@ -34,6 +36,7 @@
 @import 'components/organisms/FilterGroup';
 @import 'components/organisms/RecruitmentPositionCard';
 @import 'components/organisms/NewsCard/';
+@import 'components/organisms/TabsBg/';
 
 //Templates
 @import 'components/templates/HomeNews';
@@ -62,6 +65,8 @@
 @import 'components/templates/StockInformation';
 @import 'components/templates/Schedule';
 @import 'components/templates/OtherDocuments/';
+@import 'components/templates/ProductLines/';
+@import 'components/templates/ProjectList/';
 
 // Pages
 @import 'pages/Home/';
@@ -69,3 +74,4 @@
 @import 'pages/News';
 @import 'pages/NewsCategory';
 @import 'pages/InvestmentRelations';
+@import 'pages/FieldOfActivity/';
