@@ -8,29 +8,31 @@ import SignUpJobPostingsContainer from './signUpJobPostings';
 import VisionMissionValueContainer from './visionMissionValueContainer';
 import WorkEnvironmentContainer from './workEnvironmentContainer';
 
+import Section from 'components/templates/Section';
+
 const RecruitmentContainer: React.FC = () => (
   <>
-    <section>
+    <Section>
       <FilterRecruitmentContainer />
-    </section>
-    <section>
+    </Section>
+    <Section>
       <BranchListContainer />
-    </section>
-    <section>
+    </Section>
+    <Section>
       <LatestJobsContainer />
-    </section>
-    <section>
+    </Section>
+    <Section>
       <CompanyProfileContainer />
-    </section>
-    <section>
+    </Section>
+    <Section>
       <VisionMissionValueContainer />
-    </section>
-    <section>
+    </Section>
+    <Section>
       <WorkEnvironmentContainer />
-    </section>
-    <section>
+    </Section>
+    <Section>
       <SignUpJobPostingsContainer />
-    </section>
+    </Section>
   </>
 );
 

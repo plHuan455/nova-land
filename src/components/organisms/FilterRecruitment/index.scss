@@ -104,7 +104,11 @@
         }
 
         &__option {
-          color: $white;
+          color: $rich-black;
+          background-color:$white;
+          &:hover {
+            background-color: $camel;
+          }
         }
       }
 
