@@ -69,6 +69,12 @@ exports[`Storyshots Components/atoms/Checkbox With Label 1`] = `
 </div>
 `;
 
+exports[`Storyshots Components/atoms/Divider Normal 1`] = `
+<div
+  className="a-divider"
+/>
+`;
+
 exports[`Storyshots Components/atoms/Heading Normal 1`] = `
 <h2
   className="a-heading a-heading-raisinBlack a-heading-400 a-heading-uppercase a-heading-undefined"
@@ -330,6 +336,28 @@ exports[`Storyshots Components/atoms/Icon Normal 1`] = `
       className="a-icon a-icon-location a-icon-24"
     />
   </div>
+  <div
+    style={
+      Object {
+        "marginLeft": 7,
+      }
+    }
+  >
+    <i
+      className="a-icon a-icon-facebookShare a-icon-24"
+    />
+  </div>
+  <div
+    style={
+      Object {
+        "marginLeft": 7,
+      }
+    }
+  >
+    <i
+      className="a-icon a-icon-zaloShare a-icon-24"
+    />
+  </div>
 </div>
 `;
 
@@ -407,6 +435,18 @@ exports[`Storyshots Components/atoms/Link Use External 1`] = `
     Google
   </p>
 </a>
+`;
+
+exports[`Storyshots Components/atoms/Tag Normal 1`] = `
+<div
+  className="a-tag"
+>
+  <p
+    className="a-text a-text-12x17 a-text-300 a-text-jet"
+  >
+    Aqua City
+  </p>
+</div>
 `;
 
 exports[`Storyshots Components/atoms/Text Normal 1`] = `
@@ -623,6 +663,205 @@ exports[`Storyshots Components/molecules/EcoCard Normal 1`] = `
         />
       </div>
     </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/molecules/InfoNews Normal 1`] = `
+<div
+  className="m-infonews"
+>
+  <div
+    className="m-infonews_image"
+  >
+    <div
+      className="a-image a-image-1x1"
+    >
+      <img
+        alt=""
+        loading="lazy"
+        src="related-news.png"
+      />
+    </div>
+  </div>
+  <div
+    className="m-infonews_content"
+  >
+    <a
+      aria-current="page"
+      className="a-link   active"
+      href="/"
+      onClick={[Function]}
+      target="_self"
+    >
+      <p
+        className="a-text a-text-12x17 a-text-400 a-text-jet"
+      >
+        Aqua City - không gian xanh lý tưởng cho sức khỏe và gắn kết...
+      </p>
+    </a>
+    <p
+      className="a-text a-text-12x17 a-text-400 a-text-dimGray"
+    >
+      Vừa xong
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/molecules/InfoProduct Normal 1`] = `
+<div
+  className="undefined animate animate-goUp"
+>
+  <div
+    className="m-infoproduct"
+  >
+    <div
+      className="m-infoproduct_wrapcontent"
+    >
+      <p
+        className="a-text a-text-16x24 a-text-400 a-text-jet"
+      >
+        Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM với dòng sản phẩm:
+      </p>
+      <div
+        className="m-infoproduct_info"
+      >
+        <div
+          className="m-infoproduct_detail"
+        >
+          <div
+            className="m-infoproduct_imgdetail"
+          >
+            <div
+              className="a-image a-image-1x1"
+            >
+              <img
+                alt="replacing"
+                loading="lazy"
+                src="img_info-product-1.png"
+              />
+            </div>
+          </div>
+          <p
+            className="a-text a-text-16x24 a-text-400 a-text-jet"
+          >
+            Nhà ở cao tầng & thương mại
+          </p>
+        </div>
+        <div
+          className="m-infoproduct_detail"
+        >
+          <div
+            className="m-infoproduct_imgdetail"
+          >
+            <div
+              className="a-image a-image-1x1"
+            >
+              <img
+                alt="replacing"
+                loading="lazy"
+                src="img_info-product-1.png"
+              />
+            </div>
+          </div>
+          <p
+            className="a-text a-text-16x24 a-text-400 a-text-jet"
+          >
+            Khu đô thị thấp tầng
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      className="m-infoproduct_wrapimg"
+    >
+      <div
+        className="a-image a-image-612x340"
+      >
+        <img
+          alt="replacing"
+          loading="lazy"
+          src="img-product.png"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/molecules/ListLogoProject Normal 1`] = `
+<div
+  className="m-listLogoProject"
+>
+  <div
+    className="m-listLogoProject_title"
+  >
+    <p
+      className="a-text a-text-24x32 a-text-600 a-text-jet"
+    >
+      các dự án Khu trung tâm
+    </p>
+  </div>
+  <div
+    className="m-listLogoProject_listLogo"
+  >
+    <div
+      className="m-listLogoProject_wraplogo"
+    >
+      <img
+        alt=""
+        src="project1.png"
+      />
+    </div>
+    <div
+      className="m-listLogoProject_wraplogo"
+    >
+      <img
+        alt=""
+        src="project2.png"
+      />
+    </div>
+    <div
+      className="m-listLogoProject_wraplogo"
+    >
+      <img
+        alt=""
+        src="project3.png"
+      />
+    </div>
+    <div
+      className="m-listLogoProject_wraplogo"
+    >
+      <img
+        alt=""
+        src="project4.png"
+      />
+    </div>
+    <div
+      className="m-listLogoProject_wraplogo"
+    >
+      <img
+        alt=""
+        src="project5.png"
+      />
+    </div>
+    <div
+      className="m-listLogoProject_wraplogo"
+    >
+      <img
+        alt=""
+        src="project6.png"
+      />
+    </div>
+    <div
+      className="m-listLogoProject_wraplogo"
+    >
+      <img
+        alt=""
+        src="project7.png"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -1875,14 +2114,6 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
   }
 >
   <div
-    className="o-footer_background"
-  >
-    <img
-      alt="background footer"
-      src="bg-footer.png"
-    />
-  </div>
-  <div
     className="container o-container"
   >
     <div
@@ -2520,6 +2751,15 @@ exports[`Storyshots Components/organisms/Footer normal 1`] = `
                   >
                     Đăng Ký
                   </button>
+                </div>
+                <div
+                  className="o-footer_main_form_notify u-mt-12"
+                >
+                  <p
+                    className="a-text a-text-12x17 a-text-300 a-text-lavenderGray"
+                  >
+                    Quý khách đăng ký nhận email quảng cáo về các chương trình ưu đãi, khuyến mại và tin tức mới nhất từ Novaland.
+                  </p>
                 </div>
               </form>
             </div>
@@ -3164,6 +3404,75 @@ exports[`Storyshots Components/organisms/ListFeatProjectCollapse Normal 1`] = `
 />
 `;
 
+exports[`Storyshots Components/organisms/NewsCard Normal 1`] = `
+<div
+  style={
+    Object {
+      "width": 586,
+    }
+  }
+>
+  <div
+    className="container o-container"
+  >
+    <div
+      className="o-newsCard o-newsCard-smallVertical"
+    >
+      <a
+        aria-current="page"
+        className="a-link   active"
+        href="/"
+        onClick={[Function]}
+        target="_self"
+      >
+        <div
+          className="o-newsCard_wrapper"
+        >
+          <div
+            className="o-newsCard_image"
+          >
+            <div
+              className="a-image a-image-185x142"
+            >
+              <img
+                alt="replacing"
+                loading="lazy"
+                src="card_slide.png"
+              />
+            </div>
+          </div>
+          <div
+            className="o-newsCard_layer"
+          />
+          <div
+            className="o-newsCard_content"
+          >
+            <div
+              className="o-newsCard_content_title"
+            >
+              <h2
+                className="a-heading a-heading-jet a-heading-24x30 a-heading-400 a-heading-fontLexend"
+              >
+                Nova E&M góp phần nâng tầm chuỗi  bất động sản du lịch Novaland 1 phút trước
+              </h2>
+            </div>
+            <div
+              className="mt-8"
+            >
+              <p
+                className="a-text a-text-dimGray a-text-12x17 a-text-400 a-text-fontLexend"
+              >
+                1 phút trước
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Components/organisms/RecruitmentPositionCard Normal 1`] = `
 <div
   style={
@@ -3299,6 +3608,428 @@ exports[`Storyshots Components/organisms/RecruitmentPositionCard Normal 1`] = `
         />
       </div>
     </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/organisms/TabBg Normal 1`] = `
+<div
+  className="container o-container"
+>
+  <div
+    className="o-tabsBg"
+  >
+    <div
+      className="o-tabsBg_labels"
+    >
+      <div
+        className="o-carousel"
+      >
+        <div
+          className="slick-slider slick-initialized"
+          dir="ltr"
+        >
+          <div
+            className="slick-list"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={null}
+            onMouseMove={null}
+            onMouseUp={[Function]}
+            onTouchCancel={null}
+            onTouchEnd={[Function]}
+            onTouchMove={null}
+            onTouchStart={[Function]}
+            style={Object {}}
+          >
+            <div
+              className="slick-track"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              style={
+                Object {
+                  "WebkitTransform": "translate3d(0px, 0px, 0px)",
+                  "WebkitTransition": "",
+                  "msTransform": "translateX(0px)",
+                  "opacity": 1,
+                  "transform": "translate3d(0px, 0px, 0px)",
+                  "transition": "",
+                }
+              }
+            >
+              <div
+                aria-hidden={false}
+                className="slick-slide slick-active slick-current"
+                data-index={0}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "outline": "none",
+                    "width": 0,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div>
+                  <div
+                    className="o-carousel_wrap"
+                    style={
+                      Object {
+                        "display": "inline-block",
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <div
+                      className="o-carousel_item"
+                    >
+                      <div
+                        className="o-tabsBg_tab o-tabsBg_tab-active"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="o-tabsBg_label "
+                        >
+                          <div
+                            className="o-tabsBg_image"
+                          >
+                            <div
+                              className="a-image a-image-1x1"
+                            >
+                              <img
+                                alt="replacing"
+                                loading="lazy"
+                                src="ic_activeTab.png"
+                              />
+                            </div>
+                          </div>
+                          <span>
+                            BĐS Trung Tâm
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-hidden={false}
+                className="slick-slide slick-active"
+                data-index={1}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "outline": "none",
+                    "width": 0,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div>
+                  <div
+                    className="o-carousel_wrap"
+                    style={
+                      Object {
+                        "display": "inline-block",
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <div
+                      className="o-carousel_item"
+                    >
+                      <div
+                        className="o-tabsBg_tab"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="o-tabsBg_label "
+                        >
+                          <div
+                            className="o-tabsBg_image"
+                          >
+                            <div
+                              className="a-image a-image-1x1"
+                            >
+                              <img
+                                alt="replacing"
+                                loading="lazy"
+                                src="ic_inActiveTab.png"
+                              />
+                            </div>
+                          </div>
+                          <span>
+                            ĐÔ THỊ VỆ TINH
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-hidden={false}
+                className="slick-slide slick-active"
+                data-index={2}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "outline": "none",
+                    "width": 0,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div>
+                  <div
+                    className="o-carousel_wrap"
+                    style={
+                      Object {
+                        "display": "inline-block",
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <div
+                      className="o-carousel_item"
+                    >
+                      <div
+                        className="o-tabsBg_tab"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="o-tabsBg_label "
+                        >
+                          <div
+                            className="o-tabsBg_image"
+                          >
+                            <div
+                              className="a-image a-image-1x1"
+                            >
+                              <img
+                                alt="replacing"
+                                loading="lazy"
+                                src="ic_inActiveTab.png"
+                              />
+                            </div>
+                          </div>
+                          <span>
+                            ĐÔ THỊ NGHỈ DƯỠNG
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-hidden={false}
+                className="slick-slide slick-active"
+                data-index={3}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "outline": "none",
+                    "width": 0,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div>
+                  <div
+                    className="o-carousel_wrap"
+                    style={
+                      Object {
+                        "display": "inline-block",
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <div
+                      className="o-carousel_item"
+                    >
+                      <div
+                        className="o-tabsBg_tab"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="o-tabsBg_label "
+                        >
+                          <div
+                            className="o-tabsBg_image"
+                          >
+                            <div
+                              className="a-image a-image-1x1"
+                            >
+                              <img
+                                alt="replacing"
+                                loading="lazy"
+                                src="ic_inActiveTab.png"
+                              />
+                            </div>
+                          </div>
+                          <span>
+                            BĐS CÔNG NGHIỆP
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-hidden={true}
+                className="slick-slide"
+                data-index={4}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "outline": "none",
+                    "width": 0,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div>
+                  <div
+                    className="o-carousel_wrap"
+                    style={
+                      Object {
+                        "display": "inline-block",
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <div
+                      className="o-carousel_item"
+                    >
+                      <div
+                        className="o-tabsBg_tab"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="o-tabsBg_label "
+                        >
+                          <div
+                            className="o-tabsBg_image"
+                          >
+                            <div
+                              className="a-image a-image-1x1"
+                            >
+                              <img
+                                alt="replacing"
+                                loading="lazy"
+                                src="ic_inActiveTab.png"
+                              />
+                            </div>
+                          </div>
+                          <span>
+                            BĐS CÔNG NGHIỆP A
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-hidden={true}
+                className="slick-slide"
+                data-index={5}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "outline": "none",
+                    "width": 0,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div>
+                  <div
+                    className="o-carousel_wrap"
+                    style={
+                      Object {
+                        "display": "inline-block",
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <div
+                      className="o-carousel_item"
+                    >
+                      <div
+                        className="o-tabsBg_tab"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="o-tabsBg_label "
+                        >
+                          <div
+                            className="o-tabsBg_image"
+                          >
+                            <div
+                              className="a-image a-image-1x1"
+                            >
+                              <img
+                                alt="replacing"
+                                loading="lazy"
+                                src="ic_inActiveTab.png"
+                              />
+                            </div>
+                          </div>
+                          <span>
+                            BĐS CÔNG NGHIỆP B
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="o-tabsBg_panel o-tabsBg_panel-active"
+  >
+    Content 1
+  </div>
+  <div
+    className="o-tabsBg_panel"
+  >
+    Content 2
+  </div>
+  <div
+    className="o-tabsBg_panel"
+  >
+    Content 3
+  </div>
+  <div
+    className="o-tabsBg_panel"
+  >
+    Content 4
+  </div>
+  <div
+    className="o-tabsBg_panel"
+  >
+    Content 5
+  </div>
+  <div
+    className="o-tabsBg_panel"
+  >
+    Content 6
   </div>
 </div>
 `;
@@ -3483,7 +4214,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                   className="t-awardList_card_year-clip"
                 >
                   <h2
-                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
                     2021
                   </h2>
@@ -3525,7 +4256,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                   className="t-awardList_card_year-clip"
                 >
                   <h2
-                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
                     2021
                   </h2>
@@ -3567,7 +4298,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                   className="t-awardList_card_year-clip"
                 >
                   <h2
-                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
                     2021
                   </h2>
@@ -3609,7 +4340,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                   className="t-awardList_card_year-clip"
                 >
                   <h2
-                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
                     2021
                   </h2>
@@ -3651,7 +4382,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                   className="t-awardList_card_year-clip"
                 >
                   <h2
-                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
                     2021
                   </h2>
@@ -3693,7 +4424,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                   className="t-awardList_card_year-clip"
                 >
                   <h2
-                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
                     2021
                   </h2>
@@ -3743,7 +4474,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                   className="t-awardList_card_year-clip"
                 >
                   <h2
-                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
                     2020
                   </h2>
@@ -3785,7 +4516,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                   className="t-awardList_card_year-clip"
                 >
                   <h2
-                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
                     2020
                   </h2>
@@ -3827,7 +4558,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                   className="t-awardList_card_year-clip"
                 >
                   <h2
-                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
                     2020
                   </h2>
@@ -3869,7 +4600,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                   className="t-awardList_card_year-clip"
                 >
                   <h2
-                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
                     2020
                   </h2>
@@ -3911,7 +4642,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                   className="t-awardList_card_year-clip"
                 >
                   <h2
-                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
                     2020
                   </h2>
@@ -3953,7 +4684,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                   className="t-awardList_card_year-clip"
                 >
                   <h2
-                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
                     2020
                   </h2>
@@ -4003,7 +4734,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                   className="t-awardList_card_year-clip"
                 >
                   <h2
-                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
                     2019
                   </h2>
@@ -4045,7 +4776,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                   className="t-awardList_card_year-clip"
                 >
                   <h2
-                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
                     2019
                   </h2>
@@ -4087,7 +4818,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                   className="t-awardList_card_year-clip"
                 >
                   <h2
-                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
                     2019
                   </h2>
@@ -4129,7 +4860,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                   className="t-awardList_card_year-clip"
                 >
                   <h2
-                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
                     2019
                   </h2>
@@ -4171,7 +4902,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                   className="t-awardList_card_year-clip"
                 >
                   <h2
-                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
                     2019
                   </h2>
@@ -4213,7 +4944,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                   className="t-awardList_card_year-clip"
                 >
                   <h2
-                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
                     2019
                   </h2>
@@ -4263,7 +4994,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                   className="t-awardList_card_year-clip"
                 >
                   <h2
-                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
                     2018
                   </h2>
@@ -4305,7 +5036,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                   className="t-awardList_card_year-clip"
                 >
                   <h2
-                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
                     2018
                   </h2>
@@ -4347,7 +5078,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                   className="t-awardList_card_year-clip"
                 >
                   <h2
-                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
                     2018
                   </h2>
@@ -4389,7 +5120,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                   className="t-awardList_card_year-clip"
                 >
                   <h2
-                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
                     2018
                   </h2>
@@ -4431,7 +5162,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                   className="t-awardList_card_year-clip"
                 >
                   <h2
-                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
                     2018
                   </h2>
@@ -4473,7 +5204,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                   className="t-awardList_card_year-clip"
                 >
                   <h2
-                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
                     2018
                   </h2>
@@ -6406,6 +7137,193 @@ exports[`Storyshots Components/templates/FieldActivity Normal 1`] = `
 </div>
 `;
 
+exports[`Storyshots Components/templates/FieldActivityDetailsTab Normal 1`] = `
+<div
+  className="t-fieldActivityDetailsTab"
+>
+  <div
+    className="undefined animate animate-goUp"
+  >
+    <div
+      className="o-tabs"
+    >
+      <div
+        className="o-tabs_labels"
+      >
+        <div
+          className="o-tabs_tab o-tabs_tab-active"
+          onClick={[Function]}
+        >
+          <span
+            className="o-tabs_label o-tabs_label-20x28"
+          >
+            Tin Tập Đoàn
+          </span>
+        </div>
+        <div
+          className="o-tabs_tab"
+          onClick={[Function]}
+        >
+          <span
+            className="o-tabs_label o-tabs_label-20x28"
+          >
+            Tin Thị Trường
+          </span>
+        </div>
+        <div
+          className="o-tabs_tab"
+          onClick={[Function]}
+        >
+          <span
+            className="o-tabs_label o-tabs_label-20x28"
+          >
+            Tin Dự án
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="o-tabs_panel o-tabs_panel-active"
+    >
+      <div
+        className="t-transportInfrastructure"
+      >
+        <div
+          className="undefined animate animate-goUp"
+        >
+          <div
+            className="container o-container"
+          >
+            <h2
+              className="a-heading a-heading-32x48 a-heading-500 a-heading-fontNoto a-heading-jet a-heading-uppercase a-heading-center"
+            >
+              HẠ TẦNG GIAO THÔNG
+            </h2>
+            <div
+              className="u-mt-8 u-mt-sm-16"
+            >
+              <div
+                className="a-text a-text-dimGray a-text-300 a-text-center a-text-16x24"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "Nâng cấp, phát triển hạ tầng giao thông tại nơi có dự án nhằm gia tăng tính kết nối vào hạ tầng giao thông trọng điểm quốc gia.",
+                  }
+                }
+              />
+            </div>
+            <div
+              className="u-mt-16 u-mt-sm-32"
+            >
+              <div
+                className="a-image a-image-1194x191"
+              >
+                <img
+                  alt="banner"
+                  loading="lazy"
+                  src="transportationInfrastructure.png"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="o-tabs_panel"
+    >
+      <div
+        className="t-transportInfrastructure"
+      >
+        <div
+          className="undefined animate animate-goUp"
+        >
+          <div
+            className="container o-container"
+          >
+            <h2
+              className="a-heading a-heading-32x48 a-heading-500 a-heading-fontNoto a-heading-jet a-heading-uppercase a-heading-center"
+            >
+              HẠ TẦNG GIAO THÔNG
+            </h2>
+            <div
+              className="u-mt-8 u-mt-sm-16"
+            >
+              <div
+                className="a-text a-text-dimGray a-text-300 a-text-center a-text-16x24"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "Nâng cấp, phát triển hạ tầng giao thông tại nơi có dự án nhằm gia tăng tính kết nối vào hạ tầng giao thông trọng điểm quốc gia.",
+                  }
+                }
+              />
+            </div>
+            <div
+              className="u-mt-16 u-mt-sm-32"
+            >
+              <div
+                className="a-image a-image-1194x191"
+              >
+                <img
+                  alt="banner"
+                  loading="lazy"
+                  src="transportationInfrastructure.png"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="o-tabs_panel"
+    >
+      <div
+        className="t-transportInfrastructure"
+      >
+        <div
+          className="undefined animate animate-goUp"
+        >
+          <div
+            className="container o-container"
+          >
+            <h2
+              className="a-heading a-heading-32x48 a-heading-500 a-heading-fontNoto a-heading-jet a-heading-uppercase a-heading-center"
+            >
+              HẠ TẦNG GIAO THÔNG
+            </h2>
+            <div
+              className="u-mt-8 u-mt-sm-16"
+            >
+              <div
+                className="a-text a-text-dimGray a-text-300 a-text-center a-text-16x24"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "Nâng cấp, phát triển hạ tầng giao thông tại nơi có dự án nhằm gia tăng tính kết nối vào hạ tầng giao thông trọng điểm quốc gia.",
+                  }
+                }
+              />
+            </div>
+            <div
+              className="u-mt-16 u-mt-sm-32"
+            >
+              <div
+                className="a-image a-image-1194x191"
+              >
+                <img
+                  alt="banner"
+                  loading="lazy"
+                  src="transportationInfrastructure.png"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Components/templates/HeroBanner Normal 1`] = `
 <div
   className="t-heroBanner"
@@ -6810,7 +7728,7 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
             onClick={[Function]}
           >
             <span
-              className="o-tabs_label "
+              className="o-tabs_label o-tabs_label-20x28"
             >
               Tin Tập Đoàn
             </span>
@@ -6820,7 +7738,7 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
             onClick={[Function]}
           >
             <span
-              className="o-tabs_label "
+              className="o-tabs_label o-tabs_label-20x28"
             >
               Tin Thị Trường
             </span>
@@ -6830,7 +7748,7 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
             onClick={[Function]}
           >
             <span
-              className="o-tabs_label "
+              className="o-tabs_label o-tabs_label-20x28"
             >
               Tin Dự Án
             </span>
@@ -11441,6 +12359,257 @@ exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
 </div>
 `;
 
+exports[`Storyshots Components/templates/LatestNews ABC 1`] = `
+<div
+  style={
+    Object {
+      "background": "#F8F8F8",
+      "paddingBottom": 80,
+      "paddingTop": 80,
+    }
+  }
+>
+  <div
+    className="t-latestNews t-latestNews-hasLine"
+  >
+    <div
+      className="container o-container"
+    >
+      <div
+        className="t-latestNews_wrapper"
+      >
+        <div
+          className="t-latestNews_left"
+        >
+          <div
+            className="t-latestNewsCard"
+          >
+            <div
+              className="t-latestNewsCard_heading"
+            >
+              <h2
+                className="a-heading a-heading-600 a-heading-30x42 a-heading-center a-heading-uppercase a-heading-jet a-heading-fontNoto"
+              >
+                Quản Trị Doanh Nghiệp
+              </h2>
+            </div>
+            <a
+              aria-current="page"
+              className="a-link   active"
+              href="/"
+              onClick={[Function]}
+              target="_self"
+            >
+              <div
+                className="t-latestNewsCard_wrapper"
+              >
+                <div
+                  className="t-latestNewsCard_image"
+                >
+                  <div
+                    className="a-image a-image-567x246"
+                  >
+                    <img
+                      alt="Quản Trị Doanh Nghiệp"
+                      loading="lazy"
+                      src="img_latestNews2.png"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="t-latestNewsCard_layer"
+                />
+                <div
+                  className="t-latestNewsCard_content"
+                >
+                  <div
+                    className="t-latestNewsCard_content_title"
+                  >
+                    <h2
+                      className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-uppercase"
+                    >
+                      Tóm Tắt Kết Quả Kinh Doanh Quý 4-2021
+                    </h2>
+                  </div>
+                  <div
+                    className="mt-8"
+                  >
+                    <p
+                      className="a-text a-text-12x17 a-text-300 a-text-columbiaBlue"
+                    >
+                      2 giờ trước
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a
+              className="a-link  "
+              href="/google.com/"
+              onClick={[Function]}
+              target="_self"
+            >
+              <div
+                className="t-latestNewsCard_file"
+              >
+                <div
+                  className="t-latestNewsCard_icon"
+                >
+                  <div
+                    className="a-image a-image-1x1"
+                  >
+                    <img
+                      alt="pdf"
+                      loading="lazy"
+                      src="pdf.png"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="t-latestNewsCard_fileName"
+                >
+                  <h2
+                    className="a-heading a-heading-jet a-heading-400 a-heading-20x30"
+                  >
+                    Tóm Tắt Kết Quả Kinh Doanh Quý 3-2021
+                  </h2>
+                </div>
+              </div>
+            </a>
+            <div
+              className="t-latestNewsCard_button"
+            >
+              <button
+                className="a-button a-button-outlineSpanishGray"
+                disabled={false}
+                type="button"
+              >
+                Xem thêm
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          className="t-latestNews_right"
+        >
+          <div
+            className="t-latestNews_right_item"
+          >
+            <div
+              className="t-latestNewsCard"
+            >
+              <div
+                className="t-latestNewsCard_heading"
+              >
+                <h2
+                  className="a-heading a-heading-600 a-heading-30x42 a-heading-center a-heading-uppercase a-heading-jet a-heading-fontNoto"
+                >
+                  Báo Cáo Thường Niên
+                </h2>
+              </div>
+              <a
+                aria-current="page"
+                className="a-link   active"
+                href="/"
+                onClick={[Function]}
+                target="_self"
+              >
+                <div
+                  className="t-latestNewsCard_wrapper"
+                >
+                  <div
+                    className="t-latestNewsCard_image"
+                  >
+                    <div
+                      className="a-image a-image-567x246"
+                    >
+                      <img
+                        alt="Báo Cáo Thường Niên"
+                        loading="lazy"
+                        src="img_latestNews2.png"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="t-latestNewsCard_layer"
+                  />
+                  <div
+                    className="t-latestNewsCard_content"
+                  >
+                    <div
+                      className="t-latestNewsCard_content_title"
+                    >
+                      <h2
+                        className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-uppercase"
+                      >
+                        Báo Cáo Thường Niên 2021
+                      </h2>
+                    </div>
+                    <div
+                      className="mt-8"
+                    >
+                      <p
+                        className="a-text a-text-12x17 a-text-300 a-text-columbiaBlue"
+                      >
+                        2 giờ trước
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a
+                className="a-link  "
+                href="/google.com/"
+                onClick={[Function]}
+                target="_self"
+              >
+                <div
+                  className="t-latestNewsCard_file"
+                >
+                  <div
+                    className="t-latestNewsCard_icon"
+                  >
+                    <div
+                      className="a-image a-image-1x1"
+                    >
+                      <img
+                        alt="pdf"
+                        loading="lazy"
+                        src="pdf.png"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="t-latestNewsCard_fileName"
+                  >
+                    <h2
+                      className="a-heading a-heading-jet a-heading-400 a-heading-20x30"
+                    >
+                      Báo Cáo Thường Niên 2021
+                    </h2>
+                  </div>
+                </div>
+              </a>
+              <div
+                className="t-latestNewsCard_button"
+              >
+                <button
+                  className="a-button a-button-outlineSpanishGray"
+                  disabled={false}
+                  type="button"
+                >
+                  Xem thêm
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Components/templates/LatestNews Horizontal 1`] = `
 <div
   style={
@@ -11974,7 +13143,7 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
             onClick={[Function]}
           >
             <span
-              className="o-tabs_label "
+              className="o-tabs_label o-tabs_label-20x28"
             >
               Hội đồng quản trị
             </span>
@@ -11984,7 +13153,7 @@ exports[`Storyshots Components/templates/Leadership Normal 1`] = `
             onClick={[Function]}
           >
             <span
-              className="o-tabs_label "
+              className="o-tabs_label o-tabs_label-20x28"
             >
               Ban giám đốc
             </span>
@@ -14014,14 +15183,6 @@ exports[`Storyshots Components/templates/MainLayout Normal 1`] = `
     }
   >
     <div
-      className="o-footer_background"
-    >
-      <img
-        alt="background footer"
-        src="bg-footer.png"
-      />
-    </div>
-    <div
       className="container o-container"
     >
       <div
@@ -14659,6 +15820,15 @@ exports[`Storyshots Components/templates/MainLayout Normal 1`] = `
                     >
                       Đăng Ký
                     </button>
+                  </div>
+                  <div
+                    className="o-footer_main_form_notify u-mt-12"
+                  >
+                    <p
+                      className="a-text a-text-12x17 a-text-300 a-text-lavenderGray"
+                    >
+                      Quý khách đăng ký nhận email quảng cáo về các chương trình ưu đãi, khuyến mại và tin tức mới nhất từ Novaland.
+                    </p>
                   </div>
                 </form>
               </div>
@@ -16136,6 +17306,554 @@ exports[`Storyshots Components/templates/NewsCategory Normal 1`] = `
 </div>
 `;
 
+exports[`Storyshots Components/templates/NewsDetail Normal 1`] = `
+<div
+  className="container o-container"
+>
+  <div
+    className="t-newsdetail"
+  >
+    <div
+      className="o-container_row row"
+    >
+      <div
+        className="o-container_col col-lg-8 col-md-12 col-sm-12"
+      >
+        <h1
+          className="a-heading a-heading-52x65 a-heading-600 a-heading-jet"
+        >
+          Bến du thuyền - yếu tố vàng gia tăng giá trị bất động sản
+        </h1>
+        <div
+          className="t-newsdetail_statistical"
+        >
+          <p
+            className="a-text a-text-12x17 a-text-400 a-text-dimGray"
+          >
+            23/12/2021
+          </p>
+          <div
+            className="t-newsdetail_circle"
+          />
+          <p
+            className="a-text a-text-12x17 a-text-400 a-text-dimGray"
+          >
+            Theo Robbreport
+          </p>
+          <div
+            className="t-newsdetail_circle"
+          />
+          <div
+            className="t-newsdetail_view"
+          >
+            <i
+              className="a-icon a-icon-eyeOpen a-icon-14"
+            />
+            <p
+              className="a-text a-text-12x17 a-text-400 a-text-dimGray"
+            >
+              111
+            </p>
+          </div>
+        </div>
+        <div
+          className="t-newsdetail_content"
+        >
+          <p
+            className="a-text a-text-16x24 a-text-davysGrey"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat egestas eu egestas sed viverra urna. Purus accumsan feugiat feugiat nisl pulvinar faucibus eu. Praesent dictum ornare nisl sit donec egestas amet, odio in. Nullam tincidunt at condimentum praesent quis maecenas nulla consequat. Sit convallis molestie feugiat nulla convallis metus interdum. Netus mattis mauris eu magna et enim sed. Arcu morbi congue etiam eget amet faucibus. Dictum ullamcorper aenean tristique at imperdiet proin. Nulla tristique eu nisi viverra. Tempus, ultrices porttitor orci nibh gravida blandit. Amet, massa vulputate ultricies morbi arcu in morbi turpis eleifend. Est blandit nibh posuere elementum. Vel, adipiscing duis mauris pretium, magnis. Nec, nisl, pulvinar viverra morbi",
+              }
+            }
+          />
+          <div
+            className="t-newsdetail_viewbtn"
+          >
+            <button
+              className="a-button a-button-primary"
+              disabled={false}
+              type="button"
+            >
+              Tìm hiểu thêm Aqua City
+            </button>
+          </div>
+          <div
+            className="a-divider"
+          />
+          <div
+            className="t-newsdetail_typesnews"
+          >
+            <div
+              className="t-newsdetail_typesnews-list"
+            >
+              <div
+                className="a-tag"
+              >
+                <p
+                  className="a-text a-text-12x17 a-text-300 a-text-jet"
+                >
+                  đô thị vệ tinh
+                </p>
+              </div>
+              <div
+                className="a-tag"
+              >
+                <p
+                  className="a-text a-text-12x17 a-text-300 a-text-jet"
+                >
+                  bến du thuyền
+                </p>
+              </div>
+            </div>
+            <div
+              className="t-newsdetail_typesnews-social"
+            >
+              <a
+                aria-current="page"
+                className="a-link   active"
+                href="/"
+                onClick={[Function]}
+                target="_self"
+              >
+                <i
+                  className="a-icon a-icon-facebookShare a-icon-71x25"
+                />
+              </a>
+              <a
+                aria-current="page"
+                className="a-link   active"
+                href="/"
+                onClick={[Function]}
+                target="_self"
+              >
+                <i
+                  className="a-icon a-icon-zaloShare a-icon-71x25"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="o-container_col col-lg-4 col-md-12 col-sm-12"
+      >
+        <p
+          className="a-text a-text-14x22 a-text-700 a-text-jet"
+        >
+          Các tin mới nhất
+        </p>
+        <div
+          className="t-newsdetail_subinfo"
+        >
+          <div
+            className="m-infonews"
+          >
+            <div
+              className="m-infonews_image"
+            >
+              <div
+                className="a-image a-image-1x1"
+              >
+                <img
+                  alt=""
+                  loading="lazy"
+                  src="related-news.png"
+                />
+              </div>
+            </div>
+            <div
+              className="m-infonews_content"
+            >
+              <a
+                aria-current="page"
+                className="a-link   active"
+                href="/"
+                onClick={[Function]}
+                target="_self"
+              >
+                <p
+                  className="a-text a-text-12x17 a-text-400 a-text-jet"
+                >
+                  Bến du thuyền - yếu tố vàng gia tăng giá trị bất động sản
+                </p>
+              </a>
+              <p
+                className="a-text a-text-12x17 a-text-400 a-text-dimGray"
+              >
+                Vừa xong
+              </p>
+            </div>
+          </div>
+          <div
+            className="a-divider"
+          />
+          <div
+            className="m-infonews"
+          >
+            <div
+              className="m-infonews_image"
+            >
+              <div
+                className="a-image a-image-1x1"
+              >
+                <img
+                  alt=""
+                  loading="lazy"
+                  src="related-news.png"
+                />
+              </div>
+            </div>
+            <div
+              className="m-infonews_content"
+            >
+              <a
+                aria-current="page"
+                className="a-link   active"
+                href="/"
+                onClick={[Function]}
+                target="_self"
+              >
+                <p
+                  className="a-text a-text-12x17 a-text-400 a-text-jet"
+                >
+                  Bến du thuyền - yếu tố vàng gia tăng giá trị bất động sản
+                </p>
+              </a>
+              <p
+                className="a-text a-text-12x17 a-text-400 a-text-dimGray"
+              >
+                Vừa xong
+              </p>
+            </div>
+          </div>
+          <div
+            className="a-divider"
+          />
+          <div
+            className="m-infonews"
+          >
+            <div
+              className="m-infonews_image"
+            >
+              <div
+                className="a-image a-image-1x1"
+              >
+                <img
+                  alt=""
+                  loading="lazy"
+                  src="related-news.png"
+                />
+              </div>
+            </div>
+            <div
+              className="m-infonews_content"
+            >
+              <a
+                aria-current="page"
+                className="a-link   active"
+                href="/"
+                onClick={[Function]}
+                target="_self"
+              >
+                <p
+                  className="a-text a-text-12x17 a-text-400 a-text-jet"
+                >
+                  Bến du thuyền - yếu tố vàng gia tăng giá trị bất động sản
+                </p>
+              </a>
+              <p
+                className="a-text a-text-12x17 a-text-400 a-text-dimGray"
+              >
+                Vừa xong
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="t-newsdetail_hotnews"
+        >
+          <p
+            className="a-text a-text-14x22 a-text-700 a-text-jet"
+          >
+            Các tin nổi bật
+          </p>
+          <div
+            className="t-newsdetail_subinfo"
+          >
+            <div
+              className="m-infonews"
+            >
+              <div
+                className="m-infonews_image"
+              >
+                <div
+                  className="a-image a-image-1x1"
+                >
+                  <img
+                    alt=""
+                    loading="lazy"
+                    src="related-news.png"
+                  />
+                </div>
+              </div>
+              <div
+                className="m-infonews_content"
+              >
+                <a
+                  aria-current="page"
+                  className="a-link   active"
+                  href="/"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  <p
+                    className="a-text a-text-12x17 a-text-400 a-text-jet"
+                  >
+                    Bến du thuyền - yếu tố vàng gia tăng giá trị bất động sản
+                  </p>
+                </a>
+                <p
+                  className="a-text a-text-12x17 a-text-400 a-text-dimGray"
+                >
+                  Vừa xong
+                </p>
+              </div>
+            </div>
+            <div
+              className="a-divider"
+            />
+            <div
+              className="m-infonews"
+            >
+              <div
+                className="m-infonews_image"
+              >
+                <div
+                  className="a-image a-image-1x1"
+                >
+                  <img
+                    alt=""
+                    loading="lazy"
+                    src="related-news.png"
+                  />
+                </div>
+              </div>
+              <div
+                className="m-infonews_content"
+              >
+                <a
+                  aria-current="page"
+                  className="a-link   active"
+                  href="/"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  <p
+                    className="a-text a-text-12x17 a-text-400 a-text-jet"
+                  >
+                    Bến du thuyền - yếu tố vàng gia tăng giá trị bất động sản
+                  </p>
+                </a>
+                <p
+                  className="a-text a-text-12x17 a-text-400 a-text-dimGray"
+                >
+                  Vừa xong
+                </p>
+              </div>
+            </div>
+            <div
+              className="a-divider"
+            />
+            <div
+              className="m-infonews"
+            >
+              <div
+                className="m-infonews_image"
+              >
+                <div
+                  className="a-image a-image-1x1"
+                >
+                  <img
+                    alt=""
+                    loading="lazy"
+                    src="related-news.png"
+                  />
+                </div>
+              </div>
+              <div
+                className="m-infonews_content"
+              >
+                <a
+                  aria-current="page"
+                  className="a-link   active"
+                  href="/"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  <p
+                    className="a-text a-text-12x17 a-text-400 a-text-jet"
+                  >
+                    Bến du thuyền - yếu tố vàng gia tăng giá trị bất động sản
+                  </p>
+                </a>
+                <p
+                  className="a-text a-text-12x17 a-text-400 a-text-dimGray"
+                >
+                  Vừa xong
+                </p>
+              </div>
+            </div>
+            <div
+              className="a-divider"
+            />
+            <div
+              className="m-infonews"
+            >
+              <div
+                className="m-infonews_image"
+              >
+                <div
+                  className="a-image a-image-1x1"
+                >
+                  <img
+                    alt=""
+                    loading="lazy"
+                    src="related-news.png"
+                  />
+                </div>
+              </div>
+              <div
+                className="m-infonews_content"
+              >
+                <a
+                  aria-current="page"
+                  className="a-link   active"
+                  href="/"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  <p
+                    className="a-text a-text-12x17 a-text-400 a-text-jet"
+                  >
+                    Bến du thuyền - yếu tố vàng gia tăng giá trị bất động sản
+                  </p>
+                </a>
+                <p
+                  className="a-text a-text-12x17 a-text-400 a-text-dimGray"
+                >
+                  Vừa xong
+                </p>
+              </div>
+            </div>
+            <div
+              className="a-divider"
+            />
+            <div
+              className="m-infonews"
+            >
+              <div
+                className="m-infonews_image"
+              >
+                <div
+                  className="a-image a-image-1x1"
+                >
+                  <img
+                    alt=""
+                    loading="lazy"
+                    src="related-news.png"
+                  />
+                </div>
+              </div>
+              <div
+                className="m-infonews_content"
+              >
+                <a
+                  aria-current="page"
+                  className="a-link   active"
+                  href="/"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  <p
+                    className="a-text a-text-12x17 a-text-400 a-text-jet"
+                  >
+                    Bến du thuyền - yếu tố vàng gia tăng giá trị bất động sản
+                  </p>
+                </a>
+                <p
+                  className="a-text a-text-12x17 a-text-400 a-text-dimGray"
+                >
+                  Vừa xong
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="t-newsdetail_keyword"
+        >
+          <p
+            className="a-text a-text-14x22 a-text-700 a-text-jet"
+          >
+            Từ khóa phổ biến
+          </p>
+          <div
+            className="t-newsdetail_listkey"
+          >
+            <div
+              className="a-tag"
+            >
+              <p
+                className="a-text a-text-12x17 a-text-300 a-text-jet"
+              >
+                Công viên giải Trí
+              </p>
+            </div>
+            <div
+              className="a-tag"
+            >
+              <p
+                className="a-text a-text-12x17 a-text-300 a-text-jet"
+              >
+                đô thị vệ tinh
+              </p>
+            </div>
+            <div
+              className="a-tag"
+            >
+              <p
+                className="a-text a-text-12x17 a-text-300 a-text-jet"
+              >
+                bến du thuyền
+              </p>
+            </div>
+            <div
+              className="a-tag"
+            >
+              <p
+                className="a-text a-text-12x17 a-text-300 a-text-jet"
+              >
+                Aqua City
+              </p>
+            </div>
+            <div
+              className="a-tag"
+            >
+              <p
+                className="a-text a-text-12x17 a-text-300 a-text-jet"
+              >
+                Novaland Gallery
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Components/templates/NewsList Normal 1`] = `
 <div
   style={
@@ -16595,6 +18313,122 @@ exports[`Storyshots Components/templates/NewsList Normal 1`] = `
 </div>
 `;
 
+exports[`Storyshots Components/templates/OtherDocuments Normal 1`] = `
+<div
+  className="t-otherDocuments"
+>
+  <div
+    className="t-otherDocuments_heading"
+  >
+    <h2
+      className="a-heading a-heading-600 a-heading-30x42 a-heading-jet a-heading-center a-heading-uppercase a-heading-fontNoto"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "Tài Liệu Khác",
+        }
+      }
+    />
+  </div>
+  <div
+    className="container o-container"
+  >
+    <div
+      className="t-otherDocuments_content"
+    >
+      <div
+        className="t-otherDocuments_item"
+      >
+        <div
+          className="t-otherDocuments_icon"
+        >
+          <div
+            className="a-image a-image-1x1"
+          >
+            <img
+              alt="pdf"
+              loading="lazy"
+              src="pdf.png"
+            />
+          </div>
+        </div>
+        <div
+          className="t-otherDocuments_fileName"
+        >
+          <p
+            className="a-text a-text-jet a-text-400 a-text-18x28 a-text-fontLexend"
+          >
+            Nghị quyết Hội đồng quản trị thông qua việc chuyển đổi và tỷ lệ chuyển đổi trái phiếu chuyển đổi quốc tế
+          </p>
+        </div>
+      </div>
+      <div
+        className="t-otherDocuments_item"
+      >
+        <div
+          className="t-otherDocuments_icon"
+        >
+          <div
+            className="a-image a-image-1x1"
+          >
+            <img
+              alt="pdf"
+              loading="lazy"
+              src="pdf.png"
+            />
+          </div>
+        </div>
+        <div
+          className="t-otherDocuments_fileName"
+        >
+          <p
+            className="a-text a-text-jet a-text-400 a-text-18x28 a-text-fontLexend"
+          >
+            Nghị quyết Hội đồng quản trị thông qua việc chuyển đổi và tỷ lệ chuyển đổi trái phiếu chuyển đổi quốc tế
+          </p>
+        </div>
+      </div>
+      <div
+        className="t-otherDocuments_item"
+      >
+        <div
+          className="t-otherDocuments_icon"
+        >
+          <div
+            className="a-image a-image-1x1"
+          >
+            <img
+              alt="pdf"
+              loading="lazy"
+              src="pdf.png"
+            />
+          </div>
+        </div>
+        <div
+          className="t-otherDocuments_fileName"
+        >
+          <p
+            className="a-text a-text-jet a-text-400 a-text-18x28 a-text-fontLexend"
+          >
+            Nghị quyết Hội đồng quản trị thông qua việc chuyển đổi và tỷ lệ chuyển đổi trái phiếu chuyển đổi quốc tế
+          </p>
+        </div>
+      </div>
+      <div
+        className="t-otherDocuments_button"
+      >
+        <button
+          className="a-button a-button-outlineSpanishGray"
+          disabled={false}
+          type="button"
+        >
+          Xem tất cả Tài liệu khác
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Components/templates/OutStandingNumbers Normal 1`] = `
 <div
   className="t-outStandingNumbers"
@@ -16602,11 +18436,15 @@ exports[`Storyshots Components/templates/OutStandingNumbers Normal 1`] = `
   <div
     className="container o-container"
   >
-    <h2
-      className="a-heading a-heading-center a-heading-500 a-heading-30x42 a-heading-fontNoto a-heading-jet"
+    <div
+      className="t-outStandingNumbers_heading"
     >
-      Novaland là thương hiệu uy tín hàng đầu Việt Nam trong lĩnh vực đầu tư & phát triển bất động sản
-    </h2>
+      <h2
+        className="a-heading a-heading-center a-heading-500 a-heading-30x42 a-heading-fontNoto a-heading-jet"
+      >
+        Novaland là thương hiệu uy tín hàng đầu Việt Nam trong lĩnh vực đầu tư & phát triển bất động sản
+      </h2>
+    </div>
     <div
       className="t-outStandingNumbers_list"
     >
@@ -18372,6 +20210,1157 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
 </div>
 `;
 
+exports[`Storyshots Components/templates/ProductLines Normal 1`] = `
+<div
+  className="container o-container"
+>
+  <div
+    className="t-productLines"
+  >
+    <div
+      className="undefined animate animate-goUp"
+    >
+      <div
+        className="t-productLines_title"
+      >
+        <h2
+          className="a-heading a-heading-30x42 a-heading-600 a-heading-jet a-heading-uppercase a-heading-center"
+        >
+          các dòng sản phẩm
+        </h2>
+      </div>
+      <div
+        className="o-tabsBg"
+      >
+        <div
+          className="o-tabsBg_labels"
+        >
+          <div
+            className="o-carousel"
+          >
+            <div
+              className="slick-slider slick-initialized"
+              dir="ltr"
+            >
+              <div
+                className="slick-list"
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={null}
+                onMouseMove={null}
+                onMouseUp={[Function]}
+                onTouchCancel={null}
+                onTouchEnd={[Function]}
+                onTouchMove={null}
+                onTouchStart={[Function]}
+                style={Object {}}
+              >
+                <div
+                  className="slick-track"
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "WebkitTransform": "translate3d(0px, 0px, 0px)",
+                      "WebkitTransition": "",
+                      "msTransform": "translateX(0px)",
+                      "opacity": 1,
+                      "transform": "translate3d(0px, 0px, 0px)",
+                      "transition": "",
+                    }
+                  }
+                >
+                  <div
+                    aria-hidden={false}
+                    className="slick-slide slick-active slick-current"
+                    data-index={0}
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "outline": "none",
+                        "width": 0,
+                      }
+                    }
+                    tabIndex="-1"
+                  >
+                    <div>
+                      <div
+                        className="o-carousel_wrap"
+                        style={
+                          Object {
+                            "display": "inline-block",
+                            "width": "100%",
+                          }
+                        }
+                        tabIndex={-1}
+                      >
+                        <div
+                          className="o-carousel_item"
+                        >
+                          <div
+                            className="o-tabsBg_tab o-tabsBg_tab-active"
+                            onClick={[Function]}
+                          >
+                            <span
+                              className="o-tabsBg_label "
+                            >
+                              <div
+                                className="o-tabsBg_image"
+                              >
+                                <div
+                                  className="a-image a-image-1x1"
+                                >
+                                  <img
+                                    alt="replacing"
+                                    loading="lazy"
+                                    src="ic_activeTab.png"
+                                  />
+                                </div>
+                              </div>
+                              <span>
+                                BĐS Trung Tâm BĐS Trung Tâm BĐS Trung Tâm
+                              </span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    aria-hidden={false}
+                    className="slick-slide slick-active"
+                    data-index={1}
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "outline": "none",
+                        "width": 0,
+                      }
+                    }
+                    tabIndex="-1"
+                  >
+                    <div>
+                      <div
+                        className="o-carousel_wrap"
+                        style={
+                          Object {
+                            "display": "inline-block",
+                            "width": "100%",
+                          }
+                        }
+                        tabIndex={-1}
+                      >
+                        <div
+                          className="o-carousel_item"
+                        >
+                          <div
+                            className="o-tabsBg_tab"
+                            onClick={[Function]}
+                          >
+                            <span
+                              className="o-tabsBg_label "
+                            >
+                              <div
+                                className="o-tabsBg_image"
+                              >
+                                <div
+                                  className="a-image a-image-1x1"
+                                >
+                                  <img
+                                    alt="replacing"
+                                    loading="lazy"
+                                    src="ic_inActiveTab.png"
+                                  />
+                                </div>
+                              </div>
+                              <span>
+                                ĐÔ THỊ VỆ TINH
+                              </span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    aria-hidden={false}
+                    className="slick-slide slick-active"
+                    data-index={2}
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "outline": "none",
+                        "width": 0,
+                      }
+                    }
+                    tabIndex="-1"
+                  >
+                    <div>
+                      <div
+                        className="o-carousel_wrap"
+                        style={
+                          Object {
+                            "display": "inline-block",
+                            "width": "100%",
+                          }
+                        }
+                        tabIndex={-1}
+                      >
+                        <div
+                          className="o-carousel_item"
+                        >
+                          <div
+                            className="o-tabsBg_tab"
+                            onClick={[Function]}
+                          >
+                            <span
+                              className="o-tabsBg_label "
+                            >
+                              <div
+                                className="o-tabsBg_image"
+                              >
+                                <div
+                                  className="a-image a-image-1x1"
+                                >
+                                  <img
+                                    alt="replacing"
+                                    loading="lazy"
+                                    src="ic_inActiveTab.png"
+                                  />
+                                </div>
+                              </div>
+                              <span>
+                                ĐÔ THỊ NGHỈ DƯỠNG
+                              </span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    aria-hidden={false}
+                    className="slick-slide slick-active"
+                    data-index={3}
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "outline": "none",
+                        "width": 0,
+                      }
+                    }
+                    tabIndex="-1"
+                  >
+                    <div>
+                      <div
+                        className="o-carousel_wrap"
+                        style={
+                          Object {
+                            "display": "inline-block",
+                            "width": "100%",
+                          }
+                        }
+                        tabIndex={-1}
+                      >
+                        <div
+                          className="o-carousel_item"
+                        >
+                          <div
+                            className="o-tabsBg_tab"
+                            onClick={[Function]}
+                          >
+                            <span
+                              className="o-tabsBg_label "
+                            >
+                              <div
+                                className="o-tabsBg_image"
+                              >
+                                <div
+                                  className="a-image a-image-1x1"
+                                >
+                                  <img
+                                    alt="replacing"
+                                    loading="lazy"
+                                    src="ic_inActiveTab.png"
+                                  />
+                                </div>
+                              </div>
+                              <span>
+                                BĐS CÔNG NGHIỆP
+                              </span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    aria-hidden={true}
+                    className="slick-slide"
+                    data-index={4}
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "outline": "none",
+                        "width": 0,
+                      }
+                    }
+                    tabIndex="-1"
+                  >
+                    <div>
+                      <div
+                        className="o-carousel_wrap"
+                        style={
+                          Object {
+                            "display": "inline-block",
+                            "width": "100%",
+                          }
+                        }
+                        tabIndex={-1}
+                      >
+                        <div
+                          className="o-carousel_item"
+                        >
+                          <div
+                            className="o-tabsBg_tab"
+                            onClick={[Function]}
+                          >
+                            <span
+                              className="o-tabsBg_label "
+                            >
+                              <div
+                                className="o-tabsBg_image"
+                              >
+                                <div
+                                  className="a-image a-image-1x1"
+                                >
+                                  <img
+                                    alt="replacing"
+                                    loading="lazy"
+                                    src="ic_inActiveTab.png"
+                                  />
+                                </div>
+                              </div>
+                              <span>
+                                BĐS CÔNG NGHIỆP A BĐS CÔNG NGHIỆP A BĐS CÔNG NGHIỆP A
+                              </span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    aria-hidden={true}
+                    className="slick-slide"
+                    data-index={5}
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "outline": "none",
+                        "width": 0,
+                      }
+                    }
+                    tabIndex="-1"
+                  >
+                    <div>
+                      <div
+                        className="o-carousel_wrap"
+                        style={
+                          Object {
+                            "display": "inline-block",
+                            "width": "100%",
+                          }
+                        }
+                        tabIndex={-1}
+                      >
+                        <div
+                          className="o-carousel_item"
+                        >
+                          <div
+                            className="o-tabsBg_tab"
+                            onClick={[Function]}
+                          >
+                            <span
+                              className="o-tabsBg_label "
+                            >
+                              <div
+                                className="o-tabsBg_image"
+                              >
+                                <div
+                                  className="a-image a-image-1x1"
+                                >
+                                  <img
+                                    alt="replacing"
+                                    loading="lazy"
+                                    src="ic_inActiveTab.png"
+                                  />
+                                </div>
+                              </div>
+                              <span>
+                                BĐS CÔNG NGHIỆP B BĐS CÔNG NGHIỆP B BĐS CÔNG NGHIỆP B
+                              </span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="o-tabsBg_panel o-tabsBg_panel-active"
+      >
+        <div
+          className="undefined animate animate-goUp"
+        >
+          <div
+            className="m-infoproduct"
+          >
+            <div
+              className="m-infoproduct_wrapcontent"
+            >
+              <p
+                className="a-text a-text-16x24 a-text-400 a-text-jet"
+              >
+                Test Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM với dòng sản phẩm:
+              </p>
+              <div
+                className="m-infoproduct_info"
+              >
+                <div
+                  className="m-infoproduct_detail"
+                >
+                  <div
+                    className="m-infoproduct_imgdetail"
+                  >
+                    <div
+                      className="a-image a-image-1x1"
+                    >
+                      <img
+                        alt="replacing"
+                        loading="lazy"
+                        src="img_info-product-1.png"
+                      />
+                    </div>
+                  </div>
+                  <p
+                    className="a-text a-text-16x24 a-text-400 a-text-jet"
+                  >
+                    Nhà ở cao tầng & thương mại
+                  </p>
+                </div>
+                <div
+                  className="m-infoproduct_detail"
+                >
+                  <div
+                    className="m-infoproduct_imgdetail"
+                  >
+                    <div
+                      className="a-image a-image-1x1"
+                    >
+                      <img
+                        alt="replacing"
+                        loading="lazy"
+                        src="img_info-product-1.png"
+                      />
+                    </div>
+                  </div>
+                  <p
+                    className="a-text a-text-16x24 a-text-400 a-text-jet"
+                  >
+                    Khu đô thị thấp tầng
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              className="m-infoproduct_wrapimg"
+            >
+              <div
+                className="a-image a-image-612x340"
+              >
+                <img
+                  alt="replacing"
+                  loading="lazy"
+                  src="img-product.png"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="o-tabsBg_panel"
+      >
+        <div
+          className="undefined animate animate-goUp"
+        >
+          <div
+            className="m-infoproduct"
+          >
+            <div
+              className="m-infoproduct_wrapcontent"
+            >
+              <p
+                className="a-text a-text-16x24 a-text-400 a-text-jet"
+              >
+                Test Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM với dòng sản phẩm:
+              </p>
+              <div
+                className="m-infoproduct_info"
+              >
+                <div
+                  className="m-infoproduct_detail"
+                >
+                  <div
+                    className="m-infoproduct_imgdetail"
+                  >
+                    <div
+                      className="a-image a-image-1x1"
+                    >
+                      <img
+                        alt="replacing"
+                        loading="lazy"
+                        src="img_info-product-1.png"
+                      />
+                    </div>
+                  </div>
+                  <p
+                    className="a-text a-text-16x24 a-text-400 a-text-jet"
+                  >
+                    Nhà ở cao tầng & thương mại
+                  </p>
+                </div>
+                <div
+                  className="m-infoproduct_detail"
+                >
+                  <div
+                    className="m-infoproduct_imgdetail"
+                  >
+                    <div
+                      className="a-image a-image-1x1"
+                    >
+                      <img
+                        alt="replacing"
+                        loading="lazy"
+                        src="img_info-product-1.png"
+                      />
+                    </div>
+                  </div>
+                  <p
+                    className="a-text a-text-16x24 a-text-400 a-text-jet"
+                  >
+                    Khu đô thị thấp tầng
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              className="m-infoproduct_wrapimg"
+            >
+              <div
+                className="a-image a-image-612x340"
+              >
+                <img
+                  alt="replacing"
+                  loading="lazy"
+                  src="img-product.png"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="o-tabsBg_panel"
+      >
+        <div
+          className="undefined animate animate-goUp"
+        >
+          <div
+            className="m-infoproduct"
+          >
+            <div
+              className="m-infoproduct_wrapcontent"
+            >
+              <p
+                className="a-text a-text-16x24 a-text-400 a-text-jet"
+              >
+                Test Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM với dòng sản phẩm:
+              </p>
+              <div
+                className="m-infoproduct_info"
+              >
+                <div
+                  className="m-infoproduct_detail"
+                >
+                  <div
+                    className="m-infoproduct_imgdetail"
+                  >
+                    <div
+                      className="a-image a-image-1x1"
+                    >
+                      <img
+                        alt="replacing"
+                        loading="lazy"
+                        src="img_info-product-1.png"
+                      />
+                    </div>
+                  </div>
+                  <p
+                    className="a-text a-text-16x24 a-text-400 a-text-jet"
+                  >
+                    Nhà ở cao tầng & thương mại
+                  </p>
+                </div>
+                <div
+                  className="m-infoproduct_detail"
+                >
+                  <div
+                    className="m-infoproduct_imgdetail"
+                  >
+                    <div
+                      className="a-image a-image-1x1"
+                    >
+                      <img
+                        alt="replacing"
+                        loading="lazy"
+                        src="img_info-product-1.png"
+                      />
+                    </div>
+                  </div>
+                  <p
+                    className="a-text a-text-16x24 a-text-400 a-text-jet"
+                  >
+                    Khu đô thị thấp tầng
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              className="m-infoproduct_wrapimg"
+            >
+              <div
+                className="a-image a-image-612x340"
+              >
+                <img
+                  alt="replacing"
+                  loading="lazy"
+                  src="img-product.png"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="o-tabsBg_panel"
+      >
+        <div
+          className="undefined animate animate-goUp"
+        >
+          <div
+            className="m-infoproduct"
+          >
+            <div
+              className="m-infoproduct_wrapcontent"
+            >
+              <p
+                className="a-text a-text-16x24 a-text-400 a-text-jet"
+              >
+                Test Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM với dòng sản phẩm:
+              </p>
+              <div
+                className="m-infoproduct_info"
+              >
+                <div
+                  className="m-infoproduct_detail"
+                >
+                  <div
+                    className="m-infoproduct_imgdetail"
+                  >
+                    <div
+                      className="a-image a-image-1x1"
+                    >
+                      <img
+                        alt="replacing"
+                        loading="lazy"
+                        src="img_info-product-1.png"
+                      />
+                    </div>
+                  </div>
+                  <p
+                    className="a-text a-text-16x24 a-text-400 a-text-jet"
+                  >
+                    Nhà ở cao tầng & thương mại
+                  </p>
+                </div>
+                <div
+                  className="m-infoproduct_detail"
+                >
+                  <div
+                    className="m-infoproduct_imgdetail"
+                  >
+                    <div
+                      className="a-image a-image-1x1"
+                    >
+                      <img
+                        alt="replacing"
+                        loading="lazy"
+                        src="img_info-product-1.png"
+                      />
+                    </div>
+                  </div>
+                  <p
+                    className="a-text a-text-16x24 a-text-400 a-text-jet"
+                  >
+                    Khu đô thị thấp tầng
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              className="m-infoproduct_wrapimg"
+            >
+              <div
+                className="a-image a-image-612x340"
+              >
+                <img
+                  alt="replacing"
+                  loading="lazy"
+                  src="img-product.png"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="o-tabsBg_panel"
+      >
+        <div
+          className="undefined animate animate-goUp"
+        >
+          <div
+            className="m-infoproduct"
+          >
+            <div
+              className="m-infoproduct_wrapcontent"
+            >
+              <p
+                className="a-text a-text-16x24 a-text-400 a-text-jet"
+              >
+                Test Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM với dòng sản phẩm:
+              </p>
+              <div
+                className="m-infoproduct_info"
+              >
+                <div
+                  className="m-infoproduct_detail"
+                >
+                  <div
+                    className="m-infoproduct_imgdetail"
+                  >
+                    <div
+                      className="a-image a-image-1x1"
+                    >
+                      <img
+                        alt="replacing"
+                        loading="lazy"
+                        src="img_info-product-1.png"
+                      />
+                    </div>
+                  </div>
+                  <p
+                    className="a-text a-text-16x24 a-text-400 a-text-jet"
+                  >
+                    Nhà ở cao tầng & thương mại
+                  </p>
+                </div>
+                <div
+                  className="m-infoproduct_detail"
+                >
+                  <div
+                    className="m-infoproduct_imgdetail"
+                  >
+                    <div
+                      className="a-image a-image-1x1"
+                    >
+                      <img
+                        alt="replacing"
+                        loading="lazy"
+                        src="img_info-product-1.png"
+                      />
+                    </div>
+                  </div>
+                  <p
+                    className="a-text a-text-16x24 a-text-400 a-text-jet"
+                  >
+                    Khu đô thị thấp tầng
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              className="m-infoproduct_wrapimg"
+            >
+              <div
+                className="a-image a-image-612x340"
+              >
+                <img
+                  alt="replacing"
+                  loading="lazy"
+                  src="img-product.png"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="o-tabsBg_panel"
+      >
+        <div
+          className="undefined animate animate-goUp"
+        >
+          <div
+            className="m-infoproduct"
+          >
+            <div
+              className="m-infoproduct_wrapcontent"
+            >
+              <p
+                className="a-text a-text-16x24 a-text-400 a-text-jet"
+              >
+                Test Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM với dòng sản phẩm:
+              </p>
+              <div
+                className="m-infoproduct_info"
+              >
+                <div
+                  className="m-infoproduct_detail"
+                >
+                  <div
+                    className="m-infoproduct_imgdetail"
+                  >
+                    <div
+                      className="a-image a-image-1x1"
+                    >
+                      <img
+                        alt="replacing"
+                        loading="lazy"
+                        src="img_info-product-1.png"
+                      />
+                    </div>
+                  </div>
+                  <p
+                    className="a-text a-text-16x24 a-text-400 a-text-jet"
+                  >
+                    Nhà ở cao tầng & thương mại
+                  </p>
+                </div>
+                <div
+                  className="m-infoproduct_detail"
+                >
+                  <div
+                    className="m-infoproduct_imgdetail"
+                  >
+                    <div
+                      className="a-image a-image-1x1"
+                    >
+                      <img
+                        alt="replacing"
+                        loading="lazy"
+                        src="img_info-product-1.png"
+                      />
+                    </div>
+                  </div>
+                  <p
+                    className="a-text a-text-16x24 a-text-400 a-text-jet"
+                  >
+                    Khu đô thị thấp tầng
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              className="m-infoproduct_wrapimg"
+            >
+              <div
+                className="a-image a-image-612x340"
+              >
+                <img
+                  alt="replacing"
+                  loading="lazy"
+                  src="img-product.png"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/templates/ProjectList Normal 1`] = `
+<div
+  className="t-projectList"
+>
+  <div
+    className="t-projectList_project"
+  >
+    <div
+      className="undefined animate animate-goUp"
+    >
+      <div
+        className="m-listLogoProject"
+      >
+        <div
+          className="m-listLogoProject_title"
+        >
+          <p
+            className="a-text a-text-24x32 a-text-600 a-text-jet"
+          >
+            các dự án Khu trung tâm
+          </p>
+        </div>
+        <div
+          className="m-listLogoProject_listLogo"
+        >
+          <div
+            className="m-listLogoProject_wraplogo"
+          >
+            <img
+              alt=""
+              src="project1.png"
+            />
+          </div>
+          <div
+            className="m-listLogoProject_wraplogo"
+          >
+            <img
+              alt=""
+              src="project2.png"
+            />
+          </div>
+          <div
+            className="m-listLogoProject_wraplogo"
+          >
+            <img
+              alt=""
+              src="project3.png"
+            />
+          </div>
+          <div
+            className="m-listLogoProject_wraplogo"
+          >
+            <img
+              alt=""
+              src="project4.png"
+            />
+          </div>
+          <div
+            className="m-listLogoProject_wraplogo"
+          >
+            <img
+              alt=""
+              src="project5.png"
+            />
+          </div>
+          <div
+            className="m-listLogoProject_wraplogo"
+          >
+            <img
+              alt=""
+              src="project6.png"
+            />
+          </div>
+          <div
+            className="m-listLogoProject_wraplogo"
+          >
+            <img
+              alt=""
+              src="project7.png"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="t-projectList_project"
+  >
+    <div
+      className="undefined animate animate-goUp"
+    >
+      <div
+        className="m-listLogoProject"
+      >
+        <div
+          className="m-listLogoProject_title"
+        >
+          <p
+            className="a-text a-text-24x32 a-text-600 a-text-jet"
+          >
+            các dự án Khu Đông
+          </p>
+        </div>
+        <div
+          className="m-listLogoProject_listLogo"
+        >
+          <div
+            className="m-listLogoProject_wraplogo"
+          >
+            <img
+              alt=""
+              src="project1.png"
+            />
+          </div>
+          <div
+            className="m-listLogoProject_wraplogo"
+          >
+            <img
+              alt=""
+              src="project2.png"
+            />
+          </div>
+          <div
+            className="m-listLogoProject_wraplogo"
+          >
+            <img
+              alt=""
+              src="project3.png"
+            />
+          </div>
+          <div
+            className="m-listLogoProject_wraplogo"
+          >
+            <img
+              alt=""
+              src="project4.png"
+            />
+          </div>
+          <div
+            className="m-listLogoProject_wraplogo"
+          >
+            <img
+              alt=""
+              src="project5.png"
+            />
+          </div>
+          <div
+            className="m-listLogoProject_wraplogo"
+          >
+            <img
+              alt=""
+              src="project6.png"
+            />
+          </div>
+          <div
+            className="m-listLogoProject_wraplogo"
+          >
+            <img
+              alt=""
+              src="project7.png"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="t-projectList_project"
+  >
+    <div
+      className="undefined animate animate-goUp"
+    >
+      <div
+        className="m-listLogoProject"
+      >
+        <div
+          className="m-listLogoProject_title"
+        >
+          <p
+            className="a-text a-text-24x32 a-text-600 a-text-jet"
+          >
+            các dự án Khu Nam
+          </p>
+        </div>
+        <div
+          className="m-listLogoProject_listLogo"
+        >
+          <div
+            className="m-listLogoProject_wraplogo"
+          >
+            <img
+              alt=""
+              src="project1.png"
+            />
+          </div>
+          <div
+            className="m-listLogoProject_wraplogo"
+          >
+            <img
+              alt=""
+              src="project2.png"
+            />
+          </div>
+          <div
+            className="m-listLogoProject_wraplogo"
+          >
+            <img
+              alt=""
+              src="project3.png"
+            />
+          </div>
+          <div
+            className="m-listLogoProject_wraplogo"
+          >
+            <img
+              alt=""
+              src="project4.png"
+            />
+          </div>
+          <div
+            className="m-listLogoProject_wraplogo"
+          >
+            <img
+              alt=""
+              src="project5.png"
+            />
+          </div>
+          <div
+            className="m-listLogoProject_wraplogo"
+          >
+            <img
+              alt=""
+              src="project6.png"
+            />
+          </div>
+          <div
+            className="m-listLogoProject_wraplogo"
+          >
+            <img
+              alt=""
+              src="project7.png"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Components/templates/ProjectListMap Normal 1`] = `
 <div
   className="t-projectListMap"
@@ -18788,7 +21777,7 @@ exports[`Storyshots Components/templates/ProjectMap Normal 1`] = `
                   onClick={[Function]}
                 >
                   <span
-                    className="o-tabs_label "
+                    className="o-tabs_label o-tabs_label-20x28"
                   >
                     Bất Động Sản Trung Tâm
                   </span>
@@ -18798,7 +21787,7 @@ exports[`Storyshots Components/templates/ProjectMap Normal 1`] = `
                   onClick={[Function]}
                 >
                   <span
-                    className="o-tabs_label "
+                    className="o-tabs_label o-tabs_label-20x28"
                   >
                     Đô Thị Nghỉ Dưỡng
                   </span>
@@ -18808,7 +21797,7 @@ exports[`Storyshots Components/templates/ProjectMap Normal 1`] = `
                   onClick={[Function]}
                 >
                   <span
-                    className="o-tabs_label "
+                    className="o-tabs_label o-tabs_label-20x28"
                   >
                     Đô Thị Vệ Tinh
                   </span>
@@ -19420,6 +22409,292 @@ exports[`Storyshots Components/templates/ProjectMap Normal 1`] = `
 </div>
 `;
 
+exports[`Storyshots Components/templates/Schedule Normal 1`] = `
+<div
+  className="t-schedule"
+>
+  <div
+    className="t-schedule_heading"
+  >
+    <h2
+      className="a-heading a-heading-jet a-heading-30x42 a-heading-center a-heading-600 a-heading-fontNoto"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "Lịch Sự Kiện",
+        }
+      }
+    />
+  </div>
+  <div
+    className="t-schedule_subTitle"
+  >
+    <p
+      className="a-text a-text-fontLexend a-text-400 a-text-18x28 a-text-center a-text-dimGray"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "Chuỗi sự kiện đón Giáng sinh và năm mới tại Novaland",
+        }
+      }
+    />
+  </div>
+  <div
+    className="container o-container"
+  >
+    <div
+      className="t-schedule_content"
+    >
+      <div
+        className="t-schedule_left"
+      >
+        <div
+          className="o-newsCard o-newsCard-vertical"
+        >
+          <a
+            aria-current="page"
+            className="a-link   active"
+            href="/"
+            onClick={[Function]}
+            target="_self"
+          >
+            <div
+              className="o-newsCard_wrapper"
+            >
+              <div
+                className="o-newsCard_image"
+              >
+                <div
+                  className="a-image a-image-582x534"
+                >
+                  <img
+                    alt="ImgLatestNews1"
+                    loading="lazy"
+                    src="img_latestNews1.png"
+                  />
+                </div>
+              </div>
+              <div
+                className="o-newsCard_layer"
+              />
+              <div
+                className="o-newsCard_content"
+              >
+                <div
+                  className="o-newsCard_content_title"
+                >
+                  <h2
+                    className="a-heading a-heading-white a-heading-fontLexend a-heading-600 a-heading-24x30"
+                  >
+                    Bốn dự án thành phần cao tốc Bắc Nam sẽ hoàn thành năm 2022
+                  </h2>
+                </div>
+                <div
+                  className="mt-8"
+                >
+                  <p
+                    className="a-text a-text-columbiaBlue a-text-12x17 a-text-400 a-text-fontLexend"
+                  >
+                    1 phút trước
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div
+        className="t-schedule_right"
+      >
+        <div
+          className="t-schedule_right_item t-schedule_right_item-fourItem"
+        >
+          <div
+            className="o-newsCard o-newsCard-smallVertical"
+          >
+            <a
+              aria-current="page"
+              className="a-link   active"
+              href="/"
+              onClick={[Function]}
+              target="_self"
+            >
+              <div
+                className="o-newsCard_wrapper"
+              >
+                <div
+                  className="o-newsCard_image"
+                >
+                  <div
+                    className="a-image a-image-185x142"
+                  >
+                    <img
+                      alt="ImgLatestNews2"
+                      loading="lazy"
+                      src="img_latestNews2.png"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="o-newsCard_layer"
+                />
+                <div
+                  className="o-newsCard_content"
+                >
+                  <div
+                    className="o-newsCard_content_title"
+                  >
+                    <h2
+                      className="a-heading a-heading-jet a-heading-24x30 a-heading-400 a-heading-fontLexend"
+                    >
+                      Cao tốc Phan Thiết - Dầu Giây qua Đồng Nai phấn đấu vượt tiến độ...
+                    </h2>
+                  </div>
+                  <div
+                    className="mt-8"
+                  >
+                    <p
+                      className="a-text a-text-dimGray a-text-12x17 a-text-400 a-text-fontLexend"
+                    >
+                      2 giờ trước
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div
+          className="t-schedule_right_item t-schedule_right_item-fourItem"
+        >
+          <div
+            className="o-newsCard o-newsCard-smallVertical"
+          >
+            <a
+              aria-current="page"
+              className="a-link   active"
+              href="/"
+              onClick={[Function]}
+              target="_self"
+            >
+              <div
+                className="o-newsCard_wrapper"
+              >
+                <div
+                  className="o-newsCard_image"
+                >
+                  <div
+                    className="a-image a-image-185x142"
+                  >
+                    <img
+                      alt="ImgLatestNews3"
+                      loading="lazy"
+                      src="img_latestNews3.png"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="o-newsCard_layer"
+                />
+                <div
+                  className="o-newsCard_content"
+                >
+                  <div
+                    className="o-newsCard_content_title"
+                  >
+                    <h2
+                      className="a-heading a-heading-jet a-heading-24x30 a-heading-400 a-heading-fontLexend"
+                    >
+                      Novaland nằm trong Top 50 công ty niêm yết tốt nhất Việt Nam 2021
+                    </h2>
+                  </div>
+                  <div
+                    className="mt-8"
+                  >
+                    <p
+                      className="a-text a-text-dimGray a-text-12x17 a-text-400 a-text-fontLexend"
+                    >
+                      6 giờ trước
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div
+          className="t-schedule_right_item t-schedule_right_item-fourItem"
+        >
+          <div
+            className="o-newsCard o-newsCard-smallVertical"
+          >
+            <a
+              aria-current="page"
+              className="a-link   active"
+              href="/"
+              onClick={[Function]}
+              target="_self"
+            >
+              <div
+                className="o-newsCard_wrapper"
+              >
+                <div
+                  className="o-newsCard_image"
+                >
+                  <div
+                    className="a-image a-image-185x142"
+                  >
+                    <img
+                      alt="ImgLatestNews3"
+                      loading="lazy"
+                      src="img_latestNews3.png"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="o-newsCard_layer"
+                />
+                <div
+                  className="o-newsCard_content"
+                >
+                  <div
+                    className="o-newsCard_content_title"
+                  >
+                    <h2
+                      className="a-heading a-heading-jet a-heading-24x30 a-heading-400 a-heading-fontLexend"
+                    >
+                      Novaland nằm trong Top 50 công ty niêm yết tốt nhất Việt Nam 2021
+                    </h2>
+                  </div>
+                  <div
+                    className="mt-8"
+                  >
+                    <p
+                      className="a-text a-text-dimGray a-text-12x17 a-text-400 a-text-fontLexend"
+                    >
+                      6 giờ trước
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        className="t-schedule_button"
+      >
+        <button
+          className="a-button a-button-outlineSpanishGray"
+          disabled={false}
+          type="button"
+        >
+          Xem tất cả lịch sự kiện
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Components/templates/Section Normal 1`] = `
 <div
   className="t-section"
@@ -19557,7 +22832,7 @@ exports[`Storyshots Components/templates/ShareholderRelations Normal 1`] = `
             className="a-text a-text-14x20 a-text-400 a-text-fontLexend a-text-center"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "Xem thêm báo cáo tài chính",
+                "__html": "Xem tất cả quan hệ cổ đông",
               }
             }
           />
@@ -19704,6 +22979,164 @@ exports[`Storyshots Components/templates/SignupJobPostings Normal 1`] = `
       >
         Đăng ký ngay
       </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/templates/StockInformation Normal 1`] = `
+<div
+  className="t-stockInformation"
+>
+  <div
+    className="t-stockInformation_heading"
+  >
+    <h2
+      className="a-heading a-heading-30x42 a-heading-center a-heading-600 a-heading-jet"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "Cổ phiếu Novaland group",
+        }
+      }
+    />
+  </div>
+  <div
+    className="container o-container"
+  >
+    <div
+      className="t-stockInformation_content"
+    >
+      <div>
+        <div
+          className="t-stockInformation_leftContent"
+        >
+          <div
+            className="t-stockInformation_item"
+          >
+            <div
+              className="t-stockInformation_desc"
+            >
+              <p
+                className="a-text a-text-14x22 a-text-fontLexend a-text-400 a-text-dimGray"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "Thay đổi",
+                  }
+                }
+              />
+            </div>
+            <div
+              className="t-stockInformation_number"
+            >
+              <h2
+                className="a-heading a-heading-jet a-heading-24x30 a-heading-600 a-heading-fontLexend"
+              >
+                -1.8 (-2.04%)
+              </h2>
+            </div>
+          </div>
+          <div
+            className="t-stockInformation_item"
+          >
+            <div
+              className="t-stockInformation_desc"
+            >
+              <p
+                className="a-text a-text-14x22 a-text-fontLexend a-text-400 a-text-dimGray"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "Khối lượng giao dịch",
+                  }
+                }
+              />
+            </div>
+            <div
+              className="t-stockInformation_number"
+            >
+              <h2
+                className="a-heading a-heading-jet a-heading-24x30 a-heading-600 a-heading-fontLexend"
+              >
+                3,022.7 (0%)
+              </h2>
+            </div>
+          </div>
+          <div
+            className="t-stockInformation_item"
+          >
+            <div
+              className="t-stockInformation_desc"
+            >
+              <p
+                className="a-text a-text-14x22 a-text-fontLexend a-text-400 a-text-dimGray"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "Vốn hóa",
+                  }
+                }
+              />
+            </div>
+            <div
+              className="t-stockInformation_number"
+            >
+              <h2
+                className="a-heading a-heading-jet a-heading-24x30 a-heading-600 a-heading-fontLexend"
+              >
+                166.788 (0%)
+              </h2>
+            </div>
+          </div>
+          <div
+            className="t-stockInformation_item"
+          >
+            <div
+              className="t-stockInformation_desc"
+            >
+              <p
+                className="a-text a-text-14x22 a-text-fontLexend a-text-400 a-text-dimGray"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "Khối lượng giao dịch trung bình 10 phiên",
+                  }
+                }
+              />
+            </div>
+            <div
+              className="t-stockInformation_number"
+            >
+              <h2
+                className="a-heading a-heading-jet a-heading-24x30 a-heading-600 a-heading-fontLexend"
+              >
+                2,883.448 (0%)
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div
+          className="t-stockInformation_note"
+        >
+          <p
+            className="a-text a-text-12x17 a-text-fontLexend a-text-400 a-text-dimGray"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "Thông tin được trích dẫn từ nguồn Vietstock (http://vietstock.vn). Tập đoàn Novaland sẽ không chịu bất kỳ trách nhiệm nào về tính chính xác, đầy đủ hoặc bất kỳ khía cạnh nào khác đối với thông tin hiển thị trên đây được đăng tải/trích dẫn/tích hợp từ nguồn này.",
+              }
+            }
+          />
+        </div>
+      </div>
+      <div
+        className="t-stockInformation_rightContent"
+      >
+        <div
+          className="a-image a-image-546x308"
+        >
+          <img
+            alt="img"
+            loading="lazy"
+            src="imgStock.png"
+          />
+        </div>
+      </div>
     </div>
   </div>
 </div>
