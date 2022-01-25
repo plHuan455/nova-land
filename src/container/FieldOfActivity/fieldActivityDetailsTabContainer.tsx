@@ -1,28 +1,20 @@
 import React from 'react';
 
-import bannerImg from 'assets/images/transportationInfrastructure.png';
+import bannerImg from 'assets/images/field-of-activity-banner.png';
 import FieldActivityDetailsTab from 'components/templates/FieldActivityDetailsTab';
 import Section from 'components/templates/Section';
 
 const dummyData = [
   {
-    label: 'Tin Tập Đoàn',
+    label: 'Bất động sản',
     content: {
       imgSrc: bannerImg,
-      title: 'HẠ TẦNG GIAO THÔNG',
-      desc: 'Nâng cấp, phát triển hạ tầng giao thông tại nơi có dự án nhằm gia tăng tính kết nối vào hạ tầng giao thông trọng điểm quốc gia.',
+      title: 'THÔNG TIN CHI TIẾT',
+      desc: 'Trải qua hành trình 29 năm hình thành và phát triển, Novaland hiện sở hữu danh mục hơn 50 dự án Bất động sản; không chỉ dừng lại ở các dự án Bất động sản Đô thị, Tập đoàn còn đầu tư mạnh mẽ loạt dự án Bất động sản Đô',
     },
   },
   {
-    label: 'Tin Thị Trường',
-    content: {
-      imgSrc: bannerImg,
-      title: 'HẠ TẦNG GIAO THÔNG',
-      desc: 'Nâng cấp, phát triển hạ tầng giao thông tại nơi có dự án nhằm gia tăng tính kết nối vào hạ tầng giao thông trọng điểm quốc gia.',
-    },
-  },
-  {
-    label: 'Tin Dự án',
+    label: 'Hạ tầng giao thông',
     content: {
       imgSrc: bannerImg,
       title: 'HẠ TẦNG GIAO THÔNG',

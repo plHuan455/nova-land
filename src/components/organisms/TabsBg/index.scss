@@ -10,11 +10,6 @@
   &_label {
     display: flex;
     align-items: center;
-    color: $jet;
-    text-transform: uppercase;
-    font-weight: 600;
-    white-space: normal;
-    @include font-base(17, 28);
   }
 
   &_image {
@@ -30,7 +25,7 @@
   &_tab {
     cursor: pointer;
     width: rem(276);
-    padding: rem(16);
+    padding: rem(16) rem(15);
     border: rem(1) solid $columbia-blue;
     background-image: url('~assets/images/Tabs/bg-tab.png');
     background-repeat: no-repeat;
@@ -45,7 +40,9 @@
       }
       
       #{$root}_label {
-        color: $white;
+        .a-text {
+          color: $white;
+        }
       }
     }
   }

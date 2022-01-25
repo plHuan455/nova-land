@@ -67,7 +67,7 @@ const ProductLines: React.FC<ProductLinesProps> = ({ title, dataProductLines }) 
     <div className="t-productLines">
       <Animate type="goUp">
         <div className="t-productLines_title">
-          <Heading modifiers={['30x42', '600', 'jet', 'uppercase', 'center']}>{title}</Heading>
+          <Heading modifiers={['30x42', '600', 'jet', 'uppercase', 'center', 'fontNoto']}>{title}</Heading>
         </div>
         <TabsBg variableMutate={indexActive}>
           <Carousel settings={settingDefault}>
