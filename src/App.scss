@@ -74,6 +74,8 @@
 @import 'components/templates/NewsDetail/';
 @import 'components/templates/ReportList/';
 @import 'components/templates/Error/';
+@import 'components/templates/FilterGroupRecruitment';
+@import 'components/templates/RecruitmentPositionList';
 
 // Pages
 @import 'pages/Home/';
@@ -84,3 +86,4 @@
 @import 'pages/FieldOfActivity/';
 @import 'pages/NewsDetail/';
 @import 'pages/ReportList/';
+@import 'pages/RecruitmentList';

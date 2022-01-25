@@ -11,7 +11,7 @@ interface FilterGroupItem {
   content: string;
 }
 
-interface FilterGroupProps {
+export interface FilterGroupProps {
   title: string;
   dataFilterGroup?: FilterGroupItem[];
   handleOnChange?: (e: ChangeEvent<HTMLInputElement>) => void;
@@ -31,7 +31,7 @@ const FilterGroup: React.FC<FilterGroupProps> = ({
             {title}
           </Text>
         </div>
-        <div className="o-filterGroup_wrapTitle_icon" onClick={() => setActive(!active)}>
+        <div className="o-filterGroup_wrapTitle-icon" onClick={() => setActive(!active)}>
           <Icon
             size="24"
             iconName={active ? 'collapse' : 'expand'}
@@ -61,11 +61,6 @@ const FilterGroup: React.FC<FilterGroupProps> = ({
       </div>
     </div>
   );
-};
-
-FilterGroup.defaultProps = {
-  dataFilterGroup: undefined,
-  handleOnChange: undefined,
 };
 
 export default FilterGroup;

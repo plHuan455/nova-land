@@ -1,11 +1,6 @@
 .t-signupJobPostings {
-  padding: rem(80) 0 ;
-  @include tablet-down {
-    padding: rem(60) 0 ;
-  }
-  @include mobile-down {
-    padding: rem(24) 0 ;
-  }
+  background: $anti-flash-white-4f9;
+
   &_desc {
     margin-top: rem(20);
   }

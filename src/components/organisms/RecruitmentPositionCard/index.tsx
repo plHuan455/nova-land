@@ -5,7 +5,7 @@ import Icon from 'components/atoms/Icon';
 import Link from 'components/atoms/Link';
 import Text from 'components/atoms/Text';
 
-interface RecruitmentPositionCardProps {
+export interface RecruitmentPositionCardProps {
   breadcrumbsRecruitment: string[];
   title: string;
   desc: string;
@@ -60,7 +60,7 @@ const RecruitmentPositionCard: React.FC<RecruitmentPositionCardProps> = ({
       <Text modifiers={['12x17', '300', 'jet']}>
         Hạn chót nộp hồ sơ
       </Text>
-      <div className="o-recruitmentPositionCard_expDate">
+      <div className="o-recruitmentPositionCard_right_expDate">
         <Heading
           modifiers={['24x30', 'jet', '300']}
           content={expirationDate}

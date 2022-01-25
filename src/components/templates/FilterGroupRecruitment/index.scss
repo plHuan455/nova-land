@@ -1,0 +1,63 @@
+.t-filterGroupRecruitment {
+  @include tablet-down {
+    position: fixed;
+    width: 85%;
+    background: $white-smoke-8f8;
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+    padding: rem(10);
+    transition: 0.5s;
+    z-index: 103;
+    right: -100%;
+    top: rem(80);
+  }
+
+  &-open {
+    right: 0;
+  }
+
+  &_mbFilter {
+    display: none;
+    border-top-right-radius: rem(10);
+    cursor: pointer;
+    transform: rotate(270deg);
+    background: $dark-midnight-blue0;
+    position: fixed;
+    transition: 0.4s;
+    z-index: 90;
+    border-top-left-radius: rem(10);
+    top: 38%;
+    padding: rem(8);
+
+    @include tablet-down {
+      @include adjust-flex();
+      right: rem(-18);
+    }
+  }
+
+  &_mbClose {
+    display: none;
+
+    @include tablet-down {
+      width: rem(28);
+      height: rem(28);
+      background: $ucla-blue;
+      border-radius: rem(10);
+      @include adjust-flex();
+    }
+  }
+
+  &_top {
+    @include adjust-flex(space-between, center);
+  }
+
+  &_item {
+    &:not(:first-child) {
+      margin-top: rem(24);
+
+      @include tablet-down {
+        margin-top: rem(18);
+      }
+    }
+  }
+}

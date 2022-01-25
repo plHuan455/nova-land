@@ -3,6 +3,10 @@
 
   &_wrapTitle {
     @include adjust-flex(space-between, center);
+
+    &-icon {
+      cursor: pointer;
+    }
   }
 
   &_wrapperContent {
