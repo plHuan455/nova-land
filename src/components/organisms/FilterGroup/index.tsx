@@ -31,7 +31,7 @@ const FilterGroup: React.FC<FilterGroupProps> = ({
             {title}
           </Text>
         </div>
-        <div className="o-filterGroup_wrapTitle_icon" onClick={() => setActive(!active)}>
+        <div className="o-filterGroup_wrapTitle-icon" onClick={() => setActive(!active)}>
           <Icon
             size="24"
             iconName={active ? 'collapse' : 'expand'}
