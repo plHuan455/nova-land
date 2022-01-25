@@ -9,7 +9,7 @@ const ReportListBannerContainer: React.FC = () => (
     <BannerRecruitment
       imageSrc={imgBanner}
     >
-      <Heading modifiers={['52x65', 'white', 'center', 'fontNoto']}>Báo cáo thường niên</Heading>
+      <Heading modifiers={['52x65', 'white', 'center', 'fontNoto', '400']}>Báo cáo thường niên</Heading>
     </BannerRecruitment>
   </div>
 );

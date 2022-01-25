@@ -32,7 +32,7 @@ const ReportList: React.FC<ReportListProps> = ({
         ))}
       </CustomRow>
       {totalPage > 0 && (
-      <div className="t-reportList_pagination u-mt-md-10 u-mt-28">
+      <div className="t-reportList_pagination u-mt-10">
         <Pagination
           totalPage={totalPage}
           pageCurrent={currentPage}
