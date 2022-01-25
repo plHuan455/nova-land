@@ -1,3 +1,5 @@
+export const BASE_URL = process.env.REACT_APP_BASE_URL;
+
 function mapModifiers(
   baseClassName: string,
   ...modifiers: (string | string[] | false | undefined)[]
@@ -114,3 +116,8 @@ export const handleScrollCenter = (ref: React.RefObject<HTMLDivElement | null>,
     behavior: 'smooth',
   });
 };
+
+export function getImageURL(imgUrl?: string) {
+  if (!BASE_URL || !imgUrl) return '';
+  return BASE_URL + imgUrl;
+}

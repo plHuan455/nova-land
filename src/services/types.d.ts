@@ -1,3 +1,5 @@
+type ErrorResponse = { code: number; message: string };
+
 type ErrorCodeResponse = {
   code: string;
   title: string;
@@ -6,15 +8,45 @@ type ErrorCodeResponse = {
 type SEOData = {
   title?: string;
   description?: string;
-  keywords?: string;
-  imgSrc?: string;
+  keyword?: string;
 }
 
 type OGData = {
   title?: string;
   description?: string;
-  keywords?: string;
-  imgSrc?: string;
+  image?: string;
+  type?: string;
+}
+
+type HeaderData = {
+  email: string;
+  phoneCskh: string;
+  social : SocialData[];
+}
+
+type SocialData = {
+  icon: string;
+  link: SocialLinkData;
+}
+
+type SocialLinkData = {
+  text: string;
+  url: string;
+  target: string;
+}
+
+type FooterData = {
+  copyright: string;
+  title: string;
+  description: string;
+  policy: PolicyTermsData;
+  terms: PolicyTermsData;
+}
+
+type PolicyTermsData = {
+  text: string;
+  url: string;
+  target: string;
 }
 
 type LinkData = {
@@ -54,15 +86,11 @@ type LocalesItem = {
   icon?: string;
   message?: string;
   active?: boolean;
-  default?: boolean;
 }
 
 type LocalesResponse = {
   vi: LocalesItem;
   en: LocalesItem;
-  kr: LocalesItem;
-  jp: LocalesItem;
-  cn: LocalesItem;
 }
 
 type LanguageType = 'VN'|'EN'|'CN'|'JP'|'KR';
