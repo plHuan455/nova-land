@@ -60,6 +60,17 @@
     }
   }
 
+  &-30x37-5 {
+    @include font-base(30, 37.5);
+    @include tablet-down {
+      @include font-base(26, 35);
+    }
+
+    @include mobile-down {
+      @include font-base(22, 27);
+    }
+  }
+
   &-36x40 {
     @include font-base(36, 40);
     @include tablet-down {

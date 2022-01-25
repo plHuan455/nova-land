@@ -1,0 +1,27 @@
+.t-error {
+  $root: &;
+
+  &_imgError {
+    margin: auto;
+    max-width: rem(641);
+    width: 100%;
+  }
+
+  &_btn {
+    margin-top: rem(40);
+
+    .a-button {
+      margin: auto;
+      max-width: rem(282);
+      width: 100%;
+    }
+  }
+
+  .a-heading {
+    margin-top: rem(14);
+  }
+
+  .a-text {
+    margin-top: rem(10);
+  }
+}

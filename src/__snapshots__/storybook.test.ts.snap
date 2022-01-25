@@ -3949,6 +3949,373 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
               className="t-awardList_card"
             >
               <div
+                aria-hidden={true}
+                className="slick-slide"
+                data-index={4}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "outline": "none",
+                    "width": 0,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div
+                  className="t-awardList_card_img"
+                >
+                  <img
+                    alt="award-img"
+                    src="award_1.png"
+                  />
+                </div>
+                <div
+                  className="t-awardList_card_desc"
+                >
+                  <p
+                    className="a-text a-text-18x22 a-text-fontLexend a-text-arsenic a-text-center"
+                  >
+                    Top 10 Chủ đầu tư Bất động sản uy tín
+                  </p>
+                </div>
+              </div>
+              <div
+                aria-hidden={true}
+                className="slick-slide"
+                data-index={5}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "outline": "none",
+                    "width": 0,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div
+                  className="t-awardList_card_year-clip"
+                >
+                  <h2
+                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                  >
+                    <div
+                      className="o-carousel_item"
+                    >
+                      <div
+                        className="o-tabsBg_tab"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="o-tabsBg_label "
+                        >
+                          <div
+                            className="o-tabsBg_image"
+                          >
+                            <div
+                              className="a-image a-image-1x1"
+                            >
+                              <img
+                                alt="replacing"
+                                loading="lazy"
+                                src="ic_inActiveTab.png"
+                              />
+                            </div>
+                          </div>
+                          <span>
+                            BĐS CÔNG NGHIỆP B
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="o-tabsBg_panel o-tabsBg_panel-active"
+  >
+    Content 1
+  </div>
+  <div
+    className="o-tabsBg_panel"
+  >
+    Content 2
+  </div>
+  <div
+    className="o-tabsBg_panel"
+  >
+    Content 3
+  </div>
+  <div
+    className="o-tabsBg_panel"
+  >
+    Content 4
+  </div>
+  <div
+    className="o-tabsBg_panel"
+  >
+    Content 5
+  </div>
+  <div
+    className="o-tabsBg_panel"
+  >
+    Content 6
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/organisms/Tabs Normal 1`] = `
+<div
+  style={
+    Object {
+      "background": "#bfbfbf",
+    }
+  }
+>
+  <div
+    className="container o-container"
+  >
+    <div
+      className="o-tabs"
+    >
+      <div
+        className="o-tabs_labels"
+      >
+        <div
+          className="o-tabs_tab o-tabs_tab-active"
+          onClick={[Function]}
+        >
+          <span
+            className="o-tabs_label "
+          >
+            <div
+              className="t-awardList_card"
+            >
+              <div
+                className="t-awardList_card_wrap"
+              >
+                <div
+                  className="t-awardList_card_img"
+                >
+                  <img
+                    alt="award-img"
+                    src="award_2.png"
+                  />
+                </div>
+                <div
+                  className="t-awardList_card_desc"
+                >
+                  <p
+                    className="a-text a-text-18x22 a-text-fontLexend a-text-arsenic a-text-center"
+                  >
+                    HR Asia - Nơi làm việc tốt nhất Châu Á
+                  </p>
+                </div>
+              </div>
+              <div
+                className="t-awardList_card_year"
+              >
+                <div
+                  className="t-awardList_card_year-clip"
+                >
+                  <h2
+                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                  >
+                    2021
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="o-tabs_tab"
+            onClick={[Function]}
+          >
+            <span
+              className="o-tabs_label o-tabs_label-20x28"
+            >
+              <div
+                className="t-awardList_card_wrap"
+              >
+                <div
+                  className="t-awardList_card_img"
+                >
+                  <img
+                    alt="award-img"
+                    src="award_3.png"
+                  />
+                </div>
+                <div
+                  className="t-awardList_card_desc"
+                >
+                  <p
+                    className="a-text a-text-18x22 a-text-fontLexend a-text-arsenic a-text-center"
+                  >
+                    Nhà phát triển BĐS hạng sang tốt nhất Việt Nam - Luxury Lifestyle Awards
+                  </p>
+                </div>
+              </div>
+              <div
+                className="t-awardList_card_year"
+              >
+                <div
+                  className="t-awardList_card_year-clip"
+                >
+                  <h2
+                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                  >
+                    2021
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="t-awardList_tabs_panelWrap-item"
+          >
+            <div
+              className="t-awardList_card"
+            >
+              <div
+                className="t-awardList_card_wrap"
+              >
+                <div
+                  className="t-awardList_card_img"
+                >
+                  <img
+                    alt="award-img"
+                    src="award_4.png"
+                  />
+                </div>
+                <div
+                  className="t-awardList_card_desc"
+                >
+                  <p
+                    className="a-text a-text-18x22 a-text-fontLexend a-text-arsenic a-text-center"
+                  >
+                    Chứng nhận Công trình tiêu biểu chào mừng 100 năm Liên Hiệp Quốc
+                  </p>
+                </div>
+              </div>
+              <div
+                className="t-awardList_card_year"
+              >
+                <div
+                  className="t-awardList_card_year-clip"
+                >
+                  <h2
+                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                  >
+                    2021
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="t-awardList_tabs_panelWrap-item"
+          >
+            <div
+              className="t-awardList_card"
+            >
+              <div
+                className="t-awardList_card_wrap"
+              >
+                <div
+                  className="t-awardList_card_img"
+                >
+                  <img
+                    alt="award-img"
+                    src="award_5.png"
+                  />
+                </div>
+                <div
+                  className="t-awardList_card_desc"
+                >
+                  <p
+                    className="a-text a-text-18x22 a-text-fontLexend a-text-arsenic a-text-center"
+                  >
+                    Nhà phát triển và đầu tư. Bất động sản Tiêu biểu - Nhịp Cầu Đầu Tư
+                  </p>
+                </div>
+              </div>
+              <div
+                className="t-awardList_card_year"
+              >
+                <div
+                  className="t-awardList_card_year-clip"
+                >
+                  <h2
+                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                  >
+                    2021
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="t-awardList_tabs_panelWrap-item"
+          >
+            <div
+              className="t-awardList_card"
+            >
+              <div
+                className="t-awardList_card_wrap"
+              >
+                <div
+                  className="t-awardList_card_img"
+                >
+                  <img
+                    alt="award-img"
+                    src="award_5.png"
+                  />
+                </div>
+                <div
+                  className="t-awardList_card_desc"
+                >
+                  <p
+                    className="a-text a-text-18x22 a-text-fontLexend a-text-arsenic a-text-center"
+                  >
+                    Nhà phát triển Bất động sản xuất sắc Việt Nam - Euromoney
+                  </p>
+                </div>
+              </div>
+              <div
+                className="t-awardList_card_year"
+              >
+                <div
+                  className="t-awardList_card_year-clip"
+                >
+                  <h2
+                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                  >
+                    2021
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="o-tabs_panel o-tabs_panel-active"
+      >
+        <div
+          className="t-awardList_tabs_panelWrap"
+        >
+          <div
+            className="t-awardList_tabs_panelWrap-item"
+          >
+            <div
+              className="t-awardList_card"
+            >
+              <div
                 className="t-awardList_card_wrap"
               >
                 <div
@@ -4756,7 +5123,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                   className="t-awardList_card_year-clip"
                 >
                   <h2
-                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
                     2018
                   </h2>
@@ -4798,7 +5165,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                   className="t-awardList_card_year-clip"
                 >
                   <h2
-                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
                     2018
                   </h2>
@@ -4840,7 +5207,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                   className="t-awardList_card_year-clip"
                 >
                   <h2
-                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
                     2018
                   </h2>
@@ -4882,7 +5249,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                   className="t-awardList_card_year-clip"
                 >
                   <h2
-                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
                     2018
                   </h2>
@@ -4924,7 +5291,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                   className="t-awardList_card_year-clip"
                 >
                   <h2
-                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
                     2018
                   </h2>
@@ -4966,7 +5333,7 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                   className="t-awardList_card_year-clip"
                 >
                   <h2
-                    className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
+                    className="a-heading a-heading-36x40 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
                     2018
                   </h2>
@@ -5024,11 +5391,11 @@ exports[`Storyshots Components/templates/DevelopmentHistory Normal 1`] = `
     <div
       className="t-developmentHistory_description"
     >
-      <p
-        className="a-text a-text-center a-text-white a-text-16x24 a-text-300"
+      <div
+        className="a-text a-text-300 a-text-center a-text-dimGray a-text-16x24"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "Trên hành trình trở thành nhà Đầu tư - Phát triển bất động sản uy tín hàng đầu Việt Nam, bằng niềm đam mê, sự tập trung và kiên định thực hiện sứ mệnh của mình, Novaland đã và đang đa dạng hóa sản phẩm ở trung tâm TPHCM, đô thị vệ tinh và đô thị du lịch nghỉ dưỡng ở các tỉnh thành trọng điểm, kiến tạo nên những cộng đồng tinh hoa, thu hút khách du lịch trong và ngoài nước.",
+            "__html": "Hệ sinh thái Nova Group, mang những tinh hoa Văn Hóa, Ẩm Thực, Giáo Dục, Vui Chơi - Giải Trí, Du Lịch Nghỉ Dưỡng, Chăm Sóc Sức Khỏe, Y Tế hàng đầu thế giới và Việt Nam về hội tụ tại quần thể các dự án của Novaland nhằm phục vụ sự tiện nghi và thịnh vượng cho cộng đồng cư dân, tăng giá trị cho các sản phẩm bất động sản và hiệu quả cho các nhà đầu tư.",
           }
         }
       />
@@ -5137,15 +5504,11 @@ exports[`Storyshots Components/templates/DevelopmentHistory Normal 1`] = `
                           <div
                             className="t-processItem_card_image"
                           >
-                            <div
-                              className="a-image a-image-350x197"
-                            >
-                              <img
-                                alt="replacing"
-                                loading="lazy"
-                                src="card_slide.png"
-                              />
-                            </div>
+                            <img
+                              alt="brand"
+                              sizes="contain"
+                              src="img_eco_hover.png"
+                            />
                           </div>
                         </div>
                       </div>
@@ -5213,15 +5576,11 @@ exports[`Storyshots Components/templates/DevelopmentHistory Normal 1`] = `
                           <div
                             className="t-processItem_card_image"
                           >
-                            <div
-                              className="a-image a-image-350x197"
-                            >
-                              <img
-                                alt="replacing"
-                                loading="lazy"
-                                src="card_slide.png"
-                              />
-                            </div>
+                            <img
+                              alt="brand"
+                              sizes="contain"
+                              src="img_eco_hover.png"
+                            />
                           </div>
                         </div>
                       </div>
@@ -5289,15 +5648,11 @@ exports[`Storyshots Components/templates/DevelopmentHistory Normal 1`] = `
                           <div
                             className="t-processItem_card_image"
                           >
-                            <div
-                              className="a-image a-image-350x197"
-                            >
-                              <img
-                                alt="replacing"
-                                loading="lazy"
-                                src="card_slide.png"
-                              />
-                            </div>
+                            <img
+                              alt="brand"
+                              sizes="contain"
+                              src="img_eco_hover.png"
+                            />
                           </div>
                         </div>
                       </div>
@@ -5365,15 +5720,11 @@ exports[`Storyshots Components/templates/DevelopmentHistory Normal 1`] = `
                           <div
                             className="t-processItem_card_image"
                           >
-                            <div
-                              className="a-image a-image-350x197"
-                            >
-                              <img
-                                alt="replacing"
-                                loading="lazy"
-                                src="card_slide.png"
-                              />
-                            </div>
+                            <img
+                              alt="brand"
+                              sizes="contain"
+                              src="img_eco_hover.png"
+                            />
                           </div>
                         </div>
                       </div>
@@ -5441,15 +5792,11 @@ exports[`Storyshots Components/templates/DevelopmentHistory Normal 1`] = `
                           <div
                             className="t-processItem_card_image"
                           >
-                            <div
-                              className="a-image a-image-350x197"
-                            >
-                              <img
-                                alt="replacing"
-                                loading="lazy"
-                                src="card_slide.png"
-                              />
-                            </div>
+                            <img
+                              alt="brand"
+                              sizes="contain"
+                              src="img_eco_hover.png"
+                            />
                           </div>
                         </div>
                       </div>
@@ -5633,14 +5980,11 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
     <div
       className="t-ecoSystems_desc"
     >
-      <div
+      <p
         className="a-text a-text-300 a-text-center a-text-dimGray a-text-16x24"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "Hệ sinh thái Nova Group, mang những tinh hoa Văn Hóa, Ẩm Thực, Giáo Dục, Vui Chơi - Giải Trí, Du Lịch Nghỉ Dưỡng, Chăm Sóc Sức Khỏe, Y Tế hàng đầu thế giới và Việt Nam về hội tụ tại quần thể các dự án của Novaland nhằm phục vụ sự tiện nghi và thịnh vượng cho cộng đồng cư dân, tăng giá trị cho các sản phẩm bất động sản và hiệu quả cho các nhà đầu tư.",
-          }
-        }
-      />
+      >
+        Hệ sinh thái Nova Group, mang những tinh hoa Văn Hóa, Ẩm Thực, Giáo Dục, Vui Chơi - Giải Trí, Du Lịch Nghỉ Dưỡng, Chăm Sóc Sức Khỏe, Y Tế hàng đầu thế giới và Việt Nam về hội tụ tại quần thể các dự án của Novaland nhằm phục vụ sự tiện nghi và thịnh vượng cho cộng đồng cư dân, tăng giá trị cho các sản phẩm bất động sản và hiệu quả cho các nhà đầu tư.
+      </p>
     </div>
     <div
       className="t-ecoSystems_brands"
@@ -5666,21 +6010,8 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
             onTouchStart={[Function]}
             style={Object {}}
           >
-            <div
-              className="slick-track"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onMouseOver={[Function]}
-              style={
-                Object {
-                  "WebkitTransform": "translate3d(0px, 0px, 0px)",
-                  "WebkitTransition": "",
-                  "msTransform": "translateX(0px)",
-                  "opacity": 1,
-                  "transform": "translate3d(0px, 0px, 0px)",
-                  "transition": "",
-                }
-              }
+            <h2
+              className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-capitalize"
             >
               <div
                 aria-hidden={false}
@@ -5695,16 +6026,20 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                 }
                 tabIndex="-1"
               >
-                <div>
-                  <div
-                    className="o-carousel_wrap"
-                    style={
-                      Object {
-                        "display": "inline-block",
-                        "width": "100%",
-                      }
-                    }
-                    tabIndex={-1}
+                <div
+                  className="t-featuredNewsCard_content_title"
+                >
+                  <h2
+                    className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-capitalize"
+                  >
+                    Bốn dự án thành phần cao tốc Bắc Nam sẽ hoàn thành năm 2022
+                  </h2>
+                </div>
+                <div
+                  className="mt-8"
+                >
+                  <p
+                    className="a-text a-text-12x17 a-text-300 a-text-columbiaBlue"
                   >
                     <div
                       className="o-carousel_item"
@@ -5729,11 +6064,42 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                           <div
                             className="m-ecoCard_brands"
                           >
-                            <img
-                              alt="brand"
-                              sizes="contain"
-                              src="img_eco_hover.png"
-                            />
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="dynasty_house.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="jumbo.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="sgcasa.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="phin_deli.png"
+                              />
+                            </div>
                           </div>
                           <a
                             aria-current="page"
@@ -5769,7 +6135,34 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                 }
                 tabIndex="-1"
               >
-                <div>
+                <div
+                  className="t-featuredNewsCard_image"
+                >
+                  <div
+                    className="a-image a-image-582x252"
+                  >
+                    <img
+                      alt="ImgFeaturedNews2"
+                      loading="lazy"
+                      src="img_featuredNews2.png"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="t-featuredNewsCard_layer"
+                />
+                <div
+                  className="t-featuredNewsCard_content"
+                >
+                  <div
+                    className="t-featuredNewsCard_content_title"
+                  >
+                    <h2
+                      className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-capitalize"
+                    >
+                      Cao tốc Phan Thiết - Dầu Giây qua Đồng Nai phấn đấu vượt tiến độ...
+                    </h2>
+                  </div>
                   <div
                     className="o-carousel_wrap"
                     style={
@@ -5803,11 +6196,42 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                           <div
                             className="m-ecoCard_brands"
                           >
-                            <img
-                              alt="brand"
-                              sizes="contain"
-                              src="img_eco_hover.png"
-                            />
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="dynasty_house.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="jumbo.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="sgcasa.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="phin_deli.png"
+                              />
+                            </div>
                           </div>
                           <a
                             aria-current="page"
@@ -5854,8 +6278,8 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                     }
                     tabIndex={-1}
                   >
-                    <div
-                      className="o-carousel_item"
+                    <h2
+                      className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-capitalize"
                     >
                       <div
                         className="t-ecoSystems_brands-item"
@@ -5877,11 +6301,42 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                           <div
                             className="m-ecoCard_brands"
                           >
-                            <img
-                              alt="brand"
-                              sizes="contain"
-                              src="img_eco_hover.png"
-                            />
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="dynasty_house.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="jumbo.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="sgcasa.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="phin_deli.png"
+                              />
+                            </div>
                           </div>
                           <a
                             aria-current="page"
@@ -5951,11 +6406,42 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                           <div
                             className="m-ecoCard_brands"
                           >
-                            <img
-                              alt="brand"
-                              sizes="contain"
-                              src="img_eco_hover.png"
-                            />
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="dynasty_house.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="jumbo.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="sgcasa.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="phin_deli.png"
+                              />
+                            </div>
                           </div>
                           <a
                             aria-current="page"
@@ -6025,11 +6511,42 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
                           <div
                             className="m-ecoCard_brands"
                           >
-                            <img
-                              alt="brand"
-                              sizes="contain"
-                              src="img_eco_hover.png"
-                            />
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="dynasty_house.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="jumbo.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="sgcasa.png"
+                              />
+                            </div>
+                            <div
+                              className="m-ecoCard_brands-item"
+                            >
+                              <img
+                                alt="brand"
+                                sizes="contain"
+                                src="phin_deli.png"
+                              />
+                            </div>
                           </div>
                           <a
                             aria-current="page"
@@ -6082,6 +6599,59 @@ exports[`Storyshots Components/templates/EcoSystems Normal 1`] = `
               />
             </li>
           </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/templates/Error Normal 1`] = `
+<div
+  className="t-error"
+>
+  <div
+    className="t-section"
+  >
+    <div
+      className="container o-container o-container-fullscreen"
+    >
+      <div
+        className="t-error_imgError"
+      >
+        <div
+          className="a-image a-image-641x211"
+        >
+          <img
+            alt="imageError"
+            loading="lazy"
+            src="error-404.png"
+          />
+        </div>
+      </div>
+      <div
+        className="t-error_wrapContent"
+      >
+        <h2
+          className="a-heading a-heading-jet a-heading-30x37-5 a-heading-600 a-heading-center"
+        >
+          Chúng tôi xin lỗi vì sự bất tiện này!
+        </h2>
+        <p
+          className="a-text a-text-jet a-text-20x28 a-text-400 a-text-center"
+        >
+          Có lẽ trang bạn đang tìm kiếm không tồn tại.
+        </p>
+        <div
+          className="t-error_btn"
+        >
+          <button
+            className="a-button a-button-primary"
+            disabled={false}
+            type="button"
+          >
+            Trở về trang chủ
+          </button>
         </div>
       </div>
     </div>
@@ -6161,6 +6731,11 @@ exports[`Storyshots Components/templates/FeaturedNews Normal 1`] = `
   <div
     className="container o-container"
   >
+    <h2
+      className="a-heading a-heading-32x48 a-heading-jet a-heading-500 a-heading-fontNoto a-heading-center a-heading-uppercase"
+    >
+      NHỮNG DỰ ÁN NỔI BẬT
+    </h2>
     <div
       className="t-featuredNews_wrapper"
     >
@@ -6203,7 +6778,7 @@ exports[`Storyshots Components/templates/FeaturedNews Normal 1`] = `
                   className="t-featuredNewsCard_content_title"
                 >
                   <h2
-                    className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-capitalize"
+                    className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-uppercase"
                   >
                     Bốn dự án thành phần cao tốc Bắc Nam sẽ hoàn thành năm 2022
                   </h2>
@@ -6264,7 +6839,7 @@ exports[`Storyshots Components/templates/FeaturedNews Normal 1`] = `
                     className="t-featuredNewsCard_content_title"
                   >
                     <h2
-                      className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-capitalize"
+                      className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-uppercase"
                     >
                       Cao tốc Phan Thiết - Dầu Giây qua Đồng Nai phấn đấu vượt tiến độ...
                     </h2>
@@ -6322,7 +6897,7 @@ exports[`Storyshots Components/templates/FeaturedNews Normal 1`] = `
                     className="t-featuredNewsCard_content_title"
                   >
                     <h2
-                      className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-capitalize"
+                      className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-uppercase"
                     >
                       Novaland nằm trong Top 50 công ty niêm yết tốt nhất Việt Nam 2021
                     </h2>
@@ -6391,7 +6966,7 @@ exports[`Storyshots Components/templates/FeaturedNews Vertical 1`] = `
             className="t-featuredNewsCard_content_title"
           >
             <h2
-              className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-capitalize"
+              className="a-heading a-heading-24x30 a-heading-600 a-heading-white a-heading-uppercase"
             >
               Bốn dự án thành phần cao tốc Bắc Nam sẽ hoàn thành năm 2022
             </h2>
@@ -6420,7 +6995,7 @@ exports[`Storyshots Components/templates/FeaturedProjects Normal 1`] = `
     className="container o-container"
   >
     <h2
-      className="a-heading a-heading-32x48 a-heading-jet a-heading-500 a-heading-fontNoto a-heading-center a-heading-uppercase"
+      className="a-heading a-heading-32x48 a-heading-jet a-heading-500 a-heading-fontNoto a-heading-center"
     >
       NHỮNG DỰ ÁN NỔI BẬT
     </h2>
@@ -18887,6 +19462,577 @@ exports[`Storyshots Components/templates/OutstandingProject Normal 1`] = `
                   </div>
                   <div
                     aria-hidden={true}
+                    className="slick-slide slick-cloned"
+                    data-index={-5}
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "width": 0,
+                      }
+                    }
+                    tabIndex="-1"
+                  >
+                    <div>
+                      <div
+                        className="o-carousel_wrap"
+                        style={
+                          Object {
+                            "display": "inline-block",
+                            "width": "100%",
+                          }
+                        }
+                        tabIndex={-1}
+                      >
+                        <div
+                          className="o-carousel_item"
+                        >
+                          <div
+                            className="t-outstandingProject_item"
+                          >
+                            <div
+                              className="t-outstandingProjectCard"
+                            >
+                              <a
+                                aria-current="page"
+                                className="a-link   active"
+                                href="/"
+                                onClick={[Function]}
+                                target="_self"
+                              >
+                                <div
+                                  className="t-outstandingProjectCard_thumbnail"
+                                >
+                                  <div
+                                    className="a-image a-image-221x166"
+                                  >
+                                    <img
+                                      alt="OutstandingProjectCard"
+                                      loading="lazy"
+                                      src="img_outstanding_project4.png"
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="t-outstandingProjectCard_title"
+                                >
+                                  <p
+                                    className="a-text a-text-16x24 a-text-arsenic a-text-300 a-text-fontLexend"
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "Sunrise City",
+                                      }
+                                    }
+                                  />
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    aria-hidden={true}
+                    className="slick-slide slick-cloned"
+                    data-index={-4}
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "width": 0,
+                      }
+                    }
+                    tabIndex="-1"
+                  >
+                    <div>
+                      <div
+                        className="o-carousel_wrap"
+                        style={
+                          Object {
+                            "display": "inline-block",
+                            "width": "100%",
+                          }
+                        }
+                        tabIndex={-1}
+                      >
+                        <div
+                          className="o-carousel_item"
+                        >
+                          <div
+                            className="t-outstandingProject_item"
+                          >
+                            <div
+                              className="t-outstandingProjectCard"
+                            >
+                              <a
+                                aria-current="page"
+                                className="a-link   active"
+                                href="/"
+                                onClick={[Function]}
+                                target="_self"
+                              >
+                                <div
+                                  className="t-outstandingProjectCard_thumbnail"
+                                >
+                                  <div
+                                    className="a-image a-image-221x166"
+                                  >
+                                    <img
+                                      alt="OutstandingProjectCard"
+                                      loading="lazy"
+                                      src="img_outstanding_project.png"
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="t-outstandingProjectCard_title"
+                                >
+                                  <p
+                                    className="a-text a-text-16x24 a-text-arsenic a-text-300 a-text-fontLexend"
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "Aqua City",
+                                      }
+                                    }
+                                  />
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    aria-hidden={true}
+                    className="slick-slide slick-cloned"
+                    data-index={-3}
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "width": 0,
+                      }
+                    }
+                    tabIndex="-1"
+                  >
+                    <div>
+                      <div
+                        className="o-carousel_wrap"
+                        style={
+                          Object {
+                            "display": "inline-block",
+                            "width": "100%",
+                          }
+                        }
+                        tabIndex={-1}
+                      >
+                        <div
+                          className="o-carousel_item"
+                        >
+                          <div
+                            className="t-outstandingProject_item"
+                          >
+                            <div
+                              className="t-outstandingProjectCard"
+                            >
+                              <a
+                                aria-current="page"
+                                className="a-link   active"
+                                href="/"
+                                onClick={[Function]}
+                                target="_self"
+                              >
+                                <div
+                                  className="t-outstandingProjectCard_thumbnail"
+                                >
+                                  <div
+                                    className="a-image a-image-221x166"
+                                  >
+                                    <img
+                                      alt="OutstandingProjectCard"
+                                      loading="lazy"
+                                      src="img_outstanding_project2.png"
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="t-outstandingProjectCard_title"
+                                >
+                                  <p
+                                    className="a-text a-text-16x24 a-text-arsenic a-text-300 a-text-fontLexend"
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "NovaWorld Phan Thiet",
+                                      }
+                                    }
+                                  />
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    aria-hidden={false}
+                    className="slick-slide slick-active slick-cloned"
+                    data-index={-2}
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "width": 0,
+                      }
+                    }
+                    tabIndex="-1"
+                  >
+                    <div>
+                      <div
+                        className="o-carousel_wrap"
+                        style={
+                          Object {
+                            "display": "inline-block",
+                            "width": "100%",
+                          }
+                        }
+                        tabIndex={-1}
+                      >
+                        <div
+                          className="o-carousel_item"
+                        >
+                          <div
+                            className="t-outstandingProject_item"
+                          >
+                            <div
+                              className="t-outstandingProjectCard"
+                            >
+                              <a
+                                aria-current="page"
+                                className="a-link   active"
+                                href="/"
+                                onClick={[Function]}
+                                target="_self"
+                              >
+                                <div
+                                  className="t-outstandingProjectCard_thumbnail"
+                                >
+                                  <div
+                                    className="a-image a-image-221x166"
+                                  >
+                                    <img
+                                      alt="OutstandingProjectCard"
+                                      loading="lazy"
+                                      src="img_outstanding_project3.png"
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="t-outstandingProjectCard_title"
+                                >
+                                  <p
+                                    className="a-text a-text-16x24 a-text-arsenic a-text-300 a-text-fontLexend"
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "NovaWorld Ho Tram",
+                                      }
+                                    }
+                                  />
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    aria-hidden={false}
+                    className="slick-slide slick-active slick-cloned"
+                    data-index={-1}
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "width": 0,
+                      }
+                    }
+                    tabIndex="-1"
+                  >
+                    <div>
+                      <div
+                        className="o-carousel_wrap"
+                        style={
+                          Object {
+                            "display": "inline-block",
+                            "width": "100%",
+                          }
+                        }
+                        tabIndex={-1}
+                      >
+                        <div
+                          className="o-carousel_item"
+                        >
+                          <div
+                            className="t-outstandingProject_item"
+                          >
+                            <div
+                              className="t-outstandingProjectCard"
+                            >
+                              <a
+                                aria-current="page"
+                                className="a-link   active"
+                                href="/"
+                                onClick={[Function]}
+                                target="_self"
+                              >
+                                <div
+                                  className="t-outstandingProjectCard_thumbnail"
+                                >
+                                  <div
+                                    className="a-image a-image-221x166"
+                                  >
+                                    <img
+                                      alt="OutstandingProjectCard"
+                                      loading="lazy"
+                                      src="img_outstanding_project4.png"
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="t-outstandingProjectCard_title"
+                                >
+                                  <p
+                                    className="a-text a-text-16x24 a-text-arsenic a-text-300 a-text-fontLexend"
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "Sunrise City",
+                                      }
+                                    }
+                                  />
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    aria-hidden={false}
+                    className="slick-slide slick-active slick-center slick-current"
+                    data-index={0}
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "outline": "none",
+                        "width": 0,
+                      }
+                    }
+                    tabIndex="-1"
+                  >
+                    <div>
+                      <div
+                        className="o-carousel_wrap"
+                        style={
+                          Object {
+                            "display": "inline-block",
+                            "width": "100%",
+                          }
+                        }
+                        tabIndex={-1}
+                      >
+                        <div
+                          className="o-carousel_item"
+                        >
+                          <div
+                            className="t-outstandingProject_item"
+                          >
+                            <div
+                              className="t-outstandingProjectCard"
+                            >
+                              <a
+                                aria-current="page"
+                                className="a-link   active"
+                                href="/"
+                                onClick={[Function]}
+                                target="_self"
+                              >
+                                <div
+                                  className="t-outstandingProjectCard_thumbnail"
+                                >
+                                  <div
+                                    className="a-image a-image-221x166"
+                                  >
+                                    <img
+                                      alt="OutstandingProjectCard"
+                                      loading="lazy"
+                                      src="img_outstanding_project.png"
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="t-outstandingProjectCard_title"
+                                >
+                                  <p
+                                    className="a-text a-text-16x24 a-text-arsenic a-text-300 a-text-fontLexend"
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "Aqua City",
+                                      }
+                                    }
+                                  />
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    aria-hidden={false}
+                    className="slick-slide slick-active"
+                    data-index={1}
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "outline": "none",
+                        "width": 0,
+                      }
+                    }
+                    tabIndex="-1"
+                  >
+                    <div>
+                      <div
+                        className="o-carousel_wrap"
+                        style={
+                          Object {
+                            "display": "inline-block",
+                            "width": "100%",
+                          }
+                        }
+                        tabIndex={-1}
+                      >
+                        <div
+                          className="o-carousel_item"
+                        >
+                          <div
+                            className="t-outstandingProject_item"
+                          >
+                            <div
+                              className="t-outstandingProjectCard"
+                            >
+                              <a
+                                aria-current="page"
+                                className="a-link   active"
+                                href="/"
+                                onClick={[Function]}
+                                target="_self"
+                              >
+                                <div
+                                  className="t-outstandingProjectCard_thumbnail"
+                                >
+                                  <div
+                                    className="a-image a-image-221x166"
+                                  >
+                                    <img
+                                      alt="OutstandingProjectCard"
+                                      loading="lazy"
+                                      src="img_outstanding_project2.png"
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="t-outstandingProjectCard_title"
+                                >
+                                  <p
+                                    className="a-text a-text-16x24 a-text-arsenic a-text-300 a-text-fontLexend"
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "NovaWorld Phan Thiet",
+                                      }
+                                    }
+                                  />
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    aria-hidden={false}
+                    className="slick-slide slick-active"
+                    data-index={2}
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "outline": "none",
+                        "width": 0,
+                      }
+                    }
+                    tabIndex="-1"
+                  >
+                    <div>
+                      <div
+                        className="o-carousel_wrap"
+                        style={
+                          Object {
+                            "display": "inline-block",
+                            "width": "100%",
+                          }
+                        }
+                        tabIndex={-1}
+                      >
+                        <div
+                          className="o-carousel_item"
+                        >
+                          <div
+                            className="t-outstandingProject_item"
+                          >
+                            <div
+                              className="t-outstandingProjectCard"
+                            >
+                              <a
+                                aria-current="page"
+                                className="a-link   active"
+                                href="/"
+                                onClick={[Function]}
+                                target="_self"
+                              >
+                                <div
+                                  className="t-outstandingProjectCard_thumbnail"
+                                >
+                                  <div
+                                    className="a-image a-image-221x166"
+                                  >
+                                    <img
+                                      alt="OutstandingProjectCard"
+                                      loading="lazy"
+                                      src="img_outstanding_project3.png"
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="t-outstandingProjectCard_title"
+                                >
+                                  <p
+                                    className="a-text a-text-16x24 a-text-arsenic a-text-300 a-text-fontLexend"
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "NovaWorld Ho Tram",
+                                      }
+                                    }
+                                  />
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    aria-hidden={true}
                     className="slick-slide"
                     data-index={3}
                     onClick={[Function]}
@@ -19897,7 +21043,6 @@ exports[`Storyshots Components/templates/ProductLines Normal 1`] = `
                     onClick={[Function]}
                     style={
                       Object {
-                        "outline": "none",
                         "width": 0,
                       }
                     }
@@ -19953,7 +21098,6 @@ exports[`Storyshots Components/templates/ProductLines Normal 1`] = `
                     onClick={[Function]}
                     style={
                       Object {
-                        "outline": "none",
                         "width": 0,
                       }
                     }
@@ -20002,6 +21146,83 @@ exports[`Storyshots Components/templates/ProductLines Normal 1`] = `
                       </div>
                     </div>
                   </div>
+                </div>
+              </div>
+              <div
+                className="o-carousel_arrow o-carousel_arrow_next slick-arrow slick-next "
+                onClick={[Function]}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/templates/ProductLines Normal 1`] = `
+<div
+  className="container o-container"
+>
+  <div
+    className="t-productLines"
+  >
+    <div
+      className="undefined animate animate-goUp"
+    >
+      <div
+        className="t-productLines_title"
+      >
+        <h2
+          className="a-heading a-heading-30x42 a-heading-600 a-heading-jet a-heading-uppercase a-heading-center"
+        >
+          các dòng sản phẩm
+        </h2>
+      </div>
+      <div
+        className="o-tabsBg"
+      >
+        <div
+          className="o-tabsBg_labels"
+        >
+          <div
+            className="o-carousel"
+          >
+            <div
+              className="slick-slider slick-initialized"
+              dir="ltr"
+            >
+              <div
+                className="slick-list"
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={null}
+                onMouseMove={null}
+                onMouseUp={[Function]}
+                onTouchCancel={null}
+                onTouchEnd={[Function]}
+                onTouchMove={null}
+                onTouchStart={[Function]}
+                style={Object {}}
+              >
+                <div
+                  className="slick-track"
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "WebkitTransform": "translate3d(0px, 0px, 0px)",
+                      "WebkitTransition": "",
+                      "msTransform": "translateX(0px)",
+                      "opacity": 1,
+                      "transform": "translate3d(0px, 0px, 0px)",
+                      "transition": "",
+                    }
+                  }
+                >
                   <div
                     aria-hidden={false}
                     className="slick-slide slick-active"
@@ -22296,6 +23517,17 @@ exports[`Storyshots Components/templates/Schedule Normal 1`] = `
             </a>
           </div>
         </div>
+      </div>
+      <div
+        className="t-schedule_button"
+      >
+        <button
+          className="a-button a-button-outlineSpanishGray"
+          disabled={false}
+          type="button"
+        >
+          Xem tất cả lịch sự kiện
+        </button>
       </div>
       <div
         className="t-schedule_button"
