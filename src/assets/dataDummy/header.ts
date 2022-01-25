@@ -122,18 +122,57 @@ const headerMenuDummy: MenuItemDataTypes[] = [
   },
 ];
 
-export const headerRecruitmentMenuDummy: HeaderMenuTypes[] = [
+export const headerRecruitmentMenuDummy: MenuItemDataTypes[] = [
   {
-    href: '/danh-sach-tuyen-dung',
+    id: 1,
+    menuId: 1,
+    depth: 1,
+    lft: 1,
+    parentId: 1,
+    referenceId: 1,
+    reference: {
+      slug: '/danh-sach-tuyen-dung',
+    },
+    type: '22',
+    createdAt: 'ss',
+    target: '_blank',
+    rgt: 1,
     title: 'Novaland Tuyển dụng',
+    updatedAt: 'sss',
   },
   {
-    href: '/moi-truong-lam-viec',
+    id: 1,
+    menuId: 1,
+    depth: 1,
+    lft: 1,
+    parentId: 1,
+    referenceId: 1,
+    reference: {
+      slug: '/moi-truong-lam-viec',
+    },
+    type: '22',
+    createdAt: 'ss',
+    target: '_blank',
+    rgt: 1,
     title: 'Môi trường làm việc',
+    updatedAt: 'sss',
   },
   {
-    href: '/co-hoi-nghe-nghiep',
+    id: 1,
+    menuId: 1,
+    depth: 1,
+    lft: 1,
+    parentId: 1,
+    referenceId: 1,
+    reference: {
+      slug: '/co-hoi-nghe-nghiep',
+    },
+    type: '22',
+    createdAt: 'ss',
+    target: '_blank',
+    rgt: 1,
     title: 'Cơ hội nghề nghiệp',
+    updatedAt: 'sss',
   },
 ];
 
