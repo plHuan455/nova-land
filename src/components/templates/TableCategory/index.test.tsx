@@ -1,12 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import TableCategory from '.';
 
 describe('<TableCategory />', () => {
   test('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<TableCategory />, div);
+    ReactDOM.render(
+      <Router>
+        <TableCategory
+          dataHeader={[]}
+          dataBody={[]}
+          totalPage={0}
+        />
+      </Router>, div,
+    );
     ReactDOM.unmountComponentAtNode(div);
   });
 });

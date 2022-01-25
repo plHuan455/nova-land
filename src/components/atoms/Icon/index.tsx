@@ -39,6 +39,8 @@ export const iconList = {
   redError: 'redError',
   greenSuccess: 'greenSuccess',
   blackSmallClose: 'blackSmallClose',
+  download: 'download',
+  filePDF: 'filePDF',
 };
 
 export type IconName = keyof typeof iconList;

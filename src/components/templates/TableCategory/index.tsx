@@ -1,27 +1,49 @@
+/* eslint-disable react/no-danger */
 import React from 'react';
 
+// import imgPdf from 'assets/images/pdf.png';
+import Icon from 'components/atoms/Icon';
+// import Image from 'components/atoms/Image';
 import Text from 'components/atoms/Text';
+import Pagination from 'components/molecules/Pagination';
 
-interface TableCategoryItem {
+export interface TableCategoryItem {
   documentName: string;
   dataByQuarter: {
-    colspan: number;
+    colSpan?: number;
     date?: string;
   }[];
 }
 
-interface TableCategoryHeader {
+export interface TableCategoryHeader {
   id: number;
   value: string;
 }
 
-interface TableCategoryProps {
+export interface TableCategoryProps {
   dataHeader: TableCategoryHeader[];
   dataBody: TableCategoryItem[];
   totalPage: number;
   currentPage?: number;
   handleChangePage?: (page: number) => void;
 }
+
+interface dataFileItemProps {
+  fileName: string;
+}
+
+export const DataFileItem: React.FC<dataFileItemProps> = ({ fileName }) => (
+  <div className="t-tableCategory_dataFileItem">
+    <div className="t-tableCategory_dataFileItem_icon">
+      {/* <Image ratio="1x1" alt="pdf" src={imgPdf} /> */}
+      <Icon iconName="filePDF" />
+    </div>
+    <div className="t-tableCategory_dataFileItem_fileName">
+      <Text modifiers={['darkMidnightBlue', '300', '14x20']}>{fileName}</Text>
+    </div>
+    <Icon size="20" iconName="download" />
+  </div>
+);
 
 const TableCategory: React.FC<TableCategoryProps> = ({
   dataHeader,
@@ -59,28 +81,45 @@ const TableCategory: React.FC<TableCategoryProps> = ({
                   className="t-tableCategory_body_row"
                   key={`tableBody-${i.toString()}`}
                 >
-                  {e.dataByQuarter.map((val, stt) => (
+                  <td
+                    className="t-tableCategory_body_cell"
+                    colSpan={1}
+                  >
+                    <Text
+                      modifiers={['16x24', 'jet', '300']}
+                      content={e.documentName}
+                    />
+                  </td>
+                  {e.dataByQuarter.length > 0 && e.dataByQuarter.map((val, stt) => (
                     <td
                       className="t-tableCategory_body_cell"
                       key={`tableBodyCell-${stt.toString()}`}
-                      colSpan={val.colspan}
+                      colSpan={val.colSpan || 1}
                     >
-                      {val.date ? <></>}
+                      {val.date ? <DataFileItem fileName={val.date} /> : <></>}
                     </td>
                   ))}
                 </tr>
               </>
             ))}
           </tbody>
-        ) }
+        )}
+        {totalPage > 0 && (
+          <tfoot className="t-tableCategory_foot">
+            <tr>
+              <td colSpan={dataHeader.length}>
+                <Pagination
+                  totalPage={totalPage}
+                  pageCurrent={currentPage}
+                  handleChangePage={(page: number) => handleChangePage && handleChangePage(page)}
+                />
+              </td>
+            </tr>
+          </tfoot>
+        )}
       </table>
     </div>
   </div>
 );
-
-TableCategory.defaultProps = {
-  currentPage: undefined,
-  handleChangePage: undefined,
-};
 
 export default TableCategory;
