@@ -57,7 +57,7 @@ export const LatestNewsCard: React.FC<LatestNewsCardProps> = ({
         <div className="t-latestNewsCard_layer" />
         <div className="t-latestNewsCard_content">
           <div className="t-latestNewsCard_content_title">
-            <Heading modifiers={['24x30', '600', 'white', 'uppercase']}>
+            <Heading modifiers={['24x30', '600', 'white', 'capitalize']}>
               {title}
             </Heading>
           </div>
