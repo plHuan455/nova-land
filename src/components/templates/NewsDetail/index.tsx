@@ -76,9 +76,10 @@ const NewsDetail: React.FC<NewsDetailProps> = ({
           <Text modifiers={['14x22', '700', 'jet']}>{titleLatest}</Text>
           <div className="t-newsdetail_subinfo">
             {relatedNews.slice(0, 3).map((item, idx) => (
-              <>
+              <React.Fragment
+                key={`news-${item.id}`}
+              >
                 <InfoNews
-                  key={`news-${item.id}`}
                   imageSrc={item.imageNews}
                   title={item.title}
                   status={item.status}
@@ -87,16 +88,17 @@ const NewsDetail: React.FC<NewsDetailProps> = ({
                 {(idx + 1) !== relatedNews.slice(0, 3).length && (
                   <Divider />
                 )}
-              </>
+              </React.Fragment>
             ))}
           </div>
           <div className="t-newsdetail_hotnews">
             <Text modifiers={['14x22', '700', 'jet']}>{titleHot}</Text>
             <div className="t-newsdetail_subinfo">
               {relatedNews.slice(0, 5).map((item, idx) => (
-                <>
+                <React.Fragment
+                  key={`news-${item.id}`}
+                >
                   <InfoNews
-                    key={`news-${item.id}`}
                     imageSrc={item.imageNews}
                     title={item.title}
                     status={item.status}
@@ -105,7 +107,7 @@ const NewsDetail: React.FC<NewsDetailProps> = ({
                   {(idx + 1) !== relatedNews.slice(0, 5).length && (
                     <Divider />
                   )}
-                </>
+                </React.Fragment>
               ))}
             </div>
           </div>

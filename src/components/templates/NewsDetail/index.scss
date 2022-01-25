@@ -1,12 +1,5 @@
 .t-newsdetail {
-  margin-top: rem(35);
-  margin-bottom: rem(50);
-
-  @include tablet-up {
-    margin-top: rem(43);
-    margin-bottom: rem(80);
-  }
-
+  
   &_createdate {
     margin-bottom: rem(8);
   }
