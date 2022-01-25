@@ -25,7 +25,7 @@
   &_tab {
     cursor: pointer;
     width: rem(276);
-    padding: rem(16) rem(15);
+    padding: rem(16) 0 rem(16) rem(16);
     border: rem(1) solid $columbia-blue;
     background-image: url('~assets/images/Tabs/bg-tab.png');
     background-repeat: no-repeat;
