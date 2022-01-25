@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Animate from 'components/organisms/Animate';
+import Section from 'components/templates/Section';
 import TransportationInfrastructure from 'components/templates/TransportationInfrastructure';
 import { getImageURL } from 'utils/functions';
 
@@ -19,11 +20,13 @@ const TransportationContainer: React.FC<TransportationBlock> = ({
 }) => (
   <Animate type="goUp">
     <div className="p-home_investSector">
-      <TransportationInfrastructure
-        title={blocks.titleSection}
-        desc={blocks.description}
-        imgSrc={getImageURL(blocks.image)}
-      />
+      <Section>
+        <TransportationInfrastructure
+          title={blocks.titleSection}
+          desc={blocks.description}
+          imgSrc={getImageURL(blocks.image)}
+        />
+      </Section>
     </div>
   </Animate>
 );

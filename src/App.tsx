@@ -24,7 +24,7 @@ const routes = [
     index: true,
   },
   {
-    path: 've-chung-toi',
+    path: 'gioi-thieu',
     element: <AboutUs />,
   },
   {

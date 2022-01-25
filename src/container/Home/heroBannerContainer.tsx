@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Heading from 'components/atoms/Heading';
+import Text from 'components/atoms/Text';
 import HeroBanner from 'components/templates/HeroBanner';
 import { getImageURL } from 'utils/functions';
 
@@ -34,12 +35,11 @@ const HeroBannerContainer: React.FC<BannerProps> = ({
                 </Heading>
               </div>
               <div className="p-home_heroBanner_info_caption">
-                <Heading
-                  type="h5"
+                <Text
                   modifiers={['center', 'white', '300', 'fontLexend', '18x28']}
                 >
                   {item.data.subTitle}
-                </Heading>
+                </Text>
               </div>
             </>
           ))}
