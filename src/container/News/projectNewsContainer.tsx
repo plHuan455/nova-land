@@ -9,6 +9,7 @@ const ProjectNewsContainer: React.FC = () => (
     <Section>
       <HomeNews
         title="Tin dự án"
+        href="/"
         tabDataHomeNews={tabDataProjectNews}
       />
     </Section>

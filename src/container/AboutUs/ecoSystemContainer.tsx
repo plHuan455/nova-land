@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ecoCardList } from 'assets/dataDummy/ecoSystems';
+import ecoCardList from 'assets/dataDummy/ecoSystems';
 import Animate from 'components/organisms/Animate';
 import EcoSystems from 'components/templates/EcoSystems';
 

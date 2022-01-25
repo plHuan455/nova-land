@@ -46,22 +46,16 @@
   }
 
   &_brands {
-    flex-wrap: wrap;
     opacity: 0;
     position: relative;
     transform: translateY(30px);
     transition: 0.5s;
-    @include adjust-flex(space-between, center);
+    padding: rem(12);
 
-    &-item {
-      flex: 0 0 50%;
-      padding: rem(12);
-
-      img {
-        display: block;
-        margin: auto;
-        max-width: 90%;
-      }
+    img {
+      display: block;
+      margin: auto;
+      max-width: 90%;
     }
   }
 

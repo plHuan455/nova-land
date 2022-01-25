@@ -1,10 +1,10 @@
 import React from 'react';
 
-import HomeContainer from 'container/Home';
+import HomeContainer, { HomeData } from 'container/Home';
 
-const Home: React.FC = () => (
+const Home: React.FC<BasePageData<HomeData>> = (props) => (
   <div className="p-home">
-    <HomeContainer />
+    <HomeContainer {...props} />
   </div>
 );
 

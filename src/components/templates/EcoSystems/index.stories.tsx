@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import EcoSystems from '.';
 
-import { ecoCardList } from 'assets/dataDummy/ecoSystems';
+import ecoCardList from 'assets/dataDummy/ecoSystems';
 
 export default {
   title: 'Components/templates/EcoSystems',
