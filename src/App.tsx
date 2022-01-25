@@ -59,6 +59,10 @@ const routes = [
     element: <RecruitmentList />,
   },
   {
+    path: 'su-kien-chi-tiet',
+    element: <EventDetail />,
+  },
+  {
     path: ':slug',
     element: <PageNav />,
   },
