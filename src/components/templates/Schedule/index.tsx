@@ -78,7 +78,7 @@ const Schedule: React.FC<ScheduleProps> = ({
         }
         {
           dataCard.length === 2 && (
-            <div className="t-schedule_tow">
+            <div className="t-schedule_two">
               {dataCard.map((item, index) => (
                 <div className="t-schedule_right_item" key={`t-schedule-${index.toString()}`}>
                   <NewsCard variant="smallVertical" {...item} />
