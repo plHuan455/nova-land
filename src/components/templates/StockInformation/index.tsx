@@ -24,7 +24,7 @@ const StockInformation: React.FC<StockInformationProps> = ({
 }) => (
   <div className="t-stockInformation">
     <div className="t-stockInformation_heading">
-      <Heading modifiers={['30x42', 'center', '600', 'jet']} content={title} />
+      <Heading modifiers={['30x42', 'center', '600', 'jet', 'fontNoto']} content={title} />
     </div>
     <Container>
       <div className="t-stockInformation_content">

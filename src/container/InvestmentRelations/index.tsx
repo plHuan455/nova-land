@@ -17,13 +17,13 @@ const InvestmentRelationsContainer: React.FC<InvestmentRelationsContainerProps> 
     <Section>
       <StockInformationContainer />
     </Section>
-    <Section>
+    <Section noPaddingBottom>
       <LatestNewsContainer />
     </Section>
-    <Section>
+    <Section noPaddingBottom>
       <ScheduleContainer />
     </Section>
-    <Section>
+    <Section noPaddingBottom>
       <OtherDocumentContainer />
     </Section>
   </div>
