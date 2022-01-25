@@ -3396,6 +3396,47 @@ exports[`Storyshots Components/organisms/RecruitmentPositionCard Normal 1`] = `
 </div>
 `;
 
+exports[`Storyshots Components/organisms/ReportCard Normal 1`] = `
+<div
+  className="o-reportCard"
+>
+  <div
+    className="o-reportCard_wrapimg"
+  >
+    <div
+      className="a-image a-image-376x212"
+    >
+      <img
+        alt="replacing"
+        loading="lazy"
+        src="img-report.png"
+      />
+    </div>
+  </div>
+  <div
+    className="o-reportCard_wrapcontent"
+  >
+    <p
+      className="a-text a-text-20x28 a-text-600 a-text-jet"
+    >
+      Báo Cáo Thường Niên 2021
+    </p>
+    <div
+      className="o-reportCard_wrapdownload"
+    >
+      <p
+        className="a-text a-text-14x20 a-text-camel"
+      >
+        Xem và tải PDF
+      </p>
+      <div
+        className="o-reportCard_icon"
+      />
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Components/organisms/TabBg Normal 1`] = `
 <div
   className="container o-container"
