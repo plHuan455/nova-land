@@ -1,6 +1,7 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 
 import exampleReducer from './example';
+import homeReducer from './home';
 import menusReducer from './menus';
 import systemReducer from './system';
 
@@ -10,6 +11,7 @@ export const store = configureStore({
     example: exampleReducer,
     menus: menusReducer,
     system: systemReducer,
+    home: homeReducer,
   },
 });
 

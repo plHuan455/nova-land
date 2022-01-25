@@ -92,7 +92,7 @@ interface InvestmentSectorProps {
 const setting = {
   centerMode: true,
   infinite: true,
-  slidesToShow: 2,
+  slidesToShow: 4,
   slidesToScroll: 1,
   arrows: true,
   prevArrow: <PrevArrow />,
@@ -124,67 +124,67 @@ const setting = {
   ],
 };
 
-const settingSmall = {
-  centerMode: true,
-  infinite: true,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  arrows: true,
-  prevArrow: <PrevArrow />,
-  nextArrow: <NextArrow />,
-  speed: 500,
-  slidesPerRow: 1,
-  responsive: [
-    {
-      breakpoint: 1199,
-      settings: {
-        slidesToShow: 3,
-      },
-    },
-    {
-      breakpoint: 991,
-      settings: {
-        slidesToShow: 2,
-      },
-    },
-    {
-      breakpoint: 575,
-      settings: {
-        slidesToShow: 1,
-      },
-    },
-  ],
-};
-
 const InvestmentSector: React.FC<InvestmentSectorProps> = ({
   title, investmentSectorList, isSmall,
-}) => (
-  <div className={mapModifiers('t-investmentSector', isSmall && 'small')}>
-    <Container>
-      <div className="u-mb-lg-52 u-mb-sm-40 u-mb-24">
-        <Heading
-          modifiers={['32x48', 'jet', '500', 'uppercase', 'center', 'fontNoto']}
-          content={title}
-        />
-      </div>
-      <div className="t-investmentSector_content">
-        <Carousel settings={isSmall ? settingSmall : setting}>
-          {
-            investmentSectorList.map((item, index) => (
-              <div className="t-investmentSector_item" key={`_investmentSector_${index.toString()}`}>
-                <InvestmentCard
-                  {...item}
-                  isSmall={isSmall}
-                />
-              </div>
-            ))
-          }
-        </Carousel>
-      </div>
-    </Container>
-  </div>
-);
-
+}) => {
+  const settingSmall = {
+    centerMode: true,
+    infinite: true,
+    slidesToShow: investmentSectorList.length <= 4 ? investmentSectorList.length : 4,
+    slidesToScroll: 1,
+    arrows: true,
+    prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />,
+    speed: 500,
+    slidesPerRow: 1,
+    responsive: [
+      {
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 575,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+  return (
+    <div className={mapModifiers('t-investmentSector', isSmall && 'small')}>
+      <Container>
+        <div className="u-mb-lg-52 u-mb-sm-40 u-mb-24">
+          <Heading
+            modifiers={['32x48', 'jet', '500', 'uppercase', 'center', 'fontNoto']}
+            content={title}
+          />
+        </div>
+        <div className="t-investmentSector_content">
+          <Carousel settings={isSmall ? settingSmall : setting}>
+            {
+              investmentSectorList.map((item, index) => (
+                <div className="t-investmentSector_item" key={`_investmentSector_${index.toString()}`}>
+                  <InvestmentCard
+                    {...item}
+                    isSmall={isSmall}
+                  />
+                </div>
+              ))
+            }
+          </Carousel>
+        </div>
+      </Container>
+    </div>
+  );
+};
 InvestmentSector.defaultProps = {
   isSmall: false,
 };

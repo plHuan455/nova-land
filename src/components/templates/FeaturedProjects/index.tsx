@@ -17,11 +17,13 @@ export type FeaturedProjectTypes = {
 interface FeaturedProjectsProps {
   title: string;
   featuredProjectList: FeaturedProjectTypes[];
+  handleOnChange?: (index: number) => void;
 }
 
 const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
   title,
   featuredProjectList,
+  handleOnChange = () => { },
 }) => {
   const [indexActive, setIndexActive] = useState(0);
 
@@ -29,6 +31,7 @@ const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
     if (index !== indexActive) {
       setIndexActive(index);
     }
+    handleOnChange(index);
   };
 
   return (
@@ -68,6 +71,8 @@ const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
   );
 };
 
-FeaturedProjects.defaultProps = {};
+FeaturedProjects.defaultProps = {
+  handleOnChange: undefined,
+};
 
 export default FeaturedProjects;
