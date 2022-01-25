@@ -1,0 +1,103 @@
+.t-searchResult {
+  &_searchInput {
+    margin: auto;
+    margin-top: rem(36);
+    max-width: rem(768);
+
+    @include mobile-down {
+      margin-top: rem(20);
+    }
+  }
+
+  &_searchInputGroup {
+    position: relative;
+
+    .a-button {
+      cursor: pointer;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      max-width: rem(143);
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      font-weight: 600;
+
+      @include font-base(18, 28);
+    }
+  }
+
+  &_wrapper {
+    @include small-mobile-up {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &_content {
+    @include small-mobile-up {
+      flex: 0 0 calc(100% - (348 / #{$width-container-value} * 100%));
+      max-width: calc(100% - (348 / #{$width-container-value} * 100%));
+      padding-right: rem(90);
+    }
+
+    .o-newsCard_content_desc {
+      @include mobile-tablet{
+        display: none;
+      }
+    }
+  }
+
+  &_ad {
+    @include small-mobile-up {
+      flex: 0 0 calc(348 / #{$width-container-value} * 100%);
+      max-width: calc(348 / #{$width-container-value} * 100%);
+    }
+  }
+
+
+  &_amount {
+    margin-bottom: rem(35);
+
+    @include mobile-down {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &_list-item {
+    & + & {
+      margin-top: rem(24);
+
+      @include mobile-down {
+        margin-top: rem(16);
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: rem(24);
+
+      @include mobile-down {
+        margin-bottom: rem(16);
+      }
+    }
+  }
+
+  &_adItem {
+    & + & {
+      margin-top: rem(24);
+
+      @include mobile-down {
+        margin-top: rem(16);
+      }
+    }
+  }
+
+  .a-divider {
+    margin-bottom: rem(24);
+
+    @include mobile-down {
+      margin-bottom: rem(16);
+    }
+  }
+}

@@ -4,7 +4,7 @@ import Image from 'components/atoms/Image';
 import Link from 'components/atoms/Link';
 import Text from 'components/atoms/Text';
 
-interface InfoNewsProps {
+export interface InfoNewsProps {
   imageSrc: string;
   title: string;
   status: string;

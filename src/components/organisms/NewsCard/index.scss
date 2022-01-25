@@ -19,6 +19,14 @@
     }
   }
 
+  &_image {
+    .a-image {
+      #{$root}-smallTitle & {
+        @include aspect-ratio(203,193);
+      }
+    }
+  }
+
   &_layer {
     background: $oxford-dark-linear;
     bottom: 0;
@@ -47,6 +55,16 @@
       @include text-overflow();
     }
 
+   &_time {
+      #{$root}-smallTitle & {
+        color: $black025;
+        margin-top: rem(28);
+
+        @include small-mobile {
+          margin-top: rem(14);
+        }
+      }
+    }
   }
 
   &:hover {
@@ -60,8 +78,10 @@
   }
 
   &-smallVertical {
-    background: #f8f8f8;
-    padding: rem(12);
+    &:not(#{$root}-smallTitle)  {
+      background: #f8f8f8;
+      padding: rem(12);
+    }
 
     #{$root} {
       &_wrapper {

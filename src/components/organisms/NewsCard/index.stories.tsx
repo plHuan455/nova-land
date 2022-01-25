@@ -37,3 +37,19 @@ export const normal: Story = ({ variant }) => (
     </div>
   </BrowserRouter>
 );
+
+export const cardSearch: Story = () => (
+  <BrowserRouter>
+    <Container>
+      <NewsCard
+        modifiers="smallTitle"
+        imgSrc={img}
+        title="PGA NovaWorld Phan Thiet - Thiên đường Golf hướng biển mới của Việt Nam"
+        desc="Cụm sân golf PGA 36 hố độc quyền là một tiện ích đẳng cấp nằm trong lòng dự án NovaWorld Phan Thiet quy mô 1.000 hecta..."
+        href="/"
+        time="23/11/2021"
+        variant="smallVertical"
+      />
+    </Container>
+  </BrowserRouter>
+);
