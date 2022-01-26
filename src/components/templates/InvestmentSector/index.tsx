@@ -158,6 +158,7 @@ const InvestmentSector: React.FC<InvestmentSectorProps> = ({
       },
     ],
   };
+
   return (
     <div className={mapModifiers('t-investmentSector', isSmall && 'small')}>
       <Container>
@@ -185,7 +186,4 @@ const InvestmentSector: React.FC<InvestmentSectorProps> = ({
     </div>
   );
 };
-InvestmentSector.defaultProps = {
-};
-
 export default InvestmentSector;

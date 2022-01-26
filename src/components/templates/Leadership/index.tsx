@@ -59,7 +59,7 @@ export interface LeadershipDetailProps {
   name: string;
   position: string;
   imgSrc: string;
-  achievement: string[];
+  achievement: string;
   slogan?: string;
 }
 
@@ -99,18 +99,10 @@ export const LeadershipDetail: React.FC<LeadershipDetailProps> = ({
       </div>
     </div>
     <div className="t-leadershipDetail_achievement">
-      <ul>
-        {
-          achievement.map((item, index) => (
-            <li className="t-leadershipDetail_item" key={`leadershipDetail_${index.toString()}`}>
-              <Text
-                modifiers={['16x24', '300', 'dimGray']}
-                content={item}
-              />
-            </li>
-          ))
-        }
-      </ul>
+      <Text
+        modifiers={['16x24', '300', 'dimGray']}
+        content={achievement}
+      />
     </div>
     {
       slogan && (
@@ -137,10 +129,11 @@ export interface LeadershipProps {
   tabDataLeadership: dataTabsLeadershipType[];
   hasButtonViewAll: boolean;
   handleClickViewAll?: () => void;
+  handleChangeTab: (index: number) => void;
 }
 
 const Leadership: React.FC<LeadershipProps> = ({
-  title, tabDataLeadership, hasButtonViewAll, handleClickViewAll,
+  title, tabDataLeadership, hasButtonViewAll, handleClickViewAll, handleChangeTab,
 }) => {
   const [indexActive, setIndexActive] = useState(0);
   const [indexShow, setIndexShow] = useState(0);
@@ -164,6 +157,7 @@ const Leadership: React.FC<LeadershipProps> = ({
                   handleClick={() => {
                     setIndexActive(index);
                     setIndexShow(0);
+                    handleChangeTab(index);
                   }}
                 />
               ))
@@ -193,9 +187,9 @@ const Leadership: React.FC<LeadershipProps> = ({
                       ))
                     }
                     {hasButtonViewAll && (
-                    <div className="t-leadership_item_btn">
-                      <Button onClick={handleClickViewAll} modifiers="with-icon" iconName="arrowDownBrown" />
-                    </div>
+                      <div className="t-leadership_item_btn">
+                        <Button onClick={handleClickViewAll} modifiers="with-icon" iconName="arrowDownBrown" />
+                      </div>
                     )}
                   </div>
                   <div className="t-leadership_item_right">
