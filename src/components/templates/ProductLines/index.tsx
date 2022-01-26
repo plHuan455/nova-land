@@ -12,7 +12,7 @@ interface ProductLinesContentType {
   desc: Array<InfoType>;
 }
 
-interface ProductLinesType{
+export interface ProductLinesType{
   label: string;
   imgActive?: string;
   imgInActive?: string;
