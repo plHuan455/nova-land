@@ -18,7 +18,7 @@ const LatestJobs: React.FC<LatestJobsProps> = ({
   <div className="t-latestJobs">
     <Container>
       <div className="t-latestJobs_heading">
-        <Heading modifiers={['600', 'center', 'jet', '30x42', 'fontNoto']} content={title} />
+        <Heading modifiers={['600', 'center', 'jet', '30x42', 'fontNoto', 'uppercase']} content={title} />
       </div>
       <div className="t-latestJobs_content">
         {

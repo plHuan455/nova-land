@@ -21,7 +21,7 @@ const CompanyProfile: React.FC<CompanyProfileProps> = ({
 }) => (
   <div className="t-companyProfile">
     <div className="t-companyProfile_title">
-      <Heading modifiers={['600', '30x42', 'center', 'jet', 'fontNoto']}>{title}</Heading>
+      <Heading modifiers={['600', '30x42', 'center', 'jet', 'fontNoto', 'uppercase']}>{title}</Heading>
     </div>
     <div className="t-companyProfile_desc">
       <Text modifiers={['400', '16x24', 'center', 'dimGray']} type="div" content={description} />
