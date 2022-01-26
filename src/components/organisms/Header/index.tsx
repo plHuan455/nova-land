@@ -25,13 +25,14 @@ interface HeaderProps {
   headerMenu?: MenuItemDataTypes[];
   logoSrc: string;
   handleLanguage?: (val: LanguageType) => void;
-
+  isPageRecruitment?: boolean;
 }
 
 const Header: React.FC<HeaderProps> = ({
   headerMenu,
   logoSrc,
   handleLanguage,
+  isPageRecruitment,
 }) => {
   // STATE
   const [isOpenSearch, setIsOpenSearch] = useState(false);
@@ -82,7 +83,7 @@ const Header: React.FC<HeaderProps> = ({
     }
   };
   return (
-    <header className={mapModifiers('o-header', isScroll && 'scrolled')}>
+    <header className={mapModifiers('o-header', isScroll && 'scrolled', isPageRecruitment && 'isPageRecruitment')}>
       <Container>
         <Animate type="topDown">
           <div className="o-header_wrapper">
@@ -238,6 +239,7 @@ const Header: React.FC<HeaderProps> = ({
 Header.defaultProps = {
   headerMenu: undefined,
   handleLanguage: undefined,
+  isPageRecruitment: false,
 };
 
 export default Header;
