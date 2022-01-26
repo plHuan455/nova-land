@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Icon from 'components/atoms/Icon';
 import Image from 'components/atoms/Image';
 import Link from 'components/atoms/Link';
 import Text from 'components/atoms/Text';
@@ -36,13 +37,14 @@ const ListFeatProjectCollapse: React.FC<ListFeatProjectCollapseProps> = ({
           active={indexActive === idx}
         >
           <div className="o-listFeatProjectCollapse_item-content">
-            <Text modifiers={['davysGrey', '300']}>
+            <Text modifiers={['16x24', 'davysGrey', '400']}>
               {item.content}
             </Text>
           </div>
           <Link href={item.href} target={item.target || '_blank'}>
             <div className="o-listFeatProjectCollapse_item-wrapLink">
-              <Text modifiers={['camel', '300', 'underline']}>Xem thêm</Text>
+              <Icon iconName="arrowRightGolden" size="14" />
+              <Text modifiers={['goldenBrown', '300', 'underline']}>Xem thêm</Text>
             </div>
           </Link>
           <div className="o-listFeatProjectCollapse_item-img">
