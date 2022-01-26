@@ -24,7 +24,7 @@ const SearchResultsContainer: React.FC = () => {
   return (
     <Animate type="goUp">
       <div className="u-pt-lg-93 u-pt-sm-82 u-pt-75">
-        <Section>
+        <Section modifiers="noPb">
           <SearchResult
             method={method}
             submitForm={handleSubmit}
