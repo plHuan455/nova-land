@@ -54,7 +54,7 @@ const NewsDetail: React.FC<NewsDetailProps> = ({
             <div className="t-newsdetail_shortDesc">
               <Text modifiers={['18x28', '600', 'jet']} content={newsDetail.shortDescription} />
             </div>
-            <Text modifiers={['16x24', 'davysGrey']} content={newsDetail.content} />
+            <Text type="div" modifiers={['16x24', 'davysGrey']} content={newsDetail.content} />
             <div className="t-newsdetail_viewbtn">
               <Button>{newsDetail.titleBtn}</Button>
             </div>
