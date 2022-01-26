@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Button from 'components/atoms/Button';
 import Heading from 'components/atoms/Heading';
 import Image from 'components/atoms/Image';
+import Loading from 'components/atoms/Loading';
 import Text from 'components/atoms/Text';
 import Container from 'components/organisms/Container';
 import { Tab, TabPanel, Tabs } from 'components/organisms/Tabs';
@@ -130,10 +131,12 @@ export interface LeadershipProps {
   hasButtonViewAll: boolean;
   handleClickViewAll?: () => void;
   handleChangeTab: (index: number) => void;
+  loading?: boolean;
 }
 
 const Leadership: React.FC<LeadershipProps> = ({
   title, tabDataLeadership, hasButtonViewAll, handleClickViewAll, handleChangeTab,
+  loading,
 }) => {
   const [indexActive, setIndexActive] = useState(0);
   const [indexShow, setIndexShow] = useState(0);
@@ -163,8 +166,8 @@ const Leadership: React.FC<LeadershipProps> = ({
               ))
             }
           </Tabs>
-          {
-            tabDataLeadership.map((ele, idx) => (
+          { loading ? <Loading isShow />
+            : tabDataLeadership.map((ele, idx) => (
               <TabPanel key={`leadership-${idx.toString()}`} active={idx === indexActive}>
                 <div className="t-leadership_item">
                   <div className="t-leadership_item_left">
@@ -208,8 +211,7 @@ const Leadership: React.FC<LeadershipProps> = ({
                   </div>
                 </div>
               </TabPanel>
-            ))
-          }
+            ))}
         </div>
       </Container>
     </div>

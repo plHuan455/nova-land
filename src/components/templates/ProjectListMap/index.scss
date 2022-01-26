@@ -87,6 +87,7 @@
   }
 
   &_map {
+    position: relative;
     flex: 0 0 calc(373 / #{$width-in-container-value} * 100%);
     margin-left: calc(194 / #{$width-in-container-value} * 100%);
 
@@ -122,6 +123,17 @@
       &:hover {
         opacity: 1;
       }
+    }
+
+    &_loading {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
     }
   }
 }

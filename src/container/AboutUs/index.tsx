@@ -1,5 +1,4 @@
-import React, { useEffect, useMemo } from 'react';
-import { useDispatch } from 'react-redux';
+import React, { useMemo } from 'react';
 
 import AwardListContainer from './awardListContainer';
 import DevelopmentHistoryContainer from './developmentHistoryContainer';
@@ -14,7 +13,6 @@ import ProjectListMapContainer from './projectListMapContainer';
 import TransportationContainer from './transportationContainer';
 import VisionMissionValueContainer from './visionMissionValueContainer';
 
-import { getLeadershipCategoryAction } from 'store/Introduction';
 import { getBlockData, getImageURL } from 'utils/functions';
 
 type Icon = {
@@ -106,8 +104,6 @@ const AboutUSContainer: React.FC<BasePageData<AboutUsBlock>> = ({
   banners,
   blocks,
 }) => {
-  const dispatch = useDispatch();
-
   const introductionBlock = useMemo(() => getBlockData('introduction', blocks) as Introduction, [blocks]);
   const numbersBlock = useMemo(() => getBlockData('numbers', blocks) as Numbers, [blocks]);
   const fieldActivityBlock = useMemo(() => getBlockData('field_activity', blocks) as FieldActivity,
@@ -206,11 +202,6 @@ const AboutUSContainer: React.FC<BasePageData<AboutUsBlock>> = ({
     brandImage: getImageURL(item.imageHover),
     href: item.link.url,
   })), [novaEcosystemBlock]);
-
-  useEffect(() => {
-    dispatch(getLeadershipCategoryAction());
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   return (
     <>

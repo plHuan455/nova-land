@@ -1,8 +1,10 @@
+/* eslint-disable react/require-default-props */
 import React, { useCallback } from 'react';
 
 import Heading from 'components/atoms/Heading';
 import Icon from 'components/atoms/Icon';
 import Link from 'components/atoms/Link';
+import Loading from 'components/atoms/Loading';
 import Text from 'components/atoms/Text';
 import Pulldown, { OptionType } from 'components/molecules/Pulldown';
 import Container from 'components/organisms/Container';
@@ -94,11 +96,13 @@ export const ProjectListMapInfo:React.FC<InfoProps> = ({
 interface MapProps {
   image: ImageMap;
   listPoint: ItemBranch[];
+  loading?: boolean;
 }
 
 export const ProjectListMapGround:React.FC<MapProps> = ({
   image,
   listPoint,
+  loading,
 }) => {
   const calculatorPosition = useCallback(
     (item: ItemBranch) => ({
@@ -131,6 +135,7 @@ export const ProjectListMapGround:React.FC<MapProps> = ({
           />
         ))}
       </div>
+      <div className="t-projectListMap_map_loading">{loading && (<Loading isShow />)}</div>
     </div>
   );
 };
