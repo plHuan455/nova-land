@@ -3,18 +3,24 @@
 
   &_title {
     margin-bottom: rem(36);
+    @include tablet-down {
+      margin-bottom: rem(24);
+    }
+    @include mobile-down {
+      margin-bottom: rem(16);
+    }
   }
 
   .slick-slide {
     height: auto;
   }
-  
-  .o-tabsBg_tab {
-    max-height: rem(72);
-    display: flex;
-    align-items: center;
 
-    .o-tabsBg_label  {
+  .o-tabsBg_tab {
+    align-items: center;
+    display: flex;
+    max-height: rem(72);
+
+    .o-tabsBg_label {
       > span {
         flex: 1;
         @include text-overflow(2);

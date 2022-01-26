@@ -3,24 +3,19 @@
 
   &_labels {
     align-items: center;
-    border-radius: rem(0);
     border-bottom: rem(1) solid $dark-midnight-blue;
+    border-radius: rem(0);
   }
 
   &_label {
-    display: flex;
     align-items: center;
-    color: $jet;
-    text-transform: uppercase;
-    font-weight: 600;
-    white-space: normal;
-    @include font-base(17, 28);
+    display: flex;
   }
 
   &_image {
     display: unset;
-    width: rem(40);
     margin-right: rem(8);
+    width: rem(40);
 
     .a-icon {
       width: rem(40);
@@ -28,28 +23,30 @@
   }
 
   &_tab {
-    cursor: pointer;
-    width: rem(276);
-    padding: rem(16);
-    border: rem(1) solid $columbia-blue;
     background-image: url('~assets/images/Tabs/bg-tab.png');
     background-repeat: no-repeat;
     background-size: cover;
-    
+    border: rem(1) solid $columbia-blue;
+    cursor: pointer;
+    padding: rem(16);
+    width: rem(276);
+
     &-active {
-      background-image: url('~assets/images/Tabs/bg-tab-active.png');    
+      background-image: url('~assets/images/Tabs/bg-tab-active.png');
       border: 1px solid $dark-midnight-blue;
 
       &::after {
         display: none;
       }
-      
+
       #{$root}_label {
-        color: $white;
+        .a-text {
+          color: $white;
+        }
       }
     }
   }
-  
+
 
   &_panel {
     display: none;

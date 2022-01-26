@@ -1,6 +1,7 @@
 import React, { useLayoutEffect, useRef } from 'react';
 
 import Image from 'components/atoms/Image';
+import Text from 'components/atoms/Text';
 import mapModifiers, { handleScrollCenter } from 'utils/functions';
 
 interface TabPanelProps {
@@ -35,7 +36,7 @@ export const TabBg: React.FC<TabProps> = ({
       <div className="o-tabsBg_image">
         <Image ratio="1x1" src={(active ? imgActive : imgInActive) || ''} />
       </div>
-      <span>{label}</span>
+      <Text modifiers={['18x28', '600', 'jet', 'fontNoto', 'uppercase']}>{label}</Text>
     </span>
   </div>
 );
