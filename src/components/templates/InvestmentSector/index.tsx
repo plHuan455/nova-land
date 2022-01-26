@@ -4,6 +4,7 @@ import Button from 'components/atoms/Button';
 import Heading from 'components/atoms/Heading';
 import Image from 'components/atoms/Image';
 import Link from 'components/atoms/Link';
+import Loading from 'components/atoms/Loading';
 import Text from 'components/atoms/Text';
 import Carousel, { PrevArrow, NextArrow } from 'components/organisms/Carousel';
 import Container from 'components/organisms/Container';
@@ -87,6 +88,7 @@ export interface InvestmentSectorProps {
   title: string;
   investmentSectorList: InvestmentCardProps[];
   isSmall?: boolean;
+  loading?: boolean;
 }
 
 const setting = {
@@ -125,7 +127,7 @@ const setting = {
 };
 
 const InvestmentSector: React.FC<InvestmentSectorProps> = ({
-  title, investmentSectorList, isSmall,
+  title, investmentSectorList, isSmall, loading,
 }) => {
   const settingSmall = {
     centerMode: true,
@@ -169,8 +171,10 @@ const InvestmentSector: React.FC<InvestmentSectorProps> = ({
           />
         </div>
         <div className="t-investmentSector_content">
-          <Carousel settings={isSmall ? settingSmall : setting}>
-            {
+          {
+            loading ? <Loading isShow /> : (
+              <Carousel settings={isSmall ? settingSmall : setting}>
+                {
               investmentSectorList.map((item, index) => (
                 <div className="t-investmentSector_item" key={`_investmentSector_${index.toString()}`}>
                   <InvestmentCard
@@ -180,7 +184,9 @@ const InvestmentSector: React.FC<InvestmentSectorProps> = ({
                 </div>
               ))
             }
-          </Carousel>
+              </Carousel>
+            )
+          }
         </div>
       </Container>
     </div>

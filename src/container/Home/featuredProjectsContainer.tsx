@@ -3,7 +3,7 @@ import { useQuery } from 'react-query';
 
 import FeaturedProjects from 'components/templates/FeaturedProjects';
 import Section from 'components/templates/Section';
-import { getProjectsService } from 'services/home';
+import { getProjectsService } from 'services/project';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
 import { getImageURL } from 'utils/functions';
 

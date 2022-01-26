@@ -1,47 +1,17 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-import getRealEstatesService, { getNewsCategoryService, getProjectsService } from 'services/home';
+import { getNewsCategoryService } from 'services/home';
 import {
-  NewsCategoryDataTypes, ProjectParamTypes, ProjectsTypes, RealEstatesTypes,
+  NewsCategoryDataTypes,
 } from 'services/home/type';
 
 interface HomeState {
-  realEstatesList?: RealEstatesTypes[];
-  projectData?: ProjectsTypes[];
   newsCategoryList?: NewsCategoryDataTypes[];
 }
 
 const initialState: HomeState = {
-  realEstatesList: undefined,
-  projectData: undefined,
   newsCategoryList: undefined,
 };
-
-export const getProjectsAction = createAsyncThunk<
-  ProjectsTypes[],
-  ProjectParamTypes,
-  { rejectValue: ErrorResponse }
->('homeReducer/getProjectAction', async (params, { rejectWithValue }) => {
-  try {
-    const response = await getProjectsService(params);
-    return response;
-  } catch (error) {
-    return rejectWithValue(error as ErrorResponse);
-  }
-});
-
-export const getRealEstatesAction = createAsyncThunk<
-  RealEstatesTypes[],
-  void,
-  { rejectValue: ErrorResponse }
->('homeReducer/getRealEstatesAction', async (_, { rejectWithValue }) => {
-  try {
-    const response = await getRealEstatesService();
-    return response;
-  } catch (error) {
-    return rejectWithValue(error as ErrorResponse);
-  }
-});
 
 export const getNewsCategoryAction = createAsyncThunk<
   NewsCategoryDataTypes[],
@@ -61,12 +31,6 @@ export const homeSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers(builder) {
-    builder.addCase(getRealEstatesAction.fulfilled, ($state, action) => {
-      $state.realEstatesList = action.payload;
-    });
-    builder.addCase(getProjectsAction.fulfilled, ($state, action) => {
-      $state.projectData = action.payload;
-    });
     builder.addCase(getNewsCategoryAction.fulfilled, ($state, action) => {
       $state.newsCategoryList = action.payload;
     });

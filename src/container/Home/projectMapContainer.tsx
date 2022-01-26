@@ -17,7 +17,7 @@ interface ProjectMapBlock {
 const ProjectMapContainer: React.FC<ProjectMapBlock> = ({
   blocks,
 }) => {
-  const { realEstatesList } = useAppSelector((state) => state.home);
+  const { realEstatesList } = useAppSelector((state) => state.project);
   const dispatch = useAppDispatch();
   const { maps } = useAppSelector((state) => state.maps);
 

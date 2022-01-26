@@ -4,11 +4,11 @@ import { getCitiesService } from 'services/location';
 import { CitiesDataTypes } from 'services/location/types';
 
 interface LocationState {
-  listCities: CitiesDataTypes[];
+  listCities?: CitiesDataTypes[];
 }
 
 const initialState: LocationState = {
-  listCities: [],
+  listCities: undefined,
 };
 
 export const getCitiesAction = createAsyncThunk<

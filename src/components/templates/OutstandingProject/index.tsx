@@ -34,7 +34,7 @@ export const OutstandingProjectCard: React.FC<OutstandingProjectCardProps> = ({
 
 const setting = {
   centerMode: true,
-  infinite: true,
+  infinite: false,
   slidesToShow: 4,
   slidesToScroll: 1,
   arrows: true,

@@ -6,6 +6,7 @@ import {
   BrowserRouter, Outlet, Route, Routes,
 } from 'react-router-dom';
 
+import Loading from 'components/atoms/Loading';
 import MainLayoutContainer from 'container/MainLayout';
 import SearchResults from 'container/SearchResults';
 import useInitializeRender from 'hooks/useInitializeRender';
@@ -73,7 +74,7 @@ const App: React.FC = () => {
   useInitializeRender();
 
   return (
-    <Suspense fallback>
+    <Suspense fallback={<Loading isShow variant="fullScreen" />}>
       <Routes>
         <Route
           path="/"

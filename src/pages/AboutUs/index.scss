@@ -1,7 +1,6 @@
 .p-aboutUs {
   &_investmentSector, 
-  &_investSector,
-  &_developmentHistory {
+  &_investSector {
     padding-bottom: rem(80);
 
     @include tablet-down {

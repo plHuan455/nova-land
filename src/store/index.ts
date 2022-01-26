@@ -6,6 +6,7 @@ import homeReducer from './home';
 import locationReducer from './location';
 import mapsReducer from './maps';
 import menusReducer from './menus';
+import projectReducer from './project';
 import systemReducer from './system';
 
 export const store = configureStore({
@@ -18,6 +19,7 @@ export const store = configureStore({
     maps: mapsReducer,
     intro: introReducer,
     location: locationReducer,
+    project: projectReducer,
   },
 });
 
