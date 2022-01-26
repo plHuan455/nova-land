@@ -1,1 +1,9 @@
-
+.p-recruitment {
+  &_companyProfileContainer,
+  &_branchListContainer {
+    background: $white-smoke-8f8;
+  }
+  &_signUpJobPostingsContainer {
+    background: $anti-flash-white-4f9;
+  }
+} 

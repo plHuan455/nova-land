@@ -45,6 +45,10 @@ const routes = [
     element: <ReportList />,
   },
   {
+    path: '*',
+    element: <div />,
+  },
+  {
     path: 'danh-sach-tuyen-dung',
     element: <RecruitmentList />,
   },
