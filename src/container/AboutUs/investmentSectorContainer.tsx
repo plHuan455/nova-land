@@ -1,14 +1,13 @@
 import React from 'react';
 
-import investmentSectorData from 'assets/dataDummy/investmentSector';
-import InvestmentSector from 'components/templates/InvestmentSector';
+import InvestmentSector, { InvestmentSectorProps } from 'components/templates/InvestmentSector';
 
-const InvestmentSectorContainer: React.FC = () => (
-  <div className="p-aboutUs_investmentSector">
+interface InvestmentSectorContainerProps extends InvestmentSectorProps { }
+
+const InvestmentSectorContainer: React.FC<InvestmentSectorContainerProps> = ({ ...props }) => (
+  <div className="p-aboutUs_investmentSector pt-100">
     <InvestmentSector
-      title="BẤT ĐỘNG SẢN"
-      investmentSectorList={investmentSectorData}
-      isSmall
+      {...props}
     />
   </div>
 );

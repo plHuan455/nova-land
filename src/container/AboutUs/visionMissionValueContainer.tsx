@@ -1,13 +1,15 @@
 import React from 'react';
 
-import dataList from 'assets/dataDummy/visionMissionValue';
+// import dataList from 'assets/dataDummy/visionMissionValue';
 import Animate from 'components/organisms/Animate';
-import VisionMissionValue from 'components/templates/VisionMissionValue';
+import VisionMissionValue, { VisionMissionValueProps } from 'components/templates/VisionMissionValue';
 
-const VisionMissionValueContainer: React.FC = () => (
+interface VisionMissionValueContainerProps extends VisionMissionValueProps{}
+
+const VisionMissionValueContainer: React.FC<VisionMissionValueContainerProps> = ({ ...rest }) => (
   <Animate type="goUp">
     <div className="p-aboutUs_visionMissionValue">
-      <VisionMissionValue dataList={dataList} />
+      <VisionMissionValue {...rest} />
     </div>
   </Animate>
 );

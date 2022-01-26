@@ -1,10 +1,11 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 
-import AboutUSContainer from 'container/AboutUs';
+import AboutUSContainer, { AboutUsBlock } from 'container/AboutUs';
 
-const AboutUs: React.FC = () => (
+const AboutUs: React.FC<BasePageData<AboutUsBlock>> = (props) => (
   <div className="p-aboutUs">
-    <AboutUSContainer />
+    <AboutUSContainer {...props} />
   </div>
 );
 

@@ -41,7 +41,7 @@ const ContentBlock: React.FC<ContentBlockProps> = ({ title, desc, dataList }) =>
   </div>
 );
 
-interface VisionMissionValueProps {
+export interface VisionMissionValueProps {
   dataList: ContentBlockProps[];
 }
 

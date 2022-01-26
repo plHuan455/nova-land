@@ -1,14 +1,13 @@
 import React from 'react';
 
-import dataLeadershipList from 'assets/dataDummy/leadership';
-import Leadership from 'components/templates/Leadership';
+import Leadership, { LeadershipProps } from 'components/templates/Leadership';
 
-const LeadershipContainer: React.FC = () => (
+interface LeadershipContainerProps extends LeadershipProps{}
+
+const LeadershipContainer: React.FC<LeadershipContainerProps> = ({ ...props }) => (
   <div className="p-aboutUs_leadership">
     <Leadership
-      title="BAN LÃNH ĐẠO"
-      tabDataLeadership={dataLeadershipList}
-      hasButtonViewAll
+      {...props}
     />
   </div>
 );

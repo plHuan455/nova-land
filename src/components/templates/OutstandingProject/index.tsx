@@ -65,7 +65,7 @@ const setting = {
   ],
 };
 
-interface OutstandingProjectProps {
+export interface OutstandingProjectProps {
   title: string;
   outstandingProjectList: OutstandingProjectCardProps[];
 }

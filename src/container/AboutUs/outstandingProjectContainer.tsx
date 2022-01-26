@@ -1,13 +1,13 @@
 import React from 'react';
 
-import dataOutstandingProjectCard from 'assets/dataDummy/outstandingProject';
-import OutstandingProject from 'components/templates/OutstandingProject';
+import OutstandingProject, { OutstandingProjectProps } from 'components/templates/OutstandingProject';
 
-const OutstandingProjectContainer: React.FC = () => (
+interface OutstandingProjectContainerProps extends OutstandingProjectProps{}
+
+const OutstandingProjectContainer: React.FC<OutstandingProjectContainerProps> = ({ ...props }) => (
   <div className="p-aboutUs_outstandingProject">
     <OutstandingProject
-      title="DỰ ÁN NỔI BẬT"
-      outstandingProjectList={dataOutstandingProjectCard}
+      {...props}
     />
   </div>
 );

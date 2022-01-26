@@ -83,7 +83,7 @@ export const InvestmentCard: React.FC<InvestmentCardProps> = ({
   );
 };
 
-interface InvestmentSectorProps {
+export interface InvestmentSectorProps {
   title: string;
   investmentSectorList: InvestmentCardProps[];
   isSmall?: boolean;
@@ -186,7 +186,6 @@ const InvestmentSector: React.FC<InvestmentSectorProps> = ({
   );
 };
 InvestmentSector.defaultProps = {
-  isSmall: false,
 };
 
 export default InvestmentSector;

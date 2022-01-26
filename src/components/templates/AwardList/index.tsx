@@ -41,7 +41,7 @@ export type TabsDataTypes = {
   awardList: AwardCardProps[];
 };
 
-interface AwardListProps {
+export interface AwardListProps {
   title: string;
   desc: string;
   tabsData: TabsDataTypes[];
@@ -79,9 +79,7 @@ const AwardList: React.FC<AwardListProps> = ({
           {title}
         </Heading>
         <div className="t-awardList_desc">
-          <Text modifiers={['16x24', '300', 'fontLexend', 'davysGrey', 'center']}>
-            {desc}
-          </Text>
+          <Text modifiers={['16x24', '300', 'fontLexend', 'davysGrey', 'center']} content={desc} />
         </div>
         <div className="t-awardList_tabs">
           <Tabs>
@@ -134,10 +132,6 @@ const AwardList: React.FC<AwardListProps> = ({
 
 AwardCard.defaultProps = {
   alt: undefined,
-};
-
-AwardList.defaultProps = {
-  getActiveIdx: undefined,
 };
 
 export default AwardList;

@@ -132,7 +132,7 @@ export interface dataTabsLeadershipType {
   dataTab: LeadershipDetailProps[];
 }
 
-interface LeadershipProps {
+export interface LeadershipProps {
   title: string;
   tabDataLeadership: dataTabsLeadershipType[];
   hasButtonViewAll: boolean;
@@ -224,10 +224,6 @@ const Leadership: React.FC<LeadershipProps> = ({
 
 LeadershipCard.defaultProps = {
   isShow: false,
-};
-
-Leadership.defaultProps = {
-  handleClickViewAll: undefined,
 };
 
 export default Leadership;
