@@ -9,7 +9,7 @@ import Error from '.';
 describe('<Error />', () => {
   test('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<Router><Error type={404} /></Router>, div);
+    ReactDOM.render(<Router><Error btnHomeText="" description="" title="" /></Router>, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 });

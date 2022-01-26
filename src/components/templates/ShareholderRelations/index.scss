@@ -2,6 +2,9 @@
   $root: &;
   background: $white;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   &:hover {
     #{$root}_content_icon {
@@ -25,6 +28,9 @@
     &-stocks {
       border-bottom: rem(1) solid $gainsboro;
       padding: rem(10) rem(32);
+      max-height: rem(322);
+      overflow: auto;
+      @include scroll-bars(8, $gainsboro);
 
       @include tablet-down {
         padding: rem(14) rem(32);

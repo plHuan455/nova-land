@@ -1,8 +1,9 @@
-import React, { useMemo } from 'react';
+import React, { useEffect, useMemo } from 'react';
 
 import img from 'assets/images/ProjectMap/map.png';
 import ProjectMap from 'components/templates/ProjectMap';
-import { useAppSelector } from 'store/hooks';
+import { useAppDispatch, useAppSelector } from 'store/hooks';
+import { getMapsAction } from 'store/maps';
 import { getImageURL } from 'utils/functions';
 
 export interface ProjectMapTypes {
@@ -17,6 +18,10 @@ const ProjectMapContainer: React.FC<ProjectMapBlock> = ({
   blocks,
 }) => {
   const { realEstatesList } = useAppSelector((state) => state.home);
+  const dispatch = useAppDispatch();
+  const { maps } = useAppSelector((state) => state.maps);
+
+  // TODO: maps
   const listProjectMap = useMemo(() => realEstatesList?.map((item) => (
     {
       id: item.id,
@@ -35,6 +40,12 @@ const ProjectMapContainer: React.FC<ProjectMapBlock> = ({
       )),
     }
   )), [realEstatesList]);
+
+  useEffect(() => {
+    if (!maps) {
+      dispatch(getMapsAction({}));
+    }
+  }, [dispatch, maps]);
 
   return (
     <div className="p-home_outStandingNumbers">

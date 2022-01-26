@@ -27,35 +27,45 @@ const NewsContainer: React.FC<NewsBlock> = ({
 }) => {
   const dispatch = useDispatch();
   const { newsCategoryList } = useAppSelector((state) => state.home);
-  const tabDataHomeNewsList = useMemo(() => newsCategoryList.map((item) => ({
-    titleTab: item.name,
-    dataTab: [
-      {
-        imgSrc: imgHomeNewsCard,
-        title: 'Người dân TP.HCM đón Giáng sinh sớm, check-in cùng cây thông 25 m',
-        desc: 'Còn hơn một tháng nữa mới đến Giáng sinh, nhưng Novaland Gallery đã trang hoàng một tháng nữa mới đến Giáng sinh',
-        date: '23/11/2021',
-        totalViews: 111,
-      },
-      {
-        imgSrc: imgHomeNewsCard2,
-        title: 'Sắp khởi công đường Hàm Kiệm – Tiến Thành',
-        desc: 'Ban Quản lý Dự án và xây dựng công trình giao thông thuộc Sở Giao thông vận tải xây dựng công trình giao thông thuộc Sở Giao thông vận tải',
-        date: '23/11/2021',
-        totalViews: 111,
-      },
-      {
-        imgSrc: imgHomeNewsCard3,
-        title: 'Nhiều hạng mục của sân bay Long Thành sẽ khởi công năm sau',
-        desc: 'Báo cáo Quốc hội việc triển khai dự án sân bay Long Thành, Chính phủ cho biết mó hội việc triển khai dự án sân bay Long Thành, Chính phủ cho biết',
-        date: '23/11/2021',
-        totalViews: 111,
-      },
-    ],
-  })), [newsCategoryList]);
+
+  // TODO: get news list by a category
+  const tabDataHomeNewsList = useMemo(() => {
+    if (newsCategoryList) {
+      return newsCategoryList.map((item) => ({
+        titleTab: item.name,
+        dataTab: [
+          {
+            imgSrc: imgHomeNewsCard,
+            title: 'Người dân TP.HCM đón Giáng sinh sớm, check-in cùng cây thông 25 m',
+            desc: 'Còn hơn một tháng nữa mới đến Giáng sinh, nhưng Novaland Gallery đã trang hoàng một tháng nữa mới đến Giáng sinh',
+            date: '23/11/2021',
+            totalViews: 111,
+          },
+          {
+            imgSrc: imgHomeNewsCard2,
+            title: 'Sắp khởi công đường Hàm Kiệm – Tiến Thành',
+            desc: 'Ban Quản lý Dự án và xây dựng công trình giao thông thuộc Sở Giao thông vận tải xây dựng công trình giao thông thuộc Sở Giao thông vận tải',
+            date: '23/11/2021',
+            totalViews: 111,
+          },
+          {
+            imgSrc: imgHomeNewsCard3,
+            title: 'Nhiều hạng mục của sân bay Long Thành sẽ khởi công năm sau',
+            desc: 'Báo cáo Quốc hội việc triển khai dự án sân bay Long Thành, Chính phủ cho biết mó hội việc triển khai dự án sân bay Long Thành, Chính phủ cho biết',
+            date: '23/11/2021',
+            totalViews: 111,
+          },
+        ],
+      }));
+    }
+    return [];
+  }, [newsCategoryList]);
 
   useEffect(() => {
-    dispatch(getNewsCategoryAction());
+    if (!newsCategoryList) {
+      dispatch(getNewsCategoryAction());
+    }
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

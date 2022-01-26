@@ -36,7 +36,9 @@ const InvestmentSectorContainer: React.FC<InvestmentSectorBlock> = ({
   )), [realEstatesList]);
 
   useEffect(() => {
-    dispatch(getRealEstatesAction());
+    if (!realEstatesList) {
+      dispatch(getRealEstatesAction());
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (

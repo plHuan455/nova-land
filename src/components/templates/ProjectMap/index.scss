@@ -120,6 +120,7 @@
       img {
         max-height: rem(64);
         max-width: rem(257);
+        object-fit: contain;
       }
     }
   }

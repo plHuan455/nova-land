@@ -33,8 +33,10 @@ export type ProjectsTypes = {
 }
 
 export type ProjectParamTypes = {
-  keyword?:string,
-  real_estates_slug?:string,
+  keyword?: string,
+  real_estates_slug?: string,
+  highlight?: boolean;
+  about_us?: boolean;
 }
 
 export type NewsCategoryDataTypes = {

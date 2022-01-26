@@ -6,15 +6,15 @@ import {
 } from 'services/home/type';
 
 interface HomeState {
-  realEstatesList: RealEstatesTypes[];
-  projectData: ProjectsTypes[];
-  newsCategoryList: NewsCategoryDataTypes[];
+  realEstatesList?: RealEstatesTypes[];
+  projectData?: ProjectsTypes[];
+  newsCategoryList?: NewsCategoryDataTypes[];
 }
 
 const initialState: HomeState = {
-  realEstatesList: [],
-  projectData: [],
-  newsCategoryList: [],
+  realEstatesList: undefined,
+  projectData: undefined,
+  newsCategoryList: undefined,
 };
 
 export const getProjectsAction = createAsyncThunk<

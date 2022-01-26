@@ -1,8 +1,10 @@
 import React, { useMemo } from 'react';
+import { useQuery } from 'react-query';
 
 import FeaturedProjects from 'components/templates/FeaturedProjects';
 import Section from 'components/templates/Section';
-import { useAppSelector } from 'store/hooks';
+import { getProjectsService } from 'services/home';
+import { DEFAULT_QUERY_OPTION } from 'utils/constants';
 import { getImageURL } from 'utils/functions';
 
 export interface FeaturedProjectsTypes {
@@ -16,21 +18,29 @@ interface FeaturedProjectsBlock {
 const FeaturedProjectsContainer: React.FC<FeaturedProjectsBlock> = ({
   blocks,
 }) => {
-  const { realEstatesList } = useAppSelector((state) => state.home);
-  const dataList = useMemo(() => realEstatesList?.map((item) => (
-    {
+  const { isLoading, data } = useQuery(
+    ['GetProjectHighlight'],
+    () => getProjectsService({ highlight: true }),
+    DEFAULT_QUERY_OPTION,
+  );
+
+  const dataList = useMemo(
+    () => data?.map((item) => ({
       title: item.name,
       src: getImageURL(item.thumbnail),
       content: item.description,
-      href: item.slug,
-    }
-  )), [realEstatesList]);
+      href: item.link,
+    })),
+    [data],
+  );
+
   return (
     <div className="p-home_featuredProjects">
       <Section>
         <FeaturedProjects
           title={blocks.titleSection}
           featuredProjectList={dataList || []}
+          loading={isLoading}
         />
       </Section>
     </div>
