@@ -1,16 +1,20 @@
 .t-companyProfile {
+  @include mobile-down {
+    padding: 0 rem(12);
+  }
+
   &_desc {
     margin-top: rem(20);
     @include mobile-down {
-       margin-top: rem(10);
+      margin-top: rem(10);
     }
   }
 
-  &_image{
-    max-width: rem(990);
+  &_image {
     margin-left: auto;
     margin-right: auto;
     margin-top: rem(36);
+    max-width: rem(990);
     @include tablet-down {
       margin-top: rem(20);
     }
@@ -18,27 +22,34 @@
       margin-top: rem(15);
     }
   }
+
   &_subDesc {
-    margin-top: rem(36);
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: center;
+    margin-top: rem(36);
     margin-top: rem(36);
     @include tablet-down {
       margin-top: rem(20);
     }
     @include mobile-down {
+      flex-direction: column;
       margin-top: rem(15);
     }
-    &-icon{
-      max-width: rem(120);
+
+    &-icon {
       flex-shrink: 0;
-      width: 100%;
       margin-right: rem(24);
+      max-width: rem(120);
+      width: 100%;
     }
 
     &-desc {
-      b{
+      @include mobile-down {
+        text-align: center;
+      }
+
+      b {
         font-weight: 600;
         @include font-base(20, 28);
         @include mobile-down {

@@ -72,34 +72,35 @@ const dummyData = [
     content: 'Content 4',
   },
 ];
-interface FilterRecuitmentProps {
+interface FilterRecruitmentProps {
   heading?: string;
   desc?: string;
+  backgroundSrc?: string;
 }
 
-const FilterRecuitment: React.FC<FilterRecuitmentProps> = ({
+const FilterRecruitment: React.FC<FilterRecruitmentProps> = ({
   heading,
   desc,
-
+  backgroundSrc,
 }) => {
   const [indexActive, setIndexActive] = useState(0);
   return (
-    <div className="t-filterRecuitment">
-      <div className="t-filterRecuitment_heading">
+    <div className="t-filterRecruitment" style={{ backgroundImage: `url(${backgroundSrc})` }}>
+      <div className="t-filterRecruitment_heading">
         <Heading modifiers={['400', '64x83', 'center', 'fontNoto', 'white']} content={heading} />
       </div>
-      <div className="t-filterRecuitment_desc">
+      <div className="t-filterRecruitment_desc">
         <Text modifiers={['300', '18x28', 'center', 'fontLexend', 'white']} content={desc} />
       </div>
-      <div className="t-filterRecuitment_tab">
+      <div className="t-filterRecruitment_tab">
         <Container>
           <Tabs variableMutate={indexActive}>
             {
               dummyData.map((item, index) => (
-                <div className={mapModifiers('t-filterRecuitment_tab-items', indexActive === index && 'active')}>
+                <div className={mapModifiers('t-filterRecruitment_tab-items', indexActive === index && 'active')}>
                   {item.isPulldown
                     ? (
-                      <div className="t-filterRecuitment_tab-pulldown">
+                      <div className="t-filterRecruitment_tab-pulldown">
                         <Pulldown
                           isSecondary
                           options={item.option}
@@ -133,9 +134,10 @@ const FilterRecuitment: React.FC<FilterRecuitmentProps> = ({
   );
 };
 
-FilterRecuitment.defaultProps = {
+FilterRecruitment.defaultProps = {
   heading: undefined,
   desc: undefined,
+  backgroundSrc: undefined,
 };
 
-export default FilterRecuitment;
+export default FilterRecruitment;

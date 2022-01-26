@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import FilterRecuitment from '.';
+import FilterRecruitment from '.';
 
-describe('<FilterRecuitment />', () => {
+describe('<FilterRecruitment />', () => {
   test('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<FilterRecuitment />, div);
+    ReactDOM.render(<FilterRecruitment />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 });

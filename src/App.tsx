@@ -4,10 +4,11 @@ import React, { lazy, Suspense } from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { Provider } from 'react-redux';
 import {
-  BrowserRouter, Outlet, Route, Routes,
+  BrowserRouter, Outlet, Route, Routes, useLocation,
 } from 'react-router-dom';
 
 import Loading from 'components/atoms/Loading';
+import MainLayoutRecruitment from 'components/templates/MainLayoutRecruitment';
 import MainLayoutContainer from 'container/MainLayout';
 import SearchResults from 'container/SearchResults';
 import useInitializeRender from 'hooks/useInitializeRender';

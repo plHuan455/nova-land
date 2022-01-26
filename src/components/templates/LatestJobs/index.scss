@@ -1,11 +1,11 @@
-.t-latestJobs{
-  &_content{
-    margin-top: rem(36);
+.t-latestJobs {
+  &_content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin-left: rem(-15);
     margin-right: rem(-15);
-    flex-wrap: wrap;
+    margin-top: rem(36);
     @include tablet-down {
       margin-top: rem(20);
     }
@@ -15,17 +15,17 @@
     }
   }
 
-  &_item{
-    padding: 0 rem(15);
+  &_item {
     flex: 0 0 25%;
     margin-bottom: rem(30);
+    padding: 0 rem(15);
 
-    @include tablet-down{
+    @include tablet-down {
       flex: 0 0 33.33333%;
       margin-bottom: rem(20);
     }
 
-    @include mobile-down{
+    @include mobile-down {
       flex: 0 0 50%;
       margin-bottom: rem(10);
     }
@@ -35,11 +35,11 @@
     }
   }
 
-  &_button{
-    max-width: rem(245);
-    margin-top: rem(30);
+  &_button {
     margin-left: auto;
     margin-right: auto;
+    margin-top: rem(30);
+    max-width: rem(265);
     @include tablet-down {
       margin-top: rem(20);
     }

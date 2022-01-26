@@ -1,0 +1,35 @@
+.p-recruitment {
+  margin-top: rem(93);
+
+  &_branchListContainer {
+    padding-bottom: rem(40);
+    padding-left: rem(138);
+    padding-right: rem(138);
+    padding-top: rem(40);
+    @include tablet-down {
+      padding-bottom: rem(20);
+      padding-top: rem(20);
+    }
+  }
+
+  &_latestJobsContainer,
+  &_companyProfileContainer {
+    padding: rem(80) 0;
+    @include tablet-down {
+      padding: rem(50) 0;
+    }
+    @include mobile-down {
+      padding: rem(20) 0;
+    }
+  }
+
+  &_workEnvironmentContainer {
+    padding: rem(80) rem(86);
+    @include tablet-down {
+      padding: rem(50) rem(86);
+    }
+    @include mobile-down {
+      padding: rem(20) rem(86);
+    }
+  }
+}

@@ -1,5 +1,12 @@
-.t-filterRecuitment {
+.t-filterRecruitment {
   $root: &;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: rem(577);
+  justify-content: flex-end;
 
   &_desc {
     margin-top: rem(16);
@@ -53,9 +60,9 @@
     }
 
     &-pulldown {
+      min-width: rem(149);
       padding: rem(11) 0;
       width: 100%;
-      min-width: rem(149);
     }
 
     .o-tabs { 
@@ -97,10 +104,12 @@
       border: none;
       box-shadow: none;
       color: $white;
+
       &-default {
         &__placeholder {
-         color: $white;
+          color: $white;
         }
+
         &__option {
           color: $white;
         }
