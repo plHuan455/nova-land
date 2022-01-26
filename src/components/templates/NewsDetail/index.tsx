@@ -13,6 +13,7 @@ import Container, { CustomCol, CustomRow } from 'components/organisms/Container'
 interface NewsType {
   id: string;
   title: string;
+  shortDescription?: string;
   content: string;
   createDate: string;
   status: string;
@@ -38,7 +39,7 @@ const NewsDetail: React.FC<NewsDetailProps> = ({
     <div className="t-newsdetail">
       <CustomRow>
         <CustomCol sm="12" md="12" lg="8">
-          <Heading modifiers={['52x65', '600', 'jet']} type="h1">{newsDetail.title}</Heading>
+          <Heading modifiers={['52x65', '600', 'jet', 'fontNoto']} type="h1">{newsDetail.title}</Heading>
           <div className="t-newsdetail_statistical">
             <Text modifiers={['12x17', '400', 'dimGray']}>{newsDetail.createDate}</Text>
             <div className="t-newsdetail_circle" />
@@ -50,7 +51,10 @@ const NewsDetail: React.FC<NewsDetailProps> = ({
             </div>
           </div>
           <div className="t-newsdetail_content">
-            <Text modifiers={['16x24', 'davysGrey']} content={newsDetail.content} />
+            <div className="t-newsdetail_shortDesc">
+              <Text modifiers={['18x28', '600', 'jet']} content={newsDetail.shortDescription} />
+            </div>
+            <Text type="div" modifiers={['16x24', 'davysGrey']} content={newsDetail.content} />
             <div className="t-newsdetail_viewbtn">
               <Button>{newsDetail.titleBtn}</Button>
             </div>

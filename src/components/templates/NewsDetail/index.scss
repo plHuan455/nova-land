@@ -1,26 +1,25 @@
 .t-newsdetail {
-  
   &_createdate {
     margin-bottom: rem(8);
   }
 
   &_statistical {
-    display: flex;
     align-items: center;
+    display: flex;
     margin-top: rem(12);
   }
 
   &_circle {
-    width: rem(4);
-    height: rem(4);
     background-color: $columbia-blue;
     border-radius: 50%;
+    height: rem(4);
     margin: 0 rem(12);
+    width: rem(4);
   }
 
   &_view {
-    display: flex;
     align-items: center;
+    display: flex;
 
     .a-icon {
       margin-right: rem(8);
@@ -34,6 +33,14 @@
     @include tablet-up {
       margin-top: rem(40);
     }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &_shortDesc {
+    margin-bottom: rem(40);
   }
 
   &_viewbtn {
@@ -42,12 +49,12 @@
     margin: rem(30) 0;
 
     .a-button {
-      width: rem(237);
       height: rem(45);
+      width: rem(237);
 
       @include tablet-up {
-        width: rem(237);
         height: rem(56);
+        width: rem(237);
       }
     }
     
@@ -57,12 +64,12 @@
   }
 
   &_typesnews {
-    margin-top: rem(24);
     margin-bottom: rem(24);
+    margin-top: rem(24);
 
     @include mobile-up {
-      display: flex;
       align-items: center;
+      display: flex;
       justify-content: space-between;
     }
         
@@ -117,8 +124,8 @@
 
     .a-tag {
       display: inline-block;
-      margin-right: rem(12);
       margin-bottom: rem(12);
+      margin-right: rem(12);
     }
   }
 }
