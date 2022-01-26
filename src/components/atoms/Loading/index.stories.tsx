@@ -13,9 +13,16 @@ export default {
       },
       defaultValue: false,
     },
+    variant: {
+      control: {
+        type: 'select',
+        options: ['default', 'fullScreen'],
+      },
+      defaultValue: false,
+    },
   },
 } as Meta;
 
-export const normal: Story = ({ isShow }) => (
-  <Loading isShow={isShow} />
+export const normal: Story = ({ isShow, variant }) => (
+  <Loading isShow={isShow} variant={variant} />
 );

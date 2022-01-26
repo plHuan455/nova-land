@@ -5,20 +5,16 @@ import mapModifiers from 'utils/functions';
 
 interface LoadingProps {
   isShow?: boolean;
-  variant?:'fullScreen' | 'default';
+  variant?: 'fullScreen' | 'default';
 }
 
 const Loading: React.FC<LoadingProps> = ({
   isShow,
   variant,
 }) => {
-  const classModify = () => mapModifiers(
-    'a-loader-circle',
-    variant,
-  );
-
+  if (!isShow) return null;
   return (
-    <div className={isShow ? classModify() : 'a-loader-circle-hide'}>
+    <div className={mapModifiers('a-loader-circle', variant)}>
       <div className="loader-fading-circle">
         <div className="loader-circle1 loader-circle" />
         <div className="loader-circle2 loader-circle" />
