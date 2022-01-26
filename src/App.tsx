@@ -4,7 +4,7 @@ import React, { lazy, Suspense } from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { Provider } from 'react-redux';
 import {
-  BrowserRouter, Outlet, Route, Routes, useLocation,
+  BrowserRouter, Outlet, Route, Routes,
 } from 'react-router-dom';
 
 import Loading from 'components/atoms/Loading';
