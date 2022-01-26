@@ -17,6 +17,7 @@ import EventDetail from 'pages/EventDetail';
 import News from 'pages/News';
 import NewsCategory from 'pages/NewsCategory';
 import NewsDetail from 'pages/NewsDetail';
+import Recruitment from 'pages/Recruitment';
 import RecruitmentList from 'pages/RecruitmentList';
 import ReportList from 'pages/ReportList';
 import { store } from 'store';
@@ -43,6 +44,10 @@ const routes = [
   {
     path: '/bao-cao-thuong-nien',
     element: <ReportList />,
+  },
+  {
+    path: '/tuyen-dung',
+    element: <Recruitment />,
   },
   {
     path: '*',
