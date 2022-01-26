@@ -1,4 +1,5 @@
 import React, { useMemo } from 'react';
+import { useQuery } from 'react-query';
 
 import StockInformationContainer from './StockInformation';
 import BannerContainer from './banner';
@@ -6,11 +7,16 @@ import LatestNewsContainer from './latestNews';
 import OtherDocumentContainer from './otherDocument';
 import ScheduleContainer from './schedule';
 
-import ScheduleList from 'assets/dataDummy/Schedule';
 import imgPdf from 'assets/images/pdf.png';
-import { dataType } from 'components/templates/OtherDocuments';
 import Section from 'components/templates/Section';
-import { getBlockData, getImageURL } from 'utils/functions';
+import getCalendarListService from 'services/calendar';
+import getDocumentsService from 'services/documents';
+import { DEFAULT_QUERY_OPTION } from 'utils/constants';
+import {
+  getBlockData,
+  getImageURL,
+  formatDateDDMMYYYY,
+} from 'utils/functions';
 
 type NovalandShares = {
   title: string;
@@ -52,25 +58,6 @@ export type InvestmentRelationsBlocks = NovalandShares
   | EventCalendar
   | OtherDocument;
 
-const dataList: dataType[] = [
-  {
-    pdfImg: imgPdf,
-    fileName: 'Nghị quyết Hội đồng quản trị thông qua việc chuyển đổi và tỷ lệ chuyển đổi trái phiếu chuyển đổi quốc tế',
-  },
-  {
-    pdfImg: imgPdf,
-    fileName: 'Nghị quyết Hội đồng quản trị số 01/2022-NQ.HĐQT-NVLG thông qua việc góp thêm vốn vào Công ty TNHH Đầu tư Phát triển nhà ở và Hạ tầng sài gòn',
-  },
-  {
-    pdfImg: imgPdf,
-    fileName: 'CBTT thay đổi số lượng cổ phiếu có quyền biểu quyết đang lưu hành',
-  },
-  {
-    pdfImg: imgPdf,
-    fileName: 'Báo cáo kết quả phát hành cổ phiếu để trả cổ tức',
-  },
-];
-
 const InvestmentRelationsContainer: React.FC<BasePageData<InvestmentRelationsBlocks>> = ({
   blocks,
 }) => {
@@ -80,20 +67,51 @@ const InvestmentRelationsContainer: React.FC<BasePageData<InvestmentRelationsBlo
   const eventCalendarBlock = useMemo(() => getBlockData('event_calendar', blocks) as EventCalendar, [blocks]);
   const otherDocumentBlock = useMemo(() => getBlockData('other_document', blocks) as OtherDocument, [blocks]);
 
-  const dataLatestNews = useMemo(() => [
+  const { data: documentDataList } = useQuery(
+    ['getDocumentList'],
+    () => getDocumentsService({
+      limit: 4,
+    }),
     {
-      imgSrc: getImageURL(corporateGovernanceAnnualReportBlock.annualReport.image),
-      ratio: '567x246' as Ratio,
-      heading: corporateGovernanceAnnualReportBlock.annualReport.title,
-      alt: corporateGovernanceAnnualReportBlock.annualReport.title,
-      title: corporateGovernanceAnnualReportBlock.annualReport.title,
-      time: '2 giờ trước',
-      href: '/',
-      btnText: corporateGovernanceAnnualReportBlock.annualReport.button.text,
-      fileName: corporateGovernanceAnnualReportBlock.annualReport.title,
-      pdfImg: imgPdf,
-      hrefLink: corporateGovernanceAnnualReportBlock.annualReport.button.url,
+      ...DEFAULT_QUERY_OPTION,
     },
+  );
+  const { data: calendarDataList } = useQuery(
+    ['getCalendarList'],
+    () => getCalendarListService({
+      limit: 4,
+      is_popular: true,
+    }),
+    {
+      ...DEFAULT_QUERY_OPTION,
+    },
+  );
+
+  const documentList = useMemo(() => {
+    if (documentDataList && documentDataList?.data.length > 0) {
+      return documentDataList.data.map((item) => ({
+        pdfImg: imgPdf,
+        fileName: item.name,
+        href: getImageURL(item.file),
+      }));
+    }
+    return [];
+  }, [documentDataList?.data]);
+
+  const calendarList = useMemo(() => {
+    if (calendarDataList && calendarDataList?.data.length > 0) {
+      return calendarDataList.data.map((item) => ({
+        imgSrc: getImageURL(item.thumbnail),
+        alt: item.title,
+        title: item.title,
+        time: formatDateDDMMYYYY(item.eventFrom),
+        href: `/su-kien-chi-tiet/${item.slug}`,
+      }));
+    }
+    return [];
+  }, [calendarDataList?.data]);
+
+  const dataLatestNews = useMemo(() => [
     {
       imgSrc: getImageURL(corporateGovernanceAnnualReportBlock.corporateGovernance.image),
       ratio: '567x246' as Ratio,
@@ -107,11 +125,25 @@ const InvestmentRelationsContainer: React.FC<BasePageData<InvestmentRelationsBlo
       pdfImg: imgPdf,
       hrefLink: corporateGovernanceAnnualReportBlock.corporateGovernance.button.url,
     },
+    {
+      imgSrc: getImageURL(corporateGovernanceAnnualReportBlock.annualReport.image),
+      ratio: '567x246' as Ratio,
+      heading: corporateGovernanceAnnualReportBlock.annualReport.title,
+      alt: corporateGovernanceAnnualReportBlock.annualReport.title,
+      title: corporateGovernanceAnnualReportBlock.annualReport.title,
+      time: '2 giờ trước',
+      href: '/',
+      btnText: corporateGovernanceAnnualReportBlock.annualReport.button.text,
+      fileName: corporateGovernanceAnnualReportBlock.annualReport.title,
+      pdfImg: imgPdf,
+      hrefLink: corporateGovernanceAnnualReportBlock.annualReport.button.url,
+    },
   ], [corporateGovernanceAnnualReportBlock]);
+
   return (
     <div className="p-investmentRelations">
       <BannerContainer />
-      <Section>
+      <Section modifiers="noPb">
         <StockInformationContainer
           title={novalandSharesBlock.title}
         >
@@ -120,25 +152,25 @@ const InvestmentRelationsContainer: React.FC<BasePageData<InvestmentRelationsBlo
           {/* <iframe title={novalandSharesBlock.title} width="100%" height="100%" frameBorder="0" src="https://ironline.vietstock.vn/en/NVL" /> */}
         </StockInformationContainer>
       </Section>
-      <Section>
+      <Section modifiers="noPb">
         <LatestNewsContainer
           hasLine
           dataLatestNews={dataLatestNews}
         />
       </Section>
-      <Section>
+      <Section modifiers="noPb">
         <ScheduleContainer
           subTitle={eventCalendarBlock.description}
           heading={eventCalendarBlock.title}
-          dataCard={ScheduleList}
+          dataCard={calendarList}
           modifiers="fourItem"
           btnText={eventCalendarBlock.button.text}
         />
       </Section>
-      <Section>
+      <Section modifiers="noPb">
         <OtherDocumentContainer
           heading={otherDocumentBlock.title}
-          data={dataList}
+          data={documentList}
           btnText={otherDocumentBlock.button.text}
         />
       </Section>
