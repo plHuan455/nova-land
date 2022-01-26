@@ -29,6 +29,7 @@ export const iconList = {
   zaloShare: 'zaloShare',
   filter: 'filter',
   closeWhite: 'closeWhite',
+  arrowRightGolden: 'arrowRightGolden',
 };
 
 export type IconName = keyof typeof iconList;

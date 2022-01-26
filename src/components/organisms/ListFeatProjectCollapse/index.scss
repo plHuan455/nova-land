@@ -13,10 +13,16 @@
     }
 
     &-wrapLink {
+      display: flex;
+      align-items: center;
       margin: rem(12) 0 rem(16);
 
       @include mobile-down {
         margin: rem(8) 0;
+      }
+
+      .a-icon {
+        margin-right: rem(8);
       }
     }
 
