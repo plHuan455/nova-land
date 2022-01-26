@@ -134,6 +134,7 @@ const AboutUSContainer: React.FC<BasePageData<AboutUsBlock>> = ({
   const [indexLeadershipCategoryActive, setIndexLeadershipCategoryActive] = useState(0);
 
   const [indexPrize, setIndexPrize] = useState(0);
+
   console.log(indexPrize);
   const listBanner = useMemo(() => banners.map((item) => ({
     src: getImageURL(item.data.imageDesktop),
@@ -211,9 +212,7 @@ const AboutUSContainer: React.FC<BasePageData<AboutUsBlock>> = ({
 
   const ecoSystemsData = useMemo(() => novaEcosystemBlock.items.map((item) => ({
     fieldImgSrc: getImageURL(item.imageDefault),
-    brandList: [
-      { imgSrc: getImageURL(item.imageHover) },
-    ],
+    brandImage: getImageURL(item.imageHover),
     href: item.link.url,
   })), [novaEcosystemBlock]);
 

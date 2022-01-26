@@ -6,7 +6,6 @@ import dataDummy from 'assets/dataDummy/projectListMap';
 import img from 'assets/images/bg_project_list_map.svg';
 import { OptionType } from 'components/molecules/Pulldown';
 import ProjectListMap, { ProjectListMapGround, ProjectListMapInfo } from 'components/templates/ProjectListMap';
-import Section from 'components/templates/Section';
 import { getProjectsService } from 'services/Introduction';
 import { useAppSelector } from 'store/hooks';
 import { getCitiesAction } from 'store/location';
@@ -58,31 +57,29 @@ const ProjectListMapContainer: React.FC = () => {
   }, []);
 
   return (
-    <div className="p-aboutUs_projectListMap">
-      <Section>
-        <ProjectListMap title="Dự Án">
-          <ProjectListMapInfo
-            listProject={dataDummy.listProject}
-            provinceOptions={dataDummy.provinceOptions}
-            projectOptions={customProjectOptions}
-            valueProvince={province}
-            valueProject={project}
-            handleChangeProvince={(value) => {
-              setProvince(value);
-              setProject(null);
-            }}
-            handleChangeProject={(value) => setProject(value)}
-          />
-          <ProjectListMapGround
-            image={{
-              path: img,
-              width: 373,
-              height: 593,
-            }}
-            listPoint={listPoint()}
-          />
-        </ProjectListMap>
-      </Section>
+    <div className="p-aboutUs_projectListMap pb-100">
+      <ProjectListMap title="Dự Án">
+        <ProjectListMapInfo
+          listProject={listProject || []}
+          provinceOptions={provinceOptions}
+          projectOptions={customProjectOptions}
+          valueProvince={province}
+          valueProject={project}
+          handleChangeProvince={(value) => {
+            setProvince(value);
+            setProject(null);
+          }}
+          handleChangeProject={(value) => setProject(value)}
+        />
+        <ProjectListMapGround
+          image={{
+            path: img,
+            width: 373,
+            height: 593,
+          }}
+          listPoint={listPoint()}
+        />
+      </ProjectListMap>
     </div>
   );
 };
