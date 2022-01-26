@@ -1,5 +1,16 @@
 .t-otherDocuments {
-  padding: rem(80) 0;
+  padding-bottom: rem(80);
+  padding-top: rem(80);
+
+  @include tablet-down {
+    padding-bottom: rem(60);
+    padding-top: rem(60);
+  }
+
+  @include mobile-down {
+    padding-bottom: rem(40);
+    padding-top: rem(40);
+  }
 
   &_content {
     background: transparent;
@@ -34,6 +45,7 @@
     margin-left: rem(24);
     @include text-overflow(2);
   }
+
   &_button {
     margin: auto;
     margin-top: rem(36);
