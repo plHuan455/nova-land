@@ -1,15 +1,15 @@
 import React from 'react';
 
-import dataList from 'assets/dataDummy/outStandingNumbers';
 import Animate from 'components/organisms/Animate';
-import OutStandingNumbers from 'components/templates/OutStandingNumbers';
+import OutStandingNumbers, { OutStandingNumbersProps } from 'components/templates/OutStandingNumbers';
 
-const OutStandingNumbersContainer: React.FC = () => (
+interface OutStandingNumbersContainerProps extends OutStandingNumbersProps { }
+
+const OutStandingNumbersContainer: React.FC<OutStandingNumbersContainerProps> = ({ ...props }) => (
   <Animate type="goUp">
     <div className="p-aboutUs_outStandingNumbers">
       <OutStandingNumbers
-        title="Novaland là thương hiệu uy tín hàng đầu Việt Nam trong lĩnh vực đầu tư & phát triển bất động sản"
-        dataList={dataList}
+        {...props}
       />
     </div>
   </Animate>

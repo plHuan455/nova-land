@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import RenderPage from './RenderPage';
 import RedirectNavigate from './redirectNavigate';
 
+import Loading from 'components/atoms/Loading';
 import { getPageService, getStaticHomeService } from 'services/navigations';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
 
@@ -33,7 +34,7 @@ const PageNavigate: React.FC = () => {
     },
   );
 
-  if (isLoading || isLoadingHome) return <>Loading...</>;
+  if (isLoading || isLoadingHome) return <Loading isShow variant="fullScreen" />;
 
   if (isError || homeError) {
     return <RedirectNavigate error={isError || homeError} />;

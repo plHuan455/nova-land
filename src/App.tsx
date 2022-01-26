@@ -6,10 +6,11 @@ import {
   BrowserRouter, Outlet, Route, Routes,
 } from 'react-router-dom';
 
+import Loading from 'components/atoms/Loading';
 import MainLayoutContainer from 'container/MainLayout';
 import SearchResults from 'container/SearchResults';
 import useInitializeRender from 'hooks/useInitializeRender';
-import AboutUs from 'pages/AboutUs';
+// import AboutUs from 'pages/AboutUs';
 import EventDetail from 'pages/EventDetail';
 import FieldOfActivity from 'pages/FieldOfActivity';
 import InvestmentRelations from 'pages/InvestmentRelations';
@@ -26,10 +27,6 @@ const routes = [
   {
     element: <PageNav />,
     index: true,
-  },
-  {
-    path: 'gioi-thieu',
-    element: <AboutUs />,
   },
   {
     path: 'tin-tuc',
@@ -77,7 +74,7 @@ const App: React.FC = () => {
   useInitializeRender();
 
   return (
-    <Suspense fallback>
+    <Suspense fallback={<Loading isShow variant="fullScreen" />}>
       <Routes>
         <Route
           path="/"

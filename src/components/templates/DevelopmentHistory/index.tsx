@@ -12,7 +12,7 @@ type ProcessItemProps = {
   image: string;
 }
 
-interface DevelopmentHistoryProps {
+export interface DevelopmentHistoryProps {
   title: string;
   description: string;
   list: ProcessItemProps[];

@@ -6,6 +6,7 @@ import Link from 'components/atoms/Link';
 import Text from 'components/atoms/Text';
 import Pulldown, { OptionType } from 'components/molecules/Pulldown';
 import Container from 'components/organisms/Container';
+import { checkExternalUrl } from 'utils/functions';
 
 interface ImageMap {
   path: string;
@@ -13,7 +14,7 @@ interface ImageMap {
   height: number;
 }
 
-interface ItemBranch {
+export interface ItemBranch {
   id: number;
   point: {
     x: number;
@@ -76,7 +77,7 @@ export const ProjectListMapInfo:React.FC<InfoProps> = ({
       <ul className="t-projectListMap_info_list">
         {listProject.map((item, index) => (
           <li key={index.toString()}>
-            <Link href={item.href}>
+            <Link href={item.href} target="_blank" useExternal={checkExternalUrl(item.href)}>
               <div className="t-projectListMap_info_item">
                 <Text content={item.title} modifiers={['16x24', 'jet', '300']} />
                 <Icon iconName="greyArrowRight" />

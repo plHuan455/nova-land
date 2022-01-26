@@ -1,14 +1,13 @@
 import React from 'react';
 
-import bannerImg from 'assets/images/transportationInfrastructure.png';
-import TransportationInfrastructure from 'components/templates/TransportationInfrastructure';
+import TransportationInfrastructure, { TransportationInfrastructureProps } from 'components/templates/TransportationInfrastructure';
 
-const TransportationContainer: React.FC = () => (
+interface TransportationContainerProps extends TransportationInfrastructureProps { }
+
+const TransportationContainer: React.FC<TransportationContainerProps> = ({ ...props }) => (
   <div className="p-aboutUs_investSector">
     <TransportationInfrastructure
-      title="Hạ tầng giao thông"
-      desc="Nâng cấp, phát triển hạ tầng giao thông tại nơi có dự án nhằm gia tăng tính kết nối vào hạ tầng giao thông trọng điểm quốc gia."
-      imgSrc={bannerImg}
+      {...props}
     />
   </div>
 );

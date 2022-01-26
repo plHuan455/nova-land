@@ -41,11 +41,12 @@ export type TabsDataTypes = {
   awardList: AwardCardProps[];
 };
 
-interface AwardListProps {
+export interface AwardListProps {
   title: string;
   desc: string;
   tabsData: TabsDataTypes[];
   getActiveIdx?: (idx: number) => void;
+  handleActiveTab: (idx: number) => void;
 }
 
 const AwardList: React.FC<AwardListProps> = ({
@@ -53,11 +54,9 @@ const AwardList: React.FC<AwardListProps> = ({
   desc,
   tabsData,
   getActiveIdx,
+  handleActiveTab,
 }) => {
   const [activeIdx, setActiveIdx] = useState(0);
-  const handleActiveTab = (idx: number) => {
-    setActiveIdx(idx);
-  };
 
   useEffect(() => {
     if (getActiveIdx) getActiveIdx(activeIdx);
@@ -79,9 +78,7 @@ const AwardList: React.FC<AwardListProps> = ({
           {title}
         </Heading>
         <div className="t-awardList_desc">
-          <Text modifiers={['16x24', '300', 'fontLexend', 'davysGrey', 'center']}>
-            {desc}
-          </Text>
+          <Text modifiers={['16x24', '300', 'fontLexend', 'davysGrey', 'center']} content={desc} />
         </div>
         <div className="t-awardList_tabs">
           <Tabs>
@@ -91,7 +88,10 @@ const AwardList: React.FC<AwardListProps> = ({
                 label={item.year}
                 active={idx === activeIdx}
                 size="20x28"
-                handleClick={() => handleActiveTab(idx)}
+                handleClick={() => {
+                  setActiveIdx(idx);
+                  handleActiveTab(idx);
+                }}
               />
             ))}
           </Tabs>
@@ -105,8 +105,7 @@ const AwardList: React.FC<AwardListProps> = ({
                   <>
                     {tabsData[panelIdx].awardList.map((item, cardIdx) => (
                       <div
-                        key={`award-card-${
-                          item.awardYear
+                        key={`award-card-${item.awardYear
                         }-${cardIdx.toString()}`}
                         className="t-awardList_tabs_panelWrap-item"
                       >
@@ -134,10 +133,6 @@ const AwardList: React.FC<AwardListProps> = ({
 
 AwardCard.defaultProps = {
   alt: undefined,
-};
-
-AwardList.defaultProps = {
-  getActiveIdx: undefined,
 };
 
 export default AwardList;

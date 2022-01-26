@@ -1,5 +1,4 @@
 export const BASE_URL = process.env.REACT_APP_BASE_URL;
-
 function mapModifiers(
   baseClassName: string,
   ...modifiers: (string | string[] | false | undefined)[]
@@ -117,7 +116,36 @@ export const handleScrollCenter = (ref: React.RefObject<HTMLDivElement | null>,
   });
 };
 
+export function getBlockData<T>(
+  _code: string,
+  listBlock: BlockComponents<T>[],
+): T | undefined {
+  const findIndex = listBlock.findIndex((item) => item.code === _code);
+  if (findIndex < 0) {
+    return undefined;
+  }
+  return listBlock[findIndex].blocks;
+}
+
+export function getBannerData(
+  _code: string,
+  listBlock: BannersDataTypes[],
+): BannerData | undefined {
+  if (!listBlock) return undefined;
+  const findIndex = listBlock.findIndex((item) => item.type === _code);
+  if (findIndex < 0) {
+    return undefined;
+  }
+  return listBlock[findIndex].data;
+}
+
 export function getImageURL(imgUrl?: string) {
   if (!BASE_URL || !imgUrl) return '';
   return BASE_URL + imgUrl;
 }
+
+export const checkExternalUrl = (str?: string) => {
+  if (!str) return false;
+  const tareaRegex = /^(http|https|tel)/;
+  return tareaRegex.test(String(str).toLowerCase());
+};

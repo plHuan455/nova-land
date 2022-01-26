@@ -1,15 +1,38 @@
-import React from 'react';
+import React, { useMemo } from 'react';
+import { useQuery } from 'react-query';
 
-import dataOutstandingProjectCard from 'assets/dataDummy/outstandingProject';
 import OutstandingProject from 'components/templates/OutstandingProject';
+import { getProjectsService } from 'services/project';
+import { DEFAULT_QUERY_OPTION } from 'utils/constants';
+import { getImageURL } from 'utils/functions';
 
-const OutstandingProjectContainer: React.FC = () => (
-  <div className="p-aboutUs_outstandingProject">
-    <OutstandingProject
-      title="DỰ ÁN NỔI BẬT"
-      outstandingProjectList={dataOutstandingProjectCard}
-    />
-  </div>
-);
+interface OutstandingProjectContainerProps {
+  title: string;
+}
+
+const OutstandingProjectContainer: React.FC<OutstandingProjectContainerProps> = ({ ...props }) => {
+  const { data: projectDataHighlight } = useQuery(
+    'getProjectsDataFilterByHighlight', () => getProjectsService({
+      highlight: true,
+    }), {
+      ...DEFAULT_QUERY_OPTION,
+    },
+  );
+
+  const outStandingProjectData = useMemo(() => projectDataHighlight?.map((item) => ({
+    imgSrc: getImageURL(item.thumbnail),
+    title: item.name,
+    href: item.link,
+  })), [projectDataHighlight]);
+
+  return (
+    <div className="p-aboutUs_outstandingProject">
+      <OutstandingProject
+        {...props}
+        outstandingProjectList={outStandingProjectData || []}
+      />
+    </div>
+  );
+};
 
 export default OutstandingProjectContainer;

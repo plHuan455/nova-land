@@ -1,12 +1,11 @@
 import React, { useEffect, useMemo } from 'react';
 import { useDispatch } from 'react-redux';
 
-// import investmentSectorData from 'assets/dataDummy/investmentSector';
 import Animate from 'components/organisms/Animate';
 import InvestmentSector from 'components/templates/InvestmentSector';
 import Section from 'components/templates/Section';
-import { getRealEstatesAction } from 'store/home';
 import { useAppSelector } from 'store/hooks';
+import { getRealEstatesAction } from 'store/project';
 import { getImageURL } from 'utils/functions';
 
 export interface InvestmentSectorTypes {
@@ -21,7 +20,7 @@ const InvestmentSectorContainer: React.FC<InvestmentSectorBlock> = ({
   blocks,
 }) => {
   const dispatch = useDispatch();
-  const { realEstatesList } = useAppSelector((state) => state.home);
+  const { realEstatesList } = useAppSelector((state) => state.project);
   const investmentSectorData = useMemo(() => realEstatesList?.map((item) => (
     {
       title: item.name,

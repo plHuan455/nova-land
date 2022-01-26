@@ -5,7 +5,7 @@ import Image from 'components/atoms/Image';
 import Animate from 'components/organisms/Animate';
 import Container from 'components/organisms/Container';
 
-interface FieldActivityProps {
+export interface FieldActivityProps {
   title: string;
   imgSrc: string;
 }
