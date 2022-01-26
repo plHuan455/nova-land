@@ -10,5 +10,10 @@ export default {
 } as Meta;
 
 export const normal: Story = () => (
-  <FilterRecuitment />
+  <div style={{ background: '#999', padding: 100 }}>
+    <FilterRecuitment
+      heading="Novator"
+      desc="Thu hút nhân tài, tạo dựng giá trị, tích lũy thành công"
+    />
+  </div>
 );

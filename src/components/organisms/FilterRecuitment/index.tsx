@@ -6,6 +6,7 @@ import { Tab, TabPanel, Tabs } from '../Tabs';
 import Heading from 'components/atoms/Heading';
 import Text from 'components/atoms/Text';
 import Pulldown from 'components/molecules/Pulldown';
+import mapModifiers from 'utils/functions';
 
 const dummyData = [
   {
@@ -19,13 +20,56 @@ const dummyData = [
         value: 'abc',
         id: 'abc',
       },
+      {
+        label: 'abc',
+        value: 'abc',
+        id: 'abc',
+      },
+      {
+        label: 'abc',
+        value: 'abc',
+        id: 'abc',
+      },
+      {
+        label: 'abc',
+        value: 'abc',
+        id: 'abc',
+      },
     ],
     content: 'Content 2',
     isPulldown: true,
+    placeholder: 'Địa điểm',
+  },
+  {
+    option: [
+      {
+        label: 'abc',
+        value: 'abc',
+        id: 'abc',
+      },
+      {
+        label: 'abc',
+        value: 'abc',
+        id: 'abc',
+      },
+      {
+        label: 'abc',
+        value: 'abc',
+        id: 'abc',
+      },
+      {
+        label: 'abc',
+        value: 'abc',
+        id: 'abc',
+      },
+    ],
+    content: 'Content 3',
+    isPulldown: true,
+    placeholder: 'Bộ phận',
   },
   {
     label: 'Tin Dự án',
-    content: 'Content 3',
+    content: 'Content 4',
   },
 ];
 interface FilterRecuitmentProps {
@@ -52,9 +96,18 @@ const FilterRecuitment: React.FC<FilterRecuitmentProps> = ({
           <Tabs variableMutate={indexActive}>
             {
               dummyData.map((item, index) => (
-                <>
+                <div className={mapModifiers('t-filterRecuitment_tab-items', indexActive === index && 'active')}>
                   {item.isPulldown
-                    ? <Pulldown options={item.option} handleChange={() => setIndexActive(index)} />
+                    ? (
+                      <div className="t-filterRecuitment_tab-pulldown">
+                        <Pulldown
+                          isSecondary
+                          options={item.option}
+                          placeholder={item.placeholder}
+                          handleChange={() => setIndexActive(index)}
+                        />
+                      </div>
+                    )
                     : (
                       <Tab
                         key={`tab-${index.toString()}`}
@@ -63,7 +116,7 @@ const FilterRecuitment: React.FC<FilterRecuitmentProps> = ({
                         handleClick={() => setIndexActive(index)}
                       />
                     )}
-                </>
+                </div>
               ))
             }
           </Tabs>
