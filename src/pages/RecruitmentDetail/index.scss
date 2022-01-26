@@ -2,4 +2,16 @@
   &_signupJobPostings {
     background-color: $anti-flash-white-4f9;
   }
+
+  &_infomation {
+    padding-top: rem(80);
+
+    @include tablet-down {
+      padding-top: rem(60);
+    }
+
+    @include mobile-down {
+      padding-top: rem(40);
+    }
+  }
 }

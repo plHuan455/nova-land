@@ -1,21 +1,16 @@
 .t-bannerRecruitmentDetail {
-
-  &_wrapContent{
-    padding-left: rem(86);
-  }
-
   &_info,
   &_location {
-    display: flex;
     align-items: center;
+    display: flex;
   }
 
   &_dot {
     background-color: $slate-gray;
-    width: rem(4);
+    border-radius: 50%;
     height: rem(4);
     margin: 0 rem(15);
-    border-radius: 50%;
+    width: rem(4);
   }
 
   &_title {

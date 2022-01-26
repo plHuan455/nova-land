@@ -41,12 +41,12 @@ const RecruitmentDetail: React.FC<RecruitmentDetailProps> = ({
       title={dataBanner.title}
     />
     <Section>
-      <Container fullScreen>
+      <Container>
         <div className="t-recruitmentDetail_wrapContent">
           <CustomRow>
             <CustomCol sm="12" md="12" lg="8">
               <div className="t-recruitmentDetail_content">
-                <Text content={content} />
+                <Text type="div" content={content} />
               </div>
             </CustomCol>
             <CustomCol sm="12" md="12" lg="4">
