@@ -11,4 +11,12 @@
     padding-bottom: rem(40);
     padding-top: rem(40);
   }
+
+  &-noPb {
+    padding-bottom: 0;
+  }
+
+  &-noPt {
+    padding-top: 0;
+  }
 }

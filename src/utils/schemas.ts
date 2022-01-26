@@ -8,4 +8,9 @@ const registerSchema = yup.object().shape({
   phone: yup.string().required('Vui lòng nhập số điện thoại').matches(phoneRegExp, 'Không đúng định dạng'),
   project: yup.object().required('Vui lòng chọn 1 dự án'),
 });
+
+export const schemaSearchForm = yup.object({
+  search: yup.string(),
+});
+
 export default registerSchema;

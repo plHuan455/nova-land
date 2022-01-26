@@ -1,10 +1,17 @@
 import React from 'react';
 
-const Section: React.FC = ({ children }) => (
-  <div className="t-section">{children}</div>
+import mapModifiers from 'utils/functions';
+
+interface SectionProps {
+  modifiers?: 'noPb' | 'noPt'
+}
+
+const Section: React.FC<SectionProps> = ({ modifiers, children }) => (
+  <div className={mapModifiers('t-section', modifiers)}>{children}</div>
 );
 
 Section.defaultProps = {
+  modifiers: undefined,
 };
 
 export default Section;

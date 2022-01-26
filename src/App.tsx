@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 
 import MainLayoutContainer from 'container/MainLayout';
+import SearchResults from 'container/SearchResults';
 import useInitializeRender from 'hooks/useInitializeRender';
 import AboutUs from 'pages/AboutUs';
 import EventDetail from 'pages/EventDetail';
@@ -61,6 +62,10 @@ const routes = [
   {
     path: 'su-kien-chi-tiet',
     element: <EventDetail />,
+  },
+  {
+    path: 'tim-kiem',
+    element: <SearchResults />,
   },
   {
     path: ':slug',

@@ -3188,6 +3188,76 @@ exports[`Storyshots Components/organisms/ListFeatProjectCollapse Normal 1`] = `
 />
 `;
 
+exports[`Storyshots Components/organisms/NewsCard Card Search 1`] = `
+<div
+  className="container o-container"
+>
+  <div
+    className="o-newsCard o-newsCard-smallVertical o-newsCard-smallTitle"
+  >
+    <a
+      aria-current="page"
+      className="a-link   active"
+      href="/"
+      onClick={[Function]}
+      target="_self"
+    >
+      <div
+        className="o-newsCard_wrapper"
+      >
+        <div
+          className="o-newsCard_image"
+        >
+          <div
+            className="a-image a-image-185x142"
+          >
+            <img
+              alt="replacing"
+              loading="lazy"
+              src="card_slide.png"
+            />
+          </div>
+        </div>
+        <div
+          className="o-newsCard_layer"
+        />
+        <div
+          className="o-newsCard_content"
+        >
+          <div
+            className="o-newsCard_content_title"
+          >
+            <p
+              className="a-text a-text-jet a-text-600 a-text-fontLexend"
+            >
+              PGA NovaWorld Phan Thiet - Thiên đường Golf hướng biển mới của Việt Nam
+            </p>
+          </div>
+          <div
+            className="o-newsCard_content_desc"
+          >
+            <p
+              className="a-text a-text-dimGray a-text-16x24 a-text-400"
+            >
+              Cụm sân golf PGA 36 hố độc quyền là một tiện ích đẳng cấp nằm trong lòng dự án NovaWorld Phan Thiet quy mô 1.000 hecta...
+            </p>
+          </div>
+          <div
+            className="o-newsCard_content_time mt-8"
+          >
+            <p
+              className="a-text a-text-dimGray a-text-12x17 a-text-400 a-text-fontLexend"
+            >
+              23/11/2021
+            </p>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Components/organisms/NewsCard Normal 1`] = `
 <div
   style={
@@ -3241,7 +3311,7 @@ exports[`Storyshots Components/organisms/NewsCard Normal 1`] = `
               </h2>
             </div>
             <div
-              className="mt-8"
+              className="o-newsCard_content_time mt-8"
             >
               <p
                 className="a-text a-text-dimGray a-text-12x17 a-text-400 a-text-fontLexend"
@@ -24110,7 +24180,7 @@ exports[`Storyshots Components/templates/Schedule Normal 1`] = `
                   </h2>
                 </div>
                 <div
-                  className="mt-8"
+                  className="o-newsCard_content_time mt-8"
                 >
                   <p
                     className="a-text a-text-columbiaBlue a-text-12x17 a-text-400 a-text-fontLexend"
@@ -24171,7 +24241,7 @@ exports[`Storyshots Components/templates/Schedule Normal 1`] = `
                     </h2>
                   </div>
                   <div
-                    className="mt-8"
+                    className="o-newsCard_content_time mt-8"
                   >
                     <p
                       className="a-text a-text-dimGray a-text-12x17 a-text-400 a-text-fontLexend"
@@ -24229,7 +24299,7 @@ exports[`Storyshots Components/templates/Schedule Normal 1`] = `
                     </h2>
                   </div>
                   <div
-                    className="mt-8"
+                    className="o-newsCard_content_time mt-8"
                   >
                     <p
                       className="a-text a-text-dimGray a-text-12x17 a-text-400 a-text-fontLexend"
@@ -24287,7 +24357,7 @@ exports[`Storyshots Components/templates/Schedule Normal 1`] = `
                     </h2>
                   </div>
                   <div
-                    className="mt-8"
+                    className="o-newsCard_content_time mt-8"
                   >
                     <p
                       className="a-text a-text-dimGray a-text-12x17 a-text-400 a-text-fontLexend"
@@ -24311,6 +24381,529 @@ exports[`Storyshots Components/templates/Schedule Normal 1`] = `
         >
           Xem tất cả lịch sự kiện
         </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/templates/SearchResult Normal 1`] = `
+<div
+  className="t-searchResult"
+>
+  <div
+    className="container o-container"
+  >
+    <div
+      className="t-searchResult_heading"
+    >
+      <h2
+        className="a-heading a-heading-jet a-heading-600 a-heading-52x65 a-heading-center a-heading-fontNoto"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "Kết Quả Tìm Kiếm",
+          }
+        }
+      />
+    </div>
+    <form
+      noValidate={true}
+      onSubmit={[Function]}
+    >
+      <div
+        className="t-searchResult_searchInput"
+      >
+        <div
+          className="t-searchResult_searchInputGroup"
+        >
+          <div
+            className="a-input a-input-text"
+          >
+            <div
+              className="a-input_wrap"
+            >
+              <input
+                autoComplete="off"
+                className="a-input_input"
+                name="search"
+                onBlur={[Function]}
+                onChange={[Function]}
+                placeholder="NovaWorld Phan Thiet"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <button
+            className="a-button a-button-primary"
+            disabled={false}
+            type="submit"
+          >
+            Tìm kiếm
+          </button>
+        </div>
+      </div>
+    </form>
+    <div
+      className="t-section"
+    >
+      <div
+        className="t-searchResult_wrapper"
+      >
+        <div
+          className="t-searchResult_content"
+        >
+          <div
+            className="t-searchResult_amount"
+          >
+            <h2
+              className="a-heading a-heading-600 a-heading-24x30 a-heading-fontLexend a-heading-jet"
+            >
+              Có
+               
+              446
+               
+              kết quả được tìm thấy
+            </h2>
+          </div>
+          <div
+            className="t-searchResult_list"
+          >
+            <div
+              className="t-searchResult_list-item"
+            >
+              <div
+                className="o-newsCard o-newsCard-smallVertical o-newsCard-smallTitle"
+              >
+                <a
+                  aria-current="page"
+                  className="a-link   active"
+                  href="/"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  <div
+                    className="o-newsCard_wrapper"
+                  >
+                    <div
+                      className="o-newsCard_image"
+                    >
+                      <div
+                        className="a-image a-image-185x142"
+                      >
+                        <img
+                          alt="replacing"
+                          loading="lazy"
+                          src="card_slide.png"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      className="o-newsCard_layer"
+                    />
+                    <div
+                      className="o-newsCard_content"
+                    >
+                      <div
+                        className="o-newsCard_content_title"
+                      >
+                        <p
+                          className="a-text a-text-jet a-text-600 a-text-fontLexend"
+                        >
+                          Bến du thuyền - yếu tố vàng gia tăng giá trị bất động sản
+                        </p>
+                      </div>
+                      <div
+                        className="o-newsCard_content_desc"
+                      >
+                        <p
+                          className="a-text a-text-dimGray a-text-16x24 a-text-400"
+                        >
+                          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. 
+                        </p>
+                      </div>
+                      <div
+                        className="o-newsCard_content_time mt-8"
+                      >
+                        <p
+                          className="a-text a-text-dimGray a-text-12x17 a-text-400 a-text-fontLexend"
+                        >
+                          23/11/2021
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div
+              className="t-searchResult_list-item"
+            >
+              <div
+                className="a-divider"
+              />
+              <div
+                className="o-newsCard o-newsCard-smallVertical o-newsCard-smallTitle"
+              >
+                <a
+                  aria-current="page"
+                  className="a-link   active"
+                  href="/"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  <div
+                    className="o-newsCard_wrapper"
+                  >
+                    <div
+                      className="o-newsCard_image"
+                    >
+                      <div
+                        className="a-image a-image-185x142"
+                      >
+                        <img
+                          alt="replacing"
+                          loading="lazy"
+                          src="card_slide.png"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      className="o-newsCard_layer"
+                    />
+                    <div
+                      className="o-newsCard_content"
+                    >
+                      <div
+                        className="o-newsCard_content_title"
+                      >
+                        <p
+                          className="a-text a-text-jet a-text-600 a-text-fontLexend"
+                        >
+                          Nova Service cùng với các đối tác hiện thực hóa mục tiêu...
+                        </p>
+                      </div>
+                      <div
+                        className="o-newsCard_content_desc"
+                      >
+                        <p
+                          className="a-text a-text-dimGray a-text-16x24 a-text-400"
+                        >
+                          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. 
+                        </p>
+                      </div>
+                      <div
+                        className="o-newsCard_content_time mt-8"
+                      >
+                        <p
+                          className="a-text a-text-dimGray a-text-12x17 a-text-400 a-text-fontLexend"
+                        >
+                          23/11/2021
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div
+              className="t-searchResult_list-item"
+            >
+              <div
+                className="a-divider"
+              />
+              <div
+                className="o-newsCard o-newsCard-smallVertical o-newsCard-smallTitle"
+              >
+                <a
+                  aria-current="page"
+                  className="a-link   active"
+                  href="/"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  <div
+                    className="o-newsCard_wrapper"
+                  >
+                    <div
+                      className="o-newsCard_image"
+                    >
+                      <div
+                        className="a-image a-image-185x142"
+                      >
+                        <img
+                          alt="replacing"
+                          loading="lazy"
+                          src="card_slide.png"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      className="o-newsCard_layer"
+                    />
+                    <div
+                      className="o-newsCard_content"
+                    >
+                      <div
+                        className="o-newsCard_content_title"
+                      >
+                        <p
+                          className="a-text a-text-jet a-text-600 a-text-fontLexend"
+                        >
+                          Nova Service cùng với các đối tác hiện thực hóa mục tiêu...
+                        </p>
+                      </div>
+                      <div
+                        className="o-newsCard_content_desc"
+                      >
+                        <p
+                          className="a-text a-text-dimGray a-text-16x24 a-text-400"
+                        >
+                          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. 
+                        </p>
+                      </div>
+                      <div
+                        className="o-newsCard_content_time mt-8"
+                      >
+                        <p
+                          className="a-text a-text-dimGray a-text-12x17 a-text-400 a-text-fontLexend"
+                        >
+                          23/11/2021
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div
+              className="t-searchResult_list-item"
+            >
+              <div
+                className="a-divider"
+              />
+              <div
+                className="o-newsCard o-newsCard-smallVertical o-newsCard-smallTitle"
+              >
+                <a
+                  aria-current="page"
+                  className="a-link   active"
+                  href="/"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  <div
+                    className="o-newsCard_wrapper"
+                  >
+                    <div
+                      className="o-newsCard_image"
+                    >
+                      <div
+                        className="a-image a-image-185x142"
+                      >
+                        <img
+                          alt="replacing"
+                          loading="lazy"
+                          src="card_slide.png"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      className="o-newsCard_layer"
+                    />
+                    <div
+                      className="o-newsCard_content"
+                    >
+                      <div
+                        className="o-newsCard_content_title"
+                      >
+                        <p
+                          className="a-text a-text-jet a-text-600 a-text-fontLexend"
+                        >
+                          Bến du thuyền - yếu tố vàng gia tăng giá trị bất động sản
+                        </p>
+                      </div>
+                      <div
+                        className="o-newsCard_content_desc"
+                      >
+                        <p
+                          className="a-text a-text-dimGray a-text-16x24 a-text-400"
+                        >
+                          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. 
+                        </p>
+                      </div>
+                      <div
+                        className="o-newsCard_content_time mt-8"
+                      >
+                        <p
+                          className="a-text a-text-dimGray a-text-12x17 a-text-400 a-text-fontLexend"
+                        >
+                          23/11/2021
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="t-searchResult_ad"
+        >
+          <div
+            className="t-searchResult_adItem"
+          >
+            <div
+              className="a-image a-image-348x720"
+            >
+              <img
+                alt="image-ad"
+                loading="lazy"
+                src="ad.png"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="t-searchResult_pagination u-mt-md-40 u-mt-28"
+      >
+        <div
+          className="o-pagination"
+        >
+          <ul
+            className="main"
+          >
+            <li
+              className="page disabled"
+            >
+              <a
+                aria-disabled="true"
+                aria-label="Previous page"
+                className="link-page link-previous "
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                rel="prev"
+                role="button"
+                tabIndex="-1"
+              >
+                <i
+                  className="a-icon a-icon-arrowPrevSlateGray a-icon-16"
+                />
+              </a>
+            </li>
+            <li
+              className="page active-page"
+            >
+              <a
+                aria-current="page"
+                aria-label="Page 1 is your current page"
+                className="link-page"
+                href="/?page=1"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                rel="canonical"
+                tabIndex="-1"
+              >
+                1
+              </a>
+            </li>
+            <li
+              className="page"
+            >
+              <a
+                aria-current={null}
+                aria-label="Page 2"
+                className="link-page"
+                href="/?page=2"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                rel="next"
+                tabIndex="0"
+              >
+                2
+              </a>
+            </li>
+            <li
+              className="page"
+            >
+              <a
+                aria-current={null}
+                aria-label="Page 3"
+                className="link-page"
+                href="/?page=3"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                tabIndex="0"
+              >
+                3
+              </a>
+            </li>
+            <li
+              className="page break"
+            >
+              <a
+                className="link-page link-break"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                role="button"
+                tabIndex="0"
+              >
+                ...
+              </a>
+            </li>
+            <li
+              className="page"
+            >
+              <a
+                aria-current={null}
+                aria-label="Page 8"
+                className="link-page"
+                href="/?page=8"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                tabIndex="0"
+              >
+                8
+              </a>
+            </li>
+            <li
+              className="page"
+            >
+              <a
+                aria-current={null}
+                aria-label="Page 9"
+                className="link-page"
+                href="/?page=9"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                tabIndex="0"
+              >
+                9
+              </a>
+            </li>
+            <li
+              className="page"
+            >
+              <a
+                aria-disabled="false"
+                aria-label="Next page"
+                className="link-page link-next"
+                href="/?page=2"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                rel="next"
+                role="button"
+                tabIndex="0"
+              >
+                <i
+                  className="a-icon a-icon-arrowNextSlateGray a-icon-16"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>

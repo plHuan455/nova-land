@@ -11,17 +11,21 @@ export interface NewsCardProps {
   alt?: string;
   title: string;
   time: string;
+  desc?: string;
   href: string;
   variant?: 'vertical' | 'horizontal' | 'smallVertical';
+  modifiers?: 'smallTitle',
 }
 
 const NewsCard: React.FC<NewsCardProps> = ({
   imgSrc,
   alt,
   title,
+  desc,
   time,
   href,
   variant,
+  modifiers,
 }) => {
   const checkRatio = useCallback(() => {
     switch (variant) {
@@ -37,7 +41,7 @@ const NewsCard: React.FC<NewsCardProps> = ({
   }, [variant]);
 
   return (
-    <div className={mapModifiers('o-newsCard', variant)}>
+    <div className={mapModifiers('o-newsCard', variant, modifiers)}>
       <Link href={href}>
         <div className="o-newsCard_wrapper">
           <div className="o-newsCard_image">
@@ -50,11 +54,26 @@ const NewsCard: React.FC<NewsCardProps> = ({
           <div className="o-newsCard_layer" />
           <div className="o-newsCard_content">
             <div className="o-newsCard_content_title">
-              <Heading modifiers={variant === 'smallVertical' ? ['jet', '24x30', '400', 'fontLexend'] : ['white', 'fontLexend', '600', '24x30']}>
-                {title}
-              </Heading>
+              {modifiers === 'smallTitle' ? (
+                <Text modifiers={['jet', '600', 'fontLexend']}>
+                  {title}
+                </Text>
+              )
+                : (
+                  <Heading modifiers={variant === 'smallVertical' ? ['jet', '24x30', '400', 'fontLexend'] : ['white', 'fontLexend', '600', '24x30']}>
+                    {title}
+                  </Heading>
+                )}
             </div>
-            <div className="mt-8">
+            {desc
+            && (
+            <div className="o-newsCard_content_desc">
+              <Text modifiers={['dimGray', '16x24', '400']}>
+                {desc}
+              </Text>
+            </div>
+            )}
+            <div className="o-newsCard_content_time mt-8">
               <Text modifiers={[variant === 'smallVertical' ? 'dimGray' : 'columbiaBlue', '12x17', '400', 'fontLexend']}>
                 {time}
               </Text>
