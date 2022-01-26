@@ -6227,7 +6227,9 @@ exports[`Storyshots Components/templates/Error Normal 1`] = `
   className="t-error"
 >
   <div
-    className="t-section"
+    className="
+    t-section
+    "
   >
     <div
       className="container o-container o-container-fullscreen"
@@ -24912,7 +24914,9 @@ exports[`Storyshots Components/templates/SearchResult Normal 1`] = `
 
 exports[`Storyshots Components/templates/Section Normal 1`] = `
 <div
-  className="t-section"
+  className="
+    t-section
+    "
 />
 `;
 
@@ -25155,7 +25159,9 @@ exports[`Storyshots Components/templates/SignupJobPostings Normal 1`] = `
   className="t-signupJobPostings"
 >
   <div
-    className="t-section"
+    className="
+    t-section
+    "
   >
     <div
       className="container"
@@ -25208,7 +25214,7 @@ exports[`Storyshots Components/templates/StockInformation Normal 1`] = `
     className="t-stockInformation_heading"
   >
     <h2
-      className="a-heading a-heading-30x42 a-heading-center a-heading-600 a-heading-jet"
+      className="a-heading a-heading-30x42 a-heading-center a-heading-600 a-heading-jet a-heading-fontNoto"
       dangerouslySetInnerHTML={
         Object {
           "__html": "Cổ phiếu Novaland group",
