@@ -1,21 +1,10 @@
-import { Story, Meta } from '@storybook/react';
 import React from 'react';
-import {
-  BrowserRouter as Router,
-} from 'react-router-dom';
-
-import NewsDetail from '.';
 
 import newsDetailDumy from 'assets/dataDummy/newsDetail';
+import NewsDetail from 'components/templates/NewsDetail';
 
-export default {
-  title: 'Components/templates/NewsDetail',
-  component: NewsDetail,
-  argTypes: {},
-} as Meta;
-
-export const normal: Story = () => (
-  <Router>
+const NewsDetailTemplateContainer: React.FC = () => (
+  <div className="p-newsdetail_content">
     <NewsDetail
       newsDetail={newsDetailDumy.newsDetailData.newsDetail}
       relatedNews={newsDetailDumy.newsDetailData.relatedNews}
@@ -23,5 +12,7 @@ export const normal: Story = () => (
       titleLatest="Các tin mới nhất"
       titleHot="Các tin nổi bật"
     />
-  </Router>
+  </div>
 );
+
+export default NewsDetailTemplateContainer;
