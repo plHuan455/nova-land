@@ -11,7 +11,7 @@ export interface dataType {
   fileName: string,
 }
 
-interface OtherDocumentsProps {
+export interface OtherDocumentsProps {
   heading?: string,
   data?: dataType[],
   btnText?: string;
@@ -49,12 +49,5 @@ const OtherDocuments: React.FC<OtherDocumentsProps> = ({
     </Container>
   </div>
 );
-
-OtherDocuments.defaultProps = {
-  data: undefined,
-  heading: undefined,
-  btnText: undefined,
-  handleSeeMore: undefined,
-};
 
 export default OtherDocuments;

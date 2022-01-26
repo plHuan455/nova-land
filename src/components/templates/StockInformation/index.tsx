@@ -10,7 +10,7 @@ export interface StockInformationType {
   movementPercent: number;
 }
 
-interface StockInformationProps {
+export interface StockInformationProps {
   title?: string,
   data?: StockInformationType[],
   note?: string,
@@ -58,11 +58,5 @@ const StockInformation: React.FC<StockInformationProps> = ({
     </Container>
   </div>
 );
-
-StockInformation.defaultProps = {
-  title: undefined,
-  data: undefined,
-  note: undefined,
-};
 
 export default StockInformation;

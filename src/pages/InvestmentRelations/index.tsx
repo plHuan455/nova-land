@@ -1,10 +1,10 @@
 import React from 'react';
 
-import InvestmentRelationsContainer from 'container/InvestmentRelations';
+import InvestmentRelationsContainer, { InvestmentRelationsBlocks } from 'container/InvestmentRelations';
 
-const InvestmentRelations: React.FC = () => (
+const InvestmentRelations: React.FC<BasePageData<InvestmentRelationsBlocks>> = (props) => (
   <div className="p-investmentRelations">
-    <InvestmentRelationsContainer />
+    <InvestmentRelationsContainer {...props} />
   </div>
 );
 
