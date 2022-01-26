@@ -4,7 +4,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { useQuery } from 'react-query';
 import { useDispatch } from 'react-redux';
 
-import img from 'assets/images/bg_project_list_map.svg';
+import img from 'assets/images/bg_project_list_map.png';
 import { OptionType } from 'components/molecules/Pulldown';
 import ProjectListMap, {
   ItemBranch,
@@ -32,6 +32,7 @@ const ProjectListMapContainer: React.FC<ProjectListMapContainerProps> = ({
   const [project, setProject] = useState<OptionType | null>(null);
 
   const [listSelectProject, setSelectProjectList] = useState<ItemBranch[]>([]);
+  const [isLoading, setLoading] = useState(false);
 
   const projectOptionData = useMemo(() => projectData?.map((item) => ({
     value: String(item.id),
@@ -68,16 +69,23 @@ const ProjectListMapContainer: React.FC<ProjectListMapContainerProps> = ({
   );
 
   const filterMaps = async (cityId?: number, projectId?: number) => {
-    const params = cityId ? { city_id: cityId } : projectId ? { project_id: projectId } : {};
-    const prjList = await geMapService(params);
-    const convertPrjList = prjList.map((item) => ({
-      id: item.id,
-      point: {
-        x: item.pointX,
-        y: item.pointY,
-      },
-    }));
-    setSelectProjectList(convertPrjList);
+    try {
+      const params = cityId ? { city_id: cityId } : projectId ? { project_id: projectId } : {};
+      setLoading(true);
+      const prjList = await geMapService(params);
+      const convertPrjList = prjList.map((item) => ({
+        id: item.id,
+        point: {
+          x: item.pointX,
+          y: item.pointY,
+        },
+      }));
+      setSelectProjectList(convertPrjList);
+    } catch {
+      // Empty
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleChangeProvince = (option: OptionType) => {
@@ -115,10 +123,11 @@ const ProjectListMapContainer: React.FC<ProjectListMapContainerProps> = ({
         <ProjectListMapGround
           image={{
             path: img,
-            width: 373,
-            height: 593,
+            width: 320,
+            height: 508,
           }}
           listPoint={listSelectProject}
+          loading={isLoading}
         />
       </ProjectListMap>
     </div>
