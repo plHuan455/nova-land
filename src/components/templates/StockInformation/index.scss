@@ -28,10 +28,16 @@
   }
 
   &_rightContent {
-    flex: 0 0 50%;
-    @include mobile-down {
-      flex: 0 0 100%;
-      margin-top: rem(15);
+    flex: 0 0 100%;
+
+    iframe {
+      min-height: rem(550);
+      @include tablet-down {
+        min-height: rem(400);
+      }
+      @include mobile-down {
+        min-height: rem(300);
+      }
     }
   }
 

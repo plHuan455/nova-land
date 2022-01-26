@@ -7,12 +7,9 @@ import OtherDocumentContainer from './otherDocument';
 import ScheduleContainer from './schedule';
 
 import ScheduleList from 'assets/dataDummy/Schedule';
-import imgStock from 'assets/images/imgStock.png';
 import imgPdf from 'assets/images/pdf.png';
-import Image from 'components/atoms/Image';
 import { dataType } from 'components/templates/OtherDocuments';
 import Section from 'components/templates/Section';
-import { StockInformationType } from 'components/templates/StockInformation';
 import { getBlockData, getImageURL } from 'utils/functions';
 
 type NovalandShares = {
@@ -54,29 +51,6 @@ export type InvestmentRelationsBlocks = NovalandShares
   | CorporateGovernanceAnnualReport
   | EventCalendar
   | OtherDocument;
-
-const StockInformationData: StockInformationType[] = [
-  {
-    desc: 'Thay đổi',
-    movementNumber: -1.800,
-    movementPercent: -2.04,
-  },
-  {
-    desc: 'Khối lượng giao dịch',
-    movementNumber: 3022.700,
-    movementPercent: 0,
-  },
-  {
-    desc: 'Vốn hóa',
-    movementNumber: 166.788,
-    movementPercent: 0,
-  },
-  {
-    desc: 'Khối lượng giao dịch trung bình 10 phiên',
-    movementNumber: 2883.448,
-    movementPercent: 0,
-  },
-];
 
 const dataList: dataType[] = [
   {
@@ -140,10 +114,10 @@ const InvestmentRelationsContainer: React.FC<BasePageData<InvestmentRelationsBlo
       <Section>
         <StockInformationContainer
           title={novalandSharesBlock.title}
-          data={StockInformationData}
-          note="Thông tin được trích dẫn từ nguồn Vietstock (http://vietstock.vn). Tập đoàn Novaland sẽ không chịu bất kỳ trách nhiệm nào về tính chính xác, đầy đủ hoặc bất kỳ khía cạnh nào khác đối với thông tin hiển thị trên đây được đăng tải/trích dẫn/tích hợp từ nguồn này."
         >
-          <Image ratio="546x308" alt="img" src={imgStock} />
+          <iframe title={novalandSharesBlock.title} width="100%" height="100%" frameBorder="0" src="https://ironline.vietstock.vn/vi/NVL" />
+          {/* // implement when language function setup */}
+          {/* <iframe title={novalandSharesBlock.title} width="100%" height="100%" frameBorder="0" src="https://ironline.vietstock.vn/en/NVL" /> */}
         </StockInformationContainer>
       </Section>
       <Section>

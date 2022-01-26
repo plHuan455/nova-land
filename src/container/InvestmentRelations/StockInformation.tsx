@@ -1,7 +1,5 @@
 import React from 'react';
 
-import imgStock from 'assets/images/imgStock.png';
-import Image from 'components/atoms/Image';
 import Animate from 'components/organisms/Animate';
 import StockInformation,
 { StockInformationProps }
@@ -17,7 +15,7 @@ const StockInformationContainer: React.FC<StockInformationContainerProps> = ({
       <StockInformation
         {...props}
       >
-        <Image ratio="546x308" alt="img" src={imgStock} />
+        {children}
       </StockInformation>
     </div>
   </Animate>

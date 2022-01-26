@@ -14,7 +14,10 @@
 
   &_content {
     background: transparent;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: rem(36);
+    max-width: rem(786);
     @include small-mobile {
       margin-top: rem(20);
     }
