@@ -26,7 +26,7 @@ const TransportationInfrastructure: React.FC<
         <div className="u-mt-8 u-mt-sm-16">
           <Text type="div" modifiers={['dimGray', '300', 'center', '16x24']} content={desc} />
         </div>
-        <div className="u-mt-16 u-mt-sm-32">
+        <div className="u-mt-16 ">
           <Image
             src={imgSrc}
             srcTablet={imgSrcTablet}

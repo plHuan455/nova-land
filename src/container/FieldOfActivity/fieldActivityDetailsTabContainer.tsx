@@ -10,7 +10,10 @@ const dummyData = [
     content: {
       imgSrc: bannerImg,
       title: 'THÔNG TIN CHI TIẾT',
-      desc: 'Trải qua hành trình 29 năm hình thành và phát triển, Novaland hiện sở hữu danh mục hơn 50 dự án Bất động sản; không chỉ dừng lại ở các dự án Bất động sản Đô thị, Tập đoàn còn đầu tư mạnh mẽ loạt dự án Bất động sản Đô',
+      desc: `Trải qua hành trình 29 năm hình thành và phát triển, Novaland hiện sở hữu danh mục hơn 50 dự án Bất động sản; 
+      không chỉ dừng lại ở các dự án Bất động sản Đô thị, Tập đoàn còn đầu tư mạnh mẽ loạt dự án Bất động sản Đô thị Du lịch 
+      quy mô lớn, với những công trình và sản phẩm dẫn đầu xu hướng, tác động tích cực đến quá trình phát triển đô thị và 
+      phát triển du lịch tại các tỉnh thành phía Nam.`,
     },
   },
   {
