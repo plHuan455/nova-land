@@ -30,6 +30,27 @@ export const card: Story = () => (
         title="Cụm sân golf PGA tại Novaworld Phan Thiet..."
         desc="Ngày 05 - 06/01/2022, tại Novaland Gallery (2Bis Nguyễn Thị Minh Khai, Q.1, TP.HCM),..."
         href="/"
+        bntText="Xem thêm"
+      />
+    </Router>
+  </div>
+);
+
+export const ABC: Story = () => (
+  <div style={{ maxWidth: '378px', margin: '30px' }}>
+    <Router>
+      <NewsCategoryCard
+        imgSrc={imgNewsCategory4}
+        ratio="376x212"
+        alt="ImgNewsCategory4"
+        title="Cụm sân golf PGA tại Novaworld Phan Thiet..."
+        desc="Ngày 05 - 06/01/2022, tại Novaland Gallery (2Bis Nguyễn Thị Minh Khai, Q.1, TP.HCM),..."
+        href="/"
+        isLatestJobs
+        tagLeft="Tài Chính"
+        tagRight="Toàn thời gian"
+        locationText="HO CHI MINH, city"
+        bntText="Tìm hiểu thêm"
       />
     </Router>
   </div>

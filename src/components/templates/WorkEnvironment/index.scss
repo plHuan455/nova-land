@@ -1,0 +1,23 @@
+.t-workEnvironment {
+  &_carousel{
+    margin: rem(36);
+    .o-carousel_arrow {
+      &_prev {
+        left: rem(-24);
+      }
+      &_next {
+        right: rem(-24);
+      }
+    }
+    &-item{
+      max-width: rem(378);
+      margin: auto;
+    }
+  }
+  &_button{
+    max-width: rem(163);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: rem(60);
+  }
+}

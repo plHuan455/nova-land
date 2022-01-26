@@ -1,0 +1,30 @@
+.o-branchList {
+  &_image {
+    max-width: rem(110);
+    width: 100%;
+    margin: auto;
+  }
+
+  .o-carousel {
+
+  &_arrow {
+    background-color: $white;
+
+    &_prev {
+      left: rem(-72);
+    }
+  
+    &_next {
+      right: rem(-72);
+    }
+  }
+    &_arrow_prev {
+      height: rem(40);
+      width: rem(40);
+    }
+    &_arrow_next {
+      height: rem(40);
+      width: rem(40);
+    }
+  }
+}

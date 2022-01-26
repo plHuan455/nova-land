@@ -43,6 +43,7 @@
 @import 'components/organisms/TabsBg/';
 @import 'components/organisms/ReportCard/';
 @import 'components/organisms/FilterRecuitment/';
+@import 'components/organisms/BranchList/';
 
 //Templates
 @import 'components/templates/HomeNews';
@@ -79,6 +80,9 @@
 @import 'components/templates/FilterGroupRecruitment';
 @import 'components/templates/RecruitmentPositionList';
 @import 'components/templates/SearchResult/';
+@import 'components/templates/LatestJobs/';
+@import 'components/templates/CompanyProfile/';
+@import 'components/templates/WorkEnvironment/';
 
 // Pages
 @import 'pages/Home/';

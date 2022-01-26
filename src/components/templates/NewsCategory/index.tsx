@@ -1,12 +1,14 @@
 import React from 'react';
 
 import Heading from 'components/atoms/Heading';
+import Icon from 'components/atoms/Icon';
 import Image from 'components/atoms/Image';
 import Link from 'components/atoms/Link';
 import Text from 'components/atoms/Text';
 import Pagination from 'components/molecules/Pagination';
 import Container from 'components/organisms/Container';
 import FeaturedNews from 'components/templates/FeaturedNews';
+import mapModifiers from 'utils/functions';
 
 export interface NewsCategoryCardProps {
   imgSrc: string;
@@ -15,6 +17,11 @@ export interface NewsCategoryCardProps {
   title: string;
   desc: string;
   href: string;
+  isLatestJobs?: boolean;
+  tagLeft?: string,
+  tagRight?: string,
+  locationText?:string,
+  bntText?:string
 }
 
 export const NewsCategoryCard: React.FC<NewsCategoryCardProps> = ({
@@ -24,27 +31,54 @@ export const NewsCategoryCard: React.FC<NewsCategoryCardProps> = ({
   title,
   desc,
   href,
+  isLatestJobs,
+  tagLeft,
+  tagRight,
+  locationText,
+  bntText,
 }) => (
-  <div className="t-newsCategoryCard">
+  <div className={mapModifiers('t-newsCategoryCard', isLatestJobs && 'isLatestJobs')}>
+    {
+      isLatestJobs && (
+        <div className="t-newsCategoryCard-tag">
+          <div className="t-newsCategoryCard-tag_left">
+            <Text modifiers={['white', '12x17', 'fontLexend']}>{tagLeft}</Text>
+          </div>
+          <div className="t-newsCategoryCard-tag_right">
+            <Text modifiers={['white', '12x17', 'fontLexend']}>{tagRight}</Text>
+          </div>
+        </div>
+      )
+    }
     <Link href={href}>
       <div className="t-newsCategoryCard_wrapper">
         <div className="t-newsCategoryCard_thumbnail">
           <Image src={imgSrc} ratio={ratio} alt={alt || 'NewsCategoryCar'} />
         </div>
         <div className="t-newsCategoryCard_content">
+          {
+            isLatestJobs && (
+              <div className="t-newsCategoryCard_location">
+                <Icon size="20" iconName="location" />
+                <div className="t-newsCategoryCard_locationText">
+                  <Text modifiers={['400', 'fontLexend', '12x17', 'spanishGray']} content={locationText} />
+                </div>
+              </div>
+            )
+          }
           <div className="t-newsCategoryCard_title">
             <Heading modifiers={['20x30', '600', 'jet']}>
               {title}
             </Heading>
           </div>
           <div className="t-newsCategoryCard_desc u-mt-4">
-            <Text modifiers={['300', 'dimGray']}>
+            <Text modifiers={isLatestJobs ? ['400', 'dimGray', '16x24'] : ['300', 'dimGray']}>
               {desc}
             </Text>
           </div>
           <div className="t-newsCategoryCard_btn u-mt-lg-24 u-mt-sm-14 u-mt-10">
             <Text modifiers={['300', 'camel', 'underline']}>
-              Xem thêm
+              {bntText}
             </Text>
             <div className="t-newsCategoryCard_btn_icon u-ml-10" />
           </div>
