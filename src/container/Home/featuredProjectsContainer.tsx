@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useMemo } from 'react';
+import { useQuery } from 'react-query';
 
-import dataList from 'assets/dataDummy/featuredProjects';
 import FeaturedProjects from 'components/templates/FeaturedProjects';
 import Section from 'components/templates/Section';
+import { getProjectsService } from 'services/home';
+import { DEFAULT_QUERY_OPTION } from 'utils/constants';
+import { getImageURL } from 'utils/functions';
 
 export interface FeaturedProjectsTypes {
   titleSection: string;
@@ -14,15 +17,34 @@ interface FeaturedProjectsBlock {
 
 const FeaturedProjectsContainer: React.FC<FeaturedProjectsBlock> = ({
   blocks,
-}) => (
-  <div className="p-home_featuredProjects">
-    <Section>
-      <FeaturedProjects
-        title={blocks.titleSection}
-        featuredProjectList={dataList}
-      />
-    </Section>
-  </div>
-);
+}) => {
+  const { isLoading, data } = useQuery(
+    ['GetProjectHighlight'],
+    () => getProjectsService({ highlight: true }),
+    DEFAULT_QUERY_OPTION,
+  );
+
+  const dataList = useMemo(
+    () => data?.map((item) => ({
+      title: item.name,
+      src: getImageURL(item.thumbnail),
+      content: item.description,
+      href: item.link,
+    })),
+    [data],
+  );
+
+  return (
+    <div className="p-home_featuredProjects">
+      <Section>
+        <FeaturedProjects
+          title={blocks.titleSection}
+          featuredProjectList={dataList || []}
+          loading={isLoading}
+        />
+      </Section>
+    </div>
+  );
+};
 
 export default FeaturedProjectsContainer;

@@ -1,7 +1,9 @@
+/* eslint-disable react/require-default-props */
 import React, { useState } from 'react';
 
 import Heading from 'components/atoms/Heading';
 import Image from 'components/atoms/Image';
+import Loading from 'components/atoms/Loading';
 import Container from 'components/organisms/Container';
 import ListFeatProjectCollapse from 'components/organisms/ListFeatProjectCollapse';
 import mapModifiers from 'utils/functions';
@@ -17,11 +19,15 @@ export type FeaturedProjectTypes = {
 interface FeaturedProjectsProps {
   title: string;
   featuredProjectList: FeaturedProjectTypes[];
+  handleOnChange?: (index: number) => void;
+  loading?: boolean;
 }
 
 const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
   title,
   featuredProjectList,
+  handleOnChange = () => { },
+  loading,
 }) => {
   const [indexActive, setIndexActive] = useState(0);
 
@@ -29,6 +35,7 @@ const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
     if (index !== indexActive) {
       setIndexActive(index);
     }
+    handleOnChange(index);
   };
 
   return (
@@ -37,7 +44,7 @@ const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
         <Heading modifiers={['32x48', 'jet', '500', 'fontNoto', 'center', 'uppercase']}>
           {title}
         </Heading>
-        {featuredProjectList.length > 0 && (
+        {loading ? <Loading isShow /> : featuredProjectList.length > 0 && (
           <div className="t-featuredProjects_collapseList">
             <div className="t-featuredProjects_collapseList_left">
               <ListFeatProjectCollapse
@@ -68,6 +75,8 @@ const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
   );
 };
 
-FeaturedProjects.defaultProps = {};
+FeaturedProjects.defaultProps = {
+  handleOnChange: undefined,
+};
 
 export default FeaturedProjects;

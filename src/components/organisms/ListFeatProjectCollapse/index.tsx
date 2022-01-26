@@ -37,9 +37,7 @@ const ListFeatProjectCollapse: React.FC<ListFeatProjectCollapseProps> = ({
           active={indexActive === idx}
         >
           <div className="o-listFeatProjectCollapse_item-content">
-            <Text modifiers={['16x24', 'davysGrey', '400']}>
-              {item.content}
-            </Text>
+            <Text modifiers={['16x24', 'davysGrey', '300']} content={item.content} />
           </div>
           <Link href={item.href} target={item.target || '_blank'}>
             <div className="o-listFeatProjectCollapse_item-wrapLink">
