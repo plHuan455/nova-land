@@ -7,7 +7,11 @@ import ProjectListContainer from './projectListContainer';
 
 import Container from 'components/organisms/Container';
 import getBlockData from 'helpers/pageData';
-import { getRealEstatesAction } from 'store/FieldOfActivity';
+import {
+  getRealEstatesAction,
+  getCategoryProjectsAction,
+  getProjectsAction,
+} from 'store/FieldOfActivity';
 import { useAppDispatch, useAppSelector } from 'store/hooks';
 import { getImageURL } from 'utils/functions';
 
@@ -18,7 +22,11 @@ const FieldOfActivityContainer: React.FC<BasePageData<FieldOfActivityData>> = ({
   blocks,
   banners,
 }) => {
-  const { realEstatesList } = useAppSelector((state) => state.fieldOfActivity);
+  const {
+    realEstatesList,
+    categoryProjectsList,
+    projectsList,
+  } = useAppSelector((state) => state.fieldOfActivity);
   const dispatch = useAppDispatch();
 
   const fieldActivityDetailsTabBlock = useMemo(
@@ -45,8 +53,35 @@ const FieldOfActivityContainer: React.FC<BasePageData<FieldOfActivityData>> = ({
     return [];
   }, [realEstatesList]);
 
+  const convertListLogo = (
+    nameProjects: string,
+  ) => {
+    const dummyListLogo: Array<string> = [];
+    if (projectsList) {
+      projectsList.map(
+        (item) => item.category.name === nameProjects
+        && dummyListLogo.push(getImageURL(item.projectLogo)),
+      );
+    }
+    return dummyListLogo;
+  };
+
+  const convertDataProjectList = useMemo(() => {
+    if (categoryProjectsList) {
+      return categoryProjectsList.map((val) => ({
+        title: val.name,
+        listLogo: convertListLogo(val.name),
+      }));
+    }
+
+    return [];
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [categoryProjectsList, projectsList, convertListLogo]);
+
   useEffect(() => {
-    dispatch(getRealEstatesAction());
+    dispatch(getRealEstatesAction({}));
+    dispatch(getCategoryProjectsAction({}));
+    dispatch(getProjectsAction({}));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -59,7 +94,7 @@ const FieldOfActivityContainer: React.FC<BasePageData<FieldOfActivityData>> = ({
           title={fieldActivityDetailsTabBlock.tab1.titleProject}
           dataProductLines={convertDataProductLines}
         />
-        <ProjectListContainer />
+        <ProjectListContainer dataProjectList={convertDataProjectList} />
       </Container>
     </>
   );

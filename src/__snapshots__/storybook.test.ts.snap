@@ -4224,50 +4224,12 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                   <p
                     className="a-text a-text-18x22 a-text-fontLexend a-text-arsenic a-text-center"
                   >
-                    <div
-                      className="o-carousel_item"
-                    >
-                      <div
-                        className="o-tabsBg_tab"
-                        onClick={[Function]}
-                      >
-                        <span
-                          className="o-tabsBg_label "
-                        >
-                          <div
-                            className="o-tabsBg_image"
-                          >
-                            <div
-                              className="a-image a-image-1x1"
-                            >
-                              <img
-                                alt="replacing"
-                                loading="lazy"
-                                src="ic_inActiveTab.png"
-                              />
-                            </div>
-                          </div>
-                          <span>
-                            BĐS CÔNG NGHIỆP A
-                          </span>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
+                    Chứng nhận Công trình tiêu biểu chào mừng 100 năm Liên Hiệp Quốc
+                  </p>
                 </div>
               </div>
               <div
-                aria-hidden={true}
-                className="slick-slide"
-                data-index={5}
-                onClick={[Function]}
-                style={
-                  Object {
-                    "outline": "none",
-                    "width": 0,
-                  }
-                }
-                tabIndex="-1"
+                className="t-awardList_card_year"
               >
                 <div
                   className="t-awardList_card_year-clip"
@@ -4275,100 +4237,14 @@ exports[`Storyshots Components/templates/AwardList Normal 1`] = `
                   <h2
                     className="a-heading a-heading-24x34 a-heading-white a-heading-400 a-heading-center a-heading-fontNoto"
                   >
-                    <div
-                      className="o-carousel_item"
-                    >
-                      <div
-                        className="o-tabsBg_tab"
-                        onClick={[Function]}
-                      >
-                        <span
-                          className="o-tabsBg_label "
-                        >
-                          <div
-                            className="o-tabsBg_image"
-                          >
-                            <div
-                              className="a-image a-image-1x1"
-                            >
-                              <img
-                                alt="replacing"
-                                loading="lazy"
-                                src="ic_inActiveTab.png"
-                              />
-                            </div>
-                          </div>
-                          <span>
-                            BĐS CÔNG NGHIỆP B
-                          </span>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
+                    2021
+                  </h2>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="o-tabsBg_panel o-tabsBg_panel-active"
-  >
-    Content 1
-  </div>
-  <div
-    className="o-tabsBg_panel"
-  >
-    Content 2
-  </div>
-  <div
-    className="o-tabsBg_panel"
-  >
-    Content 3
-  </div>
-  <div
-    className="o-tabsBg_panel"
-  >
-    Content 4
-  </div>
-  <div
-    className="o-tabsBg_panel"
-  >
-    Content 5
-  </div>
-  <div
-    className="o-tabsBg_panel"
-  >
-    Content 6
-  </div>
-</div>
-`;
-
-exports[`Storyshots Components/organisms/Tabs Normal 1`] = `
-<div
-  style={
-    Object {
-      "background": "#bfbfbf",
-    }
-  }
->
-  <div
-    className="container o-container"
-  >
-    <div
-      className="o-tabs"
-    >
-      <div
-        className="o-tabs_labels"
-      >
-        <div
-          className="o-tabs_tab o-tabs_tab-active"
-          onClick={[Function]}
-        >
-          <span
-            className="o-tabs_label "
+          <div
+            className="t-awardList_tabs_panelWrap-item"
           >
             <div
               className="t-awardList_card"
@@ -4410,11 +4286,10 @@ exports[`Storyshots Components/organisms/Tabs Normal 1`] = `
             </div>
           </div>
           <div
-            className="o-tabs_tab"
-            onClick={[Function]}
+            className="t-awardList_tabs_panelWrap-item"
           >
-            <span
-              className="o-tabs_label o-tabs_label-20x28"
+            <div
+              className="t-awardList_card"
             >
               <div
                 className="t-awardList_card_wrap"
@@ -5563,14 +5438,6 @@ exports[`Storyshots Components/templates/DevelopmentHistory Normal 1`] = `
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div
-            className="t-awardList_tabs_panelWrap-item"
-          >
-            <div
-              className="t-awardList_card"
-            >
               <div
                 aria-hidden={true}
                 className="slick-slide"
@@ -6663,7 +6530,7 @@ exports[`Storyshots Components/templates/FeaturedNews Normal 1`] = `
           </div>
         </div>
       </div>
-    </a>
+    </div>
   </div>
 </div>
 `;
@@ -6983,10 +6850,6 @@ exports[`Storyshots Components/templates/FeaturedProjects Normal 1`] = `
             />
           </div>
         </div>
-        <div
-          className="o-carousel_arrow o-carousel_arrow_next slick-arrow slick-next t-heroBanner_arrow-next"
-          onClick={[Function]}
-        />
       </div>
       <div
         className="t-featuredProjects_collapseList_right"
@@ -8844,86 +8707,6 @@ exports[`Storyshots Components/templates/HomeNews Normal 1`] = `
                   </div>
                 </a>
               </div>
-            </div>
-          </div>
-          <div
-            className="o-carousel_arrow o-carousel_arrow_next slick-arrow slick-next "
-            onClick={[Function]}
-          />
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Components/templates/InvestmentSector Small 1`] = `
-<div
-  className="t-investmentSector t-investmentSector-small"
->
-  <div
-    className="container o-container"
-  >
-    <div
-      className="u-mb-lg-52 u-mb-sm-40 u-mb-24"
-    >
-      <h2
-        className="a-heading a-heading-32x48 a-heading-jet a-heading-500 a-heading-uppercase a-heading-center a-heading-fontNoto"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "BẤT ĐỘNG SẢN",
-          }
-        }
-      />
-    </div>
-    <div
-      className="t-investmentSector_content"
-    >
-      <div
-        className="o-carousel o-carousel-hasarrow"
-      >
-        <div
-          className="slick-slider slick-initialized"
-          dir="ltr"
-        >
-          <div
-            className="o-carousel_arrow o-carousel_arrow_prev slick-arrow slick-prev "
-            onClick={[Function]}
-          />
-          <div
-            className="slick-list"
-            onClick={[Function]}
-            onKeyDown={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={null}
-            onMouseMove={null}
-            onMouseUp={[Function]}
-            onTouchCancel={null}
-            onTouchEnd={[Function]}
-            onTouchMove={null}
-            onTouchStart={[Function]}
-            style={
-              Object {
-                "padding": "0px 0",
-              }
-            }
-          >
-            <div
-              className="slick-track"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onMouseOver={[Function]}
-              style={
-                Object {
-                  "WebkitTransform": "translate3d(0px, 0px, 0px)",
-                  "WebkitTransition": "",
-                  "msTransform": "translateX(0px)",
-                  "opacity": 1,
-                  "transform": "translate3d(0px, 0px, 0px)",
-                  "transition": "",
-                }
-              }
-            >
               <div
                 className="t-homeNewsCard_wrapper"
               >
@@ -9923,7 +9706,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                                 <img
                                   alt="InvestmentCard"
                                   loading="lazy"
-                                  src="img_investmentSector.png"
+                                  src="img_investmentSector2.png"
                                 />
                               </div>
                               <div
@@ -10043,7 +9826,7 @@ exports[`Storyshots Components/templates/InvestmentSector Normal 1`] = `
                                 <img
                                   alt="InvestmentCard"
                                   loading="lazy"
-                                  src="img_investmentSector2.png"
+                                  src="img_investmentSector.png"
                                 />
                               </div>
                               <div
@@ -21090,6 +20873,7 @@ exports[`Storyshots Components/templates/ProductLines Normal 1`] = `
                     onClick={[Function]}
                     style={
                       Object {
+                        "outline": "none",
                         "width": 0,
                       }
                     }
@@ -21145,6 +20929,7 @@ exports[`Storyshots Components/templates/ProductLines Normal 1`] = `
                     onClick={[Function]}
                     style={
                       Object {
+                        "outline": "none",
                         "width": 0,
                       }
                     }
@@ -21193,83 +20978,6 @@ exports[`Storyshots Components/templates/ProductLines Normal 1`] = `
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div
-                className="o-carousel_arrow o-carousel_arrow_next slick-arrow slick-next "
-                onClick={[Function]}
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Components/templates/ProductLines Normal 1`] = `
-<div
-  className="container o-container"
->
-  <div
-    className="t-productLines"
-  >
-    <div
-      className="undefined animate animate-goUp"
-    >
-      <div
-        className="t-productLines_title"
-      >
-        <h2
-          className="a-heading a-heading-30x42 a-heading-600 a-heading-jet a-heading-uppercase a-heading-center"
-        >
-          các dòng sản phẩm
-        </h2>
-      </div>
-      <div
-        className="o-tabsBg"
-      >
-        <div
-          className="o-tabsBg_labels"
-        >
-          <div
-            className="o-carousel"
-          >
-            <div
-              className="slick-slider slick-initialized"
-              dir="ltr"
-            >
-              <div
-                className="slick-list"
-                onClick={[Function]}
-                onKeyDown={[Function]}
-                onMouseDown={[Function]}
-                onMouseLeave={null}
-                onMouseMove={null}
-                onMouseUp={[Function]}
-                onTouchCancel={null}
-                onTouchEnd={[Function]}
-                onTouchMove={null}
-                onTouchStart={[Function]}
-                style={Object {}}
-              >
-                <div
-                  className="slick-track"
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  onMouseOver={[Function]}
-                  style={
-                    Object {
-                      "WebkitTransform": "translate3d(0px, 0px, 0px)",
-                      "WebkitTransition": "",
-                      "msTransform": "translateX(0px)",
-                      "opacity": 1,
-                      "transform": "translate3d(0px, 0px, 0px)",
-                      "transition": "",
-                    }
-                  }
-                >
                   <div
                     aria-hidden={false}
                     className="slick-slide slick-active"
@@ -21383,9 +21091,9 @@ exports[`Storyshots Components/templates/ProductLines Normal 1`] = `
                     </div>
                   </div>
                   <div
-                    aria-hidden={false}
-                    className="slick-slide slick-active"
-                    data-index={1}
+                    aria-hidden={true}
+                    className="slick-slide"
+                    data-index={4}
                     onClick={[Function]}
                     style={
                       Object {
@@ -21430,7 +21138,7 @@ exports[`Storyshots Components/templates/ProductLines Normal 1`] = `
                                 </div>
                               </div>
                               <span>
-                                ĐÔ THỊ VỆ TINH
+                                BĐS CÔNG NGHIỆP A BĐS CÔNG NGHIỆP A BĐS CÔNG NGHIỆP A
                               </span>
                             </span>
                           </div>
@@ -24562,507 +24270,6 @@ exports[`Storyshots Components/templates/Schedule Normal 1`] = `
               target="_self"
             >
               <div
-                className="o-tabs_panel"
-              >
-                <div
-                  className="t-projectMap_info_carousel"
-                >
-                  <div
-                    className="o-carousel"
-                  >
-                    <div
-                      className="slick-slider slick-initialized"
-                    >
-                      
-                      <div
-                        className="slick-list"
-                      >
-                        <div
-                          className="slick-track"
-                          onMouseEnter={[Function]}
-                          onMouseLeave={[Function]}
-                          onMouseOver={[Function]}
-                          style={
-                            Object {
-                              "WebkitTransform": "translate3d(0px, 0px, 0px)",
-                              "WebkitTransition": "",
-                              "msTransform": "translateX(0px)",
-                              "opacity": 1,
-                              "transform": "translate3d(0px, 0px, 0px)",
-                              "transition": "",
-                            }
-                          }
-                        >
-                          <div
-                            aria-hidden={false}
-                            className="slick-slide slick-active slick-current"
-                            data-index={0}
-                            onClick={[Function]}
-                            style={
-                              Object {
-                                "outline": "none",
-                                "width": 0,
-                              }
-                            }
-                            tabIndex="-1"
-                          >
-                            <div>
-                              <div
-                                className="o-carousel_wrap"
-                                style={
-                                  Object {
-                                    "display": "inline-block",
-                                    "width": "50%",
-                                  }
-                                }
-                                tabIndex={-1}
-                              >
-                                <div
-                                  className="o-carousel_item"
-                                >
-                                  <div
-                                    className="t-projectMap_info_branch  "
-                                    onClick={[Function]}
-                                    onMouseEnter={[Function]}
-                                    onMouseLeave={[Function]}
-                                  >
-                                    <div
-                                      className="a-image a-image-257x64"
-                                    >
-                                      <img
-                                        alt="replacing"
-                                        loading="lazy"
-                                        src="branch_1.png"
-                                      />
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div
-                                className="o-carousel_wrap"
-                                style={
-                                  Object {
-                                    "display": "inline-block",
-                                    "width": "50%",
-                                  }
-                                }
-                                tabIndex={-1}
-                              >
-                                <div
-                                  className="o-carousel_item"
-                                >
-                                  <div
-                                    className="t-projectMap_info_branch  "
-                                    onClick={[Function]}
-                                    onMouseEnter={[Function]}
-                                    onMouseLeave={[Function]}
-                                  >
-                                    <div
-                                      className="a-image a-image-257x64"
-                                    >
-                                      <img
-                                        alt="replacing"
-                                        loading="lazy"
-                                        src="branch_2.png"
-                                      />
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div>
-                              <div
-                                className="o-carousel_wrap"
-                                style={
-                                  Object {
-                                    "display": "inline-block",
-                                    "width": "50%",
-                                  }
-                                }
-                                tabIndex={-1}
-                              >
-                                <div
-                                  className="o-carousel_item"
-                                >
-                                  <div
-                                    className="t-projectMap_info_branch  "
-                                    onClick={[Function]}
-                                    onMouseEnter={[Function]}
-                                    onMouseLeave={[Function]}
-                                  >
-                                    <div
-                                      className="a-image a-image-257x64"
-                                    >
-                                      <img
-                                        alt="replacing"
-                                        loading="lazy"
-                                        src="branch_3.png"
-                                      />
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="o-tabs_panel"
-              >
-                <div
-                  className="t-projectMap_info_carousel"
-                >
-                  <div
-                    className="o-carousel"
-                  >
-                    <div
-                      className="slick-slider slick-initialized"
-                    >
-                      
-                      <div
-                        className="slick-list"
-                      >
-                        <div
-                          className="slick-track"
-                          onMouseEnter={[Function]}
-                          onMouseLeave={[Function]}
-                          onMouseOver={[Function]}
-                          style={
-                            Object {
-                              "WebkitTransform": "translate3d(0px, 0px, 0px)",
-                              "WebkitTransition": "",
-                              "msTransform": "translateX(0px)",
-                              "opacity": 1,
-                              "transform": "translate3d(0px, 0px, 0px)",
-                              "transition": "",
-                            }
-                          }
-                        >
-                          <div
-                            aria-hidden={false}
-                            className="slick-slide slick-active slick-current"
-                            data-index={0}
-                            onClick={[Function]}
-                            style={
-                              Object {
-                                "outline": "none",
-                                "width": 0,
-                              }
-                            }
-                            tabIndex="-1"
-                          >
-                            <div>
-                              <div
-                                className="o-carousel_wrap"
-                                style={
-                                  Object {
-                                    "display": "inline-block",
-                                    "width": "50%",
-                                  }
-                                }
-                                tabIndex={-1}
-                              >
-                                <div
-                                  className="o-carousel_item"
-                                >
-                                  <div
-                                    className="t-projectMap_info_branch  "
-                                    onClick={[Function]}
-                                    onMouseEnter={[Function]}
-                                    onMouseLeave={[Function]}
-                                  >
-                                    <div
-                                      className="a-image a-image-257x64"
-                                    >
-                                      <img
-                                        alt="replacing"
-                                        loading="lazy"
-                                        src="branch_1.png"
-                                      />
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div />
-                          </div>
-                        </div>
-                      </div>
-                      
-                      
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="t-projectMap_map"
-      >
-        <div
-          className="t-projectMap_map_img"
-          style={
-            Object {
-              "paddingBottom": "153.92781316348197%",
-            }
-          }
-        >
-          <img
-            alt="map"
-            src="map.png"
-          />
-          <div
-            className="t-projectMap_map_area "
-            onClick={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            style={
-              Object {
-                "height": "4.137931034482759%",
-                "left": "59.660297239915074%",
-                "top": "66.62068965517241%",
-                "width": "4.8832271762208075%",
-              }
-            }
-          />
-          <div
-            className="t-projectMap_map_area "
-            onClick={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            style={
-              Object {
-                "height": "4.137931034482759%",
-                "left": "54.14012738853503%",
-                "top": "68.6896551724138%",
-                "width": "4.8832271762208075%",
-              }
-            }
-          />
-          <div
-            className="t-projectMap_map_area "
-            onClick={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            style={
-              Object {
-                "height": "4.137931034482759%",
-                "left": "59.023354564755834%",
-                "top": "71.72413793103448%",
-                "width": "4.8832271762208075%",
-              }
-            }
-          />
-          <div
-            className="t-projectMap_map_area "
-            onClick={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            style={
-              Object {
-                "height": "4.137931034482759%",
-                "left": "51.59235668789809%",
-                "top": "73.6551724137931%",
-                "width": "4.8832271762208075%",
-              }
-            }
-          />
-          <div
-            className="t-projectMap_map_area "
-            onClick={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            style={
-              Object {
-                "height": "4.137931034482759%",
-                "left": "44.5859872611465%",
-                "top": "75.86206896551724%",
-                "width": "4.8832271762208075%",
-              }
-            }
-          />
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Components/templates/Schedule Normal 1`] = `
-<div
-  className="t-schedule"
->
-  <div
-    className="t-schedule_heading"
-  >
-    <h2
-      className="a-heading a-heading-jet a-heading-30x42 a-heading-center a-heading-600 a-heading-fontNoto"
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "Lịch Sự Kiện",
-        }
-      }
-    />
-  </div>
-  <div
-    className="t-schedule_subTitle"
-  >
-    <p
-      className="a-text a-text-fontLexend a-text-400 a-text-18x28 a-text-center a-text-dimGray"
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "Chuỗi sự kiện đón Giáng sinh và năm mới tại Novaland",
-        }
-      }
-    />
-  </div>
-  <div
-    className="container o-container"
-  >
-    <div
-      className="t-schedule_content"
-    >
-      <div
-        className="t-schedule_left"
-      >
-        <div
-          className="o-newsCard o-newsCard-vertical"
-        >
-          <a
-            aria-current="page"
-            className="a-link   active"
-            href="/"
-            onClick={[Function]}
-            target="_self"
-          >
-            <div
-              className="o-newsCard_wrapper"
-            >
-              <div
-                className="o-newsCard_image"
-              >
-                <div
-                  className="a-image a-image-582x534"
-                >
-                  <img
-                    alt="ImgLatestNews1"
-                    loading="lazy"
-                    src="img_latestNews1.png"
-                  />
-                </div>
-              </div>
-              <div
-                className="o-newsCard_layer"
-              />
-              <div
-                className="o-newsCard_content"
-              >
-                <div
-                  className="o-newsCard_content_title"
-                >
-                  <h2
-                    className="a-heading a-heading-white a-heading-fontLexend a-heading-600 a-heading-24x30"
-                  >
-                    Bốn dự án thành phần cao tốc Bắc Nam sẽ hoàn thành năm 2022
-                  </h2>
-                </div>
-                <div
-                  className="mt-8"
-                >
-                  <p
-                    className="a-text a-text-columbiaBlue a-text-12x17 a-text-400 a-text-fontLexend"
-                  >
-                    1 phút trước
-                  </p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div
-        className="t-schedule_right"
-      >
-        <div
-          className="t-schedule_right_item t-schedule_right_item-fourItem"
-        >
-          <div
-            className="o-newsCard o-newsCard-smallVertical"
-          >
-            <a
-              aria-current="page"
-              className="a-link   active"
-              href="/"
-              onClick={[Function]}
-              target="_self"
-            >
-              <div
-                className="o-newsCard_wrapper"
-              >
-                <div
-                  className="o-newsCard_image"
-                >
-                  <div
-                    className="a-image a-image-185x142"
-                  >
-                    <img
-                      alt="ImgLatestNews2"
-                      loading="lazy"
-                      src="img_latestNews2.png"
-                    />
-                  </div>
-                </div>
-                <div
-                  className="o-newsCard_layer"
-                />
-                <div
-                  className="o-newsCard_content"
-                >
-                  <div
-                    className="o-newsCard_content_title"
-                  >
-                    <h2
-                      className="a-heading a-heading-jet a-heading-24x30 a-heading-400 a-heading-fontLexend"
-                    >
-                      Cao tốc Phan Thiết - Dầu Giây qua Đồng Nai phấn đấu vượt tiến độ...
-                    </h2>
-                  </div>
-                  <div
-                    className="mt-8"
-                  >
-                    <p
-                      className="a-text a-text-dimGray a-text-12x17 a-text-400 a-text-fontLexend"
-                    >
-                      2 giờ trước
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div
-          className="t-schedule_right_item t-schedule_right_item-fourItem"
-        >
-          <div
-            className="o-newsCard o-newsCard-smallVertical"
-          >
-            <a
-              aria-current="page"
-              className="a-link   active"
-              href="/"
-              onClick={[Function]}
-              target="_self"
-            >
-              <div
                 className="o-newsCard_wrapper"
               >
                 <div
@@ -25699,17 +24906,6 @@ exports[`Storyshots Components/templates/SearchResult Normal 1`] = `
             </li>
           </ul>
         </div>
-      </div>
-      <div
-        className="t-schedule_button"
-      >
-        <button
-          className="a-button a-button-outlineSpanishGray"
-          disabled={false}
-          type="button"
-        >
-          Xem tất cả lịch sự kiện
-        </button>
       </div>
     </div>
   </div>
