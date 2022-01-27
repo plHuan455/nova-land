@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 
 import Heading from 'components/atoms/Heading';
 import Image from 'components/atoms/Image';
@@ -6,10 +6,11 @@ import Text from 'components/atoms/Text';
 import Carousel from 'components/organisms/Carousel';
 import Container from 'components/organisms/Container';
 
-type ProcessItemProps = {
-  year:string;
+export type ProcessItemProps = {
+  year: string;
   description: string;
   image: string;
+  imgBackground?: string,
 }
 
 export interface DevelopmentHistoryProps {
@@ -18,7 +19,7 @@ export interface DevelopmentHistoryProps {
   list: ProcessItemProps[];
 }
 
-const ProcessItem:React.FC<ProcessItemProps> = ({
+const ProcessItem: React.FC<ProcessItemProps> = ({
   year,
   description,
   image,
@@ -46,6 +47,7 @@ const DevelopmentHistory: React.FC<DevelopmentHistoryProps> = ({
   description,
   list,
 }) => {
+  const [indexActive, setIndexActive] = useState(0);
   const settings = useMemo(() => ({
     className: 'center',
     centerMode: true,
@@ -57,7 +59,9 @@ const DevelopmentHistory: React.FC<DevelopmentHistoryProps> = ({
     focusOnSelect: true,
     initialSlide: 0, // Update when center initial
     speed: 800,
+    afterChange: (index: number) => setIndexActive(index),
   }), [list.length]);
+  // eslint-disable-next-line no-console
 
   return (
     <div className="t-developmentHistory">
@@ -67,15 +71,20 @@ const DevelopmentHistory: React.FC<DevelopmentHistoryProps> = ({
           <Text modifiers={['center', 'white', '16x24', '300']} content={description} />
         </div>
         {list.length > 0 && (
-        <div className="t-developmentHistory_process">
-          <Carousel
-            settings={settings}
-          >
-            {list.map((item, index) => (
-              <ProcessItem {...item} key={`item-${index.toString()}`} />
-            ))}
-          </Carousel>
-        </div>
+          <div className="t-developmentHistory_content">
+            <div className="t-developmentHistory_process">
+              <Carousel
+                settings={settings}
+              >
+                {list.map((item, index) => (
+                  <ProcessItem {...item} key={`item-${index.toString()}`} />
+                ))}
+              </Carousel>
+            </div>
+            <div className="t-developmentHistory_background">
+              <Image alt="imgBackground" ratio="624x495" src={list[indexActive].imgBackground || ''} />
+            </div>
+          </div>
         )}
       </Container>
     </div>

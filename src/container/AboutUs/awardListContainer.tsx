@@ -15,7 +15,7 @@ const AwardListContainer: React.FC<AwardListContainerProps> = ({
   ...props
 }) => {
   const [indexPrize, setIndexPrize] = useState(0);
-
+  // eslint-disable-next-line no-console
   console.log(indexPrize);
   const { data: prizesList } = useQuery(
     'getPrizesData',

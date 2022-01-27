@@ -194,7 +194,8 @@ const AboutUSContainer: React.FC<BasePageData<AboutUsBlock>> = ({
   const developHistoryList = useMemo(() => developmentHistoryBlock.items.map((item) => ({
     year: item.textTimes,
     description: item.description,
-    image: getImageURL(item.imageBackground),
+    image: getImageURL(item.imageTime),
+    imgBackground: getImageURL(item.imageBackground),
   })), [developmentHistoryBlock]);
 
   const ecoSystemsData = useMemo(() => novaEcosystemBlock.items.map((item) => ({
@@ -232,7 +233,7 @@ const AboutUSContainer: React.FC<BasePageData<AboutUsBlock>> = ({
         list={developHistoryList}
       />
       <OutstandingProjectContainer
-        title="Dự án nổi bật" // TODO: API trả thiếu section này
+        title={projectsBlock.titleSection}
       />
       <ProjectListMapContainer title={projectsBlock.titleSection} />
       <EcoSystemContainer

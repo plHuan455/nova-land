@@ -1,16 +1,11 @@
 /* eslint-disable no-nested-ternary */
-/* eslint-disable react/require-default-props */
 import React, { useEffect, useMemo, useState } from 'react';
 import { useQuery } from 'react-query';
 import { useDispatch } from 'react-redux';
 
 import img from 'assets/images/bg_project_list_map.png';
 import { OptionType } from 'components/molecules/Pulldown';
-import ProjectListMap, {
-  ItemBranch,
-  ProjectListMapGround,
-  ProjectListMapInfo,
-} from 'components/templates/ProjectListMap';
+import ProjectListMap, { ItemBranch, ProjectListMapGround, ProjectListMapInfo } from 'components/templates/ProjectListMap';
 import geMapService from 'services/maps';
 import { getProjectsService } from 'services/project';
 import { useAppSelector } from 'store/hooks';
@@ -41,12 +36,6 @@ const ProjectListMapContainer: React.FC<ProjectListMapContainerProps> = ({
     })),
     [projectData],
   );
-
-  // const listPoint = () => {
-  //   const find = listProjectSelect.find((x) => String(x.id) === project?.value);
-  //   if (find) return [{ id: find.id, point: find.point }];
-  //   return listProjectSelect.map((x) => ({ id: x.id, point: x.point }));
-  // };
 
   const { data: projectDataAboutUs } = useQuery(
     'getProjectsDataAboutUs',
@@ -139,6 +128,10 @@ const ProjectListMapContainer: React.FC<ProjectListMapContainerProps> = ({
       </ProjectListMap>
     </div>
   );
+};
+
+ProjectListMapContainer.defaultProps = {
+  title: '',
 };
 
 export default ProjectListMapContainer;

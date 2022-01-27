@@ -1,4 +1,5 @@
 import 'App.scss';
+
 import React, { lazy, Suspense } from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { Provider } from 'react-redux';

@@ -92,12 +92,21 @@
 }
 
 .t-developmentHistory {
-  background: $cool-black url('~assets/images/bg_development_history.png') bottom right no-repeat;
+  background: $cool-black bottom right no-repeat;
   background-size: contain;
   padding: rem(72) 0 rem(30);
 
+  &_background {
+    width: 100%;
+    align-self: flex-start;
+  }
+
   @include small-mobile {
     padding: rem(40) 0 rem(20);
+  }
+
+  &_content {
+    display: flex;
   }
 
   &_description {

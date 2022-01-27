@@ -1,4 +1,5 @@
 /* eslint-disable camelcase */
+
 export type LeadershipCategoryDataTypes = {
   id: number,
   name: string,
