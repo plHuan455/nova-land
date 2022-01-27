@@ -21,4 +21,11 @@ export const getOtherDocumentsService = async (
   return response.data;
 };
 
+export const getAnnualDocumentsService = async (
+  params?: OtherDocumentParamsType,
+): Promise<APIPaginationResponse<OtherDocumentsDataTypes[]>> => {
+  const response = await axiosInstance.get('annual-reports', { params });
+  return response.data;
+};
+
 export default getDocumentsService;
