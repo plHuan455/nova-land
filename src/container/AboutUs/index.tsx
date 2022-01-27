@@ -135,6 +135,7 @@ const AboutUSContainer: React.FC<BasePageData<AboutUsBlock>> = ({
   const [indexLeadershipCategoryActive, setIndexLeadershipCategoryActive] = useState(0);
 
   const [indexPrize, setIndexPrize] = useState(0);
+
   console.log(indexPrize);
   const listBanner = useMemo(() => banners.map((item) => ({
     src: getImageURL(item.data.imageDesktop),

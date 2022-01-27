@@ -5,7 +5,6 @@ import { useDispatch } from 'react-redux';
 import img from 'assets/images/bg_project_list_map.png';
 import { OptionType } from 'components/molecules/Pulldown';
 import ProjectListMap, { ProjectListMapGround, ProjectListMapInfo } from 'components/templates/ProjectListMap';
-import Section from 'components/templates/Section';
 import { getProjectsService } from 'services/Introduction';
 import { useAppSelector } from 'store/hooks';
 import { getCitiesAction } from 'store/location';
