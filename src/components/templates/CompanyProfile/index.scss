@@ -1,0 +1,68 @@
+.t-companyProfile {
+  @include mobile-down {
+    padding: 0 rem(12);
+  }
+
+  &_desc {
+    margin-top: rem(20);
+    @include mobile-down {
+      margin-top: rem(10);
+    }
+  }
+
+  &_image {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: rem(36);
+    max-width: rem(990);
+    @include tablet-down {
+      margin-top: rem(20);
+    }
+    @include mobile-down {
+      margin-top: rem(15);
+    }
+  }
+
+  &_subDesc {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: rem(36);
+    margin-top: rem(36);
+    @include tablet-down {
+      margin-top: rem(20);
+    }
+    @include mobile-down {
+      flex-direction: column;
+      margin-top: rem(15);
+    }
+
+    &-icon {
+      flex-shrink: 0;
+      margin-right: rem(24);
+      max-width: rem(120);
+      width: 100%;
+
+      @include mobile-down {
+        margin-right: 0;
+      }
+    }
+
+    &-desc {
+      @include mobile-down {
+        text-align: center;
+      }
+
+      b {
+        font-weight: 600;
+        @include font-base(20, 28);
+        @include mobile-down {
+          @include font-base(16, 24);
+        }
+        @include mobile-down {
+          @include font-base(14, 22);
+        }
+      }
+    }
+  }
+}

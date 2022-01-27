@@ -3,6 +3,7 @@ import { useQuery } from 'react-query';
 
 import Loading from 'components/atoms/Loading';
 import Error from 'components/templates/Error';
+import MainLayout from 'components/templates/MainLayout';
 import { getPageService } from 'services/navigations';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
 import { getBlockData, getImageURL } from 'utils/functions';
@@ -38,13 +39,15 @@ const RedirectNavigate: React.FC = () => {
   if (isLoading) return <Loading isShow variant="fullScreen" />;
 
   return (
-    <Error
-      btnHomeText={notFoundBlock?.link.text || ''}
-      description={notFoundBlock?.sympathySentence || ''}
-      title={notFoundBlock?.errorMessage || ''}
-      image={getImageURL(notFoundBlock?.image)}
-      linkButton={notFoundBlock?.link.url || ''}
-    />
+    <MainLayout>
+      <Error
+        btnHomeText={notFoundBlock?.link.text || ''}
+        description={notFoundBlock?.sympathySentence || ''}
+        title={notFoundBlock?.errorMessage || ''}
+        image={getImageURL(notFoundBlock?.image)}
+        linkButton={notFoundBlock?.link.url || ''}
+      />
+    </MainLayout>
   );
 };
 

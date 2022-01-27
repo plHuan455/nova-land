@@ -51,6 +51,7 @@ $white-smoke3: rgb(250, 247, 244); //#FAF7F4
 $floral-white: rgb(253, 249, 244); //#fdf9f4
 $light-gray: rgb(209, 211, 212); //#d1d3d4
 $anti-flash-white-4f9: rgb(241, 244, 249); //#f1f4f9
+$glitter: rgb(231, 235, 240); // #e7ebf0
 
 // Neutral
 $ghost-white: rgb(249, 250, 253); //#f9fafd
@@ -119,6 +120,8 @@ $white01: rgba($white, 0.1);
 $cool-black04: rgba($cool-black, 0.4);
 $dark-midnight-blue0: rgba(11, 52, 107, 0.6);
 $dark-midnight-blue00: rgba(11, 52, 107, 0);
+$glitter04: rgba($glitter, 0.4);
+$white03: rgba($white, 0.3);
 
 // Linear colors
 $outstanding-number-linear: linear-gradient(180deg, $dark-midnight-blue0 0%, $oxford-blue 100%);

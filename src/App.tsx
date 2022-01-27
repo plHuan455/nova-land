@@ -1,42 +1,38 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import 'App.scss';
-
 import React, { lazy, Suspense } from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { Provider } from 'react-redux';
 import {
-  BrowserRouter, Outlet, Route, Routes,
+  BrowserRouter, Route, Routes,
 } from 'react-router-dom';
 
 import Loading from 'components/atoms/Loading';
-import MainLayoutContainer from 'container/MainLayout';
-import SearchResults from 'container/SearchResults';
 import useInitializeRender from 'hooks/useInitializeRender';
-// import AboutUs from 'pages/AboutUs';
 import EventDetail from 'pages/EventDetail';
 import News from 'pages/News';
 import NewsCategory from 'pages/NewsCategory';
 import NewsDetail from 'pages/NewsDetail';
+import Recruitment from 'pages/Recruitment';
 import RecruitmentList from 'pages/RecruitmentList';
 import ReportList from 'pages/ReportList';
+import SearchResults from 'pages/SearchResults';
 import { store } from 'store';
 
 const PageNav = lazy(() => import('navigations/PageNav'));
 
 const routes = [
   {
-    element: <PageNav />,
-    index: true,
-  },
-  {
-    path: 'tin-tuc',
+    path: '/tin-tuc',
     element: <News />,
   },
   {
-    path: 'tin-tuc-du-an',
+    path: '/tin-tuc-du-an',
     element: <NewsCategory />,
   },
   {
-    path: 'tin-tuc-chi-tiet',
+    path: '/tin-tuc-chi-tiet',
     element: <NewsDetail />,
   },
   {
@@ -44,20 +40,20 @@ const routes = [
     element: <ReportList />,
   },
   {
-    path: 'danh-sach-tuyen-dung',
+    path: '/tuyen-dung',
+    element: <Recruitment />,
+  },
+  {
+    path: '/danh-sach-tuyen-dung',
     element: <RecruitmentList />,
   },
   {
-    path: 'su-kien-chi-tiet',
+    path: '/su-kien-chi-tiet',
     element: <EventDetail />,
   },
   {
-    path: 'tim-kiem',
+    path: '/tim-kiem',
     element: <SearchResults />,
-  },
-  {
-    path: ':slug',
-    element: <PageNav />,
   },
 ];
 
@@ -67,21 +63,12 @@ const App: React.FC = () => {
   return (
     <Suspense fallback={<Loading isShow variant="fullScreen" />}>
       <Routes>
-        <Route
-          path="/"
-          element={(
-            <MainLayoutContainer>
-              <Outlet />
-            </MainLayoutContainer>
-        )}
-        >
-          {routes.map((item, index) => (
-            <Route
-              key={`router-${index.toString()}`}
-              {...item}
-            />
-          ))}
+        <Route path="/" element={<PageNav />}>
+          <Route path=":slug" element={<PageNav />} />
         </Route>
+        {routes.map((item, index) => (
+          <Route key={`router-${index.toString()}`} {...item} />
+        ))}
       </Routes>
     </Suspense>
   );

@@ -74,6 +74,8 @@
 
         &:nth-child(2) {
           flex: 0 0 40%;
+        @include tablet-down {
+          flex: 0 0 33.33333%;
         }
 
         // @include tablet-down {
@@ -85,6 +87,7 @@
           margin-top: rem(16);
         }
       }
+    }
 
       // &_wrap:last-child {
       //   margin-left: 10%;

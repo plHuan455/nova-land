@@ -1,0 +1,58 @@
+import imgNewsCategory4 from 'assets/images/NewsCategory/img_newsCategory4.png';
+
+const listJobs = [
+  {
+    imgSrc: imgNewsCategory4,
+    ratio: '376x212' as Ratio,
+    alt: 'ImgNewsCategory4',
+    title: 'Trưởng phòng Phát triển Nhân tài',
+    desc: 'Lập kế hoạch và tổ chức thực hiện, giám sát, đo lường việc triển khai các hoạt động...',
+    href: '/',
+    isLatestJobs: true,
+    tagLeft: 'Tài Chính',
+    tagRight: 'Toàn thời gian',
+    locationText: 'Ho Chi Minh, city',
+    bntText: 'Tìm hiểu thêm',
+  },
+  {
+    imgSrc: imgNewsCategory4,
+    ratio: '376x212' as Ratio,
+    alt: 'ImgNewsCategory4',
+    title: 'Trưởng phòng Phát triển Nhân tài',
+    desc: 'Lập kế hoạch và tổ chức thực hiện, giám sát, đo lường việc triển khai các hoạt động...',
+    href: '/',
+    isLatestJobs: true,
+    tagLeft: 'Tài Chính',
+    tagRight: 'Toàn thời gian',
+    locationText: 'Ho Chi Minh, city',
+    bntText: 'Tìm hiểu thêm',
+  },
+  {
+    imgSrc: imgNewsCategory4,
+    ratio: '376x212' as Ratio,
+    alt: 'ImgNewsCategory4',
+    title: 'Trưởng phòng Phát triển Nhân tài',
+    desc: 'Lập kế hoạch và tổ chức thực hiện, giám sát, đo lường việc triển khai các hoạt động...',
+    href: '/',
+    isLatestJobs: true,
+    tagLeft: 'Tài Chính',
+    tagRight: 'Toàn thời gian',
+    locationText: 'Ho Chi Minh, city',
+    bntText: 'Tìm hiểu thêm',
+  },
+  {
+    imgSrc: imgNewsCategory4,
+    ratio: '376x212' as Ratio,
+    alt: 'ImgNewsCategory4',
+    title: 'Trưởng phòng Phát triển Nhân tài',
+    desc: 'Lập kế hoạch và tổ chức thực hiện, giám sát, đo lường việc triển khai các hoạt động...',
+    href: '/',
+    isLatestJobs: true,
+    tagLeft: 'Tài Chính',
+    tagRight: 'Toàn thời gian',
+    locationText: 'Ho Chi Minh, city',
+    bntText: 'Tìm hiểu thêm',
+  },
+];
+
+export default listJobs;

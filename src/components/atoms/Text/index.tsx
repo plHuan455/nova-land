@@ -12,7 +12,8 @@ export type Sizes =
   | '14x18'
   | '12x17'
   | '18x22'
-  | '18x28';
+  | '18x28'
+  | '14x20';
 
 export type LetterSpacing =
   | 'ls-005'

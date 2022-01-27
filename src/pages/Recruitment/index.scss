@@ -1,0 +1,12 @@
+.p-recruitment {
+  &_companyProfileContainer {
+    background: linear-gradient(to bottom, $white-smoke-8f8 50%, $white 0%);
+  }
+  
+  &_branchListContainer {
+    background: $white-smoke-8f8;
+  }
+  &_signUpJobPostingsContainer {
+    background: $anti-flash-white-4f9;
+  }
+} 

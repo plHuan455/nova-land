@@ -132,11 +132,11 @@
     @include font-base(64, 83);
 
     @include tablet-down {
-      @include font-base(40, 58);
+      @include font-base(42, 56);
     }
 
     @include mobile-down {
-      @include font-base(32, 40);
+      @include font-base(32, 42);
     }
   }
 

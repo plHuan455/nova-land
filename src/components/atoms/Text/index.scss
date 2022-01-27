@@ -100,6 +100,26 @@
   &-12x17 {
     @include font-base(12, 17);
   }
+  
+  &-18x28 {
+    @include font-base(18, 28);
+    @include mobile-down {
+      @include font-base(16, 24);
+    }
+    @include mobile-down {
+      @include font-base(14, 22);
+    }
+  }
+
+  &-14x20 {
+    @include font-base(14, 20);
+    @include mobile-down {
+      @include font-base(10, 16);
+    }
+    @include mobile-down {
+      @include font-base(10, 16);
+    }
+  }
 
   @include style-color();
   @include style-font-weight();
