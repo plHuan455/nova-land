@@ -22,7 +22,7 @@ const TransportationInfrastructure: React.FC<
   <div className="t-transportInfrastructure">
     <Animate type="goUp">
       <Container>
-        <Heading modifiers={['32x48', '500', 'fontNoto', 'jet', 'uppercase', 'center']}>{title}</Heading>
+        <Heading modifiers={['30x42', '500', 'fontNoto', 'jet', 'uppercase', 'center']}>{title}</Heading>
         <div className="u-mt-8 u-mt-sm-16">
           <Text type="div" modifiers={['dimGray', '300', 'center', '16x24']} content={desc} />
         </div>
