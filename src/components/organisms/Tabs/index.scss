@@ -75,13 +75,23 @@
     &-active {
       #{$root}_label {
         color: $camel;
-        font-weight: 600;
+        font-weight: 500;
+      }
+      
+      #{$root}_label-goldenBrown {
+        color: $golden-brown;
       }
 
       &::after {
         opacity: 1;
         visibility: visible;
         width: 100%;
+      }
+    }
+
+    &-goldenBrown {
+      &::after {
+        background: $golden-brown;
       }
     }
   }

@@ -10,6 +10,7 @@ interface TabProps {
   label?: string;
   active?: boolean;
   size?: '16x24' | '20x28';
+  acitveColor?: 'goldenBrown';
   handleClick?: () => void;
 }
 
@@ -24,10 +25,10 @@ export const TabPanel: React.FC<TabPanelProps> = ({ active, children }) => (
 );
 
 export const Tab: React.FC<TabProps> = ({
-  active, label, size, handleClick,
+  active, label, size, acitveColor, handleClick,
 }) => (
-  <div onClick={handleClick} className={mapModifiers('o-tabs_tab', active && 'active')}>
-    <span className={`o-tabs_label ${size ? `o-tabs_label-${size}` : ''}`}>{label}</span>
+  <div onClick={handleClick} className={mapModifiers('o-tabs_tab', active && 'active', acitveColor)}>
+    <span className={`o-tabs_label ${size ? `o-tabs_label-${size}` : ''} ${acitveColor ? `o-tabs_label-${acitveColor}` : ''}`}>{label}</span>
   </div>
 );
 
@@ -58,6 +59,7 @@ Tab.defaultProps = {
   label: '',
   active: false,
   size: undefined,
+  acitveColor: undefined,
   handleClick: undefined,
 };
 

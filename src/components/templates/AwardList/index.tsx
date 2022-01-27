@@ -87,6 +87,7 @@ const AwardList: React.FC<AwardListProps> = ({
                 key={item.year}
                 label={item.year}
                 active={idx === activeIdx}
+                acitveColor="goldenBrown"
                 size="20x28"
                 handleClick={() => {
                   setActiveIdx(idx);
