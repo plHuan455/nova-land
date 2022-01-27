@@ -50,7 +50,7 @@ const routes = [
     element: <RecruitmentList />,
   },
   {
-    path: '/su-kien-chi-tiet',
+    path: '/su-kien-chi-tiet/:slug',
     element: <EventDetail />,
   },
   {
