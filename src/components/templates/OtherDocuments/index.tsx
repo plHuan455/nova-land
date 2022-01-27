@@ -3,15 +3,17 @@ import React from 'react';
 import Button from 'components/atoms/Button';
 import Heading from 'components/atoms/Heading';
 import Image from 'components/atoms/Image';
+import Link from 'components/atoms/Link';
 import Text from 'components/atoms/Text';
 import Container from 'components/organisms/Container';
 
 export interface dataType {
   pdfImg: string,
   fileName: string,
+  href: string;
 }
 
-interface OtherDocumentsProps {
+export interface OtherDocumentsProps {
   heading?: string,
   data?: dataType[],
   btnText?: string;
@@ -32,14 +34,21 @@ const OtherDocuments: React.FC<OtherDocumentsProps> = ({
       <div className="t-otherDocuments_content">
         {
           data && data.map((item, idx) => (
-            <div key={idx.toString()} className="t-otherDocuments_item">
-              <div className="t-otherDocuments_icon">
-                <Image ratio="1x1" alt="pdf" src={item.pdfImg || ''} />
+            <Link
+              key={idx.toString()}
+              href={item.href}
+              target="_blank"
+              useExternal
+            >
+              <div className="t-otherDocuments_item">
+                <div className="t-otherDocuments_icon">
+                  <Image ratio="1x1" alt="pdf" src={item.pdfImg || ''} />
+                </div>
+                <div className="t-otherDocuments_fileName">
+                  <Text modifiers={['jet', '400', '18x28', 'fontLexend']}>{item.fileName}</Text>
+                </div>
               </div>
-              <div className="t-otherDocuments_fileName">
-                <Text modifiers={['jet', '400', '18x28', 'fontLexend']}>{item.fileName}</Text>
-              </div>
-            </div>
+            </Link>
           ))
         }
         <div className="t-otherDocuments_button" onClick={handleSeeMore}>
@@ -49,12 +58,5 @@ const OtherDocuments: React.FC<OtherDocumentsProps> = ({
     </Container>
   </div>
 );
-
-OtherDocuments.defaultProps = {
-  data: undefined,
-  heading: undefined,
-  btnText: undefined,
-  handleSeeMore: undefined,
-};
 
 export default OtherDocuments;

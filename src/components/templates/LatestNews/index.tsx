@@ -93,7 +93,7 @@ export const LatestNewsCard: React.FC<LatestNewsCardProps> = ({
   </div>
 );
 
-interface LatestNewsProps {
+export interface LatestNewsProps {
   dataLatestNews: LatestNewsCardProps[];
   hasLine?: boolean;
 }
@@ -116,9 +116,5 @@ const LatestNews: React.FC<LatestNewsProps> = ({ dataLatestNews, hasLine }) => (
     </Container>
   </div>
 );
-
-LatestNews.defaultProps = {
-  hasLine: false,
-};
 
 export default LatestNews;

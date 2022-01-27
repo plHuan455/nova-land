@@ -1,15 +1,15 @@
 import React from 'react';
 
-import { investmentRelationsData } from 'assets/dataDummy/latestNews';
 import Animate from 'components/organisms/Animate';
-import LatestNews from 'components/templates/LatestNews';
+import LatestNews, { LatestNewsProps } from 'components/templates/LatestNews';
 
-const LatestNewsContainer: React.FC = () => (
+interface LatestNewsContainerProps extends LatestNewsProps{}
+
+const LatestNewsContainer: React.FC<LatestNewsContainerProps> = ({ ...props }) => (
   <Animate type="goUp">
     <div className="p-investmentRelations_latestNews">
       <LatestNews
-        hasLine
-        dataLatestNews={investmentRelationsData}
+        {...props}
       />
     </div>
   </Animate>

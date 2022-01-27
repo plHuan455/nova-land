@@ -12,7 +12,6 @@ import SearchResults from 'container/SearchResults';
 import useInitializeRender from 'hooks/useInitializeRender';
 // import AboutUs from 'pages/AboutUs';
 import EventDetail from 'pages/EventDetail';
-import InvestmentRelations from 'pages/InvestmentRelations';
 import News from 'pages/News';
 import NewsCategory from 'pages/NewsCategory';
 import NewsDetail from 'pages/NewsDetail';
@@ -34,10 +33,6 @@ const routes = [
   {
     path: 'tin-tuc-du-an',
     element: <NewsCategory />,
-  },
-  {
-    path: 'quan-he-dau-tu',
-    element: <InvestmentRelations />,
   },
   {
     path: 'tin-tuc-chi-tiet',

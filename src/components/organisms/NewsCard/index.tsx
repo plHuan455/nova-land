@@ -12,6 +12,7 @@ export interface NewsCardProps {
   title: string;
   time: string;
   desc?: string;
+  target?: string;
   href: string;
   variant?: 'vertical' | 'horizontal' | 'smallVertical';
   modifiers?: 'smallTitle',

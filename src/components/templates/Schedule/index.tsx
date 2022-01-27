@@ -15,7 +15,7 @@ export interface CardType {
   href: string;
 }
 
-interface ScheduleProps {
+export interface ScheduleProps {
   heading?: string,
   subTitle?: string,
   dataCard: CardType[],
@@ -102,12 +102,5 @@ const Schedule: React.FC<ScheduleProps> = ({
     </Container>
   </div>
 );
-Schedule.defaultProps = {
-  heading: undefined,
-  subTitle: undefined,
-  modifiers: undefined,
-  btnText: undefined,
-  handleSeeMore: undefined,
-};
 
 export default Schedule;
