@@ -15,6 +15,7 @@ import News from 'pages/News';
 import NewsCategory from 'pages/NewsCategory';
 import NewsDetail from 'pages/NewsDetail';
 import Recruitment from 'pages/Recruitment';
+import RecruitmentDetail from 'pages/RecruitmentDetail';
 import RecruitmentList from 'pages/RecruitmentList';
 import ReportList from 'pages/ReportList';
 import SearchResults from 'pages/SearchResults';
@@ -44,7 +45,7 @@ const routes = [
     element: <Recruitment />,
   },
   {
-    path: '/danh-sach-tuyen-dung',
+    path: '/co-hoi-nghe-nghiep',
     element: <RecruitmentList />,
   },
   {
@@ -54,6 +55,14 @@ const routes = [
   {
     path: '/tim-kiem',
     element: <SearchResults />,
+  },
+  {
+    path: '/chi-tiet-tuyen-dung',
+    element: <RecruitmentDetail />,
+  },
+  {
+    path: ':slug',
+    element: <PageNav />,
   },
 ];
 

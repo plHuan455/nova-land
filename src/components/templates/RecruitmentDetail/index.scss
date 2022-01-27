@@ -1,0 +1,60 @@
+.t-recruitmentDetail {
+  &_related {
+    margin-top: rem(40);
+
+    &_title {
+      margin-bottom: rem(12);
+    }
+  }
+
+  &_right {
+    margin-top: rem(-200);
+
+    @include tablet-down {
+      margin-top: rem(100);
+    }
+  }
+
+  &_content {
+    color: $dim-gray;
+
+    h3 {
+      color: $jet;
+      @include font-base(30, 37.5);
+      @include tablet-down {
+        @include font-base(26, 35);
+      }
+
+      @include mobile-down {
+        @include font-base(22, 27);
+      }
+    }
+
+    ul.number {
+      list-style: decimal;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: rem(16);
+    }
+
+    h4 {
+      color: $jet;
+      @include font-base(20, 28);
+      @include tablet-down {
+        @include font-base(16, 24);
+      }
+      @include mobile-down {
+        @include font-base(14, 22);
+      }
+    }
+  }
+
+  &_related {
+    .a-divider {
+      margin-bottom: rem(12);
+      margin-top: rem(12);
+    }
+  }
+}
