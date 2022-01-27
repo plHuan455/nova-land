@@ -6,6 +6,7 @@ import error404Img from 'assets/images/errors/error-404.png';
 import Button from 'components/atoms/Button';
 import Heading from 'components/atoms/Heading';
 import Image from 'components/atoms/Image';
+import Link from 'components/atoms/Link';
 import Text from 'components/atoms/Text';
 import Container from 'components/organisms/Container';
 import Section from 'components/templates/Section';
@@ -14,17 +15,24 @@ export interface ErrorProps {
   title: string;
   description: string;
   btnHomeText: string;
-  handleGotoHome?: () => void;
+  image?: string;
+  linkButton?: string;
+  targetButton?: string;
 }
 
 const Error: React.FC<ErrorProps> = ({
-  title, description, btnHomeText, handleGotoHome,
+  title,
+  description,
+  btnHomeText,
+  image,
+  linkButton,
+  targetButton,
 }) => (
   <div className="t-error">
     <Section>
-      <Container fullScreen>
+      <Container>
         <div className="t-error_imgError">
-          <Image ratio="641x211" src={error404Img} alt="imageError" />
+          <Image ratio="641x211" src={image || error404Img} alt="imageError" />
         </div>
         <div className="t-error_wrapContent">
           <Heading modifiers={['jet', '30x37-5', '600', 'center']}>
@@ -34,9 +42,9 @@ const Error: React.FC<ErrorProps> = ({
             {description}
           </Text>
           <div className="t-error_btn">
-            <Button onClick={handleGotoHome}>
-              {btnHomeText}
-            </Button>
+            <Link href={linkButton} target={targetButton}>
+              <Button>{btnHomeText}</Button>
+            </Link>
           </div>
         </div>
       </Container>

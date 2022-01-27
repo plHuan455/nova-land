@@ -1,5 +1,7 @@
 import React, { FunctionComponent, useEffect } from 'react';
 
+import RedirectNavigate from './redirectNavigate';
+
 import { TemplateCodes } from 'navigations';
 import { useAppDispatch } from 'store/hooks';
 import { setPageTranslation } from 'store/system';
@@ -36,7 +38,7 @@ const RenderPage: React.FC<RenderPageProps> = ({ pageData }) => {
     return React.createElement<BasePageData<any>>(Component as FunctionComponent, pageData);
   }
 
-  return <></>;
+  return <RedirectNavigate />;
 };
 
 export default RenderPage;

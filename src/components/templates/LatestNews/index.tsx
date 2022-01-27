@@ -6,7 +6,7 @@ import Image from 'components/atoms/Image';
 import Link from 'components/atoms/Link';
 import Text from 'components/atoms/Text';
 import Container from 'components/organisms/Container';
-import mapModifiers from 'utils/functions';
+import mapModifiers, { checkExternalUrl } from 'utils/functions';
 
 export interface LatestNewsCardProps {
   imgSrc: string;
@@ -71,7 +71,7 @@ export const LatestNewsCard: React.FC<LatestNewsCardProps> = ({
     </Link>
     {
       fileName && (
-        <Link href={hrefLink}>
+        <Link href={hrefLink} target="_blank" useExternal={checkExternalUrl(hrefLink)}>
           <div className="t-latestNewsCard_file">
             <div className="t-latestNewsCard_icon">
               <Image ratio="1x1" alt="pdf" src={pdfImg || ''} />
