@@ -1,23 +1,42 @@
 .m-listLogoProject {
   &_title {
-    padding-bottom: rem(20);
     border-bottom: rem(1) solid $spanish-gray;
-
-    .a-text {
-      text-transform: capitalize;
+    padding-bottom: rem(20);
+    @include mobile-down {
+      padding-bottom: rem(16);
     }
   }
 
   &_listLogo {
+    flex-wrap: wrap;
+    margin-left: rem(-30);
+    margin-right: rem(-30);
     margin-top: rem(20);
+    @include adjust-flex(flex-start, center);
+    @include tablet-down {
+      margin-left: rem(-24);
+      margin-right: rem(-24);
+    }
   }
 
   &_wraplogo {
     display: inline-block;
+    flex: 0 0 calc(100% / 7);
     margin-bottom: rem(40);
+    padding: 0 rem(30);
 
-    &:nth-child(n+1) {
-      margin-right: rem(60);  
+    img {
+      max-width: 100%;
+      width: 100%;
+    }
+    @include tablet-down {
+      flex: 0 0 calc(100% / 4);
+      margin-bottom: rem(32);
+      padding: 0 rem(24);
+    }
+    @include mobile-down {
+      flex: 0 0 calc(100% / 2);
+      margin-bottom: rem(16);
     }
   }
 }

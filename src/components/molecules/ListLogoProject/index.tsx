@@ -10,7 +10,7 @@ export interface ListLogoProjectProps {
 const ListLogoProject: React.FC<ListLogoProjectProps> = ({ title, listLogo }) => (
   <div className="m-listLogoProject">
     <div className="m-listLogoProject_title">
-      <Text modifiers={['24x32', '600', 'jet']}>{title}</Text>
+      <Text modifiers={['24x32', '600', 'jet', 'capitalize']}>{title}</Text>
     </div>
     <div className="m-listLogoProject_listLogo">
       {listLogo?.map((item, idx) => (
