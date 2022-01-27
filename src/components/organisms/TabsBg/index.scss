@@ -10,12 +10,17 @@
   &_label {
     align-items: center;
     display: flex;
+
+    .a-text {
+      @include text-overflow();
+    }
   }
 
   &_image {
     display: unset;
     margin-right: rem(8);
     width: rem(40);
+    flex-shrink: 0;
 
     .a-icon {
       width: rem(40);

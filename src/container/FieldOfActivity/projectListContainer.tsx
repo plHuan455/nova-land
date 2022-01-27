@@ -10,14 +10,16 @@ const ProjectListContainer: React.FC = () => {
   const dispatch = useAppDispatch();
 
   const convertListLogo = (nameProjects: string) => {
-    const logoProjectList: Array<string> = [];
     if (projectData) {
-      projectData.map(
-        (item) => item.category.name === nameProjects
-          && logoProjectList.push(getImageURL(item.projectLogo)),
+      return projectData.filter((data) => data.category.name === nameProjects).map(
+        (item) => ({
+          imgSrc: getImageURL(item.projectLogo),
+          href: 'https://google.com',
+          target: '_blank',
+        }),
       );
     }
-    return logoProjectList;
+    return [];
   };
 
   const convertDataProjectList = useMemo(() => {
