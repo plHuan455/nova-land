@@ -1,17 +1,51 @@
-import { AxiosError } from 'axios';
-import React from 'react';
+import React, { useMemo } from 'react';
+import { useQuery } from 'react-query';
 
-interface RedirectNavigateProps {
-  error: unknown;
+import Loading from 'components/atoms/Loading';
+import Error from 'components/templates/Error';
+import { getPageService } from 'services/navigations';
+import { DEFAULT_QUERY_OPTION } from 'utils/constants';
+import { getBlockData, getImageURL } from 'utils/functions';
+
+interface BlockError {
+  link: {
+    url: string;
+    text: string;
+    target: string;
+  };
+  image: string;
+  errorMessage: string;
+  sympathySentence: string;
 }
 
-const RedirectNavigate: React.FC<RedirectNavigateProps> = ({ error }) => {
-  const errorCode = (error as AxiosError).response?.status || 0;
-  if (errorCode >= 500) {
-    return <></>;
-  }
+const RedirectNavigate: React.FC = () => {
+  const { isLoading, data } = useQuery(
+    ['getPageErrorData'],
+    () => getPageService('404'),
+    DEFAULT_QUERY_OPTION,
+  );
 
-  return null;
+  const notFoundBlock = useMemo(
+    () => {
+      if (data?.blocks) {
+        return getBlockData('introduction', data?.blocks) as BlockError;
+      }
+      return undefined;
+    },
+    [data?.blocks],
+  );
+
+  if (isLoading) return <Loading isShow variant="fullScreen" />;
+
+  return (
+    <Error
+      btnHomeText={notFoundBlock?.link.text || ''}
+      description={notFoundBlock?.sympathySentence || ''}
+      title={notFoundBlock?.errorMessage || ''}
+      image={getImageURL(notFoundBlock?.image)}
+      linkButton={notFoundBlock?.link.url || ''}
+    />
+  );
 };
 
 export default RedirectNavigate;

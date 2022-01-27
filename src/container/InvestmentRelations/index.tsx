@@ -96,7 +96,7 @@ const InvestmentRelationsContainer: React.FC<BasePageData<InvestmentRelationsBlo
       }));
     }
     return [];
-  }, [documentDataList?.data]);
+  }, [documentDataList]);
 
   const calendarList = useMemo(() => {
     if (calendarDataList && calendarDataList?.data.length > 0) {
@@ -109,7 +109,7 @@ const InvestmentRelationsContainer: React.FC<BasePageData<InvestmentRelationsBlo
       }));
     }
     return [];
-  }, [calendarDataList?.data]);
+  }, [calendarDataList]);
 
   const dataLatestNews = useMemo(() => [
     {

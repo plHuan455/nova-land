@@ -1,5 +1,6 @@
 .t-error {
   $root: &;
+  margin-top: rem(120);
 
   &_imgError {
     margin: auto;

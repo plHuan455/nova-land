@@ -14,7 +14,7 @@ import Animate from 'components/organisms/Animate';
 import useClickOutside from 'hooks/useClickOutside';
 import useWindowScroll from 'hooks/useWindowScroll';
 import { MenuItemDataTypes } from 'services/menus/types';
-import mapModifiers from 'utils/functions';
+import mapModifiers, { checkExternalUrl } from 'utils/functions';
 
 export type HeaderMenuTypes = {
   href: string;
@@ -136,9 +136,10 @@ const Header: React.FC<HeaderProps> = ({
                     headerMenu && headerMenu.map((val, idx) => (
                       <li className="o-header_nav_item" key={idx.toString()}>
                         <Link
-                          href={val.reference?.slug}
+                          href={val.reference?.slug || val.link}
                           customClassName="o-header_nav_link"
                           handleClick={() => setIsOpenMenu(!isOpenMenu)}
+                          useExternal={val.reference?.slug ? false : checkExternalUrl(val.link)}
                         >
                           {val.title}
                         </Link>

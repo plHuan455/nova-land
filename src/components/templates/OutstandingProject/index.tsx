@@ -7,6 +7,7 @@ import Text from 'components/atoms/Text';
 import Animate from 'components/organisms/Animate';
 import Carousel, { PrevArrow, NextArrow } from 'components/organisms/Carousel';
 import Container from 'components/organisms/Container';
+import { checkExternalUrl } from 'utils/functions';
 
 export interface OutstandingProjectCardProps {
   imgSrc: string;
@@ -18,7 +19,7 @@ export const OutstandingProjectCard: React.FC<OutstandingProjectCardProps> = ({
   imgSrc, title, href,
 }) => (
   <div className="t-outstandingProjectCard">
-    <Link href={href}>
+    <Link href={href} target="_blank" useExternal={checkExternalUrl(href)}>
       <div className="t-outstandingProjectCard_thumbnail">
         <Image src={imgSrc} ratio="221x166" alt="OutstandingProjectCard" />
       </div>
