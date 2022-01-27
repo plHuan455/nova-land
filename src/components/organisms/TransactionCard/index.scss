@@ -1,0 +1,50 @@
+.o-transactionCard {
+  $root: &;
+  background: $white;
+  border: rem(1) solid $light-gray;
+  height: 100%;
+
+  &_thumbnail {
+    overflow: hidden;
+  }
+
+  &_wrapper {
+    padding: rem(24) rem(24) rem(40);
+
+    @include tablet-down {
+      padding: rem(18) rem(18) rem(25);
+    }
+  }
+
+  &_location,
+  &_phone,
+  &_faxNumber {
+    display: flex;
+  }
+
+  &_btn {
+    max-width: max-content;
+
+    &_wrap {
+      @include adjust-flex(flex-start, center);
+    }
+
+    &:hover {
+      #{$root}_btn_icon {
+        transition: 0.3s;
+        transform: translateX(10px);
+      }
+    }
+  }
+
+  &:hover {
+    transition: 0.3s;
+    background: $white-smoke-8f8;
+
+    #{$root}_thumbnail {
+      .a-image {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
