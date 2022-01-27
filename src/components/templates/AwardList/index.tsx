@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import Heading from 'components/atoms/Heading';
+import Loading from 'components/atoms/Loading';
 import Text from 'components/atoms/Text';
 import Container from 'components/organisms/Container';
 import { Tab, TabPanel, Tabs } from 'components/organisms/Tabs';
@@ -37,6 +38,7 @@ const AwardCard: React.FC<AwardCardProps> = ({
 );
 
 export type TabsDataTypes = {
+  id?: number;
   year: string;
   awardList: AwardCardProps[];
 };
@@ -47,6 +49,7 @@ export interface AwardListProps {
   tabsData: TabsDataTypes[];
   getActiveIdx?: (idx: number) => void;
   handleActiveTab: (idx: number) => void;
+  loading?: boolean;
 }
 
 const AwardList: React.FC<AwardListProps> = ({
@@ -55,6 +58,7 @@ const AwardList: React.FC<AwardListProps> = ({
   tabsData,
   getActiveIdx,
   handleActiveTab,
+  loading,
 }) => {
   const [activeIdx, setActiveIdx] = useState(0);
 
@@ -91,41 +95,47 @@ const AwardList: React.FC<AwardListProps> = ({
                 size="20x28"
                 handleClick={() => {
                   setActiveIdx(idx);
-                  handleActiveTab(idx);
+                  handleActiveTab(item.id || idx);
                 }}
               />
             ))}
           </Tabs>
-          {tabsData?.map((panel, panelIdx) => (
-            <TabPanel
-              key={`award-panel-${panel.year}`}
-              active={panelIdx === activeIdx}
-            >
-              <div className="t-awardList_tabs_panelWrap">
-                {tabsData[panelIdx].awardList.length > 0 ? (
-                  <>
-                    {tabsData[panelIdx].awardList.map((item, cardIdx) => (
-                      <div
-                        key={`award-card-${item.awardYear
-                        }-${cardIdx.toString()}`}
-                        className="t-awardList_tabs_panelWrap-item"
-                      >
-                        <AwardCard
-                          {...item}
-                        />
-                      </div>
-                    ))}
-                  </>
-                ) : (
-                  <>
-                    <Heading modifiers={['center', '38x52']}>
-                      Không có dữ liệu
-                    </Heading>
-                  </>
-                )}
-              </div>
-            </TabPanel>
-          ))}
+          {loading ? (
+            <div className="u-mt-30">
+              <Loading isShow />
+            </div>
+          ) : (
+            tabsData?.map((panel, panelIdx) => (
+              <TabPanel
+                key={`award-panel-${panel.year}`}
+                active={panelIdx === activeIdx}
+              >
+                <div className="t-awardList_tabs_panelWrap">
+                  {tabsData[panelIdx].awardList.length > 0 ? (
+                    <>
+                      {tabsData[panelIdx].awardList.map((item, cardIdx) => (
+                        <div
+                          key={`award-card-${item.awardYear
+                          }-${cardIdx.toString()}`}
+                          className="t-awardList_tabs_panelWrap-item"
+                        >
+                          <AwardCard
+                            {...item}
+                          />
+                        </div>
+                      ))}
+                    </>
+                  ) : (
+                    <>
+                      <Heading modifiers={['center', '38x52']}>
+                        Không có dữ liệu
+                      </Heading>
+                    </>
+                  )}
+                </div>
+              </TabPanel>
+            ))
+          )}
         </div>
       </Container>
     </div>

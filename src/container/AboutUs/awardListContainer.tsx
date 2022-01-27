@@ -1,9 +1,8 @@
-import React, { useMemo, useState } from 'react';
-import { useQuery } from 'react-query';
+import React, { useEffect, useState } from 'react';
 
-import AwardList from 'components/templates/AwardList';
-import { getPrizesService } from 'services/Introduction';
-import { DEFAULT_QUERY_OPTION } from 'utils/constants';
+import AwardList, { TabsDataTypes } from 'components/templates/AwardList';
+import { getPrizesService, getPrizeYearsService } from 'services/Introduction';
+import { PrizeYearsType, PrizesType } from 'services/Introduction/type';
 import { getImageURL } from 'utils/functions';
 
 interface AwardListContainerProps {
@@ -14,37 +13,67 @@ interface AwardListContainerProps {
 const AwardListContainer: React.FC<AwardListContainerProps> = ({
   ...props
 }) => {
-  const [indexPrize, setIndexPrize] = useState(0);
-  // eslint-disable-next-line no-console
-  console.log(indexPrize);
-  const { data: prizesList } = useQuery(
-    'getPrizesData',
-    () => getPrizesService(),
-    {
-      ...DEFAULT_QUERY_OPTION,
-    },
-  );
+  const [awardListData, setAwardListData] = useState<TabsDataTypes[]>([]);
+  const [loading, setLoading] = useState(false);
 
-  const tabsData = useMemo(
-    () => prizesList?.map((item) => ({
-      year: '2017',
-      awardList: [
-        {
-          src: getImageURL(item.thumbnail),
-          alt: item.name,
-          desc: item.name,
-          awardYear: String(item.yearId.year),
-        },
-      ],
-    })),
-    [prizesList],
-  );
+  const convertDataAwardList = (
+    tabList: PrizeYearsType[],
+    dataList: PrizesType[],
+  ) => {
+    if (tabList && dataList) {
+      return tabList.map((item) => ({
+        id: item.id,
+        year: item.year,
+        awardList: dataList.map((val) => ({
+          src: getImageURL(val.thumbnail),
+          alt: val.name,
+          desc: val.name,
+          awardYear: val.yearId.year,
+        })),
+      }));
+    }
+    return [];
+  };
+
+  const handleActiveTab = async (index: number) => {
+    try {
+      setLoading(true);
+      const res = await getPrizeYearsService();
+      const data = await getPrizesService({
+        year_id: index,
+      });
+      const dataAwardList = convertDataAwardList(res, data);
+      setAwardListData(dataAwardList);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    const initPage = async () => {
+      try {
+        setLoading(true);
+        const res = await getPrizeYearsService();
+        const data = await getPrizesService({
+          year_id: res[0].id,
+        });
+        const dataAwardList = convertDataAwardList(res, data);
+        setAwardListData(dataAwardList);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    initPage();
+  }, []);
+
   return (
     <div className="p-aboutUs_awardList pt-100 pb-100">
       <AwardList
         {...props}
-        tabsData={tabsData || []}
-        handleActiveTab={(index) => setIndexPrize(index)}
+        tabsData={awardListData || []}
+        handleActiveTab={handleActiveTab}
+        loading={loading}
       />
     </div>
   );
