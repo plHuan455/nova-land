@@ -62,7 +62,6 @@ const DevelopmentHistory: React.FC<DevelopmentHistoryProps> = ({
     afterChange: (index: number) => setIndexActive(index),
   }), [list.length]);
   // eslint-disable-next-line no-console
-  console.log(indexActive);
 
   return (
     <div className="t-developmentHistory">
