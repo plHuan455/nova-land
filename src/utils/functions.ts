@@ -171,3 +171,13 @@ export const getHourFromPastToCurrent = (date?: string) => {
   const hour = toDay.getTime() - dateFormat.getTime();
   return new Date(hour).getHours();
 };
+
+export function openInNewTab(href?: string) {
+  if (!href) return;
+  const link = document.createElement('a');
+  link.href = href;
+  link.setAttribute('target', '_blank');
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}

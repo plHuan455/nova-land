@@ -5,6 +5,7 @@ import shareholderCard2 from 'assets/images/ShareholderRelations/img_shareholder
 import ShareholderRelations from 'components/templates/ShareholderRelations';
 import getDocumentsService from 'services/documents';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
+import { getImageURL, openInNewTab } from 'utils/functions';
 
 export interface ShareHolderRelationsTypes {
   button: {
@@ -35,6 +36,7 @@ const ShareHolderRelationsContainer: React.FC<ShareHolderRelationsBlock> = ({
     imgSrc: shareholderCard2,
     title: documentsHighlightData?.data[0].name || '',
     content: documentsHighlightData?.data[0].name,
+    handleClick: () => { openInNewTab(getImageURL(documentsHighlightData?.data[0].file)); },
   };
 
   return (
