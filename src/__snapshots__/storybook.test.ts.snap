@@ -5448,117 +5448,121 @@ exports[`Storyshots Components/templates/DevelopmentHistory Normal 1`] = `
       />
     </div>
     <div
-      className="t-developmentHistory_process"
+      className="t-developmentHistory_content"
     >
       <div
-        className="o-carousel"
+        className="t-developmentHistory_process"
       >
         <div
-          className="slick-slider center slick-initialized"
-          dir="ltr"
+          className="o-carousel"
         >
           <div
-            className="slick-list"
-            onClick={[Function]}
-            onKeyDown={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={null}
-            onMouseMove={null}
-            onMouseUp={[Function]}
-            onTouchCancel={null}
-            onTouchEnd={[Function]}
-            onTouchMove={null}
-            onTouchStart={[Function]}
-            style={
-              Object {
-                "padding": "0px 0",
-              }
-            }
+            className="slick-slider center slick-initialized"
+            dir="ltr"
           >
             <div
-              className="slick-track"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onMouseOver={[Function]}
+              className="slick-list"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={null}
+              onMouseMove={null}
+              onMouseUp={[Function]}
+              onTouchCancel={null}
+              onTouchEnd={[Function]}
+              onTouchMove={null}
+              onTouchStart={[Function]}
               style={
                 Object {
-                  "WebkitTransform": "translate3d(0px, 0px, 0px)",
-                  "WebkitTransition": "",
-                  "msTransform": "translateX(0px)",
-                  "opacity": 1,
-                  "transform": "translate3d(0px, 0px, 0px)",
-                  "transition": "",
+                  "padding": "0px 0",
                 }
               }
             >
               <div
-                aria-hidden={false}
-                className="slick-slide slick-active slick-center slick-current"
-                data-index={0}
-                onClick={[Function]}
+                className="slick-track"
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                onMouseOver={[Function]}
                 style={
                   Object {
-                    "outline": "none",
-                    "width": null,
+                    "WebkitTransform": "translate3d(0px, 0px, 0px)",
+                    "WebkitTransition": "",
+                    "msTransform": "translateX(0px)",
+                    "opacity": 1,
+                    "transform": "translate3d(0px, 0px, 0px)",
+                    "transition": "",
                   }
                 }
-                tabIndex="-1"
               >
-                <div>
-                  <div
-                    className="o-carousel_wrap"
-                    style={
-                      Object {
-                        "display": "inline-block",
-                        "width": "100%",
-                      }
+                <div
+                  aria-hidden={false}
+                  className="slick-slide slick-active slick-center slick-current"
+                  data-index={0}
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "outline": "none",
+                      "width": null,
                     }
-                    tabIndex={-1}
-                  >
+                  }
+                  tabIndex="-1"
+                >
+                  <div>
                     <div
-                      className="o-carousel_item"
+                      className="o-carousel_wrap"
+                      style={
+                        Object {
+                          "display": "inline-block",
+                          "width": "100%",
+                        }
+                      }
+                      tabIndex={-1}
                     >
                       <div
-                        className="t-processItem"
+                        className="o-carousel_item"
                       >
-                        <span
-                          className="t-processItem_year"
-                        >
-                          2013
-                        </span>
                         <div
-                          className="t-processItem_hexagon"
+                          className="t-processItem"
                         >
-                          <div />
-                          <div />
-                          <div />
-                        </div>
-                        <div
-                          className="t-processItem_card"
-                        >
-                          <div
-                            className="t-processItem_card_description"
+                          <span
+                            className="t-processItem_year"
                           >
-                            <p
-                              className="a-text a-text-300 a-text-davysGrey a-text-center"
-                              dangerouslySetInnerHTML={
-                                Object {
-                                  "__html": "Ngày 28/12/2013 Tập đoàn Novaland chính thức niêm yết trên Sở Giao dịch Chứng khoán TP.HCM với mã chứng khoán NVL.",
-                                }
-                              }
-                            />
+                            2013
+                          </span>
+                          <div
+                            className="t-processItem_hexagon"
+                          >
+                            <div />
+                            <div />
+                            <div />
                           </div>
                           <div
-                            className="t-processItem_card_image"
+                            className="t-processItem_card"
                           >
                             <div
-                              className="a-image a-image-350x197"
+                              className="t-processItem_card_description"
                             >
-                              <img
-                                alt="replacing"
-                                loading="lazy"
-                                src="card_slide.png"
+                              <p
+                                className="a-text a-text-300 a-text-davysGrey a-text-center"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "Ngày 28/12/2013 Tập đoàn Novaland chính thức niêm yết trên Sở Giao dịch Chứng khoán TP.HCM với mã chứng khoán NVL.",
+                                  }
+                                }
                               />
+                            </div>
+                            <div
+                              className="t-processItem_card_image"
+                            >
+                              <div
+                                className="a-image a-image-350x197"
+                              >
+                                <img
+                                  alt="replacing"
+                                  loading="lazy"
+                                  src="card_slide.png"
+                                />
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -5566,75 +5570,75 @@ exports[`Storyshots Components/templates/DevelopmentHistory Normal 1`] = `
                     </div>
                   </div>
                 </div>
-              </div>
-              <div
-                aria-hidden={true}
-                className="slick-slide"
-                data-index={1}
-                onClick={[Function]}
-                style={
-                  Object {
-                    "outline": "none",
-                    "width": null,
-                  }
-                }
-                tabIndex="-1"
-              >
-                <div>
-                  <div
-                    className="o-carousel_wrap"
-                    style={
-                      Object {
-                        "display": "inline-block",
-                        "width": "100%",
-                      }
+                <div
+                  aria-hidden={true}
+                  className="slick-slide"
+                  data-index={1}
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "outline": "none",
+                      "width": null,
                     }
-                    tabIndex={-1}
-                  >
+                  }
+                  tabIndex="-1"
+                >
+                  <div>
                     <div
-                      className="o-carousel_item"
+                      className="o-carousel_wrap"
+                      style={
+                        Object {
+                          "display": "inline-block",
+                          "width": "100%",
+                        }
+                      }
+                      tabIndex={-1}
                     >
                       <div
-                        className="t-processItem"
+                        className="o-carousel_item"
                       >
-                        <span
-                          className="t-processItem_year"
-                        >
-                          2014
-                        </span>
                         <div
-                          className="t-processItem_hexagon"
+                          className="t-processItem"
                         >
-                          <div />
-                          <div />
-                          <div />
-                        </div>
-                        <div
-                          className="t-processItem_card"
-                        >
-                          <div
-                            className="t-processItem_card_description"
+                          <span
+                            className="t-processItem_year"
                           >
-                            <p
-                              className="a-text a-text-300 a-text-davysGrey a-text-center"
-                              dangerouslySetInnerHTML={
-                                Object {
-                                  "__html": "Ngày 28/12/2014 Tập đoàn Novaland chính thức niêm yết trên Sở Giao dịch Chứng khoán TP.HCM với mã chứng khoán NVL.",
-                                }
-                              }
-                            />
+                            2014
+                          </span>
+                          <div
+                            className="t-processItem_hexagon"
+                          >
+                            <div />
+                            <div />
+                            <div />
                           </div>
                           <div
-                            className="t-processItem_card_image"
+                            className="t-processItem_card"
                           >
                             <div
-                              className="a-image a-image-350x197"
+                              className="t-processItem_card_description"
                             >
-                              <img
-                                alt="replacing"
-                                loading="lazy"
-                                src="card_slide.png"
+                              <p
+                                className="a-text a-text-300 a-text-davysGrey a-text-center"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "Ngày 28/12/2014 Tập đoàn Novaland chính thức niêm yết trên Sở Giao dịch Chứng khoán TP.HCM với mã chứng khoán NVL.",
+                                  }
+                                }
                               />
+                            </div>
+                            <div
+                              className="t-processItem_card_image"
+                            >
+                              <div
+                                className="a-image a-image-350x197"
+                              >
+                                <img
+                                  alt="replacing"
+                                  loading="lazy"
+                                  src="card_slide.png"
+                                />
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -5642,75 +5646,75 @@ exports[`Storyshots Components/templates/DevelopmentHistory Normal 1`] = `
                     </div>
                   </div>
                 </div>
-              </div>
-              <div
-                aria-hidden={true}
-                className="slick-slide"
-                data-index={2}
-                onClick={[Function]}
-                style={
-                  Object {
-                    "outline": "none",
-                    "width": null,
-                  }
-                }
-                tabIndex="-1"
-              >
-                <div>
-                  <div
-                    className="o-carousel_wrap"
-                    style={
-                      Object {
-                        "display": "inline-block",
-                        "width": "100%",
-                      }
+                <div
+                  aria-hidden={true}
+                  className="slick-slide"
+                  data-index={2}
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "outline": "none",
+                      "width": null,
                     }
-                    tabIndex={-1}
-                  >
+                  }
+                  tabIndex="-1"
+                >
+                  <div>
                     <div
-                      className="o-carousel_item"
+                      className="o-carousel_wrap"
+                      style={
+                        Object {
+                          "display": "inline-block",
+                          "width": "100%",
+                        }
+                      }
+                      tabIndex={-1}
                     >
                       <div
-                        className="t-processItem"
+                        className="o-carousel_item"
                       >
-                        <span
-                          className="t-processItem_year"
-                        >
-                          2015
-                        </span>
                         <div
-                          className="t-processItem_hexagon"
+                          className="t-processItem"
                         >
-                          <div />
-                          <div />
-                          <div />
-                        </div>
-                        <div
-                          className="t-processItem_card"
-                        >
-                          <div
-                            className="t-processItem_card_description"
+                          <span
+                            className="t-processItem_year"
                           >
-                            <p
-                              className="a-text a-text-300 a-text-davysGrey a-text-center"
-                              dangerouslySetInnerHTML={
-                                Object {
-                                  "__html": "Ngày 28/12/2015 Tập đoàn Novaland chính thức niêm yết trên Sở Giao dịch Chứng khoán TP.HCM với mã chứng khoán NVL.",
-                                }
-                              }
-                            />
+                            2015
+                          </span>
+                          <div
+                            className="t-processItem_hexagon"
+                          >
+                            <div />
+                            <div />
+                            <div />
                           </div>
                           <div
-                            className="t-processItem_card_image"
+                            className="t-processItem_card"
                           >
                             <div
-                              className="a-image a-image-350x197"
+                              className="t-processItem_card_description"
                             >
-                              <img
-                                alt="replacing"
-                                loading="lazy"
-                                src="card_slide.png"
+                              <p
+                                className="a-text a-text-300 a-text-davysGrey a-text-center"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "Ngày 28/12/2015 Tập đoàn Novaland chính thức niêm yết trên Sở Giao dịch Chứng khoán TP.HCM với mã chứng khoán NVL.",
+                                  }
+                                }
                               />
+                            </div>
+                            <div
+                              className="t-processItem_card_image"
+                            >
+                              <div
+                                className="a-image a-image-350x197"
+                              >
+                                <img
+                                  alt="replacing"
+                                  loading="lazy"
+                                  src="card_slide.png"
+                                />
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -5718,75 +5722,75 @@ exports[`Storyshots Components/templates/DevelopmentHistory Normal 1`] = `
                     </div>
                   </div>
                 </div>
-              </div>
-              <div
-                aria-hidden={true}
-                className="slick-slide"
-                data-index={3}
-                onClick={[Function]}
-                style={
-                  Object {
-                    "outline": "none",
-                    "width": null,
-                  }
-                }
-                tabIndex="-1"
-              >
-                <div>
-                  <div
-                    className="o-carousel_wrap"
-                    style={
-                      Object {
-                        "display": "inline-block",
-                        "width": "100%",
-                      }
+                <div
+                  aria-hidden={true}
+                  className="slick-slide"
+                  data-index={3}
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "outline": "none",
+                      "width": null,
                     }
-                    tabIndex={-1}
-                  >
+                  }
+                  tabIndex="-1"
+                >
+                  <div>
                     <div
-                      className="o-carousel_item"
+                      className="o-carousel_wrap"
+                      style={
+                        Object {
+                          "display": "inline-block",
+                          "width": "100%",
+                        }
+                      }
+                      tabIndex={-1}
                     >
                       <div
-                        className="t-processItem"
+                        className="o-carousel_item"
                       >
-                        <span
-                          className="t-processItem_year"
-                        >
-                          2016
-                        </span>
                         <div
-                          className="t-processItem_hexagon"
+                          className="t-processItem"
                         >
-                          <div />
-                          <div />
-                          <div />
-                        </div>
-                        <div
-                          className="t-processItem_card"
-                        >
-                          <div
-                            className="t-processItem_card_description"
+                          <span
+                            className="t-processItem_year"
                           >
-                            <p
-                              className="a-text a-text-300 a-text-davysGrey a-text-center"
-                              dangerouslySetInnerHTML={
-                                Object {
-                                  "__html": "Ngày 28/12/2016 Tập đoàn Novaland chính thức niêm yết trên Sở Giao dịch Chứng khoán TP.HCM với mã chứng khoán NVL.",
-                                }
-                              }
-                            />
+                            2016
+                          </span>
+                          <div
+                            className="t-processItem_hexagon"
+                          >
+                            <div />
+                            <div />
+                            <div />
                           </div>
                           <div
-                            className="t-processItem_card_image"
+                            className="t-processItem_card"
                           >
                             <div
-                              className="a-image a-image-350x197"
+                              className="t-processItem_card_description"
                             >
-                              <img
-                                alt="replacing"
-                                loading="lazy"
-                                src="card_slide.png"
+                              <p
+                                className="a-text a-text-300 a-text-davysGrey a-text-center"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "Ngày 28/12/2016 Tập đoàn Novaland chính thức niêm yết trên Sở Giao dịch Chứng khoán TP.HCM với mã chứng khoán NVL.",
+                                  }
+                                }
                               />
+                            </div>
+                            <div
+                              className="t-processItem_card_image"
+                            >
+                              <div
+                                className="a-image a-image-350x197"
+                              >
+                                <img
+                                  alt="replacing"
+                                  loading="lazy"
+                                  src="card_slide.png"
+                                />
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -5794,75 +5798,75 @@ exports[`Storyshots Components/templates/DevelopmentHistory Normal 1`] = `
                     </div>
                   </div>
                 </div>
-              </div>
-              <div
-                aria-hidden={true}
-                className="slick-slide"
-                data-index={4}
-                onClick={[Function]}
-                style={
-                  Object {
-                    "outline": "none",
-                    "width": null,
-                  }
-                }
-                tabIndex="-1"
-              >
-                <div>
-                  <div
-                    className="o-carousel_wrap"
-                    style={
-                      Object {
-                        "display": "inline-block",
-                        "width": "100%",
-                      }
+                <div
+                  aria-hidden={true}
+                  className="slick-slide"
+                  data-index={4}
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "outline": "none",
+                      "width": null,
                     }
-                    tabIndex={-1}
-                  >
+                  }
+                  tabIndex="-1"
+                >
+                  <div>
                     <div
-                      className="o-carousel_item"
+                      className="o-carousel_wrap"
+                      style={
+                        Object {
+                          "display": "inline-block",
+                          "width": "100%",
+                        }
+                      }
+                      tabIndex={-1}
                     >
                       <div
-                        className="t-processItem"
+                        className="o-carousel_item"
                       >
-                        <span
-                          className="t-processItem_year"
-                        >
-                          2017
-                        </span>
                         <div
-                          className="t-processItem_hexagon"
+                          className="t-processItem"
                         >
-                          <div />
-                          <div />
-                          <div />
-                        </div>
-                        <div
-                          className="t-processItem_card"
-                        >
-                          <div
-                            className="t-processItem_card_description"
+                          <span
+                            className="t-processItem_year"
                           >
-                            <p
-                              className="a-text a-text-300 a-text-davysGrey a-text-center"
-                              dangerouslySetInnerHTML={
-                                Object {
-                                  "__html": "Ngày 28/12/2017 Tập đoàn Novaland chính thức niêm yết trên Sở Giao dịch Chứng khoán TP.HCM với mã chứng khoán NVL.",
-                                }
-                              }
-                            />
+                            2017
+                          </span>
+                          <div
+                            className="t-processItem_hexagon"
+                          >
+                            <div />
+                            <div />
+                            <div />
                           </div>
                           <div
-                            className="t-processItem_card_image"
+                            className="t-processItem_card"
                           >
                             <div
-                              className="a-image a-image-350x197"
+                              className="t-processItem_card_description"
                             >
-                              <img
-                                alt="replacing"
-                                loading="lazy"
-                                src="card_slide.png"
+                              <p
+                                className="a-text a-text-300 a-text-davysGrey a-text-center"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "Ngày 28/12/2017 Tập đoàn Novaland chính thức niêm yết trên Sở Giao dịch Chứng khoán TP.HCM với mã chứng khoán NVL.",
+                                  }
+                                }
                               />
+                            </div>
+                            <div
+                              className="t-processItem_card_image"
+                            >
+                              <div
+                                className="a-image a-image-350x197"
+                              >
+                                <img
+                                  alt="replacing"
+                                  loading="lazy"
+                                  src="card_slide.png"
+                                />
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -5870,75 +5874,75 @@ exports[`Storyshots Components/templates/DevelopmentHistory Normal 1`] = `
                     </div>
                   </div>
                 </div>
-              </div>
-              <div
-                aria-hidden={true}
-                className="slick-slide"
-                data-index={5}
-                onClick={[Function]}
-                style={
-                  Object {
-                    "outline": "none",
-                    "width": null,
-                  }
-                }
-                tabIndex="-1"
-              >
-                <div>
-                  <div
-                    className="o-carousel_wrap"
-                    style={
-                      Object {
-                        "display": "inline-block",
-                        "width": "100%",
-                      }
+                <div
+                  aria-hidden={true}
+                  className="slick-slide"
+                  data-index={5}
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "outline": "none",
+                      "width": null,
                     }
-                    tabIndex={-1}
-                  >
+                  }
+                  tabIndex="-1"
+                >
+                  <div>
                     <div
-                      className="o-carousel_item"
+                      className="o-carousel_wrap"
+                      style={
+                        Object {
+                          "display": "inline-block",
+                          "width": "100%",
+                        }
+                      }
+                      tabIndex={-1}
                     >
                       <div
-                        className="t-processItem"
+                        className="o-carousel_item"
                       >
-                        <span
-                          className="t-processItem_year"
-                        >
-                          2018
-                        </span>
                         <div
-                          className="t-processItem_hexagon"
+                          className="t-processItem"
                         >
-                          <div />
-                          <div />
-                          <div />
-                        </div>
-                        <div
-                          className="t-processItem_card"
-                        >
-                          <div
-                            className="t-processItem_card_description"
+                          <span
+                            className="t-processItem_year"
                           >
-                            <p
-                              className="a-text a-text-300 a-text-davysGrey a-text-center"
-                              dangerouslySetInnerHTML={
-                                Object {
-                                  "__html": "Ngày 28/12/2018 Tập đoàn Novaland chính thức niêm yết trên Sở Giao dịch Chứng khoán TP.HCM với mã chứng khoán NVL.",
-                                }
-                              }
-                            />
+                            2018
+                          </span>
+                          <div
+                            className="t-processItem_hexagon"
+                          >
+                            <div />
+                            <div />
+                            <div />
                           </div>
                           <div
-                            className="t-processItem_card_image"
+                            className="t-processItem_card"
                           >
                             <div
-                              className="a-image a-image-350x197"
+                              className="t-processItem_card_description"
                             >
-                              <img
-                                alt="replacing"
-                                loading="lazy"
-                                src="card_slide.png"
+                              <p
+                                className="a-text a-text-300 a-text-davysGrey a-text-center"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "Ngày 28/12/2018 Tập đoàn Novaland chính thức niêm yết trên Sở Giao dịch Chứng khoán TP.HCM với mã chứng khoán NVL.",
+                                  }
+                                }
                               />
+                            </div>
+                            <div
+                              className="t-processItem_card_image"
+                            >
+                              <div
+                                className="a-image a-image-350x197"
+                              >
+                                <img
+                                  alt="replacing"
+                                  loading="lazy"
+                                  src="card_slide.png"
+                                />
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -5946,75 +5950,75 @@ exports[`Storyshots Components/templates/DevelopmentHistory Normal 1`] = `
                     </div>
                   </div>
                 </div>
-              </div>
-              <div
-                aria-hidden={true}
-                className="slick-slide"
-                data-index={6}
-                onClick={[Function]}
-                style={
-                  Object {
-                    "outline": "none",
-                    "width": null,
-                  }
-                }
-                tabIndex="-1"
-              >
-                <div>
-                  <div
-                    className="o-carousel_wrap"
-                    style={
-                      Object {
-                        "display": "inline-block",
-                        "width": "100%",
-                      }
+                <div
+                  aria-hidden={true}
+                  className="slick-slide"
+                  data-index={6}
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "outline": "none",
+                      "width": null,
                     }
-                    tabIndex={-1}
-                  >
+                  }
+                  tabIndex="-1"
+                >
+                  <div>
                     <div
-                      className="o-carousel_item"
+                      className="o-carousel_wrap"
+                      style={
+                        Object {
+                          "display": "inline-block",
+                          "width": "100%",
+                        }
+                      }
+                      tabIndex={-1}
                     >
                       <div
-                        className="t-processItem"
+                        className="o-carousel_item"
                       >
-                        <span
-                          className="t-processItem_year"
-                        >
-                          2019
-                        </span>
                         <div
-                          className="t-processItem_hexagon"
+                          className="t-processItem"
                         >
-                          <div />
-                          <div />
-                          <div />
-                        </div>
-                        <div
-                          className="t-processItem_card"
-                        >
-                          <div
-                            className="t-processItem_card_description"
+                          <span
+                            className="t-processItem_year"
                           >
-                            <p
-                              className="a-text a-text-300 a-text-davysGrey a-text-center"
-                              dangerouslySetInnerHTML={
-                                Object {
-                                  "__html": "Ngày 28/12/2019 Tập đoàn Novaland chính thức niêm yết trên Sở Giao dịch Chứng khoán TP.HCM với mã chứng khoán NVL.",
-                                }
-                              }
-                            />
+                            2019
+                          </span>
+                          <div
+                            className="t-processItem_hexagon"
+                          >
+                            <div />
+                            <div />
+                            <div />
                           </div>
                           <div
-                            className="t-processItem_card_image"
+                            className="t-processItem_card"
                           >
                             <div
-                              className="a-image a-image-350x197"
+                              className="t-processItem_card_description"
                             >
-                              <img
-                                alt="replacing"
-                                loading="lazy"
-                                src="card_slide.png"
+                              <p
+                                className="a-text a-text-300 a-text-davysGrey a-text-center"
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "Ngày 28/12/2019 Tập đoàn Novaland chính thức niêm yết trên Sở Giao dịch Chứng khoán TP.HCM với mã chứng khoán NVL.",
+                                  }
+                                }
                               />
+                            </div>
+                            <div
+                              className="t-processItem_card_image"
+                            >
+                              <div
+                                className="a-image a-image-350x197"
+                              >
+                                <img
+                                  alt="replacing"
+                                  loading="lazy"
+                                  src="card_slide.png"
+                                />
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -6025,6 +6029,19 @@ exports[`Storyshots Components/templates/DevelopmentHistory Normal 1`] = `
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div
+        className="t-developmentHistory_background"
+      >
+        <div
+          className="a-image a-image-624x495"
+        >
+          <img
+            alt="imgBackground"
+            loading="lazy"
+            src=""
+          />
         </div>
       </div>
     </div>
@@ -27918,10 +27935,12 @@ exports[`Storyshots Components/templates/ShareholderRelations Normal 1`] = `
         onClick={[Function]}
         target="_self"
       >
-        <button
-          className="a-button a-button-outlineSpanishGray"
-          disabled={false}
-          type="button"
+        <a
+          aria-current="page"
+          className="a-link   active"
+          href="/"
+          onClick={[Function]}
+          target="_self"
         >
           <p
             className="a-text a-text-14x20 a-text-400 a-text-fontLexend a-text-center"
