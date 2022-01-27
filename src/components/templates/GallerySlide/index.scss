@@ -1,0 +1,97 @@
+.t-gallerySlide {
+  $root: &;
+  &_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &_left {
+    flex: 0 0 30%;
+    max-width: 30%;
+
+    @include tablet-down {
+      flex: 0 0 40%;
+      max-width: 40%;
+    }
+
+    @include mobile-down {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    &_btn {
+      max-width: max-content;
+
+      &_wrap {
+        @include adjust-flex(flex-start, center);
+      }
+
+      &:hover {
+        #{$root}_left_btn_icon {
+          transition: 0.3s;
+          transform: translateX(10px);
+        }
+      }
+    }
+  }
+
+  &_right {
+    flex: 0 0 70%;
+    max-width: 70%;
+    margin: 0 rem(-15);
+    
+    @include tablet-down {
+      margin: 0;
+      flex: 0 0 60%;
+      max-width: 60%;
+    }
+
+    @include mobile-down {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-top: rem(20);
+    }
+
+    &_item {
+      padding: 0 rem(15);
+
+      @include tablet-down {
+        padding: 0;
+      }
+    }
+
+    .o-carousel_arrow {
+      height: rem(40);
+      width: rem(40);
+
+      @include tablet-down {
+        height: rem(33);
+        width: rem(33)
+      }
+    }
+
+    .slick-arrow.slick-prev {
+      left: calc(-18 / 1366 * 100%);
+
+      @include desktop-down {
+        left: calc(-5 / 1366 * 100%);
+      }
+
+      @include tablet-down {
+        left: calc(20 / 1366 * 100%);
+      }
+    }
+
+    .slick-arrow.slick-next {
+      right: calc(-32 / 1366 * 100%);
+
+      @include desktop-down {
+        right: calc(-33 / 1366 * 100%);
+      }
+
+      @include tablet-down {
+        right: calc(20 / 1366 * 100%);
+      }
+    }
+  }
+}
