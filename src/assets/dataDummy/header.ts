@@ -131,7 +131,7 @@ export const headerRecruitmentMenuDummy: MenuItemDataTypes[] = [
     parentId: 1,
     referenceId: 1,
     reference: {
-      slug: '/danh-sach-tuyen-dung',
+      slug: '/tuyen-dung',
     },
     type: '22',
     createdAt: 'ss',

@@ -45,7 +45,7 @@ const routes = [
     element: <Recruitment />,
   },
   {
-    path: '/danh-sach-tuyen-dung',
+    path: '/co-hoi-nghe-nghiep',
     element: <RecruitmentList />,
   },
   {

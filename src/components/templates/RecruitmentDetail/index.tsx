@@ -57,7 +57,9 @@ const RecruitmentDetail: React.FC<RecruitmentDetailProps> = ({
                   onClickShare={onClickShare}
                 />
                 <div className="t-recruitmentDetail_related">
-                  <Text modifiers={['14x22', '700', 'jet']}>Các vị trí tương tự</Text>
+                  <div className="t-recruitmentDetail_related_title">
+                    <Text modifiers={['14x22', '700', 'jet']}>Các vị trí tương tự</Text>
+                  </div>
                   {listRelatedJob.slice(0, 3).map((item, idx) => (
                     <React.Fragment key={`job-${idx.toString()}`}>
                       <RelatedRecruitment
