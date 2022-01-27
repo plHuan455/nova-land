@@ -1,0 +1,26 @@
+.t-transactionList {
+  &_content {
+    display: flex;
+    flex-wrap: wrap;
+    margin: rem(-15);
+    align-items: stretch;
+
+    @include mobile-down {
+      margin: rem(-10) 0;
+    }
+  }
+
+  &_item {
+    flex: 0 0 33.3333%;
+    padding: rem(15);
+
+    @include tablet-down {
+      flex: 0 0 50%;
+    }
+
+    @include mobile-down {
+      padding: rem(10) 0;
+      flex: 0 0 100%;
+    }
+  }
+}
