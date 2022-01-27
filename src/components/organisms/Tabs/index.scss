@@ -16,7 +16,6 @@
   &_label {
     color: $dim-gray;
     font-weight: 300;
-    text-transform: capitalize;
     white-space: nowrap;
     @include font-base(24, 32);
 
