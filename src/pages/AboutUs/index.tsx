@@ -2,11 +2,14 @@
 import React from 'react';
 
 import AboutUSContainer, { AboutUsBlock } from 'container/AboutUs';
+import MainLayoutContainer from 'container/MainLayout';
 
 const AboutUs: React.FC<BasePageData<AboutUsBlock>> = (props) => (
-  <div className="p-aboutUs">
-    <AboutUSContainer {...props} />
-  </div>
+  <MainLayoutContainer>
+    <div className="p-aboutUs">
+      <AboutUSContainer {...props} />
+    </div>
+  </MainLayoutContainer>
 );
 
 export default AboutUs;

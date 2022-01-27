@@ -11,7 +11,7 @@ const listJobs = [
     isLatestJobs: true,
     tagLeft: 'Tài Chính',
     tagRight: 'Toàn thời gian',
-    locationText: 'HO CHI MINH, city',
+    locationText: 'Ho Chi Minh, city',
     bntText: 'Tìm hiểu thêm',
   },
   {
@@ -24,7 +24,7 @@ const listJobs = [
     isLatestJobs: true,
     tagLeft: 'Tài Chính',
     tagRight: 'Toàn thời gian',
-    locationText: 'HO CHI MINH, city',
+    locationText: 'Ho Chi Minh, city',
     bntText: 'Tìm hiểu thêm',
   },
   {
@@ -37,7 +37,7 @@ const listJobs = [
     isLatestJobs: true,
     tagLeft: 'Tài Chính',
     tagRight: 'Toàn thời gian',
-    locationText: 'HO CHI MINH, city',
+    locationText: 'Ho Chi Minh, city',
     bntText: 'Tìm hiểu thêm',
   },
   {
@@ -50,7 +50,7 @@ const listJobs = [
     isLatestJobs: true,
     tagLeft: 'Tài Chính',
     tagRight: 'Toàn thời gian',
-    locationText: 'HO CHI MINH, city',
+    locationText: 'Ho Chi Minh, city',
     bntText: 'Tìm hiểu thêm',
   },
 ];
