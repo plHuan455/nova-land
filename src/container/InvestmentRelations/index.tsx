@@ -60,6 +60,7 @@ export type InvestmentRelationsBlocks = NovalandShares
 
 const InvestmentRelationsContainer: React.FC<BasePageData<InvestmentRelationsBlocks>> = ({
   blocks,
+  banners,
 }) => {
   const novalandSharesBlock = useMemo(() => getBlockData('novaland_shares', blocks) as NovalandShares, [blocks]);
   const corporateGovernanceAnnualReportBlock = useMemo(() => getBlockData('corporate_governance_annual_report', blocks) as CorporateGovernanceAnnualReport,
@@ -142,7 +143,11 @@ const InvestmentRelationsContainer: React.FC<BasePageData<InvestmentRelationsBlo
 
   return (
     <div className="p-investmentRelations">
-      <BannerContainer />
+      <BannerContainer
+        src={getImageURL(banners[0].data.imageDesktop)}
+        srcMobile={getImageURL(banners[0].data.imageMobile)}
+        srcTablet={getImageURL(banners[0].data.imageTablet)}
+      />
       <Section modifiers="noPb">
         <StockInformationContainer
           title={novalandSharesBlock.title}
@@ -165,6 +170,8 @@ const InvestmentRelationsContainer: React.FC<BasePageData<InvestmentRelationsBlo
           dataCard={calendarList}
           modifiers="fourItem"
           btnText={eventCalendarBlock.button.text}
+          btnHref={eventCalendarBlock.button.url}
+          target={eventCalendarBlock.button.target}
         />
       </Section>
       <Section modifiers="noPb">
@@ -172,6 +179,8 @@ const InvestmentRelationsContainer: React.FC<BasePageData<InvestmentRelationsBlo
           heading={otherDocumentBlock.title}
           data={documentList}
           btnText={otherDocumentBlock.button.text}
+          btnHref={otherDocumentBlock.button.url}
+          target={otherDocumentBlock.button.target}
         />
       </Section>
     </div>

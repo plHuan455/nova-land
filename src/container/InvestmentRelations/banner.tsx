@@ -1,13 +1,14 @@
 import React from 'react';
 
-import img from 'assets/images/banner3.png';
 import Animate from 'components/organisms/Animate';
-import Banner from 'components/organisms/Banner';
+import Banner, { BannerProps } from 'components/organisms/Banner';
 
-const BannerContainer: React.FC = () => (
+interface BannerContainerProps extends BannerProps{}
+
+const BannerContainer: React.FC<BannerContainerProps> = ({ ...props }) => (
   <Animate type="goUp">
     <div className="p-investmentRelations_Banner">
-      <Banner src={img} />
+      <Banner {...props} />
     </div>
   </Animate>
 );
