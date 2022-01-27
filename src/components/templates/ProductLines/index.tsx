@@ -26,6 +26,7 @@ interface ProductLinesProps {
 
 const ProductLines: React.FC<ProductLinesProps> = ({ title, dataProductLines }) => {
   const [indexActive, setIndexActive] = useState(0);
+  if (dataProductLines.length < 1) return null;
 
   const settingDefault = {
     dots: false,
@@ -34,13 +35,9 @@ const ProductLines: React.FC<ProductLinesProps> = ({ title, dataProductLines }) 
     arrows: false,
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
-    infinite: false,
+    infinite: true,
     cssEase: 'ease-in-out',
-    customPaging() {
-      return (
-        <span className="o-carousel_dot" />
-      );
-    },
+    afterChange: (currentIndex: number) => setIndexActive(currentIndex),
     responsive: [
       {
         breakpoint: 1199,
