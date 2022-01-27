@@ -1,5 +1,8 @@
 import { Story, Meta } from '@storybook/react';
 import React from 'react';
+import {
+  BrowserRouter as Router,
+} from 'react-router-dom';
 
 import ListLogoProject from '.';
 
@@ -17,11 +20,49 @@ export default {
   argTypes: {},
 } as Meta;
 
-const listLogo = [project1, project2, project3, project4, project5, project6, project7];
+const listLogo = [
+  {
+    imgSrc: project1,
+    href: '',
+    target: '',
+  },
+  {
+    imgSrc: project2,
+    href: '',
+    target: '',
+  },
+  {
+    imgSrc: project3,
+    href: '',
+    target: '',
+  },
+  {
+    imgSrc: project4,
+    href: '',
+    target: '',
+  },
+  {
+    imgSrc: project5,
+    href: '',
+    target: '',
+  },
+  {
+    imgSrc: project6,
+    href: '',
+    target: '',
+  },
+  {
+    imgSrc: project7,
+    href: '',
+    target: '',
+  },
+];
 
 export const normal: Story = () => (
-  <ListLogoProject
-    title="các dự án Khu trung tâm"
-    listLogo={listLogo}
-  />
+  <Router>
+    <ListLogoProject
+      title="các dự án Khu trung tâm"
+      listLogo={listLogo}
+    />
+  </Router>
 );
