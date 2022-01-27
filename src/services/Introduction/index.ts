@@ -2,6 +2,8 @@ import {
   LeadershipCategoryDataTypes,
   LeadershipDataTypes,
   LeadershipParamsTypes,
+  MapsDataTypes,
+  MapsParamsTypes,
   PrizesType,
   ProjectsParamsTypes,
   ProjectTypes,
@@ -36,6 +38,13 @@ export const getLeadershipService = async (
 
 export const getPrizesService = async (): Promise<PrizesType[]> => {
   const response = await axiosInstance.get('prizes');
+  return response.data.data;
+};
+
+export const getMapsService = async (
+  params: MapsParamsTypes,
+): Promise<MapsDataTypes[]> => {
+  const response = await axiosInstance.get('maps', { params });
   return response.data.data;
 };
 

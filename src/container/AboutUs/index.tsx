@@ -15,6 +15,7 @@ import ProjectListMapContainer from './projectListMapContainer';
 import TransportationContainer from './transportationContainer';
 import VisionMissionValueContainer from './visionMissionValueContainer';
 
+import Loading from 'components/atoms/Loading';
 import { getLeadershipService, getPrizesService, getProjectsService } from 'services/Introduction';
 import { getLeadershipCategoryAction, getRealEstatesAction } from 'store/Introduction';
 import { useAppSelector } from 'store/hooks';
@@ -137,6 +138,7 @@ const AboutUSContainer: React.FC<BasePageData<AboutUsBlock>> = ({
   const [indexPrize, setIndexPrize] = useState(0);
 
   console.log(indexPrize);
+
   const listBanner = useMemo(() => banners.map((item) => ({
     src: getImageURL(item.data.imageDesktop),
     srcTablet: getImageURL(item.data.imageTablet),
@@ -244,7 +246,7 @@ const AboutUSContainer: React.FC<BasePageData<AboutUsBlock>> = ({
     href: item.link,
   })), [projectDataHighlight]);
 
-  const { data: leadership } = useQuery(
+  const { data: leadership, isLoading } = useQuery(
     ['getLeadership', leadershipCategory, indexLeadershipCategoryActive], () => getLeadershipService({
       leadership_category_slug: leadershipCategory[indexLeadershipCategoryActive].slug,
     }),
@@ -264,7 +266,7 @@ const AboutUSContainer: React.FC<BasePageData<AboutUsBlock>> = ({
     }
   )), [leadership, leadershipCategory]);
 
-  const { data: prizesList } = useQuery(
+  const { data: prizesList, isLoading: isLoadingPrizes } = useQuery(
     'getPrizesData', () => getPrizesService(), {
       ...DEFAULT_QUERY_OPTION,
     },
@@ -288,6 +290,8 @@ const AboutUSContainer: React.FC<BasePageData<AboutUsBlock>> = ({
     dispatch(getLeadershipCategoryAction());
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  if (isLoading || isLoadingPrizes) return <Loading isShow variant="fullScreen" />;
 
   return (
     <>

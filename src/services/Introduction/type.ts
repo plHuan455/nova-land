@@ -72,3 +72,19 @@ export type PrizesType = {
     year: number,
   }
 }
+
+export type MapsDataTypes = {
+  id: number,
+  pointX: number,
+  pointY: number,
+  projects: number[],
+  city: {
+    id: number,
+    name: string,
+  }
+}
+
+export type MapsParamsTypes = {
+  city_id?: number,
+  project_id?: number,
+}
