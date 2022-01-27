@@ -1,0 +1,14 @@
+.p-contact {
+  &_mapInformation {
+    padding-top: rem(93);
+    height: 100vh;
+
+    @include tablet-down {
+      padding-top: rem(80);
+    }
+  }
+
+  &_transactionList {
+    background: $white-smoke-8f8;
+  }
+}
