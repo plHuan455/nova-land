@@ -17,14 +17,16 @@ export interface OtherDocumentsProps {
   heading?: string,
   data?: dataType[],
   btnText?: string;
-  handleSeeMore?: () => void;
+  btnHref?: string;
+  target?: string;
 }
 
 const OtherDocuments: React.FC<OtherDocumentsProps> = ({
   heading,
   data,
   btnText,
-  handleSeeMore,
+  btnHref,
+  target,
 }) => (
   <div className="t-otherDocuments">
     <div className="t-otherDocuments_heading">
@@ -51,8 +53,10 @@ const OtherDocuments: React.FC<OtherDocumentsProps> = ({
             </Link>
           ))
         }
-        <div className="t-otherDocuments_button" onClick={handleSeeMore}>
-          <Button modifiers="outlineSpanishGray">{btnText}</Button>
+        <div className="t-otherDocuments_button">
+          <Link href={btnHref} target={target}>
+            <Button modifiers="outlineSpanishGray">{btnText}</Button>
+          </Link>
         </div>
       </div>
     </Container>

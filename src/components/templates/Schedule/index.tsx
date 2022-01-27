@@ -2,6 +2,7 @@ import React from 'react';
 
 import Button from 'components/atoms/Button';
 import Heading from 'components/atoms/Heading';
+import Link from 'components/atoms/Link';
 import Text from 'components/atoms/Text';
 import Container from 'components/organisms/Container';
 import NewsCard from 'components/organisms/NewsCard';
@@ -21,7 +22,8 @@ export interface ScheduleProps {
   dataCard: CardType[],
   modifiers?: 'fourItem',
   btnText?: string;
-  handleSeeMore?: () => void;
+  btnHref?: string;
+  target?: string;
 }
 
 const Schedule: React.FC<ScheduleProps> = ({
@@ -30,7 +32,8 @@ const Schedule: React.FC<ScheduleProps> = ({
   dataCard,
   modifiers,
   btnText,
-  handleSeeMore,
+  btnHref,
+  target,
 }) => (
   <div className="t-schedule">
     <div className="t-schedule_heading">
@@ -70,8 +73,10 @@ const Schedule: React.FC<ScheduleProps> = ({
                   </div>
                 ))}
               </div>
-              <div className="t-schedule_button" onClick={handleSeeMore}>
-                <Button modifiers="outlineSpanishGray">{btnText}</Button>
+              <div className="t-schedule_button">
+                <Link href={btnHref} target={target}>
+                  <Button modifiers="outlineSpanishGray">{btnText}</Button>
+                </Link>
               </div>
             </>
           )
