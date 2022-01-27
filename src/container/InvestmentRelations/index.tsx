@@ -10,12 +10,13 @@ import ScheduleContainer from './schedule';
 import imgPdf from 'assets/images/pdf.png';
 import Section from 'components/templates/Section';
 import getCalendarListService from 'services/calendar';
-import getDocumentsService from 'services/documents';
+import getDocumentsService, { getOtherDocumentsService } from 'services/documents';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
 import {
   getBlockData,
   getImageURL,
   formatDateDDMMYYYY,
+  getHourFromPastToCurrent,
 } from 'utils/functions';
 
 type NovalandShares = {
@@ -67,15 +68,6 @@ const InvestmentRelationsContainer: React.FC<BasePageData<InvestmentRelationsBlo
   const eventCalendarBlock = useMemo(() => getBlockData('event_calendar', blocks) as EventCalendar, [blocks]);
   const otherDocumentBlock = useMemo(() => getBlockData('other_document', blocks) as OtherDocument, [blocks]);
 
-  const { data: documentDataList } = useQuery(
-    ['getDocumentList'],
-    () => getDocumentsService({
-      limit: 4,
-    }),
-    {
-      ...DEFAULT_QUERY_OPTION,
-    },
-  );
   const { data: calendarDataList } = useQuery(
     ['getCalendarList'],
     () => getCalendarListService({
@@ -87,16 +79,27 @@ const InvestmentRelationsContainer: React.FC<BasePageData<InvestmentRelationsBlo
     },
   );
 
+  const { data: otherDocumentHighlightData } = useQuery(
+    'getOtherDocuments', () => getOtherDocumentsService({
+      is_highlight: true,
+      limit: 4,
+    }),
+    {
+      ...DEFAULT_QUERY_OPTION,
+    },
+  );
+
   const documentList = useMemo(() => {
-    if (documentDataList && documentDataList?.data.length > 0) {
-      return documentDataList.data.map((item) => ({
+    if (otherDocumentHighlightData && otherDocumentHighlightData?.data.length > 0) {
+      return otherDocumentHighlightData.data.map((item) => ({
         pdfImg: imgPdf,
         fileName: item.name,
         href: getImageURL(item.file),
       }));
     }
     return [];
-  }, [documentDataList]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [otherDocumentHighlightData?.data]);
 
   const calendarList = useMemo(() => {
     if (calendarDataList && calendarDataList?.data.length > 0) {
@@ -111,34 +114,35 @@ const InvestmentRelationsContainer: React.FC<BasePageData<InvestmentRelationsBlo
     return [];
   }, [calendarDataList]);
 
-  const dataLatestNews = useMemo(() => [
+  const { data: documentsHighlightData } = useQuery(
+    'getDocuments', () => getDocumentsService({
+      is_highlight: true,
+    }),
     {
-      imgSrc: getImageURL(corporateGovernanceAnnualReportBlock.corporateGovernance.image),
-      ratio: '567x246' as Ratio,
-      heading: corporateGovernanceAnnualReportBlock.corporateGovernance.title,
-      alt: corporateGovernanceAnnualReportBlock.corporateGovernance.title,
-      title: corporateGovernanceAnnualReportBlock.corporateGovernance.title,
-      time: '2 giờ trước',
-      href: '/',
-      btnText: corporateGovernanceAnnualReportBlock.corporateGovernance.button.text,
-      fileName: corporateGovernanceAnnualReportBlock.corporateGovernance.title,
-      pdfImg: imgPdf,
-      hrefLink: corporateGovernanceAnnualReportBlock.corporateGovernance.button.url,
+      ...DEFAULT_QUERY_OPTION,
     },
-    {
-      imgSrc: getImageURL(corporateGovernanceAnnualReportBlock.annualReport.image),
-      ratio: '567x246' as Ratio,
-      heading: corporateGovernanceAnnualReportBlock.annualReport.title,
-      alt: corporateGovernanceAnnualReportBlock.annualReport.title,
-      title: corporateGovernanceAnnualReportBlock.annualReport.title,
-      time: '2 giờ trước',
-      href: '/',
-      btnText: corporateGovernanceAnnualReportBlock.annualReport.button.text,
-      fileName: corporateGovernanceAnnualReportBlock.annualReport.title,
-      pdfImg: imgPdf,
-      hrefLink: corporateGovernanceAnnualReportBlock.annualReport.button.url,
-    },
-  ], [corporateGovernanceAnnualReportBlock]);
+  );
+
+  const dataLatestNews = useMemo(() => documentsHighlightData?.data.map((item, index) => ({
+    imgSrc: getImageURL(index === 0
+      ? corporateGovernanceAnnualReportBlock.corporateGovernance.image
+      : corporateGovernanceAnnualReportBlock.annualReport.image),
+    ratio: '567x246' as Ratio,
+    heading: index === 0
+      ? corporateGovernanceAnnualReportBlock.corporateGovernance.title
+      : corporateGovernanceAnnualReportBlock.annualReport.title,
+    alt: item.name,
+    title: item.name,
+    time: new Date(item.publishedAt) === new Date()
+      ? `${getHourFromPastToCurrent(item.publishedAt)} giờ trước`
+      : formatDateDDMMYYYY(item.publishedAt),
+    href: '/',
+    btnText: corporateGovernanceAnnualReportBlock.corporateGovernance.button.text,
+    fileName: item.name,
+    pdfImg: imgPdf,
+    hrefLink: item.file,
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  })), [documentsHighlightData]);
 
   return (
     <div className="p-investmentRelations">
@@ -155,7 +159,7 @@ const InvestmentRelationsContainer: React.FC<BasePageData<InvestmentRelationsBlo
       <Section modifiers="noPb">
         <LatestNewsContainer
           hasLine
-          dataLatestNews={dataLatestNews}
+          dataLatestNews={dataLatestNews || []}
         />
       </Section>
       <Section modifiers="noPb">

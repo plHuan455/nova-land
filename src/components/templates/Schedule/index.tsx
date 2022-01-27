@@ -77,22 +77,11 @@ const Schedule: React.FC<ScheduleProps> = ({
           )
         }
         {
-          dataCard.length === 2 && (
+          dataCard.length <= 2 && (
             <div className="t-schedule_two">
               {dataCard.map((item, index) => (
                 <div className="t-schedule_right_item" key={`t-schedule-${index.toString()}`}>
                   <NewsCard variant="smallVertical" {...item} />
-                </div>
-              ))}
-            </div>
-          )
-        }
-        {
-          dataCard.length === 1 && (
-            <div className="t-schedule_one">
-              {dataCard.map((item, index) => (
-                <div className="t-schedule_one_item" key={`t-schedule-${index.toString()}`}>
-                  <NewsCard variant="vertical" {...item} />
                 </div>
               ))}
             </div>
