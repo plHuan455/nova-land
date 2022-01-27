@@ -55,7 +55,7 @@ const NewsCard: React.FC<NewsCardProps> = ({
           <div className="o-newsCard_content">
             <div className="o-newsCard_content_title">
               {modifiers === 'smallTitle' ? (
-                <Text modifiers={['jet', '600', 'fontLexend']}>
+                <Text modifiers={['jet', '600', 'fontLexend', '16x24']}>
                   {title}
                 </Text>
               )
