@@ -7,9 +7,11 @@ import Image from 'components/atoms/Image';
 import Carousel from 'components/organisms/Carousel';
 import Container from 'components/organisms/Container';
 import { Tab, TabPanel, Tabs } from 'components/organisms/Tabs';
+import { ProjectsTypes } from 'services/project/types';
 
 interface ItemBranch {
   id: number;
+  projects: number[];
   point: {
     x: number;
     y: number;
@@ -34,15 +36,15 @@ interface ImageMap {
 interface MapProps {
   image: ImageMap;
   listPoint?: ItemBranch[];
-  idProjectActive?: number;
+  idProjectActive: number;
   fnItem?: {
-    onMouseEnter?: (item:ItemBranch) => void;
-    onMouseLeave?: (item:ItemBranch) => void;
-    onClick?: (item:ItemBranch) => void;
+    onMouseEnter?: (item: ItemBranch) => void;
+    onMouseLeave?: (item: ItemBranch) => void;
+    onClick?: (item: ItemBranch) => void;
   }
 }
 
-const Map:React.FC<MapProps> = ({
+const Map: React.FC<MapProps> = ({
   image,
   listPoint,
   idProjectActive,
@@ -76,7 +78,7 @@ const Map:React.FC<MapProps> = ({
             onMouseEnter={() => fnItem?.onMouseEnter && fnItem.onMouseEnter(item)}
             onMouseLeave={() => fnItem?.onMouseLeave && fnItem.onMouseLeave(item)}
             onClick={() => fnItem?.onClick && fnItem.onClick(item)}
-            className={`t-projectMap_map_area ${idProjectActive === item.id ? 'active' : ''}`}
+            className={`t-projectMap_map_area ${item.projects.includes(idProjectActive) ? 'active' : ''}`}
             key={`${index.toString()}`}
             style={{ ...calculatorPosition(item) }}
           />
@@ -90,22 +92,24 @@ interface InfoProps {
   title?: string;
   idActive?: number;
   listCategory?: CategoryBranch[];
-  handleClick?: (id:number) => void;
+  handleClick?: (id: number) => void;
   fnItem?: {
-    onMouseEnter?: (item:ItemBranch) => void;
-    onMouseLeave?: (item:ItemBranch) => void;
-    onClick?: (item:ItemBranch) => void;
+    onMouseEnter?: (item: ProjectsTypes) => void;
+    onMouseLeave?: (item: ProjectsTypes) => void;
+    onClick?: (item: ProjectsTypes) => void;
   };
-  idProjectActive?: number;
+  idProjectActive: number;
+  projectDataList?: ProjectsTypes[];
 }
 
-const InfoMap:React.FC<InfoProps> = ({
+const InfoMap: React.FC<InfoProps> = ({
   title,
   idActive,
   listCategory,
   handleClick,
   fnItem,
   idProjectActive,
+  projectDataList,
 }) => {
   const settings = useMemo(() => ({
     dots: true,
@@ -144,19 +148,21 @@ const InfoMap:React.FC<InfoProps> = ({
             {listCategory?.map((item, index) => (
               <TabPanel key={`tab-panel-${index.toString()}`} active={item.id === idActive}>
                 <div className="t-projectMap_info_carousel">
-                  <Carousel settings={settings}>
-                    {item.listPoint.map((x, i) => (
-                      <div
-                        onMouseEnter={() => fnItem?.onMouseEnter && fnItem.onMouseEnter(x)}
-                        onMouseLeave={() => fnItem?.onMouseLeave && fnItem.onMouseLeave(x)}
-                        onClick={() => fnItem?.onClick && fnItem.onClick(x)}
-                        key={i.toString()}
-                        className={`t-projectMap_info_branch ${idProjectActive ? 'zoom-in' : ''} ${idProjectActive === x.id ? 'zoom-out' : ''}`}
-                      >
-                        <Image src={x.reference.images} ratio="257x64" />
-                      </div>
-                    ))}
-                  </Carousel>
+                  {projectDataList && (
+                    <Carousel settings={settings}>
+                      {projectDataList.map((x, i) => (
+                        <div
+                          onMouseEnter={() => fnItem?.onMouseEnter && fnItem.onMouseEnter(x)}
+                          onMouseLeave={() => fnItem?.onMouseLeave && fnItem.onMouseLeave(x)}
+                          onClick={() => fnItem?.onClick && fnItem.onClick(x)}
+                          key={i.toString()}
+                          className={`t-projectMap_info_branch ${idProjectActive ? 'zoom-in' : ''} ${idProjectActive === x.id ? 'zoom-out' : ''}`}
+                        >
+                          <Image src={x.thumbnail} ratio="257x64" />
+                        </div>
+                      ))}
+                    </Carousel>
+                  )}
                 </div>
               </TabPanel>
             ))}
@@ -171,24 +177,29 @@ interface ProjectMapProps {
   listCategory?: CategoryBranch[];
   image?: ImageMap;
   textProject?: string;
+  handleSelect: (id: number) => void;
+  idActive: number;
+  projectDataList?: ProjectsTypes[];
 }
 
 const ProjectMap: React.FC<ProjectMapProps> = ({
   image,
   listCategory,
   textProject,
+  handleSelect,
+  idActive,
+  projectDataList,
 }) => {
-  const [idActive, setIdActive] = useState<number>();
-  const [idProjectActive, setIdProjectActive] = useState<number>();
+  const [idProjectActive, setIdProjectActive] = useState(0);
 
   useEffect(() => {
     if (listCategory?.length) {
-      setIdActive(listCategory[0].id);
+      handleSelect(listCategory[0].id);
     }
   }, [listCategory]);
 
   const findCategoryActive = useCallback(
-    (id?:number, list?:CategoryBranch[]) => {
+    (id?: number, list?: CategoryBranch[]) => {
       if (!list?.length || !id) return undefined;
       return list?.find((x) => x.id === id);
     },
@@ -196,8 +207,8 @@ const ProjectMap: React.FC<ProjectMapProps> = ({
   );
 
   const fnItem = useMemo(() => ({
-    onMouseEnter: (item:ItemBranch) => setIdProjectActive(item.id),
-    onMouseLeave: () => setIdProjectActive(undefined),
+    onMouseEnter: (item: ProjectsTypes) => setIdProjectActive(item.id),
+    onMouseLeave: () => setIdProjectActive(0),
   }), []);
 
   return (
@@ -208,16 +219,17 @@ const ProjectMap: React.FC<ProjectMapProps> = ({
             title={textProject}
             idActive={idActive}
             listCategory={listCategory}
-            handleClick={(id) => setIdActive(id)}
+            handleClick={handleSelect}
             fnItem={fnItem}
             idProjectActive={idProjectActive}
+            projectDataList={projectDataList}
           />
           {image && (
             <Map
               idProjectActive={idProjectActive}
               image={image}
               listPoint={findCategoryActive(idActive, listCategory)?.listPoint}
-              fnItem={fnItem}
+              // fnItem={fnItem}
             />
           )}
         </div>
@@ -230,11 +242,11 @@ ProjectMap.defaultProps = {
   listCategory: undefined,
   image: undefined,
   textProject: undefined,
+  projectDataList: undefined,
 };
 
 Map.defaultProps = {
   listPoint: undefined,
-  idProjectActive: undefined,
   fnItem: undefined,
 };
 
@@ -244,7 +256,7 @@ InfoMap.defaultProps = {
   handleClick: undefined,
   listCategory: undefined,
   fnItem: undefined,
-  idProjectActive: undefined,
+  projectDataList: undefined,
 };
 
 export default ProjectMap;

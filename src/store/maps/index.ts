@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-import geMapService from 'services/maps';
+import getMapService from 'services/maps';
 import { DataMapsTypes, MapsParamsTypes } from 'services/maps/types';
 
 interface HomeState {
@@ -17,7 +17,7 @@ export const getMapsAction = createAsyncThunk<
   { rejectValue: ErrorResponse }
 >('mapsReducer/getProjectAction', async (params: MapsParamsTypes, { rejectWithValue }) => {
   try {
-    const response = await geMapService(params);
+    const response = await getMapService(params);
     return response;
   } catch (error) {
     return rejectWithValue(error as ErrorResponse);

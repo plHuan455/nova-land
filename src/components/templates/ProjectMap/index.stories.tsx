@@ -17,5 +17,7 @@ export const normal: Story = () => (
     image={{ height: 725, path: img, width: 471 }}
     listCategory={listProjectMap}
     textProject="DỰ ÁN"
+    idActive={0}
+    handleSelect={() => {}}
   />
 );
