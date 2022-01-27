@@ -1,6 +1,5 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 
-import fieldOfActivityReducer from './FieldOfActivity';
 import introReducer from './Introduction';
 import exampleReducer from './example';
 import homeReducer from './home';
@@ -21,7 +20,6 @@ export const store = configureStore({
     intro: introReducer,
     location: locationReducer,
     project: projectReducer,
-    fieldOfActivity: fieldOfActivityReducer,
   },
 });
 

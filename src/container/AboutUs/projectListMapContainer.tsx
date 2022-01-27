@@ -34,10 +34,13 @@ const ProjectListMapContainer: React.FC<ProjectListMapContainerProps> = ({
   const [listSelectProject, setSelectProjectList] = useState<ItemBranch[]>([]);
   const [isLoading, setLoading] = useState(false);
 
-  const projectOptionData = useMemo(() => projectData?.map((item) => ({
-    value: String(item.id),
-    label: item.name,
-  })), [projectData]);
+  const projectOptionData = useMemo(
+    () => projectData?.map((item) => ({
+      value: String(item.id),
+      label: item.name,
+    })),
+    [projectData],
+  );
 
   // const listPoint = () => {
   //   const find = listProjectSelect.find((x) => String(x.id) === project?.value);
@@ -70,7 +73,11 @@ const ProjectListMapContainer: React.FC<ProjectListMapContainerProps> = ({
 
   const filterMaps = async (cityId?: number, projectId?: number) => {
     try {
-      const params = cityId ? { city_id: cityId } : projectId ? { project_id: projectId } : {};
+      const params = cityId
+        ? { city_id: cityId }
+        : projectId
+          ? { project_id: projectId }
+          : {};
       setLoading(true);
       const prjList = await geMapService(params);
       const convertPrjList = prjList.map((item) => ({

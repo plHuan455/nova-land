@@ -16,6 +16,10 @@ export type RealEstatesTypes = {
   ]
 }
 
+export type KeywordParamsTypes = {
+  keyword?: string;
+}
+
 export type ProjectsTypes = {
   id: number,
   thumbnail: string,
@@ -37,4 +41,13 @@ export type ProjectParamTypes = {
   real_estates_slug?: string,
   highlight?: boolean;
   about_us?: boolean;
+}
+
+export type CategoryProjectsDataTypes = {
+  id: number;
+  name: string;
+  realEstates: {
+    name: string;
+    slug: string;
+  }
 }

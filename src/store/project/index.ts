@@ -1,16 +1,20 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-import { getProjectsService, getRealEstatesService } from 'services/project';
-import { ProjectParamTypes, ProjectsTypes, RealEstatesTypes } from 'services/project/types';
+import { getCategoryProjectsService, getProjectsService, getRealEstatesService } from 'services/project';
+import {
+  CategoryProjectsDataTypes, KeywordParamsTypes, ProjectParamTypes, ProjectsTypes, RealEstatesTypes,
+} from 'services/project/types';
 
 interface ProjectState {
   realEstatesList?: RealEstatesTypes[];
   projectData?: ProjectsTypes[];
+  categoryProjectsList?: CategoryProjectsDataTypes[];
 }
 
 const initialState: ProjectState = {
   realEstatesList: undefined,
   projectData: undefined,
+  categoryProjectsList: undefined,
 };
 
 export const getProjectsAction = createAsyncThunk<
@@ -39,6 +43,20 @@ export const getRealEstatesAction = createAsyncThunk<
   }
 });
 
+export const getCategoryProjectsAction = createAsyncThunk<
+  CategoryProjectsDataTypes[],
+  KeywordParamsTypes
+>(
+  'fieldOfActivityReducer/getCategoryProjectsAction',
+  async (params: KeywordParamsTypes | undefined, { rejectWithValue }) => {
+    try {
+      return await getCategoryProjectsService(params);
+    } catch (error) {
+      return rejectWithValue(error);
+    }
+  },
+);
+
 export const projectSlice = createSlice({
   name: 'projectReducer',
   initialState,
@@ -49,6 +67,9 @@ export const projectSlice = createSlice({
     });
     builder.addCase(getProjectsAction.fulfilled, ($state, action) => {
       $state.projectData = action.payload;
+    });
+    builder.addCase(getCategoryProjectsAction.fulfilled, ($state, action) => {
+      $state.categoryProjectsList = action.payload;
     });
   },
 });

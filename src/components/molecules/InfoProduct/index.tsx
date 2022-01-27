@@ -19,18 +19,14 @@ const InfoProduct: React.FC<InfoProductProps> = ({ title, imgSrc, listInfo }) =>
   <Animate type="goUp">
     <div className="m-infoproduct">
       <div className="m-infoproduct_wrapcontent">
-        <Text modifiers={['16x24', '400', 'jet']}>
-          {title}
-        </Text>
+        <Text modifiers={['16x24', '400', 'jet']} type="div" content={title} />
         <div className="m-infoproduct_info">
           {listInfo?.map((item, idx) => (
             <div className="m-infoproduct_detail" key={`info-${idx.toString()}`}>
               <div className="m-infoproduct_imgdetail">
                 <Image ratio="1x1" src={item.imgSrc} />
               </div>
-              <Text modifiers={['16x24', '400', 'jet']}>
-                {item.content}
-              </Text>
+              <Text modifiers={['16x24', '400', 'jet']} type="div" content={item.content} />
             </div>
           ))}
         </div>
