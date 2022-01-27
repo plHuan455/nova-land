@@ -1,36 +1,52 @@
-import React from 'react';
+import React, { useEffect, useMemo } from 'react';
 
-import project1 from 'assets/images/LogoProject/project1.png';
-import project2 from 'assets/images/LogoProject/project2.png';
-import project3 from 'assets/images/LogoProject/project3.png';
-import project4 from 'assets/images/LogoProject/project4.png';
-import project5 from 'assets/images/LogoProject/project5.png';
-import project6 from 'assets/images/LogoProject/project6.png';
-import project7 from 'assets/images/LogoProject/project7.png';
 import ProjectList from 'components/templates/ProjectList';
+import { useAppDispatch, useAppSelector } from 'store/hooks';
+import { getCategoryProjectsAction, getProjectsAction } from 'store/project';
+import { getImageURL } from 'utils/functions';
 
-const listLogo = [project1, project2, project3, project4, project5, project6, project7];
+const ProjectListContainer: React.FC = () => {
+  const { projectData, categoryProjectsList } = useAppSelector((state) => state.project);
+  const dispatch = useAppDispatch();
 
-const dataDumy = [
-  {
-    title: 'các dự án Khu trung tâm',
-    listLogo,
-  },
-  {
-    title: 'các dự án Khu Đông',
-    listLogo,
-  },
-  {
-    title: 'các dự án Khu Nam',
-    listLogo,
-  },
-];
-const ProjectListContainer: React.FC = () => (
-  <div className="p-fieldOfActivity_projectList">
-    <ProjectList
-      dataProjectList={dataDumy}
-    />
-  </div>
-);
+  const convertListLogo = (nameProjects: string) => {
+    const logoProjectList: Array<string> = [];
+    if (projectData) {
+      projectData.map(
+        (item) => item.category.name === nameProjects
+          && logoProjectList.push(getImageURL(item.projectLogo)),
+      );
+    }
+    return logoProjectList;
+  };
+
+  const convertDataProjectList = useMemo(() => {
+    if (categoryProjectsList) {
+      return categoryProjectsList.map((val) => ({
+        title: val.name,
+        listLogo: convertListLogo(val.name),
+      }));
+    }
+
+    return [];
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [categoryProjectsList, projectData, convertListLogo]);
+
+  useEffect(() => {
+    if (!categoryProjectsList) {
+      dispatch(getCategoryProjectsAction({}));
+    }
+
+    if (!projectData) {
+      dispatch(getProjectsAction({}));
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  return (
+    <div className="p-fieldOfActivity_projectList">
+      <ProjectList dataProjectList={convertDataProjectList} />
+    </div>
+  );
+};
 
 export default ProjectListContainer;

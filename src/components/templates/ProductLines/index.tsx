@@ -12,7 +12,7 @@ interface ProductLinesContentType {
   desc: Array<InfoType>;
 }
 
-interface ProductLinesType{
+export interface ProductLinesType{
   label: string;
   imgActive?: string;
   imgInActive?: string;
@@ -89,7 +89,7 @@ const ProductLines: React.FC<ProductLinesProps> = ({ title, dataProductLines }) 
           dataProductLines.map((item, index) => (
             <TabBgPanel key={`tab-panel-${index.toString()}`} active={index === indexActive}>
               <InfoProduct
-                title="Test Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM với dòng sản phẩm:"
+                title={item.content.title || ''}
                 imgSrc={item.content.imgSrc}
                 listInfo={item.content.desc}
               />

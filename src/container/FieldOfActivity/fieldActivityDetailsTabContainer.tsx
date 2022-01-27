@@ -1,35 +1,52 @@
 import React from 'react';
 
-import bannerImg from 'assets/images/field-of-activity-banner.png';
 import FieldActivityDetailsTab from 'components/templates/FieldActivityDetailsTab';
 import Section from 'components/templates/Section';
+import { getImageURL } from 'utils/functions';
 
-const dummyData = [
-  {
-    label: 'Bất động sản',
-    content: {
-      imgSrc: bannerImg,
-      title: 'THÔNG TIN CHI TIẾT',
-      desc: `Trải qua hành trình 29 năm hình thành và phát triển, Novaland hiện sở hữu danh mục hơn 50 dự án Bất động sản; 
-      không chỉ dừng lại ở các dự án Bất động sản Đô thị, Tập đoàn còn đầu tư mạnh mẽ loạt dự án Bất động sản Đô thị Du lịch 
-      quy mô lớn, với những công trình và sản phẩm dẫn đầu xu hướng, tác động tích cực đến quá trình phát triển đô thị và 
-      phát triển du lịch tại các tỉnh thành phía Nam.`,
-    },
-  },
-  {
-    label: 'Hạ tầng giao thông',
-    content: {
-      imgSrc: bannerImg,
-      title: 'HẠ TẦNG GIAO THÔNG',
-      desc: 'Nâng cấp, phát triển hạ tầng giao thông tại nơi có dự án nhằm gia tăng tính kết nối vào hạ tầng giao thông trọng điểm quốc gia.',
-    },
-  },
-];
+export interface FieldActivityDetailsTabTypes {
+  tab1: {
+    image: string;
+    title: string;
+    tabName: string;
+    descriptoion: string;
+    titleProject: string;
+  };
+  tab2: {
+    image: string;
+    title: string;
+    tabName: string;
+    descriptoion: string;
+  }
+}
 
-const FieldActivityDetailsTabContainer: React.FC = () => (
+interface FieldActivityDetailsTabBlock {
+  blocks: FieldActivityDetailsTabTypes;
+}
+
+const FieldActivityDetailsTabContainer: React.FC<FieldActivityDetailsTabBlock> = ({ blocks }) => (
   <div className="p-fieldOfActivity_heroBanner">
     <Section>
-      <FieldActivityDetailsTab dataFieldActivity={dummyData} />
+      <FieldActivityDetailsTab
+        dataFieldActivity={[
+          {
+            label: blocks.tab1?.tabName,
+            content: {
+              imgSrc: getImageURL(blocks.tab1?.image),
+              title: blocks.tab1?.title,
+              desc: blocks.tab1?.descriptoion,
+            },
+          },
+          {
+            label: blocks.tab2?.tabName,
+            content: {
+              imgSrc: getImageURL(blocks.tab2?.image),
+              title: blocks.tab2?.title,
+              desc: blocks.tab2?.descriptoion,
+            },
+          },
+        ]}
+      />
     </Section>
   </div>
 );

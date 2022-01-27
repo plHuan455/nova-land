@@ -459,6 +459,8 @@ exports[`Storyshots Components/atoms/Link Use External 1`] = `
 </a>
 `;
 
+exports[`Storyshots Components/atoms/Loading Normal 1`] = `null`;
+
 exports[`Storyshots Components/atoms/Tag Normal 1`] = `
 <div
   className="a-tag"
@@ -3601,9 +3603,11 @@ exports[`Storyshots Components/organisms/TabBg Normal 1`] = `
                               />
                             </div>
                           </div>
-                          <span>
+                          <p
+                            className="a-text a-text-18x28 a-text-600 a-text-jet a-text-fontNoto a-text-uppercase"
+                          >
                             BĐS Trung Tâm
-                          </span>
+                          </p>
                         </span>
                       </div>
                     </div>
@@ -3657,9 +3661,11 @@ exports[`Storyshots Components/organisms/TabBg Normal 1`] = `
                               />
                             </div>
                           </div>
-                          <span>
+                          <p
+                            className="a-text a-text-18x28 a-text-600 a-text-jet a-text-fontNoto a-text-uppercase"
+                          >
                             ĐÔ THỊ VỆ TINH
-                          </span>
+                          </p>
                         </span>
                       </div>
                     </div>
@@ -3713,9 +3719,11 @@ exports[`Storyshots Components/organisms/TabBg Normal 1`] = `
                               />
                             </div>
                           </div>
-                          <span>
+                          <p
+                            className="a-text a-text-18x28 a-text-600 a-text-jet a-text-fontNoto a-text-uppercase"
+                          >
                             ĐÔ THỊ NGHỈ DƯỠNG
-                          </span>
+                          </p>
                         </span>
                       </div>
                     </div>
@@ -3769,9 +3777,11 @@ exports[`Storyshots Components/organisms/TabBg Normal 1`] = `
                               />
                             </div>
                           </div>
-                          <span>
+                          <p
+                            className="a-text a-text-18x28 a-text-600 a-text-jet a-text-fontNoto a-text-uppercase"
+                          >
                             BĐS CÔNG NGHIỆP
-                          </span>
+                          </p>
                         </span>
                       </div>
                     </div>
@@ -3825,9 +3835,11 @@ exports[`Storyshots Components/organisms/TabBg Normal 1`] = `
                               />
                             </div>
                           </div>
-                          <span>
+                          <p
+                            className="a-text a-text-18x28 a-text-600 a-text-jet a-text-fontNoto a-text-uppercase"
+                          >
                             BĐS CÔNG NGHIỆP A
-                          </span>
+                          </p>
                         </span>
                       </div>
                     </div>
@@ -3881,9 +3893,11 @@ exports[`Storyshots Components/organisms/TabBg Normal 1`] = `
                               />
                             </div>
                           </div>
-                          <span>
+                          <p
+                            className="a-text a-text-18x28 a-text-600 a-text-jet a-text-fontNoto a-text-uppercase"
+                          >
                             BĐS CÔNG NGHIỆP B
-                          </span>
+                          </p>
                         </span>
                       </div>
                     </div>
@@ -6227,9 +6241,7 @@ exports[`Storyshots Components/templates/Error Normal 1`] = `
   className="t-error"
 >
   <div
-    className="
-    t-section
-    "
+    className="t-section"
   >
     <div
       className="container o-container o-container-fullscreen"
@@ -7010,7 +7022,7 @@ exports[`Storyshots Components/templates/FieldActivityDetailsTab Normal 1`] = `
               />
             </div>
             <div
-              className="u-mt-16 u-mt-sm-32"
+              className="u-mt-16 "
             >
               <div
                 className="a-image a-image-1194x191"
@@ -7056,7 +7068,7 @@ exports[`Storyshots Components/templates/FieldActivityDetailsTab Normal 1`] = `
               />
             </div>
             <div
-              className="u-mt-16 u-mt-sm-32"
+              className="u-mt-16 "
             >
               <div
                 className="a-image a-image-1194x191"
@@ -7102,7 +7114,7 @@ exports[`Storyshots Components/templates/FieldActivityDetailsTab Normal 1`] = `
               />
             </div>
             <div
-              className="u-mt-16 u-mt-sm-32"
+              className="u-mt-16 "
             >
               <div
                 className="a-image a-image-1194x191"
@@ -17914,7 +17926,7 @@ exports[`Storyshots Components/templates/NewsDetail Normal 1`] = `
         className="o-container_col col-lg-8 col-md-12 col-sm-12"
       >
         <h1
-          className="a-heading a-heading-52x65 a-heading-600 a-heading-jet"
+          className="a-heading a-heading-52x65 a-heading-600 a-heading-jet a-heading-fontNoto"
         >
           Bến du thuyền - yếu tố vàng gia tăng giá trị bất động sản
         </h1>
@@ -17953,11 +17965,31 @@ exports[`Storyshots Components/templates/NewsDetail Normal 1`] = `
         <div
           className="t-newsdetail_content"
         >
-          <p
+          <div
+            className="t-newsdetail_shortDesc"
+          >
+            <p
+              className="a-text a-text-18x28 a-text-600 a-text-jet"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "Kể từ thời điểm Pietro Riva sáng lập ra thương hiệu du thuyền mang tên mình vào năm 1842 tại Sarnico – một thị trấn nhỏ xinh ở miền bắc nước Ý – thương hiệu du thuyền này đã trở thành biểu tượng tiêu biểu cho phong cách sống thượng lưu.",
+                }
+              }
+            />
+          </div>
+          <div
             className="a-text a-text-16x24 a-text-davysGrey"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat egestas eu egestas sed viverra urna. Purus accumsan feugiat feugiat nisl pulvinar faucibus eu. Praesent dictum ornare nisl sit donec egestas amet, odio in. Nullam tincidunt at condimentum praesent quis maecenas nulla consequat. Sit convallis molestie feugiat nulla convallis metus interdum. Netus mattis mauris eu magna et enim sed. Arcu morbi congue etiam eget amet faucibus. Dictum ullamcorper aenean tristique at imperdiet proin. Nulla tristique eu nisi viverra. Tempus, ultrices porttitor orci nibh gravida blandit. Amet, massa vulputate ultricies morbi arcu in morbi turpis eleifend. Est blandit nibh posuere elementum. Vel, adipiscing duis mauris pretium, magnis. Nec, nisl, pulvinar viverra morbi",
+                "__html": "
+      Trong gần hai thế kỷ đó, RIVA đã trở thành “nàng thơ” của Hollywood khi hiện diện trong gần 40 bộ phim
+      nổi tiếng thế giới. Những chuyến hải trình đầy phong cách của các ngôi sao trên du thuyền RIVA đã diễn
+      ra từ Venice cho đến Forte dei Marmi, từ Lake Como cho đến Emerald Coast, từ Lake.
+      </br> Trong thế giới du thuyền, ít có thương hiệu nào được giới mộ điệu quan tâm nhiều như RIVA.
+      Với bề dày lịch sử xuyên suốt gần 2 thế kỷ, cùng tay nghề nghề thủ công đỉnh cao và các loại vật liệu tinh tuyển,
+      thương hiệu du thuyền nổi tiếng nước Ý đã tạo ra một biểu tượng về phong cách sống duy mỹ của
+      <br />
+      <img src=img-product.png alt=\\"news_img\\" />",
               }
             }
           />
@@ -20818,7 +20850,7 @@ exports[`Storyshots Components/templates/ProductLines Normal 1`] = `
         className="t-productLines_title"
       >
         <h2
-          className="a-heading a-heading-30x42 a-heading-600 a-heading-jet a-heading-uppercase a-heading-center"
+          className="a-heading a-heading-30x42 a-heading-600 a-heading-jet a-heading-uppercase a-heading-center a-heading-fontNoto"
         >
           các dòng sản phẩm
         </h2>
@@ -20913,9 +20945,11 @@ exports[`Storyshots Components/templates/ProductLines Normal 1`] = `
                                   />
                                 </div>
                               </div>
-                              <span>
+                              <p
+                                className="a-text a-text-18x28 a-text-600 a-text-jet a-text-fontNoto a-text-uppercase"
+                              >
                                 BĐS Trung Tâm BĐS Trung Tâm BĐS Trung Tâm
-                              </span>
+                              </p>
                             </span>
                           </div>
                         </div>
@@ -20969,9 +21003,11 @@ exports[`Storyshots Components/templates/ProductLines Normal 1`] = `
                                   />
                                 </div>
                               </div>
-                              <span>
+                              <p
+                                className="a-text a-text-18x28 a-text-600 a-text-jet a-text-fontNoto a-text-uppercase"
+                              >
                                 ĐÔ THỊ VỆ TINH
-                              </span>
+                              </p>
                             </span>
                           </div>
                         </div>
@@ -21025,9 +21061,11 @@ exports[`Storyshots Components/templates/ProductLines Normal 1`] = `
                                   />
                                 </div>
                               </div>
-                              <span>
+                              <p
+                                className="a-text a-text-18x28 a-text-600 a-text-jet a-text-fontNoto a-text-uppercase"
+                              >
                                 ĐÔ THỊ NGHỈ DƯỠNG
-                              </span>
+                              </p>
                             </span>
                           </div>
                         </div>
@@ -21081,9 +21119,11 @@ exports[`Storyshots Components/templates/ProductLines Normal 1`] = `
                                   />
                                 </div>
                               </div>
-                              <span>
+                              <p
+                                className="a-text a-text-18x28 a-text-600 a-text-jet a-text-fontNoto a-text-uppercase"
+                              >
                                 BĐS CÔNG NGHIỆP
-                              </span>
+                              </p>
                             </span>
                           </div>
                         </div>
@@ -21137,9 +21177,11 @@ exports[`Storyshots Components/templates/ProductLines Normal 1`] = `
                                   />
                                 </div>
                               </div>
-                              <span>
+                              <p
+                                className="a-text a-text-18x28 a-text-600 a-text-jet a-text-fontNoto a-text-uppercase"
+                              >
                                 BĐS CÔNG NGHIỆP A BĐS CÔNG NGHIỆP A BĐS CÔNG NGHIỆP A
-                              </span>
+                              </p>
                             </span>
                           </div>
                         </div>
@@ -21193,9 +21235,11 @@ exports[`Storyshots Components/templates/ProductLines Normal 1`] = `
                                   />
                                 </div>
                               </div>
-                              <span>
+                              <p
+                                className="a-text a-text-18x28 a-text-600 a-text-jet a-text-fontNoto a-text-uppercase"
+                              >
                                 BĐS CÔNG NGHIỆP B BĐS CÔNG NGHIỆP B BĐS CÔNG NGHIỆP B
-                              </span>
+                              </p>
                             </span>
                           </div>
                         </div>
@@ -24914,9 +24958,7 @@ exports[`Storyshots Components/templates/SearchResult Normal 1`] = `
 
 exports[`Storyshots Components/templates/Section Normal 1`] = `
 <div
-  className="
-    t-section
-    "
+  className="t-section"
 />
 `;
 
@@ -25159,9 +25201,7 @@ exports[`Storyshots Components/templates/SignupJobPostings Normal 1`] = `
   className="t-signupJobPostings"
 >
   <div
-    className="
-    t-section
-    "
+    className="t-section"
   >
     <div
       className="container"
@@ -25392,7 +25432,7 @@ exports[`Storyshots Components/templates/TransportationInfrastructure Normal 1`]
         />
       </div>
       <div
-        className="u-mt-16 u-mt-sm-32"
+        className="u-mt-16 "
       >
         <div
           className="a-image a-image-1194x191"

@@ -1,14 +1,33 @@
 import React from 'react';
 
-import imgHeroBanner from 'assets/images/Banner/banner_home.png';
 import HeroBanner from 'components/templates/HeroBanner';
+import { getImageURL } from 'utils/functions';
 
-const HeroBannerContainer: React.FC = () => (
-  <div className="p-fieldOfActivity_heroBanner">
-    <HeroBanner
-      list={new Array(1).fill({ src: imgHeroBanner })}
-    />
-  </div>
-);
+interface BannerProps {
+  banners: BannersDataTypes[];
+}
+
+const HeroBannerContainer: React.FC<BannerProps> = ({
+  banners,
+}) => {
+  const convertBanner = () => {
+    if (banners.length > 0) {
+      return banners.map((item) => ({
+        src: getImageURL(item.data.imageDesktop),
+        srcTablet: getImageURL(item.data.imageMobile),
+        srcMobile: getImageURL(item.data.imageTablet),
+      }));
+    }
+    return [];
+  };
+
+  return (
+    <div className="p-fieldOfActivity_heroBanner">
+      <HeroBanner
+        list={convertBanner()}
+      />
+    </div>
+  );
+};
 
 export default HeroBannerContainer;

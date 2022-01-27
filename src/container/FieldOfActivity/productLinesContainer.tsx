@@ -1,135 +1,54 @@
-import React from 'react';
+import React, { useEffect, useMemo } from 'react';
 
-import icActiveTab from 'assets/images/ic_activeTab.png';
-import icInActiveTab from 'assets/images/ic_inActiveTab.png';
-import imgProduct from 'assets/images/img-product.png';
-import imgInfo from 'assets/images/img_info-product-1.png';
 import ProductLines from 'components/templates/ProductLines';
+import { useAppDispatch, useAppSelector } from 'store/hooks';
+import { getRealEstatesAction } from 'store/project';
+import { getImageURL } from 'utils/functions';
 
-const dummyData = [
-  {
-    label: 'BĐS Trung Tâm',
-    imgActive: icActiveTab,
-    imgInActive: icInActiveTab,
-    content: {
-      title: 'Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM với dòng sản phẩm:',
-      imgSrc: imgProduct,
-      desc: [
-        {
-          imgSrc: imgInfo,
-          content: 'Nhà ở cao tầng & thương mại',
-        },
-        {
-          imgSrc: imgInfo,
-          content: 'Khu đô thị thấp tầng',
-        },
-      ],
-    },
-  },
-  {
-    label: 'ĐÔ THỊ VỆ TINH',
-    imgActive: icActiveTab,
-    imgInActive: icInActiveTab,
-    content: {
-      title: 'Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM với dòng sản phẩm:',
-      imgSrc: imgProduct,
-      desc: [
-        {
-          imgSrc: imgInfo,
-          content: 'Nhà ở cao tầng & thương mại',
-        },
-        {
-          imgSrc: imgInfo,
-          content: 'Khu đô thị thấp tầng',
-        },
-      ],
-    },
-  },
-  {
-    label: 'ĐÔ THỊ NGHỈ DƯỠNG',
-    imgActive: icActiveTab,
-    imgInActive: icInActiveTab,
-    content: {
-      title: 'Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM với dòng sản phẩm:',
-      imgSrc: imgProduct,
-      desc: [
-        {
-          imgSrc: imgInfo,
-          content: 'Nhà ở cao tầng & thương mại',
-        },
-        {
-          imgSrc: imgInfo,
-          content: 'Khu đô thị thấp tầng',
-        },
-      ],
-    },
-  },
-  {
-    label: 'BĐS CÔNG NGHIỆP',
-    imgActive: icActiveTab,
-    imgInActive: icInActiveTab,
-    content: {
-      title: 'Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM với dòng sản phẩm:',
-      imgSrc: imgProduct,
-      desc: [
-        {
-          imgSrc: imgInfo,
-          content: 'Nhà ở cao tầng & thương mại',
-        },
-        {
-          imgSrc: imgInfo,
-          content: 'Khu đô thị thấp tầng',
-        },
-      ],
-    },
-  },
-  {
-    label: 'BĐS CÔNG NGHIỆP A',
-    imgActive: icActiveTab,
-    imgInActive: icInActiveTab,
-    content: {
-      title: 'Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM với dòng sản phẩm:',
-      imgSrc: imgProduct,
-      desc: [
-        {
-          imgSrc: imgInfo,
-          content: 'Nhà ở cao tầng & thương mại',
-        },
-        {
-          imgSrc: imgInfo,
-          content: 'Khu đô thị thấp tầng',
-        },
-      ],
-    },
-  },
-  {
-    label: 'BĐS CÔNG NGHIỆP B',
-    imgActive: icActiveTab,
-    imgInActive: icInActiveTab,
-    content: {
-      title: 'Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM với dòng sản phẩm:',
-      imgSrc: imgProduct,
-      desc: [
-        {
-          imgSrc: imgInfo,
-          content: 'Nhà ở cao tầng & thương mại',
-        },
-        {
-          imgSrc: imgInfo,
-          content: 'Khu đô thị thấp tầng',
-        },
-      ],
-    },
-  },
-];
+interface ProductLinesTypes {
+  title: string;
+}
 
-const ProductLinesContainer: React.FC = () => (
-  <div className="p-fieldOfActivity_productLines">
-    <ProductLines
-      title="các dòng sản phẩm"
-      dataProductLines={dummyData}
-    />
-  </div>
-);
+const ProductLinesContainer: React.FC<ProductLinesTypes> = ({ title }) => {
+  const dispatch = useAppDispatch();
+  const {
+    realEstatesList,
+  } = useAppSelector((state) => state.project);
+
+  const convertDataProductLines = useMemo(() => {
+    if (realEstatesList) {
+      return realEstatesList.map((val) => ({
+        label: val.name,
+        imgActive: getImageURL(val.iconHover),
+        imgInActive: getImageURL(val.icon),
+        content: {
+          title: val.smallDescription,
+          imgSrc: getImageURL(val.thumbnail),
+          desc: val.items.map((item) => ({
+            imgSrc: getImageURL(item.icon),
+            content: item.description,
+          })) || [],
+        },
+      }));
+    }
+    return [];
+  }, [realEstatesList]);
+
+  useEffect(() => {
+    if (!realEstatesList) {
+      dispatch(getRealEstatesAction());
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  return (
+    <div className="p-fieldOfActivity_productLines">
+      <ProductLines
+        title={title}
+        dataProductLines={convertDataProductLines}
+      />
+    </div>
+  );
+};
 
 export default ProductLinesContainer;
