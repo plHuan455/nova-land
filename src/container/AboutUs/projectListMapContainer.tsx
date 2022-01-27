@@ -1,16 +1,17 @@
+/* eslint-disable no-nested-ternary */
 import React, { useEffect, useMemo, useState } from 'react';
 import { useQuery } from 'react-query';
 import { useDispatch } from 'react-redux';
 
 import img from 'assets/images/bg_project_list_map.png';
 import { OptionType } from 'components/molecules/Pulldown';
-import ProjectListMap, { ProjectListMapGround, ProjectListMapInfo } from 'components/templates/ProjectListMap';
-import { getMapsService, getProjectsService } from 'services/Introduction';
+import ProjectListMap, { ItemBranch, ProjectListMapGround, ProjectListMapInfo } from 'components/templates/ProjectListMap';
+import { getProjectsService } from 'services/Introduction';
+import geMapService from 'services/maps';
 import { useAppSelector } from 'store/hooks';
 import { getCitiesAction } from 'store/location';
-import { DEFAULT_QUERY_OPTION } from 'utils/constants';
-import geMapService from 'services/maps';
 import { getProjectsAction } from 'store/project';
+import { DEFAULT_QUERY_OPTION } from 'utils/constants';
 
 interface ProjectListMapContainerProps {
   title?: string;
@@ -100,7 +101,8 @@ const ProjectListMapContainer: React.FC<ProjectListMapContainerProps> = ({
     if (!projectData) {
       dispatch(getProjectsAction({}));
     }
-  }, [])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="p-aboutUs_projectListMap pt-80 pb-100">
@@ -126,6 +128,10 @@ const ProjectListMapContainer: React.FC<ProjectListMapContainerProps> = ({
       </ProjectListMap>
     </div>
   );
+};
+
+ProjectListMapContainer.defaultProps = {
+  title: '',
 };
 
 export default ProjectListMapContainer;

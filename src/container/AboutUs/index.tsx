@@ -1,6 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
-import { useQuery } from 'react-query';
-import { useDispatch } from 'react-redux';
+import React, { useMemo } from 'react';
 
 import AwardListContainer from './awardListContainer';
 import DevelopmentHistoryContainer from './developmentHistoryContainer';
@@ -15,11 +13,6 @@ import ProjectListMapContainer from './projectListMapContainer';
 import TransportationContainer from './transportationContainer';
 import VisionMissionValueContainer from './visionMissionValueContainer';
 
-import Loading from 'components/atoms/Loading';
-import { getLeadershipService, getPrizesService, getProjectsService } from 'services/Introduction';
-import { getLeadershipCategoryAction, getRealEstatesAction } from 'store/Introduction';
-import { useAppSelector } from 'store/hooks';
-import { DEFAULT_QUERY_OPTION } from 'utils/constants';
 import { getBlockData, getImageURL } from 'utils/functions';
 
 type Icon = {
@@ -111,9 +104,6 @@ const AboutUSContainer: React.FC<BasePageData<AboutUsBlock>> = ({
   banners,
   blocks,
 }) => {
-  const dispatch = useDispatch();
-  const { realEstatesList, leadershipCategory } = useAppSelector((state) => state.intro);
-
   const introductionBlock = useMemo(() => getBlockData('introduction', blocks) as Introduction, [blocks]);
   const numbersBlock = useMemo(() => getBlockData('numbers', blocks) as Numbers, [blocks]);
   const fieldActivityBlock = useMemo(() => getBlockData('field_activity', blocks) as FieldActivity,
@@ -132,12 +122,6 @@ const AboutUSContainer: React.FC<BasePageData<AboutUsBlock>> = ({
     [blocks]);
   const prizeBlock = useMemo(() => getBlockData('prize', blocks) as Prize,
     [blocks]);
-
-  const [indexLeadershipCategoryActive, setIndexLeadershipCategoryActive] = useState(0);
-
-  const [indexPrize, setIndexPrize] = useState(0);
-
-  console.log(indexPrize);
 
   const listBanner = useMemo(() => banners.map((item) => ({
     src: getImageURL(item.data.imageDesktop),
@@ -210,7 +194,8 @@ const AboutUSContainer: React.FC<BasePageData<AboutUsBlock>> = ({
   const developHistoryList = useMemo(() => developmentHistoryBlock.items.map((item) => ({
     year: item.textTimes,
     description: item.description,
-    image: getImageURL(item.imageBackground),
+    image: getImageURL(item.imageTime),
+    imgBackground: getImageURL(item.imageBackground),
   })), [developmentHistoryBlock]);
 
   const ecoSystemsData = useMemo(() => novaEcosystemBlock.items.map((item) => ({
@@ -218,80 +203,6 @@ const AboutUSContainer: React.FC<BasePageData<AboutUsBlock>> = ({
     brandImage: getImageURL(item.imageHover),
     href: item.link.url,
   })), [novaEcosystemBlock]);
-
-  const investmentSectorData = useMemo(() => realEstatesList?.map((item) => (
-    {
-      title: item.name,
-      desc: item.description,
-      thumbnail: getImageURL(item.thumbnail),
-      href: item.slug,
-      imgLogo: getImageURL(item.icon),
-      imgLogoHover: getImageURL(item.iconHover),
-      isSmall: true,
-      btnText: 'Tìm Hiểu Thêm',
-    }
-  )), [realEstatesList]);
-
-  const { data: projectDataHighlight } = useQuery(
-    'getProjectsDataFilterByHighlight', () => getProjectsService({
-      highlight: true,
-    }), {
-      ...DEFAULT_QUERY_OPTION,
-    },
-  );
-
-  const outStandingProjectData = useMemo(() => projectDataHighlight?.map((item) => ({
-    imgSrc: getImageURL(item.thumbnail),
-    title: item.name,
-    href: item.link,
-  })), [projectDataHighlight]);
-
-  const { data: leadership, isLoading } = useQuery(
-    ['getLeadership', leadershipCategory, indexLeadershipCategoryActive], () => getLeadershipService({
-      leadership_category_slug: leadershipCategory[indexLeadershipCategoryActive].slug,
-    }),
-  );
-
-  const leadershipListData = useMemo(() => leadershipCategory.map((item) => (
-    {
-      titleTab: item.name,
-      dataTab: leadership?.map((e) => ({
-        gender: e.gender,
-        name: e.name,
-        position: e.position,
-        imgSrc: getImageURL(e.thumbnail),
-        achievement: e.achievement,
-        slogan: e.quotation,
-      })) || [],
-    }
-  )), [leadership, leadershipCategory]);
-
-  const { data: prizesList, isLoading: isLoadingPrizes } = useQuery(
-    'getPrizesData', () => getPrizesService(), {
-      ...DEFAULT_QUERY_OPTION,
-    },
-  );
-
-  const tabsData = useMemo(() => prizesList?.map((item) => (
-    {
-      year: '2017',
-      awardList: [{
-        src: getImageURL(item.thumbnail),
-        alt: item.name,
-        desc: item.name,
-        awardYear: String(item.yearId.year),
-      },
-      ],
-    }
-  )), [prizesList]);
-
-  useEffect(() => {
-    dispatch(getRealEstatesAction());
-    dispatch(getLeadershipCategoryAction());
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  if (isLoading || isLoadingPrizes) return <Loading isShow variant="fullScreen" />;
 
   return (
     <>
@@ -323,7 +234,6 @@ const AboutUSContainer: React.FC<BasePageData<AboutUsBlock>> = ({
       />
       <OutstandingProjectContainer
         title={projectsBlock.titleSection}
-        outstandingProjectList={outStandingProjectData || []}
       />
       <ProjectListMapContainer title={projectsBlock.titleSection} />
       <EcoSystemContainer
@@ -333,15 +243,11 @@ const AboutUSContainer: React.FC<BasePageData<AboutUsBlock>> = ({
       />
       <LeadershipContainer
         title={leaderBlock.titleSection}
-        tabDataLeadership={leadershipListData || []}
         hasButtonViewAll
-        handleChangeTab={(index) => setIndexLeadershipCategoryActive(index)}
       />
       <AwardListContainer
         title={prizeBlock.titleSection}
         desc={prizeBlock.description}
-        tabsData={tabsData || []}
-        handleActiveTab={(index) => setIndexPrize(index)}
       />
     </>
   );
