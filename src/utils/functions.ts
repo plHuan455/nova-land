@@ -163,3 +163,11 @@ export const formatDateDDMMYYYY = (date?: string) => {
   }
   return `${day}/${month}/${dateFormat.getFullYear()}`;
 };
+
+export const getHourFromPastToCurrent = (date?: string) => {
+  if (!date) return '';
+  const dateFormat = new Date(date);
+  const toDay = new Date();
+  const hour = toDay.getTime() - dateFormat.getTime();
+  return new Date(hour).getHours();
+};
