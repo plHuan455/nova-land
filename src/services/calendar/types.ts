@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 export type CalendarData = {
   id: number;
   displayOrder: number;
