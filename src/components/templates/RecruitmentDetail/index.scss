@@ -7,6 +7,22 @@
     }
   }
 
+  &_info,
+  &_location {
+    display: none;
+    @include mobile-down {
+      display: flex;
+    }
+  }
+
+  &_dot {
+    background-color: $slate-gray;
+    border-radius: 50%;
+    height: rem(4);
+    margin: 0 rem(15);
+    width: rem(4);
+  }
+
   &_right {
     margin-top: rem(-200);
 
