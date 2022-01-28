@@ -43,7 +43,7 @@ const InvestmentSectorContainer: React.FC<InvestmentSectorBlock> = ({
   return (
     <Animate type="goUp">
       <div className="p-home_investSector">
-        <Section>
+        <Section modifiers="noPb">
           <InvestmentSector
             title={blocks.titleSection}
             investmentSectorList={investmentSectorData || []}
