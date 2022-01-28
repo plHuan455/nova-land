@@ -39,6 +39,17 @@ const ProjectListMapContainer: React.FC<ProjectListMapContainerProps> = ({
     }),
     {
       ...DEFAULT_QUERY_OPTION,
+      enabled: !!province,
+    },
+  );
+
+  const { data: projectData } = useQuery(
+    'getProjectsData',
+    () => getProjectsService({
+      about_us: true,
+    }),
+    {
+      ...DEFAULT_QUERY_OPTION,
     },
   );
 
@@ -66,11 +77,11 @@ const ProjectListMapContainer: React.FC<ProjectListMapContainerProps> = ({
   }, [listCities]);
 
   const listProject = useMemo(
-    () => projectDataAboutUs?.map((item) => ({
+    () => projectData?.map((item) => ({
       title: item.name,
       href: item.link,
     })),
-    [projectDataAboutUs],
+    [projectData],
   );
 
   const filterMaps = async (cityId?: number, projectId?: number) => {
