@@ -7,7 +7,7 @@ import Section from 'components/templates/Section';
 
 const EventDetailContainer: React.FC = () => (
   <>
-    <Section>
+    <Section modifiers="noPt">
       <BreadcrumbContainer />
       <EventDetailTemplateContainer />
     </Section>
