@@ -34,7 +34,6 @@ const ProjectListMapContainer: React.FC<ProjectListMapContainerProps> = ({
   const { data: projectDataAboutUs } = useQuery(
     ['getProjectsDataAboutUs', province],
     () => getProjectsService({
-      about_us: true,
       city_id: province && province.value !== '-1' ? Number(province.value) : undefined,
     }),
     {
