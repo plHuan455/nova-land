@@ -1,0 +1,24 @@
+.t-eventList {
+  &_list {
+    @include adjust-flex(flex-start, center);
+    flex-wrap: wrap;
+    margin: rem(-15);
+
+    &-item {
+      flex: 0 0 calc(100% / 3);
+      padding: rem(15);
+
+      @include mobile-down {
+        flex: 0 0 100%;
+      }
+    }
+  }
+
+  &_paginate {
+    margin-top: rem(40);
+
+    @include tablet-down {
+      margin-top: rem(16);
+    }
+  }
+}

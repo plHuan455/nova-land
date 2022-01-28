@@ -1,0 +1,55 @@
+.m-eventCard {
+  $root: &;
+  border: 1px solid $black02;
+
+  &_thumbnail {
+    overflow: hidden;
+
+    .a-image {
+      transition: all $transition ease-in-out;
+    }
+  }
+
+  &_content {
+    padding: rem(24);
+    @include mobile-down {
+      padding: rem(16);
+    }
+
+    &-title {
+      @include text-overflow(3);
+    }
+
+    &-desc {
+      @include text-overflow;
+      margin-top: rem(4);
+    }
+
+    &_link {
+      margin-top: rem(24);
+
+      @include mobile-down {
+        margin-top: rem(16);
+      }
+    }
+
+    &-btn {
+      @include adjust-flex(flex-start, center);
+      .a-icon {
+        margin-left: rem(10);
+        transition: all $transition ease-in-out;
+      }
+      &:hover {
+        .a-icon {
+          transform: translateX(5px);
+        }
+      }
+    }
+  }
+
+  &:hover {
+    #{$root}_thumbnail .a-image {
+      transform: scale(1.25);
+    }
+  }
+}

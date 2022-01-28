@@ -30,6 +30,7 @@ export const iconList = {
   filter: 'filter',
   closeWhite: 'closeWhite',
   arrowRightGolden: 'arrowRightGolden',
+  arrowNextCamel: 'arrowNextCamel',
   locationWhite: 'locationWhite',
   email: 'email',
   phoneContact: 'phoneContact',
