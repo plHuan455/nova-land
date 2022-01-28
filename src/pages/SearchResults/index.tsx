@@ -1,11 +1,14 @@
 import React from 'react';
 
+import MainLayout from 'components/templates/MainLayout';
 import SearchResultsContainer from 'container/SearchResults';
 
 const SearchResults: React.FC = () => (
-  <div className="p-searchResults">
-    <SearchResultsContainer />
-  </div>
+  <MainLayout>
+    <div className="p-searchResults">
+      <SearchResultsContainer />
+    </div>
+  </MainLayout>
 );
 
 export default SearchResults;

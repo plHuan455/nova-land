@@ -5,12 +5,10 @@ import React, { lazy, Suspense } from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { Provider } from 'react-redux';
 import {
-  BrowserRouter, Outlet, Route, Routes, useLocation,
+  BrowserRouter, Outlet, Route, Routes,
 } from 'react-router-dom';
 
 import Loading from 'components/atoms/Loading';
-import MainLayoutContainer from 'container/MainLayout';
-import MainLayoutRecruitmentContainer from 'container/MainLayoutRecruitment';
 import useInitializeRender from 'hooks/useInitializeRender';
 import Contact from 'pages/Contact';
 import EventDetail from 'pages/EventDetail';
@@ -75,37 +73,13 @@ const routes = [
 
 const App: React.FC = () => {
   useInitializeRender();
-
-  if (useLocation().pathname.includes('/danh-sach-tuyen-dung')) {
-    return (
-      <Suspense fallback={<Loading isShow variant="fullScreen" />}>
-        <Routes>
-          <Route
-            path="/"
-            element={(
-              <MainLayoutRecruitmentContainer>
-                <Outlet />
-              </MainLayoutRecruitmentContainer>
-            )}
-          >
-            <Route
-              path="danh-sach-tuyen-dung"
-              element={<RecruitmentList />}
-            />
-          </Route>
-        </Routes>
-      </Suspense>
-    );
-  }
   return (
     <Suspense fallback={<Loading isShow variant="fullScreen" />}>
       <Routes>
         <Route
           path="/"
           element={(
-            <MainLayoutContainer>
-              <Outlet />
-            </MainLayoutContainer>
+            <Outlet />
           )}
         >
           <Route path="/" element={<PageNav />}>
