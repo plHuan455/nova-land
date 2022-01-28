@@ -8,8 +8,11 @@ import SignUpJobPostingsContainer from './signUpJobPostings';
 import VisionMissionValueContainer from './visionMissionValueContainer';
 import WorkEnvironmentContainer from './workEnvironmentContainer';
 
+import HelmetContainer from 'container/helmet';
+
 const RecruitmentContainer: React.FC = () => (
   <>
+    <HelmetContainer />
     <FilterRecruitmentContainer />
     <BranchListContainer />
     <LatestJobsContainer />
