@@ -86,7 +86,7 @@ const App: React.FC = () => {
               <MainLayoutRecruitmentContainer>
                 <Outlet />
               </MainLayoutRecruitmentContainer>
-          )}
+            )}
           >
             <Route
               path="danh-sach-tuyen-dung"
@@ -108,16 +108,13 @@ const App: React.FC = () => {
             </MainLayoutContainer>
           )}
         >
+          <Route path="/" element={<PageNav />}>
+            <Route path=":slug" element={<PageNav />} />
+          </Route>
           {routes.map((item, index) => (
-            <Route
-              key={`router-${index.toString()}`}
-              {...item}
-            />
+            <Route key={`router-${index.toString()}`} {...item} />
           ))}
         </Route>
-        {routes.map((item, index) => (
-          <Route key={`router-${index.toString()}`} {...item} />
-        ))}
       </Routes>
     </Suspense>
   );
