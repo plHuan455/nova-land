@@ -13,16 +13,16 @@
     position: relative;
 
     .a-button {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
       cursor: pointer;
+      font-weight: 600;
       height: 100%;
+      max-width: rem(143);
       position: absolute;
       right: 0;
       top: 50%;
       transform: translateY(-50%);
-      max-width: rem(143);
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-      font-weight: 600;
 
       @include font-base(18, 28);
     }
@@ -43,7 +43,7 @@
     }
 
     .o-newsCard_content_desc {
-      @include mobile-tablet{
+      @include mobile-tablet {
         display: none;
       }
     }

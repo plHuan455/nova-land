@@ -68,26 +68,26 @@
 
       &_wrap {
         flex: 0 0 30%;
+        flex: 0 0 30%;
         padding-left: rem(7);
         padding-right: rem(7);
-        flex: 0 0 30%;
 
         &:nth-child(2) {
           flex: 0 0 40%;
-        @include tablet-down {
-          flex: 0 0 33.33333%;
-        }
+          @include tablet-down {
+            flex: 0 0 33.33333%;
+          }
 
-        // @include tablet-down {
-        //   flex: 0 0 33.33333%;
-        // }
-        //xem xét
-        @include small-mobile {
-          flex: 0 0 50%;
-          margin-top: rem(16);
+          // @include tablet-down {
+          //   flex: 0 0 33.33333%;
+          // }
+          //xem xét
+          @include small-mobile {
+            flex: 0 0 50%;
+            margin-top: rem(16);
+          }
         }
       }
-    }
 
       // &_wrap:last-child {
       //   margin-left: 10%;

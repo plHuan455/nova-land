@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { departmentFilterRecruitOptions, locationFilterRecruitOptions, positionFilterRecruitOptions } from 'assets/dataDummy/filterGroupRecruitment';
 import bg from 'assets/images/filterRecruitmentBg.png';
 import FilterRecruitment from 'components/organisms/FilterRecruitment';
 import HeroBanner from 'components/templates/HeroBanner';
@@ -10,6 +11,10 @@ const FilterRecruitmentContainer: React.FC = () => (
       <FilterRecruitment
         heading="Novator"
         desc="Thu hút nhân tài, tạo dựng giá trị, tích lũy thành công"
+        positionOptions={positionFilterRecruitOptions}
+        locationOptions={locationFilterRecruitOptions}
+        departmentOptions={departmentFilterRecruitOptions}
+        handleSubmit={(val) => console.log(val)}
       />
     </HeroBanner>
   </div>

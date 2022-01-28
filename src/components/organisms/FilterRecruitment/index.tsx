@@ -1,87 +1,40 @@
 import React, { useState } from 'react';
 
-import Container from '../Container';
-import { Tab, TabPanel, Tabs } from '../Tabs';
-
+import Button from 'components/atoms/Button';
 import Heading from 'components/atoms/Heading';
 import Text from 'components/atoms/Text';
-import Pulldown from 'components/molecules/Pulldown';
-import mapModifiers from 'utils/functions';
+import Pulldown, { OptionType } from 'components/molecules/Pulldown';
 
-const dummyData = [
-  {
-    label: 'Tin Tập Đoàn',
-    content: 'Content 1',
-  },
-  {
-    option: [
-      {
-        label: 'abc',
-        value: 'abc',
-        id: 'abc',
-      },
-      {
-        label: 'abc',
-        value: 'abc',
-        id: 'abc',
-      },
-      {
-        label: 'abc',
-        value: 'abc',
-        id: 'abc',
-      },
-      {
-        label: 'abc',
-        value: 'abc',
-        id: 'abc',
-      },
-    ],
-    content: 'Content 2',
-    isPulldown: true,
-    placeholder: 'Địa điểm',
-  },
-  {
-    option: [
-      {
-        label: 'abc',
-        value: 'abc',
-        id: 'abc',
-      },
-      {
-        label: 'abc',
-        value: 'abc',
-        id: 'abc',
-      },
-      {
-        label: 'abc',
-        value: 'abc',
-        id: 'abc',
-      },
-      {
-        label: 'abc',
-        value: 'abc',
-        id: 'abc',
-      },
-    ],
-    content: 'Content 3',
-    isPulldown: true,
-    placeholder: 'Bộ phận',
-  },
-  {
-    label: 'Tin Dự án',
-    content: 'Content 4',
-  },
-];
+type RecruitmentFilterTypes = {
+  location?: OptionType;
+  position?: OptionType;
+  department?: OptionType;
+}
 interface FilterRecruitmentProps {
   heading?: string;
   desc?: string;
+  positionOptions?: OptionType[];
+  locationOptions?: OptionType[];
+  departmentOptions?: OptionType[];
+  handleSubmit?: (data: RecruitmentFilterTypes) => void;
 }
 
 const FilterRecruitment: React.FC<FilterRecruitmentProps> = ({
   heading,
   desc,
+  positionOptions,
+  locationOptions,
+  departmentOptions,
+  handleSubmit,
 }) => {
-  const [indexActive, setIndexActive] = useState(0);
+  const [optionGroup, setOptionGroup] = useState<RecruitmentFilterTypes>();
+  const handleChangeFilter = (val: OptionType, key: 'position' | 'location' | 'department') => {
+    setOptionGroup((prev) => ({
+      ...prev,
+      [key]: val,
+    }));
+  };
+
   return (
     <div className="t-filterRecruitment">
       <div className="t-filterRecruitment_heading">
@@ -91,42 +44,60 @@ const FilterRecruitment: React.FC<FilterRecruitmentProps> = ({
         <Text modifiers={['300', '18x28', 'center', 'fontLexend', 'white']} content={desc} />
       </div>
       <div className="t-filterRecruitment_tab">
-        <Container>
-          <Tabs variableMutate={indexActive}>
-            {
-              dummyData.map((item, index) => (
-                <div className={mapModifiers('t-filterRecruitment_tab-items', indexActive === index && 'active')}>
-                  {item.isPulldown
-                    ? (
-                      <div className="t-filterRecruitment_tab-pulldown">
-                        <Pulldown
-                          isSecondary
-                          options={item.option}
-                          placeholder={item.placeholder}
-                          handleChange={() => setIndexActive(index)}
-                        />
-                      </div>
-                    )
-                    : (
-                      <Tab
-                        key={`tab-${index.toString()}`}
-                        label={item.label}
-                        active={index === indexActive}
-                        handleClick={() => setIndexActive(index)}
-                      />
-                    )}
-                </div>
-              ))
-            }
-          </Tabs>
-          {
-            dummyData.map((item, index) => (
-              <TabPanel key={`tab-panel-${index.toString()}`} active={index === indexActive}>
-                {item.content}
-              </TabPanel>
-            ))
+        {/* Find position ...  */}
+        {
+            positionOptions && positionOptions.length > 0
+            && (
+            <div className="t-filterRecruitment_tab_item">
+              <div className="t-filterRecruitment_tab-pulldown">
+                <Pulldown
+                  isSecondary
+                  options={positionOptions}
+                  placeholder="Tìm kiếm theo chức vụ"
+                  handleChange={(val: OptionType) => handleChangeFilter(val, 'position')}
+                />
+              </div>
+            </div>
+            )
           }
-        </Container>
+        {/* Find Location ...  */}
+        {
+            locationOptions && locationOptions.length > 0
+            && (
+            <div className="t-filterRecruitment_tab_item minimize">
+              <div className="t-filterRecruitment_tab-pulldown">
+                <Pulldown
+                  isSecondary
+                  options={locationOptions}
+                  placeholder="Địa điểm"
+                  handleChange={(val: OptionType) => handleChangeFilter(val, 'location')}
+                />
+              </div>
+            </div>
+            )
+          }
+        {/* Find Department ...  */}
+        {
+            departmentOptions && departmentOptions.length > 0
+            && (
+            <div className="t-filterRecruitment_tab_item minimize">
+              <div className="t-filterRecruitment_tab-pulldown">
+                <Pulldown
+                  isSecondary
+                  options={departmentOptions}
+                  placeholder="Bộ phận"
+                  handleChange={(val: OptionType) => handleChangeFilter(val, 'department')}
+                />
+              </div>
+            </div>
+            )
+          }
+        {/* Submit ...  */}
+        <div className="t-filterRecruitment_tab_button">
+          <Button size="h70" onClick={() => handleSubmit && optionGroup && handleSubmit(optionGroup)}>
+            Tìm kiếm việc làm
+          </Button>
+        </div>
       </div>
     </div>
   );
@@ -135,6 +106,10 @@ const FilterRecruitment: React.FC<FilterRecruitmentProps> = ({
 FilterRecruitment.defaultProps = {
   heading: undefined,
   desc: undefined,
+  positionOptions: undefined,
+  locationOptions: undefined,
+  departmentOptions: undefined,
+  handleSubmit: undefined,
 };
 
 export default FilterRecruitment;

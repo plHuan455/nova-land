@@ -287,6 +287,15 @@
     }
   }
 
+  //----SIZE----//
+  &-h70 {
+    height: rem(70);
+
+    @include mobile-down {
+      height: rem(55);
+    }
+  }
+
   &:disabled,
   &-loading {
     cursor: no-drop;

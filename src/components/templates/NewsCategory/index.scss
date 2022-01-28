@@ -2,23 +2,27 @@
   $root: &;
   border: rem(1) solid $light-gray;
   position: relative;
+
   &-isLatestJobs {
     border: none;
-    #{$root}_content{
-      background: #F9FAFD;
+    #{$root}_content {
+      background: #f9fafd;
     }
   }
+
   &-tag {
-    padding: rem(8) rem(16);
+    background: rgba(11, 52, 107, 0.8);
     border-radius: 0 0 rem(5) 0;
+    display: flex;
+    padding: rem(8) rem(16);
     position: absolute;
     z-index: 1;
-    background: rgba(11, 52, 107, 0.8);
-    display: flex;
+
     &_left {
-      border-right: 1px solid #64748B;
+      border-right: 1px solid #64748b;
       padding-right: rem(12);
     }
+
     &_right {
       padding-left: rem(12);
     }
@@ -28,9 +32,11 @@
     @include adjust-flex(flex-start, center);
     margin-bottom: rem(16);
   }
+
   &_locationText {
     margin-left: rem(4);
   }
+
   &_thumbnail {
     overflow: hidden;
     transition: all linear 0.3s;

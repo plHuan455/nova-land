@@ -18,9 +18,9 @@
 
   &_image {
     display: unset;
+    flex-shrink: 0;
     margin-right: rem(8);
     width: rem(40);
-    flex-shrink: 0;
 
     .a-icon {
       width: rem(40);

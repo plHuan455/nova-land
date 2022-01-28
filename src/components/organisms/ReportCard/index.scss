@@ -4,11 +4,11 @@
   border: rem(1) solid $light-gray;
 
   &_wrapimg {
-    width: 100%;
     max-width: rem(376px);
+    width: 100%;
   }
 
-  &_wrapcontent{
+  &_wrapcontent {
     padding: rem(24);
   
     @include small-mobile {
@@ -16,20 +16,20 @@
     }
   }
 
-  &_icon {  
+  &_icon {
+    background-image: url('~assets/icons/ic_download.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: rem(20);
-    width: rem(20);
     margin-left: rem(10);
-    background-image: url('~assets/icons/ic_download.svg');
+    width: rem(20);
   }
 
   &_wrapdownload {
-    display: flex;
     align-items: center;
     cursor: pointer;
+    display: flex;
     margin-top: rem(24);
 
     @include small-mobile {
