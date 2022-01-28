@@ -46,6 +46,7 @@ const RedirectNavigate: React.FC = () => {
         title={notFoundBlock?.errorMessage || ''}
         image={getImageURL(notFoundBlock?.image)}
         linkButton={notFoundBlock?.link.url || ''}
+        targetButton={notFoundBlock?.link.target}
       />
     </MainLayout>
   );
