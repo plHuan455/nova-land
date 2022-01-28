@@ -24,12 +24,23 @@ export type LeadershipParamsTypes = {
   keyword?: string,
 }
 
+export type PrizesParamsType = {
+  keyword?: string;
+  year_id?: number;
+}
+
 export type PrizesType = {
   id: number,
   name: string,
   thumbnail: string,
   yearId: {
     id: number,
-    year: number,
+    year: string,
   }
+}
+
+export type PrizeYearsType = {
+  id: number,
+  year: string,
+  link: string,
 }
