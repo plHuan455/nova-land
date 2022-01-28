@@ -6,7 +6,7 @@ import Error from 'components/templates/Error';
 import MainLayout from 'components/templates/MainLayout';
 import { getPageService } from 'services/navigations';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
-import { getBlockData, getImageURL } from 'utils/functions';
+import { getBlockData } from 'utils/functions';
 
 interface BlockError {
   link: {
@@ -43,10 +43,10 @@ const RedirectNavigate: React.FC = () => {
       <Error
         btnHomeText={notFoundBlock?.link.text || ''}
         description={notFoundBlock?.sympathySentence || ''}
-        title={notFoundBlock?.errorMessage || ''}
-        image={getImageURL(notFoundBlock?.image)}
+        titlePage={notFoundBlock?.errorMessage || ''}
         linkButton={notFoundBlock?.link.url || ''}
         targetButton={notFoundBlock?.link.target}
+        statusCode={404}
       />
     </MainLayout>
   );

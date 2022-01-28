@@ -10,6 +10,7 @@ import Link from 'components/atoms/Link';
 import Text from 'components/atoms/Text';
 import Container from 'components/organisms/Container';
 import Section from 'components/templates/Section';
+import { checkExternalUrl } from 'utils/functions';
 
 export interface ErrorProps {
   statusCode: number;
@@ -78,7 +79,11 @@ const Error: React.FC<ErrorProps> = ({
               </Text>
             </div>
             <div className="t-error_btn">
-              <Link href={linkButton} target={targetButton}>
+              <Link
+                useExternal={checkExternalUrl(linkButton)}
+                href={linkButton}
+                target={targetButton}
+              >
                 <Button>
                   <Text modifiers={['700', '18x28']}>{btnHomeText}</Text>
                 </Button>
