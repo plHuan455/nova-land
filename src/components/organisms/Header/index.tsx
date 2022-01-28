@@ -137,7 +137,7 @@ const Header: React.FC<HeaderProps> = ({
                     headerMenu && headerMenu.map((val, idx) => (
                       <li className="o-header_nav_item" key={idx.toString()}>
                         <Link
-                          href={val.reference?.slug || val.link}
+                          href={val.reference?.slug ? `/${val.reference?.slug}` : val.link}
                           customClassName="o-header_nav_link"
                           handleClick={() => setIsOpenMenu(!isOpenMenu)}
                           target={val.target}
