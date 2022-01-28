@@ -49,10 +49,8 @@ const RecruitmentDetail: React.FC<RecruitmentDetailProps> = ({
           <CustomRow>
             <CustomCol sm="12" md="12" lg="8">
               <div className="t-recruitmentDetail_info">
-                <div className="t-recruitmentDetail_location">
-                  <Icon iconName="location" size="20" />
-                  <Text modifiers={['12x17', 'raisinBlack']}>{dataBanner.location}</Text>
-                </div>
+                <Icon iconName="location" size="20" />
+                <Text modifiers={['12x17', 'raisinBlack']}>{dataBanner.location}</Text>
                 <div className="t-recruitmentDetail_dot" />
                 <Text modifiers={['12x17', 'raisinBlack']}>{dataBanner.plan}</Text>
                 <div className="t-recruitmentDetail_dot" />

@@ -7,11 +7,20 @@
     }
   }
 
-  &_info,
-  &_location {
+  &_info {
     display: none;
     @include mobile-down {
-      display: flex;
+      @include adjust-flex(flex-start, center);
+      overflow-x: auto;
+      @include scroll-bars(8, $camel);
+
+      .a-icon {
+        margin-right: rem(4);
+      }
+
+      .a-text {
+        white-space: nowrap;
+      }
     }
   }
 
@@ -19,7 +28,7 @@
     background-color: $slate-gray;
     border-radius: 50%;
     height: rem(4);
-    margin: 0 rem(15);
+    margin: 0 rem(8);
     width: rem(4);
   }
 
