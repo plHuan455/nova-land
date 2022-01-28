@@ -21,6 +21,7 @@ export interface LatestNewsCardProps {
   handleSeeMore?: () => void;
   pdfImg?: string,
   hrefLink?:string,
+  target?: string,
 }
 
 export const LatestNewsCard: React.FC<LatestNewsCardProps> = ({
@@ -36,6 +37,7 @@ export const LatestNewsCard: React.FC<LatestNewsCardProps> = ({
   handleSeeMore,
   pdfImg,
   hrefLink,
+  target,
 }) => (
   <div className="t-latestNewsCard">
     {
@@ -71,7 +73,7 @@ export const LatestNewsCard: React.FC<LatestNewsCardProps> = ({
     </Link>
     {
       fileName && (
-        <Link href={hrefLink} target="_blank" useExternal={checkExternalUrl(hrefLink)}>
+        <Link href={hrefLink} target={target || '_blank'} useExternal={checkExternalUrl(hrefLink)}>
           <div className="t-latestNewsCard_file">
             <div className="t-latestNewsCard_icon">
               <Image ratio="1x1" alt="pdf" src={pdfImg || ''} />
@@ -86,7 +88,9 @@ export const LatestNewsCard: React.FC<LatestNewsCardProps> = ({
     {
       btnText && (
         <div className="t-latestNewsCard_button" onClick={handleSeeMore}>
-          <Button modifiers="outlineSpanishGray">{btnText}</Button>
+          <Link href={href} target={target || '_blank'} useExternal={checkExternalUrl(href)}>
+            <Button modifiers="outlineSpanishGray">{btnText}</Button>
+          </Link>
         </div>
       )
     }

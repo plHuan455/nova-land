@@ -148,11 +148,12 @@ const InvestmentRelationsContainer: React.FC<BasePageData<InvestmentRelationsBlo
       time: new Date(documentsHighlightData?.data[0].publishedAt || '') === new Date()
         ? `${getHourFromPastToCurrent(documentsHighlightData?.data[0].publishedAt)} giờ trước`
         : formatDateDDMMYYYY(documentsHighlightData?.data[0].publishedAt),
-      href: '/',
+      href: corporateGovernanceAnnualReportBlock.corporateGovernance.button.url,
       btnText: corporateGovernanceAnnualReportBlock.corporateGovernance.button.text,
       fileName: documentsHighlightData?.data[0].name || '',
       pdfImg: imgPdf,
       hrefLink: getImageURL(documentsHighlightData?.data[0].file),
+      target: corporateGovernanceAnnualReportBlock.corporateGovernance.button.target,
     },
     {
       imgSrc: getImageURL(corporateGovernanceAnnualReportBlock.annualReport.image),
@@ -163,11 +164,12 @@ const InvestmentRelationsContainer: React.FC<BasePageData<InvestmentRelationsBlo
       time: new Date(documentsAnnualHighlightData?.data[0].publishedAt || '') === new Date()
         ? `${getHourFromPastToCurrent(documentsAnnualHighlightData?.data[0].publishedAt)} giờ trước`
         : formatDateDDMMYYYY(documentsAnnualHighlightData?.data[0].publishedAt),
-      href: '/',
+      href: corporateGovernanceAnnualReportBlock.annualReport.button.url,
       btnText: corporateGovernanceAnnualReportBlock.annualReport.button.text,
       fileName: documentsAnnualHighlightData?.data[0].name || '',
       pdfImg: imgPdf,
       hrefLink: getImageURL(documentsAnnualHighlightData?.data[0].file),
+      target: corporateGovernanceAnnualReportBlock.annualReport.button.target,
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
   ], [documentsHighlightData, documentsAnnualHighlightData]);
