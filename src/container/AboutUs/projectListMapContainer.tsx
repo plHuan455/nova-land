@@ -14,7 +14,6 @@ import getMapService from 'services/maps';
 import { getProjectsService } from 'services/project';
 import { useAppSelector } from 'store/hooks';
 import { getCitiesAction } from 'store/location';
-import { getProjectsAction } from 'store/project';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
 
 interface ProjectListMapContainerProps {
@@ -26,35 +25,45 @@ const ProjectListMapContainer: React.FC<ProjectListMapContainerProps> = ({
 }) => {
   const dispatch = useDispatch();
   const { listCities } = useAppSelector((state) => state.location);
-  const { projectData } = useAppSelector((state) => state.project);
   const [province, setProvince] = useState<OptionType | null>(null);
   const [project, setProject] = useState<OptionType | null>(null);
 
   const [listSelectProject, setSelectProjectList] = useState<ItemBranch[]>([]);
   const [isLoading, setLoading] = useState(false);
 
-  const projectOptionData = useMemo(
-    () => projectData?.map((item) => ({
-      value: String(item.id),
-      label: item.name,
-    })),
-    [projectData],
-  );
-
   const { data: projectDataAboutUs } = useQuery(
-    'getProjectsDataAboutUs',
+    ['getProjectsDataAboutUs', province],
     () => getProjectsService({
       about_us: true,
+      city_id: province && province.value !== '-1' ? Number(province.value) : undefined,
     }),
     {
       ...DEFAULT_QUERY_OPTION,
     },
   );
 
-  const provinceOptions = listCities?.map((item) => ({
-    value: String(item.id),
-    label: item.name,
-  }));
+  const projectOptionData = useMemo(
+    () => projectDataAboutUs?.map((item) => ({
+      value: String(item.id),
+      label: item.name,
+    })),
+    [projectDataAboutUs],
+  );
+
+  const provinceOptions = useMemo(() => {
+    if (listCities) {
+      const allObj = {
+        value: '-1',
+        label: 'Tất cả',
+      };
+      const provinceList = listCities.map((item) => ({
+        value: String(item.id),
+        label: item.name,
+      }));
+      return [allObj, ...provinceList];
+    }
+    return [];
+  }, [listCities]);
 
   const listProject = useMemo(
     () => projectDataAboutUs?.map((item) => ({
@@ -101,9 +110,6 @@ const ProjectListMapContainer: React.FC<ProjectListMapContainerProps> = ({
   useEffect(() => {
     if (!listCities) {
       dispatch(getCitiesAction());
-    }
-    if (!projectData) {
-      dispatch(getProjectsAction({}));
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

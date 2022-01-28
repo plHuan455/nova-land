@@ -42,9 +42,9 @@
 
     &_list {
       margin-top: rem(16);
-      padding-right: rem(16);
       max-height: rem(278);
       overflow: auto;
+      padding-right: rem(16);
       @include scroll-bars(8, $gainsboro);
 
       @include desktop-down {
@@ -87,9 +87,9 @@
   }
 
   &_map {
-    position: relative;
     flex: 0 0 calc(373 / #{$width-in-container-value} * 100%);
     margin-left: calc(194 / #{$width-in-container-value} * 100%);
+    position: relative;
 
     @include tablet-down {
       flex: 0 0 45%;
@@ -108,7 +108,7 @@
       & > img {
         height: 100%;
         width: 100%;
-        max-height: rem(508);
+        // max-height: rem(508);
       }
     }
 
@@ -126,14 +126,14 @@
     }
 
     &_loading {
+      align-items: center;
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      left: 0;
       position: absolute;
       top: 0;
-      left: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       width: 100%;
-      height: 100%;
     }
   }
 }

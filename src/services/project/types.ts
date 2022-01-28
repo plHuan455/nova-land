@@ -41,6 +41,7 @@ export type ProjectParamTypes = {
   real_estates_slug?: string,
   highlight?: boolean;
   about_us?: boolean;
+  city_id?: number;
 }
 
 export type CategoryProjectsDataTypes = {
