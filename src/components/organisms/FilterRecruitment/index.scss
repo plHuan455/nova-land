@@ -3,6 +3,10 @@
 
   &_desc {
     margin-top: rem(16);
+
+    @include mobile-down {
+      margin-bottom: rem(150);
+    }
   }
 
   &_tab {
