@@ -1,5 +1,7 @@
 import {
   NewsCategoryDataTypes,
+  NewsListParamsTypes,
+  NewsDataTypes,
 } from './type';
 
 import axiosInstance from 'services/common/instance';
@@ -9,11 +11,11 @@ export const getNewsCategoryService = async (): Promise<NewsCategoryDataTypes[]>
   return response.data.data;
 };
 
-// export const getNewsListService = async (
-//   params: NewsListParamsTypes
-// ): Promise<NewsCategoryDataTypes[]> => {
-//   const response = await axiosInstance.get('news-category');
-//   return response.data.data;
-// };
+export const getNewsService = async (
+  params?: NewsListParamsTypes,
+): Promise<NewsDataTypes[]> => {
+  const response = await axiosInstance.get('news', { params });
+  return response.data.data;
+};
 
 export default getNewsCategoryService;

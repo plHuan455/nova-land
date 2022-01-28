@@ -6,10 +6,6 @@ import imgMarketNews1 from 'assets/images/NewsList/img_market_news1.png';
 import imgMarketNews2 from 'assets/images/NewsList/img_market_news2.png';
 import imgMarketNews3 from 'assets/images/NewsList/img_market_news3.png';
 import imgMarketNews4 from 'assets/images/NewsList/img_market_news4.png';
-import imgProjectNews1 from 'assets/images/NewsList/img_project_news1.png';
-import imgProjectNews2 from 'assets/images/NewsList/img_project_news2.png';
-import imgProjectNews3 from 'assets/images/NewsList/img_project_news3.png';
-import imgProjectNews4 from 'assets/images/NewsList/img_project_news4.png';
 import { HomeNewsCardProps, dataTabsType } from 'components/templates/HomeNews';
 
 const dataCorporateNews: HomeNewsCardProps[] = [
@@ -85,90 +81,12 @@ export const dataMarketNews: HomeNewsCardProps[] = [
 export const tabDataProjectNews: dataTabsType[] = [
   {
     titleTab: 'NovaWorld Phan Thiet',
-    dataTab: [
-      {
-        imgSrc: imgProjectNews1,
-        title: 'Cụm sân golf PGA tại Novaworld Phan Thiet...',
-        desc: 'Cụm sân golf PGA độc quyền duy nhất tại Việt Nam sẽ vận hành toàn khu từ đầu năm 2022...',
-        date: '23/11/2021',
-        totalViews: 111,
-        href: '/',
-      },
-      {
-        imgSrc: imgProjectNews2,
-        title: 'Sắp khởi công đường Hàm Kiệm – Tiến Thành',
-        desc: 'Ban Quản lý Dự án và xây dựng công trình giao thông thuộc Sở Giao thông vận tải cho hay...',
-        date: '23/11/2021',
-        totalViews: 111,
-        href: '/',
-      },
-      {
-        imgSrc: imgProjectNews3,
-        title: 'Nhiều hạng mục của sân bay Long Thành sẽ khởi công năm sau',
-        desc: 'Báo cáo Quốc hội việc triển khai dự án sân bay Long Thành, Chính phủ cho biết mó hội việc triển khai dự án sân bay Long Thành, Chính phủ cho biết',
-        date: '23/11/2021',
-        totalViews: 111,
-        href: '/',
-      },
-      {
-        imgSrc: imgProjectNews4,
-        title: 'Doanh nghiệp địa ốc bắt tay ngân hàng tăng lợi ích cho người mua...',
-        desc: 'Hợp tác giữa doanh nghiệp bất động sản và ngân hàng tạo giải pháp tín dụng giàu ưu đãi,...',
-        date: '23/11/2021',
-        totalViews: 111,
-        href: '/',
-      },
-    ],
   },
   {
     titleTab: 'NovaWorld Ho Tram',
-    dataTab: [
-      {
-        imgSrc: imgProjectNews1,
-        title: 'Cụm sân golf PGA tại Novaworld Phan Thiet...',
-        desc: 'Cụm sân golf PGA độc quyền duy nhất tại Việt Nam sẽ vận hành toàn khu từ đầu năm 2022...',
-        date: '23/11/2021',
-        totalViews: 111,
-        href: '/',
-      },
-      {
-        imgSrc: imgProjectNews2,
-        title: 'Sắp khởi công đường Hàm Kiệm – Tiến Thành',
-        desc: 'Ban Quản lý Dự án và xây dựng công trình giao thông thuộc Sở Giao thông vận tải cho hay...',
-        date: '23/11/2021',
-        totalViews: 111,
-        href: '/',
-      },
-      {
-        imgSrc: imgProjectNews3,
-        title: 'Nhiều hạng mục của sân bay Long Thành sẽ khởi công năm sau',
-        desc: 'Báo cáo Quốc hội việc triển khai dự án sân bay Long Thành, Chính phủ cho biết mó hội việc triển khai dự án sân bay Long Thành, Chính phủ cho biết',
-        date: '23/11/2021',
-        totalViews: 111,
-        href: '/',
-      },
-    ],
   },
   {
     titleTab: 'Aqua City',
-    dataTab: [
-      {
-        imgSrc: imgProjectNews2,
-        title: 'Sắp khởi công đường Hàm Kiệm – Tiến Thành',
-        desc: 'Ban Quản lý Dự án và xây dựng công trình giao thông thuộc Sở Giao thông vận tải cho hay...',
-        date: '23/11/2021',
-        totalViews: 111,
-        href: '/',
-      },
-      {
-        imgSrc: imgProjectNews3,
-        title: 'Nhiều hạng mục của sân bay Long Thành sẽ khởi công năm sau',
-        desc: 'Báo cáo Quốc hội việc triển khai dự án sân bay Long Thành, Chính phủ cho biết mó hội việc triển khai dự án sân bay Long Thành, Chính phủ cho biết',
-        date: '23/11/2021',
-        totalViews: 111,
-        href: '/',
-      },
-    ],
   },
 ];
 

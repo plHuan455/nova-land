@@ -75,17 +75,25 @@
     }
   }
 
+  &_empty {
+    margin-top: rem(16);
+    width: 100%;
+  }
+
+  &_list {
+    @include adjust-flex(flex-start, center);
+    flex-wrap: wrap;
+  }
+
   &_wrapper {
     margin-top: rem(24);
   }
 
   &_content {
-    display: flex;
-    flex-wrap: wrap;
-    margin: rem(-16);
+    flex: 0 0 50%;
 
     @include tablet-down {
-      margin: rem(-10) 0;
+      flex: 0 0 100%;
     }
   }
 

@@ -34,7 +34,7 @@ const routes = [
     element: <NewsCategory />,
   },
   {
-    path: '/tin-tuc-chi-tiet',
+    path: 'tin-tuc-chi-tiet/:slug',
     element: <NewsDetail />,
   },
   {
