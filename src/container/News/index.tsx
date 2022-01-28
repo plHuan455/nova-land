@@ -5,8 +5,11 @@ import LatestNewsContainer from './latestNewsContainer';
 import MarketNewsContainer from './marketNewsContainer';
 import ProjectNewsContainer from './projectNewsContainer';
 
+import HelmetContainer from 'container/helmet';
+
 const NewsContainer: React.FC = () => (
   <>
+    <HelmetContainer />
     <LatestNewsContainer />
     <CorporateNewsContainer />
     <MarketNewsContainer />

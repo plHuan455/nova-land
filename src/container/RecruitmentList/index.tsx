@@ -6,9 +6,11 @@ import RecruitmentPositionListContainer from './recruitmentPositionListContainer
 import SignupJobPostingsContainer from './signupJobPostingsContainer';
 
 import Container from 'components/organisms/Container';
+import HelmetContainer from 'container/helmet';
 
 const RecruitmentListContainer: React.FC = () => (
   <>
+    <HelmetContainer />
     <BannerRecruitmentContainer />
     <div className="p-recruitmentList_general u-mt-lg-60 u-mt-30 u-mb-lg-60 u-mb-30">
       <Container>

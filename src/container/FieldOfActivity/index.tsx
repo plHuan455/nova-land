@@ -6,6 +6,7 @@ import ProductLinesContainer from './productLinesContainer';
 import ProjectListContainer from './projectListContainer';
 
 import Container from 'components/organisms/Container';
+import HelmetContainer from 'container/helmet';
 import getBlockData from 'helpers/pageData';
 
 export type FieldOfActivityData =
@@ -22,6 +23,7 @@ const FieldOfActivityContainer: React.FC<BasePageData<FieldOfActivityData>> = ({
 
   return (
     <>
+      <HelmetContainer />
       <HeroBannerContainer banners={banners} />
       <Container>
         <FieldActivityDetailsTabContainer blocks={fieldActivityDetailsTabBlock} />

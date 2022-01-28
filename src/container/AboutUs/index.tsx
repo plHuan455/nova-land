@@ -13,6 +13,7 @@ import ProjectListMapContainer from './projectListMapContainer';
 import TransportationContainer from './transportationContainer';
 import VisionMissionValueContainer from './visionMissionValueContainer';
 
+import HelmetContainer from 'container/helmet';
 import { getBlockData, getImageURL } from 'utils/functions';
 
 type Icon = {
@@ -206,6 +207,7 @@ const AboutUSContainer: React.FC<BasePageData<AboutUsBlock>> = ({
 
   return (
     <>
+      <HelmetContainer />
       <HeroBannerContainer
         list={listBanner}
       />

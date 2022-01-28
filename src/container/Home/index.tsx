@@ -10,6 +10,7 @@ import ProjectMapContainer, { ProjectMapTypes } from './projectMapContainer';
 import ShareHolderRelationsContainer, { ShareHolderRelationsTypes } from './sharesHolderRelationsContainer';
 import TransportationContainer, { TransportationTypes } from './transportationinfrastructureContainer';
 
+import HelmetContainer from 'container/helmet';
 import getBlockData from 'helpers/pageData';
 
 export type HomeData =
@@ -68,6 +69,7 @@ const HomeContainer: React.FC<BasePageData<HomeData>> = ({
 
   return (
     <>
+      <HelmetContainer />
       <HeroBannerContainer banners={banners} />
       <OutStandingNumbersContainer blocks={outStandingNumbersBlock} />
       <InvestmentSectorContainer blocks={investmentSectorBlock} />
