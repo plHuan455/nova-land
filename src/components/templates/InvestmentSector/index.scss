@@ -42,8 +42,8 @@
   }
 
   &_icon {
-    background: $white;
-    border: rem(1) solid $camel;
+    // background: $white;
+    // border: rem(1) solid $camel;
     border-radius: 50%;
     height: rem(120);
     position: relative;
@@ -67,8 +67,8 @@
       width: rem(60);
 
       .a-image img {
-        height: rem(30);
-        width: rem(30);
+        height: rem(60);
+        width: rem(60);
       }
     }
   }
@@ -84,7 +84,7 @@
 
     #{$root}-small & {
       margin-top: rem(24);
-  
+
       @include mobile-down {
         margin-top: rem(16);
       }

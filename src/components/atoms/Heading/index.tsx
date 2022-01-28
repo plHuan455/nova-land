@@ -16,7 +16,9 @@ export type Sizes =
   | '64x83'
   | '24x34'
   | '30x37-5'
-  | '40x56';
+  | '40x56'
+  | '30x42'
+  | '18x28';
 
 type Variant = 'blueLinear';
 
