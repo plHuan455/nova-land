@@ -46,6 +46,7 @@
 @import 'components/organisms/ReportCard/';
 @import 'components/organisms/FilterRecruitment/';
 @import 'components/organisms/BranchList/';
+@import 'components/organisms/TransactionCard';
 
 //Templates
 @import 'components/templates/HomeNews';
@@ -87,6 +88,9 @@
 @import 'components/templates/WorkEnvironment/';
 @import 'components/templates/BannerRecruitmentDetail/';
 @import 'components/templates/RecruitmentDetail/';
+@import 'components/templates/MapInformation';
+@import 'components/templates/GallerySlide';
+@import 'components/templates/TransactionList';
 
 // Pages
 @import 'pages/Home/';
@@ -100,3 +104,4 @@
 @import 'pages/RecruitmentList';
 @import 'pages/Recruitment';
 @import 'pages/RecruitmentDetail/';
+@import 'pages/Contact';

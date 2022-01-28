@@ -159,6 +159,13 @@
     }
   }
 
+  &-40x56 {
+    @include font-base(40, 56);
+    @include tablet-down {
+      @include font-base(26, 40);
+    }
+  }
+
   &-blueLinear {
     background-image: $outstanding-number-linear;
     -webkit-text-fill-color: transparent;

@@ -10,6 +10,7 @@ import {
 
 import Loading from 'components/atoms/Loading';
 import useInitializeRender from 'hooks/useInitializeRender';
+import Contact from 'pages/Contact';
 import EventDetail from 'pages/EventDetail';
 import News from 'pages/News';
 import NewsCategory from 'pages/NewsCategory';
@@ -59,6 +60,10 @@ const routes = [
   {
     path: '/chi-tiet-tuyen-dung',
     element: <RecruitmentDetail />,
+  },
+  {
+    path: 'lien-he',
+    element: <Contact />,
   },
   {
     path: ':slug',
