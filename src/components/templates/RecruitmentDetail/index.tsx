@@ -4,6 +4,7 @@ import BannerRecruitmentDetail from '../BannerRecruitmentDetail';
 import Section from '../Section';
 
 import Divider from 'components/atoms/Divider';
+import Icon from 'components/atoms/Icon';
 import Text from 'components/atoms/Text';
 import InfoContactRecruitment, { InfoContactTypes } from 'components/molecules/InfoContactRecruitment';
 import RelatedRecruitment, { RelatedRecruitmentProps } from 'components/molecules/RelatedRecruitment';
@@ -34,17 +35,27 @@ const RecruitmentDetail: React.FC<RecruitmentDetailProps> = ({
   onClickShare,
 }) => (
   <div className="t-recruitmentDetail">
-    <BannerRecruitmentDetail
-      location={dataBanner.location}
-      plan={dataBanner.plan}
-      time={dataBanner.time}
-      title={dataBanner.title}
-    />
+    <div className="t-recruitmentDetail_breadcrumbs">
+      <BannerRecruitmentDetail
+        location={dataBanner.location}
+        plan={dataBanner.plan}
+        time={dataBanner.time}
+        title={dataBanner.title}
+      />
+    </div>
     <Section>
       <Container>
         <div className="t-recruitmentDetail_wrapContent">
           <CustomRow>
             <CustomCol sm="12" md="12" lg="8">
+              <div className="t-recruitmentDetail_info">
+                <Icon iconName="location" size="20" />
+                <Text modifiers={['12x17', 'raisinBlack']}>{dataBanner.location}</Text>
+                <div className="t-recruitmentDetail_dot" />
+                <Text modifiers={['12x17', 'raisinBlack']}>{dataBanner.plan}</Text>
+                <div className="t-recruitmentDetail_dot" />
+                <Text modifiers={['12x17', 'raisinBlack']}>{dataBanner.time}</Text>
+              </div>
               <div className="t-recruitmentDetail_content">
                 <Text type="div" content={content} />
               </div>

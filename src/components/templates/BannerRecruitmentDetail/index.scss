@@ -5,6 +5,12 @@
     display: flex;
   }
 
+  &_info {
+    @include mobile-down {
+      display: none;
+    }
+  }
+
   &_dot {
     background-color: $slate-gray;
     border-radius: 50%;
@@ -15,5 +21,9 @@
 
   &_title {
     margin-top: rem(12);
+
+    @include mobile-down {
+      text-align: center;
+    }
   }
 }

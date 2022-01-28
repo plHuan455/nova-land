@@ -7,6 +7,31 @@
     }
   }
 
+  &_info {
+    display: none;
+    @include mobile-down {
+      @include adjust-flex(flex-start, center);
+      overflow-x: auto;
+      @include scroll-bars(8, $camel);
+
+      .a-icon {
+        margin-right: rem(4);
+      }
+
+      .a-text {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &_dot {
+    background-color: $slate-gray;
+    border-radius: 50%;
+    height: rem(4);
+    margin: 0 rem(8);
+    width: rem(4);
+  }
+
   &_right {
     margin-top: rem(-200);
 
