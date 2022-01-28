@@ -110,6 +110,7 @@ const ProjectListMapContainer: React.FC<ProjectListMapContainerProps> = ({
   const handleChangeProvince = (option: OptionType) => {
     setProvince(option);
     filterMaps(Number(option.value), Number(project?.value));
+    setProject(null);
   };
 
   const handleChangeProject = (option: OptionType) => {
