@@ -49,6 +49,11 @@
   }
 
   &_card {
+    &_description {
+      max-height: rem(88);
+      overflow: auto;
+      @include scroll-bars(8, $gainsboro);
+    }
     background: $white;
     left: 50%;
     min-width: rem(390);
