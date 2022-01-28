@@ -1,11 +1,14 @@
 import React from 'react';
 
+import MainLayout from 'components/templates/MainLayout';
 import NewsContainer from 'container/News';
 
 const News: React.FC = () => (
-  <div className="p-news">
-    <NewsContainer />
-  </div>
+  <MainLayout>
+    <div className="p-news">
+      <NewsContainer />
+    </div>
+  </MainLayout>
 );
 
 export default News;
