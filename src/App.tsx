@@ -11,6 +11,7 @@ import {
 import Loading from 'components/atoms/Loading';
 import useInitializeRender from 'hooks/useInitializeRender';
 import Contact from 'pages/Contact';
+import Error from 'pages/Error';
 import EventDetail from 'pages/EventDetail';
 import News from 'pages/News';
 import NewsCategory from 'pages/NewsCategory';
@@ -64,6 +65,10 @@ const routes = [
   {
     path: 'lien-he',
     element: <Contact />,
+  },
+  {
+    path: '404',
+    element: <Error />,
   },
   {
     path: ':slug',
