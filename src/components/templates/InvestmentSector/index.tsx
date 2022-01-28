@@ -50,7 +50,7 @@ export const InvestmentCard: React.FC<InvestmentCardProps> = ({
         <div className="t-investmentCard_title">
           <Heading
             modifiers={
-              isSmall ? ['20x30', '500', 'jet', 'uppercase', 'fontNoto']
+              isSmall ? ['18x28', '500', 'jet', 'uppercase', 'fontNoto']
                 : ['32x48', '500', 'jet', 'uppercase', 'fontNoto']
             }
             content={title}
