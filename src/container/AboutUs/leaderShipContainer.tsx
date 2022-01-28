@@ -16,6 +16,7 @@ const LeadershipContainer: React.FC<LeadershipContainerProps> = ({
   const [indexLeadershipCategoryActive, setIndexLeadershipCategoryActive] = useState(0);
   const [leaderShipCategory, setLeaderShipCategory] = useState<LeadershipCategoryDataTypes[]>([]);
   const [leaderShipData, setLeaderShipData] = useState<dataTabsLeadershipType[]>();
+  const [tempLeaderShipData, setTempLeaderShipData] = useState<dataTabsLeadershipType[]>();
   const [isLoading, setLoading] = useState(false);
 
   const getLeadershipList = async () => {
@@ -28,7 +29,7 @@ const LeadershipContainer: React.FC<LeadershipContainerProps> = ({
           leadership_category_slug: categoryList[indexLeadershipCategoryActive].slug,
         });
 
-        const convertData = categoryList.map((item) => ({
+        const convertTempData = categoryList.map((item) => ({
           titleTab: item.name,
           dataTab:
           leaderShipRes?.map((e) => ({
@@ -40,7 +41,20 @@ const LeadershipContainer: React.FC<LeadershipContainerProps> = ({
             slogan: e.quotation,
           })) || [],
         }));
+        const convertData = categoryList.map((item) => ({
+          titleTab: item.name,
+          dataTab:
+          leaderShipRes?.map((e) => ({
+            gender: e.gender,
+            name: e.name,
+            position: e.position,
+            imgSrc: getImageURL(e.thumbnail),
+            achievement: e.achievement,
+            slogan: e.quotation,
+          })).slice(0, 3) || [],
+        }));
         setLeaderShipData(convertData);
+        setTempLeaderShipData(convertTempData);
       }
     } catch {
       // Empty
@@ -70,7 +84,20 @@ const LeadershipContainer: React.FC<LeadershipContainerProps> = ({
             slogan: e.quotation,
           })) || [],
         }));
+        const convertTempData = leaderShipCategory.map((item) => ({
+          titleTab: item.name,
+          dataTab:
+          leaderShipRes?.map((e) => ({
+            gender: e.gender,
+            name: e.name,
+            position: e.position,
+            imgSrc: getImageURL(e.thumbnail),
+            achievement: e.achievement,
+            slogan: e.quotation,
+          })).slice(0, 3) || [],
+        }));
         setLeaderShipData(convertData);
+        setTempLeaderShipData(convertTempData);
       }
     } catch {
       // Empty
@@ -91,6 +118,7 @@ const LeadershipContainer: React.FC<LeadershipContainerProps> = ({
         tabDataLeadership={leaderShipData || []}
         handleChangeTab={changeTab}
         loading={isLoading}
+        handleClickViewAll={() => setLeaderShipData(tempLeaderShipData)}
       />
     </div>
   );
