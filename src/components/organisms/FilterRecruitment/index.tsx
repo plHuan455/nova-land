@@ -1,80 +1,9 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from 'react';
-
-import Container from '../Container';
-import { Tab, TabPanel, Tabs } from '../Tabs';
 
 import Button from 'components/atoms/Button';
 import Heading from 'components/atoms/Heading';
 import Text from 'components/atoms/Text';
 import Pulldown, { OptionType } from 'components/molecules/Pulldown';
-import mapModifiers from 'utils/functions';
-
-const dummyData = [
-  {
-    label: 'Tin Tập Đoàn',
-    content: 'Content 1',
-  },
-  {
-    option: [
-      {
-        label: 'abc',
-        value: 'abc',
-        id: 'abc',
-      },
-      {
-        label: 'abc',
-        value: 'abc',
-        id: 'abc',
-      },
-      {
-        label: 'abc',
-        value: 'abc',
-        id: 'abc',
-      },
-      {
-        label: 'abc',
-        value: 'abc',
-        id: 'abc',
-      },
-    ],
-    content: 'Content 2',
-    isPulldown: true,
-    placeholder: 'Địa điểm',
-  },
-  {
-    option: [
-      {
-        label: 'abc',
-        value: 'abc',
-        id: 'abc',
-      },
-      {
-        label: 'abc',
-        value: 'abc',
-        id: 'abc',
-      },
-      {
-        label: 'abc',
-        value: 'abc',
-        id: 'abc',
-      },
-      {
-        label: 'abc',
-        value: 'abc',
-        id: 'abc',
-      },
-    ],
-    content: 'Content 3',
-    isPulldown: true,
-    placeholder: 'Bộ phận',
-  },
-  {
-    label: 'Tin Dự án',
-    content: 'Content 4',
-  },
-];
 
 type RecruitmentFilterTypes = {
   location?: OptionType;
