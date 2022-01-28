@@ -139,6 +139,7 @@ const Header: React.FC<HeaderProps> = ({
                           href={val.reference?.slug || val.link}
                           customClassName="o-header_nav_link"
                           handleClick={() => setIsOpenMenu(!isOpenMenu)}
+                          target={val.target}
                           useExternal={val.reference?.slug ? false : checkExternalUrl(val.link)}
                         >
                           {val.title}
