@@ -111,23 +111,39 @@ const InfoMap: React.FC<InfoProps> = ({
   idProjectActive,
   projectDataList,
 }) => {
-  const settings = useMemo(() => ({
-    dots: true,
-    dotsClass: 'slick-dots o-carousel_dots',
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    rows: 2,
-    slidesPerRow: 2,
-    arrows: false,
-    infinite: false,
-    cssEase: 'ease-in-out',
-    customPaging() {
-      return (
-        <span className="o-carousel_dot white" />
-      );
-    },
-  }), []);
-
+  const renderCarousel = () => {
+    const settings = {
+      dots: true,
+      dotsClass: 'slick-dots o-carousel_dots',
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      rows: 2,
+      slidesPerRow: 2,
+      arrows: false,
+      infinite: false,
+      cssEase: 'ease-in-out',
+      customPaging() {
+        return (
+          <span className="o-carousel_dot white" />
+        );
+      },
+    };
+    return (
+      <Carousel settings={settings}>
+        {projectDataList?.map((x, i) => (
+          <div
+            onMouseEnter={() => fnItem?.onMouseEnter && fnItem.onMouseEnter(x)}
+            onMouseLeave={() => fnItem?.onMouseLeave && fnItem.onMouseLeave(x)}
+            onClick={() => fnItem?.onClick && fnItem.onClick(x)}
+            key={i.toString()}
+            className={`t-projectMap_info_branch ${idProjectActive ? 'zoom-in' : ''} ${idProjectActive === x.id ? 'zoom-out' : ''}`}
+          >
+            <Image src={x.thumbnail} ratio="257x64" />
+          </div>
+        ))}
+      </Carousel>
+    );
+  };
   return (
     <div className="t-projectMap_info">
       <div className="t-projectMap_info_wrap">
@@ -148,21 +164,9 @@ const InfoMap: React.FC<InfoProps> = ({
             {listCategory?.map((item, index) => (
               <TabPanel key={`tab-panel-${index.toString()}`} active={item.id === idActive}>
                 <div className="t-projectMap_info_carousel">
-                  {projectDataList && (
-                    <Carousel settings={settings}>
-                      {projectDataList.map((x, i) => (
-                        <div
-                          onMouseEnter={() => fnItem?.onMouseEnter && fnItem.onMouseEnter(x)}
-                          onMouseLeave={() => fnItem?.onMouseLeave && fnItem.onMouseLeave(x)}
-                          onClick={() => fnItem?.onClick && fnItem.onClick(x)}
-                          key={i.toString()}
-                          className={`t-projectMap_info_branch ${idProjectActive ? 'zoom-in' : ''} ${idProjectActive === x.id ? 'zoom-out' : ''}`}
-                        >
-                          <Image src={x.thumbnail} ratio="257x64" />
-                        </div>
-                      ))}
-                    </Carousel>
-                  )}
+                  {projectDataList && projectDataList.length > 0 ? (
+                    renderCarousel()
+                  ) : null}
                 </div>
               </TabPanel>
             ))}
@@ -229,7 +233,7 @@ const ProjectMap: React.FC<ProjectMapProps> = ({
               idProjectActive={idProjectActive}
               image={image}
               listPoint={findCategoryActive(idActive, listCategory)?.listPoint}
-              // fnItem={fnItem}
+            // fnItem={fnItem}
             />
           )}
         </div>
