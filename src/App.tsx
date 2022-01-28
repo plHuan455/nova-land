@@ -5,10 +5,12 @@ import React, { lazy, Suspense } from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { Provider } from 'react-redux';
 import {
-  BrowserRouter, Route, Routes,
+  BrowserRouter, Outlet, Route, Routes, useLocation,
 } from 'react-router-dom';
 
 import Loading from 'components/atoms/Loading';
+import MainLayoutContainer from 'container/MainLayout';
+import MainLayoutRecruitmentContainer from 'container/MainLayoutRecruitment';
 import useInitializeRender from 'hooks/useInitializeRender';
 import Contact from 'pages/Contact';
 import EventDetail from 'pages/EventDetail';
@@ -26,11 +28,11 @@ const PageNav = lazy(() => import('navigations/PageNav'));
 
 const routes = [
   {
-    path: '/tin-tuc',
+    path: 'tin-tuc',
     element: <News />,
   },
   {
-    path: '/tin-tuc-du-an',
+    path: 'tin-tuc-du-an',
     element: <NewsCategory />,
   },
   {
@@ -38,27 +40,27 @@ const routes = [
     element: <NewsDetail />,
   },
   {
-    path: '/bao-cao-thuong-nien',
+    path: 'bao-cao-thuong-nien',
     element: <ReportList />,
   },
   {
-    path: '/tuyen-dung',
+    path: 'tuyen-dung',
     element: <Recruitment />,
   },
   {
-    path: '/co-hoi-nghe-nghiep',
+    path: 'co-hoi-nghe-nghiep',
     element: <RecruitmentList />,
   },
   {
-    path: '/su-kien-chi-tiet/:slug',
+    path: 'su-kien-chi-tiet/:slug',
     element: <EventDetail />,
   },
   {
-    path: '/tim-kiem',
+    path: 'tim-kiem',
     element: <SearchResults />,
   },
   {
-    path: '/chi-tiet-tuyen-dung',
+    path: 'chi-tiet-tuyen-dung',
     element: <RecruitmentDetail />,
   },
   {
@@ -74,11 +76,44 @@ const routes = [
 const App: React.FC = () => {
   useInitializeRender();
 
+  if (useLocation().pathname.includes('/danh-sach-tuyen-dung')) {
+    return (
+      <Suspense fallback={<Loading isShow variant="fullScreen" />}>
+        <Routes>
+          <Route
+            path="/"
+            element={(
+              <MainLayoutRecruitmentContainer>
+                <Outlet />
+              </MainLayoutRecruitmentContainer>
+          )}
+          >
+            <Route
+              path="danh-sach-tuyen-dung"
+              element={<RecruitmentList />}
+            />
+          </Route>
+        </Routes>
+      </Suspense>
+    );
+  }
   return (
     <Suspense fallback={<Loading isShow variant="fullScreen" />}>
       <Routes>
-        <Route path="/" element={<PageNav />}>
-          <Route path=":slug" element={<PageNav />} />
+        <Route
+          path="/"
+          element={(
+            <MainLayoutContainer>
+              <Outlet />
+            </MainLayoutContainer>
+          )}
+        >
+          {routes.map((item, index) => (
+            <Route
+              key={`router-${index.toString()}`}
+              {...item}
+            />
+          ))}
         </Route>
         {routes.map((item, index) => (
           <Route key={`router-${index.toString()}`} {...item} />

@@ -8,6 +8,7 @@ const HeaderRecruitmentContainer: React.FC = () => (
   <Header
     headerMenu={headerRecruitmentMenuDummy}
     logoSrc={logo}
+    isPageRecruitment
   />
 );
 

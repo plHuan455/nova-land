@@ -329,4 +329,27 @@
       }
     }
   }
+
+  &-isPageRecruitment {
+    @include tablet-up {
+      #{$root} {
+        &_right {
+          width: 100%;
+          justify-content: flex-end;
+        }
+
+        &_languagePicker {
+          margin-left: 0;
+        }
+
+        &_menu {
+          width: 100%;
+        }
+
+        &_nav {
+          justify-content: center;
+        }
+      }
+    }
+  }
 }
