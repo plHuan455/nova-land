@@ -10,12 +10,14 @@ const list1 = [
       x: 281,
       y: 483,
     },
+    projects: [],
     reference: {
       images: branch1,
     },
   },
   {
     id: 2,
+    projects: [],
     point: {
       x: 255,
       y: 498,
@@ -26,6 +28,7 @@ const list1 = [
   },
   {
     id: 3,
+    projects: [],
     point: {
       x: 278,
       y: 520,
@@ -36,6 +39,7 @@ const list1 = [
   },
   {
     id: 4,
+    projects: [],
     point: {
       x: 243,
       y: 534,
@@ -46,6 +50,7 @@ const list1 = [
   },
   {
     id: 5,
+    projects: [],
     point: {
       x: 210,
       y: 550,
@@ -59,6 +64,7 @@ const list1 = [
 const list2 = [
   {
     id: 1,
+    projects: [],
     point: {
       x: 100,
       y: 100,
@@ -69,6 +75,7 @@ const list2 = [
   },
   {
     id: 2,
+    projects: [],
     point: {
       x: 150,
       y: 130,
@@ -79,6 +86,7 @@ const list2 = [
   },
   {
     id: 3,
+    projects: [],
     point: {
       x: 150,
       y: 180,
@@ -92,6 +100,7 @@ const list2 = [
 const list3 = [
   {
     id: 1,
+    projects: [],
     point: {
       x: 261,
       y: 353,

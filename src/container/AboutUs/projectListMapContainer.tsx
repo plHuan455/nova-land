@@ -5,8 +5,12 @@ import { useDispatch } from 'react-redux';
 
 import img from 'assets/images/bg_project_list_map.png';
 import { OptionType } from 'components/molecules/Pulldown';
-import ProjectListMap, { ItemBranch, ProjectListMapGround, ProjectListMapInfo } from 'components/templates/ProjectListMap';
-import geMapService from 'services/maps';
+import ProjectListMap, {
+  ItemBranch,
+  ProjectListMapGround,
+  ProjectListMapInfo,
+} from 'components/templates/ProjectListMap';
+import getMapService from 'services/maps';
 import { getProjectsService } from 'services/project';
 import { useAppSelector } from 'store/hooks';
 import { getCitiesAction } from 'store/location';
@@ -68,7 +72,7 @@ const ProjectListMapContainer: React.FC<ProjectListMapContainerProps> = ({
           ? { project_id: projectId }
           : {};
       setLoading(true);
-      const prjList = await geMapService(params);
+      const prjList = await getMapService(params);
       const convertPrjList = prjList.map((item) => ({
         id: item.id,
         point: {

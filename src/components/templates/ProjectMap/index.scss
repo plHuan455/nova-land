@@ -10,23 +10,22 @@
   }
 
   &_map {
-    max-width: calc(471 / #{$width-in-container-value} * 100%);
-
+    max-width: calc(373 / #{$width-in-container-value} * 100%);
     @include tablet-down {
-      max-width: calc(371 / #{$width-in-container-value} * 100%);
+      max-width: 45%;
     }
 
     @include small-mobile {
       margin: rem(10) auto 0;
-      max-width: rem(471);
+      max-width: 100%;
     }
 
     &_img {
       position: relative;
 
       & > img {
-        height: 100%;
-        left: 0;
+        left: rem(4);
+        max-width: 100%;
         object-fit: cover;
         position: absolute;
         top: 0;
@@ -49,13 +48,13 @@
   }
 
   &_info {
-    width: calc(739 / #{$width-in-container-value} * 100%); // 760 not scroll 
     position: absolute;
     right: 0;
     top: calc(194 / #{$height-map} * 100%);
+    width: calc(739 / #{$width-in-container-value} * 100%); // 760 not scroll 
 
     @include tablet-down {
-      max-width: calc(750 / #{$width-in-container-value} * 100%);
+      max-width: calc(650 / #{$width-in-container-value} * 100%);
       top: calc(150 / #{$height-map} * 100%);
     }
 
@@ -79,7 +78,7 @@
       .o-tabs_labels::-webkit-scrollbar {
         display: none;
       }
-    
+
       .o-tabs_labels {
         -ms-overflow-style: none;
         scrollbar-width: none;
