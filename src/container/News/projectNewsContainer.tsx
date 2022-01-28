@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { tabDataProjectNews } from 'assets/dataDummy/newsList';
+import dataCorporateNews, { tabDataProjectNews } from 'assets/dataDummy/newsList';
 import HomeNews from 'components/templates/HomeNews';
 import Section from 'components/templates/Section';
 
@@ -11,6 +11,7 @@ const ProjectNewsContainer: React.FC = () => (
         title="Tin dự án"
         href="/"
         tabDataHomeNews={tabDataProjectNews}
+        newsList={dataCorporateNews}
       />
     </Section>
   </div>

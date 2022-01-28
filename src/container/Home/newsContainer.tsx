@@ -1,13 +1,14 @@
-import React, { useEffect, useMemo } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
+import { useQuery } from 'react-query';
 import { useDispatch } from 'react-redux';
 
-import imgHomeNewsCard from 'assets/images/HomeNews/img_homeNewsCard.png';
-import imgHomeNewsCard2 from 'assets/images/HomeNews/img_homeNewsCard2.png';
-import imgHomeNewsCard3 from 'assets/images/HomeNews/img_homeNewsCard3.png';
 import HomeNews from 'components/templates/HomeNews';
 import Section from 'components/templates/Section';
+import { getNewsService } from 'services/home';
 import { getNewsCategoryAction } from 'store/home';
 import { useAppSelector } from 'store/hooks';
+import { DEFAULT_QUERY_OPTION } from 'utils/constants';
+import { getImageURL, formatDateDDMMYYYY } from 'utils/functions';
 
 export interface NewsTypes {
   button: {
@@ -27,39 +28,41 @@ const NewsContainer: React.FC<NewsBlock> = ({
 }) => {
   const dispatch = useDispatch();
   const { newsCategoryList } = useAppSelector((state) => state.home);
-
+  const [indexActive, setIndexActive] = useState(0);
   // TODO: get news list by a category
   const tabDataHomeNewsList = useMemo(() => {
     if (newsCategoryList) {
       return newsCategoryList.map((item) => ({
         titleTab: item.name,
-        dataTab: [
-          {
-            imgSrc: imgHomeNewsCard,
-            title: 'Người dân TP.HCM đón Giáng sinh sớm, check-in cùng cây thông 25 m',
-            desc: 'Còn hơn một tháng nữa mới đến Giáng sinh, nhưng Novaland Gallery đã trang hoàng một tháng nữa mới đến Giáng sinh',
-            date: '23/11/2021',
-            totalViews: 111,
-          },
-          {
-            imgSrc: imgHomeNewsCard2,
-            title: 'Sắp khởi công đường Hàm Kiệm – Tiến Thành',
-            desc: 'Ban Quản lý Dự án và xây dựng công trình giao thông thuộc Sở Giao thông vận tải xây dựng công trình giao thông thuộc Sở Giao thông vận tải',
-            date: '23/11/2021',
-            totalViews: 111,
-          },
-          {
-            imgSrc: imgHomeNewsCard3,
-            title: 'Nhiều hạng mục của sân bay Long Thành sẽ khởi công năm sau',
-            desc: 'Báo cáo Quốc hội việc triển khai dự án sân bay Long Thành, Chính phủ cho biết mó hội việc triển khai dự án sân bay Long Thành, Chính phủ cho biết',
-            date: '23/11/2021',
-            totalViews: 111,
-          },
-        ],
       }));
     }
     return [];
   }, [newsCategoryList]);
+
+  const { data } = useQuery(
+    ['getHomeNewsList', newsCategoryList, indexActive], () => getNewsService({
+      is_popular: true,
+      limit: '4',
+      category_slug: newsCategoryList ? newsCategoryList[indexActive].slug : undefined,
+    }), {
+      ...DEFAULT_QUERY_OPTION,
+      enabled: !!newsCategoryList,
+    },
+  );
+
+  const newsData = useMemo(() => {
+    if (data && data.length > 0) {
+      return data.map((item) => ({
+        imgSrc: getImageURL(item.thumbnail),
+        title: item.title,
+        desc: item.description,
+        date: formatDateDDMMYYYY(item.publishedAt),
+        totalViews: item.viewed,
+        href: `/tin-tuc-chi-tiet/${item.slug}`,
+      }));
+    }
+    return [];
+  }, [data]);
 
   useEffect(() => {
     if (!newsCategoryList) {
@@ -78,6 +81,8 @@ const NewsContainer: React.FC<NewsBlock> = ({
           target={blocks.button.target}
           nameButton={blocks.button.text}
           tabDataHomeNews={tabDataHomeNewsList}
+          newsList={newsData}
+          handleActive={setIndexActive}
         />
       </Section>
     </div>

@@ -7,7 +7,7 @@ import Image from 'components/atoms/Image';
 import Link from 'components/atoms/Link';
 import Text from 'components/atoms/Text';
 import Container from 'components/organisms/Container';
-import { Tab, TabPanel, Tabs } from 'components/organisms/Tabs';
+import { Tab, Tabs } from 'components/organisms/Tabs';
 
 export interface HomeNewsCardProps {
   imgSrc: string;
@@ -80,7 +80,6 @@ export const HomeNewsCard: React.FC<HomeNewsCardProps> = ({
 
 export interface dataTabsType {
   titleTab: string;
-  dataTab: HomeNewsCardProps[];
 }
 
 interface HomeNewsProps {
@@ -88,11 +87,19 @@ interface HomeNewsProps {
   href: string;
   target?: string;
   nameButton?: string;
-  tabDataHomeNews: dataTabsType[],
+  tabDataHomeNews: dataTabsType[];
+  newsList?: HomeNewsCardProps[];
+  handleActive?: (id: number) => void;
 }
 
 const HomeNews: React.FC<HomeNewsProps> = ({
-  title, tabDataHomeNews, href, target, nameButton,
+  title,
+  tabDataHomeNews,
+  href,
+  target,
+  nameButton,
+  newsList,
+  handleActive,
 }) => {
   const [indexActive, setIndexActive] = useState(0);
 
@@ -112,26 +119,32 @@ const HomeNews: React.FC<HomeNewsProps> = ({
                   key={`tab-${index.toString()}`}
                   label={item.titleTab}
                   active={index === indexActive}
-                  handleClick={() => setIndexActive(index)}
+                  handleClick={() => {
+                    setIndexActive(index);
+                    if (handleActive) handleActive(index);
+                  }}
                 />
               ))
             }
           </Tabs>
-          {
-            tabDataHomeNews.map((ele, idx) => (
-              <TabPanel key={`homeNews-${idx.toString()}`} active={idx === indexActive}>
-                <div className="t-homeNews_content">
-                  {ele.dataTab.map((item, index) => (
-                    <div className="t-homeNews_item" key={`homeNews-homeNewsCard-${index.toString()}`}>
-                      <HomeNewsCard
-                        {...item}
-                      />
-                    </div>
-                  ))}
+          <div className="t-homeNews_list">
+            {
+              newsList && newsList.length > 0 ? newsList.map((ele, idx) => (
+                <div className="t-homeNews_content" key={`homeNews-homeNewsCard-${idx.toString()}`}>
+                  <div className="t-homeNews_item">
+                    <HomeNewsCard
+                      {...ele}
+                    />
+                  </div>
                 </div>
-              </TabPanel>
-            ))
-          }
+              ))
+                : (
+                  <div className="t-homeNews_empty">
+                    <Text modifiers={['center', '20x28']}>Không có tin tức</Text>
+                  </div>
+                )
+            }
+          </div>
           <div className="t-homeNews_button">
             <Link href={href} target={target}>
               <Button modifiers="outlineSpanishGray">
@@ -148,6 +161,8 @@ const HomeNews: React.FC<HomeNewsProps> = ({
 HomeNews.defaultProps = {
   target: undefined,
   nameButton: undefined,
+  newsList: undefined,
+  handleActive: undefined,
 };
 
 export default HomeNews;
