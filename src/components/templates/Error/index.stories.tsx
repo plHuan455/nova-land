@@ -15,8 +15,7 @@ export default {
 export const normal: Story = () => (
   <Router>
     <Error
-      title="Chúng tôi xin lỗi vì sự bất tiện này!"
-      description="Có lẽ trang bạn đang tìm kiếm không tồn tại."
+      statusCode={404}
       btnHomeText="Trở về trang chủ"
     />
   </Router>
