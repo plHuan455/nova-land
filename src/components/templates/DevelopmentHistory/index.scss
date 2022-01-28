@@ -81,10 +81,6 @@
       width: 0;
     }
 
-    &_description {
-      @include text-overflow(4);
-    }
-
     &_image {
       margin-top: rem(16);
     }
