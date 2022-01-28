@@ -97,8 +97,8 @@
   padding: rem(72) 0 rem(30);
 
   &_background {
-    width: 100%;
     align-self: flex-start;
+    width: 100%;
   }
 
   @include small-mobile {

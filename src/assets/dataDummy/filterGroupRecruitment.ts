@@ -1,3 +1,4 @@
+import { OptionType } from 'components/molecules/Pulldown';
 import { FilterGroupProps } from 'components/organisms/FilterGroup';
 
 const dataFilterList: FilterGroupProps[] = [
@@ -145,6 +146,73 @@ const dataFilterList: FilterGroupProps[] = [
         content: 'Thực tập',
       },
     ],
+  },
+];
+
+export const positionFilterRecruitOptions: OptionType[] = [
+  {
+    label: 'Chuyên viên',
+    value: '1',
+  },
+  {
+    label: 'Trợ lý',
+    value: '2',
+  },
+  {
+    label: 'Nhân viên',
+    value: '3',
+  },
+  {
+    label: 'Marketing',
+    value: '4',
+  },
+  {
+    label: 'Tư vấn',
+    value: '5',
+  },
+];
+export const locationFilterRecruitOptions: OptionType[] = [
+  {
+    label: 'Hà Nội',
+    value: '1',
+  },
+  {
+    label: 'Hồ Chí Minh',
+    value: '2',
+  },
+  {
+    label: 'Đà Nẵng',
+    value: '3',
+  },
+  {
+    label: 'Hải Phòng',
+    value: '4',
+  },
+  {
+    label: 'Bình Thuận',
+    value: '5',
+  },
+];
+export const departmentFilterRecruitOptions: OptionType[] = [
+  {
+    label: 'Kỹ thuật viên',
+    value: '1',
+  },
+  {
+    label: 'Lao công',
+    value: '2',
+  },
+  {
+    label: 'Lao công 2',
+    value: '3',
+  },
+  {
+    label: 'Chuyên viên',
+    value: '4',
+  },
+  {
+    label: 'Hành chính - Văn phòng',
+    value: '5',
   },
 ];
 

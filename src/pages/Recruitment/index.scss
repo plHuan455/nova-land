@@ -6,7 +6,26 @@
   &_branchListContainer {
     background: $white-smoke-8f8;
   }
+
   &_signUpJobPostingsContainer {
     background: $anti-flash-white-4f9;
+  }
+
+  &_filterRecruitmentContainer {
+    position: relative;
+    z-index: $z-1;
+
+    .t-heroBanner {
+      &_info {
+        bottom: 40/577*100%;
+      }
+
+      .a-image {
+        height: calc(100vh - 80px);
+        @include tablet-up {
+          height: calc(100vh - 93px);
+        }
+      }
+    }
   }
 } 

@@ -1,10 +1,10 @@
 .m-infoContactRecruitment {
   &_groupbtn,
   &_info {
-    padding: rem(24);
+    background-color: $white;
     border-radius: rem(5);
     box-shadow: 0 rem(25) rem(35) $chocolate-white;
-    background-color: $white;
+    padding: rem(24);
   }
 
   &_groupbtn {
@@ -19,19 +19,19 @@
     margin-top: rem(24);
 
     .a-divider {
-      margin-top: rem(18);
       margin-bottom: rem(18);
+      margin-top: rem(18);
     }
   }
 
   &_item {
-    display: flex;
     align-items: center;
+    display: flex;
   }
 
   &_img {
-    width: 100%;
     max-width: rem(54);
+    width: 100%;
   }
 
   &_content {

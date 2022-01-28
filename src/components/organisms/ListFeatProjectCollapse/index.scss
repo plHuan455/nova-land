@@ -13,8 +13,8 @@
     }
 
     &-wrapLink {
-      display: flex;
       align-items: center;
+      display: flex;
       margin: rem(12) 0 rem(16);
 
       @include mobile-down {

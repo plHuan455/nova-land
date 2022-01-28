@@ -1,9 +1,9 @@
 .t-shareholderCard {
   $root: &;
   background: $white;
-  height: 100%;
   display: flex;
   flex-direction: column;
+  height: 100%;
   justify-content: space-between;
 
   &:hover {
@@ -27,9 +27,9 @@
   &_thumbnail {
     &-stocks {
       border-bottom: rem(1) solid $gainsboro;
-      padding: rem(10) rem(32);
       max-height: rem(322);
       overflow: auto;
+      padding: rem(10) rem(32);
       @include scroll-bars(8, $gainsboro);
 
       @include tablet-down {

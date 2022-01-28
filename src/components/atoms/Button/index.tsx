@@ -17,10 +17,12 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     | 'outlineSpanishGray';
   isLoading?: boolean;
   iconName?: IconName;
+  size?: 'h70';
 }
 
 const Button: React.FC<ButtonProps> = ({
-  children, modifiers, name, id, className, isLoading, disabled, type = 'button',
+  children, modifiers, name, id, size,
+  className, isLoading, disabled, type = 'button',
   iconName,
   onClick,
 }) => (
@@ -33,6 +35,7 @@ const Button: React.FC<ButtonProps> = ({
     className={mapModifiers('a-button',
       modifiers,
       className,
+      size,
       isLoading && 'loading')}
   >
     {
@@ -52,6 +55,7 @@ Button.defaultProps = {
   modifiers: 'primary',
   isLoading: false,
   iconName: undefined,
+  size: undefined,
 };
 
 export default Button;

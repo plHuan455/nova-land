@@ -47,10 +47,10 @@
 
   &_brands {
     opacity: 0;
+    padding: rem(12);
     position: relative;
     transform: translateY(30px);
     transition: 0.5s;
-    padding: rem(12);
 
     img {
       display: block;

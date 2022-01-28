@@ -55,7 +55,7 @@
       @include text-overflow();
     }
 
-   &_time {
+    &_time {
       #{$root}-smallTitle & {
         color: $black025;
         margin-top: rem(28);
@@ -78,7 +78,7 @@
   }
 
   &-smallVertical {
-    &:not(#{$root}-smallTitle)  {
+    &:not(#{$root}-smallTitle) {
       background: #f8f8f8;
       padding: rem(12);
     }

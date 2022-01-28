@@ -153,21 +153,21 @@
 }
 
 @font-face {
-  font-family: 'Noto Serif Display';
-  src: url('#{$font-path}NotoSerifDisplay-SemiBold.woff2') format('woff2'),
-      url('#{$font-path}NotoSerifDisplay-SemiBold.woff') format('woff');
-  font-weight: 600;
-  font-style: normal;
   font-display: swap;
+  font-family: 'Noto Serif Display';
+  font-style: normal;
+  font-weight: 600;
+  src: url('#{$font-path}NotoSerifDisplay-SemiBold.woff2') format('woff2'),
+    url('#{$font-path}NotoSerifDisplay-SemiBold.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'Noto Serif Display';
-  src: url('#{$font-path}NotoSerifDisplay-SemiBoldItalic.woff2') format('woff2'),
-      url('#{$font-path}NotoSerifDisplay-SemiBoldItalic.woff') format('woff');
-  font-weight: 600;
-  font-style: italic;
   font-display: swap;
+  font-family: 'Noto Serif Display';
+  font-style: italic;
+  font-weight: 600;
+  src: url('#{$font-path}NotoSerifDisplay-SemiBoldItalic.woff2') format('woff2'),
+    url('#{$font-path}NotoSerifDisplay-SemiBoldItalic.woff') format('woff');
 }
 
 @font-face {

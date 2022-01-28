@@ -1,6 +1,6 @@
 .t-bannerRecruitment {
-  position: relative;
   background: $dark-midnight;
+  position: relative;
   z-index: -1;
 
   .a-image {
@@ -10,7 +10,7 @@
   &_info {
     position: absolute;
     top: 50%;
-    width: 100%;
     transform: translateY(-50%);
+    width: 100%;
   }
 }

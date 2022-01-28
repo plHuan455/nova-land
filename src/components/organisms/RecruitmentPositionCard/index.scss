@@ -42,10 +42,10 @@
       border-top: rem(1) solid $columbia-blue;
       flex: 0 0 100%;
       flex-direction: row;
+      justify-content: flex-start;
       margin-top: rem(14);
       max-width: 100%;
       padding-top: rem(6);
-      justify-content: flex-start;
     }
 
     &_expDate {

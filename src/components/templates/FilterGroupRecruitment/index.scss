@@ -1,15 +1,15 @@
 .t-filterGroupRecruitment {
   @include tablet-down {
-    position: fixed;
-    width: 85%;
     background: $white-smoke-8f8;
     height: calc(100vh - 80px);
     overflow-y: auto;
     padding: rem(10);
-    transition: 0.5s;
-    z-index: 103;
+    position: fixed;
     right: -100%;
     top: rem(80);
+    transition: 0.5s;
+    width: 85%;
+    z-index: 103;
   }
 
   &-open {
@@ -17,17 +17,17 @@
   }
 
   &_mbFilter {
-    display: none;
+    background: $dark-midnight-blue0;
+    border-top-left-radius: rem(10);
     border-top-right-radius: rem(10);
     cursor: pointer;
-    transform: rotate(270deg);
-    background: $dark-midnight-blue0;
+    display: none;
+    padding: rem(8);
     position: fixed;
+    top: 38%;
+    transform: rotate(270deg);
     transition: 0.4s;
     z-index: 90;
-    border-top-left-radius: rem(10);
-    top: 38%;
-    padding: rem(8);
 
     @include tablet-down {
       @include adjust-flex();
@@ -39,10 +39,10 @@
     display: none;
 
     @include tablet-down {
-      width: rem(28);
-      height: rem(28);
       background: $ucla-blue;
       border-radius: rem(10);
+      height: rem(28);
+      width: rem(28);
       @include adjust-flex();
     }
   }

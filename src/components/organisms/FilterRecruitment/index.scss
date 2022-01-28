@@ -7,21 +7,42 @@
 
   &_tab {
     $tab: &;
-    margin-top: rem(40);
+    background: $glitter04;
+    border-radius: rem(5);
+    margin: rem(40) auto 0;
+    max-width: rem(325);
+    @include desktop-up {
+      max-width: rem(930) !important;
+    }
+    @include tablet-up {
+      @include adjust-flex(unset, center);
+    }
+    @include mobile-up {
+      max-width: rem(675);
+    }
 
-    &-items {
+    &_item {
       position: relative;
       width: 100%;
 
       &::before {
-        border: 1px solid $white03;
+        background-color: $white03;
         content: '';
-        height: rem(28);
+        height: 1px;
         left: 0;
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 0;
+        width: 100%;
+        
+        @include tablet-up {
+          height: rem(28);
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 1px;
+        }
       }
+      
 
       &:first-child {
         border-bottom-left-radius: rem(5);
@@ -32,9 +53,10 @@
         }
       }
 
-      &:last-child {
-        border-bottom-right-radius: rem(5);
-        border-top-right-radius: rem(5);
+      &.minimize {
+        @include tablet-up {
+          width: 37%;
+        }
       }
 
       &-active {
@@ -52,50 +74,46 @@
       }
     }
 
+    &_button {
+      @include tablet-up {
+        width: 40%;
+      }
+
+      .a-button {
+        @include tablet-up {
+          border-bottom-left-radius: 0;
+          border-top-left-radius: 0;
+
+          &::before {
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+          }
+        }
+        @include tablet-down {
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+
+          &::before {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+          }
+        }
+      }
+    }
+
     &-pulldown {
       min-width: rem(149);
       padding: rem(11) 0;
       width: 100%;
-    }
 
-    .o-tabs { 
-      $root: &;
-      background: $glitter04;
-      border-radius: rem(5);
-
-      &_labels {
-        @include scroll-bars(8);
-        overflow-x: unset;
-        width: 100%;
+      @include tablet-down {
+        padding: rem(5) 0;
       }
-
-      &_label {
-        color: $white;
-        font-family: Lexend;
-        font-weight: 400;
-        margin: 0 rem(24);
-        text-align: center;
-        width: 100%;
-        @include font-base(18, 28);
-      }
-
-      &_tab {
-        padding: rem(21) 0;
-        width: 100%;
-
-        &-active {
-          &::after {
-            display: none;
-          }
-        }
-      }
-
     }
 
     .m-pulldown {
       background: transparent;
       border: none;
-      box-shadow: none;
       color: $white;
 
       &-default {
@@ -104,8 +122,9 @@
         }
 
         &__option {
+          background-color: $white;
           color: $rich-black;
-          background-color:$white;
+
           &:hover {
             background-color: $camel;
           }
