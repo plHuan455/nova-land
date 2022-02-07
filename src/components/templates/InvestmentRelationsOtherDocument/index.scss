@@ -14,6 +14,7 @@
 
     &-last {
       padding-top: rem(16);
+      cursor: pointer;
     }
     &-title {
       &:hover {
@@ -39,6 +40,7 @@
     opacity: 0;
     transition: all $transition ease-in-out;
     visibility: visible;
+    display: none;
     @include list-style-none();
 
     &:hover {
@@ -53,6 +55,7 @@
       max-height: 100%;
       opacity: 1;
       visibility: visible;
+      display: block;
     }
 
     #{$root}_subHead {

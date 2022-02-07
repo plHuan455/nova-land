@@ -61,6 +61,7 @@ export const Menu: React.FC<MenuProps> = ({ data }) => {
     setHoverActive(id);
     setIdSubActive(-1);
   };
+
   return (
     <ul className="t-menu">
       {data?.map((e, i) => (
@@ -72,7 +73,7 @@ export const Menu: React.FC<MenuProps> = ({ data }) => {
           )}
           key={`aboutUsMenu-${i.toString()}`}
         >
-          {e?.subMenu?.length ? (
+          {e?.subMenu?.length > 0 ? (
             <div
               onMouseEnter={() => onHoverSub(e.id)}
               onMouseLeave={() => onHoverSub(-1)}
