@@ -121,13 +121,15 @@ export const LeadershipDetail: React.FC<LeadershipDetailProps> = ({
 );
 
 export interface dataTabsLeadershipType {
-  titleTab: string;
-  dataTab: LeadershipDetailProps[];
+  id: number;
+  name: string;
+  slug: string;
 }
 
 export interface LeadershipProps {
   title: string;
-  tabDataLeadership: dataTabsLeadershipType[];
+  tabCategoryLeadership: dataTabsLeadershipType[];
+  tabDataLeaderShip?: LeadershipDetailProps[];
   hasButtonViewAll: boolean;
   handleClickViewAll?: () => void;
   handleChangeTab: (index: number) => void;
@@ -135,8 +137,13 @@ export interface LeadershipProps {
 }
 
 const Leadership: React.FC<LeadershipProps> = ({
-  title, tabDataLeadership, hasButtonViewAll, handleClickViewAll, handleChangeTab,
+  title,
+  tabCategoryLeadership,
+  hasButtonViewAll,
+  handleClickViewAll,
+  handleChangeTab,
   loading,
+  tabDataLeaderShip,
 }) => {
   const [indexActive, setIndexActive] = useState(0);
   const [indexShow, setIndexShow] = useState(0);
@@ -151,11 +158,11 @@ const Leadership: React.FC<LeadershipProps> = ({
         <div className="t-leadership_wrapper">
           <Tabs variableMutate={indexActive}>
             {
-              tabDataLeadership.map((item, index) => (
+              tabCategoryLeadership.map((item, index) => (
                 <Tab
                   size="20x28"
                   key={`tab-${index.toString()}`}
-                  label={item.titleTab}
+                  label={item.name}
                   active={index === indexActive}
                   handleClick={() => {
                     setIndexActive(index);
@@ -167,12 +174,12 @@ const Leadership: React.FC<LeadershipProps> = ({
             }
           </Tabs>
           { loading ? <Loading isShow />
-            : tabDataLeadership.map((ele, idx) => (
+            : tabCategoryLeadership.map((_, idx) => (
               <TabPanel key={`leadership-${idx.toString()}`} active={idx === indexActive}>
                 <div className="t-leadership_item">
                   <div className="t-leadership_item_left">
                     {
-                      ele.dataTab.map((item, index) => (
+                      tabDataLeaderShip?.map((item, index) => (
                         <div
                           className="t-leadership_item_card"
                           key={`leadership-card-${index.toString()}`}
@@ -197,7 +204,7 @@ const Leadership: React.FC<LeadershipProps> = ({
                   </div>
                   <div className="t-leadership_item_right">
                     {
-                      ele.dataTab.map((value, number) => (
+                      tabDataLeaderShip?.map((value, number) => (
                         <div
                           className={mapModifiers('t-leadership_item_detail', number === indexShow && 'show')}
                           key={`leadership-detail-${number.toString()}`}
