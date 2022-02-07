@@ -1,0 +1,79 @@
+.t-menu {
+  $root: &;
+  overflow: hidden;
+  width: 100%;
+  @include list-style-none();
+
+  &_subHead {
+    align-items: center;
+    border-bottom: 1px solid $dark-midnight-blue;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: rem(16) rem(2);
+
+    &-last {
+      padding-top: rem(16);
+    }
+    &-title {
+      &:hover {
+        background-color: $ghost-white;
+      }
+    }
+  }
+
+  &_link {
+    border-bottom: 1px solid $columbia-blue;
+    display: block;
+    display: flex;
+    padding: rem(16) 0 rem(16) rem(12);
+    @include adjust-flex($justify-content: space-between);
+
+    &.active {
+      background: $white;
+    }
+  }
+
+  &_subList {
+    max-height: 0;
+    opacity: 0;
+    transition: all $transition ease-in-out;
+    visibility: visible;
+    @include list-style-none();
+
+    &:hover {
+      background: $ghost-white;
+      opacity: 1;
+    }
+  }
+
+  &_item-show {
+
+    #{$root}_subList {
+      max-height: 100%;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    #{$root}_subHead {
+      &-icon {
+        transform: rotate(180deg);
+        transition: all $transition ease-in-out;
+      }
+    }
+  }
+}
+
+.t-investmentRelationsOtherDocument {
+  &_content {
+    @include adjust-flex($justify-content: space-between, $align-item: flex-start);
+  }
+
+  &_left { 
+    flex: 0 0 25%;
+  }
+
+  &_right {
+    flex: 0 0 70%;
+  }
+}

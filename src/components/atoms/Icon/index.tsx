@@ -43,6 +43,7 @@ export const iconList = {
   download: 'download',
   filePDF: 'filePDF',
   downloadBlue: 'downloadBlue',
+  arrowUp: 'arrowUp',
 };
 
 export type IconName = keyof typeof iconList;

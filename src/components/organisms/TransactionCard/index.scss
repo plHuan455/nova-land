@@ -31,15 +31,15 @@
 
     &:hover {
       #{$root}_btn_icon {
-        transition: 0.3s;
         transform: translateX(10px);
+        transition: 0.3s;
       }
     }
   }
 
   &:hover {
-    transition: 0.3s;
     background: $white-smoke-8f8;
+    transition: 0.3s;
 
     #{$root}_thumbnail {
       .a-image {
