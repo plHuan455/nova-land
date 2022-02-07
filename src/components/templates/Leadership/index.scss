@@ -170,6 +170,10 @@
       padding: rem(14) rem(22);
     }
 
+    ul {
+      padding-left: rem(16);
+    }
+
     li {
       position: relative;
       @include list-style-none;
