@@ -61,7 +61,7 @@ const FooterContainer: React.FC<FooterContainerProps> = () => {
 
   return (
     <Footer
-      imgLogo={getImageURL(dataSystem?.logo)}
+      imgLogo={getImageURL(dataSystem?.footer.logoFooter)}
       projectOptions={dummyOption}
       footerLink={menuList}
       method={method}
