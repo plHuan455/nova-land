@@ -58,7 +58,7 @@ const Header: React.FC<HeaderProps> = ({
   });
 
   useWindowScroll(() => {
-    if (window.pageYOffset > 70) {
+    if (window.pageYOffset > 0) {
       setIsScroll(true);
       return;
     }
@@ -134,19 +134,22 @@ const Header: React.FC<HeaderProps> = ({
                     </div>
                   </div>
                   {
-                    headerMenu && headerMenu.map((val, idx) => (
-                      <li className="o-header_nav_item" key={idx.toString()}>
-                        <Link
-                          href={val.reference?.slug ? `/${val.reference?.slug}` : val.link}
-                          customClassName="o-header_nav_link"
-                          handleClick={() => setIsOpenMenu(!isOpenMenu)}
-                          target={val.target}
-                          useExternal={val.reference?.slug ? false : checkExternalUrl(val.link)}
-                        >
-                          {val.title}
-                        </Link>
-                      </li>
-                    ))
+                    headerMenu && headerMenu.map((val, idx) => {
+                      const link = `${val.reference && val.reference.slug !== '/' ? `/${val.reference.slug}` : (val.reference?.slug || val.link)}`;
+                      return (
+                        <li className="o-header_nav_item" key={idx.toString()}>
+                          <Link
+                            href={link}
+                            customClassName="o-header_nav_link"
+                            handleClick={() => setIsOpenMenu(!isOpenMenu)}
+                            target={val.target}
+                            useExternal={val.reference?.slug ? false : checkExternalUrl(val.link)}
+                          >
+                            {val.title}
+                          </Link>
+                        </li>
+                      );
+                    })
                   }
                 </ul>
               </div>
@@ -181,8 +184,7 @@ const Header: React.FC<HeaderProps> = ({
                           setIsOpenLanguage(false);
                           setLanguageSelected(val.label);
                         }}
-                        className={`o-header_languagePicker_list_item ${
-                          val.label === languageSelected ? 'active' : ''
+                        className={`o-header_languagePicker_list_item ${val.label === languageSelected ? 'active' : ''
                         }`}
                         key={idx.toString()}
                       >

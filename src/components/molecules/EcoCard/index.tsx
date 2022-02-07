@@ -25,10 +25,10 @@ const EcoCard: React.FC<EcoCardProps> = ({
       onMouseLeave={() => setIsHover(false)}
     >
       <div className="m-ecoCard_field">
-        <img src={fieldImgSrc} alt="brand" sizes="contain" />
+        <img src={fieldImgSrc} alt="brand" sizes="cover" />
       </div>
       <div className="m-ecoCard_brands">
-        <img src={brandImage} alt="brand" sizes="contain" />
+        <img src={brandImage} alt="brand" sizes="cover" />
       </div>
       <Link href={href} target={target}>
         <div className="m-ecoCard_btn">

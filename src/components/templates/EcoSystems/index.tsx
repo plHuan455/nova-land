@@ -59,7 +59,7 @@ const EcoSystems: React.FC<EcoSystemsProps> = ({ title, desc, dataList }) => {
       <Container>
         <Heading modifiers={['32x48', '500', 'fontNoto', 'jet', 'uppercase', 'center']}>{title}</Heading>
         <div className="t-ecoSystems_desc">
-          <Text type="div" modifiers={['300', 'center', 'dimGray', '16x24']} content={desc} />
+          <Text type="div" modifiers={['400', 'center', 'dimGray', '16x24']} content={desc} />
         </div>
         {dataList?.length > 0 && (
           <div className="t-ecoSystems_brands">
