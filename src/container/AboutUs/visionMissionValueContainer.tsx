@@ -1,6 +1,5 @@
 import React from 'react';
 
-// import dataList from 'assets/dataDummy/visionMissionValue';
 import Animate from 'components/organisms/Animate';
 import VisionMissionValue, { VisionMissionValueProps } from 'components/templates/VisionMissionValue';
 
