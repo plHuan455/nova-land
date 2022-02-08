@@ -1,14 +1,16 @@
 import React from 'react';
 
 import Animate from 'components/organisms/Animate';
-import Banner, { BannerProps } from 'components/organisms/Banner';
+import HeroBanner, { HeroBannerProps } from 'components/templates/HeroBanner';
 
-interface BannerContainerProps extends BannerProps{}
+interface HeroBannerContainerProps extends HeroBannerProps { }
 
-const BannerContainer: React.FC<BannerContainerProps> = ({ ...props }) => (
+const BannerContainer: React.FC<HeroBannerContainerProps> = ({ ...rest }) => (
   <Animate type="goUp">
     <div className="p-investmentRelations_Banner">
-      <Banner {...props} />
+      <HeroBanner
+        {...rest}
+      />
     </div>
   </Animate>
 );

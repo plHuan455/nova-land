@@ -72,6 +72,12 @@ const InvestmentRelationsContainer: React.FC<BasePageData<InvestmentRelationsBlo
   const eventCalendarBlock = useMemo(() => getBlockData('event_calendar', blocks) as EventCalendar, [blocks]);
   const otherDocumentBlock = useMemo(() => getBlockData('other_document', blocks) as OtherDocument, [blocks]);
 
+  const listBanner = useMemo(() => banners.map((item) => ({
+    src: getImageURL(item.data.imageDesktop),
+    srcTablet: getImageURL(item.data.imageTablet),
+    srcMobile: getImageURL(item.data.imageMobile),
+  })), [banners]);
+
   const { data: calendarDataList } = useQuery(
     ['getCalendarList'],
     () => getCalendarListService({
@@ -177,9 +183,7 @@ const InvestmentRelationsContainer: React.FC<BasePageData<InvestmentRelationsBlo
   return (
     <div className="p-investmentRelations">
       <BannerContainer
-        src={getImageURL(banners[0].data.imageDesktop)}
-        srcMobile={getImageURL(banners[0].data.imageMobile)}
-        srcTablet={getImageURL(banners[0].data.imageTablet)}
+        list={listBanner}
       />
       <Section modifiers="noPb">
         <StockInformationContainer
