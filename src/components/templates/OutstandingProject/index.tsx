@@ -81,29 +81,29 @@ const OutstandingProject: React.FC<OutstandingProjectProps> = ({
   <div className="t-outstandingProject">
     <Container>
       <div className="t-outstandingProject_wrapper">
-        <div className="t-outstandingProject_title">
-          <Animate type="fadeInLeft">
+        <Animate type="fadeInLeft">
+          <div className="t-outstandingProject_title">
             <Heading
               modifiers={['32x48', 'camel', '500', 'fontNoto', 'uppercase']}
               content={title}
             />
-          </Animate>
-        </div>
+          </div>
+        </Animate>
         <div className="t-outstandingProject_content">
           <Animate type="fadeInRight">
             <Carousel settings={setting}>
               {
-              outstandingProjectList.map((item, index) => (
-                <div
-                  className="t-outstandingProject_item"
-                  key={`outstandingProject-${index.toString()}`}
-                >
-                  <OutstandingProjectCard
-                    {...item}
-                  />
-                </div>
-              ))
-            }
+                outstandingProjectList.map((item, index) => (
+                  <div
+                    className="t-outstandingProject_item"
+                    key={`outstandingProject-${index.toString()}`}
+                  >
+                    <OutstandingProjectCard
+                      {...item}
+                    />
+                  </div>
+                ))
+              }
             </Carousel>
           </Animate>
         </div>
@@ -111,5 +111,4 @@ const OutstandingProject: React.FC<OutstandingProjectProps> = ({
     </Container>
   </div>
 );
-
 export default OutstandingProject;
