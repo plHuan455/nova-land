@@ -37,8 +37,12 @@ const routes = [
     path: 'tin-tuc',
     element: <News />,
   },
+  // {
+  //   path: 'tin-tuc-du-an',
+  //   element: <NewsCategory />,
+  // },
   {
-    path: 'tin-tuc-du-an',
+    path: 'tin-tuc/:slug',
     element: <NewsCategory />,
   },
   {

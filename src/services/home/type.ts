@@ -23,6 +23,15 @@ export type NewsListParamsTypes = {
   is_new?: boolean,
 }
 
+export type NewsListParamsTypesDummy = {
+  keyword?: string,
+  page?: string,
+  limit?: string,
+  category_slug?: string,
+  is_popular?: boolean,
+  is_new?: boolean,
+}
+
 export type NewsDataTypes = {
   id: number;
   displayOrder: number;
