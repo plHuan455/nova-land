@@ -51,15 +51,8 @@
   }
 
   &_title {
-    width: 13%;
-    
-    @include desktop-down {
-      width: 15%;
-    }
-
     @include tablet-down {
       margin-bottom: rem(10);
-      width: 100%;
     }
   }
 
