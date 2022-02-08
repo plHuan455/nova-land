@@ -44,7 +44,7 @@ const ProjectMapContainer: React.FC<ProjectMapBlock> = ({
     if (projectDataList) {
       return projectDataList.map((item) => ({
         ...item,
-        thumbnail: getImageURL(item.projectLogo),
+        thumbnail: getImageURL(item.darkBackgroundLogo),
       }));
     }
     return [];
