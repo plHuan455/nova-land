@@ -35,7 +35,7 @@ export type NewsDataTypes = {
   displayOrder: number;
   thumbnail: string;
   publishedAt: string;
-  viewed: 1000,
+  viewed: number,
   category: {
     id: number;
     name: string;

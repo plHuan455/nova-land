@@ -30,4 +30,9 @@
       margin: rem(20) auto 0;
     }
   }
+
+  &_empty {
+    margin-top: rem(16);
+    width: 100%;
+  }
 }
