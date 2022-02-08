@@ -18,11 +18,11 @@ const OutstandingProjectContainer: React.FC<OutstandingProjectContainerProps> = 
       ...DEFAULT_QUERY_OPTION,
     },
   );
-
   const outStandingProjectData = useMemo(() => projectDataHighlight?.map((item) => ({
     imgSrc: getImageURL(item.thumbnail),
     title: item.name,
-    href: item.link,
+    href: item.link?.url || '#',
+    target: item.link?.target,
   })), [projectDataHighlight]);
 
   return (

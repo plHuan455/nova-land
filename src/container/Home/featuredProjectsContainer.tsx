@@ -29,7 +29,8 @@ const FeaturedProjectsContainer: React.FC<FeaturedProjectsBlock> = ({
       title: item.name,
       src: getImageURL(item.thumbnail),
       content: item.description,
-      href: item.link,
+      href: item.link?.url || '#',
+      target: item.link?.target,
     })),
     [data],
   );
