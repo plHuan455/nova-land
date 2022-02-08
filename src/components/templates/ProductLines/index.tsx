@@ -30,7 +30,7 @@ const ProductLines: React.FC<ProductLinesProps> = ({ title, dataProductLines }) 
 
   const settingDefault = {
     dots: false,
-    slidesToShow: 4,
+    slidesToShow: dataProductLines.length < 4 ? dataProductLines.length : 4,
     slidesToScroll: 1,
     arrows: false,
     prevArrow: <PrevArrow />,
