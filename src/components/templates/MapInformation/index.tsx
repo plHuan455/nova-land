@@ -116,7 +116,7 @@ export type TypeMapMarker = {
 };
 
 export interface MapInformationProps {
-  mapMarker?: TypeMapMarker[];
+  mapMarker: TypeMapMarker[];
   mapAPIkey: string;
 }
 
@@ -133,7 +133,9 @@ const MapContact: React.FC<MapContactProps> = ({ handleClick }) => (
 );
 
 const MapInformation: React.FC<MapInformationProps> = ({ mapMarker, mapAPIkey }) => {
-  const [dataMapInformation, setDataMapInformation] = useState<MapInformationCardProps>();
+  const [
+    dtMapInformation, setDtMapInformation,
+  ] = useState<MapInformationCardProps>(mapMarker[0].dataMarker);
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClose = (e: boolean) => {
@@ -143,9 +145,9 @@ const MapInformation: React.FC<MapInformationProps> = ({ mapMarker, mapAPIkey })
   return (
     <div className="t-mapInformation">
       <div className={mapModifiers('t-mapInformation_card', isOpen && 'isOpen')}>
-        {dataMapInformation && (
+        {dtMapInformation && (
           <MapInformationCard
-            {...dataMapInformation}
+            {...dtMapInformation}
             handleClose={handleClose}
           />
         )}
@@ -176,7 +178,7 @@ const MapInformation: React.FC<MapInformationProps> = ({ mapMarker, mapAPIkey })
                   lng={marker.lng}
                   handleClick={() => {
                     setIsOpen(!isOpen);
-                    setDataMapInformation(marker.dataMarker);
+                    setDtMapInformation(marker.dataMarker);
                   }}
                 />
               ))}
