@@ -259,6 +259,7 @@
   }
 
   &_item {
+    $item: &;
     display: flex;
     flex-wrap: wrap;
 
@@ -269,15 +270,17 @@
     &_left {
       flex: 0 0 30%;
       position: relative;
+    }
 
-      &-isViewMore {
-        max-height: calc(127px * 6);
-        overflow-y: auto;
-        @include scroll-bars(8);
-      }
+    &_list-isViewMore {
+      max-height: calc(127px * 6);
+      overflow-y: auto;
+      @include scroll-bars(8);
 
-      @include tablet-down {
-        max-height: max-content;
+      ~ #{$item}_btn {
+        &:hover {
+          transform: translateY(-10px);
+        }
       }
     }
 
@@ -305,6 +308,8 @@
     }
 
     &_card {
+      position: relative;
+
       &::after {
         background: $camel;
         content: '';
@@ -313,6 +318,7 @@
         position: absolute;
         transform: translateX(-50%);
         width: 86%;
+        z-index: 1;
       }
     }
 

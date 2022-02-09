@@ -179,8 +179,9 @@ const Leadership: React.FC<LeadershipProps> = ({
             : tabCategoryLeadership.map((_, idx) => (
               <TabPanel key={`leadership-${idx.toString()}`} active={idx === indexActive}>
                 <div className="t-leadership_item">
-                  <div className={mapModifiers('t-leadership_item_left', isViewMore && 'isViewMore')}>
-                    {
+                  <div className="t-leadership_item_left">
+                    <div className={mapModifiers('t-leadership_item_list', isViewMore && 'isViewMore')}>
+                      {
                       tabDataLeaderShip?.map((item, index) => (
                         <div
                           className="t-leadership_item_card"
@@ -198,10 +199,11 @@ const Leadership: React.FC<LeadershipProps> = ({
                         </div>
                       ))
                     }
+                    </div>
                     {hasButtonViewAll && (
-                      <div className="t-leadership_item_btn">
-                        <Button onClick={handleClickViewAll} modifiers="with-icon" iconName={isViewMore ? 'arrowUpBrown' : 'arrowDownBrown'} />
-                      </div>
+                    <div className="t-leadership_item_btn">
+                      <Button onClick={handleClickViewAll} modifiers="with-icon" iconName={isViewMore ? 'arrowUpBrown' : 'arrowDownBrown'} />
+                    </div>
                     )}
                   </div>
                   <div className="t-leadership_item_right">
