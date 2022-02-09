@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 
 import Animate from 'components/organisms/Animate';
 import EcoSystems from 'components/templates/EcoSystems';
@@ -27,8 +27,8 @@ interface EcoSystemBlock {
 const EcoSystemContainer: React.FC<EcoSystemBlock> = ({
   blocks,
 }) => {
-  const convertData = () => {
-    if (blocks.items.length > 0) {
+  const convertData = useMemo(() => {
+    if (blocks.items) {
       return blocks.items.map((item) => ({
         fieldImgSrc: getImageURL(item.imageDefault),
         brandImage: getImageURL(item.imageHover),
@@ -37,7 +37,7 @@ const EcoSystemContainer: React.FC<EcoSystemBlock> = ({
       }));
     }
     return [];
-  };
+  }, [blocks]);
 
   return (
     <Animate type="goUp">
@@ -45,7 +45,7 @@ const EcoSystemContainer: React.FC<EcoSystemBlock> = ({
         <EcoSystems
           title={blocks.titleSection}
           desc={blocks.description}
-          dataList={convertData()}
+          dataList={convertData}
         />
       </div>
     </Animate>

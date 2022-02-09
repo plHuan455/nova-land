@@ -6,18 +6,21 @@ import { useNavigate } from 'react-router-dom';
 
 import Container from '../Container';
 
-import { LIST_LANGUAGE, LanguageType } from 'assets/dataDummy/header';
+import { LIST_LANGUAGE } from 'assets/dataDummy/header';
 import Icon from 'components/atoms/Icon';
 import Image from 'components/atoms/Image';
 import Input from 'components/atoms/Input';
 import Link from 'components/atoms/Link';
 import Text from 'components/atoms/Text';
+import { OptionType } from 'components/molecules/Pulldown';
 import Animate from 'components/organisms/Animate';
 import useClickOutside from 'hooks/useClickOutside';
+import useLanguage from 'hooks/useLanguage';
 import useWindowScroll from 'hooks/useWindowScroll';
 import { MenuItemDataTypes } from 'services/menus/types';
 import { useAppSelector } from 'store/hooks';
 import mapModifiers, { checkExternalUrl, getSlugByTemplateCode } from 'utils/functions';
+import { getHomeLangURL } from 'utils/language';
 import { getLangURL } from 'utils/menus';
 
 export type HeaderMenuTypes = {
@@ -28,7 +31,7 @@ export type HeaderMenuTypes = {
 interface HeaderProps {
   headerMenu?: MenuItemDataTypes[];
   logoSrc: string;
-  handleLanguage?: (val: LanguageType) => void;
+  handleLanguage?: (option: OptionType) => void;
   isPageRecruitment?: boolean;
 }
 
@@ -40,13 +43,16 @@ const Header: React.FC<HeaderProps> = ({
 }) => {
   const { i18n } = useTranslation();
   const navigate = useNavigate();
+  const {
+    lang,
+  } = useLanguage();
   // STATE
   const [isOpenSearch, setIsOpenSearch] = useState(false);
   const [isScroll, setIsScroll] = useState(false);
   const [isOpenLanguage, setIsOpenLanguage] = useState(false);
   const [isOpenMenu, setIsOpenMenu] = useState(false);
-  const [languageSelected, setLanguageSelected] = useState(LIST_LANGUAGE[0].label);
   const { staticPage } = useAppSelector((state) => state.menus);
+  const [languageSelected, setLanguageSelected] = useState<OptionType>(lang);
 
   // HOOK
   const searchRef = useRef(null);
@@ -111,7 +117,7 @@ const Header: React.FC<HeaderProps> = ({
               <span />
             </div>
             <div className="o-header_left">
-              <Link href="/">
+              <Link href={getHomeLangURL(languageSelected.value)}>
                 <div className="o-header_logo">
                   <Image src={logoSrc} ratio="logo" />
                 </div>
@@ -170,7 +176,7 @@ const Header: React.FC<HeaderProps> = ({
                   }}
                 >
                   <Text modifiers={['14x18', 'jet', '400', 'uppercase']}>
-                    {languageSelected}
+                    {languageSelected.label}
                   </Text>
                   <div
                     className={mapModifiers(
@@ -187,12 +193,12 @@ const Header: React.FC<HeaderProps> = ({
                       <li
                         onClick={() => {
                           if (handleLanguage) {
-                            handleLanguage(val.value as LanguageType);
+                            handleLanguage(val);
                           }
                           setIsOpenLanguage(false);
-                          setLanguageSelected(val.label);
+                          setLanguageSelected(val);
                         }}
-                        className={`o-header_languagePicker_list_item ${val.label === languageSelected ? 'active' : ''
+                        className={`o-header_languagePicker_list_item ${val.label === languageSelected.label ? 'active' : ''
                         }`}
                         key={idx.toString()}
                       >

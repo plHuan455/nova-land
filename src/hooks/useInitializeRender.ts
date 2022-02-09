@@ -3,14 +3,16 @@ import ReactGA from 'react-ga';
 import TagManager from 'react-gtm-module';
 import { useLocation } from 'react-router-dom';
 
+import i18n, { changeStoreLanguage } from 'i18n';
 import { useAppDispatch, useAppSelector } from 'store/hooks';
 import { getMenusAction, getStaticPageAsync } from 'store/menus';
-import { getSystemAsync } from 'store/system';
+import { getSystemAsync, setLanguage } from 'store/system';
 
 const useInitializeRender = () => {
   const location = useLocation();
   const dispatch = useAppDispatch();
   const system = useAppSelector((state) => state.system.dataSystem);
+  const isChangeLanguage = useAppSelector((state) => state.system.isChangeLanguage);
   const [initializedGA, setInitializedGA] = useState(false);
 
   useEffect(() => {
@@ -20,10 +22,21 @@ const useInitializeRender = () => {
   }, [dispatch]);
 
   useEffect(() => {
+    if (isChangeLanguage) {
+      dispatch(getSystemAsync());
+    }
+  }, [dispatch, isChangeLanguage]);
+
+  useEffect(() => {
     document.body.classList.remove('overflow-body');
     document.documentElement.classList.remove('overflow-body');
     window.scrollTo(0, 0);
-  }, [location.pathname]);
+    const checkLanguage = changeStoreLanguage(location.pathname);
+    if (checkLanguage.change) {
+      i18n.changeLanguage(checkLanguage.language);
+      dispatch(setLanguage(checkLanguage.language));
+    }
+  }, [location.pathname, dispatch]);
 
   /**
    * GTM-GA

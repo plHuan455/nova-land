@@ -1,3 +1,4 @@
+import i18n from 'i18n';
 import { OtherDocumentCategoriesDataTypes } from 'services/documents/types';
 import { MenuItemDataTypes } from 'services/menus/types';
 
@@ -78,6 +79,11 @@ export function getLangURL(lang?: string) {
   return '';
 }
 
+export const getLanguagePrefix = (lang: string) => {
+  if (lang && lang !== 'vi') return `${lang}/`;
+  return '';
+};
+
 export const prefixGroupMenu = (menus?: MenuItemDataTypes[]) => {
   if (!menus) {
     return [];
@@ -90,7 +96,7 @@ export const prefixGroupMenu = (menus?: MenuItemDataTypes[]) => {
       ...ele,
       reference: ele.reference
         ? {
-          slug: `${ele.reference?.slug || ''}`,
+          slug: `${getLanguagePrefix(i18n.language)}${ele.reference?.slug || ''}`,
         }
         : undefined,
       subMenu: ele.subMenu
@@ -98,7 +104,7 @@ export const prefixGroupMenu = (menus?: MenuItemDataTypes[]) => {
           ...subEle,
           reference: subEle.reference
             ? {
-              slug: `${prefix}${subEle.reference?.slug || ''}`,
+              slug: `${getLanguagePrefix(i18n.language)}${prefix}${subEle.reference?.slug || ''}`,
             }
             : undefined,
         }))

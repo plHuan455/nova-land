@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 
 import Animate from 'components/organisms/Animate';
 import OutStandingNumbers from 'components/templates/OutStandingNumbers';
@@ -20,22 +20,22 @@ interface OutStandingNumbersBlock {
 const OutStandingNumbersContainer: React.FC<OutStandingNumbersBlock> = ({
   blocks,
 }) => {
-  const convertData = () => {
-    if (blocks.items.length > 0) {
+  const convertData = useMemo(() => {
+    if (blocks.items) {
       return blocks.items.map((item) => ({
         number: item.textNumber,
         desc: item.descriptionNumber,
       }));
     }
     return [];
-  };
+  }, [blocks]);
 
   return (
     <Animate type="goUp">
       <div className="p-home_outStandingNumbers">
         <OutStandingNumbers
           title={blocks.titleSection}
-          dataList={convertData()}
+          dataList={convertData}
         />
       </div>
     </Animate>
