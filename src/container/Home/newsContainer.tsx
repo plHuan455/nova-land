@@ -50,7 +50,7 @@ const NewsContainer: React.FC<NewsBlock> = ({
 
   const { data, isLoading } = useQuery(
     ['getHomeNewsList', newsCategoryList, indexActive], () => getNewsService({
-      limit: '4',
+      limit: 4,
       category_slug: newsCategoryList ? handleCategorySlug(newsCategoryList) : undefined,
     }), {
       ...DEFAULT_QUERY_OPTION,
@@ -59,8 +59,8 @@ const NewsContainer: React.FC<NewsBlock> = ({
   );
 
   const newsData = useMemo(() => {
-    if (data && data.length > 0) {
-      return data.map((item) => ({
+    if (data && data.data.length > 0) {
+      return data.data.map((item) => ({
         imgSrc: getImageURL(item.thumbnail),
         title: item.title,
         desc: item.description,

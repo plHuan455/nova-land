@@ -4,6 +4,7 @@ import Heading from 'components/atoms/Heading';
 import Icon from 'components/atoms/Icon';
 import Image from 'components/atoms/Image';
 import Link from 'components/atoms/Link';
+import Loading from 'components/atoms/Loading';
 import Text from 'components/atoms/Text';
 import Pagination from 'components/molecules/Pagination';
 import Container from 'components/organisms/Container';
@@ -103,6 +104,7 @@ interface NewsCategoryProps {
   totalPage: number;
   currentPage?: number;
   handleChangePage?: (page: number) => void;
+  loading?: boolean;
 }
 
 const NewsCategory: React.FC<NewsCategoryProps> = ({
@@ -110,34 +112,42 @@ const NewsCategory: React.FC<NewsCategoryProps> = ({
   totalPage,
   currentPage,
   handleChangePage,
+  loading,
 }) => (
   <div className="t-newsCategory">
-    <div className="t-newsCategory_top">
-      {dataNewsCategory.length > 0 && (
-        <FeaturedNews dataFeaturedNews={dataNewsCategory.slice(0, 3)} />
-      )}
-    </div>
-    <div className="t-newsCategory_bottom">
-      <Container>
-        <div className="t-newsCategory_wrapper">
-          {dataNewsCategory.map((item, index) => (
-            index > 2 && (
-              <div className="t-newsCategory_item">
-                <NewsCategoryCard {...item} />
-              </div>
-            )
-          ))}
+    {loading ? <Loading isShow /> : (
+      <>
+        <div className="t-newsCategory_top">
+          {dataNewsCategory.length > 0 && (
+          <FeaturedNews dataFeaturedNews={dataNewsCategory.slice(0, 3)} />
+          )}
         </div>
-      </Container>
-    </div>
-    {totalPage > 0 && (
-      <div className="t-newsCategory_pagination u-mt-md-40 u-mt-28">
-        <Pagination
-          totalPage={totalPage}
-          pageCurrent={currentPage}
-          handleChangePage={(page: number) => handleChangePage && handleChangePage(page)}
-        />
-      </div>
+        <div className="t-newsCategory_bottom">
+          <Container>
+            <div className="t-newsCategory_wrapper">
+              {dataNewsCategory.map((item, index) => (
+                index > 2 && (
+                <div className="t-newsCategory_item">
+                  <NewsCategoryCard
+                    {...item}
+                    ratio="376x212"
+                  />
+                </div>
+                )
+              ))}
+            </div>
+          </Container>
+        </div>
+        {totalPage > 0 && (
+        <div className="t-newsCategory_pagination u-mt-md-40 u-mt-28">
+          <Pagination
+            totalPage={totalPage}
+            pageCurrent={currentPage}
+            handleChangePage={(page: number) => handleChangePage && handleChangePage(page)}
+          />
+        </div>
+        )}
+      </>
     )}
   </div>
 );
@@ -145,6 +155,7 @@ const NewsCategory: React.FC<NewsCategoryProps> = ({
 NewsCategory.defaultProps = {
   currentPage: undefined,
   handleChangePage: undefined,
+  loading: false,
 };
 
 export default NewsCategory;

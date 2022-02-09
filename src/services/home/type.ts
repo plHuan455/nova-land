@@ -16,17 +16,8 @@ export type NewsCategoryDataTypes = {
 
 export type NewsListParamsTypes = {
   keyword?: string,
-  page?: string,
-  limit?: string,
-  category_slug?: string,
-  is_popular?: boolean,
-  is_new?: boolean,
-}
-
-export type NewsListParamsTypesDummy = {
-  keyword?: string,
-  page?: string,
-  limit?: string,
+  page?: number,
+  limit?: number,
   category_slug?: string,
   is_popular?: boolean,
   is_new?: boolean,
