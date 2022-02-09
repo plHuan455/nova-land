@@ -32,7 +32,8 @@ const NewsContainer: React.FC<NewsBlock> = ({
   // TODO: get news list by a category
   const tabDataHomeNewsList = useMemo(() => {
     if (newsCategoryList) {
-      return newsCategoryList.map((item) => ({
+      const dataFilter = newsCategoryList.filter((e) => e.parent === null);
+      return dataFilter.map((item) => ({
         titleTab: item.name,
       }));
     }
@@ -41,7 +42,6 @@ const NewsContainer: React.FC<NewsBlock> = ({
 
   const { data } = useQuery(
     ['getHomeNewsList', newsCategoryList, indexActive], () => getNewsService({
-      is_popular: true,
       limit: '4',
       category_slug: newsCategoryList ? newsCategoryList[indexActive].slug : undefined,
     }), {
