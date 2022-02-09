@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 
 import NewsCategory, { NewsCategoryItemTypes } from 'components/templates/NewsCategory';
 import { getNewsService } from 'services/home';
-import { getImageURL } from 'utils/functions';
+import { getImageURL, formatDateDDMMYYYY } from 'utils/functions';
 
 const LIMIT = 9;
 const PAGE = 1;
@@ -33,7 +33,7 @@ const CategoryGeneralContainer: React.FC = () => {
         ratio: '' as Ratio,
         title: item.title,
         desc: item.description,
-        time: item.publishedAt,
+        time: formatDateDDMMYYYY(item.publishedAt),
         href: `/chi-tiet-tin-tuc/${item.slug}`,
       }));
       setTotalPages(res.meta.totalPages);
@@ -60,7 +60,7 @@ const CategoryGeneralContainer: React.FC = () => {
           ratio: '' as Ratio,
           title: item.title,
           desc: item.description,
-          time: item.publishedAt,
+          time: formatDateDDMMYYYY(item.publishedAt),
           href: `/chi-tiet-tin-tuc/${item.slug}`,
         }));
         setTotalPages(res.meta.totalPages);

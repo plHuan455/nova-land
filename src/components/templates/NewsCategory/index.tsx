@@ -79,7 +79,7 @@ export const NewsCategoryCard: React.FC<NewsCategoryCardProps> = ({
           </div>
           <div className="t-newsCategoryCard_btn u-mt-lg-24 u-mt-sm-14 u-mt-10">
             <Text modifiers={['300', 'camel', 'underline']}>
-              {bntText}
+              {bntText || 'Xem thêm'}
             </Text>
             <div className="t-newsCategoryCard_btn_icon u-ml-10" />
           </div>
