@@ -14,6 +14,9 @@ export interface ShareHolderRelationsTypes {
     target: string;
   };
   titleSection: string;
+  imageFinancialReport: string;
+  titleFinancialReport: string;
+  titleStock: string;
 }
 
 interface ShareHolderRelationsBlock {
@@ -47,6 +50,9 @@ const ShareHolderRelationsContainer: React.FC<ShareHolderRelationsBlock> = ({
         target={blocks.button.target}
         namebtn={blocks.button.text}
         dataShareholderRelations={shareholderRelationsData}
+        imageFinancialReport={getImageURL(blocks.imageFinancialReport)}
+        titleFinancialReport={blocks.titleFinancialReport}
+        titleStock={blocks.titleStock}
       />
     </div>
   );
