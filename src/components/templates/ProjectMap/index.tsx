@@ -1,5 +1,5 @@
 import React, {
-  useCallback, useEffect, useMemo, useState,
+  useCallback, useMemo, useState,
 } from 'react';
 
 import Heading from 'components/atoms/Heading';
@@ -195,12 +195,6 @@ const ProjectMap: React.FC<ProjectMapProps> = ({
   projectDataList,
 }) => {
   const [idProjectActive, setIdProjectActive] = useState(0);
-
-  useEffect(() => {
-    if (listCategory?.length) {
-      handleSelect(listCategory[0].id);
-    }
-  }, [handleSelect, listCategory]);
 
   const findCategoryActive = useCallback(
     (id?: number, list?: CategoryBranch[]) => {
