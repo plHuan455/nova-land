@@ -24,11 +24,16 @@ export const normal: Story = () => (
 
 export const card: Story = () => (
   <Router>
-    <div style={{ margin: '30px', maxWidth: '221px' }}>
+    <div style={{
+      margin: '30px',
+      maxWidth: '221px',
+    }}
+    >
       <OutstandingProjectCard
         imgSrc={imgOutstandingProject}
         title="Aqua City"
         href="/"
+        target=""
       />
     </div>
   </Router>

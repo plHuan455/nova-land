@@ -15,7 +15,7 @@ const ProjectListContainer: React.FC = () => {
         (item) => ({
           imgSrc: getImageURL(item.projectLogo),
           href: item.link?.url || '#',
-          target: '_blank',
+          target: item.link?.target || '_blank',
         }),
       );
     }
