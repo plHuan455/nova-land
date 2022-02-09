@@ -46,23 +46,26 @@
 
   &_tab {
     cursor: pointer;
-    padding-bottom: rem(7);
+    padding-bottom: rem(12);
+    padding-left: rem(16);
+    padding-right: rem(16);
     padding-top: rem(7);
     position: relative;
 
-    & + &:not(:first-child) {
-      margin-left: rem(24);
-      @include mobile-down {
-        margin-left: rem(10);
-      }
-    }
+    // & + &:not(:first-child) {
+    //   margin-left: rem(24);
+    //   @include mobile-down {
+    //     margin-left: rem(10);
+    //   }
+    // }
 
     &::after {
       background: $camel;
+      border-radius: rem(3) rem(3) 0 0;
       bottom: 0;
       content: '';
       height: rem(3);
-      left: 0;
+      left: rem(2);
       opacity: 0;
       position: absolute;
       transition: all $transition-long linear;
@@ -76,7 +79,7 @@
         color: $camel;
         font-weight: 500;
       }
-      
+
       #{$root}_label-goldenBrown {
         color: $golden-brown;
       }

@@ -1,4 +1,25 @@
 .t-newsdetail {
+  @include adjust-flex(space-between, flex-start);
+  @include mobile-down {
+    flex-direction: column;
+  }
+
+  &_leftSide {
+    flex: 0 0 calc(756 / 1194 * 100%);
+    @include mobile-down {
+      flex: 0 0 100%;
+      width: 100%;
+    }
+  }
+
+  &_rightSide {
+    flex: 0 0 calc(348 / 1194 * 100%);
+    @include mobile-down {
+      flex: 0 0 100%;
+      width: 100%;
+    }
+  }
+
   &_createdate {
     margin-bottom: rem(8);
   }

@@ -17,26 +17,26 @@
       margin-left: rem(-24);
       margin-right: rem(-24);
     }
-  }
 
-  &_wraplogo {
-    display: inline-block;
-    flex: 0 0 calc(100% / 7);
-    margin-bottom: rem(40);
-    padding: 0 rem(30);
+    .a-link {
+      display: inline-block;
+      flex: 0 0 calc(100% / 7);
+      margin-bottom: rem(40);
+      padding: 0 rem(30);
 
-    img {
-      max-width: 100%;
-      width: 100%;
-    }
-    @include tablet-down {
-      flex: 0 0 calc(100% / 4);
-      margin-bottom: rem(32);
-      padding: 0 rem(24);
-    }
-    @include mobile-down {
-      flex: 0 0 calc(100% / 2);
-      margin-bottom: rem(16);
+      img {
+        max-width: 100%;
+        width: 100%;
+      }
+      @include tablet-down {
+        flex: 0 0 calc(100% / 4);
+        margin-bottom: rem(32);
+        padding: 0 rem(24);
+      }
+      @include mobile-down {
+        flex: 0 0 calc(100% / 2);
+        margin-bottom: rem(16);
+      }
     }
   }
 }

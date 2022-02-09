@@ -55,7 +55,10 @@
     max-width: fit-content;
 
     .a-button {
+      font-weight: 600;
       height: rem(44);
+      letter-spacing: -0.02em;
+      @include font-base(14, 20);
     }
     @include tablet-down {
       margin-top: rem(20);

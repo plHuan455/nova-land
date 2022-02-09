@@ -83,6 +83,10 @@
   &_list {
     @include adjust-flex(flex-start, center);
     flex-wrap: wrap;
+    margin-top: rem(20);
+    @include tablet-down {
+      margin-top: rem(6);
+    }
   }
 
   &_wrapper {

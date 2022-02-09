@@ -13,6 +13,7 @@ const newsDetailData = {
       Với bề dày lịch sử xuyên suốt gần 2 thế kỷ, cùng tay nghề nghề thủ công đỉnh cao và các loại vật liệu tinh tuyển,
       thương hiệu du thuyền nổi tiếng nước Ý đã tạo ra một biểu tượng về phong cách sống duy mỹ của
       <br />
+      <br />
       <img src=${imgProduct} alt="news_img" />`,
     createDate: '23/12/2021',
     status: 'Vừa xong',

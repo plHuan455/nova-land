@@ -200,7 +200,7 @@ const ProjectMap: React.FC<ProjectMapProps> = ({
     if (listCategory?.length) {
       handleSelect(listCategory[0].id);
     }
-  }, [listCategory]);
+  }, [handleSelect, listCategory]);
 
   const findCategoryActive = useCallback(
     (id?: number, list?: CategoryBranch[]) => {

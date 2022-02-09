@@ -78,10 +78,12 @@
   &_button {
     margin: auto;
     margin-top: rem(36);
-    max-width: fit-content;
+    max-width: rem(129);
 
     .a-button {
       height: rem(44);
+      letter-spacing: -0.02em;
+      @include font-base(14, 20);
     }
     @include tablet-down {
       margin-top: rem(20);

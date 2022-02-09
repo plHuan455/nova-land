@@ -1,6 +1,4 @@
 .m-pulldown {
-  position: relative;
-
   &_error {
     bottom: rem(-18);
     color: $sinopia;
@@ -10,6 +8,10 @@
   }
 
   &-default {
+    &__menu {
+      z-index: 9;
+    }
+
     &__placeholder {
       @include mobile-down {
         font-size: rem(14) !important;

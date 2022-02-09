@@ -41,6 +41,7 @@ type FooterData = {
   description: string;
   policy: PolicyTermsData;
   terms: PolicyTermsData;
+  logoFooter: string;
 }
 
 type PolicyTermsData = {

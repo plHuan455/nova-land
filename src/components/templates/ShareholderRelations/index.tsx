@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 /* eslint-disable jsx-a11y/iframe-has-title */
 import React, { useMemo } from 'react';
 
@@ -67,6 +68,9 @@ interface ShareholderRelationsProps {
   dataShareholderRelations: ShareholderCardProps;
   target?: string;
   namebtn?: string;
+  imageFinancialReport?: string;
+  titleFinancialReport?: string;
+  titleStock?: string;
 }
 
 const ShareholderRelations: React.FC<ShareholderRelationsProps> = ({
@@ -75,6 +79,9 @@ const ShareholderRelations: React.FC<ShareholderRelationsProps> = ({
   dataShareholderRelations,
   target,
   namebtn,
+  imageFinancialReport,
+  titleFinancialReport,
+  titleStock,
 }) => {
   const language = useAppSelector((state) => state.system.language);
 
@@ -120,12 +127,16 @@ const ShareholderRelations: React.FC<ShareholderRelationsProps> = ({
         </div>
         <div className="t-shareholderRelations_content">
           <div className="t-shareholderRelations_content_item">
-            <ShareholderCard isStocks title="Cổ Phiếu">
+            <ShareholderCard isStocks title={titleStock || ''}>
               {iframeStock}
             </ShareholderCard>
           </div>
           <div className="t-shareholderRelations_content_item">
-            <ShareholderCard {...dataShareholderRelations} />
+            <ShareholderCard
+              {...dataShareholderRelations}
+              title={titleFinancialReport || ''}
+              imgSrc={imageFinancialReport}
+            />
           </div>
         </div>
         <div className="t-shareholderRelations_button">
