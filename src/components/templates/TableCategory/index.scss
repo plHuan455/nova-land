@@ -33,7 +33,6 @@
     &_row {
       &:hover {
         background: $ghost-white;
-        cursor: pointer;
       }
     }
 
@@ -55,6 +54,10 @@
 
     .o-pagination {
       justify-content: flex-end;
+
+      .active-page {
+        background: $anti-flash-white-4f9;
+      }
     }
   }
 
@@ -64,6 +67,7 @@
     &_icon {
       height: 35px;
       width: 35px;
+      @include adjust-flex();
     }
 
     &_fileName {

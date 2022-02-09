@@ -1,17 +1,19 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
 
-// import imgPdf from 'assets/images/pdf.png';
 import Icon from 'components/atoms/Icon';
-// import Image from 'components/atoms/Image';
+import Link from 'components/atoms/Link';
 import Text from 'components/atoms/Text';
 import Pagination from 'components/molecules/Pagination';
+import { checkExternalUrl } from 'utils/functions';
 
 export interface TableCategoryItem {
   documentName: string;
   dataByQuarter: {
     colSpan?: number;
     date?: string;
+    href?: string;
+    target?: string
   }[];
 }
 
@@ -28,21 +30,24 @@ export interface TableCategoryProps {
   handleChangePage?: (page: number) => void;
 }
 
-interface dataFileItemProps {
+export interface dataFileItemProps {
   fileName: string;
+  hrefLink?: string;
+  target?: string;
 }
 
-export const DataFileItem: React.FC<dataFileItemProps> = ({ fileName }) => (
-  <div className="t-tableCategory_dataFileItem">
-    <div className="t-tableCategory_dataFileItem_icon">
-      {/* <Image ratio="1x1" alt="pdf" src={imgPdf} /> */}
-      <Icon iconName="filePDF" />
+export const DataFileItem: React.FC<dataFileItemProps> = ({ fileName, hrefLink, target }) => (
+  <Link href={hrefLink} target={target || '_blank'} useExternal={checkExternalUrl(hrefLink)}>
+    <div className="t-tableCategory_dataFileItem">
+      <div className="t-tableCategory_dataFileItem_icon">
+        <Icon iconName="filePDF" />
+      </div>
+      <div className="t-tableCategory_dataFileItem_fileName">
+        <Text modifiers={['darkMidnightBlue', '300', '14x20']}>{fileName}</Text>
+      </div>
+      <Icon size="20" iconName="download" />
     </div>
-    <div className="t-tableCategory_dataFileItem_fileName">
-      <Text modifiers={['darkMidnightBlue', '300', '14x20']}>{fileName}</Text>
-    </div>
-    <Icon size="20" iconName="download" />
-  </div>
+  </Link>
 );
 
 const TableCategory: React.FC<TableCategoryProps> = ({

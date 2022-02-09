@@ -38,6 +38,8 @@ export const dataBodyList: TableCategoryItem[] = [
       {
         colSpan: 1,
         date: '29/10/2021',
+        href: '/',
+        target: '_blank',
       },
       {
         colSpan: 1,
@@ -59,6 +61,8 @@ export const dataBodyList: TableCategoryItem[] = [
       {
         colSpan: 1,
         date: '29/10/2021',
+        href: '/',
+        target: '_blank',
       },
       {
         colSpan: 1,
@@ -80,6 +84,8 @@ export const dataBodyList: TableCategoryItem[] = [
       {
         colSpan: 1,
         date: '29/10/2021',
+        href: '/',
+        target: '_blank',
       },
       {
         colSpan: 1,
@@ -101,6 +107,8 @@ export const dataBodyList: TableCategoryItem[] = [
       {
         colSpan: 1,
         date: '29/10/2021',
+        href: '/',
+        target: '_blank',
       },
       {
         colSpan: 1,
@@ -114,6 +122,8 @@ export const dataBodyList: TableCategoryItem[] = [
       {
         colSpan: 2,
         date: '24/08/2021',
+        href: '/',
+        target: '_blank',
       },
       {
         colSpan: 1,
@@ -131,6 +141,8 @@ export const dataBodyList: TableCategoryItem[] = [
       {
         colSpan: 2,
         date: '24/08/2021',
+        href: '/',
+        target: '_blank',
       },
       {
         colSpan: 1,
@@ -148,6 +160,8 @@ export const dataBodyList: TableCategoryItem[] = [
       {
         colSpan: 2,
         date: '24/08/2021',
+        href: '/',
+        target: '_blank',
       },
       {
         colSpan: 1,
@@ -165,6 +179,8 @@ export const dataBodyList: TableCategoryItem[] = [
       {
         colSpan: 2,
         date: '24/08/2021',
+        href: '/',
+        target: '_blank',
       },
       {
         colSpan: 1,
