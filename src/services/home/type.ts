@@ -8,6 +8,10 @@ export type NewsCategoryDataTypes = {
   },
   name: string,
   slug: string,
+  children: {
+    name: string,
+    slug: string,
+  }[]
 }
 
 export type NewsListParamsTypes = {

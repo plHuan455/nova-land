@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import HomeNews from 'components/templates/HomeNews';
 import Section from 'components/templates/Section';
 import { getNewsService } from 'services/home';
+import { NewsCategoryDataTypes } from 'services/home/type';
 import { getNewsCategoryAction } from 'store/home';
 import { useAppSelector } from 'store/hooks';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
@@ -40,10 +41,17 @@ const NewsContainer: React.FC<NewsBlock> = ({
     return [];
   }, [newsCategoryList]);
 
+  const handleCategorySlug = (data: NewsCategoryDataTypes[]) => {
+    if (data[indexActive].children.length > 0) {
+      return data[indexActive].children[0].slug;
+    }
+    return data[indexActive].slug;
+  };
+
   const { data } = useQuery(
     ['getHomeNewsList', newsCategoryList, indexActive], () => getNewsService({
       limit: '4',
-      category_slug: newsCategoryList ? newsCategoryList[indexActive].slug : undefined,
+      category_slug: newsCategoryList ? handleCategorySlug(newsCategoryList) : undefined,
     }), {
       ...DEFAULT_QUERY_OPTION,
       enabled: !!newsCategoryList,
