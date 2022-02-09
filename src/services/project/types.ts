@@ -34,6 +34,7 @@ export type ProjectsTypes = {
     name: string,
   },
   description: string,
+  darkBackgroundLogo?: string,
 }
 
 export type ProjectParamTypes = {
