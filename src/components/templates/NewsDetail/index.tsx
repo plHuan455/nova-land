@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Button from 'components/atoms/Button';
 import Divider from 'components/atoms/Divider';
 import Heading from 'components/atoms/Heading';
 import Icon from 'components/atoms/Icon';
@@ -16,11 +15,11 @@ interface NewsType {
   shortDescription?: string;
   content: string;
   createDate: string;
-  status: string;
-  imageNews: string;
+  status?: string;
+  imageNews?: string;
   numberView: string;
   author: string;
-  href: string;
+  href?: string;
   titleBtn?: string;
   newsTypes: Array<string>;
 }
@@ -54,9 +53,6 @@ const NewsDetail: React.FC<NewsDetailProps> = ({
             <Text modifiers={['18x28', '600', 'jet']} content={newsDetail.shortDescription} />
           </div>
           <Text type="div" modifiers={['16x24', 'davysGrey']} content={newsDetail.content} />
-          <div className="t-newsdetail_viewbtn">
-            <Button>{newsDetail.titleBtn}</Button>
-          </div>
           <Divider />
           <div className="t-newsdetail_typesnews">
             <div className="t-newsdetail_typesnews-list">
@@ -83,10 +79,10 @@ const NewsDetail: React.FC<NewsDetailProps> = ({
               key={`news-${item.id}`}
             >
               <InfoNews
-                imageSrc={item.imageNews}
+                imageSrc={item.imageNews || ''}
                 title={item.title}
-                status={item.status}
-                href={item.href}
+                status={item.status || ''}
+                href={item.href || ''}
               />
               {(idx + 1) !== relatedNews.slice(0, 3).length && (
                 <Divider />
@@ -102,10 +98,10 @@ const NewsDetail: React.FC<NewsDetailProps> = ({
                 key={`news-${item.id}`}
               >
                 <InfoNews
-                  imageSrc={item.imageNews}
+                  imageSrc={item.imageNews || ''}
                   title={item.title}
-                  status={item.status}
-                  href={item.href}
+                  status={item.status || ''}
+                  href={item.href || ''}
                 />
                 {(idx + 1) !== relatedNews.slice(0, 5).length && (
                   <Divider />
