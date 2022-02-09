@@ -21,14 +21,15 @@ export const getProjectsAction = createAsyncThunk<
   ProjectsTypes[],
   ProjectParamTypes,
   { rejectValue: ErrorResponse }
->('projectReducer/getProjectAction', async (params, { rejectWithValue }) => {
-  try {
-    const response = await getProjectsService(params);
-    return response;
-  } catch (error) {
-    return rejectWithValue(error as ErrorResponse);
-  }
-});
+>('projectReducer/getProjectAction',
+  async (params: ProjectParamTypes | undefined, { rejectWithValue }) => {
+    try {
+      const response = await getProjectsService(params);
+      return response;
+    } catch (error) {
+      return rejectWithValue(error as ErrorResponse);
+    }
+  });
 
 export const getRealEstatesAction = createAsyncThunk<
   RealEstatesTypes[],

@@ -2,6 +2,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import 'App.scss';
 import React, { lazy, Suspense } from 'react';
+import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { Provider } from 'react-redux';
 import {
@@ -104,9 +105,18 @@ const queryClient = new QueryClient();
 const AppWrapper: React.FC = () => (
   <Provider store={store}>
     <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <GoogleReCaptchaProvider
+        reCaptchaKey="6LcwgsIZAAAAAHZFFWu3icOSaGK2_SVjZwY-kEjQ"
+        scriptProps={{
+          appendTo: 'head',
+          async: true,
+          defer: true,
+        }}
+      >
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </GoogleReCaptchaProvider>
     </QueryClientProvider>
   </Provider>
 );

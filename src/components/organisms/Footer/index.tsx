@@ -25,7 +25,7 @@ export type FooterRegisterFormTypes = {
   fullname: string;
   phone: string;
   email: string;
-  project: string;
+  project?: OptionType;
 }
 
 interface FooterProps {
@@ -50,6 +50,7 @@ interface FooterProps {
   email?: string;
   phoneCskh?: string;
   socialList?: SocialListTypes[];
+  loadingBtn?: boolean;
 }
 
 const Footer: React.FC<FooterProps> = ({
@@ -66,6 +67,7 @@ const Footer: React.FC<FooterProps> = ({
   email,
   phoneCskh,
   socialList,
+  loadingBtn,
 }) => (
   <footer className="o-footer" style={{ backgroundImage: `url(${bgFooter})` }}>
     <Container>
@@ -192,7 +194,7 @@ const Footer: React.FC<FooterProps> = ({
                   />
                 </div>
                 <div className="o-footer_main_form_button mt-28">
-                  <Button type="submit" modifiers="primary">
+                  <Button type="submit" modifiers="primary" isLoading={loadingBtn}>
                     Đăng Ký
                   </Button>
                 </div>
@@ -253,6 +255,7 @@ Footer.defaultProps = {
   email: undefined,
   phoneCskh: undefined,
   socialList: undefined,
+  loadingBtn: false,
 };
 
 export default Footer;
