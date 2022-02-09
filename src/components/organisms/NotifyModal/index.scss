@@ -1,0 +1,43 @@
+.o-notify {
+  $root: &;
+  border-radius: rem(8);
+  color: $white;
+  overflow: auto;
+  position: fixed;
+  width: 100%;
+  @include scroll-bars;
+
+  &_head {
+    display: flex;
+    margin-bottom: rem(8);
+  }
+
+  &_icon {
+    margin-right: rem(16);
+
+    .a-icon {
+      margin: 0 auto;
+      @include mobile-down {
+        height: rem(40);
+        width: rem(40);
+      }
+    }
+  }
+
+  &_message {
+    padding-left: rem(40);
+  }
+
+  &_btn {
+    margin-top: rem(16);
+    @include adjust-flex(flex-end, center);
+
+    .a-button {
+      max-width: rem(95);
+      height: rem(35);
+      padding-bottom: 0;
+      padding-top: 0;
+      @include font-base(14, 22);
+    }
+  }
+}

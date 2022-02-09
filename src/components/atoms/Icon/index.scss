@@ -176,4 +176,16 @@
     background-image: url('~assets/icons/ic_arrow_down_brown.svg');
     transform: rotate(180deg);
   }
+
+  &-redError {
+    background-image: url('~assets/icons/ic_error_outline.svg');
+  }
+
+  &-greenSuccess {
+    background-image: url('~assets/icons/ic_success_circle_outline.svg');
+  }
+
+  &-blackSmallClose {
+    background-image: url('~assets/icons/ic_black_small_close.svg');
+  }
 }
