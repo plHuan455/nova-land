@@ -135,7 +135,7 @@ const MapContact: React.FC<MapContactProps> = ({ handleClick }) => (
 const MapInformation: React.FC<MapInformationProps> = ({ mapMarker, mapAPIkey }) => {
   const [
     dtMapInformation, setDtMapInformation,
-  ] = useState<MapInformationCardProps>(mapMarker[0].dataMarker);
+  ] = useState<MapInformationCardProps>(mapMarker[0]?.dataMarker);
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClose = (e: boolean) => {
