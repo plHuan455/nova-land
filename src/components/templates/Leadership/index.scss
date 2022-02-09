@@ -270,6 +270,12 @@
       flex: 0 0 30%;
       position: relative;
 
+      &-isViewMore {
+        max-height: calc(127px * 6);
+        overflow-y: auto;
+        @include scroll-bars(8);
+      }
+
       @include tablet-down {
         max-height: max-content;
       }

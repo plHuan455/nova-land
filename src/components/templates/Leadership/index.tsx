@@ -134,6 +134,7 @@ export interface LeadershipProps {
   handleClickViewAll?: () => void;
   handleChangeTab: (index: number) => void;
   loading?: boolean;
+  isViewMore?: boolean;
 }
 
 const Leadership: React.FC<LeadershipProps> = ({
@@ -144,6 +145,7 @@ const Leadership: React.FC<LeadershipProps> = ({
   handleChangeTab,
   loading,
   tabDataLeaderShip,
+  isViewMore,
 }) => {
   const [indexActive, setIndexActive] = useState(0);
   const [indexShow, setIndexShow] = useState(0);
@@ -177,7 +179,7 @@ const Leadership: React.FC<LeadershipProps> = ({
             : tabCategoryLeadership.map((_, idx) => (
               <TabPanel key={`leadership-${idx.toString()}`} active={idx === indexActive}>
                 <div className="t-leadership_item">
-                  <div className="t-leadership_item_left">
+                  <div className={mapModifiers('t-leadership_item_left', isViewMore && 'isViewMore')}>
                     {
                       tabDataLeaderShip?.map((item, index) => (
                         <div
@@ -198,7 +200,7 @@ const Leadership: React.FC<LeadershipProps> = ({
                     }
                     {hasButtonViewAll && (
                       <div className="t-leadership_item_btn">
-                        <Button onClick={handleClickViewAll} modifiers="with-icon" iconName="arrowDownBrown" />
+                        <Button onClick={handleClickViewAll} modifiers="with-icon" iconName={isViewMore ? 'arrowUpBrown' : 'arrowDownBrown'} />
                       </div>
                     )}
                   </div>

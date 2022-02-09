@@ -70,6 +70,7 @@ const LeadershipContainer: React.FC<LeadershipContainerProps> = ({
         tabDataLeaderShip={leaderShipData || []}
         handleClickViewAll={() => setIsViewMore(!isViewMore)}
         hasButtonViewAll={leaderShipDataList.length > 3}
+        isViewMore={isViewMore}
       />
     </div>
   );
