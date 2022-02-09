@@ -160,8 +160,8 @@ const MapInformation: React.FC<MapInformationProps> = ({ mapMarker, mapAPIkey })
                 key: `${mapAPIkey}&libraries=places,geometry`,
               }}
               defaultCenter={{
-                lat: mapMarker[0].lat,
-                lng: mapMarker[0].lng,
+                lat: mapMarker[0]?.lat,
+                lng: mapMarker[0]?.lng,
               }}
               defaultZoom={13}
               options={{
