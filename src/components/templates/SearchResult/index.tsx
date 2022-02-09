@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ChangeEvent, KeyboardEvent } from 'react';
 import { Controller, FormProvider, UseFormReturn } from 'react-hook-form';
 
 import Button from 'components/atoms/Button';
@@ -6,6 +6,7 @@ import Divider from 'components/atoms/Divider';
 import Heading from 'components/atoms/Heading';
 import Image from 'components/atoms/Image';
 import Input from 'components/atoms/Input';
+import Loading from 'components/atoms/Loading';
 import Pagination from 'components/molecules/Pagination';
 import Container from 'components/organisms/Container';
 import NewsCard, { NewsCardProps } from 'components/organisms/NewsCard';
@@ -28,6 +29,9 @@ export interface SearchResultProps {
   adImgSrc?: Array<string>;
   btnText: string;
   placeholderText:string;
+  isLoading?: boolean;
+  handleChangeSearch?: (e: ChangeEvent<HTMLInputElement>) => void;
+  onPressEnterSearch?: (e: KeyboardEvent<HTMLInputElement>) => void;
 }
 
 const SearchResult: React.FC<SearchResultProps> = ({
@@ -41,6 +45,7 @@ const SearchResult: React.FC<SearchResultProps> = ({
   adImgSrc,
   totalPage,
   currentPage,
+  isLoading,
   handleChangePage,
 }) => {
   const { isMobile } = useDeviceQueries();
@@ -77,33 +82,39 @@ const SearchResult: React.FC<SearchResultProps> = ({
             </div>
           </form>
         </FormProvider>
-        <Section>
-          <div className="t-searchResult_wrapper">
-            <div className="t-searchResult_content">
-              <div className="t-searchResult_amount">
-                <Heading modifiers={['600', '24x30', 'fontLexend', 'jet']}>
-                  Có
-                  {' '}
-                  {searchAmount}
-                  {' '}
-                  kết quả được tìm thấy
-                </Heading>
-              </div>
-              <div className="t-searchResult_list">
-                {newsList && newsList.map((item, idx) => (
-                  <div className="t-searchResult_list-item" key={`key-${idx.toString()}`}>
-                    {idx !== 0
-                && <Divider />}
-                    <NewsCard
-                      {...item}
-                      variant="smallVertical"
-                      modifiers="smallTitle"
-                    />
-                  </div>
-                ))}
-              </div>
+        {isLoading
+          ? (
+            <div className="t-searchResult_loading">
+              <Loading isShow />
             </div>
-            {!isMobile
+          ) : (
+            <Section>
+              <div className="t-searchResult_wrapper">
+                <div className="t-searchResult_content">
+                  <div className="t-searchResult_amount">
+                    <Heading modifiers={['600', '24x30', 'fontLexend', 'jet']}>
+                      Có
+                      {' '}
+                      {searchAmount}
+                      {' '}
+                      kết quả được tìm thấy
+                    </Heading>
+                  </div>
+                  <div className="t-searchResult_list">
+                    {newsList && newsList.map((item, idx) => (
+                      <div className="t-searchResult_list-item" key={`key-${idx.toString()}`}>
+                        {idx !== 0
+                && <Divider />}
+                        <NewsCard
+                          {...item}
+                          variant="smallVertical"
+                          modifiers="smallTitle"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                {!isMobile
               && (
               <div className="t-searchResult_ad">
                 {adImgSrc && adImgSrc.map((item, index) => (
@@ -117,17 +128,18 @@ const SearchResult: React.FC<SearchResultProps> = ({
                 ))}
               </div>
               )}
-          </div>
-          {totalPage > 0 && (
-            <div className="t-searchResult_pagination u-mt-md-40 u-mt-28">
-              <Pagination
-                totalPage={totalPage}
-                pageCurrent={currentPage}
-                handleChangePage={(page: number) => handleChangePage && handleChangePage(page)}
-              />
-            </div>
+              </div>
+              {totalPage > 0 && (
+              <div className="t-searchResult_pagination u-mt-md-40 u-mt-28">
+                <Pagination
+                  totalPage={totalPage}
+                  pageCurrent={currentPage}
+                  handleChangePage={(page: number) => handleChangePage && handleChangePage(page)}
+                />
+              </div>
+              )}
+            </Section>
           )}
-        </Section>
       </Container>
     </div>
   );

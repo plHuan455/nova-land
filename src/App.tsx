@@ -61,10 +61,6 @@ const routes = [
     element: <EventDetail />,
   },
   {
-    path: 'tim-kiem',
-    element: <SearchResults />,
-  },
-  {
     path: 'chi-tiet-tuyen-dung',
     element: <RecruitmentDetail />,
   },

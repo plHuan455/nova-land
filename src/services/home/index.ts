@@ -25,4 +25,10 @@ export const getNewsService = async (
   return response.data;
 };
 
+export const getAllNewsService = async (params?: NewsListParamsTypes):
+  Promise<APIPaginationResponse<NewsDataTypes[]>> => {
+  const res = await axiosInstance.get('news', { params });
+  return res.data;
+};
+
 export default getNewsCategoryService;
