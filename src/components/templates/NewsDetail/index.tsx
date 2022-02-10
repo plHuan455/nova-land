@@ -23,16 +23,25 @@ interface NewsType {
   titleBtn?: string;
   newsTypes: Array<string>;
 }
+interface RelatedNewsType {
+  id: string;
+  title: string;
+  content: string;
+  status?: string;
+  imageNews?: string;
+  href?: string;
+}
 interface NewsDetailProps {
   newsDetail: NewsType;
-  relatedNews: Array<NewsType>;
+  relatedNews: RelatedNewsType[];
+  hightLightNews: RelatedNewsType[];
   keyword: Array<string>;
   titleLatest: string;
   titleHot: string;
 }
 
 const NewsDetail: React.FC<NewsDetailProps> = ({
-  newsDetail, relatedNews, keyword, titleLatest, titleHot,
+  newsDetail, relatedNews, keyword, titleLatest, titleHot, hightLightNews,
 }) => (
   <Container>
     <div className="t-newsdetail">
@@ -74,7 +83,7 @@ const NewsDetail: React.FC<NewsDetailProps> = ({
       <div className="t-newsdetail_rightSide">
         <Text modifiers={['14x22', '700', 'jet']}>{titleLatest}</Text>
         <div className="t-newsdetail_subinfo">
-          {relatedNews.slice(0, 3).map((item, idx) => (
+          {relatedNews.map((item) => (
             <React.Fragment
               key={`news-${item.id}`}
             >
@@ -84,18 +93,16 @@ const NewsDetail: React.FC<NewsDetailProps> = ({
                 status={item.status || ''}
                 href={item.href || ''}
               />
-              {(idx + 1) !== relatedNews.slice(0, 3).length && (
-                <Divider />
-              )}
+              <Divider />
             </React.Fragment>
           ))}
         </div>
         <div className="t-newsdetail_hotnews">
           <Text modifiers={['14x22', '700', 'jet']}>{titleHot}</Text>
           <div className="t-newsdetail_subinfo">
-            {relatedNews.slice(0, 5).map((item, idx) => (
+            {hightLightNews.map((item, idx) => (
               <React.Fragment
-                key={`news-${item.id}`}
+                key={`news-${idx.toString()}`}
               >
                 <InfoNews
                   imageSrc={item.imageNews || ''}
@@ -103,9 +110,7 @@ const NewsDetail: React.FC<NewsDetailProps> = ({
                   status={item.status || ''}
                   href={item.href || ''}
                 />
-                {(idx + 1) !== relatedNews.slice(0, 5).length && (
-                  <Divider />
-                )}
+                <Divider />
               </React.Fragment>
             ))}
           </div>

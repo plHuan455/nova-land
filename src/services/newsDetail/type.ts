@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 export type NewsDetailData = {
   id: number,
   thumbnail: string,
@@ -38,3 +39,11 @@ export type NewsDetailData = {
   ]
 };
 
+export type ParamRelatedNewsType = {
+  keyword?: string,
+  page?: number,
+  limit?: number,
+  category_slug?: string,
+  is_popular?: string,
+  except_ids?: string,
+}

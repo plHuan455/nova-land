@@ -8,6 +8,7 @@ const EventDetailTemplateContainer: React.FC = () => (
     <NewsDetail
       newsDetail={newsDetailDumy.newsDetailData.newsDetail}
       relatedNews={newsDetailDumy.newsDetailData.relatedNews}
+      hightLightNews={newsDetailDumy.newsDetailData.relatedNews}
       keyword={newsDetailDumy.keywordList}
       titleLatest="Các sự kiện mới nhất"
       titleHot="Các sự kiện nổi bật"

@@ -25,6 +25,7 @@ describe('<NewsDetail />', () => {
     ReactDOM.render(<NewsDetail
       newsDetail={newsDetailData}
       relatedNews={[]}
+      hightLightNews={[]}
       keyword={[]}
       titleLatest="Các tin mới nhất"
       titleHot="Các tin nổi bật"
