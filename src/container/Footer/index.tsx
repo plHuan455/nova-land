@@ -46,7 +46,7 @@ const FooterContainer: React.FC<FooterContainerProps> = () => {
       phone: '',
       fullname: '',
       email: '',
-      project: undefined,
+      project: null,
     },
   });
 

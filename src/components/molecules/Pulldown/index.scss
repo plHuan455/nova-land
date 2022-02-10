@@ -1,4 +1,6 @@
 .m-pulldown {
+  position: relative;
+
   &_error {
     bottom: rem(-18);
     color: $sinopia;

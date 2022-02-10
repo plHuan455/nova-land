@@ -25,7 +25,7 @@ export type FooterRegisterFormTypes = {
   fullname: string;
   phone: string;
   email: string;
-  project?: OptionType;
+  project?: OptionType | null;
 }
 
 interface FooterProps {

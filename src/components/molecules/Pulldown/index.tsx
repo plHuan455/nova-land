@@ -190,10 +190,10 @@ export const PulldownHookForm: React.FC<PulldownHookFormProps> = (props) => {
     <Controller
       name={props.name}
       control={control}
-      render={({ field: { onChange, value }, ...innerProps }) => (
+      render={({ field: { ref, onChange, value }, ...innerProps }) => (
         <Pulldown
           value={value}
-          register={dropdownRef}
+          register={ref}
           handleChange={onChange}
           error={hasError && hasError.message}
           /* eslint-disable-next-line react/jsx-props-no-spreading */
