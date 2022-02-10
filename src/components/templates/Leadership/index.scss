@@ -170,6 +170,10 @@
       padding: rem(14) rem(22);
     }
 
+    ul {
+      padding-left: rem(16);
+    }
+
     li {
       position: relative;
       @include list-style-none;
@@ -255,6 +259,7 @@
   }
 
   &_item {
+    $item: &;
     display: flex;
     flex-wrap: wrap;
 
@@ -265,9 +270,17 @@
     &_left {
       flex: 0 0 30%;
       position: relative;
+    }
 
-      @include tablet-down {
-        max-height: max-content;
+    &_list-isViewMore {
+      max-height: calc(127px * 6);
+      overflow-y: auto;
+      @include scroll-bars(8);
+
+      ~ #{$item}_btn {
+        &:hover {
+          transform: translateY(-10px);
+        }
       }
     }
 
@@ -295,6 +308,8 @@
     }
 
     &_card {
+      position: relative;
+
       &::after {
         background: $camel;
         content: '';
@@ -303,6 +318,7 @@
         position: absolute;
         transform: translateX(-50%);
         width: 86%;
+        z-index: 1;
       }
     }
 

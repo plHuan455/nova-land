@@ -1,8 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, {
+  useState,
+  useMemo,
+} from 'react';
+import { useQuery } from 'react-query';
 
-import Leadership, { dataTabsLeadershipType } from 'components/templates/Leadership';
-import { getLeadershipCategoryService, getLeadershipService } from 'services/Introduction';
-import { LeadershipCategoryDataTypes } from 'services/Introduction/type';
+import Leadership from 'components/templates/Leadership';
+import {
+  getLeadershipCategoryService,
+  getLeadershipService,
+} from 'services/Introduction';
+import { DEFAULT_QUERY_OPTION } from 'utils/constants';
 import { getImageURL } from 'utils/functions';
 
 interface LeadershipContainerProps {
@@ -13,112 +20,57 @@ interface LeadershipContainerProps {
 const LeadershipContainer: React.FC<LeadershipContainerProps> = ({
   ...props
 }) => {
-  const [indexLeadershipCategoryActive, setIndexLeadershipCategoryActive] = useState(0);
-  const [leaderShipCategory, setLeaderShipCategory] = useState<LeadershipCategoryDataTypes[]>([]);
-  const [leaderShipData, setLeaderShipData] = useState<dataTabsLeadershipType[]>();
-  const [tempLeaderShipData, setTempLeaderShipData] = useState<dataTabsLeadershipType[]>();
-  const [isLoading, setLoading] = useState(false);
+  const [indexActive, setIndexActive] = useState(0);
+  const [isViewMore, setIsViewMore] = useState(false);
 
-  const getLeadershipList = async () => {
-    try {
-      setLoading(true);
-      const categoryList = await getLeadershipCategoryService();
-      setLeaderShipCategory(categoryList);
-      if (categoryList.length) {
-        const leaderShipRes = await getLeadershipService({
-          leadership_category_slug: categoryList[indexLeadershipCategoryActive].slug,
-        });
+  const { data: categoryListData, isLoading: isLoadingCate } = useQuery(
+    'getLeadershipCategory', () => getLeadershipCategoryService(),
+    {
+      ...DEFAULT_QUERY_OPTION,
+    },
+  );
 
-        const convertTempData = categoryList.map((item) => ({
-          titleTab: item.name,
-          dataTab:
-          leaderShipRes?.map((e) => ({
-            gender: e.gender,
-            name: e.name,
-            position: e.position,
-            imgSrc: getImageURL(e.thumbnail),
-            achievement: e.achievement,
-            slogan: e.quotation,
-          })) || [],
-        }));
-        const convertData = categoryList.map((item) => ({
-          titleTab: item.name,
-          dataTab:
-          leaderShipRes?.map((e) => ({
-            gender: e.gender,
-            name: e.name,
-            position: e.position,
-            imgSrc: getImageURL(e.thumbnail),
-            achievement: e.achievement,
-            slogan: e.quotation,
-          })).slice(0, 3) || [],
-        }));
-        setLeaderShipData(convertData);
-        setTempLeaderShipData(convertTempData);
-      }
-    } catch {
-      // Empty
-    } finally {
-      setLoading(false);
+  const { data: leaderData, isLoading } = useQuery(
+    ['getLeadershipData', indexActive], () => getLeadershipService({
+      leadership_category_slug: categoryListData && categoryListData[indexActive].slug,
+    }),
+    {
+      ...DEFAULT_QUERY_OPTION,
+      enabled: !!categoryListData,
+    },
+  );
+
+  const leaderShipDataList = useMemo(() => {
+    if (leaderData && leaderData?.length > 0) {
+      return leaderData?.map((e) => ({
+        gender: e.gender,
+        name: e.name,
+        position: e.position,
+        imgSrc: getImageURL(e.thumbnail),
+        achievement: e.achievement,
+        slogan: e.quotation,
+      }));
     }
+    return [];
+  }, [leaderData]);
+
+  const leaderShipData = isViewMore ? leaderShipDataList : leaderShipDataList.slice(0, 3);
+
+  const handleChangeTab = (index: number) => {
+    setIsViewMore(false);
+    setIndexActive(index);
   };
-
-  const changeTab = async (index: number) => {
-    setIndexLeadershipCategoryActive(index);
-    try {
-      setLoading(true);
-      if (leaderShipCategory.length) {
-        const leaderShipRes = await getLeadershipService({
-          leadership_category_slug: leaderShipCategory[index].slug,
-        });
-
-        const convertData = leaderShipCategory.map((item) => ({
-          titleTab: item.name,
-          dataTab:
-          leaderShipRes?.map((e) => ({
-            gender: e.gender,
-            name: e.name,
-            position: e.position,
-            imgSrc: getImageURL(e.thumbnail),
-            achievement: e.achievement,
-            slogan: e.quotation,
-          })) || [],
-        }));
-        const convertTempData = leaderShipCategory.map((item) => ({
-          titleTab: item.name,
-          dataTab:
-          leaderShipRes?.map((e) => ({
-            gender: e.gender,
-            name: e.name,
-            position: e.position,
-            imgSrc: getImageURL(e.thumbnail),
-            achievement: e.achievement,
-            slogan: e.quotation,
-          })).slice(0, 3) || [],
-        }));
-        setLeaderShipData(convertData);
-        setTempLeaderShipData(convertTempData);
-      }
-    } catch {
-      // Empty
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    getLeadershipList();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
   return (
     <div className="p-aboutUs_leadership">
       <Leadership
         {...props}
-        tabDataLeadership={leaderShipData || []}
-        handleChangeTab={changeTab}
-        loading={isLoading}
-        handleClickViewAll={() => setLeaderShipData(tempLeaderShipData)}
+        tabCategoryLeadership={categoryListData || []}
+        handleChangeTab={handleChangeTab}
+        loading={isLoadingCate || isLoading}
+        tabDataLeaderShip={leaderShipData || []}
+        handleClickViewAll={() => setIsViewMore(!isViewMore)}
+        hasButtonViewAll={leaderShipDataList.length > 3}
+        isViewMore={isViewMore}
       />
     </div>
   );

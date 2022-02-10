@@ -35,6 +35,7 @@ export const iconList = {
   phoneContact: 'phoneContact',
   phone: 'phone',
   fax: 'fax',
+  arrowUpBrown: 'arrowUpBrown',
 };
 
 export type IconName = keyof typeof iconList;

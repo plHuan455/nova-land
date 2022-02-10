@@ -171,4 +171,9 @@
   &-fax {
     background-image: url('~assets/icons/ic_fax.svg');
   }
+
+  &-arrowUpBrown {
+    background-image: url('~assets/icons/ic_arrow_down_brown.svg');
+    transform: rotate(180deg);
+  }
 }

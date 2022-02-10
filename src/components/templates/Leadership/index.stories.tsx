@@ -4,7 +4,7 @@ import React from 'react';
 
 import Leadership, { LeadershipCard, LeadershipDetail } from '.';
 
-import dataLeadershipList from 'assets/dataDummy/leadership';
+import dataLeadershipList, { dataLeadership } from 'assets/dataDummy/leadership';
 import imgLeadership1 from 'assets/images/Leadership/img_leadership1.png';
 import Text from 'components/atoms/Text';
 
@@ -54,8 +54,9 @@ export const cardDetail: Story = () => (
 export const normal: Story = () => (
   <Leadership
     title="BAN LÃNH ĐẠO"
-    tabDataLeadership={dataLeadershipList}
+    tabCategoryLeadership={dataLeadershipList}
     hasButtonViewAll
     handleChangeTab={(index) => console.log(index)}
+    tabDataLeaderShip={dataLeadership}
   />
 );
