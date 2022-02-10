@@ -15,7 +15,6 @@ import {
 import Loading from 'components/atoms/Loading';
 import useInitializeRender from 'hooks/useInitializeRender';
 import DetailsPageNav from 'navigations/DetailsPageNav';
-import Contact from 'pages/Contact';
 import CorporateGovernance from 'pages/CorporateGovernance';
 import Error from 'pages/Error';
 import Event from 'pages/Event';
@@ -58,10 +57,6 @@ const routes = [
   {
     path: 'chi-tiet-tuyen-dung',
     element: <RecruitmentDetail />,
-  },
-  {
-    path: 'lien-he',
-    element: <Contact />,
   },
   {
     path: 'quan-tri-danh-nghiep',
