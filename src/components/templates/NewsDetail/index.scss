@@ -116,7 +116,11 @@
   &_typesnews {
     margin-bottom: rem(24);
     margin-top: rem(24);
-
+    &-button {
+      button {
+        display: block;
+      }
+    }
     @include mobile-up {
       align-items: center;
       display: flex;
@@ -140,11 +144,16 @@
     &-social {
       display: flex;
       margin-top: rem(8);
-        
+      &-twitterShare {
+        display: inherit;
+        margin-top: 0;
+        button {
+          display: unset;
+        }
+     }
       @include tablet-up {
         margin-top: rem(0);
       }
-
       .a-link {
         margin-right: rem(8);
         
@@ -153,6 +162,7 @@
           margin-right: rem(0);
         }
       }
+     
     }
   }
 
