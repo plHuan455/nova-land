@@ -51,6 +51,10 @@ ol {
   height: 100vh;
 }
 
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
 @each $offset in $offsets {
   @for $spacing from -20 through 100 {
     @if $spacing >= 0 {
