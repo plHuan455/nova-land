@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 
-import useScrollAnimate from 'hooks/useScrollAnimation';
+import useScrollAnimate, { useScrollAnimateCarousel } from 'hooks/useScrollAnimation';
 
  type AnimateType =
   // Attention seekers
@@ -145,3 +145,22 @@ Animate.defaultProps = {
 };
 
 export default Animate;
+
+export const AnimateCarousel: React.FC<AnimateProps> = ({
+  children,
+  extendClassName,
+  type,
+}) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const animate = useScrollAnimateCarousel(ref);
+  return (
+    <div ref={ref} className={animate ? `${extendClassName} animate animate-${type || ''}` : `${extendClassName} preanimate`}>
+      {children}
+    </div>
+  );
+};
+
+AnimateCarousel.defaultProps = {
+  extendClassName: undefined,
+  type: undefined,
+};
