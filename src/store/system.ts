@@ -13,8 +13,15 @@ interface UtmData {
   utmContent?: string;
 }
 
+type MessageNotify = {
+  isOpen: boolean;
+  message: string;
+  type: 'error' | 'success' | 'none',
+  title: string;
+}
+
 interface SystemState {
-  successNotify: string;
+  messageNotify: MessageNotify;
   dataSystem?: SystemData;
   error?: any;
   pageTranslation?: Translation[];
@@ -26,7 +33,12 @@ interface SystemState {
 }
 
 const initialState: SystemState = {
-  successNotify: '',
+  messageNotify: {
+    isOpen: false,
+    message: '',
+    type: 'success',
+    title: '',
+  },
   listActiveLang: [],
   isPreview: false,
   utmData: null,
@@ -50,8 +62,8 @@ export const systemSlice = createSlice({
   name: 'systemReducer',
   initialState,
   reducers: {
-    setSuccessNotify($state, action: PayloadAction<string>) {
-      $state.successNotify = action.payload;
+    setMessageNotify($state, action: PayloadAction<MessageNotify>) {
+      $state.messageNotify = action.payload;
     },
     setPageTranslation($state, action: PayloadAction<Translation[] | undefined>) {
       $state.pageTranslation = action.payload;
@@ -82,7 +94,7 @@ export const systemSlice = createSlice({
 });
 
 export const {
-  setSuccessNotify,
+  setMessageNotify,
   setPageTranslation,
   setIsPreview,
   setIsUtmData,

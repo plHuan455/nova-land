@@ -7,10 +7,12 @@ import RedirectNavigate from './redirectNavigate';
 
 import Loading from 'components/atoms/Loading';
 import { getPageService, getStaticHomeService } from 'services/navigations';
+import { useAppSelector } from 'store/hooks';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
 
 const PageNavigate: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
+  const language = useAppSelector((state) => state.system.language);
 
   const {
     isLoading,
@@ -26,7 +28,7 @@ const PageNavigate: React.FC = () => {
   );
 
   const { isLoading: isLoadingHome, error: homeError, data: homeData } = useQuery(
-    ['GetPageData', slug],
+    ['GetHomePageData', slug, language],
     () => getStaticHomeService<any>(),
     {
       ...DEFAULT_QUERY_OPTION,

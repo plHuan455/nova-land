@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useMemo, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { OptionType } from 'components/molecules/Pulldown';
@@ -6,7 +6,7 @@ import i18n from 'i18n';
 import { LanguageKey } from 'services/system/types';
 import { useAppDispatch, useAppSelector } from 'store/hooks';
 import {
-  setLanguage,
+  setLanguage, setMessageNotify,
 } from 'store/system';
 import { getImageURL } from 'utils/functions';
 import {
@@ -44,6 +44,30 @@ const useLanguage = () => {
     return [];
   }, [dataSystem]);
 
+  const handleShowModal = useCallback(
+    (langParam: LanguageKey, message?: string, cb?: ()=>void) => {
+      dispatch(setMessageNotify({
+        isOpen: true,
+        title: '',
+        message: message || '',
+        type: 'warning',
+      }));
+
+      setTimeout(() => {
+        dispatch(setMessageNotify({
+          isOpen: true,
+          title: '',
+          message: '',
+          type: 'warning',
+        }));
+        if (cb) {
+          cb();
+        }
+      }, 2000);
+    },
+    [dispatch],
+  );
+
   //* Functions
   const handleChangeLang = (item: OptionType) => {
     const languageKey = item.value as LanguageKey;
@@ -52,6 +76,11 @@ const useLanguage = () => {
         dispatch(setLanguage(languageKey));
         handleLogicChangeLang(languageKey);
       });
+    } else {
+      const message = dataSystem?.locales
+        ? dataSystem.locales[languageKey].message
+        : '';
+      handleShowModal(languageKey, message);
     }
   };
 
@@ -75,7 +104,6 @@ const useLanguage = () => {
       const transData = pageTranslation.find((ele) => ele.locale === langParam);
       checkPageTranslation(langParam, transData);
     } else {
-      console.log('navigate', langParam);
       navigate(`${getHomeLangURL(langParam)}`);
     }
   };
@@ -90,6 +118,7 @@ const useLanguage = () => {
     lang,
     languageData,
     handleChangeLang,
+    handleShowModal,
   };
 };
 
