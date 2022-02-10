@@ -7,6 +7,8 @@ export type NewsDetailData = {
   slug: string,
   description: string,
   content: string,
+  viewed: number,
+  authorName: string,
   seoData: {
     title: string,
     description: string,
@@ -27,7 +29,7 @@ export type NewsDetailData = {
     {
       name: string,
       slug: string,
-      },
+    },
   ],
   publishedAt: string,
   breadcrumbs: [
@@ -56,8 +58,8 @@ export type ParamNewsTagType = {
 }
 
 export type NewsTagType = {
-  id:number,
-  name:string,
-  slug:string,
+  id: number,
+  name: string,
+  slug: string,
   isPopular: boolean,
 }
