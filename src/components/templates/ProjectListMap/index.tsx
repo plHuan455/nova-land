@@ -27,6 +27,7 @@ export interface ItemBranch {
 interface ItemProject {
   title: string;
   href: string;
+  target?: string;
 }
 
 interface InfoProps {
@@ -79,7 +80,7 @@ export const ProjectListMapInfo:React.FC<InfoProps> = ({
       <ul className="t-projectListMap_info_list">
         {listProject.map((item, index) => (
           <li key={index.toString()}>
-            <Link href={item.href} target="_blank" useExternal={checkExternalUrl(item.href)}>
+            <Link href={item.href} target={item.target} useExternal={checkExternalUrl(item.href)}>
               <div className="t-projectListMap_info_item">
                 <Text content={item.title} modifiers={['16x24', 'jet', '300']} />
                 <Icon iconName="greyArrowRight" />

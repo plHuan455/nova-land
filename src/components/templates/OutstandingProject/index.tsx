@@ -13,13 +13,17 @@ export interface OutstandingProjectCardProps {
   imgSrc: string;
   title: string;
   href: string;
+  target?: string;
 }
 
 export const OutstandingProjectCard: React.FC<OutstandingProjectCardProps> = ({
-  imgSrc, title, href,
+  imgSrc,
+  title,
+  href,
+  target,
 }) => (
   <div className="t-outstandingProjectCard">
-    <Link href={href} target="_blank" useExternal={checkExternalUrl(href)}>
+    <Link href={href} target={target} useExternal={checkExternalUrl(href)}>
       <div className="t-outstandingProjectCard_thumbnail">
         <Image src={imgSrc} ratio="221x166" alt="OutstandingProjectCard" />
       </div>

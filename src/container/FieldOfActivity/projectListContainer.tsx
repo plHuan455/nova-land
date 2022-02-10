@@ -14,8 +14,8 @@ const ProjectListContainer: React.FC = () => {
       return projectData.filter((data) => data.category.name === nameProjects).map(
         (item) => ({
           imgSrc: getImageURL(item.projectLogo),
-          href: item.link,
-          target: '_blank',
+          href: item.link?.url || '#',
+          target: item.link?.target || '_blank',
         }),
       );
     }

@@ -24,7 +24,10 @@ export type ProjectsTypes = {
   id: number,
   thumbnail: string,
   projectLogo: string,
-  link: string,
+  link: {
+    url: string;
+    target: string;
+  } | null,
   name: string,
   realEstates: {
     name: string,

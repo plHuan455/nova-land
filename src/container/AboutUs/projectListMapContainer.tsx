@@ -78,7 +78,8 @@ const ProjectListMapContainer: React.FC<ProjectListMapContainerProps> = ({
   const listProject = useMemo(
     () => projectData?.map((item) => ({
       title: item.name,
-      href: item.link,
+      href: item.link?.url || '#',
+      target: item.link?.target,
     })),
     [projectData],
   );
