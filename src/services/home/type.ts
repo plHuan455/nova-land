@@ -1,9 +1,17 @@
 /* eslint-disable camelcase */
 export type NewsCategoryDataTypes = {
   id: number,
-  displayOrder: number,
+  parent?: {
+    id: number,
+    name: string,
+    slug: string,
+  },
   name: string,
   slug: string,
+  children: {
+    name: string,
+    slug: string,
+  }[]
 }
 
 export type NewsListParamsTypes = {

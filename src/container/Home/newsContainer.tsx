@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import HomeNews from 'components/templates/HomeNews';
 import Section from 'components/templates/Section';
 import { getNewsService } from 'services/home';
+import { NewsCategoryDataTypes } from 'services/home/type';
 import { getNewsCategoryAction } from 'store/home';
 import { useAppSelector } from 'store/hooks';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
@@ -32,18 +33,25 @@ const NewsContainer: React.FC<NewsBlock> = ({
   // TODO: get news list by a category
   const tabDataHomeNewsList = useMemo(() => {
     if (newsCategoryList) {
-      return newsCategoryList.map((item) => ({
+      const dataFilter = newsCategoryList.filter((e) => e.parent === null);
+      return dataFilter.map((item) => ({
         titleTab: item.name,
       }));
     }
     return [];
   }, [newsCategoryList]);
 
-  const { data } = useQuery(
+  const handleCategorySlug = (data: NewsCategoryDataTypes[]) => {
+    if (data[indexActive].children.length > 0) {
+      return data[indexActive].children[0].slug;
+    }
+    return data[indexActive].slug;
+  };
+
+  const { data, isLoading } = useQuery(
     ['getHomeNewsList', newsCategoryList, indexActive], () => getNewsService({
-      is_popular: true,
       limit: '4',
-      category_slug: newsCategoryList ? newsCategoryList[indexActive].slug : undefined,
+      category_slug: newsCategoryList ? handleCategorySlug(newsCategoryList) : undefined,
     }), {
       ...DEFAULT_QUERY_OPTION,
       enabled: !!newsCategoryList,
@@ -56,7 +64,7 @@ const NewsContainer: React.FC<NewsBlock> = ({
         imgSrc: getImageURL(item.thumbnail),
         title: item.title,
         desc: item.description,
-        date: formatDateDDMMYYYY(item.publishedAt),
+        date: formatDateDDMMYYYY(new Date(item.publishedAt).toDateString()),
         totalViews: item.viewed,
         href: `/tin-tuc-chi-tiet/${item.slug}`,
       }));
@@ -83,6 +91,7 @@ const NewsContainer: React.FC<NewsBlock> = ({
           tabDataHomeNews={tabDataHomeNewsList}
           newsList={newsData}
           handleActive={setIndexActive}
+          loading={isLoading}
         />
       </Section>
     </div>
