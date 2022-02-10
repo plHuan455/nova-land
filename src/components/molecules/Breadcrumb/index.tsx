@@ -5,26 +5,25 @@ import Link from 'components/atoms/Link';
 import Text from 'components/atoms/Text';
 import Container from 'components/organisms/Container';
 
-export type BreadcrumbPropsType = {
+export type BreadcrumbPropsTypes = {
   pathName?: string;
   title: string;
 };
 
 interface BreadcrumbProps {
-  pathNameHome: string;
-  breadcrumbs: BreadcrumbPropsType[];
+  breadcrumbs: BreadcrumbPropsTypes[];
 }
 
-const Breadcrumb: React.FC<BreadcrumbProps> = ({ breadcrumbs, pathNameHome }) => (
+const Breadcrumb: React.FC<BreadcrumbProps> = ({ breadcrumbs }) => (
   <div className="m-breadcrumb">
     <Container>
       <ul className="m-breadcrumb_wrapper">
         <li className="m-breadcrumb_home">
-          <Link href={pathNameHome}>
+          <Link href={breadcrumbs[0].pathName}>
             <Icon iconName="home" size="16" />
           </Link>
         </li>
-        {breadcrumbs.map((item) => (
+        {breadcrumbs.slice(1).map((item) => (
           <li className="m-breadcrumb_item" key={`${item.title}-${item.pathName}`}>
             <Link href={item.pathName}>
               <div className="m-breadcrumb_item_wrapper">

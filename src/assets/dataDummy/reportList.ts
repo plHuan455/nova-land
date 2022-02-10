@@ -29,6 +29,10 @@ const ReportListDumy = [
 
 const breadcrumb = [
   {
+    pathName: '/',
+    title: 'Trang chủ',
+  },
+  {
     pathName: '/quan-he-dau-tu',
     title: 'Quan hệ đầu tư',
   },

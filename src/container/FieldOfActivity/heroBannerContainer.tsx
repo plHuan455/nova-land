@@ -1,7 +1,7 @@
 import React from 'react';
 
 import HeroBanner from 'components/templates/HeroBanner';
-import { getImageURL } from 'utils/functions';
+import { convertBanner } from 'utils/functions';
 
 interface BannerProps {
   banners: BannersDataTypes[];
@@ -9,25 +9,12 @@ interface BannerProps {
 
 const HeroBannerContainer: React.FC<BannerProps> = ({
   banners,
-}) => {
-  const convertBanner = () => {
-    if (banners.length > 0) {
-      return banners.map((item) => ({
-        src: getImageURL(item.data.imageDesktop),
-        srcTablet: getImageURL(item.data.imageMobile),
-        srcMobile: getImageURL(item.data.imageTablet),
-      }));
-    }
-    return [];
-  };
-
-  return (
-    <div className="p-fieldOfActivity_heroBanner">
-      <HeroBanner
-        list={convertBanner()}
-      />
-    </div>
-  );
-};
+}) => (
+  <div className="p-fieldOfActivity_heroBanner">
+    <HeroBanner
+      list={convertBanner(banners)}
+    />
+  </div>
+);
 
 export default HeroBannerContainer;

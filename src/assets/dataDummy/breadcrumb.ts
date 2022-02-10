@@ -1,5 +1,9 @@
 const breadcrumb = [
   {
+    pathName: '/',
+    title: 'Trang chủ',
+  },
+  {
     pathName: '/tin-tuc',
     title: 'Tin Tức',
   },

@@ -4,31 +4,40 @@ import { useParams } from 'react-router-dom';
 
 import BreadcrumbContainer from './breadcrumbContainer';
 import CategoryGeneralContainer from './categoryGeneralContainer';
-import HeroBannerContainer from './heroBannerContainer';
 
 import Loading from 'components/atoms/Loading';
-import Error from 'components/templates/Error';
+import HeroBanner from 'components/templates/HeroBanner';
 import HelmetContainer from 'container/helmet';
+import RedirectNavigate from 'navigations/redirectNavigate';
 import { getNewsCategoryDetailService } from 'services/home';
+import { useAppSelector } from 'store/hooks';
+import { getBreadcrumbs } from 'utils/breadcrumbs';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
+import { convertBanner } from 'utils/functions';
 
 const NewsCategoryContainer: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
+  const language = useAppSelector((state) => state.system.language);
 
-  const { isLoading, error } = useQuery(
+  const { isLoading, error, data } = useQuery(
     ['getNewsCategory', slug], () => getNewsCategoryDetailService(slug || ''),
     DEFAULT_QUERY_OPTION,
   );
 
   if (isLoading) return <Loading isShow variant="fullScreen" />;
 
-  if (error) return <Error statusCode={404} btnHomeText="Trở về trang chủ" />;
+  if (error) return <RedirectNavigate />;
 
   return (
     <>
-      <HelmetContainer />
-      <HeroBannerContainer />
-      <BreadcrumbContainer />
+      <HelmetContainer ogData={data?.openGraph} seoData={data?.seoData} />
+      <HeroBanner list={convertBanner(data?.banner.items || [])} />
+      <BreadcrumbContainer breadcrumbs={getBreadcrumbs({
+        breadcrumbs: data?.breadcrumbs || [],
+        language,
+        title: data?.name || '',
+      })}
+      />
       <CategoryGeneralContainer />
     </>
   );
