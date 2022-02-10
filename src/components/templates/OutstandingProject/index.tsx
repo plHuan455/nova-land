@@ -4,7 +4,7 @@ import Heading from 'components/atoms/Heading';
 import Image from 'components/atoms/Image';
 import Link from 'components/atoms/Link';
 import Text from 'components/atoms/Text';
-import Animate from 'components/organisms/Animate';
+import { AnimateCarousel } from 'components/organisms/Animate';
 import Carousel, { PrevArrow, NextArrow } from 'components/organisms/Carousel';
 import Container from 'components/organisms/Container';
 import { checkExternalUrl } from 'utils/functions';
@@ -28,17 +28,13 @@ export const OutstandingProjectCard: React.FC<OutstandingProjectCardProps> = ({
         <Image src={imgSrc} ratio="221x166" alt="OutstandingProjectCard" />
       </div>
       <div className="t-outstandingProjectCard_title">
-        <Text
-          modifiers={['16x24', 'arsenic', '300', 'fontLexend']}
-          content={title}
-        />
+        <Text modifiers={['16x24', 'arsenic', '300', 'fontLexend']} content={title} />
       </div>
     </Link>
   </div>
 );
 
 const setting = {
-  centerMode: true,
   infinite: false,
   slidesToShow: 4,
   slidesToScroll: 1,
@@ -76,36 +72,35 @@ export interface OutstandingProjectProps {
 }
 
 const OutstandingProject: React.FC<OutstandingProjectProps> = ({
-  title, outstandingProjectList,
+  title,
+  outstandingProjectList,
 }) => (
   <div className="t-outstandingProject">
     <Container>
       <div className="t-outstandingProject_wrapper">
         <div className="t-outstandingProject_title">
-          <Animate type="fadeInLeft">
+          <AnimateCarousel type="fadeInLeft">
             <Heading
               modifiers={['32x48', 'camel', '500', 'fontNoto', 'uppercase']}
               content={title}
             />
-          </Animate>
+          </AnimateCarousel>
         </div>
         <div className="t-outstandingProject_content">
-          <Animate type="fadeInRight">
-            <Carousel settings={setting}>
-              {
-                outstandingProjectList.map((item, index) => (
+          <AnimateCarousel type="fadeInRight">
+            {outstandingProjectList.length > 0 && (
+              <Carousel settings={setting}>
+                {outstandingProjectList.map((item, index) => (
                   <div
                     className="t-outstandingProject_item"
                     key={`outstandingProject-${index.toString()}`}
                   >
-                    <OutstandingProjectCard
-                      {...item}
-                    />
+                    <OutstandingProjectCard {...item} />
                   </div>
-                ))
-              }
-            </Carousel>
-          </Animate>
+                ))}
+              </Carousel>
+            )}
+          </AnimateCarousel>
         </div>
       </div>
     </Container>
