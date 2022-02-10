@@ -19,12 +19,13 @@ const dummyOption: OptionType[] = [
 const InvestmentRelations: React.FC = () => {
   const dispatch = useAppDispatch();
   const [selectedSort, setSelectedSort] = useState<OptionType | null>(null);
-  const [page, setPage] = useState(1);
+  const language = useAppSelector((state) => state.system.language);
   const { otherCategories } = useAppSelector((state) => state.documents);
+  const [page, setPage] = useState(1);
   const [indexActive, setIndexActive] = useState<number>(1);
 
   const { data: otherDocumentList, isLoading } = useQuery(
-    ['GetOtherDocumentListHighlight', indexActive, page],
+    ['GetOtherDocumentListHighlight', indexActive, page, language],
     () => getOtherDocumentCategoriesDetailService(indexActive, {
       limit: 2,
       page,
@@ -33,8 +34,6 @@ const InvestmentRelations: React.FC = () => {
       ...DEFAULT_QUERY_OPTION,
     },
   );
-
-  console.log(otherDocumentList);
 
   const convertDataOtherDocument = useMemo(() => {
     if (otherDocumentList) {
@@ -53,8 +52,7 @@ const InvestmentRelations: React.FC = () => {
     dispatch(getOtherDocumentCategoriesAction({
       limit: 50,
     }));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [dispatch, language]);
 
   return (
     <div className="p-corporateGovernance_InvestmentRelationsOtherDocument">

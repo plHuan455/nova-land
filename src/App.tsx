@@ -13,9 +13,7 @@ import {
 
 import Loading from 'components/atoms/Loading';
 import useInitializeRender from 'hooks/useInitializeRender';
-import DetailsPageNav from 'navigations/DetailsPageNav';
 import Error from 'pages/Error';
-import NewsCategory from 'pages/NewsCategory';
 import Recruitment from 'pages/Recruitment';
 import RecruitmentDetail from 'pages/RecruitmentDetail';
 import RecruitmentList from 'pages/RecruitmentList';
@@ -25,14 +23,6 @@ import { store } from 'store';
 import { useAppSelector } from 'store/hooks';
 
 const staticRoutes = [
-  {
-    path: 'tin-tuc/:slug',
-    element: <NewsCategory />,
-  },
-  {
-    path: 'chi-tiet-tin-tuc/:slug',
-    element: <DetailsPageNav />,
-  },
   {
     path: 'bao-cao-thuong-nien',
     element: <ReportList />,
@@ -44,10 +34,6 @@ const staticRoutes = [
   {
     path: 'co-hoi-nghe-nghiep',
     element: <RecruitmentList />,
-  },
-  {
-    path: 'chi-tiet-su-kien/:slug',
-    element: <DetailsPageNav />,
   },
   {
     path: 'chi-tiet-tuyen-dung',

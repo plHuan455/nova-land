@@ -15,6 +15,7 @@ const InvestmentSectorContainer: React.FC<InvestmentSectorContainerProps> = ({
   ...props
 }) => {
   const dispatch = useAppDispatch();
+  const language = useAppSelector((state) => state.system.language);
   const { realEstatesList } = useAppSelector((state) => state.project);
   const [isLoading, setLoading] = useState(false);
 
@@ -34,14 +35,11 @@ const InvestmentSectorContainer: React.FC<InvestmentSectorContainerProps> = ({
   );
 
   useEffect(() => {
-    if (!realEstatesList) {
-      setLoading(true);
-      dispatch(getRealEstatesAction({}))
-        .unwrap()
-        .finally(() => setLoading(false));
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    setLoading(true);
+    dispatch(getRealEstatesAction({}))
+      .unwrap()
+      .finally(() => setLoading(false));
+  }, [dispatch, language]);
 
   return (
     <div className="p-aboutUs_investmentSector">

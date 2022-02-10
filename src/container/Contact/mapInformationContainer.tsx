@@ -13,68 +13,19 @@ interface MapInformationContainerProps {
 }
 
 const MapInformationContainer: React.FC<MapInformationContainerProps> = ({ dataMarker }) => {
-  const [dataLocation, setDataLocation] = useState<TypeMapMarker>(dataMarker);
+  const [dataLocation, setDataLocation] = useState<TypeMapMarker | undefined>(dataMarker);
   const systemData = useAppSelector((state) => state.system.dataSystem);
+  const language = useAppSelector((state) => state.system.language);
   const [isBack, setIsBack] = useState(false);
 
-  const handleLocationSearch = () => {
-    try {
-      if (navigator.geolocation && !isBack) {
-        navigator.geolocation.getCurrentPosition(
-          async (position: GeolocationPosition) => {
-            const pos = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude,
-            };
-            const data = await getNearestExchangesService({
-              longtitude: pos.lng,
-              latitude: pos.lat,
-            });
-            const dtLocation = convertLocationData(data);
-            setDataLocation(dtLocation);
-            setIsBack(true);
-          },
-        );
-      }
-      if (isBack) {
-        setDataLocation(dataMarkerDefault[0]);
-        setIsBack(false);
-      }
-    } finally {
-      //
-    }
-  };
-
-  const convertLocationData = (dataConvert: NearestExchangesTypes) => ({
-    lat: Number(dataConvert.latitude),
-    lng: Number(dataConvert.longtitude),
-    dataMarker: {
-      title: '',
-      dataCard: [
-        {
-          branchName: dataConvert.name,
-          informationDetail: {
-            iconLocation: 'location' as IconName,
-            location: dataConvert.address,
-            iconPhone: 'phone' as IconName,
-            phone: dataConvert.phone,
-          },
-        },
-      ],
-      nameBtn: isBack ? 'Tìm gallery gần nhất' : 'Trở lại vị trí đầu',
-    },
-  });
-
   const { data } = useQuery(
-    ['getExchangesHighlight'], () => getExchangesService({
+    ['getExchangesHighlight', language], () => getExchangesService({
       is_pinned: 'true',
-    }), {
-      ...DEFAULT_QUERY_OPTION,
-    },
+    }), DEFAULT_QUERY_OPTION,
   );
 
   const dataMarkerDefault = useMemo(() => {
-    if (data && data.data.length > 0) {
+    if (data && data.data.length > 0 && dataLocation) {
       return data.data.map((item) => ({
         lat: item.latitude,
         lng: item.longtitude,
@@ -106,21 +57,71 @@ const MapInformationContainer: React.FC<MapInformationContainerProps> = ({ dataM
         },
       }));
     }
-    return [];
+    return undefined;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data]);
 
+  const handleLocationSearch = () => {
+    try {
+      if (navigator.geolocation && !isBack) {
+        navigator.geolocation.getCurrentPosition(
+          async (position: GeolocationPosition) => {
+            const pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude,
+            };
+            const res = await getNearestExchangesService({
+              longtitude: pos.lng,
+              latitude: pos.lat,
+            });
+            const dtLocation = convertLocationData(res);
+            setDataLocation(dtLocation);
+            setIsBack(true);
+          },
+        );
+      }
+      if (isBack && dataMarkerDefault) {
+        setDataLocation(dataMarkerDefault[0]);
+        setIsBack(false);
+      }
+    } finally {
+      //
+    }
+  };
+
+  const convertLocationData = (dataConvert: NearestExchangesTypes) => ({
+    lat: Number(dataConvert.latitude),
+    lng: Number(dataConvert.longtitude),
+    dataMarker: {
+      title: '',
+      dataCard: [
+        {
+          branchName: dataConvert.name,
+          informationDetail: {
+            iconLocation: 'location' as IconName,
+            location: dataConvert.address,
+            iconPhone: 'phone' as IconName,
+            phone: dataConvert.phone,
+          },
+        },
+      ],
+      nameBtn: isBack ? 'Tìm gallery gần nhất' : 'Trở lại vị trí đầu',
+    },
+  });
+
   useEffect(() => {
-    if (dataMarkerDefault.length > 0) {
+    if (dataMarkerDefault && dataMarkerDefault.length > 0) {
       setDataLocation(dataMarkerDefault[0]);
+    } else {
+      setDataLocation(undefined);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [data]);
+  }, [data, language]);
 
   return (
     <div className="p-contact_mapInformation">
       <MapInformation
-        mapAPIkey={systemData?.gmapId || 'AIzaSyAt4eV8aoSdhKXHQSQvJc7aSEGlcnUVbdo'}
+        mapAPIkey={systemData?.gmapId || ''}
         mapMarker={dataLocation}
         handleLocationSearch={handleLocationSearch}
       />

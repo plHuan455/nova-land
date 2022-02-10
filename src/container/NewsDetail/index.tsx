@@ -19,7 +19,7 @@ const NewsDetailContainer: React.FC = () => {
   const language = useAppSelector((state) => state.system.language);
 
   const { data, error, isLoading } = useQuery(
-    ['GetNewsDetailData', slug],
+    ['GetNewsDetailData', slug, language],
     () => getNewsDetailService(slug || ''),
     {
       ...DEFAULT_QUERY_OPTION,
@@ -27,7 +27,7 @@ const NewsDetailContainer: React.FC = () => {
   );
 
   const { data: newsTagData } = useQuery(
-    ['GetNewsTagData', slug],
+    ['GetNewsTagData', slug, language],
     () => getNewsTagService({
       is_popular: true,
     }),

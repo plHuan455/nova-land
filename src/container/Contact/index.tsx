@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useMemo } from 'react';
 
 import GallerySlideContainer from './gallerySlideContainer';
@@ -44,6 +45,7 @@ export type ContactBlock = Location | Gallery | Exchanges;
 const ContactContainer: React.FC<BasePageData<ContactBlock>> = ({
   blocks,
   seoData,
+  openGraphData,
 }) => {
   const locationBlock = useMemo(() => getBlockData('section_location', blocks) as Location, [blocks]);
   const galleryBlock = useMemo(() => getBlockData('sectiob_gallery', blocks) as Gallery, [blocks]);
@@ -53,11 +55,12 @@ const ContactContainer: React.FC<BasePageData<ContactBlock>> = ({
     <>
       <HelmetContainer
         seoData={seoData}
+        ogData={openGraphData}
       />
       <MapInformationContainer
         dataMarker={{
-          lat: parseFloat(locationBlock.latitude),
-          lng: parseFloat(locationBlock.longtitude),
+          lat: locationBlock?.latitude ?  parseFloat(locationBlock.latitude) : 0,
+          lng: locationBlock?.longtitude ? parseFloat(locationBlock.longtitude) : 0,
           dataMarker: {
             title: locationBlock.locationName,
             dataCard: [
@@ -85,14 +88,6 @@ const ContactContainer: React.FC<BasePageData<ContactBlock>> = ({
             nameBtn: 'Tìm gallery gần nhất',
           },
         }}
-      />
-      <GallerySlideContainer
-        title={galleryBlock.title}
-        desc={galleryBlock.description}
-        target={galleryBlock.button.target}
-        nameBtn={galleryBlock.button.text}
-        href={`${galleryBlock.button.url}/search/${galleryBlock.latitude},${galleryBlock.longtitude}`}
-        imgList={galleryBlock.items}
       />
       <TransactionListContainer
         title={exchanges.title}

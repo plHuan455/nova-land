@@ -23,6 +23,7 @@ const FieldOfActivityContainer: React.FC<BasePageData<FieldOfActivityData>> = ({
   banners,
 }) => {
   const dispatch = useAppDispatch();
+  const language = useAppSelector((state) => state.system.language);
   const { realEstatesList, categoryProjectsList } = useAppSelector((state) => state.project);
   const [idRealEstatesSlug, setIDRealEstatesSlug] = useState<number>(2);
   const fieldActivityDetailsTabBlock = useMemo(
@@ -31,7 +32,7 @@ const FieldOfActivityContainer: React.FC<BasePageData<FieldOfActivityData>> = ({
   );
 
   const { data: projectData } = useQuery(
-    ['getProjectsData', idRealEstatesSlug],
+    ['getProjectsData', idRealEstatesSlug, language],
     () => getProjectsService({
       real_estates_id: idRealEstatesSlug,
     }),
@@ -66,17 +67,12 @@ const FieldOfActivityContainer: React.FC<BasePageData<FieldOfActivityData>> = ({
     if (realEstatesList && realEstatesList.length) {
       setIDRealEstatesSlug(realEstatesList[0].id);
     }
-  }, [realEstatesList]);
+  }, [realEstatesList, language]);
 
   useEffect(() => {
-    if (!realEstatesList) {
-      dispatch(getRealEstatesAction({}));
-    }
-    if (!categoryProjectsList) {
-      dispatch(getCategoryProjectsAction({}));
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    dispatch(getRealEstatesAction({}));
+    dispatch(getCategoryProjectsAction({}));
+  }, [dispatch, language]);
 
   const convertListLogo = (nameProjects: string) => {
     if (projectData) {

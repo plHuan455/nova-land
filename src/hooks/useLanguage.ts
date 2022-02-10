@@ -50,7 +50,7 @@ const useLanguage = () => {
         isOpen: true,
         title: '',
         message: message || '',
-        type: 'warning',
+        type: 'error',
       }));
 
       setTimeout(() => {
@@ -58,7 +58,7 @@ const useLanguage = () => {
           isOpen: false,
           title: '',
           message: '',
-          type: 'warning',
+          type: 'error',
         }));
         if (cb) {
           cb();

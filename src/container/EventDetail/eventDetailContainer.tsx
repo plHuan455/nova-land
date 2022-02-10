@@ -6,6 +6,7 @@ import NewsDetail from 'components/templates/NewsDetail';
 import { getRelatedNewsEventService } from 'services/eventDetail';
 import { EventDetailData } from 'services/eventDetail/type';
 import { NewsTagType } from 'services/newsDetail/type';
+import { useAppSelector } from 'store/hooks';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
 import { formatDateDDMMYYYY, getImageURL, getTime } from 'utils/functions';
 // import { formatDateDDMMYYYY } from 'utils/functions';
@@ -20,8 +21,10 @@ const EventDetailTemplateContainer: React.FC<NewsDetailTemplateContainerProps> =
   newsTagData,
   handleTagClick,
 }) => {
+  const language = useAppSelector((state) => state.system.language);
+
   const { data: hightLightNews } = useQuery(
-    ['GetHightLightNewsData', data],
+    ['GetHightLightNewsData', data, language],
     () => getRelatedNewsEventService({
       limit: 5,
       is_popular: 'true',
@@ -34,7 +37,7 @@ const EventDetailTemplateContainer: React.FC<NewsDetailTemplateContainerProps> =
   );
 
   const { data: relatedNews } = useQuery(
-    ['GetRelatedNewsData', data],
+    ['GetRelatedNewsData', data, language],
     () => getRelatedNewsEventService({
       limit: 5,
       except_ids: String(data?.id),

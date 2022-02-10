@@ -26,6 +26,8 @@ export type HomeData =
 const HomeContainer: React.FC<BasePageData<HomeData>> = ({
   blocks,
   banners,
+  openGraphData,
+  seoData,
 }) => {
   const outStandingNumbersBlock = useMemo(
     () => getBlockData('numbers', blocks) as OutStandingNumbersTypes,
@@ -69,7 +71,7 @@ const HomeContainer: React.FC<BasePageData<HomeData>> = ({
 
   return (
     <>
-      <HelmetContainer />
+      <HelmetContainer seoData={seoData} ogData={openGraphData} />
       <HeroBannerContainer banners={banners} />
       <OutStandingNumbersContainer blocks={outStandingNumbersBlock} />
       <InvestmentSectorContainer blocks={investmentSectorBlock} />

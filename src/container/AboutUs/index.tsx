@@ -104,6 +104,8 @@ export type AboutUsBlock = Introduction | Numbers |
 const AboutUSContainer: React.FC<BasePageData<AboutUsBlock>> = ({
   banners,
   blocks,
+  openGraphData,
+  seoData,
 }) => {
   const introductionBlock = useMemo(() => getBlockData('introduction', blocks) as Introduction, [blocks]);
   const numbersBlock = useMemo(() => getBlockData('numbers', blocks) as Numbers, [blocks]);
@@ -187,19 +189,19 @@ const AboutUSContainer: React.FC<BasePageData<AboutUsBlock>> = ({
     },
   ], [introductionBlock]);
 
-  const numbersList = useMemo(() => numbersBlock.items.map((item) => ({
+  const numbersList = useMemo(() => numbersBlock?.items?.map((item) => ({
     number: item.textNumber,
     desc: item.descriptionNumber,
   })), [numbersBlock]);
 
-  const developHistoryList = useMemo(() => developmentHistoryBlock.items.map((item) => ({
+  const developHistoryList = useMemo(() => developmentHistoryBlock?.items?.map((item) => ({
     year: item.textTimes,
     description: item.description,
     image: getImageURL(item.imageTime),
     imgBackground: getImageURL(item.imageBackground),
   })), [developmentHistoryBlock]);
 
-  const ecoSystemsData = useMemo(() => novaEcosystemBlock.items.map((item) => ({
+  const ecoSystemsData = useMemo(() => novaEcosystemBlock?.items?.map((item) => ({
     fieldImgSrc: getImageURL(item.imageDefault),
     brandImage: getImageURL(item.imageHover),
     href: item.link.url,
@@ -207,7 +209,7 @@ const AboutUSContainer: React.FC<BasePageData<AboutUsBlock>> = ({
 
   return (
     <>
-      <HelmetContainer />
+      <HelmetContainer ogData={openGraphData} seoData={seoData} />
       <HeroBannerContainer
         list={listBanner}
       />

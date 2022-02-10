@@ -3,12 +3,14 @@ import { useParams } from 'react-router-dom';
 
 import NewsCategory, { NewsCategoryItemTypes } from 'components/templates/NewsCategory';
 import { getNewsService } from 'services/home';
+import { useAppSelector } from 'store/hooks';
 import { getImageURL, formatDateDDMMYYYY } from 'utils/functions';
 
 const LIMIT = 9;
 const PAGE = 1;
 
 const CategoryGeneralContainer: React.FC = () => {
+  const language = useAppSelector((state) => state.system.language);
   const [isLoading, setLoading] = useState(false);
   const [totalPages, setTotalPages] = useState<number>(1);
   const [page, setPage] = useState<number>(1);
@@ -83,7 +85,7 @@ const CategoryGeneralContainer: React.FC = () => {
     });
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [slug]);
+  }, [slug, language]);
 
   return (
     <div className="p-newsCategory_categoryGeneral pb-80">

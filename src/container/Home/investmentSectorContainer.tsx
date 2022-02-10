@@ -21,6 +21,8 @@ const InvestmentSectorContainer: React.FC<InvestmentSectorBlock> = ({
 }) => {
   const dispatch = useDispatch();
   const { realEstatesList } = useAppSelector((state) => state.project);
+  const language = useAppSelector((state) => state.system.language);
+
   const investmentSectorData = useMemo(
     () => realEstatesList?.map((item) => ({
       title: item.name,
@@ -36,11 +38,9 @@ const InvestmentSectorContainer: React.FC<InvestmentSectorBlock> = ({
   );
 
   useEffect(() => {
-    if (!realEstatesList) {
-      dispatch(getRealEstatesAction({}));
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    dispatch(getRealEstatesAction({}));
+  }, [dispatch, language]);
+
   return (
     <Animate type="goUp">
       <div className="p-home_investSector">

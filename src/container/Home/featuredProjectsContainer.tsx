@@ -4,6 +4,7 @@ import { useQuery } from 'react-query';
 import FeaturedProjects from 'components/templates/FeaturedProjects';
 import Section from 'components/templates/Section';
 import { getProjectsService } from 'services/project';
+import { useAppSelector } from 'store/hooks';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
 import { getImageURL } from 'utils/functions';
 
@@ -18,8 +19,10 @@ interface FeaturedProjectsBlock {
 const FeaturedProjectsContainer: React.FC<FeaturedProjectsBlock> = ({
   blocks,
 }) => {
+  const language = useAppSelector((state) => state.system.language);
+
   const { isLoading, data } = useQuery(
-    ['GetProjectHighlight'],
+    ['GetProjectHighlight', language],
     () => getProjectsService({ highlight: true }),
     DEFAULT_QUERY_OPTION,
   );

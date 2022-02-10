@@ -29,6 +29,8 @@ const NewsContainer: React.FC<NewsBlock> = ({
 }) => {
   const dispatch = useDispatch();
   const { newsCategoryList } = useAppSelector((state) => state.home);
+  const language = useAppSelector((state) => state.system.language);
+
   const [indexActive, setIndexActive] = useState(0);
   // TODO: get news list by a category
   const tabDataHomeNewsList = useMemo(() => {
@@ -49,7 +51,7 @@ const NewsContainer: React.FC<NewsBlock> = ({
   };
 
   const { data, isLoading } = useQuery(
-    ['getHomeNewsList', newsCategoryList, indexActive], () => getNewsService({
+    ['getHomeNewsList', newsCategoryList, indexActive, language], () => getNewsService({
       limit: 4,
       category_slug: newsCategoryList ? handleCategorySlug(newsCategoryList) : undefined,
     }), {
@@ -73,12 +75,8 @@ const NewsContainer: React.FC<NewsBlock> = ({
   }, [data]);
 
   useEffect(() => {
-    if (!newsCategoryList) {
-      dispatch(getNewsCategoryAction());
-    }
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    dispatch(getNewsCategoryAction());
+  }, [dispatch, language]);
 
   return (
     <div className="p-home_news">

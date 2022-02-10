@@ -17,26 +17,17 @@ import { setMessageNotify } from 'store/system';
 import { getImageURL } from 'utils/functions';
 import registerSchema from 'utils/schemas';
 
-type NotifyContact = {
-  isOpen: boolean;
-  type?: NotifyType;
-  title?: string;
-  message?: string;
-};
-
 interface FooterContainerProps {
 }
 
 const FooterContainer: React.FC<FooterContainerProps> = () => {
   const [loading, setLoading] = useState(false);
-  // const [isNotify, setIsNotify] = useState<NotifyContact>({
-  //   isOpen: false,
-  // });
   const { dataSystem } = useAppSelector((state) => state.system);
   const menuList = useAppSelector((state) => state.menus.groupedFooter);
   const { projectData } = useAppSelector((state) => state.project);
   const { executeRecaptcha } = useGoogleReCaptcha();
   const { messageNotify } = useAppSelector((state) => state.system);
+  const language = useAppSelector((state) => state.system.language);
 
   const dispatch = useAppDispatch();
 
@@ -81,7 +72,7 @@ const FooterContainer: React.FC<FooterContainerProps> = () => {
       } finally {
         setLoading(false);
       }
-    }, [executeRecaptcha, method],
+    }, [dispatch, executeRecaptcha, method],
   );
 
   const socialLink: SocialListTypes[] | undefined = useMemo(
@@ -102,11 +93,8 @@ const FooterContainer: React.FC<FooterContainerProps> = () => {
   );
 
   useEffect(() => {
-    if (!projectData) {
-      dispatch(getProjectsAction({}));
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    dispatch(getProjectsAction({}));
+  }, [dispatch, language]);
 
   return (
     <>

@@ -4,6 +4,7 @@ import { useQuery } from 'react-query';
 import shareholderCard2 from 'assets/images/ShareholderRelations/img_shareholderCard2.png';
 import ShareholderRelations from 'components/templates/ShareholderRelations';
 import getDocumentsService from 'services/documents';
+import { useAppSelector } from 'store/hooks';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
 import { getImageURL, openInNewTab } from 'utils/functions';
 
@@ -26,8 +27,10 @@ interface ShareHolderRelationsBlock {
 const ShareHolderRelationsContainer: React.FC<ShareHolderRelationsBlock> = ({
   blocks,
 }) => {
+  const language = useAppSelector((state) => state.system.language);
+
   const { data: documentsHighlightData } = useQuery(
-    'getDocuments', () => getDocumentsService({
+    ['getDocuments', language], () => getDocumentsService({
       is_highlight: true,
     }),
     {

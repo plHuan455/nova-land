@@ -6,6 +6,7 @@ import NewsList from 'components/templates/NewsList';
 import Section from 'components/templates/Section';
 import { getNewsService } from 'services/home';
 import { NewsCategoryChildrenTypes } from 'services/home/type';
+import { useAppSelector } from 'store/hooks';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
 import { formatDateDDMMYYYY, getImageURL } from 'utils/functions';
 
@@ -19,9 +20,11 @@ interface BaseNewsProps {
 const BaseNewsContainer: React.FC<BaseNewsProps> = ({
   title, activeTab, tabList, exceptIds,
 }) => {
+  const language = useAppSelector((state) => state.system.language);
   const [active, setActive] = useState(activeTab);
+
   const { data: res, isFetching } = useQuery(
-    ['getNewsDataList', active.slug],
+    ['getNewsDataList', active.slug, language],
     () => getNewsService({
       limit: 4, page: 1, category_slug: active.slug, except_ids: exceptIds,
     }),

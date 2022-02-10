@@ -1,4 +1,7 @@
 import { LanguageKey, LocalesType } from 'services/system/types';
+import {
+  ConstantRoutesCodes, CONSTANT_ROUTES, CONSTANT_ROUTES_EN,
+} from 'utils/constants';
 
 export const langLabel = (key: string) => {
   switch (key) {
@@ -58,4 +61,23 @@ export function convertHomeRoute(langList: LanguageKey[]) {
 
 export function convertRoute(langList: LanguageKey[], slug?: string) {
   return langList.map((ele) => `${getLangSlug(ele)}${slug || ''}`);
+}
+
+export function getStaticSlug(code: ConstantRoutesCodes, lang: string) {
+  switch (lang) {
+    case 'en':
+      return `${CONSTANT_ROUTES_EN[code]}`;
+    default:
+      return `${CONSTANT_ROUTES[code]}`;
+  }
+}
+
+export function convertStaticRoute(
+  code: ConstantRoutesCodes,
+  langList: LanguageKey[],
+  noSlug?: boolean,
+) {
+  return langList.map(
+    (ele) => `${getLangSlug(ele)}${getStaticSlug(code, ele)}${noSlug ? '' : '/:slug'}`,
+  );
 }

@@ -30,32 +30,6 @@ export function initLanguage() {
   return 'vi';
 }
 
-export function changeStoreLanguage(pathname: string) {
-  const prefixLang = pathname.split('/')[1];
-  const localLang = window.localStorage.getItem(LOCAL_STORAGE.LANGUAGE) || 'vi';
-
-  const lang = CONSTANT_LANGUAGE_LIST.includes(prefixLang) ? prefixLang : 'vi';
-
-  if (lang !== localLang) {
-    if (CONSTANT_LANGUAGE_LIST.includes(lang)) {
-      window.localStorage.setItem(LOCAL_STORAGE.LANGUAGE, lang);
-      return {
-        change: true,
-        language: lang,
-      };
-    }
-    window.localStorage.setItem(LOCAL_STORAGE.LANGUAGE, 'vi');
-    return {
-      change: true,
-      language: 'vi',
-    };
-  }
-  return {
-    change: false,
-    language: localLang,
-  };
-}
-
 i18n
   .use(initReactI18next)
   .use(HttpBackend)

@@ -29,11 +29,13 @@ const ProjectMapContainer: React.FC<ProjectMapBlock> = ({
 }) => {
   const { maps } = useAppSelector((state) => state.maps);
   const [idCurrentRealEstates, setIDCurrentRealEstates] = useState<number>(2);
+  const language = useAppSelector((state) => state.system.language);
+  const [idActive, setIdActive] = useState(0);
   const dispatch = useAppDispatch();
 
   // TODO: maps
   const { data: projectDataList } = useQuery(
-    ['getProjectsDataFilterByHighlight', idCurrentRealEstates], () => getProjectsService({
+    ['getProjectsDataFilterByHighlight', idCurrentRealEstates, language], () => getProjectsService({
       on_going: true,
       real_estates_id: idCurrentRealEstates,
     }), {
@@ -43,7 +45,7 @@ const ProjectMapContainer: React.FC<ProjectMapBlock> = ({
   );
 
   const { data: realEstatesList } = useQuery(
-    ['getRealEstatesListHighlight'],
+    ['getRealEstatesListHighlight', language],
     () => getRealEstatesService({ is_map_home: true }),
     DEFAULT_QUERY_OPTION,
   );
@@ -89,13 +91,11 @@ const ProjectMapContainer: React.FC<ProjectMapBlock> = ({
     if (realEstatesList && realEstatesList?.length > 0) {
       setIDCurrentRealEstates(realEstatesList[0].id);
     }
-  }, [realEstatesList]);
+  }, [realEstatesList, language]);
 
   useEffect(() => {
-    if (!maps) {
-      dispatch(getMapsAction({}));
-    }
-  }, [dispatch, maps]);
+    dispatch(getMapsAction({}));
+  }, [dispatch, language]);
 
   return (
     <div className="p-home_outStandingNumbers">

@@ -4,6 +4,7 @@ import AwardList, { TabsDataTypes } from 'components/templates/AwardList';
 import Section from 'components/templates/Section';
 import { getPrizesService, getPrizeYearsService } from 'services/Introduction';
 import { PrizeYearsType, PrizesType } from 'services/Introduction/type';
+import { useAppSelector } from 'store/hooks';
 import { getImageURL } from 'utils/functions';
 
 interface AwardListContainerProps {
@@ -14,6 +15,7 @@ interface AwardListContainerProps {
 const AwardListContainer: React.FC<AwardListContainerProps> = ({
   ...props
 }) => {
+  const language = useAppSelector((state) => state.system.language);
   const [awardListData, setAwardListData] = useState<TabsDataTypes[]>([]);
   const [loading, setLoading] = useState(false);
 
@@ -66,7 +68,7 @@ const AwardListContainer: React.FC<AwardListContainerProps> = ({
     };
 
     initPage();
-  }, []);
+  }, [language]);
 
   return (
     <div className="p-aboutUs_awardList">

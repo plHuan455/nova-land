@@ -26,6 +26,7 @@ const ProjectListMapContainer: React.FC<ProjectListMapContainerProps> = ({
 }) => {
   const dispatch = useDispatch();
   const { listCities } = useAppSelector((state) => state.location);
+  const language = useAppSelector((state) => state.system.language);
   const [province, setProvince] = useState<OptionType | null>(null);
   const [project, setProject] = useState<OptionType | null>(null);
 
@@ -33,7 +34,7 @@ const ProjectListMapContainer: React.FC<ProjectListMapContainerProps> = ({
   const [isLoading, setLoading] = useState(false);
 
   const { data: projectDataAboutUs } = useQuery(
-    ['getProjectsDataAboutUs', province],
+    ['getProjectsDataAboutUs', province, language],
     () => getProjectsService({
       city_id: province && province.value !== '-1' ? Number(province.value) : undefined,
     }),
@@ -44,7 +45,7 @@ const ProjectListMapContainer: React.FC<ProjectListMapContainerProps> = ({
   );
 
   const { data: projectData } = useQuery(
-    'getProjectsData',
+    ['getProjectsData', language],
     () => getProjectsService({
       about_us: true,
     }),
@@ -121,11 +122,8 @@ const ProjectListMapContainer: React.FC<ProjectListMapContainerProps> = ({
   };
 
   useEffect(() => {
-    if (!listCities) {
-      dispatch(getCitiesAction());
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    dispatch(getCitiesAction());
+  }, [dispatch, language]);
 
   return (
     <div className="p-aboutUs_projectListMap">

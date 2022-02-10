@@ -4,6 +4,7 @@ import { useQueries, useQuery, UseQueryResult } from 'react-query';
 import CorporateGovernance from 'components/templates/CorporateGovernance';
 import getDocumentsService, { getDocumentCategoryService, getDocumentYearService } from 'services/documents';
 import { DocumentsData, DocumentTypes } from 'services/documents/types';
+import { useAppSelector } from 'store/hooks';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
 import { formatDateDDMMYYYY, getImageURL } from 'utils/functions';
 
@@ -12,18 +13,19 @@ interface DocumentTabs extends DocumentTypes {
 }
 
 const CorporateGovernanceTableContainer: React.FC = () => {
+  const language = useAppSelector((state) => state.system.language);
   const [indexActive, setIndexActive] = useState(0);
   const [documentTab, setDocumentTab] = useState<DocumentTabs[]>([]);
 
   const { data: documentYearsData } = useQuery(
-    'getDocumentYear', () => getDocumentYearService(),
+    ['getDocumentYear', language], () => getDocumentYearService(),
     {
       ...DEFAULT_QUERY_OPTION,
     },
   );
 
   const { data: documentCategoriesData } = useQuery<DocumentTypes[]>(
-    'getDocumentCategory', () => getDocumentCategoryService(),
+    ['getDocumentCategory', language], () => getDocumentCategoryService(),
     {
       ...DEFAULT_QUERY_OPTION,
     },
@@ -31,7 +33,7 @@ const CorporateGovernanceTableContainer: React.FC = () => {
 
   const documentData = useQueries(
     documentTab.map((ele) => ({
-      queryKey: ['getDocumentCategory', ele.id, ele.page, indexActive],
+      queryKey: ['getDocumentCategory', ele.id, ele.page, indexActive, language],
       queryFn: () => getDocumentsService({
         category_id: ele.id,
         year: documentYearsData?.[indexActive].name || '',
@@ -133,7 +135,7 @@ const CorporateGovernanceTableContainer: React.FC = () => {
         page: 1,
       })));
     }
-  }, [documentCategoriesData]);
+  }, [documentCategoriesData, language]);
 
   return (
     <div className="p-corporateGovernance_corporateGovernanceTable">
