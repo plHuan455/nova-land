@@ -47,3 +47,17 @@ export type ParamRelatedNewsType = {
   is_popular?: string,
   except_ids?: string,
 }
+
+export type ParamNewsTagType = {
+  is_popular?: boolean,
+  keyword?: string,
+  page?: number,
+  limit?: number,
+}
+
+export type NewsTagType = {
+  id:number,
+  name:string,
+  slug:string,
+  isPopular: boolean,
+}

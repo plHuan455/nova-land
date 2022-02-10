@@ -2,9 +2,8 @@ import React, { useMemo } from 'react';
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
 
-import newsDetailDummy from 'assets/dataDummy/newsDetail';
 import NewsDetail from 'components/templates/NewsDetail';
-import { getNewsDetailService, getRelatedNewsService } from 'services/newsDetail';
+import { getNewsDetailService, getNewsTagService, getRelatedNewsService } from 'services/newsDetail';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
 import { formatDateDDMMYYYY, getImageURL } from 'utils/functions';
 
@@ -46,6 +45,16 @@ const NewsDetailTemplateContainer: React.FC = () => {
     },
   );
 
+  const { data: newsTagData } = useQuery(
+    ['GetNewsTagData', slug],
+    () => getNewsTagService({
+      is_popular: true,
+    }),
+    {
+      ...DEFAULT_QUERY_OPTION,
+    },
+  );
+
   const newsDetail = useMemo(() => ({
     id: String(newsDetailData?.id),
     title: newsDetailData?.title || '',
@@ -54,7 +63,6 @@ const NewsDetailTemplateContainer: React.FC = () => {
     createDate: formatDateDDMMYYYY(newsDetailData?.publishedAt || ''),
     numberView: '111',
     author: 'Theo Robbreport',
-    titleBtn: 'Tìm hiểu thêm Aqua City',
     newsTypes: newsDetailData?.tags.map((item) => item.name) || [],
   }), [newsDetailData]);
 
@@ -76,12 +84,14 @@ const NewsDetailTemplateContainer: React.FC = () => {
     href: item.slug,
   })), [relatedNews]);
 
+  const tagNewsData = useMemo(() => newsTagData?.map((item) => item.name), [newsTagData]);
+
   return (
     <div className="p-newsdetail_content">
       <NewsDetail
         newsDetail={newsDetail || ''}
         relatedNews={relatedNewsData || []}
-        keyword={newsDetailDummy.keywordList}
+        keyword={tagNewsData || []}
         titleLatest="Các tin mới nhất"
         titleHot="Các tin nổi bật"
         hightLightNews={hightLightNewsData || []}
