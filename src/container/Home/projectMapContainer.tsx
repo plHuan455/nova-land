@@ -8,7 +8,7 @@ import { useQuery } from 'react-query';
 
 import img from 'assets/images/bg_project_list_map.png';
 import ProjectMap, { ItemBranch } from 'components/templates/ProjectMap';
-import { getProjectsService } from 'services/project';
+import { getProjectsService, getRealEstatesService } from 'services/project';
 import {
   useAppDispatch,
   useAppSelector,
@@ -28,7 +28,6 @@ interface ProjectMapBlock {
 const ProjectMapContainer: React.FC<ProjectMapBlock> = ({
   blocks,
 }) => {
-  const { realEstatesList } = useAppSelector((state) => state.project);
   const { maps } = useAppSelector((state) => state.maps);
   const [idActive, setIdActive] = useState(0);
   const [currentRealEstates, setCurrentRealEstates] = useState('');
@@ -37,11 +36,18 @@ const ProjectMapContainer: React.FC<ProjectMapBlock> = ({
   // TODO: maps
   const { data: projectDataList } = useQuery(
     ['getProjectsDataFilterByHighlight', currentRealEstates], () => getProjectsService({
+      on_going: true,
       real_estates_slug: currentRealEstates,
     }), {
       ...DEFAULT_QUERY_OPTION,
       enabled: !!currentRealEstates,
     },
+  );
+
+  const { data: realEstatesList } = useQuery(
+    ['GetRealEstatesListHighlight'],
+    () => getRealEstatesService({ is_map_home: true, locale: 'vi' }),
+    DEFAULT_QUERY_OPTION,
   );
 
   const convertedProjectData = useMemo(() => {

@@ -31,7 +31,7 @@ const InvestmentSectorContainer: React.FC<InvestmentSectorContainerProps> = ({ .
   useEffect(() => {
     if (!realEstatesList) {
       setLoading(true);
-      dispatch(getRealEstatesAction()).unwrap().finally(() => setLoading(false));
+      dispatch(getRealEstatesAction({ locale: 'vi' })).unwrap().finally(() => setLoading(false));
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

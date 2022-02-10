@@ -20,6 +20,12 @@ export type KeywordParamsTypes = {
   keyword?: string;
 }
 
+export type RealEstatesParamsTypes = {
+  is_map_home?: boolean;
+  locale: string;
+  keyword?: string;
+}
+
 export type ProjectsTypes = {
   id: number,
   thumbnail: string,
@@ -46,6 +52,7 @@ export type ProjectParamTypes = {
   highlight?: boolean;
   about_us?: boolean;
   city_id?: number;
+  on_going?: boolean;
 }
 
 export type CategoryProjectsDataTypes = {

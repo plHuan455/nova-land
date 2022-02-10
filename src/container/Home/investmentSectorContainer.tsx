@@ -36,7 +36,9 @@ const InvestmentSectorContainer: React.FC<InvestmentSectorBlock> = ({
 
   useEffect(() => {
     if (!realEstatesList) {
-      dispatch(getRealEstatesAction());
+      dispatch(getRealEstatesAction({
+        locale: 'vi',
+      }));
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
