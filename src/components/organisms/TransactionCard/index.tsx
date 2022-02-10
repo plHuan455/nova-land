@@ -47,7 +47,7 @@ const TransactionCard: React.FC<TransactionCardProps> = ({
         </div>
       </div>
       {phone && (
-        <div className="o-transactionCard_phone u-mt-10">
+        <div className="o-transactionCard_phone u-mt-12">
           <div className="u-pt-1">
             <Icon iconName="phone" size="24" />
           </div>
@@ -61,7 +61,7 @@ const TransactionCard: React.FC<TransactionCardProps> = ({
         </div>
       )}
       {faxNumber && (
-        <div className="o-transactionCard_faxNumber u-mt-10">
+        <div className="o-transactionCard_faxNumber u-mt-12">
           <div className="u-pt-1">
             <Icon iconName="fax" size="24" />
           </div>
