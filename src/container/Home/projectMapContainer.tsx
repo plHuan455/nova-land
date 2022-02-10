@@ -1,15 +1,18 @@
 import React, {
+  useCallback,
   useEffect,
   useMemo,
   useState,
-  useCallback,
 } from 'react';
 import { useQuery } from 'react-query';
 
 import img from 'assets/images/bg_project_list_map.png';
-import ProjectMap from 'components/templates/ProjectMap';
+import ProjectMap, { ItemBranch } from 'components/templates/ProjectMap';
 import { getProjectsService } from 'services/project';
-import { useAppDispatch, useAppSelector } from 'store/hooks';
+import {
+  useAppDispatch,
+  useAppSelector,
+} from 'store/hooks';
 import { getMapsAction } from 'store/maps';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
 import { getImageURL } from 'utils/functions';
@@ -26,10 +29,10 @@ const ProjectMapContainer: React.FC<ProjectMapBlock> = ({
   blocks,
 }) => {
   const { realEstatesList } = useAppSelector((state) => state.project);
+  const { maps } = useAppSelector((state) => state.maps);
   const [idActive, setIdActive] = useState(0);
   const [currentRealEstates, setCurrentRealEstates] = useState('');
   const dispatch = useAppDispatch();
-  const { maps } = useAppSelector((state) => state.maps);
 
   // TODO: maps
   const { data: projectDataList } = useQuery(
@@ -40,6 +43,7 @@ const ProjectMapContainer: React.FC<ProjectMapBlock> = ({
       enabled: !!currentRealEstates,
     },
   );
+
   const convertedProjectData = useMemo(() => {
     if (projectDataList) {
       return projectDataList.map((item) => ({
@@ -50,37 +54,32 @@ const ProjectMapContainer: React.FC<ProjectMapBlock> = ({
     return [];
   }, [projectDataList]);
 
-  const listProjectMap = useMemo(() => maps && realEstatesList?.map((item) => (
-    {
-      id: item.id,
-      title: item.name,
-      listPoint: maps.map((e, idx) => (
-        {
+  const listProjectMap = useMemo(() => maps && realEstatesList?.map((item) => {
+    const data: ItemBranch[] = [];
+    if (projectDataList?.length) {
+      const projectIds = projectDataList.map((project) => project.id);
+      maps.forEach((p, idx) => {
+        const isValidPoint = p.projects.some((i) => projectIds?.includes(i));
+        const pointObj = {
           id: idx,
           point: {
-            x: e.pointX,
-            y: e.pointY,
+            x: p.pointX,
+            y: p.pointY,
           },
           reference: {
             images: '',
           },
-          projects: e.projects,
-        }
-      )),
+          projects: p.projects,
+        };
+        return isValidPoint && data.push(pointObj);
+      });
     }
-  )), [realEstatesList, maps]);
-
-  useEffect(() => {
-    if (realEstatesList && realEstatesList?.length > 0) {
-      setCurrentRealEstates(realEstatesList[0].slug);
-    }
-  }, [realEstatesList]);
-
-  useEffect(() => {
-    if (!maps) {
-      dispatch(getMapsAction({}));
-    }
-  }, [dispatch, maps]);
+    return {
+      id: item.id,
+      title: item.name,
+      listPoint: data,
+    };
+  }), [realEstatesList, maps, projectDataList]);
 
   const handleClick = useCallback((id: number) => {
     setIdActive(id);
@@ -89,6 +88,19 @@ const ProjectMapContainer: React.FC<ProjectMapBlock> = ({
       setCurrentRealEstates(realEstateObj?.slug || '');
     }
   }, [realEstatesList]);
+
+  useEffect(() => {
+    if (realEstatesList && realEstatesList?.length > 0) {
+      setCurrentRealEstates(realEstatesList[0].slug);
+      setIdActive(realEstatesList[0].id);
+    }
+  }, [realEstatesList]);
+
+  useEffect(() => {
+    if (!maps) {
+      dispatch(getMapsAction({}));
+    }
+  }, [dispatch, maps]);
 
   return (
     <div className="p-home_outStandingNumbers">
