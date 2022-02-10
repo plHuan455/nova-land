@@ -8,7 +8,7 @@ import {
 
 import axiosInstance from 'services/common/instance';
 
-export const getProjectsService = async (params : ProjectParamTypes): Promise<ProjectsTypes[]> => {
+export const getProjectsService = async (params?: ProjectParamTypes): Promise<ProjectsTypes[]> => {
   const response = await axiosInstance.get('projects', { params });
   return response.data.data;
 };
