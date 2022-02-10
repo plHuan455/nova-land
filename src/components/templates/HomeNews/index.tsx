@@ -5,6 +5,7 @@ import Heading from 'components/atoms/Heading';
 import Icon from 'components/atoms/Icon';
 import Image from 'components/atoms/Image';
 import Link from 'components/atoms/Link';
+import Loading from 'components/atoms/Loading';
 import Text from 'components/atoms/Text';
 import Container from 'components/organisms/Container';
 import { Tab, Tabs } from 'components/organisms/Tabs';
@@ -90,6 +91,7 @@ interface HomeNewsProps {
   tabDataHomeNews: dataTabsType[];
   newsList?: HomeNewsCardProps[];
   handleActive?: (id: number) => void;
+  loading?: boolean;
 }
 
 const HomeNews: React.FC<HomeNewsProps> = ({
@@ -100,6 +102,7 @@ const HomeNews: React.FC<HomeNewsProps> = ({
   nameButton,
   newsList,
   handleActive,
+  loading,
 }) => {
   const [indexActive, setIndexActive] = useState(0);
 
@@ -127,24 +130,26 @@ const HomeNews: React.FC<HomeNewsProps> = ({
               ))
             }
           </Tabs>
-          <div className="t-homeNews_list">
-            {
-              newsList && newsList.length > 0 ? newsList.map((ele, idx) => (
-                <div className="t-homeNews_content" key={`homeNews-homeNewsCard-${idx.toString()}`}>
-                  <div className="t-homeNews_item">
-                    <HomeNewsCard
-                      {...ele}
-                    />
+          {loading ? <Loading isShow /> : (
+            <div className="t-homeNews_list">
+              {
+                newsList && newsList.length > 0 ? newsList.map((ele, idx) => (
+                  <div className="t-homeNews_content" key={`homeNews-homeNewsCard-${idx.toString()}`}>
+                    <div className="t-homeNews_item">
+                      <HomeNewsCard
+                        {...ele}
+                      />
+                    </div>
                   </div>
-                </div>
-              ))
-                : (
-                  <div className="t-homeNews_empty">
-                    <Text modifiers={['center', '20x28']}>Không có tin tức</Text>
-                  </div>
-                )
-            }
-          </div>
+                ))
+                  : (
+                    <div className="t-homeNews_empty">
+                      <Text modifiers={['center', '20x28']}>Không có tin tức</Text>
+                    </div>
+                  )
+              }
+            </div>
+          )}
           <div className="t-homeNews_button">
             <Link href={href} target={target}>
               <Button modifiers="outlineSpanishGray">
@@ -163,6 +168,7 @@ HomeNews.defaultProps = {
   nameButton: undefined,
   newsList: undefined,
   handleActive: undefined,
+  loading: false,
 };
 
 export default HomeNews;

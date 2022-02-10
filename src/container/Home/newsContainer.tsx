@@ -48,7 +48,7 @@ const NewsContainer: React.FC<NewsBlock> = ({
     return data[indexActive].slug;
   };
 
-  const { data } = useQuery(
+  const { data, isLoading } = useQuery(
     ['getHomeNewsList', newsCategoryList, indexActive], () => getNewsService({
       limit: '4',
       category_slug: newsCategoryList ? handleCategorySlug(newsCategoryList) : undefined,
@@ -91,6 +91,7 @@ const NewsContainer: React.FC<NewsBlock> = ({
           tabDataHomeNews={tabDataHomeNewsList}
           newsList={newsData}
           handleActive={setIndexActive}
+          loading={isLoading}
         />
       </Section>
     </div>
