@@ -1,7 +1,12 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import 'App.scss';
-import React, { lazy, Suspense } from 'react';
+import React, {
+  lazy,
+  Suspense,
+  useState,
+  useEffect,
+} from 'react';
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { Provider } from 'react-redux';
@@ -23,6 +28,7 @@ import RecruitmentList from 'pages/RecruitmentList';
 import ReportList from 'pages/ReportList';
 import SearchResults from 'pages/SearchResults';
 import { store } from 'store';
+import { useAppSelector } from 'store/hooks';
 
 const PageNav = lazy(() => import('navigations/PageNav'));
 
@@ -102,21 +108,37 @@ const App: React.FC = () => {
 
 const queryClient = new QueryClient();
 
+const GoogleReCaptchaWrapper: React.FC = ({ children }) => {
+  const [key, setKey] = useState<string>();
+  const systemData = useAppSelector((state) => state.system.dataSystem);
+  useEffect(() => {
+    if (systemData?.googleRecaptchaSiteKey) {
+      setKey(systemData?.googleRecaptchaSiteKey);
+    }
+  }, [systemData]);
+
+  return (
+    <GoogleReCaptchaProvider
+      reCaptchaKey={key}
+      scriptProps={{
+        async: true,
+        defer: true,
+        appendTo: 'head',
+      }}
+    >
+      {children}
+    </GoogleReCaptchaProvider>
+  );
+};
+
 const AppWrapper: React.FC = () => (
   <Provider store={store}>
     <QueryClientProvider client={queryClient}>
-      <GoogleReCaptchaProvider
-        reCaptchaKey="6LcwgsIZAAAAAHZFFWu3icOSaGK2_SVjZwY-kEjQ"
-        scriptProps={{
-          appendTo: 'head',
-          async: true,
-          defer: true,
-        }}
-      >
+      <GoogleReCaptchaWrapper>
         <BrowserRouter>
           <App />
         </BrowserRouter>
-      </GoogleReCaptchaProvider>
+      </GoogleReCaptchaWrapper>
     </QueryClientProvider>
   </Provider>
 );
