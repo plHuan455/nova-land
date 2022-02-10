@@ -8,7 +8,7 @@ import { getNewsService } from 'services/home';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
 import { formatDateDDMMYYYY, getHourFromPastToCurrent, getImageURL } from 'utils/functions';
 
-const ProjectNewsContainer: React.FC<{ cateSlug: string }> = ({ cateSlug }) => {
+const TabsNewsContainer: React.FC<{ cateSlug: string }> = ({ cateSlug }) => {
   const { data: res } = useQuery(
     'getProjectNewsData',
     () => getNewsService({ limit: '4', page: '1', category_slug: cateSlug }),
@@ -28,7 +28,7 @@ const ProjectNewsContainer: React.FC<{ cateSlug: string }> = ({ cateSlug }) => {
     href: item.slug,
   })) : [];
   return (
-    <div className="p-news_projectNews">
+    <div className="p-news_cateBlock">
       <Section>
         <HomeNews
           title="Tin dự án"
@@ -40,4 +40,4 @@ const ProjectNewsContainer: React.FC<{ cateSlug: string }> = ({ cateSlug }) => {
     </div>
   );
 };
-export default ProjectNewsContainer;
+export default TabsNewsContainer;

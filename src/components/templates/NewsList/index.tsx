@@ -2,6 +2,7 @@ import React from 'react';
 
 import Button from 'components/atoms/Button';
 import Heading from 'components/atoms/Heading';
+import Link from 'components/atoms/Link';
 import Loading from 'components/atoms/Loading';
 import Text from 'components/atoms/Text';
 import Container from 'components/organisms/Container';
@@ -12,6 +13,7 @@ interface NewsListProps {
   dataNewsList: HomeNewsCardProps[];
   btnName: string;
   isFetching?: boolean;
+  href?: string;
   handleShowMore?: () => void;
 }
 
@@ -20,6 +22,7 @@ const NewsList: React.FC<NewsListProps> = ({
   dataNewsList,
   btnName,
   isFetching,
+  href,
   handleShowMore,
 }) => (
   <div className="t-newsList">
@@ -31,21 +34,30 @@ const NewsList: React.FC<NewsListProps> = ({
               {title}
             </Heading>
           </div>
-          <div className="t-newsList_wrapper">
-            {
+          {
               dataNewsList.length && dataNewsList.length > 0 ? (
                 <>
-                  {dataNewsList.map((item, index) => (
-                    <div className="t-newsList_item" key={`newsList-${index.toString()}`}>
-                      <HomeNewsCard
-                        {...item}
-                      />
-                    </div>
-                  ))}
+                  <div className="t-newsList_wrapper">
+                    {dataNewsList.map((item, index) => (
+                      <div className="t-newsList_item" key={`newsList-${index.toString()}`}>
+                        <HomeNewsCard
+                          {...item}
+                        />
+                      </div>
+                    ))}
+                  </div>
                   <div className="t-newsList_button">
-                    <Button modifiers="outlineSpanishGray" onClick={handleShowMore}>
-                      {btnName}
-                    </Button>
+                    {href ? (
+                      <Link href={href} target="_self">
+                        <Button modifiers="outlineSpanishGray">
+                          {btnName}
+                        </Button>
+                      </Link>
+                    ) : (
+                      <Button modifiers="outlineSpanishGray" onClick={handleShowMore}>
+                        {btnName}
+                      </Button>
+                    )}
                   </div>
                 </>
               ) : (
@@ -54,8 +66,6 @@ const NewsList: React.FC<NewsListProps> = ({
                 </div>
               )
             }
-            { }
-          </div>
         </>
       ) : <Loading variant="fullScreen" />}
     </Container>
@@ -65,6 +75,7 @@ const NewsList: React.FC<NewsListProps> = ({
 NewsList.defaultProps = {
   handleShowMore: undefined,
   isFetching: false,
+  href: undefined,
 };
 
 export default NewsList;

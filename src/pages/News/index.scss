@@ -1,6 +1,7 @@
 .p-news {
-  &_corporateNews,
-  &_projectNews {
+&_cateBlock {
+  &:nth-child(even) {
     background: $white-smoke2;
   }
+} 
 }
