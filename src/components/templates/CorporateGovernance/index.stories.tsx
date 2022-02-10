@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 import CorporateGovernance from '.';
 
-import dataCorporateGovernanceList from 'assets/dataDummy/corporateGovernance';
+import dataCorporateGovernanceList, { dataTitleTab } from 'assets/dataDummy/corporateGovernance';
 
 export default {
   title: 'Components/templates/CorporateGovernance',
@@ -16,6 +16,8 @@ export const normal: Story = () => (
   <Router>
     <CorporateGovernance
       dataGeneral={dataCorporateGovernanceList}
+      dataTabGeneral={dataTitleTab}
+      tabActive={0}
     />
   </Router>
 );

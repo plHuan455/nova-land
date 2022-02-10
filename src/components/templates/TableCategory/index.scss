@@ -2,13 +2,14 @@
   &_table {
     overflow-x: auto;
     position: relative;
+    @include scroll-bars(8, $spanish-gray);
 
     th, td{
-      border: 0.5px solid $columbia-blue;
+      border: rem(0.5) solid $columbia-blue;
     }
 
     table {
-      border: 1px solid $dark-midnight-blue;
+      border: rem(1) solid $dark-midnight-blue;
       border-spacing: 0;
     }
   }
@@ -21,10 +22,11 @@
     background: $dark-midnight-blue;
 
     &_cell {
-      padding: 19px 74px;
+      padding: rem(19) rem(74);
+      white-space: nowrap;
 
       &:first-child {
-        padding: 19px 90px 19px 30px;
+        padding: rem(19) rem(90) rem(19) rem(30);
       }
     }
   }
@@ -37,13 +39,13 @@
     }
 
     &_cell {
-      padding: 13px 25px 9px;
+      padding: rem(13) rem(25) rem(9);
 
       &:first-child {
-        padding: 17px 29px;
+        padding: rem(17) rem(29);
 
         @include tablet-down {
-          padding: 12px;
+          padding: rem(12);
         }
       }
     }
@@ -65,14 +67,14 @@
     @include adjust-flex();
 
     &_icon {
-      height: 35px;
-      width: 35px;
+      height: rem(35);
+      width: rem(35);
       @include adjust-flex();
     }
 
     &_fileName {
-      margin-left: 12px;
-      margin-right: 10px;
+      margin-left: rem(12);
+      margin-right: rem(10);
     }
   }
 }

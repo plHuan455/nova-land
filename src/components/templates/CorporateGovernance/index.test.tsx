@@ -9,7 +9,11 @@ describe('<CorporateGovernance />', () => {
     const div = document.createElement('div');
     ReactDOM.render(
       <Router>
-        <CorporateGovernance dataGeneral={[]} />
+        <CorporateGovernance
+          dataGeneral={[]}
+          dataTabGeneral={[]}
+          tabActive={0}
+        />
       </Router>, div,
     );
     ReactDOM.unmountComponentAtNode(div);

@@ -43,9 +43,9 @@ export const DataFileItem: React.FC<dataFileItemProps> = ({ fileName, hrefLink, 
         <Icon iconName="filePDF" />
       </div>
       <div className="t-tableCategory_dataFileItem_fileName">
-        <Text modifiers={['darkMidnightBlue', '300', '14x20']}>{fileName}</Text>
+        <Text modifiers={['darkMidnightBlue', '400', '14x20']}>{fileName}</Text>
       </div>
-      <Icon size="20" iconName="download" />
+      <Icon size="20" iconName="downloadBlue" />
     </div>
   </Link>
 );

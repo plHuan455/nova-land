@@ -41,6 +41,7 @@ export const iconList = {
   blackSmallClose: 'blackSmallClose',
   download: 'download',
   filePDF: 'filePDF',
+  downloadBlue: 'downloadBlue',
 };
 
 export type IconName = keyof typeof iconList;

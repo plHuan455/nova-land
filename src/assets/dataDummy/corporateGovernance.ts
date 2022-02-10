@@ -1,84 +1,77 @@
 import { dataBodyList, dataHeaderList } from './tableCategory';
 
-import { dataTabsType } from 'components/templates/CorporateGovernance';
+import { TitleTabType } from 'components/templates/CorporateGovernance';
+import { TableCategoryProps } from 'components/templates/TableCategory';
 
-const dataCorporateGovernanceList: dataTabsType[] = [
+const dataCorporateGovernanceList: TableCategoryProps[] = [
   {
-    titleTab: '2021',
-    dataTab: [
+    dataHeader: dataHeaderList,
+    dataBody: dataBodyList,
+    totalPage: 10,
+  },
+  {
+    dataHeader: [
       {
-        dataHeader: dataHeaderList,
-        dataBody: dataBodyList,
-        totalPage: 10,
+        id: 1,
+        value: 'CÔNG BỐ KẾT QUẢ KINH DOANH',
       },
       {
-        dataHeader: [
-          {
-            id: 1,
-            value: 'CÔNG BỐ KẾT QUẢ KINH DOANH',
-          },
-          {
-            id: 2,
-            value: 'Quý 1',
-          },
-          {
-            id: 2,
-            value: 'Quý 2',
-          },
-          {
-            id: 3,
-            value: 'Quý 3',
-          },
-          {
-            id: 4,
-            value: 'Quý 4',
-          },
-        ],
-        dataBody: [
-          {
-            documentName: 'Tóm tắt kết quả kinh doanh</br>(Tài Liệu Thuyết Trình)',
-            dataByQuarter: new Array(4).fill({ data: '' }),
-          },
-        ],
-        totalPage: 2,
+        id: 2,
+        value: 'Quý 1',
+      },
+      {
+        id: 2,
+        value: 'Quý 2',
+      },
+      {
+        id: 3,
+        value: 'Quý 3',
+      },
+      {
+        id: 4,
+        value: 'Quý 4',
       },
     ],
+    dataBody: [
+      {
+        documentName: 'Tóm tắt kết quả kinh doanh</br>(Tài Liệu Thuyết Trình)',
+        dataByQuarter: new Array(4).fill({ data: '' }),
+      },
+    ],
+    totalPage: 2,
+  },
+];
+
+export const dataTitleTab: TitleTabType[] = [
+  {
+    titleTab: '2021',
   },
   {
     titleTab: '2020',
-    dataTab: [],
   },
   {
     titleTab: '2019',
-    dataTab: [],
   },
   {
     titleTab: '2018',
-    dataTab: [],
   },
   {
     titleTab: '2017',
-    dataTab: [],
   },
   {
     titleTab: '2016',
-    dataTab: [],
   },
   {
     titleTab: '2015',
-    dataTab: [],
   },
   {
     titleTab: '2014',
-    dataTab: [],
   },
   {
     titleTab: '2013',
-    dataTab: [],
   },
   {
     titleTab: '2012',
-    dataTab: [],
   },
 ];
 
