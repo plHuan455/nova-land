@@ -45,8 +45,8 @@ const ProjectMapContainer: React.FC<ProjectMapBlock> = ({
   );
 
   const { data: realEstatesList } = useQuery(
-    ['GetRealEstatesListHighlight'],
-    () => getRealEstatesService({ is_map_home: true, locale: 'vi' }),
+    ['getRealEstatesListHighlight'],
+    () => getRealEstatesService({ is_map_home: true }),
     DEFAULT_QUERY_OPTION,
   );
 

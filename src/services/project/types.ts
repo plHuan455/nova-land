@@ -22,7 +22,6 @@ export type KeywordParamsTypes = {
 
 export type RealEstatesParamsTypes = {
   is_map_home?: boolean;
-  locale: string;
   keyword?: string;
 }
 

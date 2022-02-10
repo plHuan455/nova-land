@@ -11,9 +11,7 @@ interface ProductLinesTypes {
 
 const ProductLinesContainer: React.FC<ProductLinesTypes> = ({ title }) => {
   const dispatch = useAppDispatch();
-  const {
-    realEstatesList,
-  } = useAppSelector((state) => state.project);
+  const { realEstatesList } = useAppSelector((state) => state.project);
 
   const convertDataProductLines = useMemo(() => {
     if (realEstatesList) {
@@ -24,10 +22,11 @@ const ProductLinesContainer: React.FC<ProductLinesTypes> = ({ title }) => {
         content: {
           title: val.smallDescription,
           imgSrc: getImageURL(val.thumbnail),
-          desc: val.items.map((item) => ({
-            imgSrc: getImageURL(item.icon),
-            content: item.description,
-          })) || [],
+          desc:
+            val.items.map((item) => ({
+              imgSrc: getImageURL(item.icon),
+              content: item.description,
+            })) || [],
         },
       }));
     }
@@ -36,17 +35,14 @@ const ProductLinesContainer: React.FC<ProductLinesTypes> = ({ title }) => {
 
   useEffect(() => {
     if (!realEstatesList) {
-      dispatch(getRealEstatesAction({ locale: 'vi' }));
+      dispatch(getRealEstatesAction({}));
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <div className="p-fieldOfActivity_productLines">
-      <ProductLines
-        title={title}
-        dataProductLines={convertDataProductLines}
-      />
+      <ProductLines title={title} dataProductLines={convertDataProductLines} />
     </div>
   );
 };

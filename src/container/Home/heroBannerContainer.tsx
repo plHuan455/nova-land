@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import Heading from 'components/atoms/Heading';
 import Text from 'components/atoms/Text';
@@ -27,8 +27,8 @@ const HeroBannerContainer: React.FC<BannerProps> = ({
     <div className="p-home_heroBanner">
       <HeroBanner list={convertBanner()}>
         <div className="p-home_heroBanner_info">
-          {banners && banners.map((item) => (
-            <>
+          {banners && banners.map((item, idx) => (
+            <Fragment key={idx.toString()}>
               <div className="p-home_heroBanner_info_title">
                 <Heading modifiers={['center', '400', '64x83', 'fontNoto', 'white']}>
                   {item.data.title}
@@ -41,7 +41,7 @@ const HeroBannerContainer: React.FC<BannerProps> = ({
                   {item.data.subTitle}
                 </Text>
               </div>
-            </>
+            </Fragment>
           ))}
         </div>
       </HeroBanner>

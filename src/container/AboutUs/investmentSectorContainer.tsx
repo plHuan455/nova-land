@@ -10,13 +10,15 @@ export interface InvestmentSectorContainerProps {
   isSmall?: boolean;
 }
 
-const InvestmentSectorContainer: React.FC<InvestmentSectorContainerProps> = ({ ...props }) => {
+const InvestmentSectorContainer: React.FC<InvestmentSectorContainerProps> = ({
+  ...props
+}) => {
   const dispatch = useAppDispatch();
   const { realEstatesList } = useAppSelector((state) => state.project);
   const [isLoading, setLoading] = useState(false);
 
-  const investmentSectorData = useMemo(() => realEstatesList?.map((item) => (
-    {
+  const investmentSectorData = useMemo(
+    () => realEstatesList?.map((item) => ({
       title: item.name,
       desc: item.description,
       thumbnail: getImageURL(item.thumbnail),
@@ -25,13 +27,16 @@ const InvestmentSectorContainer: React.FC<InvestmentSectorContainerProps> = ({ .
       imgLogoHover: getImageURL(item.iconHover),
       isSmall: true,
       btnText: 'Tìm Hiểu Thêm',
-    }
-  )), [realEstatesList]);
+    })),
+    [realEstatesList],
+  );
 
   useEffect(() => {
     if (!realEstatesList) {
       setLoading(true);
-      dispatch(getRealEstatesAction({ locale: 'vi' })).unwrap().finally(() => setLoading(false));
+      dispatch(getRealEstatesAction({}))
+        .unwrap()
+        .finally(() => setLoading(false));
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
