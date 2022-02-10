@@ -11,11 +11,18 @@ export const getNewsCategoryService = async (): Promise<NewsCategoryDataTypes[]>
   return response.data.data;
 };
 
+export const getNewsCategoryDetailService = async (
+  categorySlug: string,
+): Promise<NewsCategoryDataTypes> => {
+  const response = await axiosInstance.get(`news-category/${categorySlug}`);
+  return response.data.data;
+};
+
 export const getNewsService = async (
   params?: NewsListParamsTypes,
-): Promise<NewsDataTypes[]> => {
+): Promise<APIPaginationResponse<NewsDataTypes[]>> => {
   const response = await axiosInstance.get('news', { params });
-  return response.data.data;
+  return response.data;
 };
 
 export default getNewsCategoryService;

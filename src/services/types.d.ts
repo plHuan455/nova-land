@@ -170,3 +170,10 @@ type LanguageRouteMapping = {
   jp: string;
   cn: string;
 }
+
+type OpenGraphData = {
+  ogTitle: string;
+  ogImage?: any;
+  ogDescription: string;
+  ogType: string;
+}

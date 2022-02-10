@@ -10,7 +10,6 @@ describe('<Breadcrumb />', () => {
     ReactDOM.render(
       <Router>
         <Breadcrumb
-          pathNameHome="/"
           breadcrumbs={[]}
         />
       </Router>,

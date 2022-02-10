@@ -64,12 +64,18 @@ const FeaturedNews: React.FC<FeaturedNewsProps> = ({ dataFeaturedNews }) => (
           && (
             <>
               <div className="t-featuredNews_left">
-                <FeaturedNewsCard {...dataFeaturedNews[0]} />
+                <FeaturedNewsCard
+                  {...dataFeaturedNews[0]}
+                  ratio="582x534"
+                />
               </div>
               <div className="t-featuredNews_right">
                 {dataFeaturedNews.slice(1).map((item, index) => (
                   <div className="t-featuredNews_right_item" key={`featuredNews-${index.toString()}`}>
-                    <FeaturedNewsCard {...item} />
+                    <FeaturedNewsCard
+                      {...item}
+                      ratio="582x252"
+                    />
                   </div>
                 ))}
               </div>

@@ -5,8 +5,11 @@ import Breadcrumb from 'components/molecules/Breadcrumb';
 const BreadcrumbContainer: React.FC = () => (
   <div className="p-eventDetail_breadcrumb u-mt-md-24 u-mb-md-27 u-mt-14 u-mb-16">
     <Breadcrumb
-      pathNameHome="/"
       breadcrumbs={[
+        {
+          pathName: '/',
+          title: 'Trang chủ',
+        },
         {
           pathName: '/quan-he-dau-tu',
           title: 'Quan hệ đầu tư',

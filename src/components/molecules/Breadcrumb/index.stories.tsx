@@ -16,7 +16,6 @@ export const normal: Story = () => (
   <Router>
     <Breadcrumb
       breadcrumbs={breadcrumb}
-      pathNameHome="/"
     />
   </Router>
 );

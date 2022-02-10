@@ -181,3 +181,14 @@ export function openInNewTab(href?: string) {
   link.click();
   document.body.removeChild(link);
 }
+
+export const convertBanner = (banners: BannersDataTypes[]) => {
+  if (banners.length > 0) {
+    return banners.map((item) => ({
+      src: getImageURL(item.data.imageDesktop),
+      srcTablet: getImageURL(item.data.imageMobile),
+      srcMobile: getImageURL(item.data.imageTablet),
+    }));
+  }
+  return [];
+};

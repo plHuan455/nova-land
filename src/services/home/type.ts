@@ -12,12 +12,19 @@ export type NewsCategoryDataTypes = {
     name: string,
     slug: string,
   }[]
+  banner: {
+    name: string;
+    items: BannersDataTypes[];
+  };
+  breadcrumbs: BreadcrumbsData[];
+  seoData: SEOData;
+  openGraph: OpenGraphData;
 }
 
 export type NewsListParamsTypes = {
   keyword?: string,
-  page?: string,
-  limit?: string,
+  page?: number,
+  limit?: number,
   category_slug?: string,
   is_popular?: boolean,
   is_new?: boolean,
@@ -30,10 +37,10 @@ export type NewsDataTypes = {
   publishedAt: string;
   viewed: 1000,
   category: {
-      id: number;
-      name: string;
-      slug: string;
-    }[];
+    id: number;
+    name: string;
+    slug: string;
+  }[];
   title: string;
   slug: string;
   description: string;
