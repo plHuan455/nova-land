@@ -64,7 +64,7 @@ const NewsContainer: React.FC<NewsBlock> = ({
         imgSrc: getImageURL(item.thumbnail),
         title: item.title,
         desc: item.description,
-        date: formatDateDDMMYYYY(item.publishedAt),
+        date: formatDateDDMMYYYY(new Date(item.publishedAt).toDateString()),
         totalViews: item.viewed,
         href: `/tin-tuc-chi-tiet/${item.slug}`,
       }));

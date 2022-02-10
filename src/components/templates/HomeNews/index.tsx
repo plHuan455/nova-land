@@ -35,7 +35,7 @@ export const HomeNewsCard: React.FC<HomeNewsCardProps> = ({
     <div className="t-homeNewsCard">
       <div className="t-homeNewsCard_thumbnail">
         <Link href={href}>
-          <Image src={imgSrc} ratio="1x1" alt="HomeNewsCard" />
+          <Image src={imgSrc} ratio="1x1" alt={title} />
         </Link>
       </div>
       <div className="t-homeNewsCard_wrapper">
@@ -150,13 +150,17 @@ const HomeNews: React.FC<HomeNewsProps> = ({
               }
             </div>
           )}
-          <div className="t-homeNews_button">
-            <Link href={href} target={target}>
-              <Button modifiers="outlineSpanishGray">
-                {nameButton || 'Xem tất cả bài viết'}
-              </Button>
-            </Link>
-          </div>
+          {
+            !loading && (
+            <div className="t-homeNews_button">
+              <Link href={href} target={target}>
+                <Button modifiers="outlineSpanishGray">
+                  {nameButton || 'Xem tất cả bài viết'}
+                </Button>
+              </Link>
+            </div>
+            )
+          }
         </div>
       </Container>
     </div>
