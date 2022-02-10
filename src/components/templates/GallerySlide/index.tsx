@@ -15,7 +15,9 @@ export interface GallerySlideProps {
   target?: string;
   href: string;
   nameBtn?: string;
-  imgList: Array<string>;
+  imgList: {
+    image: string;
+  }[];
 }
 
 const setting = {
@@ -93,7 +95,7 @@ const GallerySlide: React.FC<GallerySlideProps> = ({
                     className="t-gallerySlide_right_item"
                     key={`gallerySlide-${index.toString()}`}
                   >
-                    <Image src={item} ratio="490x276" />
+                    <Image src={item.image} ratio="490x276" />
                   </div>
                 ))
               }

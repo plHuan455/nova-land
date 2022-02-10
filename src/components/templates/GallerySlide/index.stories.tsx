@@ -20,7 +20,7 @@ export const normal: Story = () => (
       hệ sinh thái dịch vụ và tiện ích NovaGroup"
       target="_blank"
       href="/"
-      imgList={[imgGallerySlide, imgGallerySlide, imgGallerySlide, imgGallerySlide]}
+      imgList={new Array(4).fill({ image: imgGallerySlide })}
     />
   </Router>
 );

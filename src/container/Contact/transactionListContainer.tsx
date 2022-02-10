@@ -5,12 +5,16 @@ import Animate from 'components/organisms/Animate';
 import Section from 'components/templates/Section';
 import TransactionList from 'components/templates/TransactionList';
 
-const TransactionListContainer: React.FC = () => (
+interface TransactionListContainerProps {
+  title: string;
+}
+
+const TransactionListContainer: React.FC<TransactionListContainerProps> = ({ title }) => (
   <div className="p-contact_transactionList">
     <Animate type="goUp">
       <Section>
         <TransactionList
-          title="Các sàn giao dịch của Novaland group"
+          title={title}
           dataTransactionList={dataTransactionList}
           totalPage={10}
           total={9}
