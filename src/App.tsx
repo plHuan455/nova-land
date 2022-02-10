@@ -19,6 +19,7 @@ import useInitializeRender from 'hooks/useInitializeRender';
 import Contact from 'pages/Contact';
 import CorporateGovernance from 'pages/CorporateGovernance';
 import Error from 'pages/Error';
+import Event from 'pages/Event';
 import EventDetail from 'pages/EventDetail';
 import News from 'pages/News';
 import NewsCategory from 'pages/NewsCategory';
@@ -85,6 +86,10 @@ const routes = [
   {
     path: '404',
     element: <Error />,
+  },
+  {
+    path: '/lich-su-kien',
+    element: <Event />,
   },
   {
     path: ':slug',

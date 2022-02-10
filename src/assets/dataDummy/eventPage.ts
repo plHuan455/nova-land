@@ -22,7 +22,7 @@ const eventData = [
   {
     imgSrc: img,
     title: 'Novaland tiếp tục tổ chức loạt sự kiện nghệ thuật',
-    description: 'Novaland tiếp tục tổ chức chuỗi đêm trình diễn nghệ thuật quy tụ nghệ sĩ nổi tiếng nhằm tri ân...',
+    description: 'Novaland tiếp tục tổ chức chuỗi đêm trình diễn nghệ thuật quy tụ nghệ sĩ nổi tiếng nhằm tri ân Novaland tiếp tục tổ chức chuỗi đêm trình diễn nghệ thuật quy tụ nghệ sĩ nổi tiếng nhằm tri ân Novaland tiếp tục tổ chức chuỗi đêm trình diễn nghệ thuật quy tụ nghệ sĩ nổi tiếng nhằm tri ân',
     href: '/',
   },
 ];
@@ -33,8 +33,8 @@ const breadCrumb = [
     title: 'Quan hệ đầu tư',
   },
   {
-    pathName: '/bao-cao-thuong-nien',
-    title: 'Báo cáo thường niên',
+    pathName: '/lich-su-kien',
+    title: 'Lịch sự kiện',
   },
 ];
 
