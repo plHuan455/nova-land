@@ -2,13 +2,12 @@ import React, {
   useCallback,
   useEffect,
   useMemo,
-  useRef,
   useState,
 } from 'react';
 import { useQuery } from 'react-query';
 
 import img from 'assets/images/bg_project_list_map.png';
-import ProjectMap from 'components/templates/ProjectMap';
+import ProjectMap, { ItemBranch } from 'components/templates/ProjectMap';
 import { getProjectsService } from 'services/project';
 import {
   useAppDispatch,
@@ -32,7 +31,6 @@ const ProjectMapContainer: React.FC<ProjectMapBlock> = ({
   const { realEstatesList } = useAppSelector((state) => state.project);
   const { maps } = useAppSelector((state) => state.maps);
   const [idActive, setIdActive] = useState(0);
-  const refTrigger = useRef<boolean>(false);
   const [currentRealEstates, setCurrentRealEstates] = useState('');
   const dispatch = useAppDispatch();
 
@@ -57,7 +55,7 @@ const ProjectMapContainer: React.FC<ProjectMapBlock> = ({
   }, [projectDataList]);
 
   const listProjectMap = useMemo(() => maps && realEstatesList?.map((item) => {
-    const data: any[] = [];
+    const data: ItemBranch[] = [];
     if (projectDataList?.length) {
       const projectIds = projectDataList.map((project) => project.id);
       maps.forEach((p, idx) => {
@@ -89,12 +87,12 @@ const ProjectMapContainer: React.FC<ProjectMapBlock> = ({
       const realEstateObj = realEstatesList.find((item) => item.id === id);
       setCurrentRealEstates(realEstateObj?.slug || '');
     }
-    refTrigger.current = true;
   }, [realEstatesList]);
 
   useEffect(() => {
     if (realEstatesList && realEstatesList?.length > 0) {
       setCurrentRealEstates(realEstatesList[0].slug);
+      setIdActive(realEstatesList[0].id);
     }
   }, [realEstatesList]);
 
@@ -103,10 +101,6 @@ const ProjectMapContainer: React.FC<ProjectMapBlock> = ({
       dispatch(getMapsAction({}));
     }
   }, [dispatch, maps]);
-
-  useEffect(() => {
-    if (listProjectMap && !refTrigger.current) setIdActive(listProjectMap[0].id);
-  }, [listProjectMap]);
 
   return (
     <div className="p-home_outStandingNumbers">

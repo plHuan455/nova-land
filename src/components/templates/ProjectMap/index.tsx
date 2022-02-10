@@ -9,7 +9,7 @@ import Container from 'components/organisms/Container';
 import { Tab, TabPanel, Tabs } from 'components/organisms/Tabs';
 import { ProjectsTypes } from 'services/project/types';
 
-interface ItemBranch {
+export interface ItemBranch {
   id: number;
   projects: number[];
   point: {
