@@ -55,7 +55,7 @@ const useLanguage = () => {
 
       setTimeout(() => {
         dispatch(setMessageNotify({
-          isOpen: true,
+          isOpen: false,
           title: '',
           message: '',
           type: 'warning',

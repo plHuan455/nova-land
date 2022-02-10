@@ -4,7 +4,7 @@ import { initReactI18next } from 'react-i18next';
 
 import { CONSTANT_LANGUAGE_LIST, LOCAL_STORAGE } from 'utils/constants';
 import bundledResources, {
-  staticBundledResources,
+// staticBundledResources,
 } from 'utils/localTranslation';
 
 export function detectLanguage() {
@@ -73,7 +73,7 @@ i18n
     },
     ns: ['translation', 'local'],
     //! Only turn this defaultNS on when testing local static translation files
-    defaultNS: 'local',
+    // defaultNS: 'local',
   });
 
 // eslint-disable-next-line no-restricted-syntax
@@ -83,8 +83,8 @@ for (const lang of Object.keys(bundledResources)) {
 
 //! Only turn this function on when testing static translation files
 // eslint-disable-next-line no-restricted-syntax
-for (const lang of Object.keys(staticBundledResources)) {
-  i18n.addResourceBundle(lang, 'local', staticBundledResources[lang]);
-}
+// for (const lang of Object.keys(staticBundledResources)) {
+//   i18n.addResourceBundle(lang, 'local', staticBundledResources[lang]);
+// }
 
 export default i18n;

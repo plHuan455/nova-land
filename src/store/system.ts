@@ -86,6 +86,7 @@ export const systemSlice = createSlice({
   extraReducers(builder) {
     builder.addCase(getSystemAsync.fulfilled, ($state, action) => {
       $state.dataSystem = action.payload;
+      $state.isChangeLanguage = false;
     });
     builder.addCase(getSystemAsync.rejected, ($state, action) => {
       $state.error = action.payload;
