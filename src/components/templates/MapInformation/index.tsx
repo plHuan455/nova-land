@@ -6,6 +6,7 @@ import Heading from 'components/atoms/Heading';
 import Icon, { IconName } from 'components/atoms/Icon';
 import Link from 'components/atoms/Link';
 import Text from 'components/atoms/Text';
+import Container from 'components/organisms/Container';
 import mapModifiers from 'utils/functions';
 
 export interface ContactInformationItems {
@@ -141,17 +142,18 @@ const MapInformation: React.FC<MapInformationProps> = ({ mapMarker, mapAPIkey })
   const handleClose = (e: boolean) => {
     setIsOpen(e);
   };
-
   return (
     <div className="t-mapInformation">
-      <div className={mapModifiers('t-mapInformation_card', isOpen && 'isOpen')}>
-        {dtMapInformation && (
-          <MapInformationCard
-            {...dtMapInformation}
-            handleClose={handleClose}
-          />
-        )}
-      </div>
+      <Container>
+        <div className={mapModifiers('t-mapInformation_card', isOpen && 'isOpen')}>
+          {dtMapInformation && (
+            <MapInformationCard
+              {...dtMapInformation}
+              handleClose={handleClose}
+            />
+          )}
+        </div>
+      </Container>
       <div className="t-mapInformation_wrapper">
         {
           mapMarker && (

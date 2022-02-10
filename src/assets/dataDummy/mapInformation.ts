@@ -5,7 +5,6 @@ const dataMapInformation: TypeMapMarker[] = [
     lat: 10.781241219776518,
     lng: 106.7415968021698,
     dataMarker: {
-      title: 'CÔNG TY CỔ PHẦN TẬP ĐOÀN ĐẦU TƯ ĐỊA ỐC NO VA',
       dataCard: [
         {
           branchName: 'Tòa nhà văn phòng Novaland',
@@ -28,6 +27,7 @@ const dataMapInformation: TypeMapMarker[] = [
           },
         },
       ],
+      title: 'CÔNG TY CỔ PHẦN TẬP ĐOÀN ĐẦU TƯ ĐỊA ỐC NO VA',
       nameBtn: 'Tìm gallery gần nhất',
       targetBtn: '_blank',
       href: '/',
