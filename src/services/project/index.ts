@@ -4,6 +4,7 @@ import {
   RealEstatesTypes,
   KeywordParamsTypes,
   CategoryProjectsDataTypes,
+  RealEstatesParamsTypes,
 } from './types';
 
 import axiosInstance from 'services/common/instance';
@@ -14,7 +15,7 @@ export const getProjectsService = async (params?: ProjectParamTypes): Promise<Pr
 };
 
 export const getRealEstatesService = async (
-  params?: KeywordParamsTypes,
+  params?: RealEstatesParamsTypes,
 ): Promise<RealEstatesTypes[]> => {
   const response = await axiosInstance.get('real-estates', { params });
   return response.data.data;

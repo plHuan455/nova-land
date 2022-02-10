@@ -2,7 +2,12 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 import { getCategoryProjectsService, getProjectsService, getRealEstatesService } from 'services/project';
 import {
-  CategoryProjectsDataTypes, KeywordParamsTypes, ProjectParamTypes, ProjectsTypes, RealEstatesTypes,
+  CategoryProjectsDataTypes,
+  KeywordParamsTypes,
+  ProjectParamTypes,
+  ProjectsTypes,
+  RealEstatesTypes,
+  RealEstatesParamsTypes,
 } from 'services/project/types';
 
 interface ProjectState {
@@ -33,11 +38,11 @@ export const getProjectsAction = createAsyncThunk<
 
 export const getRealEstatesAction = createAsyncThunk<
   RealEstatesTypes[],
-  void,
+  RealEstatesParamsTypes,
   { rejectValue: ErrorResponse }
->('projectReducer/getRealEstatesAction', async (_, { rejectWithValue }) => {
+>('projectReducer/getRealEstatesAction', async (params: RealEstatesParamsTypes | undefined, { rejectWithValue }) => {
   try {
-    const response = await getRealEstatesService();
+    const response = await getRealEstatesService(params);
     return response;
   } catch (error) {
     return rejectWithValue(error as ErrorResponse);

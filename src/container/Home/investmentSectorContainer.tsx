@@ -21,8 +21,8 @@ const InvestmentSectorContainer: React.FC<InvestmentSectorBlock> = ({
 }) => {
   const dispatch = useDispatch();
   const { realEstatesList } = useAppSelector((state) => state.project);
-  const investmentSectorData = useMemo(() => realEstatesList?.map((item) => (
-    {
+  const investmentSectorData = useMemo(
+    () => realEstatesList?.map((item) => ({
       title: item.name,
       desc: item.description,
       thumbnail: getImageURL(item.thumbnail),
@@ -31,12 +31,13 @@ const InvestmentSectorContainer: React.FC<InvestmentSectorBlock> = ({
       imgLogoHover: getImageURL(item.iconHover),
       isSmall: true,
       btnText: 'Tìm Hiểu Thêm',
-    }
-  )), [realEstatesList]);
+    })),
+    [realEstatesList],
+  );
 
   useEffect(() => {
     if (!realEstatesList) {
-      dispatch(getRealEstatesAction());
+      dispatch(getRealEstatesAction({}));
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
