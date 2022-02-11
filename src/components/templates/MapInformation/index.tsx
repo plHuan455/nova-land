@@ -5,8 +5,8 @@ import Button from 'components/atoms/Button';
 import Heading from 'components/atoms/Heading';
 import Icon, { IconName } from 'components/atoms/Icon';
 import Link from 'components/atoms/Link';
+import Loading from 'components/atoms/Loading';
 import Text from 'components/atoms/Text';
-import Container from 'components/organisms/Container';
 import mapModifiers from 'utils/functions';
 
 export interface ContactInformationItems {
@@ -25,18 +25,16 @@ export interface MapInformationCardProps {
   title: string;
   dataCard: ContactInformationItems[];
   nameBtn?: string;
-  targetBtn?: string;
-  href: string;
   handleClose?: (e: boolean) => void;
+  handleLocationSearch?: () => void;
 }
 
 export const MapInformationCard: React.FC<MapInformationCardProps> = ({
   title,
   dataCard,
   nameBtn,
-  targetBtn,
-  href,
   handleClose,
+  handleLocationSearch,
 }) => (
   <div className="t-mapInformationCard">
     <div className="t-mapInformationCard_mbClose" onClick={() => handleClose && handleClose(false)}>
@@ -99,13 +97,11 @@ export const MapInformationCard: React.FC<MapInformationCardProps> = ({
       </div>
     )}
     <div className="t-mapInformationCard_btn u-mt-lg-30 u-mt-15">
-      <Link href={href} target={targetBtn || '_blank'}>
-        <Button modifiers="primary" type="button">
-          <Text modifiers={['18x28', '600', 'center']}>
-            {nameBtn || 'Tìm gallery gần nhất'}
-          </Text>
-        </Button>
-      </Link>
+      <Button modifiers="primary" type="button" onClick={handleLocationSearch}>
+        <Text modifiers={['18x28', '600', 'center']}>
+          {nameBtn || 'Tìm gallery gần nhất'}
+        </Text>
+      </Button>
     </div>
   </div>
 );
@@ -117,8 +113,10 @@ export type TypeMapMarker = {
 };
 
 export interface MapInformationProps {
-  mapMarker: TypeMapMarker[];
+  mapMarker: TypeMapMarker;
   mapAPIkey: string;
+  handleLocationSearch?: () => void;
+  loading?: boolean;
 }
 
 export interface MapContactProps {
@@ -129,66 +127,65 @@ export interface MapContactProps {
 
 const MapContact: React.FC<MapContactProps> = ({ handleClick }) => (
   <div className="t-mapInformation_marker" onClick={handleClick}>
-    <Icon iconName="location" />
+    <Icon iconName="marker" size="40" />
   </div>
 );
 
-const MapInformation: React.FC<MapInformationProps> = ({ mapMarker, mapAPIkey }) => {
-  const [
-    dtMapInformation, setDtMapInformation,
-  ] = useState<MapInformationCardProps>(mapMarker[0]?.dataMarker);
+const MapInformation: React.FC<MapInformationProps> = ({
+  mapMarker,
+  mapAPIkey,
+  handleLocationSearch,
+  loading,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClose = (e: boolean) => {
     setIsOpen(e);
   };
   return (
-    <div className="t-mapInformation">
-      <Container>
-        <div className={mapModifiers('t-mapInformation_card', isOpen && 'isOpen')}>
-          {dtMapInformation && (
+    <>
+      {loading ? <Loading isShow /> : (
+        <div className="t-mapInformation">
+          <div className={mapModifiers('t-mapInformation_card', isOpen && 'isOpen')}>
             <MapInformationCard
-              {...dtMapInformation}
+              {...mapMarker.dataMarker}
               handleClose={handleClose}
+              handleLocationSearch={handleLocationSearch}
             />
-          )}
-        </div>
-      </Container>
-      <div className="t-mapInformation_wrapper">
-        {
-          mapMarker && (
-            <GoogleMapReact
-              bootstrapURLKeys={{
-                key: `${mapAPIkey}&libraries=places,geometry`,
-              }}
-              defaultCenter={{
-                lat: mapMarker[0]?.lat,
-                lng: mapMarker[0]?.lng,
-              }}
-              defaultZoom={13}
-              options={{
-                zoomControl: true,
-                mapTypeControl: false,
-                fullscreenControl: true,
-                panControl: true,
-              }}
-            >
-              {mapMarker.map((marker, idx) => (
+          </div>
+          <div className="t-mapInformation_wrapper">
+            {
+            mapMarker && (
+              <GoogleMapReact
+                bootstrapURLKeys={{
+                  key: `${mapAPIkey}&libraries=places,geometry`,
+                }}
+                defaultCenter={{
+                  lat: mapMarker.lat,
+                  lng: mapMarker.lng,
+                }}
+                defaultZoom={13}
+                options={{
+                  zoomControl: true,
+                  mapTypeControl: false,
+                  fullscreenControl: true,
+                  panControl: true,
+                }}
+              >
                 <MapContact
-                  key={`marker-${idx + 1}`}
-                  lat={marker.lat}
-                  lng={marker.lng}
+                  lat={mapMarker.lat}
+                  lng={mapMarker.lng}
                   handleClick={() => {
                     setIsOpen(!isOpen);
-                    setDtMapInformation(marker.dataMarker);
                   }}
                 />
-              ))}
-            </GoogleMapReact>
-          )
-        }
-      </div>
-    </div>
+              </GoogleMapReact>
+            )
+          }
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 

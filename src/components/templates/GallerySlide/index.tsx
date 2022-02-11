@@ -8,6 +8,7 @@ import Text from 'components/atoms/Text';
 import Animate from 'components/organisms/Animate';
 import Carousel, { PrevArrow, NextArrow } from 'components/organisms/Carousel';
 import Container from 'components/organisms/Container';
+import { getImageURL, checkExternalUrl } from 'utils/functions';
 
 export interface GallerySlideProps {
   title: string;
@@ -68,12 +69,10 @@ const GallerySlide: React.FC<GallerySlideProps> = ({
               {title}
             </Heading>
             <div className="t-gallerySlide_left_desc u-mt-xl-20 u-mt-10">
-              <Text modifiers={['16x24', '300', 'dimGray']}>
-                {desc}
-              </Text>
+              <Text modifiers={['16x24', '300', 'dimGray']} content={desc} />
             </div>
             <div className="t-gallerySlide_left_btn u-mt-xl-20 u-mt-10">
-              <Link href={href} target={target}>
+              <Link href={href} target={target} useExternal={checkExternalUrl(href)}>
                 <div className="t-gallerySlide_left_btn_wrap">
                   <Text modifiers={['14x20', '300', 'camel']}>
                     {nameBtn || 'Xem vị trí trên bản đồ'}
@@ -95,7 +94,7 @@ const GallerySlide: React.FC<GallerySlideProps> = ({
                     className="t-gallerySlide_right_item"
                     key={`gallerySlide-${index.toString()}`}
                   >
-                    <Image src={item.image} ratio="490x276" />
+                    <Image src={getImageURL(item.image)} ratio="490x276" />
                   </div>
                 ))
               }

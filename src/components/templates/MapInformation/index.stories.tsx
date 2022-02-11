@@ -16,7 +16,7 @@ export const card: Story = () => (
   <div style={{ maxWidth: '448px', height: '100vh', margin: '20px' }}>
     <Router>
       <MapInformationCard
-        {...dataMapInformation[0].dataMarker}
+        {...dataMapInformation.dataMarker}
       />
     </Router>
   </div>

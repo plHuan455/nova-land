@@ -5,7 +5,7 @@ import MapInformationContainer from './mapInformationContainer';
 import TransactionListContainer from './transactionListContainer';
 
 import HelmetContainer from 'container/helmet';
-import { getBlockData, getImageURL } from 'utils/functions';
+import { getBlockData } from 'utils/functions';
 
 type Location = {
   email: string;
@@ -58,7 +58,38 @@ const ContactContainer: React.FC<BasePageData<ContactBlock>> = ({
           keyword: seoData.keyword,
         }}
       />
-      <MapInformationContainer />
+      <MapInformationContainer
+        dataMarker={{
+          lat: Number(locationBlock.latitude),
+          lng: Number(locationBlock.longtitude),
+          dataMarker: {
+            title: locationBlock.locationName,
+            dataCard: [
+              {
+                branchName: locationBlock.buildingName,
+                informationDetail: {
+                  iconLocation: 'location',
+                  location: locationBlock.address,
+                  iconEmail: 'email',
+                  email: locationBlock.email,
+                  iconPhone: 'phoneContact',
+                  phone: locationBlock.phone,
+                },
+              },
+              {
+                branchName: locationBlock.galleryName,
+                informationDetail: {
+                  iconLocation: 'location',
+                  location: locationBlock.galleryAddress,
+                  iconPhone: 'phone',
+                  phone: locationBlock.galleryPhone,
+                },
+              },
+            ],
+            nameBtn: 'Tìm gallery gần nhất',
+          },
+        }}
+      />
       <GallerySlideContainer
         title={galleryBlock.title}
         desc={galleryBlock.description}
