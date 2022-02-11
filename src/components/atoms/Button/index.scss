@@ -43,12 +43,10 @@
       @include prefixed(transition-duration, 0.3s);
       @include prefixed(transition-timing-function, ease-out);
     }
-    
     &:hover {
       background-color: $white;
       border: 0;
       color: $camel;
-      
       &::before {
         @include prefixed(transform, scaleX(1));
       }

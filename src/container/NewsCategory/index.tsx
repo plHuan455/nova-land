@@ -2,10 +2,10 @@ import React from 'react';
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
 
-import BreadcrumbContainer from './breadcrumbContainer';
 import CategoryGeneralContainer from './categoryGeneralContainer';
 
 import Loading from 'components/atoms/Loading';
+import Breadcrumb from 'components/molecules/Breadcrumb';
 import HeroBanner from 'components/templates/HeroBanner';
 import HelmetContainer from 'container/helmet';
 import RedirectNavigate from 'navigations/redirectNavigate';
@@ -32,12 +32,15 @@ const NewsCategoryContainer: React.FC = () => {
     <>
       <HelmetContainer ogData={data?.openGraph} seoData={data?.seoData} />
       <HeroBanner list={convertBanner(data?.banner.items || [])} />
-      <BreadcrumbContainer breadcrumbs={getBreadcrumbs({
-        breadcrumbs: data?.breadcrumbs || [],
-        language,
-        title: data?.name || '',
-      })}
-      />
+      <div className="p-newsCategory_breadcrumb u-mt-md-24 u-mb-md-27 u-mt-14 u-mb-16">
+        <Breadcrumb
+          breadcrumbs={getBreadcrumbs({
+            breadcrumbs: data?.breadcrumbs || [],
+            language,
+            title: data?.name || '',
+          })}
+        />
+      </div>
       <CategoryGeneralContainer />
     </>
   );

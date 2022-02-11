@@ -18,3 +18,14 @@ export const MENU_CODE = {
   MENU_HEADER: 'menu',
   MENU_FOOTER: 'main-footer',
 };
+
+export type ConstantRoutesCodes = keyof typeof CONSTANT_ROUTES;
+export type ConstantRoutesType = typeof CONSTANT_ROUTES;
+
+export const CONSTANT_ROUTES = {
+  NEWS_CATEGORY: 'tin-tuc',
+};
+
+export const CONSTANT_ROUTES_EN: ConstantRoutesType = {
+  NEWS_CATEGORY: 'news',
+};

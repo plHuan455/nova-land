@@ -1,15 +1,11 @@
-/* eslint-disable no-unused-vars */
-// import { getStaticSlug } from './languages';
+import { getStaticSlug } from './languages';
 
 import { BreadcrumbPropsTypes } from 'components/molecules/Breadcrumb';
 
 function detectType(type: string, lang: string) {
-  // if (type === 'news_categories') {
-  //   return `/${getStaticSlug('NEWS_CATEGORIES', lang)}`;
-  // }
-  // if (type === 'investment_sectors') {
-  //   return `/${getStaticSlug('INVESTMENT_SECTORS', lang)}`;
-  // }
+  if (type === 'news_category') {
+    return `/${getStaticSlug('NEWS_CATEGORY', lang)}`;
+  }
   return '';
 }
 

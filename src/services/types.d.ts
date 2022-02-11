@@ -175,5 +175,5 @@ type OpenGraphData = {
   ogTitle: string;
   ogImage?: any;
   ogDescription: string;
-  ogType: string;
+  ogType?: string;
 }

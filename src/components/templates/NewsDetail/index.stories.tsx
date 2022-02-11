@@ -22,6 +22,7 @@ export const normal: Story = () => (
       keyword={newsDetailDumy.keywordList}
       titleLatest="Các tin mới nhất"
       titleHot="Các tin nổi bật"
+      hightLightNews={newsDetailDumy.newsDetailData.relatedNews}
     />
   </Router>
 );
