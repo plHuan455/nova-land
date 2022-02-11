@@ -28,6 +28,7 @@
 @import 'components/molecules/InfoNews/';
 @import 'components/molecules/InfoContactRecruitment/';
 @import 'components/molecules/RelatedRecruitment/';
+@import 'components/molecules/EventCard/';
 
 //Organisms
 @import 'components/organisms/Header/';
@@ -95,6 +96,7 @@
 @import 'components/templates/TransactionList';
 @import 'components/templates/TableCategory';
 @import 'components/templates/CorporateGovernance';
+@import 'components/templates/EventList/';
 
 // Pages
 @import 'pages/Home/';
