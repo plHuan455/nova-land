@@ -1,36 +1,22 @@
 import React, { useState } from 'react';
 
-import OtherDocuments, { dataType } from '../OtherDocuments';
-
-import imgPdf from 'assets/images/pdf.png';
+import Button from 'components/atoms/Button';
+import Heading from 'components/atoms/Heading';
 import Icon, { IconName } from 'components/atoms/Icon';
+import Image from 'components/atoms/Image';
 import Link from 'components/atoms/Link';
 import Text from 'components/atoms/Text';
+import Pagination from 'components/molecules/Pagination';
+import Pulldown, { OptionType } from 'components/molecules/Pulldown';
 import Container from 'components/organisms/Container';
 import mapModifiers from 'utils/functions';
 
-const dataList: dataType[] = [
-  {
-    pdfImg: imgPdf,
-    fileName: 'Nghị quyết Hội đồng quản trị thông qua việc chuyển đổi và tỷ lệ chuyển đổi trái phiếu chuyển đổi quốc tế',
-    href: '',
-  },
-  {
-    pdfImg: imgPdf,
-    fileName: 'Nghị quyết Hội đồng quản trị thông qua việc chuyển đổi và tỷ lệ chuyển đổi trái phiếu chuyển đổi quốc tế',
-    href: '',
-  },
-  {
-    pdfImg: imgPdf,
-    fileName: 'Nghị quyết Hội đồng quản trị thông qua việc chuyển đổi và tỷ lệ chuyển đổi trái phiếu chuyển đổi quốc tế',
-    href: '',
-  },
-];
+/** ******MENU********* */
 export interface MenuItemType {
-  title: string;
-  slug: string;
+  title?: string;
+  slug?: string;
   icon: IconName;
-  id: number;
+  id?: number;
 }
 
 export interface MenuType {
@@ -71,7 +57,7 @@ export const Menu: React.FC<MenuProps> = ({ data }) => {
             (e.id === idActive || e.id === hoverActive) && 'show',
             (e.id === idActive && !(e?.subMenu?.length)) && 'active',
           )}
-          key={`aboutUsMenu-${i.toString()}`}
+          key={`menu-item-${i.toString()}`}
         >
           {e?.subMenu?.length > 0 ? (
             <div
@@ -100,7 +86,7 @@ export const Menu: React.FC<MenuProps> = ({ data }) => {
               )}
               <ul className="t-menu_subList">
                 {e.subMenu.map((s, idx) => (
-                  <li key={`aboutUsMenuChild-${idx.toString()}`}>
+                  <li key={`menu_subList-${idx.toString()}`}>
                     {s.slug && (
                       <Link
                         target="_self"
@@ -112,7 +98,7 @@ export const Menu: React.FC<MenuProps> = ({ data }) => {
                           <Text modifiers={['400', '16x24', 'fontLexend', 'dimGray']}>{s.title}</Text>
                         </div>
                         <div className="t-menu_subHead-iconSub">
-                          <Icon size="24" iconName={e.icon} />
+                          <Icon size="24" iconName={s.icon} />
                         </div>
                       </Link>
                     )}
@@ -133,12 +119,96 @@ export const Menu: React.FC<MenuProps> = ({ data }) => {
   );
 };
 
+/** ******* Regulations ********** */
+
+export interface RegulationsType {
+  img: string,
+  title?: string,
+  date?: string,
+  titleBtn?: string;
+}
+interface RegulationsProps {
+  title: string,
+  textSort: string,
+  dataRegulations: RegulationsType[],
+  dummyOption:OptionType[];
+}
+
+const Regulations: React.FC<RegulationsProps> = ({
+  title,
+  textSort,
+  dataRegulations,
+  dummyOption,
+}) => (
+  <div className="t-regulations">
+    <div className="t-regulations_title">
+      <Heading modifiers={['jet', '24x30', '600', 'fontLexend']} content={title} />
+    </div>
+    <div className="t-regulations_wrapContent">
+      <div className="t-regulations_top">
+        <div className="t-regulations_sort">
+          <div className="t-regulations_sort_text">
+            <Text modifiers={['14x20', 'right', '400', 'fontLexend', 'dimGray']} content={textSort} />
+          </div>
+          <div className="t-regulations_sort_pulldown">
+            <Pulldown
+              placeholder="Chọn"
+              options={dummyOption}
+            />
+          </div>
+        </div>
+        <div className="t-regulations_pagination">
+          <Pagination
+            totalPage={2}
+            handleChangePage={(page: number) => console.log(page)}
+          />
+        </div>
+      </div>
+      <div className="t-regulations_wrapItem">
+        {
+          dataRegulations.map((item, idx) => (
+            <div key={`regulations-${idx.toString()}`} className="t-regulations_item">
+              <div className="t-regulations_content">
+                <div className="t-regulations_image">
+                  <Image alt={item.title} ratio="91x96" src={item.img} />
+                </div>
+                <div className="t-regulations_desc">
+                  <div className="t-regulations_desc_title">
+                    <Text modifiers={['jet', '16x24', '400', 'fontLexend']} content={item.title} />
+                  </div>
+                  <div className="t-regulations_desc_date">
+                    <Text modifiers={['12x17', 'fontLexend', '400', 'dimGray']} content={item.date} />
+                  </div>
+                </div>
+              </div>
+              <div className="t-regulations_wrapButton">
+                <Button modifiers="iconRight" iconName="down">{item.titleBtn}</Button>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+      <div className="t-regulations_paginationButton">
+        <Pagination
+          totalPage={2}
+          handleChangePage={(page: number) => console.log(page)}
+        />
+      </div>
+    </div>
+  </div>
+);
+
+/** ******* InvestmentRelationsOtherDocument ********** */
 interface InvestmentRelationsOtherDocumentProps {
   dataMenu: MenuType[];
+  dataRegulations: RegulationsType[],
+  dummyOption: OptionType[],
 }
 
 const InvestmentRelationsOtherDocument: React.FC<InvestmentRelationsOtherDocumentProps> = ({
   dataMenu,
+  dataRegulations,
+  dummyOption,
 }) => (
   <div className="t-investmentRelationsOtherDocument">
     <Container>
@@ -147,10 +217,11 @@ const InvestmentRelationsOtherDocument: React.FC<InvestmentRelationsOtherDocumen
           <Menu data={dataMenu} />
         </div>
         <div className="t-investmentRelationsOtherDocument_right">
-          <OtherDocuments
-            heading="Tài Liệu Khác"
-            data={dataList}
-            btnText="Xem tất cả Tài liệu khác"
+          <Regulations
+            title="Điều lệ"
+            textSort="Sắp xếp:"
+            dataRegulations={dataRegulations}
+            dummyOption={dummyOption}
           />
         </div>
       </div>

@@ -16,6 +16,10 @@
   width: 100%;
   @include font-base(16, 24);
 
+  &_iconRight {
+    margin-left: rem(10);
+  }
+
   &-primary {
     background-color: $camel;
     border: 0;
@@ -285,6 +289,13 @@
     }
   }
 
+  &-iconRight {
+    background: 0;
+    border: 0;
+    color: $camel;
+    flex-direction: row-reverse;
+    @include font-base(14, 20);
+  }
   //----SIZE----//
   &-h70 {
     height: rem(70);

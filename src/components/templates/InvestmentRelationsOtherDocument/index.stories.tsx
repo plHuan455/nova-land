@@ -4,7 +4,9 @@ import { BrowserRouter } from 'react-router-dom';
 
 import InvestmentRelationsOtherDocument from '.';
 
+import RegulationsList from 'assets/dataDummy/InvestmentRelationsOtherDocument';
 import { IconName } from 'components/atoms/Icon';
+import { OptionType } from 'components/molecules/Pulldown';
 
 export default {
   title: 'Components/templates/InvestmentRelationsOtherDocument',
@@ -22,12 +24,12 @@ const menuData = [
       {
         title: 'Điều lệ',
         slug: '/',
-        icon: 'greyArrowRight' as IconName,
+        icon: 'arrowNextSlateGray' as IconName,
       },
       {
         title: 'Thông tin Công ty',
         slug: '/',
-        icon: 'greyArrowRight' as IconName,
+        icon: 'arrowNextSlateGray' as IconName,
       },
 
     ],
@@ -41,12 +43,12 @@ const menuData = [
       {
         title: 'Điều lệ',
         slug: '/',
-        icon: 'greyArrowRight' as IconName,
+        icon: 'arrowNextSlateGray' as IconName,
       },
       {
         title: 'Thông tin Công ty',
         slug: '/',
-        icon: 'greyArrowRight' as IconName,
+        icon: 'arrowNextSlateGray' as IconName,
       },
     ],
   },
@@ -59,7 +61,7 @@ const menuData = [
       {
         title: 'Điều lệ',
         slug: '/',
-        icon: 'greyArrowRight' as IconName,
+        icon: 'arrowNextSlateGray' as IconName,
       },
     ],
   },
@@ -72,10 +74,17 @@ const menuData = [
   },
 ];
 
+const dummyOption: OptionType[] = [
+  { value: '1', label: 'Gần đây' },
+  { value: '2', label: 'Mới nhất' },
+
+];
 export const normal: Story = () => (
   <BrowserRouter>
     <InvestmentRelationsOtherDocument
       dataMenu={menuData}
+      dataRegulations={RegulationsList}
+      dummyOption={dummyOption}
     />
   </BrowserRouter>
 );

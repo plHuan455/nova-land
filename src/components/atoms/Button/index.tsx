@@ -7,14 +7,15 @@ import mapModifiers from 'utils/functions';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   modifiers?:
-    | 'primary'
-    | 'secondary'
-    | 'outline'
-    | 'with-icon'
-    | 'outlinePaleGold'
-    | 'camel'
-    | 'outlineWhile'
-    | 'outlineSpanishGray';
+  | 'primary'
+  | 'secondary'
+  | 'outline'
+  | 'with-icon'
+  | 'outlinePaleGold'
+  | 'camel'
+  | 'outlineWhile'
+  | 'outlineSpanishGray'
+  | 'iconRight';
   isLoading?: boolean;
   iconName?: IconName;
   size?: 'h70';
@@ -43,7 +44,8 @@ const Button: React.FC<ButtonProps> = ({
         ? <img src={imgLoading} alt="loading" />
         : (
           <>
-            {iconName && <Icon iconName={iconName} size="14" />}
+            {iconName && (
+              modifiers === 'iconRight' ? <div className="a-button_iconRight"><Icon iconName={iconName} size="20" /></div> : <Icon iconName={iconName} size="14" />)}
             {children}
           </>
         )
