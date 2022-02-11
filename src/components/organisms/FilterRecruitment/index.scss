@@ -3,6 +3,7 @@
 
   &_desc {
     margin-top: rem(16);
+    @include text-overflow(4);
   }
 
   &_tab {
@@ -10,22 +11,14 @@
     background: $glitter04;
     border-radius: rem(5);
     margin: rem(40) auto 0;
-    max-width: rem(325);
-
-    @include desktop-up {
-      max-width: rem(930) !important;
-    }
+    max-width: rem(930);
 
     @include tablet-up {
       @include adjust-flex(unset, center);
     }
 
-    @include mobile-up {
-      max-width: rem(675);
-    }
-
-    @include small-mobile {
-      max-width: rem(250);
+    @include mobile-down {
+      margin-top: rem(24);
     }
 
     &_item {
@@ -120,8 +113,10 @@
 
     .m-pulldown {
       background: transparent;
-      border: none;
+      border: 0;
       color: $white;
+
+      
 
       &-default {
         &__placeholder {

@@ -4,6 +4,7 @@ import Button from 'components/atoms/Button';
 import Heading from 'components/atoms/Heading';
 import Text from 'components/atoms/Text';
 import Pulldown, { OptionType } from 'components/molecules/Pulldown';
+import Container from 'components/organisms/Container';
 
 type RecruitmentFilterTypes = {
   location?: OptionType;
@@ -36,16 +37,17 @@ const FilterRecruitment: React.FC<FilterRecruitmentProps> = ({
   };
 
   return (
-    <div className="t-filterRecruitment">
-      <div className="t-filterRecruitment_heading">
-        <Heading modifiers={['400', '64x83', 'center', 'fontNoto', 'white']} content={heading} />
-      </div>
-      <div className="t-filterRecruitment_desc">
-        <Text modifiers={['300', '18x28', 'center', 'fontLexend', 'white']} content={desc} />
-      </div>
-      <div className="t-filterRecruitment_tab">
-        {/* Find position ...  */}
-        {
+    <Container>
+      <div className="t-filterRecruitment">
+        <div className="t-filterRecruitment_heading">
+          <Heading modifiers={['400', '64x83', 'center', 'fontNoto', 'white']} content={heading} />
+        </div>
+        <div className="t-filterRecruitment_desc">
+          <Text modifiers={['300', '18x28', 'center', 'fontLexend', 'white']} content={desc} />
+        </div>
+        <div className="t-filterRecruitment_tab">
+          {/* Find position ...  */}
+          {
             positionOptions && positionOptions.length > 0
             && (
             <div className="t-filterRecruitment_tab_item">
@@ -60,8 +62,8 @@ const FilterRecruitment: React.FC<FilterRecruitmentProps> = ({
             </div>
             )
           }
-        {/* Find Location ...  */}
-        {
+          {/* Find Location ...  */}
+          {
             locationOptions && locationOptions.length > 0
             && (
             <div className="t-filterRecruitment_tab_item minimize">
@@ -76,8 +78,8 @@ const FilterRecruitment: React.FC<FilterRecruitmentProps> = ({
             </div>
             )
           }
-        {/* Find Department ...  */}
-        {
+          {/* Find Department ...  */}
+          {
             departmentOptions && departmentOptions.length > 0
             && (
             <div className="t-filterRecruitment_tab_item minimize">
@@ -92,14 +94,15 @@ const FilterRecruitment: React.FC<FilterRecruitmentProps> = ({
             </div>
             )
           }
-        {/* Submit ...  */}
-        <div className="t-filterRecruitment_tab_button">
-          <Button size="h70" onClick={() => handleSubmit && optionGroup && handleSubmit(optionGroup)}>
-            Tìm kiếm việc làm
-          </Button>
+          {/* Submit ...  */}
+          <div className="t-filterRecruitment_tab_button">
+            <Button size="h70" onClick={() => handleSubmit && optionGroup && handleSubmit(optionGroup)}>
+              Tìm kiếm việc làm
+            </Button>
+          </div>
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 

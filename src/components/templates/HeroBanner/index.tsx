@@ -1,4 +1,5 @@
 import React from 'react';
+import { Settings } from 'react-slick';
 
 import Image from 'components/atoms/Image';
 import Animate from 'components/organisms/Animate';
@@ -11,10 +12,11 @@ type HeroBannerItem = {
 }
 
 export interface HeroBannerProps {
+  setting?: Settings;
   list: HeroBannerItem[];
 }
 
-const settingBanner = {
+export const settingBanner = {
   dots: false,
   slidesToShow: 1,
   slidesToScroll: 1,
@@ -26,12 +28,13 @@ const settingBanner = {
 };
 
 const HeroBanner: React.FC<HeroBannerProps> = ({
+  setting,
   list,
   children,
 }) => (
-  <div className="t-heroBanner">
-    <Animate type="goUpHero">
-      <Carousel settings={settingBanner}>
+  <Animate type="goUpHero">
+    <div className="t-heroBanner">
+      <Carousel settings={setting || settingBanner}>
         {list.map((item, index) => (
           <Image key={`index-${index.toString()}`} {...item} ratio="1371x620" alt="image-banner" />
         ))}
@@ -39,8 +42,8 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
       <div className="t-heroBanner_info">
         {children}
       </div>
-    </Animate>
-  </div>
+    </div>
+  </Animate>
 );
 
 export default HeroBanner;
