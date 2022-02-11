@@ -13,12 +13,12 @@ interface NewsType {
   id: string;
   title: string;
   shortDescription?: string;
-  content: string;
-  createDate: string;
+  content?: string;
+  createDate?: string;
   status?: string;
   imageNews?: string;
   numberView: string;
-  author: string;
+  author?: string;
   href?: string;
   titleBtn?: string;
   newsTypes: Array<string>;
@@ -26,7 +26,7 @@ interface NewsType {
 interface RelatedNewsType {
   id: string;
   title: string;
-  content: string;
+  content?: string;
   status?: string;
   imageNews?: string;
   href?: string;
