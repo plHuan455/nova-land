@@ -63,6 +63,7 @@
   &_shortDesc {
     margin-bottom: rem(40);
   }
+
   &_content {
     &-desc {
       button {
@@ -73,12 +74,12 @@
           width: rem(237);
         }
         @include tablet-up {
-          margin: rem(60) 0;
           background-color: $camel;
           border: 0;
           border-radius: rem(5);
           box-shadow: 0 2px 0 $black0043;
           color: $white;
+          margin: rem(60) 0;
           @include prefixed(transition-property, color);
           @include prefixed(transition-duration, 0.3s);
           @include prefixed(transform, perspective(1px) translateZ(0));
@@ -88,7 +89,7 @@
             border: 1px solid $camel;
             border-radius: rem(5);
             bottom: 0;
-            content: "";
+            content: '';
             left: 0;
             position: absolute;
             right: 0;
@@ -114,6 +115,7 @@
       }
     }
   }
+
   &_typesnews {
     margin-bottom: rem(24);
     margin-top: rem(24);
@@ -150,6 +152,7 @@
       &-twitterShare {
         display: inherit;
         margin-top: 0;
+
         button {
           display: unset;
         }
@@ -157,6 +160,7 @@
       @include tablet-up {
         margin-top: rem(0);
       }
+
       .a-link {
         margin-right: rem(8);
 

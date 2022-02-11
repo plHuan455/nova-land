@@ -4,7 +4,8 @@
     position: relative;
     @include scroll-bars(8, $spanish-gray);
 
-    th, td{
+    th,
+    td {
       border: rem(0.5) solid $columbia-blue;
     }
 
