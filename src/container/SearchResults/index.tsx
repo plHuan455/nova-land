@@ -78,6 +78,7 @@ const SearchResultsContainer: React.FC<BasePageData<SearchBlock>> = ({ pageData,
   const handleSubmit = (data: SearchForm) => {
     setSearchParams({ keyword: data.search });
     setSearchText(data.search);
+    setCurrentPage(1);
     if (data.search) {
       navigate(`${getSlugByTemplateCode('SEARCH', staticPage)}?keyword=${data.search}`);
     } else {
@@ -88,6 +89,7 @@ const SearchResultsContainer: React.FC<BasePageData<SearchBlock>> = ({ pageData,
   useEffect(() => {
     if (searchParams) {
       setSearchText(searchParams.get('keyword') || '');
+      setCurrentPage(1);
     }
   }, [searchParams]);
 
