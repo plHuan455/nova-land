@@ -37,14 +37,6 @@ const PageNav = lazy(() => import('navigations/PageNav'));
 
 const routes = [
   {
-    path: 'tin-tuc',
-    element: <News />,
-  },
-  // {
-  //   path: 'tin-tuc-du-an',
-  //   element: <NewsCategory />,
-  // },
-  {
     path: 'tin-tuc/:slug',
     element: <NewsCategory />,
   },

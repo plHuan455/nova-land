@@ -12,7 +12,7 @@ import { getImageURL } from 'utils/functions';
 const MarketNewsContainer: React.FC<{ cateSlug: string }> = ({ cateSlug }) => {
   const { data: res, isFetching } = useQuery(
     'getMarketNewsList',
-    () => getNewsService({ limit: '4', page: '1', category_slug: cateSlug }),
+    () => getNewsService({ limit: 4, page: 1, category_slug: cateSlug }),
     {
       ...DEFAULT_QUERY_OPTION,
     },

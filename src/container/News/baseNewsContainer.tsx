@@ -7,45 +7,50 @@ import Section from 'components/templates/Section';
 import { getNewsService } from 'services/home';
 import { NewsCategoryChildrenTypes } from 'services/home/type';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
-import { getImageURL } from 'utils/functions';
+import { formatDateDDMMYYYY, getImageURL } from 'utils/functions';
 
 interface BaseNewsProps {
-  cateSlug: string;
   title: string;
-  btnText: string;
+  activeTab: NewsCategoryChildrenTypes;
   tabList: NewsCategoryChildrenTypes[];
   exceptIds: string;
 }
 
 const BaseNewsContainer: React.FC<BaseNewsProps> = ({
-  cateSlug, title, btnText, tabList, exceptIds,
+  title, activeTab, tabList, exceptIds,
 }) => {
-  const [slugActive, setSlugActive] = useState(cateSlug);
+  const [active, setActive] = useState(activeTab);
   const { data: res, isFetching } = useQuery(
-    ['getNewsDataList', slugActive],
+    ['getNewsDataList', active.slug],
     () => getNewsService({
-      limit: '4', page: '1', category_slug: slugActive, except_ids: exceptIds,
+      limit: 4, page: 1, category_slug: active.slug, except_ids: exceptIds,
     }),
     {
       ...DEFAULT_QUERY_OPTION,
-      enabled: !!slugActive && !!exceptIds,
+      enabled: !!active.slug && !!exceptIds,
     },
   );
-  const convertedBaseNews = res?.data ? res?.data?.map((item) => ({
-    imgSrc: getImageURL(item.thumbnail),
-    title: item.title,
-    desc: item.description,
-    date: item.publishedAt,
-    totalViews: item.viewed,
-    href: item.slug,
-  })) : [];
+
+  const baseNews = useMemo(() => {
+    if (res?.data) {
+      return res.data.map((item) => ({
+        imgSrc: getImageURL(item.thumbnail),
+        title: item.title,
+        desc: item.description,
+        date: formatDateDDMMYYYY(item.publishedAt),
+        totalViews: item.viewed,
+        href: `/tin-tuc-chi-tiet/${item.slug}`,
+      }));
+    }
+    return [];
+  }, [res]);
 
   const convertTabsData: dataTabsType[] = useMemo(() => tabList.map((item) => ({
     titleTab: item.name,
   })), [tabList]);
 
   const handleClickTab = (id: number) => {
-    setSlugActive(tabList[id].slug);
+    setActive(tabList[id]);
   };
 
   return (
@@ -54,17 +59,18 @@ const BaseNewsContainer: React.FC<BaseNewsProps> = ({
         {tabList.length > 0 ? (
           <HomeNews
             title={title}
-            href={cateSlug}
+            href={`/tin-tuc/${active.slug}`}
             tabDataHomeNews={convertTabsData}
-            newsList={convertedBaseNews}
+            newsList={baseNews}
             handleActive={(id) => handleClickTab(id)}
+            nameButton={`Xem thêm ${active.name}`}
           />
         ) : (
           <NewsList
             title={title}
-            href={cateSlug}
-            dataNewsList={convertedBaseNews}
-            btnName={btnText}
+            href={`/tin-tuc/${active.slug}`}
+            dataNewsList={baseNews}
+            btnName={`Xem thêm ${active.name}`}
             isFetching={isFetching}
           />
         )}

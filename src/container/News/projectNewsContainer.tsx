@@ -11,7 +11,7 @@ import { formatDateDDMMYYYY, getHourFromPastToCurrent, getImageURL } from 'utils
 const TabsNewsContainer: React.FC<{ cateSlug: string }> = ({ cateSlug }) => {
   const { data: res } = useQuery(
     'getProjectNewsData',
-    () => getNewsService({ limit: '4', page: '1', category_slug: cateSlug }),
+    () => getNewsService({ limit: 4, page: 1, category_slug: cateSlug }),
     {
       ...DEFAULT_QUERY_OPTION,
     },

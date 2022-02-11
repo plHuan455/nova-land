@@ -1,7 +1,12 @@
 .p-news {
-&_cateBlock {
-  &:nth-child(even) {
-    background: $white-smoke2;
-  }
-} 
+  &_cateBlock {
+    &:nth-child(even) {
+      background: $white-smoke2;
+    }
+
+    .t-homeNews_button {
+      max-width: none;
+      width: auto;
+    }
+  } 
 }
