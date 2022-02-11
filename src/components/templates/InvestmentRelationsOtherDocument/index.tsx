@@ -3,7 +3,7 @@ import { ValueType } from 'react-select';
 
 import Button from 'components/atoms/Button';
 import Heading from 'components/atoms/Heading';
-import Icon, { IconName } from 'components/atoms/Icon';
+import Icon from 'components/atoms/Icon';
 import Image from 'components/atoms/Image';
 import Link from 'components/atoms/Link';
 import Text from 'components/atoms/Text';
@@ -16,15 +16,15 @@ import mapModifiers from 'utils/functions';
 export interface MenuItemType {
   title?: string;
   slug?: string;
-  icon: IconName;
   id?: number;
+  target?: string;
 }
 
 export interface MenuType {
   id: number;
   title: string;
   slug: string;
-  icon: IconName;
+  target?: string;
   subMenu: MenuItemType[];
 }
 
@@ -60,60 +60,48 @@ export const Menu: React.FC<MenuProps> = ({ data }) => {
           )}
           key={`menu-item-${i.toString()}`}
         >
-          {e?.subMenu?.length > 0 ? (
-            <div
-              onMouseEnter={() => onHoverSub(e.id)}
-              onMouseLeave={() => onHoverSub(-1)}
-              className={String(e.id)}
-            >
-              {e.icon ? (
+          <div
+            onMouseEnter={() => onHoverSub(e.id)}
+            onMouseLeave={() => onHoverSub(-1)}
+            key={String(e.id)}
+          >
+            <div className="t-menu_subHead" onClick={() => onClickSub(e.id)}>
+              <div className="t-menu_subHead-title">
                 <Link
-                  target="#"
-                  href="/"
+                  target={e.target}
+                  href={e.slug}
                 >
-                  <div className="t-menu_subHead">
-                    <div className="t-menu_subHead-title">
-                      <Text modifiers={['darkMidnightBlue', '600', '18x22', 'fontLexend']}>{e.title}</Text>
-                    </div>
-                    <div className="t-menu_subHead-icon">
-                      <Icon size="24" iconName={e.icon} />
-                    </div>
-                  </div>
+                  <Text type="span" modifiers={['darkMidnightBlue', '600', '18x22', 'fontLexend']}>{e.title}</Text>
                 </Link>
-              ) : (
-                <div className="t-menu_subHead" onClick={() => onClickSub(e.id)}>
-                  <Text modifiers={['darkMidnightBlue', '600', '18x22', 'fontLexend']}>{e.title}</Text>
+              </div>
+              {e?.subMenu?.length > 0 && (
+                <div className="t-menu_subHead-icon">
+                  <Icon size="24" iconName="arrowUp" />
                 </div>
               )}
-              <ul className="t-menu_subList">
-                {e.subMenu.map((s, idx) => (
-                  <li key={`menu_subList-${idx.toString()}`}>
-                    {s.slug && (
-                      <Link
-                        target="_self"
-                        href="/"
-                        activeClassName="active"
-                        customClassName={`t-menu_link ${(s.id === idSubActive) && 'active'}`}
-                      >
-                        <div className="t-menu_subHead_title">
-                          <Text modifiers={['400', '16x24', 'fontLexend', 'dimGray']}>{s.title}</Text>
-                        </div>
-                        <div className="t-menu_subHead-iconSub">
-                          <Icon size="24" iconName={s.icon} />
-                        </div>
-                      </Link>
-                    )}
-                  </li>
-                ))}
-              </ul>
             </div>
-          ) : (
-            <>
-              <div className="t-menu_subHead-last">
-                <Text modifiers={['darkMidnightBlue', '600', '18x22', 'fontLexend']}>{e.title}</Text>
-              </div>
-            </>
-          )}
+            <ul className="t-menu_subList">
+              {e?.subMenu?.length > 0 && e.subMenu.map((s, idx) => (
+                <li key={`menu_subList-${idx.toString()}`}>
+                  {s.slug && (
+                  <Link
+                    target={s.target}
+                    href={s.slug}
+                    activeClassName="active"
+                    customClassName={`t-menu_link ${(s.id === idSubActive) && 'active'}`}
+                  >
+                    <div className="t-menu_subHead_title">
+                      <Text type="span" modifiers={['400', '16x24', 'fontLexend', 'dimGray']}>{s.title}</Text>
+                    </div>
+                    <div className="t-menu_subHead-iconSub">
+                      <Icon size="24" iconName="arrowNextSlateGray" />
+                    </div>
+                  </Link>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
         </li>
       ))}
     </ul>
