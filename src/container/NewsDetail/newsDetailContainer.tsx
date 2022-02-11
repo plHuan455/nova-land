@@ -1,70 +1,59 @@
+/* eslint-disable react/require-default-props */
 import React, { useMemo } from 'react';
 import { useQuery } from 'react-query';
-import { useParams } from 'react-router-dom';
 
 import NewsDetail from 'components/templates/NewsDetail';
-import { getNewsDetailService, getNewsTagService, getRelatedNewsService } from 'services/newsDetail';
+import { getRelatedNewsService } from 'services/newsDetail';
+import { NewsDetailData, NewsTagType } from 'services/newsDetail/type';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
 import { formatDateDDMMYYYY, getHourFromPastToCurrent, getImageURL } from 'utils/functions';
 
-const NewsDetailTemplateContainer: React.FC = () => {
-  const { slug } = useParams<{ slug: string }>();
+interface NewsDetailTemplateContainerProps {
+  data?: NewsDetailData;
+  newsTagData?: NewsTagType[];
+}
 
-  const { data: newsDetailData } = useQuery(
-    ['GetNewsDetailData', slug],
-    () => getNewsDetailService(slug || ''),
-    {
-      ...DEFAULT_QUERY_OPTION,
-    },
-  );
-
+const NewsDetailTemplateContainer: React.FC<NewsDetailTemplateContainerProps> = ({
+  data,
+  newsTagData,
+}) => {
   const { data: hightLightNews } = useQuery(
-    ['GetHightLightNewsData', newsDetailData],
+    ['GetHightLightNewsData', data],
     () => getRelatedNewsService({
       limit: 5,
-      category_slug: newsDetailData?.category[0].slug,
+      category_slug: data?.category[0].slug,
       is_popular: 'true',
-      except_ids: String(newsDetailData?.id),
+      except_ids: String(data?.id),
     }),
     {
       ...DEFAULT_QUERY_OPTION,
-      enabled: !!newsDetailData,
+      enabled: !!data,
     },
   );
 
   const { data: relatedNews } = useQuery(
-    ['GetRelatedNewsData', newsDetailData],
+    ['GetRelatedNewsData', data],
     () => getRelatedNewsService({
       limit: 3,
-      category_slug: newsDetailData?.category[0].slug,
-      except_ids: String(newsDetailData?.id),
+      category_slug: data?.category[0].slug,
+      except_ids: String(data?.id),
     }),
     {
       ...DEFAULT_QUERY_OPTION,
-      enabled: !!newsDetailData,
-    },
-  );
-
-  const { data: newsTagData } = useQuery(
-    ['GetNewsTagData', slug],
-    () => getNewsTagService({
-      is_popular: true,
-    }),
-    {
-      ...DEFAULT_QUERY_OPTION,
+      enabled: !!data,
     },
   );
 
   const newsDetail = useMemo(() => ({
-    id: String(newsDetailData?.id),
-    title: newsDetailData?.title || '',
-    shortDescription: newsDetailData?.description,
-    content: newsDetailData?.content || '',
-    createDate: formatDateDDMMYYYY(newsDetailData?.publishedAt || ''),
-    numberView: String(newsDetailData?.viewed),
-    author: newsDetailData?.authorName || '',
-    newsTypes: newsDetailData?.tags.map((item) => item.name) || [],
-  }), [newsDetailData]);
+    id: String(data?.id),
+    title: data?.title || '',
+    shortDescription: data?.description,
+    content: data?.content || '',
+    createDate: formatDateDDMMYYYY(data?.publishedAt || ''),
+    numberView: data?.viewed ? String(data?.viewed) : '',
+    author: data?.authorName || '',
+    newsTypes: data?.tags.map((item) => item.name) || [],
+  }), [data]);
 
   const hightLightNewsData = useMemo(() => hightLightNews?.map((item) => ({
     id: String(item.id),

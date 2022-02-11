@@ -49,13 +49,26 @@ const NewsDetail: React.FC<NewsDetailProps> = ({
         <Heading modifiers={['52x65', '600', 'jet', 'fontNoto']} type="h1">{newsDetail.title}</Heading>
         <div className="t-newsdetail_statistical">
           <Text modifiers={['12x17', '400', 'dimGray']}>{newsDetail.createDate}</Text>
-          <div className="t-newsdetail_circle" />
-          <Text modifiers={['12x17', '400', 'dimGray']}>{newsDetail.author}</Text>
-          <div className="t-newsdetail_circle" />
-          <div className="t-newsdetail_view">
-            <Icon iconName="eyeOpen" size="14" />
-            <Text modifiers={['12x17', '400', 'dimGray']}>{newsDetail.numberView}</Text>
-          </div>
+          {
+            newsDetail.author && (
+              <>
+                <div className="t-newsdetail_circle" />
+                <Text modifiers={['12x17', '400', 'dimGray']}>{newsDetail.author}</Text>
+              </>
+            )
+          }
+          {
+            newsDetail.numberView && (
+              <>
+                <div className="t-newsdetail_circle" />
+                <div className="t-newsdetail_view">
+                  <Icon iconName="eyeOpen" size="14" />
+                  <Text modifiers={['12x17', '400', 'dimGray']}>{newsDetail.numberView}</Text>
+                </div>
+
+              </>
+            )
+          }
         </div>
         <div className="t-newsdetail_content">
           <div className="t-newsdetail_shortDesc">
