@@ -1,12 +1,12 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import React, {
+  useEffect,
   useMemo,
   useState,
-  useEffect,
 } from 'react';
 import { useForm } from 'react-hook-form';
 import { useQuery } from 'react-query';
-import { useSearchParams, useNavigate } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 
 import Animate from 'components/organisms/Animate';
 import { NewsCardProps } from 'components/organisms/NewsCard';
@@ -14,9 +14,8 @@ import SearchResult, { SearchForm } from 'components/templates/SearchResult';
 import Section from 'components/templates/Section';
 import HelmetContainer from 'container/helmet';
 import { getAllNewsService } from 'services/home';
-import { useAppSelector } from 'store/hooks';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
-import { formatDateDDMMYYYY, getImageURL, getSlugByTemplateCode } from 'utils/functions';
+import { formatDateDDMMYYYY, getImageURL } from 'utils/functions';
 import { schemaSearchForm } from 'utils/schemas';
 
 interface IntroDataBlock {
@@ -27,17 +26,21 @@ export type SearchBlock =
   | IntroDataBlock;
 
 const SearchResultsContainer: React.FC<BasePageData<SearchBlock>> = ({ pageData, banners }) => {
-  const navigate = useNavigate();
-  const { staticPage } = useAppSelector((state) => state.menus);
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchText, setSearchText] = useState(searchParams.get('keyword') || '');
   const [currentPage, setCurrentPage] = useState(1);
   const method = useForm<SearchForm>({
     resolver: yupResolver(schemaSearchForm),
     mode: 'onSubmit',
+    defaultValues: {
+      search: searchParams.get('keyword') || '',
+    },
   });
-  // eslint-disable-next-line max-len
-  const adBanner = useMemo(() => banners.map((item) => getImageURL(item.data.imageDesktop)), [banners]);
+
+  const adBanner = useMemo(() => banners.map(
+    (item) => getImageURL(item.data.imageDesktop),
+  ),
+  [banners]);
 
   const { isLoading, data: newDataList } = useQuery(
     ['getNewsData', currentPage, searchText],
@@ -53,11 +56,11 @@ const SearchResultsContainer: React.FC<BasePageData<SearchBlock>> = ({ pageData,
     let newsList: NewsCardProps[] = [];
     let totalPages = 1;
     let totalNews = 1;
-    if (newDataList && newDataList?.data.length > 0) {
+    if (newDataList) {
       newsList = newDataList.data.map((item) => ({
         imgSrc: getImageURL(item.thumbnail),
         title: item.title,
-        desc: item.title,
+        desc: item.description,
         href: `/tin-tuc-chi-tiet/${item.slug}`,
         time: formatDateDDMMYYYY(item.publishedAt),
       }));
@@ -69,19 +72,14 @@ const SearchResultsContainer: React.FC<BasePageData<SearchBlock>> = ({ pageData,
 
   const handleSubmit = (data: SearchForm) => {
     setSearchParams({ keyword: data.search });
-    setSearchText(data.search);
-    setCurrentPage(1);
-    if (data.search) {
-      navigate(`${getSlugByTemplateCode('SEARCH', staticPage)}?keyword=${data.search}`);
-    }
   };
 
   useEffect(() => {
-    if (searchParams) {
-      setSearchText(searchParams.get('keyword') || '');
-      setCurrentPage(1);
-    }
-  }, [searchParams]);
+    const keyword = searchParams.get('keyword') || '';
+    setSearchText(keyword);
+    method.setValue('search', keyword);
+    setCurrentPage(1);
+  }, [searchParams, method]);
 
   return (
     <>
@@ -102,7 +100,6 @@ const SearchResultsContainer: React.FC<BasePageData<SearchBlock>> = ({ pageData,
               handleChangePage={(page: number) => setCurrentPage(page)}
               adImgSrc={adBanner}
               isLoading={isLoading}
-              searchText={searchText}
             />
           </Section>
         </div>

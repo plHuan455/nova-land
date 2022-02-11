@@ -1,4 +1,4 @@
-import React, { ChangeEvent, KeyboardEvent, useEffect } from 'react';
+import React, { ChangeEvent, KeyboardEvent } from 'react';
 import { Controller, FormProvider, UseFormReturn } from 'react-hook-form';
 
 import Button from 'components/atoms/Button';
@@ -32,7 +32,6 @@ export interface SearchResultProps {
   isLoading?: boolean;
   handleChangeSearch?: (e: ChangeEvent<HTMLInputElement>) => void;
   onPressEnterSearch?: (e: KeyboardEvent<HTMLInputElement>) => void;
-  searchText?: string;
 }
 
 const SearchResult: React.FC<SearchResultProps> = ({
@@ -48,14 +47,9 @@ const SearchResult: React.FC<SearchResultProps> = ({
   currentPage,
   isLoading,
   handleChangePage,
-  searchText,
 }) => {
   const { isMobile } = useDeviceQueries();
-  useEffect(() => {
-    if (searchText) {
-      method.setValue('search', searchText);
-    }
-  }, [searchText]);
+
   return (
     <div className="t-searchResult">
       <Container>
@@ -89,40 +83,37 @@ const SearchResult: React.FC<SearchResultProps> = ({
             </div>
           </form>
         </FormProvider>
-        <Section>
-          <div className="t-searchResult_wrapper">
-            <div className="t-searchResult_content">
-              {isLoading ? (
-                <div className="t-searchResult_loading">
-                  <Loading isShow />
+        {isLoading ? (
+          <div className="t-searchResult_loading">
+            <Loading isShow />
+          </div>
+        ) : (
+          <Section>
+            <div className="t-searchResult_wrapper">
+              <div className="t-searchResult_content">
+                <div className="t-searchResult_amount">
+                  <Heading modifiers={['600', '24x30', 'fontLexend', 'jet']}>
+                    Có
+                    {' '}
+                    {searchAmount}
+                    {' '}
+                    kết quả được tìm thấy
+                  </Heading>
                 </div>
-              ) : (
-                <>
-                  <div className="t-searchResult_amount">
-                    <Heading modifiers={['600', '24x30', 'fontLexend', 'jet']}>
-                      Có
-                      {' '}
-                      {searchAmount}
-                      {' '}
-                      kết quả được tìm thấy
-                    </Heading>
-                  </div>
-                  <div className="t-searchResult_list">
-                    {newsList && newsList.map((item, idx) => (
-                      <div className="t-searchResult_list-item" key={`key-${idx.toString()}`}>
-                        {idx !== 0 && <Divider />}
-                        <NewsCard
-                          {...item}
-                          variant="smallVertical"
-                          modifiers="smallTitle"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                </>
-              )}
-            </div>
-            {!isMobile
+                <div className="t-searchResult_list">
+                  {newsList && newsList.map((item, idx) => (
+                    <div className="t-searchResult_list-item" key={`key-${idx.toString()}`}>
+                      {idx !== 0 && <Divider />}
+                      <NewsCard
+                        {...item}
+                        variant="smallVertical"
+                        modifiers="smallTitle"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+              {!isMobile
               && (
                 <div className="t-searchResult_ad">
                   {adImgSrc && adImgSrc.map((item, index) => (
@@ -136,8 +127,8 @@ const SearchResult: React.FC<SearchResultProps> = ({
                   ))}
                 </div>
               )}
-          </div>
-          {totalPage > 0 && (
+            </div>
+            {totalPage > 0 && (
             <div className="t-searchResult_pagination u-mt-md-40 u-mt-28">
               <Pagination
                 totalPage={totalPage}
@@ -145,8 +136,9 @@ const SearchResult: React.FC<SearchResultProps> = ({
                 handleChangePage={(page: number) => handleChangePage && handleChangePage(page)}
               />
             </div>
-          )}
-        </Section>
+            )}
+          </Section>
+        )}
       </Container>
     </div>
   );
