@@ -1,15 +1,16 @@
+
 .t-schedule {
   &_content {
     display: flex;
     flex-wrap: wrap;
-    margin: rem(30) rem(-15);
+    margin: rem(30) rem(-15) 0 rem(-15);
 
     @include tablet-down {
-      margin: rem(20) rem(-8);
+      margin: rem(20) rem(-8) 0  rem(-8);
     }
 
     @include mobile-down {
-      margin: rem(20) 0;
+      margin-top: rem(20);
     }
   }
 
