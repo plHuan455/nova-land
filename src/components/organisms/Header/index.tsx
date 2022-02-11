@@ -71,8 +71,9 @@ const Header: React.FC<HeaderProps> = ({
 
   // Submit search
   const handleSubmit = (text?: string) => {
-    navigate(`${getSlugByTemplateCode('SEARCH', staticPage)}?keyword=${text}`);
-
+    if (text) {
+      navigate(`${getSlugByTemplateCode('SEARCH', staticPage)}?keyword=${text}`);
+    }
     setIsOpenSearch(false);
     if (inputRef.current) {
       inputRef.current.value = '';

@@ -9,6 +9,7 @@ import { useQuery } from 'react-query';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 
 import Animate from 'components/organisms/Animate';
+import { NewsCardProps } from 'components/organisms/NewsCard';
 import SearchResult, { SearchForm } from 'components/templates/SearchResult';
 import Section from 'components/templates/Section';
 import HelmetContainer from 'container/helmet';
@@ -33,7 +34,7 @@ const SearchResultsContainer: React.FC<BasePageData<SearchBlock>> = ({ pageData,
   const [currentPage, setCurrentPage] = useState(1);
   const method = useForm<SearchForm>({
     resolver: yupResolver(schemaSearchForm),
-    mode: 'onChange',
+    mode: 'onSubmit',
   });
   // eslint-disable-next-line max-len
   const adBanner = useMemo(() => banners.map((item) => getImageURL(item.data.imageDesktop)), [banners]);
@@ -49,30 +50,21 @@ const SearchResultsContainer: React.FC<BasePageData<SearchBlock>> = ({ pageData,
   );
 
   const newsData = useMemo(() => {
+    let newsList: NewsCardProps[] = [];
+    let totalPages = 1;
+    let totalNews = 1;
     if (newDataList && newDataList?.data.length > 0) {
-      return newDataList.data.map((item) => ({
+      newsList = newDataList.data.map((item) => ({
         imgSrc: getImageURL(item.thumbnail),
         title: item.title,
         desc: item.title,
         href: `/tin-tuc-chi-tiet/${item.slug}`,
         time: formatDateDDMMYYYY(item.publishedAt),
       }));
+      totalPages = newDataList.meta.totalPages;
+      totalNews = newDataList.meta.total;
     }
-    return [];
-  }, [newDataList]);
-
-  const totalPages = useMemo(() => {
-    if (newDataList?.meta) {
-      return newDataList.meta.totalPages;
-    }
-    return 1;
-  }, [newDataList]);
-
-  const totalNews = useMemo(() => {
-    if (newDataList?.meta) {
-      return newDataList.meta.total;
-    }
-    return 1;
+    return { newsList, totalPages, totalNews };
   }, [newDataList]);
 
   const handleSubmit = (data: SearchForm) => {
@@ -81,8 +73,6 @@ const SearchResultsContainer: React.FC<BasePageData<SearchBlock>> = ({ pageData,
     setCurrentPage(1);
     if (data.search) {
       navigate(`${getSlugByTemplateCode('SEARCH', staticPage)}?keyword=${data.search}`);
-    } else {
-      navigate(`${getSlugByTemplateCode('SEARCH', staticPage)}`);
     }
   };
 
@@ -102,12 +92,12 @@ const SearchResultsContainer: React.FC<BasePageData<SearchBlock>> = ({ pageData,
             <SearchResult
               method={method}
               submitForm={handleSubmit}
-              searchAmount={totalNews}
-              newsList={newsData}
+              searchAmount={newsData.totalNews}
+              newsList={newsData.newsList}
               title={pageData.title}
               placeholderText="Nhập từ khóa tìm kiếm"
               btnText="Tìm kiếm"
-              totalPage={totalPages}
+              totalPage={newsData.totalPages}
               currentPage={currentPage}
               handleChangePage={(page: number) => setCurrentPage(page)}
               adImgSrc={adBanner}
