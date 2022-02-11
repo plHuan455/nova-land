@@ -10,10 +10,10 @@ import mapModifiers, { checkExternalUrl } from 'utils/functions';
 
 export interface LatestNewsCardProps {
   imgSrc: string;
-  ratio: Ratio;
+  ratio?: Ratio;
   alt?: string;
   title: string;
-  time: string;
+  time?: string;
   href: string;
   heading?: string;
   fileName?: string;
@@ -52,7 +52,7 @@ export const LatestNewsCard: React.FC<LatestNewsCardProps> = ({
         <div className="t-latestNewsCard_image">
           <Image
             src={imgSrc}
-            ratio={ratio}
+            ratio={ratio || '582x252'}
             alt={alt}
           />
         </div>
