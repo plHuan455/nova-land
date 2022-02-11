@@ -32,3 +32,15 @@ export type OtherDocumentsDataTypes = {
   publishedAt: string,
   showHome: boolean,
 }
+
+export type DocumentTypes = {
+  id: number;
+  name: string;
+  locale: string;
+}
+
+export type DocumentsParamsType = {
+  keyword?: string;
+  page?: number;
+  limit?: number;
+}

@@ -5,7 +5,9 @@ import { Tab, Tabs } from 'components/organisms/Tabs';
 import TableCategory, { TableCategoryProps } from 'components/templates/TableCategory';
 
 export interface TitleTabType {
-  titleTab: string;
+  id: number;
+  name: string;
+  locale: string;
 }
 
 export interface CorporateGovernanceProps {
@@ -26,7 +28,7 @@ const CorporateGovernance: React.FC<CorporateGovernanceProps> = ({
             <Tab
               size="20x28"
               key={`tab-${index.toString()}`}
-              label={item.titleTab}
+              label={item.name}
               active={index === tabActive}
               handleClick={() => handleChangeTab && handleChangeTab(index)}
             />
