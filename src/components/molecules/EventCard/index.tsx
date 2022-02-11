@@ -28,7 +28,9 @@ const EventCard: React.FC<EventCardProps> = ({
     </div>
     <div className="m-eventCard_content">
       <div className="m-eventCard_content-title">
-        <Text modifiers={['600', '20x28', 'jet']} content={title} />
+        <Link href={href} target={target}>
+          <Text modifiers={['600', '20x28', 'jet']} content={title} />
+        </Link>
       </div>
       <div className="m-eventCard_content-desc">
         <Text modifiers={['400', '14x20', 'dimGray']}>{description}</Text>

@@ -57,3 +57,11 @@
     padding-bottom: rem(24);
   }
 }
+
+.pt-header {
+  padding-top: rem($height-desktop-header);
+
+  @include mobile-down {
+    padding-top: rem($height-mobile-header);
+  }
+}

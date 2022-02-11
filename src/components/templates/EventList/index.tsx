@@ -6,11 +6,14 @@ import Container from 'components/organisms/Container';
 
 interface EventListProps {
   eventList: EventCardProps[];
+  currentPage?: number;
   totalPage: number;
   handleGetPage: (p: number) => void;
 }
 
-const EventList: React.FC<EventListProps> = ({ eventList, totalPage, handleGetPage }) => (
+const EventList: React.FC<EventListProps> = ({
+  eventList, currentPage, totalPage, handleGetPage,
+}) => (
   <div className="t-eventList">
     <Container>
       <div className="t-eventList_list">
@@ -23,10 +26,18 @@ const EventList: React.FC<EventListProps> = ({ eventList, totalPage, handleGetPa
         ))}
       </div>
       <div className="t-eventList_paginate">
-        <Pagination totalPage={totalPage} handleChangePage={handleGetPage} />
+        <Pagination
+          pageCurrent={currentPage}
+          totalPage={totalPage}
+          handleChangePage={handleGetPage}
+        />
       </div>
     </Container>
   </div>
 );
+
+EventList.defaultProps = {
+  currentPage: 1,
+};
 
 export default EventList;

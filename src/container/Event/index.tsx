@@ -15,6 +15,7 @@ const EventContainer: React.FC = () => (
     <EventList
       eventList={eventPage.eventData}
       totalPage={10}
+      currentPage={1}
       // eslint-disable-next-line no-console
       handleGetPage={(p) => console.log(p)}
     />

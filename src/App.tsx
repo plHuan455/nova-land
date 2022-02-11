@@ -88,7 +88,7 @@ const routes = [
     element: <Error />,
   },
   {
-    path: '/lich-su-kien',
+    path: 'lich-su-kien',
     element: <Event />,
   },
   {
