@@ -4,7 +4,7 @@ import InvestmentRelations from './InvestmentRelationsOtherDocument';
 
 import Breadcrumb from 'components/molecules/Breadcrumb';
 import Section from 'components/templates/Section';
-import BannerInvestmentRelations from 'container/CorporateGovernance/bannerRecruitmentContainer';
+import BannerInvestmentRelations from 'container/InvestmentRelationsOtherDocument/bannerInvestmentRelationsOtherDocument';
 import HelmetContainer from 'container/helmet';
 
 const InvestmentRelationsOtherDocumentContainer: React.FC = () => (

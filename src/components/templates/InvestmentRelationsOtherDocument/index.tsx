@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { ValueType } from 'react-select';
 
 import Button from 'components/atoms/Button';
 import Heading from 'components/atoms/Heading';
@@ -131,14 +132,28 @@ interface RegulationsProps {
   title: string,
   textSort: string,
   dataRegulations: RegulationsType[],
-  dummyOption:OptionType[];
+  handleRegulation?: (item: RegulationsType) => void;
+  // Sort
+  selectedSort?: OptionType | null;
+  sortOptions: OptionType[];
+  handleSort?: (value: ValueType<OptionType, false>) => void;
+  // Pagination
+  currPage?: number;
+  totalPage: number;
+  handleChangePage: (page: number) => void;
 }
 
 const Regulations: React.FC<RegulationsProps> = ({
   title,
   textSort,
   dataRegulations,
-  dummyOption,
+  handleRegulation,
+  selectedSort,
+  sortOptions,
+  handleSort,
+  currPage,
+  totalPage,
+  handleChangePage,
 }) => (
   <div className="t-regulations">
     <div className="t-regulations_title">
@@ -153,14 +168,17 @@ const Regulations: React.FC<RegulationsProps> = ({
           <div className="t-regulations_sort_pulldown">
             <Pulldown
               placeholder="Chọn"
-              options={dummyOption}
+              value={selectedSort}
+              options={sortOptions}
+              handleChange={handleSort}
             />
           </div>
         </div>
         <div className="t-regulations_pagination">
           <Pagination
-            totalPage={2}
-            handleChangePage={(page: number) => console.log(page)}
+            pageCurrent={currPage}
+            totalPage={totalPage}
+            handleChangePage={handleChangePage}
           />
         </div>
       </div>
@@ -182,7 +200,15 @@ const Regulations: React.FC<RegulationsProps> = ({
                 </div>
               </div>
               <div className="t-regulations_wrapButton">
-                <Button modifiers="iconRight" iconName="down">{item.titleBtn}</Button>
+                <Button
+                  modifiers="iconRight"
+                  iconName="down"
+                  onClick={() => handleRegulation
+                  && handleRegulation(item)}
+                >
+                  {item.titleBtn}
+
+                </Button>
               </div>
             </div>
           ))
@@ -190,8 +216,9 @@ const Regulations: React.FC<RegulationsProps> = ({
       </div>
       <div className="t-regulations_paginationButton">
         <Pagination
-          totalPage={2}
-          handleChangePage={(page: number) => console.log(page)}
+          pageCurrent={currPage}
+          totalPage={totalPage}
+          handleChangePage={handleChangePage}
         />
       </div>
     </div>
@@ -199,16 +226,20 @@ const Regulations: React.FC<RegulationsProps> = ({
 );
 
 /** ******* InvestmentRelationsOtherDocument ********** */
-interface InvestmentRelationsOtherDocumentProps {
+interface InvestmentRelationsOtherDocumentProps extends Omit<RegulationsProps, 'title' | 'textSort'> {
   dataMenu: MenuType[];
-  dataRegulations: RegulationsType[],
-  dummyOption: OptionType[],
 }
 
 const InvestmentRelationsOtherDocument: React.FC<InvestmentRelationsOtherDocumentProps> = ({
   dataMenu,
   dataRegulations,
-  dummyOption,
+  handleRegulation,
+  selectedSort,
+  sortOptions,
+  handleSort,
+  currPage,
+  totalPage,
+  handleChangePage,
 }) => (
   <div className="t-investmentRelationsOtherDocument">
     <Container>
@@ -221,13 +252,26 @@ const InvestmentRelationsOtherDocument: React.FC<InvestmentRelationsOtherDocumen
             title="Điều lệ"
             textSort="Sắp xếp:"
             dataRegulations={dataRegulations}
-            dummyOption={dummyOption}
+            handleRegulation={handleRegulation}
+            selectedSort={selectedSort}
+            sortOptions={sortOptions}
+            handleSort={handleSort}
+            currPage={currPage}
+            totalPage={totalPage}
+            handleChangePage={handleChangePage}
           />
         </div>
       </div>
     </Container>
   </div>
 );
+
+Regulations.defaultProps = {
+  currPage: 1,
+  selectedSort: undefined,
+  handleSort: undefined,
+  handleRegulation: undefined,
+};
 
 InvestmentRelationsOtherDocument.defaultProps = {
 };

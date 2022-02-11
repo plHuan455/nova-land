@@ -84,7 +84,10 @@ export const normal: Story = () => (
     <InvestmentRelationsOtherDocument
       dataMenu={menuData}
       dataRegulations={RegulationsList}
-      dummyOption={dummyOption}
+      sortOptions={dummyOption}
+      totalPage={1}
+      handleChangePage={() => {}}
+      handleSort={() => {}}
     />
   </BrowserRouter>
 );

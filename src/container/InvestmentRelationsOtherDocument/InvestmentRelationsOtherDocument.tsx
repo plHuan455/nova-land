@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import RegulationsList from 'assets/dataDummy/InvestmentRelationsOtherDocument';
 import { IconName } from 'components/atoms/Icon';
@@ -70,14 +70,29 @@ const dummyOption: OptionType[] = [
   { value: '2', label: 'Mới nhất' },
 
 ];
-const InvestmentRelations: React.FC = () => (
-  <div className="p-corporateGovernance_InvestmentRelationsOtherDocument">
-    <InvestmentRelationsOtherDocument
-      dataMenu={menuData}
-      dataRegulations={RegulationsList}
-      dummyOption={dummyOption}
-    />
-  </div>
-);
+const InvestmentRelations: React.FC = () => {
+  const [selectedSort, setSelectedSort] = useState<OptionType | null>(null);
+  const [page, setPage] = useState(1);
+
+  const handleChangePage = (newPage: number) => {
+    setPage(newPage);
+  };
+
+  return (
+    <div className="p-corporateGovernance_InvestmentRelationsOtherDocument">
+      <InvestmentRelationsOtherDocument
+        dataMenu={menuData}
+        dataRegulations={RegulationsList}
+        handleRegulation={(item) => console.log(item)}
+        selectedSort={selectedSort}
+        sortOptions={dummyOption}
+        handleSort={(value) => setSelectedSort(value)}
+        currPage={page}
+        totalPage={5}
+        handleChangePage={handleChangePage}
+      />
+    </div>
+  );
+};
 
 export default InvestmentRelations;

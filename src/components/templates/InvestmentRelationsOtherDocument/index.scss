@@ -26,7 +26,6 @@
 
   &_link {
     border-bottom: 1px solid $columbia-blue;
-    display: block;
     display: flex;
     padding: rem(16) 0 rem(16) rem(12);
     @include adjust-flex($justify-content: space-between);
@@ -95,22 +94,39 @@
     &_pulldown {
       border-bottom: 1px solid $dark-midnight-blue;
       margin-left: rem(8);
-      max-width: rem(96);
-      width: 100%;
+      min-width: rem(96);
+
       @include mobile-down {
         margin-left: 0;
-        max-width: 100%;
+        width: 100%;
       }
 
       .m-pulldown {
-        border: 0;
-        padding-left: rem(1);
-        padding-right: 0;
+        &-default__control {
+          border: 0;
+          box-shadow: none;
+          height: rem(30);
+          min-height: none;
+          outline: none;
+          padding: 0;
+        }
 
-        &-default {
-          &__placeholder {
-            color: $dark-midnight-blue;
-          }
+        &-default__placeholder,
+        &-default__single-value {        
+          color: $dark-midnight-blue;
+          max-width: none;
+          position: relative;
+          transform: none;
+          @include font-base(14, 20);
+        }
+
+        &-default__menu {
+          width: 100%;
+        }
+
+        &-default__indicator img {
+          height: rem(16);
+          width: rem(16);
         }
       }
     }
@@ -159,6 +175,10 @@
 
   &_desc {
     margin-left: rem(11);
+
+    &_date {
+      margin-top: rem(8);
+    }
   }
 
   &_pagination {
