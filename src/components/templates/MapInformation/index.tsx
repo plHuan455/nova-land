@@ -5,7 +5,6 @@ import Button from 'components/atoms/Button';
 import Heading from 'components/atoms/Heading';
 import Icon, { IconName } from 'components/atoms/Icon';
 import Link from 'components/atoms/Link';
-import Loading from 'components/atoms/Loading';
 import Text from 'components/atoms/Text';
 import mapModifiers from 'utils/functions';
 
@@ -116,7 +115,6 @@ export interface MapInformationProps {
   mapMarker: TypeMapMarker;
   mapAPIkey: string;
   handleLocationSearch?: () => void;
-  loading?: boolean;
 }
 
 export interface MapContactProps {
@@ -135,57 +133,57 @@ const MapInformation: React.FC<MapInformationProps> = ({
   mapMarker,
   mapAPIkey,
   handleLocationSearch,
-  loading,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClose = (e: boolean) => {
     setIsOpen(e);
   };
+
   return (
-    <>
-      {loading ? <Loading isShow /> : (
-        <div className="t-mapInformation">
-          <div className={mapModifiers('t-mapInformation_card', isOpen && 'isOpen')}>
-            <MapInformationCard
-              {...mapMarker.dataMarker}
-              handleClose={handleClose}
-              handleLocationSearch={handleLocationSearch}
-            />
-          </div>
-          <div className="t-mapInformation_wrapper">
-            {
-            mapMarker && (
-              <GoogleMapReact
-                bootstrapURLKeys={{
-                  key: `${mapAPIkey}&libraries=places,geometry`,
-                }}
-                defaultCenter={{
-                  lat: mapMarker.lat,
-                  lng: mapMarker.lng,
-                }}
-                defaultZoom={13}
-                options={{
-                  zoomControl: true,
-                  mapTypeControl: false,
-                  fullscreenControl: true,
-                  panControl: true,
-                }}
-              >
-                <MapContact
-                  lat={mapMarker.lat}
-                  lng={mapMarker.lng}
-                  handleClick={() => {
-                    setIsOpen(!isOpen);
-                  }}
-                />
-              </GoogleMapReact>
-            )
-          }
-          </div>
-        </div>
-      )}
-    </>
+    <div className="t-mapInformation">
+      <div className={mapModifiers('t-mapInformation_card', isOpen && 'isOpen')}>
+        <MapInformationCard
+          {...mapMarker.dataMarker}
+          handleClose={handleClose}
+          handleLocationSearch={handleLocationSearch}
+        />
+      </div>
+      <div className="t-mapInformation_wrapper">
+        {
+      mapMarker && (
+        <GoogleMapReact
+          bootstrapURLKeys={{
+            key: `${mapAPIkey}&libraries=places,geometry`,
+          }}
+          defaultCenter={{
+            lat: mapMarker.lat,
+            lng: mapMarker.lng,
+          }}
+          defaultZoom={13}
+          options={{
+            zoomControl: true,
+            mapTypeControl: false,
+            fullscreenControl: true,
+            panControl: true,
+          }}
+          center={{
+            lat: mapMarker.lat,
+            lng: mapMarker.lng,
+          }}
+        >
+          <MapContact
+            lat={mapMarker.lat}
+            lng={mapMarker.lng}
+            handleClick={() => {
+              setIsOpen(!isOpen);
+            }}
+          />
+        </GoogleMapReact>
+      )
+    }
+      </div>
+    </div>
   );
 };
 

@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
+import { useQuery } from 'react-query';
 
 import { IconName } from 'components/atoms/Icon';
 import MapInformation, { TypeMapMarker } from 'components/templates/MapInformation';
-import getNearestExchangesService from 'services/exchanges';
+import getNearestExchangesService, { getExchangesService } from 'services/exchanges';
 import { NearestExchangesTypes } from 'services/exchanges/types';
 import { useAppSelector } from 'store/hooks';
+import { DEFAULT_QUERY_OPTION } from 'utils/constants';
 
 interface MapInformationContainerProps {
   dataMarker: TypeMapMarker;
@@ -13,12 +15,11 @@ interface MapInformationContainerProps {
 const MapInformationContainer: React.FC<MapInformationContainerProps> = ({ dataMarker }) => {
   const [dataLocation, setDataLocation] = useState<TypeMapMarker>(dataMarker);
   const systemData = useAppSelector((state) => state.system.dataSystem);
-  const [loading, setLoading] = useState(false);
+  const [isBack, setIsBack] = useState(false);
 
   const handleLocationSearch = () => {
     try {
-      if (navigator.geolocation && dataLocation === dataMarker) {
-        setLoading(true);
+      if (navigator.geolocation && isBack === false) {
         navigator.geolocation.getCurrentPosition(
           async (position: GeolocationPosition) => {
             const pos = {
@@ -29,37 +30,27 @@ const MapInformationContainer: React.FC<MapInformationContainerProps> = ({ dataM
               longtitude: pos.lng,
               latitude: pos.lat,
             });
-            const dtLocation = ConvertLocationData(data);
+            const dtLocation = convertLocationData(data);
             setDataLocation(dtLocation);
+            setIsBack(true);
           },
         );
       }
-      if (dataLocation !== dataMarker) {
-        setLoading(true);
-        setDataLocation(dataMarker);
+      if (isBack) {
+        setDataLocation(dataMarkerDefault[0]);
+        setIsBack(false);
       }
     } finally {
-      setLoading(false);
+      //
     }
   };
 
-  const ConvertLocationData = (dataConvert: NearestExchangesTypes) => ({
+  const convertLocationData = (dataConvert: NearestExchangesTypes) => ({
     lat: Number(dataConvert.latitude),
     lng: Number(dataConvert.longtitude),
     dataMarker: {
-      title: dataLocation.dataMarker.title,
+      title: '',
       dataCard: [
-        {
-          branchName: dataLocation.dataMarker.dataCard[0].branchName,
-          informationDetail: {
-            iconLocation: 'location' as IconName,
-            location: dataLocation.dataMarker.dataCard[0].informationDetail.location,
-            iconEmail: 'email' as IconName,
-            email: dataLocation.dataMarker.dataCard[0].informationDetail.email,
-            iconPhone: 'phoneContact' as IconName,
-            phone: dataLocation.dataMarker.dataCard[0].informationDetail.phone,
-          },
-        },
         {
           branchName: dataConvert.name,
           informationDetail: {
@@ -70,9 +61,61 @@ const MapInformationContainer: React.FC<MapInformationContainerProps> = ({ dataM
           },
         },
       ],
-      nameBtn: 'Tìm gallery gần nhất',
+      nameBtn: isBack ? 'Tìm gallery gần nhất' : 'Trở lại vị trí đầu',
     },
   });
+
+  const { data } = useQuery(
+    ['getExchangesHighlight'], () => getExchangesService({
+      is_pinned: 'true',
+    }), {
+      ...DEFAULT_QUERY_OPTION,
+    },
+  );
+
+  const dataMarkerDefault = useMemo(() => {
+    if (data && data.data.length > 0) {
+      return data.data.map((item) => ({
+        lat: item.latitude,
+        lng: item.longtitude,
+        dataMarker: {
+          title: dataLocation.dataMarker.title,
+          dataCard: [
+            {
+              branchName: dataLocation.dataMarker.dataCard[0].branchName,
+              informationDetail: {
+                iconLocation: 'location' as IconName,
+                location: dataLocation.dataMarker.dataCard[0].informationDetail.location,
+                iconEmail: 'email' as IconName,
+                email: dataLocation.dataMarker.dataCard[0].informationDetail.email,
+                iconPhone: 'phoneContact' as IconName,
+                phone: dataLocation.dataMarker.dataCard[0].informationDetail.phone,
+              },
+            },
+            {
+              branchName: item.name,
+              informationDetail: {
+                iconLocation: 'location' as IconName,
+                location: item.address,
+                iconPhone: 'phone' as IconName,
+                phone: item.phone,
+              },
+            },
+          ],
+          nameBtn: 'Tìm gallery gần nhất',
+        },
+      }));
+    }
+    return [];
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [data]);
+
+  useEffect(() => {
+    if (dataMarkerDefault.length > 0) {
+      setDataLocation(dataMarkerDefault[0]);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [data]);
 
   return (
     <div className="p-contact_mapInformation">
@@ -80,7 +123,6 @@ const MapInformationContainer: React.FC<MapInformationContainerProps> = ({ dataM
         mapAPIkey={systemData?.gtmId || 'AIzaSyAt4eV8aoSdhKXHQSQvJc7aSEGlcnUVbdo'}
         mapMarker={dataLocation}
         handleLocationSearch={handleLocationSearch}
-        loading={loading}
       />
     </div>
   );

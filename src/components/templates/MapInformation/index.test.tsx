@@ -9,7 +9,17 @@ describe('<MapInformation />', () => {
     const div = document.createElement('div');
     ReactDOM.render(
       <Router>
-        <MapInformation mapAPIkey="" mapMarker={[]} />
+        <MapInformation
+          mapAPIkey=""
+          mapMarker={{
+            lat: 0,
+            lng: 0,
+            dataMarker: {
+              title: '',
+              dataCard: [],
+            },
+          }}
+        />
       </Router>, div,
     );
     ReactDOM.unmountComponentAtNode(div);
