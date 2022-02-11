@@ -93,6 +93,8 @@
 @import 'components/templates/MapInformation';
 @import 'components/templates/GallerySlide';
 @import 'components/templates/TransactionList';
+@import 'components/templates/TableCategory';
+@import 'components/templates/CorporateGovernance';
 
 // Pages
 @import 'pages/Home/';
@@ -108,3 +110,4 @@
 @import 'pages/RecruitmentDetail/';
 @import 'pages/Contact';
 @import 'pages/EventDetail/';
+@import 'pages/CorporateGovernance';

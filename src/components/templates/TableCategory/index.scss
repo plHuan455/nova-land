@@ -1,0 +1,80 @@
+.t-tableCategory {
+  &_table {
+    overflow-x: auto;
+    position: relative;
+    @include scroll-bars(8, $spanish-gray);
+
+    th, td{
+      border: rem(0.5) solid $columbia-blue;
+    }
+
+    table {
+      border: rem(1) solid $dark-midnight-blue;
+      border-spacing: 0;
+    }
+  }
+
+  &_wrap {
+    width: 100%;
+  }
+
+  &_header {
+    background: $dark-midnight-blue;
+
+    &_cell {
+      padding: rem(19) rem(74);
+      white-space: nowrap;
+
+      &:first-child {
+        padding: rem(19) rem(90) rem(19) rem(30);
+      }
+    }
+  }
+
+  &_body {
+    &_row {
+      &:hover {
+        background: $ghost-white;
+      }
+    }
+
+    &_cell {
+      padding: rem(13) rem(25) rem(9);
+
+      &:first-child {
+        padding: rem(17) rem(29);
+
+        @include tablet-down {
+          padding: rem(12);
+        }
+      }
+    }
+  }
+
+  &_foot {
+    background: $ghost-white;
+
+    .o-pagination {
+      justify-content: flex-end;
+
+      .active-page {
+        background: $anti-flash-white-4f9;
+      }
+    }
+  }
+
+  &_dataFileItem {
+    @include adjust-flex();
+
+    &_icon {
+      height: rem(35);
+      width: rem(35);
+      @include adjust-flex();
+    }
+
+    &_fileName {
+      margin-left: rem(12);
+      margin-right: rem(10);
+    }
+  }
+}

@@ -121,6 +121,10 @@
   &-justify {
     text-align: justify;
   }
+
+  &-left {
+    text-align: left;
+  }
 }
 
 @mixin reset-button {

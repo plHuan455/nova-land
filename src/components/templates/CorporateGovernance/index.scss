@@ -1,0 +1,14 @@
+.t-corporateGovernance {
+  &_divider {
+    background: $columbia-blue;
+    height: 1px;
+    width: 100%;
+    margin-bottom: rem(25);
+  }
+
+  &_item {
+    &:not(:first-child) {
+      margin-top: rem(41);
+    }
+  }
+}

@@ -17,6 +17,7 @@ import {
 import Loading from 'components/atoms/Loading';
 import useInitializeRender from 'hooks/useInitializeRender';
 import Contact from 'pages/Contact';
+import CorporateGovernance from 'pages/CorporateGovernance';
 import Error from 'pages/Error';
 import EventDetail from 'pages/EventDetail';
 import News from 'pages/News';
@@ -76,6 +77,10 @@ const routes = [
   {
     path: 'lien-he',
     element: <Contact />,
+  },
+  {
+    path: 'quan-tri-danh-nghiep',
+    element: <CorporateGovernance />,
   },
   {
     path: '404',
