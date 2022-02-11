@@ -1,4 +1,4 @@
-import React, { ChangeEvent, KeyboardEvent } from 'react';
+import React, { ChangeEvent, KeyboardEvent, useEffect } from 'react';
 import { Controller, FormProvider, UseFormReturn } from 'react-hook-form';
 
 import Button from 'components/atoms/Button';
@@ -28,10 +28,11 @@ export interface SearchResultProps {
   handleChangePage?: (page: number) => void;
   adImgSrc?: Array<string>;
   btnText: string;
-  placeholderText:string;
+  placeholderText: string;
   isLoading?: boolean;
   handleChangeSearch?: (e: ChangeEvent<HTMLInputElement>) => void;
   onPressEnterSearch?: (e: KeyboardEvent<HTMLInputElement>) => void;
+  searchText?: string;
 }
 
 const SearchResult: React.FC<SearchResultProps> = ({
@@ -47,8 +48,14 @@ const SearchResult: React.FC<SearchResultProps> = ({
   currentPage,
   isLoading,
   handleChangePage,
+  searchText,
 }) => {
   const { isMobile } = useDeviceQueries();
+  useEffect(() => {
+    if (searchText) {
+      method.setValue('search', searchText);
+    }
+  }, [searchText]);
   return (
     <div className="t-searchResult">
       <Container>
@@ -82,15 +89,15 @@ const SearchResult: React.FC<SearchResultProps> = ({
             </div>
           </form>
         </FormProvider>
-        {isLoading
-          ? (
-            <div className="t-searchResult_loading">
-              <Loading isShow />
-            </div>
-          ) : (
-            <Section>
-              <div className="t-searchResult_wrapper">
-                <div className="t-searchResult_content">
+        <Section>
+          <div className="t-searchResult_wrapper">
+            <div className="t-searchResult_content">
+              {isLoading ? (
+                <div className="t-searchResult_loading">
+                  <Loading isShow />
+                </div>
+              ) : (
+                <>
                   <div className="t-searchResult_amount">
                     <Heading modifiers={['600', '24x30', 'fontLexend', 'jet']}>
                       Có
@@ -103,8 +110,7 @@ const SearchResult: React.FC<SearchResultProps> = ({
                   <div className="t-searchResult_list">
                     {newsList && newsList.map((item, idx) => (
                       <div className="t-searchResult_list-item" key={`key-${idx.toString()}`}>
-                        {idx !== 0
-                && <Divider />}
+                        {idx !== 0 && <Divider />}
                         <NewsCard
                           {...item}
                           variant="smallVertical"
@@ -113,33 +119,34 @@ const SearchResult: React.FC<SearchResultProps> = ({
                       </div>
                     ))}
                   </div>
-                </div>
-                {!isMobile
+                </>
+              )}
+            </div>
+            {!isMobile
               && (
-              <div className="t-searchResult_ad">
-                {adImgSrc && adImgSrc.map((item, index) => (
-                  <div className="t-searchResult_adItem" key={`key-${index.toString()}`}>
-                    <Image
-                      src={item || ''}
-                      ratio="348x720"
-                      alt="image-ad"
-                    />
-                  </div>
-                ))}
-              </div>
+                <div className="t-searchResult_ad">
+                  {adImgSrc && adImgSrc.map((item, index) => (
+                    <div className="t-searchResult_adItem" key={`key-${index.toString()}`}>
+                      <Image
+                        src={item || ''}
+                        ratio="348x720"
+                        alt="image-ad"
+                      />
+                    </div>
+                  ))}
+                </div>
               )}
-              </div>
-              {totalPage > 0 && (
-              <div className="t-searchResult_pagination u-mt-md-40 u-mt-28">
-                <Pagination
-                  totalPage={totalPage}
-                  pageCurrent={currentPage}
-                  handleChangePage={(page: number) => handleChangePage && handleChangePage(page)}
-                />
-              </div>
-              )}
-            </Section>
+          </div>
+          {totalPage > 0 && (
+            <div className="t-searchResult_pagination u-mt-md-40 u-mt-28">
+              <Pagination
+                totalPage={totalPage}
+                pageCurrent={currentPage}
+                handleChangePage={(page: number) => handleChangePage && handleChangePage(page)}
+              />
+            </div>
           )}
+        </Section>
       </Container>
     </div>
   );

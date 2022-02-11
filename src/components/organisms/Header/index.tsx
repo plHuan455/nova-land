@@ -1,6 +1,7 @@
 import React, {
   useState, KeyboardEvent, useRef,
 } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import Container from '../Container';
 
@@ -14,7 +15,8 @@ import Animate from 'components/organisms/Animate';
 import useClickOutside from 'hooks/useClickOutside';
 import useWindowScroll from 'hooks/useWindowScroll';
 import { MenuItemDataTypes } from 'services/menus/types';
-import mapModifiers, { checkExternalUrl } from 'utils/functions';
+import { useAppSelector } from 'store/hooks';
+import mapModifiers, { checkExternalUrl, getSlugByTemplateCode } from 'utils/functions';
 
 export type HeaderMenuTypes = {
   href: string;
@@ -34,12 +36,14 @@ const Header: React.FC<HeaderProps> = ({
   handleLanguage,
   isPageRecruitment,
 }) => {
+  const navigate = useNavigate();
   // STATE
   const [isOpenSearch, setIsOpenSearch] = useState(false);
   const [isScroll, setIsScroll] = useState(false);
   const [isOpenLanguage, setIsOpenLanguage] = useState(false);
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const [languageSelected, setLanguageSelected] = useState(LIST_LANGUAGE[0].label);
+  const { staticPage } = useAppSelector((state) => state.menus);
 
   // HOOK
   const searchRef = useRef(null);
@@ -67,8 +71,7 @@ const Header: React.FC<HeaderProps> = ({
 
   // Submit search
   const handleSubmit = (text?: string) => {
-    /* eslint-disable no-console */
-    console.log(text);
+    navigate(`${getSlugByTemplateCode('SEARCH', staticPage)}?keyword=${text}`);
 
     setIsOpenSearch(false);
     if (inputRef.current) {

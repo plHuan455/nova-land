@@ -1,18 +1,21 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import React, {
-  useCallback,
-  useEffect, useMemo, useRef, useState,
+  useMemo,
+  useState,
+  useEffect,
 } from 'react';
 import { useForm } from 'react-hook-form';
-import { useLocation } from 'react-router-dom';
+import { useQuery } from 'react-query';
+import { useSearchParams, useNavigate } from 'react-router-dom';
 
 import Animate from 'components/organisms/Animate';
-import { NewsCardProps } from 'components/organisms/NewsCard';
 import SearchResult, { SearchForm } from 'components/templates/SearchResult';
 import Section from 'components/templates/Section';
 import HelmetContainer from 'container/helmet';
 import { getAllNewsService } from 'services/home';
-import { formatDateDDMMYYYY, getImageURL } from 'utils/functions';
+import { useAppSelector } from 'store/hooks';
+import { DEFAULT_QUERY_OPTION } from 'utils/constants';
+import { formatDateDDMMYYYY, getImageURL, getSlugByTemplateCode } from 'utils/functions';
 import { schemaSearchForm } from 'utils/schemas';
 
 interface IntroDataBlock {
@@ -23,14 +26,11 @@ export type SearchBlock =
   | IntroDataBlock;
 
 const SearchResultsContainer: React.FC<BasePageData<SearchBlock>> = ({ pageData, banners }) => {
-  const location = useLocation();
-  const [isLoading, setLoading] = useState(false);
-  const [searchText, setSearchText] = useState('');
-  const [listData, setListData] = useState<NewsCardProps[]>([]);
-  const [totalPages, setTotalPages] = useState<number>(1);
-  const [totalNews, setTotalNews] = useState<number>(0);
-  const isPageSearchRef = useRef(false);
-  const currentPageRef = useRef(1);
+  const navigate = useNavigate();
+  const { staticPage } = useAppSelector((state) => state.menus);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchText, setSearchText] = useState(searchParams.get('keyword') || '');
+  const [currentPage, setCurrentPage] = useState(1);
   const method = useForm<SearchForm>({
     resolver: yupResolver(schemaSearchForm),
     mode: 'onChange',
@@ -38,89 +38,58 @@ const SearchResultsContainer: React.FC<BasePageData<SearchBlock>> = ({ pageData,
   // eslint-disable-next-line max-len
   const adBanner = useMemo(() => banners.map((item) => getImageURL(item.data.imageDesktop)), [banners]);
 
-  const fetchNewsListData = useCallback(
-    async (params?: {
-      keyword?: string;
-      page?: number;
-      limit?: number;
-    }) => {
-      try {
-        setLoading(true);
-        const res = await getAllNewsService(params);
-
-        const newsData = res.data?.map((item) => ({
-          imgSrc: getImageURL(item.thumbnail),
-          title: item.title,
-          desc: item.title,
-          href: `/chi-tiet-tin-tuc/${item.slug}`,
-          time: formatDateDDMMYYYY(item.publishedAt),
-        }));
-        setTotalPages(res.meta.totalPages);
-        setTotalNews(res.meta.total);
-        setListData(newsData);
-      } catch {
-        // Empty
-      } finally {
-        setLoading(false);
-      }
-    },
-    [],
+  const { isLoading, data: newDataList } = useQuery(
+    ['getNewsData', currentPage, searchText],
+    () => getAllNewsService({
+      keyword: searchText,
+      limit: 6,
+      page: currentPage,
+    }),
+    DEFAULT_QUERY_OPTION,
   );
 
-  useEffect(() => {
-    const searchTextParam = (location.state as any)?.searchText;
-
-    if (searchTextParam) {
-      isPageSearchRef.current = true;
-      setSearchText(searchTextParam);
-      fetchNewsListData({
-        keyword: searchTextParam,
-        limit: 4,
-        page: 1,
-      });
-      delete location.state;
+  const newsData = useMemo(() => {
+    if (newDataList && newDataList?.data.length > 0) {
+      return newDataList.data.map((item) => ({
+        imgSrc: getImageURL(item.thumbnail),
+        title: item.title,
+        desc: item.title,
+        href: `/tin-tuc-chi-tiet/${item.slug}`,
+        time: formatDateDDMMYYYY(item.publishedAt),
+      }));
     }
+    return [];
+  }, [newDataList]);
 
-    if (!isPageSearchRef.current) {
-      fetchNewsListData({
-        limit: 4,
-        page: 1,
-      });
+  const totalPages = useMemo(() => {
+    if (newDataList?.meta) {
+      return newDataList.meta.totalPages;
     }
+    return 1;
+  }, [newDataList]);
 
-    return () => {
-      isPageSearchRef.current = true;
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [location]);
+  const totalNews = useMemo(() => {
+    if (newDataList?.meta) {
+      return newDataList.meta.total;
+    }
+    return 1;
+  }, [newDataList]);
 
-  const handleChangePage = useCallback((pageIpt: number) => {
-    currentPageRef.current = pageIpt;
-    if (searchText) {
-      isPageSearchRef.current = true;
-      setSearchText(searchText);
-      fetchNewsListData({
-        keyword: searchText,
-        limit: 4,
-        page: pageIpt,
-      });
-      delete location.state;
+  const handleSubmit = (data: SearchForm) => {
+    setSearchParams({ keyword: data.search });
+    setSearchText(data.search);
+    if (data.search) {
+      navigate(`${getSlugByTemplateCode('SEARCH', staticPage)}?keyword=${data.search}`);
     } else {
-      fetchNewsListData({
-        limit: 4,
-        page: pageIpt,
-      });
+      navigate(`${getSlugByTemplateCode('SEARCH', staticPage)}`);
     }
-  }, [fetchNewsListData, location.state, searchText]);
+  };
 
-  const handleSubmit = useCallback((data: SearchForm) => {
-    fetchNewsListData({
-      keyword: data.search,
-      limit: 4,
-      page: 1,
-    });
-    currentPageRef.current = 1;
-  }, [fetchNewsListData]);
+  useEffect(() => {
+    if (searchParams) {
+      setSearchText(searchParams.get('keyword') || '');
+    }
+  }, [searchParams]);
 
   return (
     <>
@@ -132,15 +101,16 @@ const SearchResultsContainer: React.FC<BasePageData<SearchBlock>> = ({ pageData,
               method={method}
               submitForm={handleSubmit}
               searchAmount={totalNews}
-              newsList={listData}
+              newsList={newsData}
               title={pageData.title}
               placeholderText="Nhập từ khóa tìm kiếm"
               btnText="Tìm kiếm"
               totalPage={totalPages}
-              currentPage={currentPageRef.current}
-              handleChangePage={handleChangePage}
+              currentPage={currentPage}
+              handleChangePage={(page: number) => setCurrentPage(page)}
               adImgSrc={adBanner}
               isLoading={isLoading}
+              searchText={searchText}
             />
           </Section>
         </div>

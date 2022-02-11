@@ -1,3 +1,5 @@
+import { StaticSlug } from 'services/navigations/types';
+
 export const BASE_URL = process.env.REACT_APP_BASE_URL;
 function mapModifiers(
   baseClassName: string,
@@ -191,4 +193,16 @@ export const convertBanner = (banners: BannersDataTypes[]) => {
     }));
   }
   return [];
+};
+
+export const getSlugByTemplateCode = (
+  templateCode: string,
+  staticSlug?: StaticSlug[],
+): string => {
+  if (staticSlug) {
+    const res = staticSlug.find((ele) => ele.templateCode === templateCode);
+    if (res) return res.slug;
+    return '';
+  }
+  return '';
 };

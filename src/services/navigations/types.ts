@@ -18,4 +18,10 @@ export interface PreviewData {
   };
 }
 
+export interface StaticSlug {
+  templateCode: string;
+  slug: string;
+  title: string;
+}
+
 export type PagePreviewData<T> = BasePageData<T> & PreviewData;
