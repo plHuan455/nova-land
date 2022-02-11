@@ -4,6 +4,7 @@ import Icon from 'components/atoms/Icon';
 import Image from 'components/atoms/Image';
 import Link from 'components/atoms/Link';
 import Text from 'components/atoms/Text';
+import { checkExternalUrl } from 'utils/functions';
 
 export interface TransactionCardProps {
   imgSrc: string;
@@ -75,7 +76,7 @@ const TransactionCard: React.FC<TransactionCardProps> = ({
         </div>
       )}
       <div className="o-transactionCard_btn u-mt-md-24 u-mt-18">
-        <Link href={href} target={target || '_blank'}>
+        <Link href={href} target={target || '_blank'} useExternal={checkExternalUrl(href)}>
           <div className="o-transactionCard_btn_wrap">
             <Text modifiers={['14x20', '300', 'camel']}>
               {nameBtn || 'Xem vị trí trên bản đồ'}

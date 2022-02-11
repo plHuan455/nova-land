@@ -19,7 +19,6 @@ export const normal: Story = () => (
         title="Các sàn giao dịch của Novaland group"
         dataTransactionList={dataTransactionList}
         totalPage={1}
-        total={9}
         currentPage={1}
         handleChangePage={(page: number) => (page)}
       />
