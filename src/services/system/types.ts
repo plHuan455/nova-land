@@ -12,6 +12,8 @@ export type SystemData = {
   header: HeaderData;
   footer: FooterData;
   googleRecaptchaSiteKey: string;
+  gmapId: string;
+  logoFooter: string;
 };
 
 export type ParamsType = {

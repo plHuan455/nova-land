@@ -13,7 +13,6 @@ describe('<TransactionList />', () => {
           title=""
           dataTransactionList={[]}
           totalPage={0}
-          total={0}
         />
       </Router>, div,
     );

@@ -48,6 +48,7 @@ export const iconList = {
   orangeTime: 'orangeTime',
   orangeTimeSchedule: 'orangeTimeSchedule',
   orangeAddress: 'orangeAddress',
+  marker: 'marker',
 };
 
 export type IconName = keyof typeof iconList;
