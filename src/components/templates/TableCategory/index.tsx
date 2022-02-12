@@ -1,6 +1,7 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
 
+import Heading from 'components/atoms/Heading';
 import Icon from 'components/atoms/Icon';
 import Link from 'components/atoms/Link';
 import Text from 'components/atoms/Text';
@@ -78,7 +79,7 @@ const TableCategory: React.FC<TableCategoryProps> = ({
             ))}
           </tr>
         </thead>
-        {dataBody.length > 0 && (
+        {dataBody.length > 0 ? (
           <tbody>
             {dataBody.map((e, i) => (
               <>
@@ -107,6 +108,16 @@ const TableCategory: React.FC<TableCategoryProps> = ({
                 </tr>
               </>
             ))}
+          </tbody>
+        ) : (
+          <tbody>
+            <tr>
+              <td colSpan={5}>
+                <Heading modifiers={['center', '20x30']}>
+                  Không có dữ liệu
+                </Heading>
+              </td>
+            </tr>
           </tbody>
         )}
         {totalPage > 0 && (

@@ -3,6 +3,8 @@ export type DocumentParamsType = {
   keyword?: string;
   page?: number;
   limit?: number;
+  category_id?: number;
+  year?: string;
   is_highlight?: boolean;
 }
 
