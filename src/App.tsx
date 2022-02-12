@@ -63,7 +63,7 @@ const routes = [
     element: <CorporateGovernance />,
   },
   {
-    path: 'quan-he-dau-tu/tai-lieu-khac',
+    path: 'tai-lieu-khac',
     element: <InvestmentRelationsOtherDocument />,
   },
   {

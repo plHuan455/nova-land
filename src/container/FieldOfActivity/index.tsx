@@ -1,13 +1,19 @@
-import React, { useMemo } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
+import { useQuery } from 'react-query';
 
 import FieldActivityDetailsTabContainer, { FieldActivityDetailsTabTypes } from './fieldActivityDetailsTabContainer';
 import HeroBannerContainer from './heroBannerContainer';
-import ProductLinesContainer from './productLinesContainer';
-import ProjectListContainer from './projectListContainer';
 
 import Container from 'components/organisms/Container';
+import ProductLines from 'components/templates/ProductLines';
+import ProjectList from 'components/templates/ProjectList';
 import HelmetContainer from 'container/helmet';
 import getBlockData from 'helpers/pageData';
+import { getProjectsService } from 'services/project';
+import { useAppDispatch, useAppSelector } from 'store/hooks';
+import { getCategoryProjectsAction, getRealEstatesAction } from 'store/project';
+import { DEFAULT_QUERY_OPTION } from 'utils/constants';
+import { getImageURL } from 'utils/functions';
 
 export type FieldOfActivityData =
   | FieldActivityDetailsTabTypes;
@@ -16,10 +22,86 @@ const FieldOfActivityContainer: React.FC<BasePageData<FieldOfActivityData>> = ({
   blocks,
   banners,
 }) => {
+  const dispatch = useAppDispatch();
+  const { realEstatesList, categoryProjectsList } = useAppSelector((state) => state.project);
+  const [realEstatesSlug, setRealEstatesSlug] = useState('');
   const fieldActivityDetailsTabBlock = useMemo(
     () => getBlockData('introduction', blocks) as FieldActivityDetailsTabTypes,
     [blocks],
   );
+
+  const { data: projectData } = useQuery(
+    ['getProjectsData', realEstatesSlug],
+    () => getProjectsService({
+      real_estates_slug: realEstatesSlug,
+    }),
+    {
+      ...DEFAULT_QUERY_OPTION,
+      enabled: !!realEstatesSlug,
+    },
+  );
+
+  const convertDataProductLines = useMemo(() => {
+    if (realEstatesList) {
+      return realEstatesList.map((val) => ({
+        label: val.name,
+        imgActive: getImageURL(val.iconHover),
+        imgInActive: getImageURL(val.icon),
+        content: {
+          title: val.smallDescription,
+          imgSrc: getImageURL(val.thumbnail),
+          desc:
+            val.items.map((item) => ({
+              imgSrc: getImageURL(item.icon),
+              content: item.description,
+            })) || [],
+        },
+        slug: val.slug,
+      }));
+    }
+    return [];
+  }, [realEstatesList]);
+
+  useEffect(() => {
+    if (realEstatesList && realEstatesList.length) {
+      setRealEstatesSlug(realEstatesList[0].slug);
+    }
+  }, [realEstatesList]);
+
+  useEffect(() => {
+    if (!realEstatesList) {
+      dispatch(getRealEstatesAction({}));
+    }
+    if (!categoryProjectsList) {
+      dispatch(getCategoryProjectsAction({}));
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const convertListLogo = (nameProjects: string) => {
+    if (projectData) {
+      return projectData.filter((data) => data.category.name === nameProjects).map(
+        (item) => ({
+          imgSrc: getImageURL(item.projectLogo),
+          href: item.link?.url || '#',
+          target: item.link?.target || '_blank',
+        }),
+      );
+    }
+    return [];
+  };
+
+  const convertDataProjectList = useMemo(() => {
+    if (categoryProjectsList) {
+      return categoryProjectsList.map((val) => ({
+        title: val.name,
+        listLogo: convertListLogo(val.name),
+      }));
+    }
+
+    return [];
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [categoryProjectsList, projectData, convertListLogo]);
 
   return (
     <>
@@ -27,8 +109,16 @@ const FieldOfActivityContainer: React.FC<BasePageData<FieldOfActivityData>> = ({
       <HeroBannerContainer banners={banners} />
       <Container>
         <FieldActivityDetailsTabContainer blocks={fieldActivityDetailsTabBlock} />
-        <ProductLinesContainer title={fieldActivityDetailsTabBlock.tab1.titleProject} />
-        <ProjectListContainer />
+        <div className="p-fieldOfActivity_productLines">
+          <ProductLines
+            title={fieldActivityDetailsTabBlock.tab1.titleProject}
+            dataProductLines={convertDataProductLines}
+            handleChangeTab={(slug) => setRealEstatesSlug(slug)}
+          />
+        </div>
+        <div className="p-fieldOfActivity_projectList">
+          <ProjectList dataProjectList={convertDataProjectList} />
+        </div>
       </Container>
     </>
   );

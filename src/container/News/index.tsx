@@ -42,7 +42,7 @@ const NewsContainer: React.FC<BasePageData<NewsData>> = ({
       <LatestNewsContainer latestNewsData={latestNews?.data || []} />
       {categoryNewsList
         && categoryNewsList.length > 0
-        && categoryNewsList?.map((item) => (
+        && categoryNewsList.filter((item) => !item.parent).map((item) => (
           <BaseNewsContainer
             title={item.name}
             activeTab={item.children.length > 0 ? item.children[0] : item}
