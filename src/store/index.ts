@@ -1,6 +1,7 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 
 import introReducer from './Introduction';
+import documentsReducer from './documents';
 import exampleReducer from './example';
 import homeReducer from './home';
 import locationReducer from './location';
@@ -20,6 +21,7 @@ export const store = configureStore({
     intro: introReducer,
     location: locationReducer,
     project: projectReducer,
+    documents: documentsReducer,
   },
 });
 

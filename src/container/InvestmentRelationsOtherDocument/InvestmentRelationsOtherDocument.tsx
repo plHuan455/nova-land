@@ -1,70 +1,15 @@
 /* eslint-disable no-console */
-import React, { useState } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
+import { useQuery } from 'react-query';
 
-import RegulationsList from 'assets/dataDummy/InvestmentRelationsOtherDocument';
-import { IconName } from 'components/atoms/Icon';
+import imgPdf from 'assets/images/downImg.png';
 import { OptionType } from 'components/molecules/Pulldown';
 import InvestmentRelationsOtherDocument from 'components/templates/InvestmentRelationsOtherDocument';
-
-const menuData = [
-  {
-    id: 1,
-    title: 'Thông tin về Tập đoàn Novaland',
-    slug: '#',
-    icon: 'arrowUp' as IconName,
-    subMenu: [
-      {
-        title: 'Điều lệ',
-        slug: '/',
-        icon: 'arrowNextSlateGray' as IconName,
-      },
-      {
-        title: 'Thông tin Công ty',
-        slug: '/',
-        icon: 'arrowNextSlateGray' as IconName,
-      },
-
-    ],
-  },
-  {
-    id: 2,
-    title: 'Công bố thông tin',
-    slug: '#',
-    icon: 'arrowUp' as IconName,
-    subMenu: [
-      {
-        title: 'Điều lệ',
-        slug: '/',
-        icon: 'arrowNextSlateGray' as IconName,
-      },
-      {
-        title: 'Thông tin Công ty',
-        slug: '/',
-        icon: 'arrowNextSlateGray' as IconName,
-      },
-    ],
-  },
-  {
-    id: 3,
-    title: 'Hoạt động Nhà đầu tư',
-    slug: '#',
-    icon: 'arrowUp' as IconName,
-    subMenu: [
-      {
-        title: 'Điều lệ',
-        slug: '/',
-        icon: 'arrowNextSlateGray' as IconName,
-      },
-    ],
-  },
-  {
-    id: 4,
-    title: 'Giá cổ phiếu và thông tin thị trường',
-    slug: '#',
-    icon: 'arrowUp' as IconName,
-    subMenu: [],
-  },
-];
+import { getOtherDocumentCategoriesDetailService } from 'services/documents';
+import { getOtherDocumentCategoriesAction } from 'store/documents';
+import { useAppSelector, useAppDispatch } from 'store/hooks';
+import { DEFAULT_QUERY_OPTION } from 'utils/constants';
+import { formatDateDDMMYYYY, getImageURL } from 'utils/functions';
 
 const dummyOption: OptionType[] = [
   { value: '1', label: 'Gần đây' },
@@ -72,25 +17,60 @@ const dummyOption: OptionType[] = [
 
 ];
 const InvestmentRelations: React.FC = () => {
+  const dispatch = useAppDispatch();
   const [selectedSort, setSelectedSort] = useState<OptionType | null>(null);
   const [page, setPage] = useState(1);
+  const { otherCategories } = useAppSelector((state) => state.documents);
+  const [indexActive, setIndexActive] = useState<number>(1);
 
-  const handleChangePage = (newPage: number) => {
-    setPage(newPage);
-  };
+  const { data: otherDocumentList, isLoading } = useQuery(
+    ['GetOtherDocumentListHighlight', indexActive],
+    () => getOtherDocumentCategoriesDetailService(indexActive, {
+      limit: 2,
+      page,
+    }),
+    {
+      ...DEFAULT_QUERY_OPTION,
+    },
+  );
+
+  console.log(otherDocumentList);
+
+  const convertDataOtherDocument = useMemo(() => {
+    if (otherDocumentList) {
+      return otherDocumentList.data.map((val) => ({
+        img: imgPdf,
+        title: val.name,
+        date: formatDateDDMMYYYY(val.publishedAt),
+        titleBtn: 'Xem và tải PDF',
+        href: getImageURL(val.file),
+      }));
+    }
+    return [];
+  }, [otherDocumentList]);
+
+  useEffect(() => {
+    dispatch(getOtherDocumentCategoriesAction({
+      limit: 50,
+    }));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="p-corporateGovernance_InvestmentRelationsOtherDocument">
       <InvestmentRelationsOtherDocument
-        dataMenu={menuData}
-        dataRegulations={RegulationsList}
-        handleRegulation={(item) => console.log(item)}
+        dataMenu={otherCategories}
+        dataRegulations={convertDataOtherDocument}
         selectedSort={selectedSort}
         sortOptions={dummyOption}
         handleSort={(value) => setSelectedSort(value)}
         currPage={page}
-        totalPage={5}
-        handleChangePage={handleChangePage}
+        totalPage={otherDocumentList?.meta.totalPages || 1}
+        handleChangePage={(e: number) => setPage(e)}
+        handleClick={(e: number) => {
+          setIndexActive(e);
+        }}
+        loading={isLoading}
       />
     </div>
   );
