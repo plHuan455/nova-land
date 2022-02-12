@@ -112,6 +112,11 @@
     @include tablet-down {
       margin: 0 rem(-8);
     }
+
+    @include mobile-down {
+      flex: 0 0 100%;
+      margin: 0;
+    }
   }
 
   &_left,
