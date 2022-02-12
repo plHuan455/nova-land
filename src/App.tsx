@@ -17,7 +17,6 @@ import useInitializeRender from 'hooks/useInitializeRender';
 import DetailsPageNav from 'navigations/DetailsPageNav';
 import Error from 'pages/Error';
 import Event from 'pages/Event';
-import InvestmentRelationsOtherDocument from 'pages/InvestmentRelationsOtherDocument';
 import NewsCategory from 'pages/NewsCategory';
 import Recruitment from 'pages/Recruitment';
 import RecruitmentDetail from 'pages/RecruitmentDetail';
@@ -56,10 +55,6 @@ const routes = [
   {
     path: 'chi-tiet-tuyen-dung',
     element: <RecruitmentDetail />,
-  },
-  {
-    path: 'tai-lieu-khac',
-    element: <InvestmentRelationsOtherDocument />,
   },
   {
     path: '404',

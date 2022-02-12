@@ -150,12 +150,7 @@ type BasePageData<T> = {
   banners: BannersDataTypes[];
   seoData: SEOData;
   breadcrumbs: BreadcrumbsData[];
-  openGraphData?: {
-    ogTitle: string;
-    ogType: string;
-    ogDescription: string;
-    ogImage: string;
-  }
+  openGraphData: OpenGraphData;
 }
 
 type SiteStaticPage = {
