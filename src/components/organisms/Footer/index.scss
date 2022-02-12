@@ -71,9 +71,9 @@
         padding-left: rem(7);
         padding-right: rem(7);
 
-        @include mobile-down{
-          margin-top: rem(16);
+        @include mobile-down {
           flex: 0 0 50%;
+          margin-top: rem(16);
         }
 
         &:nth-child(2) {
@@ -83,7 +83,7 @@
           }
 
           //xem xét
-          @include mobile-down{
+          @include mobile-down {
             flex: 0 0 50%;
             margin-top: rem(16);
           }

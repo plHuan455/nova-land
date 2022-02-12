@@ -21,6 +21,7 @@ import CorporateGovernance from 'pages/CorporateGovernance';
 import Error from 'pages/Error';
 import Event from 'pages/Event';
 import EventDetail from 'pages/EventDetail';
+import InvestmentRelationsOtherDocument from 'pages/InvestmentRelationsOtherDocument';
 import News from 'pages/News';
 import NewsCategory from 'pages/NewsCategory';
 import NewsDetail from 'pages/NewsDetail';
@@ -82,6 +83,10 @@ const routes = [
   {
     path: 'quan-tri-danh-nghiep',
     element: <CorporateGovernance />,
+  },
+  {
+    path: 'quan-he-dau-tu/tai-lieu-khac',
+    element: <InvestmentRelationsOtherDocument />,
   },
   {
     path: '404',

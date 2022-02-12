@@ -16,6 +16,10 @@
   width: 100%;
   @include font-base(16, 24);
 
+  &_iconRight {
+    margin-left: rem(10);
+  }
+
   &-primary {
     background-color: $camel;
     border: 0;
@@ -43,10 +47,12 @@
       @include prefixed(transition-duration, 0.3s);
       @include prefixed(transition-timing-function, ease-out);
     }
+
     &:hover {
       background-color: $white;
       border: 0;
       color: $camel;
+
       &::before {
         @include prefixed(transform, scaleX(1));
       }
@@ -285,6 +291,13 @@
     }
   }
 
+  &-iconRight {
+    background: 0;
+    border: 0;
+    color: $camel;
+    flex-direction: row-reverse;
+    @include font-base(14, 20);
+  }
   //----SIZE----//
   &-h70 {
     height: rem(70);

@@ -334,8 +334,8 @@
     @include tablet-up {
       #{$root} {
         &_right {
-          width: 100%;
           justify-content: flex-end;
+          width: 100%;
         }
 
         &_languagePicker {

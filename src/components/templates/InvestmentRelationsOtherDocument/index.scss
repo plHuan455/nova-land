@@ -1,0 +1,221 @@
+.t-menu {
+  $root: &;
+  overflow: hidden;
+  width: 100%;
+  @include list-style-none();
+
+  &_subHead {
+    align-items: center;
+    border-bottom: 1px solid $dark-midnight-blue;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: rem(16) rem(2);
+
+    &-last {
+      cursor: pointer;
+      padding-top: rem(16);
+    }
+
+    &-title {
+      &:hover {
+        background-color: $ghost-white;
+      }
+    }
+  }
+
+  &_link {
+    border-bottom: 1px solid $columbia-blue;
+    display: flex;
+    padding: rem(16) 0 rem(16) rem(12);
+    @include adjust-flex($justify-content: space-between);
+
+    &.active {
+      background: $white;
+    }
+  }
+
+  &_subList {
+    display: none;
+    max-height: 0;
+    opacity: 0;
+    transition: all $transition ease-in-out;
+    visibility: visible;
+    @include list-style-none();
+
+    &:hover {
+      background: $ghost-white;
+      opacity: 1;
+    }
+  }
+
+  &_item-show {
+
+    #{$root}_subList {
+      display: block;
+      max-height: 100%;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    #{$root}_subHead {
+      &-icon {
+        transform: rotate(180deg);
+        transition: all $transition ease-in-out;
+      }
+    }
+  }
+}
+
+.t-regulations {
+  &_top {
+    @include adjust-flex($justify-content: space-between); 
+    margin-top: rem(24);
+    @include mobile-down {
+      display: block;
+      margin-top: rwm(10);
+    }
+  }
+
+  &_sort {
+    @include adjust-flex();
+    justify-content: flex-start;
+    width: 100%;
+    @include mobile-down {
+      display: block;
+      margin-top: rem(10);
+    }
+
+    &_text {
+      max-width: rem(60);
+      width: 100%;
+    }
+
+    &_pulldown {
+      border-bottom: 1px solid $dark-midnight-blue;
+      margin-left: rem(8);
+      min-width: rem(96);
+
+      @include mobile-down {
+        margin-left: 0;
+        width: 100%;
+      }
+
+      .m-pulldown {
+        &-default__control {
+          border: 0;
+          box-shadow: none;
+          height: rem(30);
+          min-height: none;
+          outline: none;
+          padding: 0;
+        }
+
+        &-default__placeholder,
+        &-default__single-value {        
+          color: $dark-midnight-blue;
+          max-width: none;
+          position: relative;
+          transform: none;
+          @include font-base(14, 20);
+        }
+
+        &-default__menu {
+          width: 100%;
+        }
+
+        &-default__indicator img {
+          height: rem(16);
+          width: rem(16);
+        }
+      }
+    }
+  }
+
+  &_wrapItem {
+    margin-top: rem(24);
+  }
+
+  &_item {
+    @include adjust-flex($justify-content: space-between); 
+    border-top: 1px solid $columbia-blue;
+    padding: rem(16) 0;
+    position: relative;
+
+    &:last-child {
+      border-bottom: 1px solid $columbia-blue;
+    }
+
+    &::after {
+      border: 1px solid $columbia-blue;
+      content: '';
+      height: rem(96);
+      position: absolute;
+      right: 24%;
+    }
+    @include mobile-down {
+      padding: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &_content {
+    align-items: center;
+    display: flex;
+    flex: 1;
+  }
+
+  &_image {
+    max-width: rem(91);
+    width: 100%;
+  }
+
+  &_desc {
+    margin-left: rem(11);
+
+    &_date {
+      margin-top: rem(8);
+    }
+  }
+
+  &_pagination {
+    @include mobile-down {
+      margin-top: rem(10);
+
+      .o-pagination {
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  &_paginationButton {
+    margin-top: rem(24);
+
+    .o-pagination {
+      justify-content: flex-end;
+    }
+  }
+}
+
+.t-investmentRelationsOtherDocument {
+  &_content {
+    @include adjust-flex($justify-content: space-between, $align-item: flex-start);
+    @include tablet-down {
+      display: block;
+    }
+  }
+
+  &_left { 
+    flex: 0 0 25%;
+  }
+
+  &_right {
+    flex: 0 0 70%;
+    @include tablet-down {
+      margin-top: rem(24);
+    }
+  }
+}

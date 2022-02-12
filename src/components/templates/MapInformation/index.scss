@@ -1,9 +1,9 @@
 .t-mapInformationCard {
   background: url('~assets/images/MapInformation/ic_bg_mapCard.png') no-repeat;
-  background-size: contain;
   background-color: $white;
-  box-shadow: 0 rem(25) rem(50) $black01;
+  background-size: contain;
   border-radius: rem(5);
+  box-shadow: 0 rem(25) rem(50) $black01;
   padding: rem(60) rem(40);
 
   @include tablet-down {
@@ -21,18 +21,18 @@
   }
 
   &_mbClose {
+    background: $dim-gray;
+    border-radius: rem(5);
+    display: none;
+    height: rem(20);
+    left: rem(10);
     position: absolute;
     top: rem(10);
-    left: rem(10);
-    display: none;
-    background: $dim-gray;
-    height: rem(20);
     width: rem(20);
-    border-radius: rem(5);
 
     .a-icon {
-      width: 100%;
       height: 100%;
+      width: 100%;
     }
 
     @include mobile-down {
@@ -42,31 +42,34 @@
 }
 
 .t-mapInformation {
-  position: relative;
   height: 100%;
+  position: relative;
   width: 100%;
 
   &_card {
+    left: 10%;
+    max-width: rem(448);
+    max-width: rem(448);
     position: absolute;
     top: rem(4);
-    z-index: 2;
-    max-width: rem(448);
     width: 100%;
+    z-index: 2;
+
     @include tablet-down {
-      top: rem(10);
       max-width: rem(348);
+      top: rem(10);
     }
 
     @include mobile-down {
-      position: absolute;
-      width: 85%;
+      border-radius: rem(5);
+      left: auto;
       max-height: calc(100vh - 230px);
       overflow-y: auto;
-      transition: 0.5s;
+      position: absolute;
       right: -100%;
       top: rem(80);
-      left: auto;
-      border-radius: rem(5);
+      transition: 0.5s;
+      width: 85%;
     }
 
     &-isOpen {

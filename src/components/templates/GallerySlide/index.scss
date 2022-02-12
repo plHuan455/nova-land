@@ -1,5 +1,6 @@
 .t-gallerySlide {
   $root: &;
+
   &_wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -28,8 +29,8 @@
 
       &:hover {
         #{$root}_left_btn_icon {
-          transition: 0.3s;
           transform: translateX(10px);
+          transition: 0.3s;
         }
       }
     }
@@ -37,19 +38,19 @@
 
   &_right {
     flex: 0 0 70%;
-    max-width: 70%;
     margin: 0 rem(-15);
+    max-width: 70%;
     
     @include tablet-down {
-      margin: 0;
       flex: 0 0 60%;
+      margin: 0;
       max-width: 60%;
     }
 
     @include mobile-down {
       flex: 0 0 100%;
-      max-width: 100%;
       margin-top: rem(20);
+      max-width: 100%;
     }
 
     &_item {
@@ -66,7 +67,7 @@
 
       @include tablet-down {
         height: rem(33);
-        width: rem(33)
+        width: rem(33);
       }
     }
 

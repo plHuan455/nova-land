@@ -21,6 +21,7 @@ export default {
           'camel',
           'outlineWhile',
           'outlineSpanishGray',
+          'iconRight',
         ],
       },
       defaultValue: 'primary',
