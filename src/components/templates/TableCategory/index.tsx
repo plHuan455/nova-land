@@ -102,7 +102,7 @@ const TableCategory: React.FC<TableCategoryProps> = ({
                       key={`tableBodyCell-${stt.toString()}`}
                       colSpan={val.colSpan || 1}
                     >
-                      {val.date ? <DataFileItem fileName={val.date} /> : <></>}
+                      {val.date ? <DataFileItem fileName={val.date} hrefLink={val.href} /> : <></>}
                     </td>
                   ))}
                 </tr>

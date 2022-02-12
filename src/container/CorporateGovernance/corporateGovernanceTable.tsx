@@ -1,18 +1,19 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { useQueries, useQuery, UseQueryResult } from 'react-query';
 
 import CorporateGovernance from 'components/templates/CorporateGovernance';
 import getDocumentsService, { getDocumentCategoryService, getDocumentYearService } from 'services/documents';
 import { DocumentsData, DocumentTypes } from 'services/documents/types';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
-import { formatDateDDMMYYYY } from 'utils/functions';
+import { formatDateDDMMYYYY, getImageURL } from 'utils/functions';
+
+interface DocumentTabs extends DocumentTypes {
+  page: number;
+}
 
 const CorporateGovernanceTableContainer: React.FC = () => {
   const [indexActive, setIndexActive] = useState(0);
-
-  const handleChangeTab = (e: number) => {
-    setIndexActive(e);
-  };
+  const [documentTab, setDocumentTab] = useState<DocumentTabs[]>([]);
 
   const { data: documentYearsData } = useQuery(
     'getDocumentYear', () => getDocumentYearService(),
@@ -29,25 +30,26 @@ const CorporateGovernanceTableContainer: React.FC = () => {
   );
 
   const documentData = useQueries(
-    documentCategoriesData?.map((ele) => ({
-      queryKey: ['getDocumentCategory', ele.id, indexActive],
+    documentTab.map((ele) => ({
+      queryKey: ['getDocumentCategory', ele.id, ele.page, indexActive],
       queryFn: () => getDocumentsService({
         category_id: ele.id,
         year: documentYearsData?.[indexActive].name || '',
-        limit: 1,
+        limit: 8,
+        page: ele.page,
       }),
       enabled: !!documentYearsData,
       ...DEFAULT_QUERY_OPTION,
-    })) ?? [],
+    })),
   )as UseQueryResult<APIPaginationResponse<DocumentsData[]>, unknown>[];
 
   const data = useMemo(() => {
-    if (documentCategoriesData && documentData) {
+    if (documentTab && documentData) {
       return (documentData).map((list, index) => ({
         dataHeader: [
           {
             id: 1,
-            value: documentCategoriesData[index].name,
+            value: documentTab[index].name,
           },
           {
             id: 2,
@@ -82,15 +84,13 @@ const CorporateGovernanceTableContainer: React.FC = () => {
                 array[array.length - 1] = {
                   colSpan: (prevItem?.colSpan || 1) + 1,
                   date: formatDateDDMMYYYY(ele.publishedAt),
-                  href: ele.file,
-                  target: '_blank',
+                  href: getImageURL(ele.file),
                 };
               } else {
                 array.push({
                   colSpan: 1,
                   date: formatDateDDMMYYYY(ele.publishedAt),
-                  href: ele.file,
-                  target: '_blank',
+                  href: getImageURL(ele.file),
                 });
               }
             } else {
@@ -103,10 +103,35 @@ const CorporateGovernanceTableContainer: React.FC = () => {
           }, []),
         })) || [],
         totalPage: list.data?.meta.totalPages || 1,
+        currentPage: list.data?.meta.page,
+        handleChangePage: (page:number) => {
+          const array = [...documentTab];
+          array[index].page = page;
+          setDocumentTab(array);
+        },
       }));
     }
     return [];
-  }, [documentData, documentCategoriesData]);
+  }, [documentData, documentTab]);
+
+  const handleChangeTab = (e: number) => {
+    setIndexActive(e);
+    if (documentCategoriesData) {
+      setDocumentTab(documentCategoriesData.map((element) => ({
+        ...element,
+        page: 1,
+      })));
+    }
+  };
+
+  useEffect(() => {
+    if (documentCategoriesData) {
+      setDocumentTab(documentCategoriesData.map((element) => ({
+        ...element,
+        page: 1,
+      })));
+    }
+  }, [documentCategoriesData]);
 
   return (
     <div className="p-corporateGovernance_corporateGovernanceTable">
