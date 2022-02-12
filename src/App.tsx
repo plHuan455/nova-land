@@ -3,9 +3,7 @@
 import 'App.scss';
 import React, {
   lazy,
-  Suspense,
-  useState,
-  useEffect,
+  Suspense, useEffect, useState,
 } from 'react';
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import { QueryClient, QueryClientProvider } from 'react-query';
@@ -16,20 +14,17 @@ import {
 
 import Loading from 'components/atoms/Loading';
 import useInitializeRender from 'hooks/useInitializeRender';
+import DetailsPageNav from 'navigations/DetailsPageNav';
 import Contact from 'pages/Contact';
 import CorporateGovernance from 'pages/CorporateGovernance';
 import Error from 'pages/Error';
 import Event from 'pages/Event';
-import EventDetail from 'pages/EventDetail';
 import InvestmentRelationsOtherDocument from 'pages/InvestmentRelationsOtherDocument';
-import News from 'pages/News';
 import NewsCategory from 'pages/NewsCategory';
-import NewsDetail from 'pages/NewsDetail';
 import Recruitment from 'pages/Recruitment';
 import RecruitmentDetail from 'pages/RecruitmentDetail';
 import RecruitmentList from 'pages/RecruitmentList';
 import ReportList from 'pages/ReportList';
-import SearchResults from 'pages/SearchResults';
 import { store } from 'store';
 import { useAppSelector } from 'store/hooks';
 
@@ -41,8 +36,8 @@ const routes = [
     element: <NewsCategory />,
   },
   {
-    path: 'tin-tuc-chi-tiet/:slug',
-    element: <NewsDetail />,
+    path: 'chi-tiet-tin-tuc/:slug',
+    element: <DetailsPageNav />,
   },
   {
     path: 'bao-cao-thuong-nien',
@@ -57,8 +52,8 @@ const routes = [
     element: <RecruitmentList />,
   },
   {
-    path: 'su-kien-chi-tiet/:slug',
-    element: <EventDetail />,
+    path: 'chi-tiet-su-kien/:slug',
+    element: <DetailsPageNav />,
   },
   {
     path: 'chi-tiet-tuyen-dung',

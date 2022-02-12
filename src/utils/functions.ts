@@ -152,7 +152,7 @@ export const checkExternalUrl = (str?: string) => {
   return tareaRegex.test(String(str).toLowerCase());
 };
 
-export const formatDateDDMMYYYY = (date?: string) => {
+export const formatDateDDMMYYYY = (date?: string, unitDot?: boolean) => {
   if (!date) return '';
   const dateFormat = new Date(date);
   let day: string | number = dateFormat.getDate();
@@ -163,7 +163,23 @@ export const formatDateDDMMYYYY = (date?: string) => {
   if (month < 10) {
     month = `0${month}`;
   }
+
+  if (unitDot) return `${day}.${month}.${dateFormat.getFullYear()}`;
   return `${day}/${month}/${dateFormat.getFullYear()}`;
+};
+
+export const getTime = (date?: string) => {
+  if (!date) return '';
+  const dateFormat = new Date(date);
+  let hours: string | number = dateFormat.getHours();
+  let mins: string | number = dateFormat.getMinutes();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  if (mins < 10) {
+    mins = `0${mins}`;
+  }
+  return `${hours}:${mins}`;
 };
 
 export const getHourFromPastToCurrent = (date?: string) => {

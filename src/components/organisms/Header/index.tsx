@@ -1,6 +1,7 @@
 import React, {
   useState, KeyboardEvent, useRef,
 } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 
 import Container from '../Container';
@@ -17,6 +18,7 @@ import useWindowScroll from 'hooks/useWindowScroll';
 import { MenuItemDataTypes } from 'services/menus/types';
 import { useAppSelector } from 'store/hooks';
 import mapModifiers, { checkExternalUrl, getSlugByTemplateCode } from 'utils/functions';
+import { getLangURL } from 'utils/menus';
 
 export type HeaderMenuTypes = {
   href: string;
@@ -36,6 +38,7 @@ const Header: React.FC<HeaderProps> = ({
   handleLanguage,
   isPageRecruitment,
 }) => {
+  const { i18n } = useTranslation();
   const navigate = useNavigate();
   // STATE
   const [isOpenSearch, setIsOpenSearch] = useState(false);
@@ -72,7 +75,7 @@ const Header: React.FC<HeaderProps> = ({
   // Submit search
   const handleSubmit = (text?: string) => {
     if (text) {
-      navigate(`/${getSlugByTemplateCode('SEARCH', staticPage)}?keyword=${text}`);
+      navigate(`${getLangURL(i18n.language)}/${getSlugByTemplateCode('SEARCH', staticPage)}?keyword=${text}`);
     }
     setIsOpenSearch(false);
     setIsOpenMenu(!isOpenMenu);

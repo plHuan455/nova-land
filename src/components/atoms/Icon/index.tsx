@@ -45,6 +45,9 @@ export const iconList = {
   downloadBlue: 'downloadBlue',
   arrowUp: 'arrowUp',
   down: 'down',
+  orangeTime: 'orangeTime',
+  orangeTimeSchedule: 'orangeTimeSchedule',
+  orangeAddress: 'orangeAddress',
 };
 
 export type IconName = keyof typeof iconList;

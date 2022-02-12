@@ -1,29 +1,33 @@
 /* eslint-disable camelcase */
 export type EventDetailData = {
-  id: number,
-  thumbnail: string,
-  image: string,
-  title: string,
-  slug: string,
-  description: string,
-  shortDescription: string,
-  addressName: string,
-  view: number,
-  authorName:string,
+  id: number;
+  thumbnail: string;
+  image: string;
+  title: string;
+  slug: string;
+  address: string;
+  description: string;
+  shortDescription: string;
+  addressName: string;
+  view: number;
   link: {
     text: string,
     url: string,
     target: string,
   },
-  eventFrom: string,
-  eventTo: string,
-  isPopular: boolean,
+  eventFrom: string;
+  eventTo: string;
+  isPopular: boolean;
+  authorName: string;
   tags: [
     {
       name: string
       slug: string,
     }
-  ]
+  ],
+  breadcrumbs: BreadcrumbsData[];
+  openGraph: OpenGraphData;
+  seoData: SEOData;
 };
 
 export type ParamNewsEventType = {

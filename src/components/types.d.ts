@@ -39,7 +39,8 @@ type Ratio =
   | '990x463'
   | '378x212'
   | '490x276'
-  | '91x96';
+  | '91x96'
+  | '756x426';
 
 type FontWeightStyle =
   | '100'

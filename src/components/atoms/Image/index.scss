@@ -174,4 +174,8 @@
   &-91x96 {
     @include aspect-ratio(91,96);
   }
+
+  &-756x426 {
+    @include aspect-ratio(756,426);
+  }
 }

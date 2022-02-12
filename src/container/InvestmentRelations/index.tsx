@@ -118,7 +118,7 @@ const InvestmentRelationsContainer: React.FC<BasePageData<InvestmentRelationsBlo
         alt: item.title,
         title: item.title,
         time: formatDateDDMMYYYY(item.eventFrom),
-        href: `/su-kien-chi-tiet/${item.slug}`,
+        href: `/chi-tiet-su-kien/${item.slug}`,
       }));
     }
     return [];

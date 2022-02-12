@@ -61,7 +61,7 @@ const SearchResultsContainer: React.FC<BasePageData<SearchBlock>> = ({ pageData,
         imgSrc: getImageURL(item.thumbnail),
         title: item.title,
         desc: item.description,
-        href: `/tin-tuc-chi-tiet/${item.slug}`,
+        href: `/chi-tiet-tin-tuc/${item.slug}`,
         time: formatDateDDMMYYYY(item.publishedAt),
       }));
       totalPages = newDataList.meta.totalPages;

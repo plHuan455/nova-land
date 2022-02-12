@@ -39,6 +39,11 @@ const checkTypePrefix = (slugParam?: string, linkParam?: string) => {
   return '';
 };
 
+export function getLangURL(lang?: string) {
+  if (lang && lang !== 'vi') return `/${lang}`;
+  return '';
+}
+
 export const prefixGroupMenu = (menus?: MenuItemDataTypes[]) => {
   if (!menus) {
     return [];

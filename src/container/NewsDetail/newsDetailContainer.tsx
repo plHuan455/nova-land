@@ -11,11 +11,13 @@ import { formatDateDDMMYYYY, getHourFromPastToCurrent, getImageURL } from 'utils
 interface NewsDetailTemplateContainerProps {
   data?: NewsDetailData;
   newsTagData?: NewsTagType[];
+  handleTagClick?: (value: string) => void;
 }
 
 const NewsDetailTemplateContainer: React.FC<NewsDetailTemplateContainerProps> = ({
   data,
   newsTagData,
+  handleTagClick,
 }) => {
   const { data: hightLightNews } = useQuery(
     ['GetHightLightNewsData', data],
@@ -34,7 +36,7 @@ const NewsDetailTemplateContainer: React.FC<NewsDetailTemplateContainerProps> = 
   const { data: relatedNews } = useQuery(
     ['GetRelatedNewsData', data],
     () => getRelatedNewsService({
-      limit: 3,
+      limit: 5,
       category_slug: data?.category[0].slug,
       except_ids: String(data?.id),
     }),
@@ -63,7 +65,7 @@ const NewsDetailTemplateContainer: React.FC<NewsDetailTemplateContainerProps> = 
       ? `${getHourFromPastToCurrent(item.publishedAt)} giờ trước`
       : formatDateDDMMYYYY(item.publishedAt),
     imageNews: getImageURL(item.thumbnail),
-    href: item.slug,
+    href: `/chi-tiet-tin-tuc/${item.slug}`,
   })), [hightLightNews]);
 
   const relatedNewsData = useMemo(() => relatedNews?.map((item) => ({
@@ -74,7 +76,7 @@ const NewsDetailTemplateContainer: React.FC<NewsDetailTemplateContainerProps> = 
       ? `${getHourFromPastToCurrent(item.publishedAt)} giờ trước`
       : formatDateDDMMYYYY(item.publishedAt),
     imageNews: getImageURL(item.thumbnail),
-    href: item.slug,
+    href: `/chi-tiet-tin-tuc/${item.slug}`,
   })), [relatedNews]);
 
   const tagNewsData = useMemo(() => newsTagData?.map((item) => item.name), [newsTagData]);
@@ -88,6 +90,7 @@ const NewsDetailTemplateContainer: React.FC<NewsDetailTemplateContainerProps> = 
         titleLatest="Các tin mới nhất"
         titleHot="Các tin nổi bật"
         hightLightNews={hightLightNewsData || []}
+        handleTagClick={handleTagClick}
       />
     </div>
   );

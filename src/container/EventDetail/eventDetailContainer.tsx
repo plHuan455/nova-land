@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 import React, { useMemo } from 'react';
 import { useQuery } from 'react-query';
 
@@ -6,16 +7,18 @@ import { getRelatedNewsEventService } from 'services/eventDetail';
 import { EventDetailData } from 'services/eventDetail/type';
 import { NewsTagType } from 'services/newsDetail/type';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
-import { getImageURL } from 'utils/functions';
+import { formatDateDDMMYYYY, getImageURL, getTime } from 'utils/functions';
 // import { formatDateDDMMYYYY } from 'utils/functions';
 interface NewsDetailTemplateContainerProps {
   data?: EventDetailData;
   newsTagData?: NewsTagType[];
+  handleTagClick?: (value: string) => void;
 }
 
 const EventDetailTemplateContainer: React.FC<NewsDetailTemplateContainerProps> = ({
   data,
   newsTagData,
+  handleTagClick,
 }) => {
   const { data: hightLightNews } = useQuery(
     ['GetHightLightNewsData', data],
@@ -48,7 +51,7 @@ const EventDetailTemplateContainer: React.FC<NewsDetailTemplateContainerProps> =
     imageNews: getImageURL(data?.image),
     shortDescription: data?.shortDescription,
     content: data?.description || '',
-    // createDate: formatDateDDMMYYYY(data?. || ''),
+    createDate: formatDateDDMMYYYY(data?.eventFrom || ''),
     numberView: data?.view ? String(data?.view) : '',
     author: data?.authorName || '',
     newsTypes: data?.tags.map((item) => item.name) || [],
@@ -58,22 +61,16 @@ const EventDetailTemplateContainer: React.FC<NewsDetailTemplateContainerProps> =
     id: String(item.id),
     title: item.title,
     content: item.description,
-    // status: new Date(item.publishedAt || '') === new Date()
-    //   ? `${getHourFromPastToCurrent(item.publishedAt)} giờ trước`
-    //   : formatDateDDMMYYYY(item.publishedAt),
     imageNews: getImageURL(item.thumbnail),
-    href: item.slug,
+    href: `/chi-tiet-su-kien/${item.slug}`,
   })), [hightLightNews]);
 
   const relatedNewsData = useMemo(() => relatedNews?.map((item) => ({
     id: String(item.id),
     title: item.title,
     content: item.description,
-    // status: new Date(item.publishedAt || '') === new Date()
-    //   ? `${getHourFromPastToCurrent(item.publishedAt)} giờ trước`
-    //   : formatDateDDMMYYYY(item.publishedAt),
     imageNews: getImageURL(item.thumbnail),
-    href: item.slug,
+    href: `/chi-tiet-su-kien/${item.slug}`,
   })), [relatedNews]);
 
   const tagNewsData = useMemo(() => newsTagData?.map((item) => item.name), [newsTagData]);
@@ -87,6 +84,15 @@ const EventDetailTemplateContainer: React.FC<NewsDetailTemplateContainerProps> =
         keyword={tagNewsData || []}
         titleLatest="Các sự kiện mới nhất"
         titleHot="Các sự kiện nổi bật"
+        eventCardDetails={{
+          address: data?.address,
+          button: data?.link,
+          name: data?.addressName,
+          thumbnail: getImageURL(data?.thumbnail),
+          time: `${getTime(data?.eventFrom)} - ${getTime(data?.eventTo)}`,
+          timeSchedule: `${formatDateDDMMYYYY(data?.eventFrom, true)} - ${formatDateDDMMYYYY(data?.eventTo, true)}`,
+        }}
+        handleTagClick={handleTagClick}
       />
     </div>
   );
