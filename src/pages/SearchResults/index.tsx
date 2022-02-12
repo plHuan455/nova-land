@@ -1,12 +1,12 @@
 import React from 'react';
 
 import MainLayout from 'components/templates/MainLayout';
-import SearchResultsContainer from 'container/SearchResults';
+import SearchResultsContainer, { SearchBlock } from 'container/SearchResults';
 
-const SearchResults: React.FC = () => (
+const SearchResults: React.FC<BasePageData<SearchBlock>> = (props) => (
   <MainLayout>
     <div className="p-searchResults">
-      <SearchResultsContainer />
+      <SearchResultsContainer {...props} />
     </div>
   </MainLayout>
 );

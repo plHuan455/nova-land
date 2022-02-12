@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ChangeEvent, KeyboardEvent } from 'react';
 import { Controller, FormProvider, UseFormReturn } from 'react-hook-form';
 
 import Button from 'components/atoms/Button';
@@ -6,6 +6,7 @@ import Divider from 'components/atoms/Divider';
 import Heading from 'components/atoms/Heading';
 import Image from 'components/atoms/Image';
 import Input from 'components/atoms/Input';
+import Loading from 'components/atoms/Loading';
 import Pagination from 'components/molecules/Pagination';
 import Container from 'components/organisms/Container';
 import NewsCard, { NewsCardProps } from 'components/organisms/NewsCard';
@@ -21,13 +22,16 @@ export interface SearchResultProps {
   submitForm: (data: SearchForm) => void;
   searchAmount: number;
   newsList?: NewsCardProps[];
-  title: string,
+  title: string;
   totalPage: number;
   currentPage?: number;
   handleChangePage?: (page: number) => void;
   adImgSrc?: Array<string>;
   btnText: string;
-  placeholderText:string;
+  placeholderText: string;
+  isLoading?: boolean;
+  handleChangeSearch?: (e: ChangeEvent<HTMLInputElement>) => void;
+  onPressEnterSearch?: (e: KeyboardEvent<HTMLInputElement>) => void;
 }
 
 const SearchResult: React.FC<SearchResultProps> = ({
@@ -41,14 +45,19 @@ const SearchResult: React.FC<SearchResultProps> = ({
   adImgSrc,
   totalPage,
   currentPage,
+  isLoading,
   handleChangePage,
 }) => {
   const { isMobile } = useDeviceQueries();
+
   return (
     <div className="t-searchResult">
       <Container>
         <div className="t-searchResult_heading">
-          <Heading modifiers={['jet', '600', '52x65', 'center', 'fontNoto']} content={title} />
+          <Heading
+            modifiers={['jet', '600', '52x65', 'center', 'fontNoto']}
+            content={title}
+          />
         </div>
         <FormProvider {...method}>
           <form onSubmit={method.handleSubmit(submitForm)} noValidate>
@@ -56,10 +65,7 @@ const SearchResult: React.FC<SearchResultProps> = ({
               <div className="t-searchResult_searchInputGroup">
                 <Controller
                   name="search"
-                  render={({
-                    field,
-                    fieldState: { error },
-                  }) => (
+                  render={({ field, fieldState: { error } }) => (
                     <Input
                       autoComplete="off"
                       id="search"
@@ -70,9 +76,7 @@ const SearchResult: React.FC<SearchResultProps> = ({
                   )}
                   defaultValue=""
                 />
-                <Button type="submit">
-                  {btnText}
-                </Button>
+                <Button type="submit">{btnText}</Button>
               </div>
             </div>
           </form>
@@ -90,33 +94,43 @@ const SearchResult: React.FC<SearchResultProps> = ({
                 </Heading>
               </div>
               <div className="t-searchResult_list">
-                {newsList && newsList.map((item, idx) => (
-                  <div className="t-searchResult_list-item" key={`key-${idx.toString()}`}>
-                    {idx !== 0
-                && <Divider />}
-                    <NewsCard
-                      {...item}
-                      variant="smallVertical"
-                      modifiers="smallTitle"
-                    />
+                {isLoading ? (
+                  <div className="t-searchResult_loading">
+                    <Loading isShow />
                   </div>
-                ))}
+                ) : (
+                  <>
+                    {newsList
+                      && newsList.map((item, idx) => (
+                        <div
+                          className="t-searchResult_list-item"
+                          key={`key-${idx.toString()}`}
+                        >
+                          {idx !== 0 && <Divider />}
+                          <NewsCard
+                            {...item}
+                            variant="smallVertical"
+                            modifiers="smallTitle"
+                          />
+                        </div>
+                      ))}
+                  </>
+                )}
               </div>
             </div>
-            {!isMobile
-              && (
+            {!isMobile && (
               <div className="t-searchResult_ad">
-                {adImgSrc && adImgSrc.map((item, index) => (
-                  <div className="t-searchResult_adItem" key={`key-${index.toString()}`}>
-                    <Image
-                      src={item || ''}
-                      ratio="348x720"
-                      alt="image-ad"
-                    />
-                  </div>
-                ))}
+                {adImgSrc
+                  && adImgSrc.map((item, index) => (
+                    <div
+                      className="t-searchResult_adItem"
+                      key={`key-${index.toString()}`}
+                    >
+                      <Image src={item || ''} ratio="348x720" alt="image-ad" />
+                    </div>
+                  ))}
               </div>
-              )}
+            )}
           </div>
           {totalPage > 0 && (
             <div className="t-searchResult_pagination u-mt-md-40 u-mt-28">
@@ -133,7 +147,6 @@ const SearchResult: React.FC<SearchResultProps> = ({
   );
 };
 
-SearchResult.defaultProps = {
-};
+SearchResult.defaultProps = {};
 
 export default SearchResult;

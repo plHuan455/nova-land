@@ -4,7 +4,7 @@ import TagManager from 'react-gtm-module';
 import { useLocation } from 'react-router-dom';
 
 import { useAppDispatch, useAppSelector } from 'store/hooks';
-import { getMenusAction } from 'store/menus';
+import { getMenusAction, getStaticPageAsync } from 'store/menus';
 import { getSystemAsync } from 'store/system';
 
 const useInitializeRender = () => {
@@ -16,6 +16,7 @@ const useInitializeRender = () => {
   useEffect(() => {
     dispatch(getSystemAsync());
     dispatch(getMenusAction());
+    dispatch(getStaticPageAsync());
   }, [dispatch]);
 
   useEffect(() => {

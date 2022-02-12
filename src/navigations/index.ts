@@ -5,6 +5,7 @@ const AboutUs = React.lazy(() => import('pages/AboutUs'));
 const FieldOfActivity = React.lazy(() => import('pages/FieldOfActivity'));
 const InvestmentRelations = React.lazy(() => import('pages/InvestmentRelations'));
 const News = React.lazy(() => import('pages/News'));
+const SearchResults = React.lazy(() => import('pages/SearchResults'));
 
 export type TemplateCodeType = {
   code: string;
@@ -31,5 +32,9 @@ export const TemplateCodes: TemplateCodeType[] = [
   {
     code: 'NEWS',
     component: News,
+  },
+  {
+    code: 'SEARCH',
+    component: SearchResults,
   },
 ];
