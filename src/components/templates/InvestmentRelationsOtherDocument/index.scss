@@ -26,6 +26,7 @@
 
   &_link {
     border-bottom: 1px solid $columbia-blue;
+    cursor: pointer;
     display: flex;
     padding: rem(16) 0 rem(16) rem(12);
     @include adjust-flex($justify-content: space-between);
