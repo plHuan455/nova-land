@@ -27,6 +27,7 @@ const dummyData = [
         },
       ],
     },
+    slug: '',
   },
 ];
 

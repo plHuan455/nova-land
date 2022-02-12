@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 import React, { useState } from 'react';
 
 import Heading from 'components/atoms/Heading';
@@ -12,19 +13,25 @@ interface ProductLinesContentType {
   desc: Array<InfoType>;
 }
 
-export interface ProductLinesType{
+export interface ProductLinesType {
   label: string;
   imgActive?: string;
   imgInActive?: string;
   content: ProductLinesContentType;
+  slug: string;
 }
 
 interface ProductLinesProps {
   title: string;
   dataProductLines: Array<ProductLinesType>;
+  handleChangeTab?: (realEstatesSlug: string) => void;
 }
 
-const ProductLines: React.FC<ProductLinesProps> = ({ title, dataProductLines }) => {
+const ProductLines: React.FC<ProductLinesProps> = ({
+  title,
+  dataProductLines,
+  handleChangeTab,
+}) => {
   const [indexActive, setIndexActive] = useState(0);
   if (dataProductLines.length < 1) return null;
 
@@ -60,45 +67,59 @@ const ProductLines: React.FC<ProductLinesProps> = ({ title, dataProductLines }) 
     ],
   };
 
+  const handleActiveTab = (realEstatesSlug: string, index: number) => {
+    setIndexActive(index);
+    if (handleChangeTab) handleChangeTab(realEstatesSlug);
+  };
+
   return (
     <div className="t-productLines">
       <Animate type="goUp">
         <div className="t-productLines_title">
-          <Heading modifiers={['30x42', '500', 'jet', 'uppercase', 'center', 'fontNoto']}>{title}</Heading>
+          <Heading
+            modifiers={[
+              '30x42',
+              '500',
+              'jet',
+              'uppercase',
+              'center',
+              'fontNoto',
+            ]}
+          >
+            {title}
+          </Heading>
         </div>
         <TabsBg variableMutate={indexActive}>
           <Carousel settings={settingDefault}>
-            {
-            dataProductLines.map((item, index) => (
+            {dataProductLines.map((item, index) => (
               <TabBg
                 key={`tab-${index.toString()}`}
                 label={item.label}
                 active={index === indexActive}
                 imgActive={item.imgActive}
                 imgInActive={item.imgInActive}
-                handleClick={() => setIndexActive(index)}
+                handleClick={() => handleActiveTab(item.slug, index)}
               />
-            ))
-          }
+            ))}
           </Carousel>
         </TabsBg>
-        {
-          dataProductLines.map((item, index) => (
-            <TabBgPanel key={`tab-panel-${index.toString()}`} active={index === indexActive}>
-              <InfoProduct
-                title={item.content.title || ''}
-                imgSrc={item.content.imgSrc}
-                listInfo={item.content.desc}
-              />
-            </TabBgPanel>
-          ))
-        }
+        {dataProductLines.map((item, index) => (
+          <TabBgPanel
+            key={`tab-panel-${index.toString()}`}
+            active={index === indexActive}
+          >
+            <InfoProduct
+              title={item.content.title || ''}
+              imgSrc={item.content.imgSrc}
+              listInfo={item.content.desc}
+            />
+          </TabBgPanel>
+        ))}
       </Animate>
     </div>
   );
 };
 
-ProductLines.defaultProps = {
-};
+ProductLines.defaultProps = {};
 
 export default ProductLines;
