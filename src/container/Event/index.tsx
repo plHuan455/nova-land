@@ -1,108 +1,93 @@
-import React, { useCallback, useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import React, {
+  useMemo, useState,
+} from 'react';
+import { useQuery } from 'react-query';
 
-import Loading from 'components/atoms/Loading';
-import { EventCardProps } from 'components/molecules/EventCard';
 import EventList from 'components/templates/EventList';
-import LatestNews from 'components/templates/LatestNews';
+import LatestNews, { LatestNewsCardProps } from 'components/templates/LatestNews';
 import Section from 'components/templates/Section';
 import BannerRecruitmentContainer from 'container/Event/bannerContainer';
 import BreadcrumbContainer from 'container/Event/breadcrumbContainer';
 import getCalendarListService from 'services/calendar';
+import { DEFAULT_QUERY_OPTION } from 'utils/constants';
 import { getImageURL } from 'utils/functions';
 
-const LIMIT = 15;
-const PAGE = 1;
-
 const EventContainer: React.FC = () => {
-  const [isLoading, setLoading] = useState(false);
-  const [totalPages, setTotalPages] = useState<number>(1);
-  const [page, setPage] = useState<number>(1);
-  const [listData, setListData] = useState<EventCardProps[]>([]);
-  const { slug } = useParams<{ slug: string }>();
+  const [pagination, setPagination] = useState({
+    page: 1,
+    totalPages: 1,
+  });
 
-  const fetchReportListData = useCallback(async (params?: {
-    page?: number;
-    limit?: number;
-  }) => {
-    try {
-      setLoading(true);
-      const res = await getCalendarListService({
-        page: params?.page,
-        limit: params?.limit,
-      });
-      const calendarListData = res.data.map((item) => ({
-        imgSrc: getImageURL(item.thumbnail),
-        title: item.title,
-        description: item.description,
-        href: `/lich-su-kien/${item.slug}`,
+  const { data: lastestNewsData } = useQuery(
+    ['getLastestCalendar'], () => getCalendarListService({
+      limit: 3,
+    }),
+    {
+      ...DEFAULT_QUERY_OPTION,
+    },
+  );
+
+  const { data: calendarListData } = useQuery(
+    ['getCalendarList', pagination.page], () => getCalendarListService({
+      limit: 6,
+      page: pagination.page,
+      except_ids: lastestNewsData?.data.map((ele) => ele.id).join(',') || '',
+    }),
+    {
+      ...DEFAULT_QUERY_OPTION,
+      enabled: !!lastestNewsData,
+    },
+  );
+
+  const lastestNews: LatestNewsCardProps[] = useMemo(() => {
+    if (lastestNewsData) {
+      return lastestNewsData.data.map((ele, index) => ({
+        imgSrc: getImageURL(ele.thumbnail),
+        title: ele.title,
+        description: ele.description,
+        href: `/lich-su-kien/${ele.slug}`,
+        ratio: index === 0 ? '582x534' : '582x252',
       }));
-      setTotalPages(res.meta.totalPages);
-      setPage(res.meta.page);
-      setListData(calendarListData);
-    } catch {
-      // Empty
-    } finally {
-      setLoading(false);
     }
-  }, []);
+    return [];
+  }, [lastestNewsData]);
+
+  const calendarList = useMemo(() => {
+    if (calendarListData) {
+      setPagination({
+        page: calendarListData.meta.page,
+        totalPages: calendarListData.meta.totalPages,
+      });
+      return calendarListData.data.map((ele) => ({
+        imgSrc: getImageURL(ele.thumbnail),
+        title: ele.title,
+        description: ele.description,
+        href: `/lich-su-kien/${ele.slug}`,
+      }));
+    }
+    return [];
+  }, [calendarListData]);
 
   const handleChangePage = async (pageChange: number) => {
-    setLoading(true);
-    try {
-      if (totalPages > page) {
-        const res = await getCalendarListService({
-          page: pageChange,
-          limit: LIMIT,
-        });
-        const calendarListData = res.data.map((item) => ({
-          imgSrc: getImageURL(item.thumbnail),
-          title: item.title,
-          description: item.description,
-          href: `/lich-su-kien/${item.slug}`,
-        }));
-        setTotalPages(res.meta.totalPages);
-        setPage(res.meta.page);
-        setListData(calendarListData);
-      } else {
-        setListData(listData.slice(0, LIMIT));
-        setPage(1);
-      }
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    fetchReportListData({
-      limit: LIMIT,
-      page: PAGE,
+    setPagination({
+      ...pagination,
+      page: pageChange,
     });
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [slug]);
+  };
 
   return (
     <>
       <BannerRecruitmentContainer />
       <BreadcrumbContainer />
-      {isLoading ? (
-        <Loading isShow />
-      )
-        : (
-          <>
-            <LatestNews dataLatestNews={listData} />
-            <Section modifiers="noPb">
-              <EventList
-                eventList={listData}
-                totalPage={totalPages}
-                currentPage={1}
-                // eslint-disable-next-line no-console
-                handleGetPage={handleChangePage}
-              />
-            </Section>
-          </>
-        )}
+      <LatestNews dataLatestNews={lastestNews} />
+      <Section modifiers="noPt">
+        <EventList
+          eventList={calendarList}
+          totalPage={pagination.totalPages}
+          currentPage={pagination.page}
+          handleGetPage={handleChangePage}
+        />
+      </Section>
     </>
   );
 };

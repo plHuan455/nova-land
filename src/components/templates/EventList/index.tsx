@@ -14,26 +14,24 @@ interface EventListProps {
 const EventList: React.FC<EventListProps> = ({
   eventList, currentPage, totalPage, handleGetPage,
 }) => (
-  <div className="t-eventList">
-    <Container>
-      <div className="t-eventList_list">
-        {eventList?.map((item, idx) => (
-          <div key={`eventCard-item-${idx.toString()}`} className="t-eventList_list-item">
-            <EventCard
-              {...item}
-            />
-          </div>
-        ))}
-      </div>
-      <div className="t-eventList_paginate">
-        <Pagination
-          pageCurrent={currentPage}
-          totalPage={totalPage}
-          handleChangePage={handleGetPage}
-        />
-      </div>
-    </Container>
-  </div>
+  <Container>
+    <div className="t-eventList">
+      {eventList?.map((item, idx) => (
+        <div key={`eventCard-item-${idx.toString()}`} className="t-eventList_list-item">
+          <EventCard
+            {...item}
+          />
+        </div>
+      ))}
+    </div>
+    <div className="t-eventList_paginate">
+      <Pagination
+        pageCurrent={currentPage}
+        totalPage={totalPage}
+        handleChangePage={handleGetPage}
+      />
+    </div>
+  </Container>
 );
 
 EventList.defaultProps = {

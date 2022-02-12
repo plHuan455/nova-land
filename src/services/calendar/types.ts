@@ -26,4 +26,5 @@ export type CalendarParamsType = {
   page?: number;
   is_popular?: boolean;
   limit?: number;
+  except_ids?: string;
 }

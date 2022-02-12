@@ -33,7 +33,7 @@ const EventCard: React.FC<EventCardProps> = ({
         </Link>
       </div>
       <div className="m-eventCard_content-desc">
-        <Text modifiers={['400', '14x20', 'dimGray']}>{description}</Text>
+        <Text modifiers={['400', '14x20', 'dimGray']} content={description} />
       </div>
       <div className="m-eventCard_content_link">
         <Link href={href} target={target}>
