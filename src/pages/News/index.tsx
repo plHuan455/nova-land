@@ -1,12 +1,12 @@
 import React from 'react';
 
 import MainLayout from 'components/templates/MainLayout';
-import NewsContainer from 'container/News';
+import NewsContainer, { NewsData } from 'container/News';
 
-const News: React.FC = () => (
+const News: React.FC<BasePageData<NewsData>> = (props) => (
   <MainLayout>
     <div className="p-news">
-      <NewsContainer />
+      <NewsContainer {...props} />
     </div>
   </MainLayout>
 );

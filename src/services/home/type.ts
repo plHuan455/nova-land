@@ -1,17 +1,19 @@
 /* eslint-disable camelcase */
-export type NewsCategoryDataTypes = {
+type NewsCategoryParentTypes = {
   id: number,
-  parent?: {
-    id: number,
-    name: string,
-    slug: string,
-  },
   name: string,
   slug: string,
-  children: {
-    name: string,
-    slug: string,
-  }[]
+}
+
+export type NewsCategoryChildrenTypes = {
+  name: string,
+  slug: string,
+}
+
+export type NewsCategoryDataTypes = {
+  id: number,
+  name: string,
+  slug: string,
   banner: {
     name: string;
     items: BannersDataTypes[];
@@ -19,6 +21,8 @@ export type NewsCategoryDataTypes = {
   breadcrumbs: BreadcrumbsData[];
   seoData: SEOData;
   openGraph: OpenGraphData;
+  parent?: NewsCategoryParentTypes[],
+  children: NewsCategoryChildrenTypes[],
 }
 
 export type NewsListParamsTypes = {
@@ -28,6 +32,7 @@ export type NewsListParamsTypes = {
   category_slug?: string,
   is_popular?: boolean,
   is_new?: boolean,
+  except_ids?: string,
 }
 
 export type NewsDataTypes = {
@@ -35,7 +40,7 @@ export type NewsDataTypes = {
   displayOrder: number;
   thumbnail: string;
   publishedAt: string;
-  viewed: 1000,
+  viewed: number,
   category: {
     id: number;
     name: string;

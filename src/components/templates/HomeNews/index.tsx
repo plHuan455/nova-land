@@ -130,37 +130,41 @@ const HomeNews: React.FC<HomeNewsProps> = ({
               ))
             }
           </Tabs>
-          {loading ? <Loading isShow /> : (
-            <div className="t-homeNews_list">
-              {
-                newsList && newsList.length > 0 ? newsList.map((ele, idx) => (
-                  <div className="t-homeNews_content" key={`homeNews-homeNewsCard-${idx.toString()}`}>
-                    <div className="t-homeNews_item">
-                      <HomeNewsCard
-                        {...ele}
-                      />
+          {(() => {
+            if (loading) return <Loading isShow />;
+            return (
+              <div className="t-homeNews_list">
+                {
+              newsList && newsList.length > 0 ? (
+                <>
+                  {newsList.map((ele, idx) => (
+                    <div className="t-homeNews_content" key={`homeNews-homeNewsCard-${idx.toString()}`}>
+                      <div className="t-homeNews_item">
+                        <HomeNewsCard
+                          {...ele}
+                        />
+                      </div>
                     </div>
+                  ))}
+                  <div className="t-homeNews_button">
+                    <Link href={href} target={target}>
+                      <Button modifiers="outlineSpanishGray">
+                        {nameButton || 'Xem tất cả bài viết'}
+                      </Button>
+                    </Link>
                   </div>
-                ))
-                  : (
-                    <div className="t-homeNews_empty">
-                      <Text modifiers={['center', '20x28']}>Không có tin tức</Text>
-                    </div>
-                  )
-              }
-            </div>
-          )}
-          {
-            !loading && (
-            <div className="t-homeNews_button">
-              <Link href={href} target={target}>
-                <Button modifiers="outlineSpanishGray">
-                  {nameButton || 'Xem tất cả bài viết'}
-                </Button>
-              </Link>
-            </div>
-            )
-          }
+                </>
+              )
+                : (
+                  <div className="t-homeNews_empty">
+                    <Text modifiers={['center', '20x28']}>Không có tin tức</Text>
+                  </div>
+                )
+            }
+              </div>
+            );
+          })()}
+
         </div>
       </Container>
     </div>
