@@ -20,7 +20,6 @@ export interface NewsCardProps {
 
 const NewsCard: React.FC<NewsCardProps> = ({
   imgSrc,
-  alt,
   title,
   desc,
   time,
@@ -49,7 +48,7 @@ const NewsCard: React.FC<NewsCardProps> = ({
             <Image
               src={imgSrc}
               ratio={checkRatio()}
-              alt={alt}
+              alt={title}
             />
           </div>
           <div className="o-newsCard_layer" />

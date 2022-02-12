@@ -72,9 +72,10 @@ const Header: React.FC<HeaderProps> = ({
   // Submit search
   const handleSubmit = (text?: string) => {
     if (text) {
-      navigate(`${getSlugByTemplateCode('SEARCH', staticPage)}?keyword=${text}`);
+      navigate(`/${getSlugByTemplateCode('SEARCH', staticPage)}?keyword=${text}`);
     }
     setIsOpenSearch(false);
+    setIsOpenMenu(!isOpenMenu);
     if (inputRef.current) {
       inputRef.current.value = '';
     }

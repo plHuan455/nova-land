@@ -55,7 +55,7 @@ const SearchResultsContainer: React.FC<BasePageData<SearchBlock>> = ({ pageData,
   const newsData = useMemo(() => {
     let newsList: NewsCardProps[] = [];
     let totalPages = 1;
-    let totalNews = 1;
+    let totalNews = 0;
     if (newDataList) {
       newsList = newDataList.data.map((item) => ({
         imgSrc: getImageURL(item.thumbnail),
