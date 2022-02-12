@@ -13,7 +13,6 @@ import NotifyModal, { NotifyType } from 'components/organisms/NotifyModal';
 import submitContactService from 'services/contact';
 import { useAppDispatch, useAppSelector } from 'store/hooks';
 import { getProjectsAction } from 'store/project';
-import { getSystemAsync } from 'store/system';
 import { getImageURL } from 'utils/functions';
 import registerSchema from 'utils/schemas';
 
@@ -101,7 +100,6 @@ const FooterContainer: React.FC<FooterContainerProps> = () => {
   );
 
   useEffect(() => {
-    dispatch(getSystemAsync());
     if (!projectData) {
       dispatch(getProjectsAction({}));
     }

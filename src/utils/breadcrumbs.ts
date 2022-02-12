@@ -3,7 +3,7 @@ import { getStaticSlug } from './languages';
 import { BreadcrumbPropsTypes } from 'components/molecules/Breadcrumb';
 
 function detectType(type: string, lang: string) {
-  if (type === 'news_category') {
+  if (type === 'news_categories') {
     return `/${getStaticSlug('NEWS_CATEGORY', lang)}`;
   }
   return '';

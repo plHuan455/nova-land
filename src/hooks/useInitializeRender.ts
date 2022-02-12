@@ -5,6 +5,7 @@ import { useLocation } from 'react-router-dom';
 
 import { useAppDispatch, useAppSelector } from 'store/hooks';
 import { getMenusAction } from 'store/menus';
+import { getSystemAsync } from 'store/system';
 
 const useInitializeRender = () => {
   const location = useLocation();
@@ -13,6 +14,7 @@ const useInitializeRender = () => {
   const [initializedGA, setInitializedGA] = useState(false);
 
   useEffect(() => {
+    dispatch(getSystemAsync());
     dispatch(getMenusAction());
   }, [dispatch]);
 
