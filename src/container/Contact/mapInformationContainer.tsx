@@ -19,7 +19,7 @@ const MapInformationContainer: React.FC<MapInformationContainerProps> = ({ dataM
 
   const handleLocationSearch = () => {
     try {
-      if (navigator.geolocation && isBack === false) {
+      if (navigator.geolocation && !isBack) {
         navigator.geolocation.getCurrentPosition(
           async (position: GeolocationPosition) => {
             const pos = {

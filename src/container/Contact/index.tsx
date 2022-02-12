@@ -52,16 +52,12 @@ const ContactContainer: React.FC<BasePageData<ContactBlock>> = ({
   return (
     <>
       <HelmetContainer
-        seoData={{
-          title: seoData.title,
-          description: seoData.description,
-          keyword: seoData.keyword,
-        }}
+        seoData={seoData}
       />
       <MapInformationContainer
         dataMarker={{
-          lat: Number(locationBlock.latitude),
-          lng: Number(locationBlock.longtitude),
+          lat: parseFloat(locationBlock.latitude),
+          lng: parseFloat(locationBlock.longtitude),
           dataMarker: {
             title: locationBlock.locationName,
             dataCard: [
