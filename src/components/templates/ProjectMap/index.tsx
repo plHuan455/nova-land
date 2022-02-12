@@ -138,7 +138,7 @@ const InfoMap: React.FC<InfoProps> = ({
             key={i.toString()}
             className={`t-projectMap_info_branch ${idProjectActive ? 'zoom-in' : ''} ${idProjectActive === x.id ? 'zoom-out' : ''}`}
           >
-            <Image src={x.thumbnail} ratio="257x64" />
+            <Image src={x.thumbnail} ratio="257x64" alt={x.name} />
           </div>
         ))}
       </Carousel>

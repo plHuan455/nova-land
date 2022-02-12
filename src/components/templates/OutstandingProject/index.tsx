@@ -25,7 +25,7 @@ export const OutstandingProjectCard: React.FC<OutstandingProjectCardProps> = ({
   <div className="t-outstandingProjectCard">
     <Link href={href} target={target} useExternal={checkExternalUrl(href)}>
       <div className="t-outstandingProjectCard_thumbnail">
-        <Image src={imgSrc} ratio="221x166" alt="OutstandingProjectCard" />
+        <Image src={imgSrc} ratio="221x166" alt={title} />
       </div>
       <div className="t-outstandingProjectCard_title">
         <Text modifiers={['16x24', 'arsenic', '300', 'fontLexend']} content={title} />
