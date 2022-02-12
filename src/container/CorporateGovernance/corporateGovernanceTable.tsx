@@ -114,6 +114,8 @@ const CorporateGovernanceTableContainer: React.FC = () => {
     return [];
   }, [documentData, documentTab]);
 
+  const isLoading = useMemo(() => documentData.some((ele) => ele.isLoading), [documentData]);
+
   const handleChangeTab = (e: number) => {
     setIndexActive(e);
     if (documentCategoriesData) {
@@ -136,6 +138,7 @@ const CorporateGovernanceTableContainer: React.FC = () => {
   return (
     <div className="p-corporateGovernance_corporateGovernanceTable">
       <CorporateGovernance
+        loading={isLoading}
         dataGeneral={data}
         dataTabGeneral={documentYearsData || []}
         tabActive={indexActive}
