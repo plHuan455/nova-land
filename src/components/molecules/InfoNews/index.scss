@@ -3,8 +3,11 @@
   display: flex;
   
   &_image {
-    max-width: rem(90);
-    width: 100%;
+    min-width: rem(90);
+
+    @include tablet-down {
+      min-width: rem(70);
+    }
   }
 
   &_content {
@@ -14,6 +17,14 @@
       &:nth-child(2) {
         margin-top: rem(4); 
       }
+    }
+  }
+
+  &_title {
+    @include text-overflow(4);
+
+    @include tablet-down {
+      @include text-overflow(3);
     }
   }
 }
