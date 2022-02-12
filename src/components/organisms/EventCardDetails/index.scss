@@ -1,0 +1,52 @@
+.o-eventCardDetails {
+  position: relative;
+  margin-top: rem(40);
+  margin-bottom: rem(40);
+
+  @include mobile-down {
+    margin-top: rem(20);
+    margin-bottom: rem(20);
+  }
+
+  &_content {
+    padding: rem(20) rem(30);
+    display: flex;
+    border: 1px solid $camel;
+
+    @include mobile-down {
+      flex-direction: column;
+    }
+  }
+
+  &_left {
+    flex: 1;
+
+    &_item {
+      @include adjust-flex(flex-start, flex-start);
+      
+      &:not(:first-child) {
+        margin-top: rem(10);
+      }
+
+      .a-icon {
+        margin-right: rem(10);
+      }
+    }
+  }
+
+  &_right {
+    flex-basis: rem(250);
+    flex-shrink: 0;
+    @include adjust-flex();
+
+    .a-button {
+      @include font-base(14, 20);
+      padding: rem(18) rem(30);
+    }
+
+    @include mobile-down {
+      flex-basis: 100%;
+      margin-top: rem(20);
+    }
+  }
+}

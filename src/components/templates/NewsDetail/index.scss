@@ -66,6 +66,7 @@
 
   &_content {
     &-desc {
+      word-break: break-all;
       button {
         height: rem(45);
         width: rem(237);

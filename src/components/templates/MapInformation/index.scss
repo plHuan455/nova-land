@@ -47,14 +47,11 @@
   width: 100%;
 
   &_card {
-    left: 10%;
-    max-width: rem(448);
     max-width: rem(448);
     position: absolute;
     top: rem(4);
     width: 100%;
     z-index: 2;
-
     @include tablet-down {
       max-width: rem(348);
       top: rem(10);

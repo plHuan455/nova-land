@@ -14,7 +14,7 @@ const LatestNewsContainer: React.FC<{latestNewsData: NewsDataTypes[]}> = ({ late
     time: new Date(item.publishedAt || '') === new Date()
       ? `${getHourFromPastToCurrent(item.publishedAt)} giờ trước`
       : formatDateDDMMYYYY(item.publishedAt),
-    href: `/tin-tuc-chi-tiet/${item.slug}`,
+    href: `/chi-tiet-tin-tuc/${item.slug}`,
   }));
   return (
     <Animate type="goUp">

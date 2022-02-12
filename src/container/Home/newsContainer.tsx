@@ -66,7 +66,7 @@ const NewsContainer: React.FC<NewsBlock> = ({
         desc: item.description,
         date: formatDateDDMMYYYY(new Date(item.publishedAt).toDateString()),
         totalViews: item.viewed,
-        href: `/tin-tuc-chi-tiet/${item.slug}`,
+        href: `/chi-tiet-tin-tuc/${item.slug}`,
       }));
     }
     return [];
