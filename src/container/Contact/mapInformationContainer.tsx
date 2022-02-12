@@ -120,7 +120,7 @@ const MapInformationContainer: React.FC<MapInformationContainerProps> = ({ dataM
   return (
     <div className="p-contact_mapInformation">
       <MapInformation
-        mapAPIkey={systemData?.gtmId || 'AIzaSyAt4eV8aoSdhKXHQSQvJc7aSEGlcnUVbdo'}
+        mapAPIkey={systemData?.gmapId || 'AIzaSyAt4eV8aoSdhKXHQSQvJc7aSEGlcnUVbdo'}
         mapMarker={dataLocation}
         handleLocationSearch={handleLocationSearch}
       />
