@@ -23,11 +23,13 @@ const ListLogoProject: React.FC<ListLogoProjectProps> = ({
     </div>
     <div className="m-listLogoProject_listLogo">
       {listLogo?.map((item, idx) => (
-        <Link key={`logo-${idx.toString()}`} href={item.href} target={item.target} useExternal={checkExternalUrl(item.href)}>
-          <div className="m-listLogoProject_wraplogo">
-            <img src={item.imgSrc} alt="" />
-          </div>
-        </Link>
+        <div className="m-listLogoProject_item">
+          <Link key={`logo-${idx.toString()}`} href={item.href} target={item.target} useExternal={checkExternalUrl(item.href)}>
+            <div className="m-listLogoProject_wraplogo">
+              <img src={item.imgSrc} alt="" />
+            </div>
+          </Link>
+        </div>
       ))}
     </div>
   </div>
