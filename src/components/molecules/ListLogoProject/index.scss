@@ -28,7 +28,7 @@
     img {
       max-width: 100%;
       width: 100%;
-      max-height: rem(80);
+      max-height: rem(100);
     }
     @include tablet-down {
       flex: 0 0 calc(100% / 4);
