@@ -5,6 +5,7 @@ import Image from 'components/atoms/Image';
 import Link from 'components/atoms/Link';
 import Text from 'components/atoms/Text';
 import Collapses from 'components/organisms/Collapses';
+import { checkExternalUrl } from 'utils/functions';
 
 type FeaturedProjectItemTypes = {
   title: string;
@@ -39,7 +40,7 @@ const ListFeatProjectCollapse: React.FC<ListFeatProjectCollapseProps> = ({
           <div className="o-listFeatProjectCollapse_item-content">
             <Text modifiers={['16x24', 'davysGrey', '400']} content={item.content} />
           </div>
-          <Link href={item.href} target={item.target || '_blank'}>
+          <Link href={item.href} target={item.target || '_blank'} useExternal={checkExternalUrl(item.href)}>
             <div className="o-listFeatProjectCollapse_item-wrapLink">
               {/* <Icon iconName="arrowRightGolden" size="14" /> */}
               <Text modifiers={['camel', '500', 'underline']}>Xem thêm</Text>
