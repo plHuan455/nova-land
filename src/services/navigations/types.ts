@@ -24,4 +24,10 @@ export interface StaticSlug {
   title: string;
 }
 
+export interface RedirectDataTypes {
+  id: number;
+  from: string;
+  to: string;
+}
+
 export type PagePreviewData<T> = BasePageData<T> & PreviewData;

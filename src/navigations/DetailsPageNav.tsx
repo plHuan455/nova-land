@@ -69,7 +69,7 @@ const DetailsPageNav: React.FC = () => {
 
   if (isLoading || isLoadingNewsEvent) { return <Loading isShow variant="fullScreen" />; }
 
-  if (error || errorNewsEvent) return <RedirectNavigate />;
+  if (error || errorNewsEvent) return <RedirectNavigate error={error || errorNewsEvent} />;
 
   return (
     <MainLayoutContainer>

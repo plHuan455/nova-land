@@ -38,7 +38,7 @@ const RenderPage: React.FC<RenderPageProps> = ({ pageData }) => {
     return React.createElement<BasePageData<any>>(Component as FunctionComponent, pageData);
   }
 
-  return <RedirectNavigate />;
+  return <RedirectNavigate error={404} />;
 };
 
 export default RenderPage;

@@ -37,7 +37,7 @@ const PageNavigate: React.FC = () => {
   if (isLoading || isLoadingHome) return <Loading isShow variant="fullScreen" />;
 
   if (isError || homeError) {
-    return <RedirectNavigate />;
+    return <RedirectNavigate error={isError || homeError} />;
   }
 
   return <RenderPage pageData={slug ? data : homeData} />;
