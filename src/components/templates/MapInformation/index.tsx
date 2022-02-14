@@ -134,7 +134,7 @@ const MapInformation: React.FC<MapInformationProps> = ({
   mapAPIkey,
   handleLocationSearch,
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   const handleClose = (e: boolean) => {
     setIsOpen(e);

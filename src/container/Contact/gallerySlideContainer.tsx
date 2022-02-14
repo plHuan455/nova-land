@@ -7,7 +7,7 @@ interface GallerySlideContainerProps extends GallerySlideProps {}
 
 const GallerySlideContainer: React.FC<GallerySlideContainerProps> = ({ ...props }) => (
   <div className="p-contact_gallerySlide">
-    <Section>
+    <Section modifiers="noPt">
       <GallerySlide
         {...props}
       />
