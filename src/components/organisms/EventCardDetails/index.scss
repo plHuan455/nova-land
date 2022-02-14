@@ -13,7 +13,7 @@
     display: flex;
     border: 1px solid $camel;
 
-    @include mobile-down {
+    @include tablet-down {
       flex-direction: column;
     }
   }
@@ -44,7 +44,7 @@
       padding: rem(18) rem(30);
     }
 
-    @include mobile-down {
+    @include tablet-down {
       flex-basis: 100%;
       margin-top: rem(20);
     }
