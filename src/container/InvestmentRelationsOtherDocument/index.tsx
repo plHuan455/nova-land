@@ -29,12 +29,8 @@ const InvestmentRelationsOtherDocumentContainer: React.FC<BasePageData<[]>> = ({
   return (
     <>
       <HelmetContainer
-        seoData={{
-          ...seoData,
-        }}
-        ogData={{
-          ...openGraphData,
-        }}
+        seoData={seoData}
+        ogData={openGraphData}
       />
       <BannerInvestmentRelations
         src={listBanner[0]?.src || ''}
