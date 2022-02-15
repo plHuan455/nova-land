@@ -74,7 +74,9 @@ const DetailsPageNav: React.FC = () => {
   return (
     <MainLayoutContainer>
       <div className="p-newsdetail">
-        <HelmetContainer ogData={data?.openGraph} seoData={data?.seoData} />
+        {eventDetail
+          ? <HelmetContainer ogData={newsEventData?.openGraph} seoData={newsEventData?.seoData} />
+          : <HelmetContainer ogData={data?.openGraph} seoData={data?.seoData} />}
         <Section modifiers="noPt">
           <div className="p-eventDetail_breadcrumb u-mt-md-24 u-mb-md-27 u-mt-14 u-mb-16">
             <Breadcrumb
