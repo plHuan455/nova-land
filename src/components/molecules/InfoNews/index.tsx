@@ -19,10 +19,12 @@ const InfoNews: React.FC<InfoNewsProps> = ({
       <Image ratio="1x1" src={imageSrc} alt="" />
     </div>
     <div className="m-infonews_content">
-      <Link href={href}>
-        <Text modifiers={['12x17', '400', 'jet']}>
-          {title}
-        </Text>
+      <Link useExternal href={href}>
+        <div className="m-infonews_title">
+          <Text modifiers={['12x17', '400', 'jet']}>
+            {title}
+          </Text>
+        </div>
       </Link>
       <Text modifiers={['12x17', '400', 'dimGray']}>{status}</Text>
     </div>
