@@ -5,6 +5,7 @@ import Image from 'components/atoms/Image';
 import Text from 'components/atoms/Text';
 import Animate from 'components/organisms/Animate';
 import Container from 'components/organisms/Container';
+import Section from 'components/templates/Section';
 import useMatchHeight from 'hooks/useMatchHeight';
 import mapModifiers from 'utils/functions';
 
@@ -52,20 +53,22 @@ const VisionMissionValue: React.FC<VisionMissionValueProps> = ({ dataList }) => 
 
   return (
     <div className="t-VMV">
-      <Container>
-        <div className="t-VMV_wrapper">
-          {dataList?.map((item, idx) => (
-            <Animate
-              type="fadeInUp"
-              key={`VMV-item-${idx.toString()}`}
-              extendClassName={mapModifiers('t-VMV_block',
-                `animate-${idx + 1}`)}
-            >
-              <ContentBlock {...item} />
-            </Animate>
-          ))}
-        </div>
-      </Container>
+      <Section>
+        <Container>
+          <div className="t-VMV_wrapper">
+            {dataList?.map((item, idx) => (
+              <Animate
+                type="fadeInUp"
+                key={`VMV-item-${idx.toString()}`}
+                extendClassName={mapModifiers('t-VMV_block',
+                  `animate-${idx + 1}`)}
+              >
+                <ContentBlock {...item} />
+              </Animate>
+            ))}
+          </div>
+        </Container>
+      </Section>
     </div>
   );
 };

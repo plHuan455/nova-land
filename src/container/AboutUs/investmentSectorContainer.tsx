@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 
 import InvestmentSector from 'components/templates/InvestmentSector';
+import Section from 'components/templates/Section';
 import { useAppDispatch, useAppSelector } from 'store/hooks';
 import { getRealEstatesAction } from 'store/project';
 import { getImageURL } from 'utils/functions';
@@ -42,12 +43,14 @@ const InvestmentSectorContainer: React.FC<InvestmentSectorContainerProps> = ({
   }, []);
 
   return (
-    <div className="p-aboutUs_investmentSector pt-100">
-      <InvestmentSector
-        {...props}
-        investmentSectorList={investmentSectorData || []}
-        loading={isLoading}
-      />
+    <div className="p-aboutUs_investmentSector">
+      <Section>
+        <InvestmentSector
+          {...props}
+          investmentSectorList={investmentSectorData || []}
+          loading={isLoading}
+        />
+      </Section>
     </div>
   );
 };

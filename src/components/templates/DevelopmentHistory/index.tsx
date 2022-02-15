@@ -5,6 +5,7 @@ import Image from 'components/atoms/Image';
 import Text from 'components/atoms/Text';
 import Carousel from 'components/organisms/Carousel';
 import Container from 'components/organisms/Container';
+import Section from 'components/templates/Section';
 
 export type ProcessItemProps = {
   year: string;
@@ -65,28 +66,30 @@ const DevelopmentHistory: React.FC<DevelopmentHistoryProps> = ({
 
   return (
     <div className="t-developmentHistory">
-      <Container>
-        <Heading type="h2" modifiers={['32x48', '500', 'white', 'center', 'fontNoto']} content={title} />
-        <div className="t-developmentHistory_description">
-          <Text type="div" modifiers={['center', 'white', '16x24', '300']} content={description} />
-        </div>
-        {list.length > 0 && (
-          <div className="t-developmentHistory_content">
-            <div className="t-developmentHistory_process">
-              <Carousel
-                settings={settings}
-              >
-                {list.map((item, index) => (
-                  <ProcessItem {...item} key={`item-${index.toString()}`} />
-                ))}
-              </Carousel>
-            </div>
-            <div className="t-developmentHistory_background">
-              <Image alt="imgBackground" ratio="624x495" src={list[indexActive].imgBackground || ''} />
-            </div>
+      <Section>
+        <Container>
+          <Heading type="h2" modifiers={['32x48', '500', 'white', 'center', 'fontNoto']} content={title} />
+          <div className="t-developmentHistory_description">
+            <Text type="div" modifiers={['center', 'white', '16x24', '300']} content={description} />
           </div>
-        )}
-      </Container>
+          {list.length > 0 && (
+            <div className="t-developmentHistory_content">
+              <div className="t-developmentHistory_process">
+                <Carousel
+                  settings={settings}
+                >
+                  {list.map((item, index) => (
+                    <ProcessItem {...item} key={`item-${index.toString()}`} />
+                  ))}
+                </Carousel>
+              </div>
+              <div className="t-developmentHistory_background">
+                <Image alt="imgBackground" ratio="624x495" src={list[indexActive].imgBackground || ''} />
+              </div>
+            </div>
+          )}
+        </Container>
+      </Section>
     </div>
   );
 };

@@ -95,15 +95,10 @@
 .t-developmentHistory {
   background: $cool-black bottom right no-repeat;
   background-size: contain;
-  padding: rem(72) 0 rem(30);
 
   &_background {
     align-self: flex-start;
     width: 100%;
-  }
-
-  @include small-mobile {
-    padding: rem(40) 0 rem(20);
   }
 
   &_content {
@@ -137,7 +132,7 @@
 
   .slick {
     &-track {
-      padding: rem(32) 0 rem(400);
+      padding: rem(32) 0 rem(380);
 
       @include small-mobile {
         padding: rem(32) 0 rem(350);

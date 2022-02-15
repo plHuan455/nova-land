@@ -7,6 +7,7 @@ import Text from 'components/atoms/Text';
 import { AnimateCarousel } from 'components/organisms/Animate';
 import Carousel, { PrevArrow, NextArrow } from 'components/organisms/Carousel';
 import Container from 'components/organisms/Container';
+import Section from 'components/templates/Section';
 import { checkExternalUrl } from 'utils/functions';
 
 export interface OutstandingProjectCardProps {
@@ -76,34 +77,36 @@ const OutstandingProject: React.FC<OutstandingProjectProps> = ({
   outstandingProjectList,
 }) => (
   <div className="t-outstandingProject">
-    <Container>
-      <div className="t-outstandingProject_wrapper">
-        <div className="t-outstandingProject_title">
-          <AnimateCarousel type="fadeInLeft">
-            <Heading
-              modifiers={['32x48', 'camel', '500', 'fontNoto', 'uppercase']}
-              content={title}
-            />
-          </AnimateCarousel>
+    <Section>
+      <Container>
+        <div className="t-outstandingProject_wrapper">
+          <div className="t-outstandingProject_title">
+            <AnimateCarousel type="fadeInLeft">
+              <Heading
+                modifiers={['32x48', 'camel', '500', 'fontNoto', 'uppercase']}
+                content={title}
+              />
+            </AnimateCarousel>
+          </div>
+          <div className="t-outstandingProject_content">
+            <AnimateCarousel type="fadeInRight">
+              {outstandingProjectList.length > 0 && (
+                <Carousel settings={setting}>
+                  {outstandingProjectList.map((item, index) => (
+                    <div
+                      className="t-outstandingProject_item"
+                      key={`outstandingProject-${index.toString()}`}
+                    >
+                      <OutstandingProjectCard {...item} />
+                    </div>
+                  ))}
+                </Carousel>
+              )}
+            </AnimateCarousel>
+          </div>
         </div>
-        <div className="t-outstandingProject_content">
-          <AnimateCarousel type="fadeInRight">
-            {outstandingProjectList.length > 0 && (
-              <Carousel settings={setting}>
-                {outstandingProjectList.map((item, index) => (
-                  <div
-                    className="t-outstandingProject_item"
-                    key={`outstandingProject-${index.toString()}`}
-                  >
-                    <OutstandingProjectCard {...item} />
-                  </div>
-                ))}
-              </Carousel>
-            )}
-          </AnimateCarousel>
-        </div>
-      </div>
-    </Container>
+      </Container>
+    </Section>
   </div>
 );
 export default OutstandingProject;
