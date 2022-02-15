@@ -99,6 +99,10 @@
   &_background {
     align-self: flex-start;
     width: 100%;
+
+    @include tablet-down {
+      display: none;
+    }
   }
 
   &_content {
@@ -127,6 +131,10 @@
       top: 0;
       width: 100%;
       z-index: 1;
+    }
+
+    @include tablet-down {
+      max-width: 100%;
     }
   }
 
