@@ -1,6 +1,15 @@
 .p-aboutUs {
   &_ecoSystem {
+    padding-bottom: rem(122);
     background-color: $white-smoke2;
+
+    @include tablet-down {
+      padding-bottom: rem(100);
+    }
+  
+    @include mobile-down {
+      padding-bottom: rem(70);
+    }
   }
 
   &_awardList {

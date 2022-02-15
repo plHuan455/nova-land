@@ -9,7 +9,7 @@ interface EcoSystemContainerProps extends EcoSystemsProps { }
 const EcoSystemContainer: React.FC<EcoSystemContainerProps> = ({ ...props }) => (
   <Animate type="goUp">
     <div className="p-aboutUs_ecoSystem">
-      <Section>
+      <Section modifiers="noPb">
         <EcoSystems
           {...props}
         />
