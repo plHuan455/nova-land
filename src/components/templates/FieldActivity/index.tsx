@@ -22,7 +22,7 @@ const FieldActivity: React.FC<FieldActivityProps> = ({ title, imgSrc }) => (
           <Image
             src={imgSrc}
             ratio="674x272"
-            alt="field_activity"
+            alt={title}
           />
         </div>
       </Container>
