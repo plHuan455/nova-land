@@ -5,6 +5,9 @@ import {
   OtherDocumentsDataTypes,
   DocumentTypes,
   DocumentsParamsType,
+  OtherDocumentCategoriesTypes,
+  OtherDocumentCategoriesDetailParamsTypes,
+  OtherDocumentCategoriesDetailTypes,
 } from './types';
 
 import axiosInstance from 'services/common/instance';
@@ -42,6 +45,21 @@ export const getDocumentCategoryService = async (
 ): Promise<DocumentTypes[]> => {
   const response = await axiosInstance.get('document-categories', { params });
   return response.data.data;
+};
+
+export const getOtherDocumentCategoriesService = async (
+  params?: DocumentsParamsType,
+): Promise<APIPaginationResponse<OtherDocumentCategoriesTypes[]>> => {
+  const response = await axiosInstance.get('other-document-categories', { params });
+  return response.data;
+};
+
+export const getOtherDocumentCategoriesDetailService = async (
+  id: number,
+  params?: OtherDocumentCategoriesDetailParamsTypes,
+): Promise<APIPaginationResponse<OtherDocumentCategoriesDetailTypes[]>> => {
+  const response = await axiosInstance.get(`other-documents/category/${id}`, { params });
+  return response.data;
 };
 
 export default getDocumentsService;

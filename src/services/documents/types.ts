@@ -46,3 +46,30 @@ export type DocumentsParamsType = {
   page?: number;
   limit?: number;
 }
+
+export type OtherDocumentCategoriesTypes = {
+  id: number;
+  displayOrder: number;
+  name: string;
+  slug: string;
+  parentId: number;
+}
+
+export type OtherDocumentCategoriesDetailParamsTypes = {
+  keyword?: string;
+  page?: number;
+  limit?: number;
+}
+
+export type OtherDocumentCategoriesDetailTypes = {
+  id: number;
+  name: string;
+  locale: string;
+  file: string;
+  publishedAt: string;
+  showHome: boolean;
+}
+
+export type OtherDocumentCategoriesDataTypes = {
+  subMenu?: OtherDocumentCategoriesDataTypes[];
+} & OtherDocumentCategoriesTypes;

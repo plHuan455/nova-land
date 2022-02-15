@@ -28,7 +28,4 @@ const BannerRecruitment: React.FC<BannerRecruitmentProps> = ({
   </div>
 );
 
-BannerRecruitment.defaultProps = {
-};
-
 export default BannerRecruitment;

@@ -1,3 +1,4 @@
+import { OtherDocumentCategoriesDataTypes } from 'services/documents/types';
 import { MenuItemDataTypes } from 'services/menus/types';
 
 const groupMenus = (menus?: MenuItemDataTypes[]) => {
@@ -28,6 +29,39 @@ const groupMenus = (menus?: MenuItemDataTypes[]) => {
   };
   if (menus.length > 0) {
     const firstLevelParentId = menus.find((menu) => menu.depth === 1)!.parentId;
+    return recursiveMenus(menus, firstLevelParentId);
+  }
+  return [];
+};
+
+export const groupMenusOtherDocument = (menus?: OtherDocumentCategoriesDataTypes[]) => {
+  if (!menus) {
+    return [];
+  }
+  const recursiveMenus = (
+    menuList: OtherDocumentCategoriesDataTypes[],
+    parentId: number,
+  ): OtherDocumentCategoriesDataTypes[] => {
+    const menusGrouped: OtherDocumentCategoriesDataTypes[] = [];
+    menuList.forEach((menu) => {
+      if (menu.parentId === parentId) {
+        const subMenus = recursiveMenus(menuList, menu.id);
+        menusGrouped.push(
+          subMenus.length > 0
+            ? {
+              ...menu,
+              subMenu: subMenus,
+            }
+            : {
+              ...menu,
+            },
+        );
+      }
+    });
+    return menusGrouped;
+  };
+  if (menus.length > 0) {
+    const firstLevelParentId = menus.find((menu) => menu.parentId === 0)!.parentId;
     return recursiveMenus(menus, firstLevelParentId);
   }
   return [];

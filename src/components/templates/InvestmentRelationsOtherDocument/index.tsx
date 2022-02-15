@@ -6,10 +6,12 @@ import Heading from 'components/atoms/Heading';
 import Icon from 'components/atoms/Icon';
 import Image from 'components/atoms/Image';
 import Link from 'components/atoms/Link';
+import Loading from 'components/atoms/Loading';
 import Text from 'components/atoms/Text';
 import Pagination from 'components/molecules/Pagination';
 import Pulldown, { OptionType } from 'components/molecules/Pulldown';
 import Container from 'components/organisms/Container';
+import { OtherDocumentCategoriesDataTypes } from 'services/documents/types';
 import mapModifiers from 'utils/functions';
 
 /** ******MENU********* */
@@ -28,10 +30,11 @@ export interface MenuType {
   subMenu: MenuItemType[];
 }
 
-interface MenuProps {
-  data: MenuType[];
+export interface MenuProps {
+  data: OtherDocumentCategoriesDataTypes[];
+  handleClick?: (e: number) => void;
 }
-export const Menu: React.FC<MenuProps> = ({ data }) => {
+export const Menu: React.FC<MenuProps> = ({ data, handleClick }) => {
   const [idActive, setIdActive] = useState<number>();
   const [idSubActive, setIdSubActive] = useState<number>();
   const [hoverActive, setHoverActive] = useState<number>(1);
@@ -65,39 +68,38 @@ export const Menu: React.FC<MenuProps> = ({ data }) => {
             onMouseLeave={() => onHoverSub(-1)}
             key={String(e.id)}
           >
-            <div className="t-menu_subHead" onClick={() => onClickSub(e.id)}>
+            <div
+              className="t-menu_subHead"
+              onClick={() => {
+                onClickSub(e.id);
+                if (handleClick) handleClick(e.id);
+              }}
+            >
               <div className="t-menu_subHead-title">
-                <Link
-                  target={e.target}
-                  href={e.slug}
-                >
-                  <Text type="span" modifiers={['darkMidnightBlue', '600', '18x22', 'fontLexend']}>{e.title}</Text>
-                </Link>
+                <Text type="span" modifiers={['darkMidnightBlue', '600', '18x22', 'fontLexend']}>{e.name}</Text>
               </div>
-              {e?.subMenu?.length > 0 && (
+              {e.subMenu && e.subMenu.length > 0 && (
                 <div className="t-menu_subHead-icon">
                   <Icon size="24" iconName="arrowUp" />
                 </div>
               )}
             </div>
             <ul className="t-menu_subList">
-              {e?.subMenu?.length > 0 && e.subMenu.map((s, idx) => (
-                <li key={`menu_subList-${idx.toString()}`}>
-                  {s.slug && (
-                  <Link
-                    target={s.target}
-                    href={s.slug}
-                    activeClassName="active"
-                    customClassName={`t-menu_link ${(s.id === idSubActive) && 'active'}`}
-                  >
+              {e.subMenu && e.subMenu.length > 0 && e.subMenu.map((s, idx) => (
+                <li
+                  key={`menu_subList-${idx.toString()}`}
+                  onClick={() => {
+                    if (handleClick) handleClick(s.id);
+                  }}
+                >
+                  <div className={`t-menu_link ${(s.id === idSubActive) && 'active'}`}>
                     <div className="t-menu_subHead_title">
-                      <Text type="span" modifiers={['400', '16x24', 'fontLexend', 'dimGray']}>{s.title}</Text>
+                      <Text type="span" modifiers={['400', '16x24', 'fontLexend', 'dimGray']}>{s.name}</Text>
                     </div>
                     <div className="t-menu_subHead-iconSub">
                       <Icon size="24" iconName="arrowNextSlateGray" />
                     </div>
-                  </Link>
-                  )}
+                  </div>
                 </li>
               ))}
             </ul>
@@ -115,33 +117,32 @@ export interface RegulationsType {
   title?: string,
   date?: string,
   titleBtn?: string;
+  href?: string;
 }
 interface RegulationsProps {
   title: string,
   textSort: string,
   dataRegulations: RegulationsType[],
-  handleRegulation?: (item: RegulationsType) => void;
-  // Sort
   selectedSort?: OptionType | null;
   sortOptions: OptionType[];
   handleSort?: (value: ValueType<OptionType, false>) => void;
-  // Pagination
   currPage?: number;
   totalPage: number;
   handleChangePage: (page: number) => void;
+  loading?: boolean;
 }
 
 const Regulations: React.FC<RegulationsProps> = ({
   title,
   textSort,
   dataRegulations,
-  handleRegulation,
   selectedSort,
   sortOptions,
   handleSort,
   currPage,
   totalPage,
   handleChangePage,
+  loading,
 }) => (
   <div className="t-regulations">
     <div className="t-regulations_title">
@@ -171,36 +172,43 @@ const Regulations: React.FC<RegulationsProps> = ({
         </div>
       </div>
       <div className="t-regulations_wrapItem">
-        {
-          dataRegulations.map((item, idx) => (
-            <div key={`regulations-${idx.toString()}`} className="t-regulations_item">
-              <div className="t-regulations_content">
-                <div className="t-regulations_image">
-                  <Image alt={item.title} ratio="91x96" src={item.img} />
-                </div>
-                <div className="t-regulations_desc">
-                  <div className="t-regulations_desc_title">
-                    <Text modifiers={['jet', '16x24', '400', 'fontLexend']} content={item.title} />
+        {loading ? <Loading isShow /> : (
+          <>
+            {
+              dataRegulations.map((item, idx) => (
+                <div key={`regulations-${idx.toString()}`} className="t-regulations_item">
+                  <div className="t-regulations_content">
+                    <div className="t-regulations_image">
+                      <Image alt={item.title} ratio="91x96" src={item.img} />
+                    </div>
+                    <div className="t-regulations_desc">
+                      <div className="t-regulations_desc_title">
+                        <Text modifiers={['jet', '16x24', '400', 'fontLexend']} content={item.title} />
+                      </div>
+                      <div className="t-regulations_desc_date">
+                        <Text modifiers={['12x17', 'fontLexend', '400', 'dimGray']} content={item.date} />
+                      </div>
+                    </div>
                   </div>
-                  <div className="t-regulations_desc_date">
-                    <Text modifiers={['12x17', 'fontLexend', '400', 'dimGray']} content={item.date} />
+                  <div className="t-regulations_wrapButton">
+                    <Link
+                      href={item.href}
+                      target="_blank"
+                      useExternal
+                    >
+                      <Button
+                        modifiers="iconRight"
+                        iconName="down"
+                      >
+                        {item.titleBtn}
+                      </Button>
+                    </Link>
                   </div>
                 </div>
-              </div>
-              <div className="t-regulations_wrapButton">
-                <Button
-                  modifiers="iconRight"
-                  iconName="down"
-                  onClick={() => handleRegulation
-                  && handleRegulation(item)}
-                >
-                  {item.titleBtn}
-
-                </Button>
-              </div>
-            </div>
-          ))
-        }
+              ))
+            }
+          </>
+        )}
       </div>
       <div className="t-regulations_paginationButton">
         <Pagination
@@ -214,39 +222,45 @@ const Regulations: React.FC<RegulationsProps> = ({
 );
 
 /** ******* InvestmentRelationsOtherDocument ********** */
-interface InvestmentRelationsOtherDocumentProps extends Omit<RegulationsProps, 'title' | 'textSort'> {
-  dataMenu: MenuType[];
+export interface InvestmentRelationsOtherDocumentProps extends Omit<RegulationsProps, 'title' | 'textSort'> {
+  dataMenu: OtherDocumentCategoriesDataTypes[];
+  handleClick?: (e: number) => void;
+  loading?: boolean;
 }
 
 const InvestmentRelationsOtherDocument: React.FC<InvestmentRelationsOtherDocumentProps> = ({
   dataMenu,
   dataRegulations,
-  handleRegulation,
   selectedSort,
   sortOptions,
   handleSort,
   currPage,
   totalPage,
   handleChangePage,
+  handleClick,
+  loading,
 }) => (
   <div className="t-investmentRelationsOtherDocument">
     <Container>
       <div className="t-investmentRelationsOtherDocument_content">
         <div className="t-investmentRelationsOtherDocument_left">
-          <Menu data={dataMenu} />
+          <Menu
+            data={dataMenu}
+            handleClick={handleClick}
+          />
         </div>
         <div className="t-investmentRelationsOtherDocument_right">
           <Regulations
             title="Điều lệ"
             textSort="Sắp xếp:"
             dataRegulations={dataRegulations}
-            handleRegulation={handleRegulation}
             selectedSort={selectedSort}
             sortOptions={sortOptions}
             handleSort={handleSort}
             currPage={currPage}
             totalPage={totalPage}
             handleChangePage={handleChangePage}
+            loading={loading}
           />
         </div>
       </div>
@@ -258,7 +272,7 @@ Regulations.defaultProps = {
   currPage: 1,
   selectedSort: undefined,
   handleSort: undefined,
-  handleRegulation: undefined,
+  loading: false,
 };
 
 InvestmentRelationsOtherDocument.defaultProps = {

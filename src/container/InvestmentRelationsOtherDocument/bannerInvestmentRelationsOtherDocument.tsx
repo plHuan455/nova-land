@@ -1,15 +1,28 @@
 import React from 'react';
 
-import imgCorporateGovernance from 'assets/images/corporate-governance-banner.png';
 import Heading from 'components/atoms/Heading';
 import BannerRecruitment from 'components/templates/BannerRecruitment';
 
-const BannerInvestmentRelations: React.FC = () => (
+export interface BannerInvestmentRelationsProps {
+  src: string;
+  srcTablet?: string;
+  srcMobile?: string;
+  title: string;
+}
+
+const BannerInvestmentRelations: React.FC<BannerInvestmentRelationsProps> = ({
+  src,
+  srcTablet,
+  srcMobile,
+  title,
+}) => (
   <div className="p-corporateGovernance_bannerRecruitment">
     <BannerRecruitment
-      imageSrc={imgCorporateGovernance}
+      imageSrc={src}
+      imageTabletSrc={srcTablet}
+      imageMobileSrc={srcMobile}
     >
-      <Heading modifiers={['52x65', 'white', 'center', 'fontNoto', '400']}>Tài Liệu Khác</Heading>
+      <Heading modifiers={['52x65', 'white', 'center', 'fontNoto', '400']}>{title}</Heading>
     </BannerRecruitment>
   </div>
 );

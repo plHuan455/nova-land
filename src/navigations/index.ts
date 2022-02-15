@@ -8,6 +8,7 @@ const News = React.lazy(() => import('pages/News'));
 const SearchResults = React.lazy(() => import('pages/SearchResults'));
 const Contact = React.lazy(() => import('pages/Contact'));
 const CorporateGovernance = React.lazy(() => import('pages/CorporateGovernance'));
+const InvestmentRelationsOtherDocument = React.lazy(() => import('pages/InvestmentRelationsOtherDocument'));
 
 export type TemplateCodeType = {
   code: string;
@@ -46,5 +47,9 @@ export const TemplateCodes: TemplateCodeType[] = [
   {
     code: 'BUSINESS_MANAGEMENT',
     component: CorporateGovernance,
+  },
+  {
+    code: 'OTHER_DOCUMENT',
+    component: InvestmentRelationsOtherDocument,
   },
 ];
