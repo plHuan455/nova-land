@@ -24,7 +24,7 @@ const InvestmentRelations: React.FC = () => {
   const [indexActive, setIndexActive] = useState<number>(1);
 
   const { data: otherDocumentList, isLoading } = useQuery(
-    ['GetOtherDocumentListHighlight', indexActive],
+    ['GetOtherDocumentListHighlight', indexActive, page],
     () => getOtherDocumentCategoriesDetailService(indexActive, {
       limit: 2,
       page,

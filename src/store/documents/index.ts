@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 import { getOtherDocumentCategoriesService } from 'services/documents';
 import {
-  OtherDocumentCategoriesParamsTypes,
+  DocumentsParamsType,
   OtherDocumentCategoriesTypes,
   OtherDocumentCategoriesDataTypes,
 } from 'services/documents/types';
@@ -18,10 +18,10 @@ const initialState: DocumentsState = {
 
 export const getOtherDocumentCategoriesAction = createAsyncThunk<
   OtherDocumentCategoriesTypes[],
-  OtherDocumentCategoriesParamsTypes,
+  DocumentsParamsType,
   { rejectValue: ErrorResponse }
 >('documentsReducer/getOtherDocumentCategoriesAction',
-  async (params: OtherDocumentCategoriesParamsTypes | undefined, { rejectWithValue }) => {
+  async (params: DocumentsParamsType | undefined, { rejectWithValue }) => {
     try {
       const response = await getOtherDocumentCategoriesService(params);
       return response.data;

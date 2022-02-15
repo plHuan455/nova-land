@@ -15,6 +15,7 @@ const InvestmentRelationsOtherDocumentContainer: React.FC<BasePageData<[]>> = ({
   seoData,
   openGraphData,
   breadcrumbs,
+  pageData,
 }) => {
   const language = useAppSelector((state) => state.system.language);
 
@@ -36,14 +37,17 @@ const InvestmentRelationsOtherDocumentContainer: React.FC<BasePageData<[]>> = ({
         }}
       />
       <BannerInvestmentRelations
-        {...listBanner[0]}
+        src={listBanner[0]?.src || ''}
+        title={listBanner[0]?.title || ''}
+        srcMobile={listBanner[0]?.srcMobile}
+        srcTablet={listBanner[0]?.srcTablet}
       />
       <div className="p-corporateGovernance_breadcrumb u-mt-md-24 u-mt-14 u-mb-md-60 u-mb-25">
         <Breadcrumb
           breadcrumbs={getBreadcrumbs({
             breadcrumbs: breadcrumbs || [],
             language,
-            title: '',
+            title: pageData.title,
           })}
         />
       </div>

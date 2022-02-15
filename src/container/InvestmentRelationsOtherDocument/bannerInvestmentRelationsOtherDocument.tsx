@@ -19,8 +19,8 @@ const BannerInvestmentRelations: React.FC<BannerInvestmentRelationsProps> = ({
   <div className="p-corporateGovernance_bannerRecruitment">
     <BannerRecruitment
       imageSrc={src}
-      srcTablet={srcTablet}
-      srcMobile={srcMobile}
+      imageTabletSrc={srcTablet}
+      imageMobileSrc={srcMobile}
     >
       <Heading modifiers={['52x65', 'white', 'center', 'fontNoto', '400']}>{title}</Heading>
     </BannerRecruitment>
