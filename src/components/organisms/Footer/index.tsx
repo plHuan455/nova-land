@@ -13,7 +13,7 @@ import Link from 'components/atoms/Link';
 import Text from 'components/atoms/Text';
 import { OptionType, PulldownHookForm } from 'components/molecules/Pulldown';
 import { MenuItemDataTypes } from 'services/menus/types';
-import { getImageURL } from 'utils/functions';
+import { checkExternalUrl, getImageURL } from 'utils/functions';
 
 export type SocialListTypes = {
   iconName?: string;
@@ -158,7 +158,11 @@ const Footer: React.FC<FooterProps> = ({
                       {
                         socialList.map((item, index) => (
                           <div className="o-footer_main_menu_icon_item" key={index.toString()}>
-                            <Link href={item.url} target={item.target}>
+                            <Link
+                              href={item.url}
+                              target={item.target}
+                              useExternal={checkExternalUrl(item.url)}
+                            >
                               <img src={getImageURL(item.iconName)} alt="icon" />
                             </Link>
                           </div>
