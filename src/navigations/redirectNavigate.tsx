@@ -20,18 +20,12 @@ interface BlockError {
   sympathySentence: string;
 }
 
-interface RedirectNavigateProps {
-  error: unknown;
-}
-
 const Redirect301:React.FC = () => {
   const { pathname } = useLocation();
   const { isLoading, data } = useQuery(
-    ['GetPageData', pathname],
+    ['GetRedirectPageData', pathname],
     () => redirectPageService(pathname),
-    {
-      ...DEFAULT_QUERY_OPTION,
-    },
+    DEFAULT_QUERY_OPTION,
   );
   if (isLoading) return <Loading variant="fullScreen" isShow />;
 
@@ -93,12 +87,6 @@ export const Redirect404:React.FC = () => {
   );
 };
 
-const RedirectNavigate: React.FC<RedirectNavigateProps> = ({ error }) => {
-  if (error) {
-    return <Redirect301 />;
-  }
-
-  return null;
-};
+const RedirectNavigate: React.FC = () => <Redirect301 />;
 
 export default RedirectNavigate;

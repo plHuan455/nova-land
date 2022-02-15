@@ -26,7 +26,7 @@ const NewsCategoryContainer: React.FC = () => {
 
   if (isLoading) return <Loading isShow variant="fullScreen" />;
 
-  if (error) return <RedirectNavigate error={error} />;
+  if (error) return <RedirectNavigate />;
 
   return (
     <>
