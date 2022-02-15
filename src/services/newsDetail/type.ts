@@ -2,6 +2,7 @@
 export type NewsDetailData = {
   id: number,
   thumbnail: string,
+  image: string,
   banner: string,
   title: string,
   slug: string,

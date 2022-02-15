@@ -88,7 +88,7 @@ const EventDetailTemplateContainer: React.FC<NewsDetailTemplateContainerProps> =
           address: data?.address,
           button: data?.link,
           name: data?.addressName,
-          thumbnail: getImageURL(data?.thumbnail),
+          thumbnail: getImageURL(data?.image),
           time: `${getTime(data?.eventFrom)} - ${getTime(data?.eventTo)}`,
           timeSchedule: `${formatDateDDMMYYYY(data?.eventFrom, true)} - ${formatDateDDMMYYYY(data?.eventTo, true)}`,
         }}
