@@ -4,6 +4,10 @@
     margin-right: auto;
     max-width: 50%;
 
+    .a-image img {
+      object-fit: contain;
+    }
+
     @include mobile-down {
       max-width: 100%;
     }
