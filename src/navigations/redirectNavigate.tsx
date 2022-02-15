@@ -1,12 +1,13 @@
 import React, { useMemo } from 'react';
 import { useQuery } from 'react-query';
+import { Navigate, Route, useLocation } from 'react-router-dom';
 
 import Loading from 'components/atoms/Loading';
 import Error from 'components/templates/Error';
 import MainLayout from 'components/templates/MainLayout';
-import { getPageService } from 'services/navigations';
+import { getPageService, redirectPageService } from 'services/navigations';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
-import { getBlockData } from 'utils/functions';
+import { getBlockData, checkExternalUrl } from 'utils/functions';
 
 interface BlockError {
   link: {
@@ -19,7 +20,41 @@ interface BlockError {
   sympathySentence: string;
 }
 
-const RedirectNavigate: React.FC = () => {
+const Redirect301:React.FC = () => {
+  const { pathname } = useLocation();
+  const { isLoading, data } = useQuery(
+    ['GetRedirectPageData', pathname],
+    () => redirectPageService(pathname),
+    DEFAULT_QUERY_OPTION,
+  );
+  if (isLoading) return <Loading variant="fullScreen" isShow />;
+
+  if (data) {
+    const isExternal = checkExternalUrl(data.to);
+    if (isExternal) {
+      return (
+        <Route
+          path=""
+          element={() => {
+            window.location.replace(data.to);
+            return null;
+          }}
+        />
+      );
+    }
+    return (
+      <Navigate
+        to={{
+          pathname: data.to,
+        }}
+      />
+    );
+  }
+
+  return <Redirect404 />;
+};
+
+export const Redirect404:React.FC = () => {
   const { isLoading, data } = useQuery(
     ['getPageErrorData'],
     () => getPageService('404'),
@@ -51,5 +86,7 @@ const RedirectNavigate: React.FC = () => {
     </MainLayout>
   );
 };
+
+const RedirectNavigate: React.FC = () => <Redirect301 />;
 
 export default RedirectNavigate;
