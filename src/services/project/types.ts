@@ -24,6 +24,11 @@ export type KeywordParamsTypes = {
   keyword?: string;
 }
 
+export type CategoryProjectsParamsTypes = {
+  real_estate_id?: number;
+  keyword?: string;
+}
+
 export type RealEstatesParamsTypes = {
   is_map_home?: boolean;
   keyword?: string;

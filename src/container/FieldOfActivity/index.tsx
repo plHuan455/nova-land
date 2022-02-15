@@ -31,7 +31,7 @@ const FieldOfActivityContainer: React.FC<BasePageData<FieldOfActivityData>> = ({
     [blocks],
   );
 
-  const { data: projectData } = useQuery(
+  const { data: projectData, isLoading } = useQuery(
     ['getProjectsData', idRealEstatesSlug, language],
     () => getProjectsService({
       real_estates_id: idRealEstatesSlug,
@@ -45,6 +45,7 @@ const FieldOfActivityContainer: React.FC<BasePageData<FieldOfActivityData>> = ({
   const convertDataProductLines = useMemo(() => {
     if (realEstatesList) {
       return realEstatesList.map((val) => ({
+        id: val.id,
         label: val.name,
         imgActive: getImageURL(val.iconHover),
         imgInActive: getImageURL(val.icon),
@@ -57,7 +58,6 @@ const FieldOfActivityContainer: React.FC<BasePageData<FieldOfActivityData>> = ({
               content: item.description,
             })) || [],
         },
-        id: val.id,
       }));
     }
     return [];
@@ -70,8 +70,15 @@ const FieldOfActivityContainer: React.FC<BasePageData<FieldOfActivityData>> = ({
   }, [realEstatesList, language]);
 
   useEffect(() => {
+    if (idRealEstatesSlug) {
+      dispatch(getCategoryProjectsAction({
+        real_estate_id: idRealEstatesSlug,
+      }));
+    }
+  }, [dispatch, idRealEstatesSlug, language]);
+
+  useEffect(() => {
     dispatch(getRealEstatesAction({}));
-    dispatch(getCategoryProjectsAction({}));
   }, [dispatch, language]);
 
   const convertListLogo = (nameProjects: string) => {
@@ -114,7 +121,10 @@ const FieldOfActivityContainer: React.FC<BasePageData<FieldOfActivityData>> = ({
           />
         </div>
         <div className="p-fieldOfActivity_projectList">
-          <ProjectList dataProjectList={convertDataProjectList} />
+          <ProjectList
+            dataProjectList={convertDataProjectList}
+            loading={isLoading}
+          />
         </div>
       </Container>
     </>
