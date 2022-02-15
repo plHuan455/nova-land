@@ -1,14 +1,18 @@
 import React from 'react';
 
+import Loading from 'components/atoms/Loading';
 import Container from 'components/organisms/Container';
 import { Tab, Tabs } from 'components/organisms/Tabs';
 import TableCategory, { TableCategoryProps } from 'components/templates/TableCategory';
 
 export interface TitleTabType {
-  titleTab: string;
+  id: number;
+  name: string;
+  locale: string;
 }
 
 export interface CorporateGovernanceProps {
+  loading?: boolean;
   dataGeneral: TableCategoryProps[];
   dataTabGeneral: TitleTabType[];
   tabActive: number;
@@ -16,7 +20,7 @@ export interface CorporateGovernanceProps {
 }
 
 const CorporateGovernance: React.FC<CorporateGovernanceProps> = ({
-  dataGeneral, dataTabGeneral, tabActive, handleChangeTab,
+  loading, dataGeneral, dataTabGeneral, tabActive, handleChangeTab,
 }) => (
   <div className="t-corporateGovernance">
     <Container>
@@ -26,24 +30,30 @@ const CorporateGovernance: React.FC<CorporateGovernanceProps> = ({
             <Tab
               size="20x28"
               key={`tab-${index.toString()}`}
-              label={item.titleTab}
+              label={item.name}
               active={index === tabActive}
               handleClick={() => handleChangeTab && handleChangeTab(index)}
             />
           ))}
         </Tabs>
         <div className="t-corporateGovernance_divider" />
-        {dataGeneral.length > 0 && (
-          <div className="t-corporateGovernance_content">
-            {dataGeneral.map((ele, idx) => (
-              <div className="t-corporateGovernance_item" key={`corporateGovernance-${idx.toString()}`}>
-                <TableCategory
-                  {...ele}
-                />
+        {(() => {
+          if (loading) return <Loading isShow />;
+          if (dataGeneral.length > 0) {
+            return (
+              <div className="t-corporateGovernance_content">
+                {dataGeneral.map((ele, idx) => (
+                  <div className="t-corporateGovernance_item" key={`corporateGovernance-${idx.toString()}`}>
+                    <TableCategory
+                      {...ele}
+                    />
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        )}
+            );
+          }
+          return null;
+        })()}
       </div>
     </Container>
   </div>
