@@ -1,37 +1,15 @@
 .p-aboutUs {
-  &_investmentSector,
- 
-  &_investSector {
-    padding-bottom: rem(80);
-
-    @include tablet-down {
-      padding-bottom: rem(60);
-    }
-
-    @include mobile-down {
-      padding-bottom: rem(40);
-    }
-  }
-
-  &_awardList,
- 
   &_ecoSystem {
-    padding-bottom: rem(80);
-    padding-top: rem(80);
-  
-    @include tablet-down {
-      padding-bottom: rem(60);
-      padding-top: rem(60);
-    }
-  
-    @include mobile-down {
-      padding-bottom: rem(40);
-      padding-top: rem(40);
-    }
-  }
-
-  &_ecoSystem {
+    padding-bottom: rem(122);
     background-color: $white-smoke2;
+
+    @include tablet-down {
+      padding-bottom: rem(100);
+    }
+  
+    @include mobile-down {
+      padding-bottom: rem(70);
+    }
   }
 
   &_awardList {

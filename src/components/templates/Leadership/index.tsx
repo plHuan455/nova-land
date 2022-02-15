@@ -7,6 +7,7 @@ import Loading from 'components/atoms/Loading';
 import Text from 'components/atoms/Text';
 import Container from 'components/organisms/Container';
 import { Tab, TabPanel, Tabs } from 'components/organisms/Tabs';
+import Section from 'components/templates/Section';
 import mapModifiers from 'utils/functions';
 
 interface LeadershipCardProps {
@@ -152,79 +153,81 @@ const Leadership: React.FC<LeadershipProps> = ({
 
   return (
     <div className="t-leadership">
-      <Container>
-        <Heading
-          modifiers={['32x48', '500', 'uppercase', 'center', 'fontNoto', 'jet']}
-          content={title}
-        />
-        <div className="t-leadership_wrapper">
-          <Tabs variableMutate={indexActive}>
-            {
-              tabCategoryLeadership.map((item, index) => (
-                <Tab
-                  size="20x28"
-                  key={`tab-${index.toString()}`}
-                  label={item.name}
-                  active={index === indexActive}
-                  handleClick={() => {
-                    setIndexActive(index);
-                    setIndexShow(0);
-                    handleChangeTab(index);
-                  }}
-                />
-              ))
-            }
-          </Tabs>
-          { loading ? <Loading isShow />
-            : tabCategoryLeadership.map((_, idx) => (
-              <TabPanel key={`leadership-${idx.toString()}`} active={idx === indexActive}>
-                <div className="t-leadership_item">
-                  <div className="t-leadership_item_left">
-                    <div className={mapModifiers('t-leadership_item_list', isViewMore && 'isViewMore')}>
+      <Section>
+        <Container>
+          <Heading
+            modifiers={['32x48', '500', 'uppercase', 'center', 'fontNoto', 'jet']}
+            content={title}
+          />
+          <div className="t-leadership_wrapper">
+            <Tabs variableMutate={indexActive}>
+              {
+                tabCategoryLeadership.map((item, index) => (
+                  <Tab
+                    size="20x28"
+                    key={`tab-${index.toString()}`}
+                    label={item.name}
+                    active={index === indexActive}
+                    handleClick={() => {
+                      setIndexActive(index);
+                      setIndexShow(0);
+                      handleChangeTab(index);
+                    }}
+                  />
+                ))
+              }
+            </Tabs>
+            { loading ? <Loading isShow />
+              : tabCategoryLeadership.map((_, idx) => (
+                <TabPanel key={`leadership-${idx.toString()}`} active={idx === indexActive}>
+                  <div className="t-leadership_item">
+                    <div className="t-leadership_item_left">
+                      <div className={mapModifiers('t-leadership_item_list', isViewMore && 'isViewMore')}>
+                        {
+                        tabDataLeaderShip?.map((item, index) => (
+                          <div
+                            className="t-leadership_item_card"
+                            key={`leadership-card-${index.toString()}`}
+                            onClick={() => setIndexShow(index)}
+                          >
+                            <LeadershipCard
+                              {...item}
+                              isShow={index === indexShow}
+                            >
+                              <LeadershipDetail
+                                {...item}
+                              />
+                            </LeadershipCard>
+                          </div>
+                        ))
+                      }
+                      </div>
+                      {hasButtonViewAll && (
+                      <div className="t-leadership_item_btn">
+                        <Button onClick={handleClickViewAll} modifiers="with-icon" iconName={isViewMore ? 'arrowUpBrown' : 'arrowDownBrown'} />
+                      </div>
+                      )}
+                    </div>
+                    <div className="t-leadership_item_right">
                       {
-                      tabDataLeaderShip?.map((item, index) => (
-                        <div
-                          className="t-leadership_item_card"
-                          key={`leadership-card-${index.toString()}`}
-                          onClick={() => setIndexShow(index)}
-                        >
-                          <LeadershipCard
-                            {...item}
-                            isShow={index === indexShow}
+                        tabDataLeaderShip?.map((value, number) => (
+                          <div
+                            className={mapModifiers('t-leadership_item_detail', number === indexShow && 'show')}
+                            key={`leadership-detail-${number.toString()}`}
                           >
                             <LeadershipDetail
-                              {...item}
+                              {...value}
                             />
-                          </LeadershipCard>
-                        </div>
-                      ))
-                    }
+                          </div>
+                        ))
+                      }
                     </div>
-                    {hasButtonViewAll && (
-                    <div className="t-leadership_item_btn">
-                      <Button onClick={handleClickViewAll} modifiers="with-icon" iconName={isViewMore ? 'arrowUpBrown' : 'arrowDownBrown'} />
-                    </div>
-                    )}
                   </div>
-                  <div className="t-leadership_item_right">
-                    {
-                      tabDataLeaderShip?.map((value, number) => (
-                        <div
-                          className={mapModifiers('t-leadership_item_detail', number === indexShow && 'show')}
-                          key={`leadership-detail-${number.toString()}`}
-                        >
-                          <LeadershipDetail
-                            {...value}
-                          />
-                        </div>
-                      ))
-                    }
-                  </div>
-                </div>
-              </TabPanel>
-            ))}
-        </div>
-      </Container>
+                </TabPanel>
+              ))}
+          </div>
+        </Container>
+      </Section>
     </div>
   );
 };

@@ -10,6 +10,7 @@ import ProjectListMap, {
   ProjectListMapGround,
   ProjectListMapInfo,
 } from 'components/templates/ProjectListMap';
+import Section from 'components/templates/Section';
 import getMapService from 'services/maps';
 import { getProjectsService } from 'services/project';
 import { useAppSelector } from 'store/hooks';
@@ -127,27 +128,29 @@ const ProjectListMapContainer: React.FC<ProjectListMapContainerProps> = ({
   }, []);
 
   return (
-    <div className="p-aboutUs_projectListMap pt-80 pb-100">
-      <ProjectListMap title={title}>
-        <ProjectListMapInfo
-          listProject={listProject || []}
-          provinceOptions={provinceOptions || []}
-          projectOptions={projectOptionData || []}
-          valueProvince={province}
-          valueProject={project}
-          handleChangeProvince={handleChangeProvince}
-          handleChangeProject={handleChangeProject}
-        />
-        <ProjectListMapGround
-          image={{
-            path: img,
-            width: 320,
-            height: 508,
-          }}
-          listPoint={listSelectProject}
-          loading={isLoading}
-        />
-      </ProjectListMap>
+    <div className="p-aboutUs_projectListMap">
+      <Section>
+        <ProjectListMap title={title}>
+          <ProjectListMapInfo
+            listProject={listProject || []}
+            provinceOptions={provinceOptions || []}
+            projectOptions={projectOptionData || []}
+            valueProvince={province}
+            valueProject={project}
+            handleChangeProvince={handleChangeProvince}
+            handleChangeProject={handleChangeProject}
+          />
+          <ProjectListMapGround
+            image={{
+              path: img,
+              width: 320,
+              height: 508,
+            }}
+            listPoint={listSelectProject}
+            loading={isLoading}
+          />
+        </ProjectListMap>
+      </Section>
     </div>
   );
 };

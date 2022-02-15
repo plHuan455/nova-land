@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import AwardList, { TabsDataTypes } from 'components/templates/AwardList';
+import Section from 'components/templates/Section';
 import { getPrizesService, getPrizeYearsService } from 'services/Introduction';
 import { PrizeYearsType, PrizesType } from 'services/Introduction/type';
 import { getImageURL } from 'utils/functions';
@@ -68,13 +69,15 @@ const AwardListContainer: React.FC<AwardListContainerProps> = ({
   }, []);
 
   return (
-    <div className="p-aboutUs_awardList pt-100 pb-100">
-      <AwardList
-        {...props}
-        tabsData={awardListData || []}
-        handleActiveTab={handleActiveTab}
-        loading={loading}
-      />
+    <div className="p-aboutUs_awardList">
+      <Section>
+        <AwardList
+          {...props}
+          tabsData={awardListData || []}
+          handleActiveTab={handleActiveTab}
+          loading={loading}
+        />
+      </Section>
     </div>
   );
 };
