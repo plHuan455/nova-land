@@ -40,7 +40,12 @@ export const InvestmentCard: React.FC<InvestmentCardProps> = ({
       onMouseLeave={() => setIsHover(false)}
     >
       <div className="t-investmentCard_main">
-        <div className={mapModifiers('t-investmentCard_icon', isHover && 'isHover')}>
+        <div
+          className={mapModifiers(
+            't-investmentCard_icon',
+            isHover && 'isHover',
+          )}
+        >
           <Image
             src={isHover ? imgLogoHover || imgLogo : imgLogo}
             alt="InvestmentCard-Logo"
@@ -50,24 +55,18 @@ export const InvestmentCard: React.FC<InvestmentCardProps> = ({
         <div className="t-investmentCard_title">
           <Heading
             modifiers={
-              isSmall ? ['18x28', '500', 'jet', 'uppercase', 'fontNoto']
-                : ['32x48', '500', 'jet', 'uppercase', 'fontNoto']
+              isSmall
+                ? ['16x24', '600', 'jet', 'uppercase', 'fontNoto']
+                : ['24x30', '600', 'jet', 'uppercase', 'fontNoto']
             }
             content={title}
           />
         </div>
         <div className="t-investmentCard_desc">
-          <Text
-            modifiers={['jet333', '300']}
-            content={desc}
-          />
+          <Text modifiers={['jet333', '300']} content={desc} />
         </div>
         <div className="t-investmentCard_thumbnail">
-          <Image
-            src={thumbnail}
-            alt="InvestmentCard"
-            ratio="228x145"
-          />
+          <Image src={thumbnail} alt="InvestmentCard" ratio="228x145" />
           <div className="t-investmentCard_thumbnail_button">
             <Link href={href}>
               <Button modifiers="outlineWhile" type="button">
@@ -127,12 +126,16 @@ const setting = {
 };
 
 const InvestmentSector: React.FC<InvestmentSectorProps> = ({
-  title, investmentSectorList, isSmall, loading,
+  title,
+  investmentSectorList,
+  isSmall,
+  loading,
 }) => {
   const settingSmall = {
     centerMode: true,
     infinite: true,
-    slidesToShow: investmentSectorList.length <= 4 ? investmentSectorList.length : 4,
+    slidesToShow:
+      investmentSectorList.length <= 4 ? investmentSectorList.length : 4,
     slidesToScroll: 1,
     arrows: true,
     prevArrow: <PrevArrow />,
@@ -166,27 +169,32 @@ const InvestmentSector: React.FC<InvestmentSectorProps> = ({
       <Container>
         <div className="u-mb-lg-52 u-mb-sm-40 u-mb-24">
           <Heading
-            modifiers={['32x48', 'jet', '500', 'uppercase', 'center', 'fontNoto']}
+            modifiers={[
+              '32x48',
+              'jet',
+              '500',
+              'uppercase',
+              'center',
+              'fontNoto',
+            ]}
             content={title}
           />
         </div>
         <div className="t-investmentSector_content">
-          {
-            loading ? <Loading isShow /> : (
-              <Carousel settings={isSmall ? settingSmall : setting}>
-                {
-              investmentSectorList.map((item, index) => (
-                <div className="t-investmentSector_item" key={`_investmentSector_${index.toString()}`}>
-                  <InvestmentCard
-                    {...item}
-                    isSmall={isSmall}
-                  />
+          {loading ? (
+            <Loading isShow />
+          ) : (
+            <Carousel settings={isSmall ? settingSmall : setting}>
+              {investmentSectorList.map((item, index) => (
+                <div
+                  className="t-investmentSector_item"
+                  key={`_investmentSector_${index.toString()}`}
+                >
+                  <InvestmentCard {...item} isSmall={isSmall} />
                 </div>
-              ))
-            }
-              </Carousel>
-            )
-          }
+              ))}
+            </Carousel>
+          )}
         </div>
       </Container>
     </div>
