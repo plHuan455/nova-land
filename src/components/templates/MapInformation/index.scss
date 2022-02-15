@@ -14,6 +14,10 @@
     padding: rem(40) rem(30);
   }
 
+  @include iphone-large-lands {
+    padding: rem(40) rem(30);
+  }
+
   &_location,
   &_email,
   &_phone {
@@ -36,6 +40,10 @@
     }
 
     @include mobile-down {
+      display: block;
+    }
+
+    @include iphone-large-lands {
       display: block;
     }
   }
@@ -72,8 +80,24 @@
       width: 85%;
     }
 
+    @include iphone-large-lands {
+      border-radius: rem(5);
+      left: auto;
+      max-height: calc(100vh - 230px);
+      overflow-y: auto;
+      position: absolute;
+      right: -100%;
+      top: rem(80);
+      transition: 0.5s;
+      width: 85%;
+    }
+
     &-isOpen {
       @include mobile-down {
+        right: 0;
+      }
+      
+      @include iphone-large-lands {
         right: 0;
       }
     }
