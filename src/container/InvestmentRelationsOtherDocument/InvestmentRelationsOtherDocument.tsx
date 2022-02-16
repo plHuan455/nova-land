@@ -12,8 +12,8 @@ import { DEFAULT_QUERY_OPTION } from 'utils/constants';
 import { formatDateDDMMYYYY, getImageURL } from 'utils/functions';
 
 const dummyOption: OptionType[] = [
-  { value: '1', label: 'Gần đây' },
-  { value: '2', label: 'Mới nhất' },
+  { value: 'latest', label: 'Mới nhất' },
+  { value: 'oldest', label: 'Cũ nhất' },
 
 ];
 const InvestmentRelations: React.FC = () => {
@@ -25,8 +25,9 @@ const InvestmentRelations: React.FC = () => {
   const [indexActive, setIndexActive] = useState<number>(1);
 
   const { data: otherDocumentList, isLoading } = useQuery(
-    ['GetOtherDocumentListHighlight', indexActive, page, language],
+    ['GetOtherDocumentListHighlight', indexActive, page, language, selectedSort],
     () => getOtherDocumentCategoriesDetailService(indexActive, {
+      sort: selectedSort?.value,
       limit: 2,
       page,
     }),
