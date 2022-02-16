@@ -1,16 +1,31 @@
 import React from 'react';
 
-import reportList from 'assets/dataDummy/reportList';
-import ReportList from 'components/templates/ReportList';
+import ReportList, { ReportTypes } from 'components/templates/ReportList';
 import Section from 'components/templates/Section';
 
-const ReportListTemplateContainer: React.FC = () => (
+export interface ReportListProps{
+  isLoading?: boolean;
+  totalPage: number;
+  currentPage?: number;
+  reportList: Array<ReportTypes>;
+  handleChangePage?: (page: number) => void;
+}
+
+const ReportListTemplateContainer: React.FC<ReportListProps> = ({
+  isLoading,
+  totalPage,
+  currentPage,
+  reportList,
+  handleChangePage,
+}) => (
   <div className="p-reportList_list">
     <Section modifiers="noPt">
       <ReportList
-        totalPage={5}
-        currentPage={1}
-        reportList={reportList.ReportListDumy}
+        totalPage={totalPage}
+        currentPage={currentPage}
+        isLoading={isLoading}
+        reportList={reportList}
+        handleChangePage={handleChangePage}
       />
     </Section>
   </div>

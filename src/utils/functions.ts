@@ -222,3 +222,11 @@ export const getSlugByTemplateCode = (
   }
   return '';
 };
+
+export const downloadPdf = (url: string): void => {
+  const a = document.createElement('a');
+  a.href = getImageURL(url);
+  a.target = '_blank';
+  a.click();
+  a.remove();
+};
