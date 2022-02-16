@@ -18,7 +18,7 @@ const LatestNewsContainer: React.FC<{latestNewsData: NewsDataTypes[]}> = ({ late
   }));
   return (
     <Animate type="goUp">
-      <div className="p-news_latestNews u-pt-lg-93 u-pt-sm-82 u-pt-75">
+      <div className="p-news_latestNews">
         <LatestNews dataLatestNews={convertedPopularNews} />
       </div>
     </Animate>
