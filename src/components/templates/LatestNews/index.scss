@@ -49,6 +49,9 @@
 
     &_title {
       @include text-overflow();
+      .a-heading {
+        text-transform: capitalize;
+      }
     }
   }
 

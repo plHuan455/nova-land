@@ -10,7 +10,7 @@ const LatestNewsContainer: React.FC<{latestNewsData: NewsDataTypes[]}> = ({ late
     imgSrc: getImageURL(item.thumbnail),
     ratio: idx !== 0 ? '582x252' : '582x534' as Ratio,
     alt: item.slug,
-    title: item.title,
+    title: item.title.toLocaleLowerCase(),
     time: new Date(item.publishedAt || '') === new Date()
       ? `${getHourFromPastToCurrent(item.publishedAt)} giờ trước`
       : formatDateDDMMYYYY(item.publishedAt),
