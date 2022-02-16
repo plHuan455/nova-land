@@ -20,7 +20,7 @@ const dummyData = [
     label: 'BĐS Trung Tâm BĐS Trung Tâm BĐS Trung Tâm',
     imgActive: icActiveTab,
     imgInActive: icInActiveTab,
-    slug: '',
+    id: 0,
     content: {
       title: 'Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM với dòng sản phẩm:',
       imgSrc: imgProduct,
@@ -40,7 +40,7 @@ const dummyData = [
     label: 'ĐÔ THỊ VỆ TINH',
     imgActive: icActiveTab,
     imgInActive: icInActiveTab,
-    slug: '',
+    id: 1,
     content: {
       title: 'Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM với dòng sản phẩm:',
       imgSrc: imgProduct,
@@ -60,7 +60,7 @@ const dummyData = [
     label: 'ĐÔ THỊ NGHỈ DƯỠNG',
     imgActive: icActiveTab,
     imgInActive: icInActiveTab,
-    slug: '',
+    id: 2,
     content: {
       title: 'Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM với dòng sản phẩm:',
       imgSrc: imgProduct,
@@ -80,7 +80,7 @@ const dummyData = [
     label: 'BĐS CÔNG NGHIỆP',
     imgActive: icActiveTab,
     imgInActive: icInActiveTab,
-    slug: '',
+    id: 3,
     content: {
       title: 'Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM với dòng sản phẩm:',
       imgSrc: imgProduct,
@@ -100,7 +100,7 @@ const dummyData = [
     label: 'BĐS CÔNG NGHIỆP A BĐS CÔNG NGHIỆP A BĐS CÔNG NGHIỆP A',
     imgActive: icActiveTab,
     imgInActive: icInActiveTab,
-    slug: '',
+    id: 4,
     content: {
       title: 'Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM với dòng sản phẩm:',
       imgSrc: imgProduct,
@@ -120,7 +120,7 @@ const dummyData = [
     label: 'BĐS CÔNG NGHIỆP B BĐS CÔNG NGHIỆP B BĐS CÔNG NGHIỆP B',
     imgActive: icActiveTab,
     imgInActive: icInActiveTab,
-    slug: '',
+    id: 5,
     content: {
       title: 'Phát triển phân khúc trung và cao cấp tại trung tâm TP.HCM với dòng sản phẩm:',
       imgSrc: imgProduct,
@@ -143,6 +143,7 @@ export const normal: Story = () => (
     <ProductLines
       title="các dòng sản phẩm"
       dataProductLines={dummyData}
+      indexActive={2}
     />
   </Container>
 );

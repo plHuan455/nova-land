@@ -1,5 +1,5 @@
 /* eslint-disable react/require-default-props */
-import React, { useState } from 'react';
+import React from 'react';
 
 import Heading from 'components/atoms/Heading';
 import InfoProduct, { InfoType } from 'components/molecules/InfoProduct';
@@ -14,25 +14,26 @@ interface ProductLinesContentType {
 }
 
 export interface ProductLinesType {
+  id: number;
   label: string;
   imgActive?: string;
   imgInActive?: string;
   content: ProductLinesContentType;
-  slug: string;
 }
 
 interface ProductLinesProps {
   title: string;
   dataProductLines: Array<ProductLinesType>;
-  handleChangeTab?: (realEstatesSlug: string) => void;
+  indexActive: number;
+  handleChangeTab?: (idRealEstates: number) => void;
 }
 
 const ProductLines: React.FC<ProductLinesProps> = ({
   title,
   dataProductLines,
+  indexActive,
   handleChangeTab,
 }) => {
-  const [indexActive, setIndexActive] = useState(0);
   if (dataProductLines.length < 1) return null;
 
   const settingDefault = {
@@ -44,7 +45,6 @@ const ProductLines: React.FC<ProductLinesProps> = ({
     nextArrow: <NextArrow />,
     infinite: true,
     cssEase: 'ease-in-out',
-    afterChange: (currentIndex: number) => setIndexActive(currentIndex),
     responsive: [
       {
         breakpoint: 1199,
@@ -65,11 +65,6 @@ const ProductLines: React.FC<ProductLinesProps> = ({
         },
       },
     ],
-  };
-
-  const handleActiveTab = (realEstatesSlug: string, index: number) => {
-    setIndexActive(index);
-    if (handleChangeTab) handleChangeTab(realEstatesSlug);
   };
 
   return (
@@ -95,10 +90,10 @@ const ProductLines: React.FC<ProductLinesProps> = ({
               <TabBg
                 key={`tab-${index.toString()}`}
                 label={item.label}
-                active={index === indexActive}
+                active={item.id === indexActive}
                 imgActive={item.imgActive}
                 imgInActive={item.imgInActive}
-                handleClick={() => handleActiveTab(item.slug, index)}
+                handleClick={() => handleChangeTab && handleChangeTab(item.id)}
               />
             ))}
           </Carousel>
@@ -106,7 +101,7 @@ const ProductLines: React.FC<ProductLinesProps> = ({
         {dataProductLines.map((item, index) => (
           <TabBgPanel
             key={`tab-panel-${index.toString()}`}
-            active={index === indexActive}
+            active={item.id === indexActive}
           >
             <InfoProduct
               title={item.content.title || ''}

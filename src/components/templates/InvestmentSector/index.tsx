@@ -19,6 +19,7 @@ export interface InvestmentCardProps {
   btnText?: string;
   imgLogo: string;
   imgLogoHover?: string;
+  target?: string;
 }
 
 export const InvestmentCard: React.FC<InvestmentCardProps> = ({
@@ -30,6 +31,7 @@ export const InvestmentCard: React.FC<InvestmentCardProps> = ({
   btnText,
   imgLogo,
   imgLogoHover,
+  target,
 }) => {
   const [isHover, setIsHover] = useState<boolean>(false);
 
@@ -68,7 +70,7 @@ export const InvestmentCard: React.FC<InvestmentCardProps> = ({
         <div className="t-investmentCard_thumbnail">
           <Image src={thumbnail} alt="InvestmentCard" ratio="228x145" />
           <div className="t-investmentCard_thumbnail_button">
-            <Link href={href}>
+            <Link href={href} target={target || '_blank'}>
               <Button modifiers="outlineWhile" type="button">
                 <Text
                   modifiers={['16x24', '300', 'capitalize', 'center']}

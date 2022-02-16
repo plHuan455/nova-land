@@ -24,20 +24,20 @@ const FieldOfActivityContainer: React.FC<BasePageData<FieldOfActivityData>> = ({
 }) => {
   const dispatch = useAppDispatch();
   const { realEstatesList, categoryProjectsList } = useAppSelector((state) => state.project);
-  const [realEstatesSlug, setRealEstatesSlug] = useState('');
+  const [idRealEstatesSlug, setIDRealEstatesSlug] = useState<number>(2);
   const fieldActivityDetailsTabBlock = useMemo(
     () => getBlockData('introduction', blocks) as FieldActivityDetailsTabTypes,
     [blocks],
   );
 
   const { data: projectData } = useQuery(
-    ['getProjectsData', realEstatesSlug],
+    ['getProjectsData', idRealEstatesSlug],
     () => getProjectsService({
-      real_estates_slug: realEstatesSlug,
+      real_estates_id: idRealEstatesSlug,
     }),
     {
       ...DEFAULT_QUERY_OPTION,
-      enabled: !!realEstatesSlug,
+      enabled: !!idRealEstatesSlug,
     },
   );
 
@@ -56,7 +56,7 @@ const FieldOfActivityContainer: React.FC<BasePageData<FieldOfActivityData>> = ({
               content: item.description,
             })) || [],
         },
-        slug: val.slug,
+        id: val.id,
       }));
     }
     return [];
@@ -64,7 +64,7 @@ const FieldOfActivityContainer: React.FC<BasePageData<FieldOfActivityData>> = ({
 
   useEffect(() => {
     if (realEstatesList && realEstatesList.length) {
-      setRealEstatesSlug(realEstatesList[0].slug);
+      setIDRealEstatesSlug(realEstatesList[0].id);
     }
   }, [realEstatesList]);
 
@@ -113,7 +113,8 @@ const FieldOfActivityContainer: React.FC<BasePageData<FieldOfActivityData>> = ({
           <ProductLines
             title={fieldActivityDetailsTabBlock.tab1.titleProject}
             dataProductLines={convertDataProductLines}
-            handleChangeTab={(slug) => setRealEstatesSlug(slug)}
+            indexActive={idRealEstatesSlug}
+            handleChangeTab={(id) => setIDRealEstatesSlug(id)}
           />
         </div>
         <div className="p-fieldOfActivity_projectList">

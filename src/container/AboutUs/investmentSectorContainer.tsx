@@ -23,11 +23,12 @@ const InvestmentSectorContainer: React.FC<InvestmentSectorContainerProps> = ({
       title: item.name,
       desc: item.description,
       thumbnail: getImageURL(item.thumbnail),
-      href: item.slug,
+      href: item.link.url,
       imgLogo: getImageURL(item.icon),
       imgLogoHover: getImageURL(item.iconHover),
       isSmall: true,
       btnText: 'Tìm Hiểu Thêm',
+      target: item.link.target,
     })),
     [realEstatesList],
   );

@@ -27,7 +27,7 @@ const dummyData = [
         },
       ],
     },
-    slug: '',
+    id: 0,
   },
 ];
 
@@ -37,6 +37,7 @@ describe('<ProductLines />', () => {
     ReactDOM.render(
       <ProductLines
         title="các dòng sản phẩm"
+        indexActive={0}
         dataProductLines={dummyData}
       />, div,
     );
