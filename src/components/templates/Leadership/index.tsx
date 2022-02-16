@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, {
+  useCallback, useState,
+} from 'react';
 
 import Button from 'components/atoms/Button';
 import Heading from 'components/atoms/Heading';
@@ -136,6 +138,9 @@ export interface LeadershipProps {
   handleChangeTab: (index: number) => void;
   loading?: boolean;
   isViewMore?: boolean;
+  handleChangeLeader?: (index: number) => void;
+  currentLeader?: LeadershipDetailProps;
+  leaderShipList?: LeadershipDetailProps[];
 }
 
 const Leadership: React.FC<LeadershipProps> = ({
@@ -147,9 +152,19 @@ const Leadership: React.FC<LeadershipProps> = ({
   loading,
   tabDataLeaderShip,
   isViewMore,
+  handleChangeLeader,
+  currentLeader,
+  leaderShipList,
 }) => {
   const [indexActive, setIndexActive] = useState(0);
   const [indexShow, setIndexShow] = useState(0);
+
+  const handleChangeItem = useCallback((index: number) => {
+    if (handleChangeLeader) {
+      setIndexShow(index);
+      handleChangeLeader(index);
+    }
+  }, [handleChangeLeader]);
 
   return (
     <div className="t-leadership">
@@ -188,7 +203,7 @@ const Leadership: React.FC<LeadershipProps> = ({
                           <div
                             className="t-leadership_item_card"
                             key={`leadership-card-${index.toString()}`}
-                            onClick={() => setIndexShow(index)}
+                            onClick={() => handleChangeItem(index)}
                           >
                             <LeadershipCard
                               {...item}
@@ -210,13 +225,18 @@ const Leadership: React.FC<LeadershipProps> = ({
                     </div>
                     <div className="t-leadership_item_right">
                       {
-                        tabDataLeaderShip?.map((value, number) => (
+                        leaderShipList?.map((value, number) => (
                           <div
                             className={mapModifiers('t-leadership_item_detail', number === indexShow && 'show')}
                             key={`leadership-detail-${number.toString()}`}
                           >
                             <LeadershipDetail
-                              {...value}
+                              gender={currentLeader ? currentLeader.gender : ''}
+                              name={currentLeader ? currentLeader.name : ''}
+                              position={currentLeader ? currentLeader.position : ''}
+                              imgSrc={currentLeader ? currentLeader.imgSrc : ''}
+                              achievement={currentLeader ? currentLeader.achievement : ''}
+                              slogan={currentLeader ? currentLeader.slogan : ''}
                             />
                           </div>
                         ))
