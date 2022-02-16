@@ -1,5 +1,4 @@
 import React, {
-  useCallback,
   useEffect,
   useMemo,
   useState,
@@ -29,18 +28,17 @@ const ProjectMapContainer: React.FC<ProjectMapBlock> = ({
   blocks,
 }) => {
   const { maps } = useAppSelector((state) => state.maps);
-  const [idActive, setIdActive] = useState(0);
-  const [currentRealEstates, setCurrentRealEstates] = useState('');
+  const [idCurrentRealEstates, setIDCurrentRealEstates] = useState<number>(2);
   const dispatch = useAppDispatch();
 
   // TODO: maps
   const { data: projectDataList } = useQuery(
-    ['getProjectsDataFilterByHighlight', currentRealEstates], () => getProjectsService({
+    ['getProjectsDataFilterByHighlight', idCurrentRealEstates], () => getProjectsService({
       on_going: true,
-      real_estates_slug: currentRealEstates,
+      real_estates_id: idCurrentRealEstates,
     }), {
       ...DEFAULT_QUERY_OPTION,
-      enabled: !!currentRealEstates,
+      enabled: !!idCurrentRealEstates,
     },
   );
 
@@ -87,18 +85,9 @@ const ProjectMapContainer: React.FC<ProjectMapBlock> = ({
     };
   }), [realEstatesList, maps, projectDataList]);
 
-  const handleClick = useCallback((id: number) => {
-    setIdActive(id);
-    if (realEstatesList) {
-      const realEstateObj = realEstatesList.find((item) => item.id === id);
-      setCurrentRealEstates(realEstateObj?.slug || '');
-    }
-  }, [realEstatesList]);
-
   useEffect(() => {
     if (realEstatesList && realEstatesList?.length > 0) {
-      setCurrentRealEstates(realEstatesList[0].slug);
-      setIdActive(realEstatesList[0].id);
+      setIDCurrentRealEstates(realEstatesList[0].id);
     }
   }, [realEstatesList]);
 
@@ -114,8 +103,8 @@ const ProjectMapContainer: React.FC<ProjectMapBlock> = ({
         image={{ height: 508, path: img, width: 320 }}
         listCategory={listProjectMap}
         textProject={blocks.titleSection}
-        handleSelect={handleClick}
-        idActive={idActive}
+        handleSelect={(id) => setIDCurrentRealEstates(id)}
+        idActive={idCurrentRealEstates}
         projectDataList={convertedProjectData}
       />
     </div>
