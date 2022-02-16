@@ -9,6 +9,7 @@ import { NewsCategoryChildrenTypes } from 'services/home/type';
 import { useAppSelector } from 'store/hooks';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
 import { formatDateDDMMYYYY, getImageURL } from 'utils/functions';
+import { getPrefixURLCode } from 'utils/language';
 
 interface BaseNewsProps {
   title: string;
@@ -42,11 +43,11 @@ const BaseNewsContainer: React.FC<BaseNewsProps> = ({
         desc: item.description,
         date: formatDateDDMMYYYY(item.publishedAt),
         totalViews: item.viewed,
-        href: `/chi-tiet-tin-tuc/${item.slug}`,
+        href: getPrefixURLCode(language, 'NEWS_DETAIL', item.slug),
       }));
     }
     return [];
-  }, [res]);
+  }, [language, res?.data]);
 
   const convertTabsData: dataTabsType[] = useMemo(() => tabList.map((item) => ({
     titleTab: item.name,
@@ -62,7 +63,7 @@ const BaseNewsContainer: React.FC<BaseNewsProps> = ({
         {tabList.length > 0 ? (
           <HomeNews
             title={title}
-            href={`/tin-tuc/${active.slug}`}
+            href={getPrefixURLCode(language, 'NEWS_CATEGORY', active.slug)}
             tabDataHomeNews={convertTabsData}
             newsList={baseNews}
             handleActive={(id) => handleClickTab(id)}
@@ -71,7 +72,7 @@ const BaseNewsContainer: React.FC<BaseNewsProps> = ({
         ) : (
           <NewsList
             title={title}
-            href={`/tin-tuc/${active.slug}`}
+            href={getPrefixURLCode(language, 'NEWS_CATEGORY', active.slug)}
             dataNewsList={baseNews}
             btnName={`Xem thêm ${active.name}`}
             isFetching={isFetching}

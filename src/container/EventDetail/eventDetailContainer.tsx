@@ -9,6 +9,7 @@ import { NewsTagType } from 'services/newsDetail/type';
 import { useAppSelector } from 'store/hooks';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
 import { formatDateDDMMYYYY, getImageURL, getTime } from 'utils/functions';
+import { getPrefixURLCode } from 'utils/language';
 // import { formatDateDDMMYYYY } from 'utils/functions';
 interface NewsDetailTemplateContainerProps {
   data?: EventDetailData;
@@ -65,16 +66,16 @@ const EventDetailTemplateContainer: React.FC<NewsDetailTemplateContainerProps> =
     title: item.title,
     content: item.description,
     imageNews: getImageURL(item.thumbnail),
-    href: `/chi-tiet-su-kien/${item.slug}`,
-  })), [hightLightNews]);
+    href: getPrefixURLCode(language, 'EVENT_DETAIL', item.slug),
+  })), [hightLightNews, language]);
 
   const relatedNewsData = useMemo(() => relatedNews?.map((item) => ({
     id: String(item.id),
     title: item.title,
     content: item.description,
     imageNews: getImageURL(item.thumbnail),
-    href: `/chi-tiet-su-kien/${item.slug}`,
-  })), [relatedNews]);
+    href: getPrefixURLCode(language, 'EVENT_DETAIL', item.slug),
+  })), [relatedNews, language]);
 
   const tagNewsData = useMemo(() => newsTagData?.map((item) => item.name), [newsTagData]);
 

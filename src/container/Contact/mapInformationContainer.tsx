@@ -21,45 +21,10 @@ const MapInformationContainer: React.FC<MapInformationContainerProps> = ({ dataM
   const { data } = useQuery(
     ['getExchangesHighlight', language], () => getExchangesService({
       is_pinned: 'true',
-    }), DEFAULT_QUERY_OPTION,
+    }), {
+      ...DEFAULT_QUERY_OPTION,
+    },
   );
-
-  const dataMarkerDefault = useMemo(() => {
-    if (data && data.data.length > 0 && dataLocation) {
-      return data.data.map((item) => ({
-        lat: item.latitude,
-        lng: item.longtitude,
-        dataMarker: {
-          title: dataLocation.dataMarker.title,
-          dataCard: [
-            {
-              branchName: dataLocation.dataMarker.dataCard[0].branchName,
-              informationDetail: {
-                iconLocation: 'location' as IconName,
-                location: dataLocation.dataMarker.dataCard[0].informationDetail.location,
-                iconEmail: 'email' as IconName,
-                email: dataLocation.dataMarker.dataCard[0].informationDetail.email,
-                iconPhone: 'phoneContact' as IconName,
-                phone: dataLocation.dataMarker.dataCard[0].informationDetail.phone,
-              },
-            },
-            {
-              branchName: item.name,
-              informationDetail: {
-                iconLocation: 'location' as IconName,
-                location: item.address,
-                iconPhone: 'phone' as IconName,
-                phone: item.phone,
-              },
-            },
-          ],
-          nameBtn: 'Tìm gallery gần nhất',
-        },
-      }));
-    }
-    return undefined;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [data]);
 
   const handleLocationSearch = () => {
     try {
@@ -109,14 +74,52 @@ const MapInformationContainer: React.FC<MapInformationContainerProps> = ({ dataM
     },
   });
 
+  const dataMarkerDefault = useMemo(() => {
+    if (data && data.data.length > 0) {
+      return data.data.map((item) => ({
+        lat: item.latitude,
+        lng: item.longtitude,
+        dataMarker: {
+          title: dataMarker?.dataMarker?.title || '',
+          dataCard: [
+            {
+              branchName: dataMarker?.dataMarker?.dataCard[0].branchName || '',
+              informationDetail: {
+                iconLocation: 'location' as IconName,
+                location: dataMarker?.dataMarker?.dataCard[0].informationDetail.location || '',
+                iconEmail: 'email' as IconName,
+                email: dataMarker?.dataMarker?.dataCard[0].informationDetail.email || '',
+                iconPhone: 'phoneContact' as IconName,
+                phone: dataMarker?.dataMarker?.dataCard[0].informationDetail.phone || '',
+              },
+            },
+            {
+              branchName: item.name,
+              informationDetail: {
+                iconLocation: 'location' as IconName,
+                location: item.address,
+                iconPhone: 'phone' as IconName,
+                phone: item.phone,
+              },
+            },
+          ],
+          nameBtn: 'Tìm gallery gần nhất',
+        },
+      }));
+    }
+    return [{
+      lat: 0,
+      lng: 0,
+      dataMarker: undefined,
+    }];
+  }, [data, dataMarker]);
+
   useEffect(() => {
     if (dataMarkerDefault && dataMarkerDefault.length > 0) {
       setDataLocation(dataMarkerDefault[0]);
-    } else {
-      setDataLocation(undefined);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [data, language]);
+  }, [data, dataMarkerDefault, language]);
 
   return (
     <div className="p-contact_mapInformation">

@@ -81,3 +81,13 @@ export function convertStaticRoute(
     (ele) => `${getLangSlug(ele)}${getStaticSlug(code, ele)}${noSlug ? '' : '/:slug'}`,
   );
 }
+
+export function getPrefixURLCode(lang: string, code: ConstantRoutesCodes, slug?: string) {
+  if (slug) return `/${getLangSlug(lang)}${getStaticSlug(code, lang)}/${slug}`;
+  return '';
+}
+
+export function getPrefixURLCodeSwicthLang(lang: string, code: ConstantRoutesCodes, slug?: string) {
+  if (slug) return `${getLangSlug(lang)}${getStaticSlug(code, lang)}/${slug}`;
+  return '';
+}

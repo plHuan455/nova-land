@@ -34,7 +34,7 @@ const LeadershipContainer: React.FC<LeadershipContainerProps> = ({
 
   const { data: leaderData, isLoading } = useQuery(
     ['getLeadershipData', indexActive, language], () => getLeadershipService({
-      leadership_category_slug: categoryListData && categoryListData[indexActive].slug,
+      leadership_category_slug: categoryListData && categoryListData[indexActive]?.slug,
     }),
     {
       ...DEFAULT_QUERY_OPTION,

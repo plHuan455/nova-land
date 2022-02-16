@@ -113,9 +113,9 @@ const NewsDetail: React.FC<NewsDetailProps> = ({
           <Divider />
           <div className="t-newsdetail_typesnews">
             <div className="t-newsdetail_typesnews-list">
-              {newsDetail.newsTypes.map((item, idx) => (
+              {newsDetail.newsTypes.map((item, idx) => (item ? (
                 <Tag key={`type-${idx.toString()}`} onClickTag={handleTagClick} text={item} />
-              ))}
+              ) : null))}
             </div>
             <div className="t-newsdetail_typesnews-social">
               <FacebookShareButton url={window.location.href}>

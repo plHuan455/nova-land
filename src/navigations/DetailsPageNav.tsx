@@ -18,6 +18,7 @@ import { useAppSelector } from 'store/hooks';
 import { getBreadcrumbs } from 'utils/breadcrumbs';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
 import { getSlugByTemplateCode } from 'utils/functions';
+import { getStaticSlug } from 'utils/language';
 import { getLangURL } from 'utils/menus';
 
 const DetailsPageNav: React.FC = () => {
@@ -26,8 +27,16 @@ const DetailsPageNav: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const language = useAppSelector((state) => state.system.language);
-  const eventDetail = location.pathname.split('/')[1] === 'chi-tiet-su-kien';
-  const newsDetail = location.pathname.split('/')[1] === 'chi-tiet-tin-tuc';
+
+  let eventDetail;
+  let newsDetail;
+  if (i18n.language === 'en') {
+    eventDetail = location.pathname.split('/')[2] === getStaticSlug('EVENT_DETAIL', i18n.language);
+    newsDetail = location.pathname.split('/')[2] === getStaticSlug('NEWS_DETAIL', i18n.language);
+  } else {
+    eventDetail = location.pathname.split('/')[1] === getStaticSlug('EVENT_DETAIL', i18n.language);
+    newsDetail = location.pathname.split('/')[1] === getStaticSlug('NEWS_DETAIL', i18n.language);
+  }
 
   const staticPage = useAppSelector((state) => state.menus.staticPage);
 

@@ -22,6 +22,7 @@ import {
   formatDateDDMMYYYY,
   getHourFromPastToCurrent,
 } from 'utils/functions';
+import { getPrefixURLCode } from 'utils/language';
 
 type NovalandShares = {
   title: string;
@@ -120,11 +121,11 @@ const InvestmentRelationsContainer: React.FC<BasePageData<InvestmentRelationsBlo
         alt: item.title,
         title: item.title,
         time: formatDateDDMMYYYY(item.eventFrom),
-        href: `/chi-tiet-su-kien/${item.slug}`,
+        href: getPrefixURLCode(language, 'NEWS_DETAIL', item.slug),
       }));
     }
     return [];
-  }, [calendarDataList]);
+  }, [calendarDataList, language]);
 
   const { data: documentsHighlightData } = useQuery(
     ['getDocuments', language], () => getDocumentsService({

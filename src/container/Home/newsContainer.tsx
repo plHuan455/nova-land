@@ -10,6 +10,7 @@ import { getNewsCategoryAction } from 'store/home';
 import { useAppSelector } from 'store/hooks';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
 import { getImageURL, formatDateDDMMYYYY } from 'utils/functions';
+import { getPrefixURLCode } from 'utils/language';
 
 export interface NewsTypes {
   button: {
@@ -68,11 +69,11 @@ const NewsContainer: React.FC<NewsBlock> = ({
         desc: item.description,
         date: formatDateDDMMYYYY(new Date(item.publishedAt).toDateString()),
         totalViews: item.viewed,
-        href: `/chi-tiet-tin-tuc/${item.slug}`,
+        href: getPrefixURLCode(language, 'NEWS_DETAIL', item.slug),
       }));
     }
     return [];
-  }, [data]);
+  }, [data, language]);
 
   useEffect(() => {
     dispatch(getNewsCategoryAction());

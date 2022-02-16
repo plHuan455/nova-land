@@ -53,11 +53,15 @@ const OtherDocuments: React.FC<OtherDocumentsProps> = ({
             </Link>
           ))
         }
-        <div className="t-otherDocuments_button">
-          <Link href={btnHref} target={target}>
-            <Button modifiers="outlineSpanishGray">{btnText}</Button>
-          </Link>
-        </div>
+        {
+          btnText && (
+            <div className="t-otherDocuments_button">
+              <Link href={btnHref} target={target}>
+                <Button modifiers="outlineSpanishGray">{btnText}</Button>
+              </Link>
+            </div>
+          )
+        }
       </div>
     </Container>
   </div>

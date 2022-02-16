@@ -23,7 +23,6 @@ export type ParamsType = {
   locale?: string;
 };
 
-
 export type LanguageKey = keyof LocalesType;
 
 export type LocalesType = {

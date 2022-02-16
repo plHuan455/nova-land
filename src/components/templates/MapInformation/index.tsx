@@ -126,7 +126,7 @@ export const MapInformationCard: React.FC<MapInformationCardProps> = ({
 export type TypeMapMarker = {
   lat: number;
   lng: number;
-  dataMarker: MapInformationCardProps;
+  dataMarker?: MapInformationCardProps;
 };
 
 export interface MapInformationProps {
@@ -183,8 +183,8 @@ const MapInformation: React.FC<MapInformationProps> = ({
               key: `${mapAPIkey}&libraries=places,geometry`,
             }}
             defaultCenter={{
-              lat: mapMarker.lat,
-              lng: mapMarker.lng,
+              lat: mapMarker.lat || 0,
+              lng: mapMarker.lng || 0,
             }}
             defaultZoom={13}
             options={{
@@ -194,13 +194,13 @@ const MapInformation: React.FC<MapInformationProps> = ({
               panControl: true,
             }}
             center={{
-              lat: mapMarker.lat,
-              lng: mapMarker.lng,
+              lat: mapMarker.lat || 0,
+              lng: mapMarker.lng || 0,
             }}
           >
             <MapContact
-              lat={mapMarker.lat}
-              lng={mapMarker.lng}
+              lat={mapMarker.lat || 0}
+              lng={mapMarker.lng || 0}
               handleClick={() => {
                 setIsOpen(!isOpen);
               }}

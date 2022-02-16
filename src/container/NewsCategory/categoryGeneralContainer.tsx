@@ -5,6 +5,7 @@ import NewsCategory, { NewsCategoryItemTypes } from 'components/templates/NewsCa
 import { getNewsService } from 'services/home';
 import { useAppSelector } from 'store/hooks';
 import { getImageURL, formatDateDDMMYYYY } from 'utils/functions';
+import { getPrefixURLCode } from 'utils/language';
 
 const LIMIT = 9;
 const PAGE = 1;
@@ -36,7 +37,7 @@ const CategoryGeneralContainer: React.FC = () => {
         title: item.title,
         desc: item.description,
         time: formatDateDDMMYYYY(item.publishedAt),
-        href: `/chi-tiet-tin-tuc/${item.slug}`,
+        href: getPrefixURLCode(language, 'NEWS_DETAIL', item.slug),
       }));
       setTotalPages(res.meta.totalPages);
       setPage(res.meta.page);
@@ -46,7 +47,7 @@ const CategoryGeneralContainer: React.FC = () => {
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [language]);
 
   const handleChangePage = async (pageChange: number) => {
     setLoading(true);
@@ -63,7 +64,7 @@ const CategoryGeneralContainer: React.FC = () => {
           title: item.title,
           desc: item.description,
           time: formatDateDDMMYYYY(item.publishedAt),
-          href: `/chi-tiet-tin-tuc/${item.slug}`,
+          href: getPrefixURLCode(language, 'NEWS_DETAIL', item.slug),
         }));
         setTotalPages(res.meta.totalPages);
         setPage(res.meta.page);

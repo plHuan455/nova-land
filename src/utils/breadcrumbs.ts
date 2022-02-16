@@ -1,4 +1,4 @@
-import { getStaticSlug } from './languages';
+import { getStaticSlug } from './language';
 
 import { BreadcrumbPropsTypes } from 'components/molecules/Breadcrumb';
 
