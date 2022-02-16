@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useMemo } from 'react';
 
 import Heading from 'components/atoms/Heading';
 import Image from 'components/atoms/Image';
@@ -27,7 +27,20 @@ const NewsCard: React.FC<NewsCardProps> = ({
   variant,
   modifiers,
 }) => {
-  const checkRatio = useCallback(() => {
+  // const checkRatio = useCallback(() => {
+  //   switch (variant) {
+  //     case 'vertical':
+  //       return '582x534' as Ratio;
+  //     case 'horizontal':
+  //       return '582x252' as Ratio;
+  //     case 'smallVertical':
+  //       return '185x142' as Ratio;
+  //     default:
+  //       return '185x142' as Ratio;
+  //   }
+  // }, [variant]);
+
+  const checkRatio = useMemo(() => {
     switch (variant) {
       case 'vertical':
         return '582x534' as Ratio;
@@ -47,7 +60,7 @@ const NewsCard: React.FC<NewsCardProps> = ({
           <div className="o-newsCard_image">
             <Image
               src={imgSrc}
-              ratio={checkRatio()}
+              ratio={checkRatio}
               alt={title}
             />
           </div>

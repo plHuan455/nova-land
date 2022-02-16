@@ -29,6 +29,12 @@
     }
   }
 
+  &_left {
+    @include mobile-down {
+      padding: 0 rem(12);
+    }
+  }
+
   &_two {
     margin: auto;
   }
