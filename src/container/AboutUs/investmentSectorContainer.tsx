@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import InvestmentSector from 'components/templates/InvestmentSector';
 import Section from 'components/templates/Section';
@@ -14,6 +15,7 @@ export interface InvestmentSectorContainerProps {
 const InvestmentSectorContainer: React.FC<InvestmentSectorContainerProps> = ({
   ...props
 }) => {
+  const { t } = useTranslation();
   const dispatch = useAppDispatch();
   const language = useAppSelector((state) => state.system.language);
   const { realEstatesList } = useAppSelector((state) => state.project);
@@ -28,7 +30,7 @@ const InvestmentSectorContainer: React.FC<InvestmentSectorContainerProps> = ({
       imgLogo: getImageURL(item.icon),
       imgLogoHover: getImageURL(item.iconHover),
       isSmall: true,
-      btnText: 'Tìm Hiểu Thêm',
+      btnText: t('general.learn_more'),
       target: item.link?.target,
     })),
     [realEstatesList],

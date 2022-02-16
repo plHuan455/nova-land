@@ -1,5 +1,6 @@
 /* eslint-disable react/require-default-props */
 import React, { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useQuery } from 'react-query';
 
 import NewsDetail from 'components/templates/NewsDetail';
@@ -22,6 +23,7 @@ const EventDetailTemplateContainer: React.FC<NewsDetailTemplateContainerProps> =
   newsTagData,
   handleTagClick,
 }) => {
+  const { t } = useTranslation();
   const language = useAppSelector((state) => state.system.language);
 
   const { data: hightLightNews } = useQuery(
@@ -86,8 +88,8 @@ const EventDetailTemplateContainer: React.FC<NewsDetailTemplateContainerProps> =
         relatedNews={relatedNewsData || []}
         hightLightNews={hightLightNewsData || []}
         keyword={tagNewsData || []}
-        titleLatest="Các sự kiện mới nhất"
-        titleHot="Các sự kiện nổi bật"
+        titleLatest={t('event.latest_events')}
+        titleHot={t('event.outstanding_events')}
         eventCardDetails={{
           address: data?.address,
           button: data?.link,

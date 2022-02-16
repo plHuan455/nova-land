@@ -1,5 +1,6 @@
 /* eslint-disable react/require-default-props */
 import React, { useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import Heading from 'components/atoms/Heading';
 import Icon from 'components/atoms/Icon';
@@ -48,51 +49,55 @@ export const ProjectListMapInfo:React.FC<InfoProps> = ({
   listProject,
   handleChangeProvince,
   handleChangeProject,
-}) => (
-  <div className="t-projectListMap_info">
-    <div className="t-projectListMap_info_select">
-      <Text content="Tỉnh/Thành Phố" modifiers={['18x28', 'jet', '600']} />
-      <div className="t-projectListMap_info_pulldown">
-        <Pulldown
-          options={provinceOptions}
-          value={valueProvince}
-          placeholder="Chọn Tỉnh / Thành Phố"
-          handleChange={handleChangeProvince}
-          isSecondary
-        />
+}) => {
+  const { t } = useTranslation();
+
+  return (
+    <div className="t-projectListMap_info">
+      <div className="t-projectListMap_info_select">
+        <Text content={t('map.province_city')} modifiers={['18x28', 'jet', '600']} />
+        <div className="t-projectListMap_info_pulldown">
+          <Pulldown
+            options={provinceOptions}
+            value={valueProvince}
+            placeholder={t('map.select_province_city')}
+            handleChange={handleChangeProvince}
+            isSecondary
+          />
+        </div>
+      </div>
+      <div className="t-projectListMap_info_select">
+        <Text content={t('map.project')} modifiers={['18x28', 'jet', '600']} />
+        <div className="t-projectListMap_info_pulldown">
+          <Pulldown
+            options={projectOptions}
+            value={valueProject}
+            placeholder={t('map.select_project')}
+            handleChange={handleChangeProject}
+            isSecondary
+          />
+        </div>
+      </div>
+      <div className="t-projectListMap_info_wrap-list">
+        <Text content={t('map.project_list')} modifiers={['18x28', 'jet', '600']} />
+        {listProject.length && (
+        <ul className="t-projectListMap_info_list">
+          {listProject.map((item, index) => (
+            <li key={index.toString()}>
+              <Link href={item.href} target={item.target} useExternal={checkExternalUrl(item.href)}>
+                <div className="t-projectListMap_info_item">
+                  <Text content={item.title} modifiers={['16x24', 'jet', '300']} />
+                  <Icon iconName="greyArrowRight" />
+                </div>
+              </Link>
+            </li>
+          ))}
+        </ul>
+        )}
       </div>
     </div>
-    <div className="t-projectListMap_info_select">
-      <Text content="Dự Án" modifiers={['18x28', 'jet', '600']} />
-      <div className="t-projectListMap_info_pulldown">
-        <Pulldown
-          options={projectOptions}
-          value={valueProject}
-          placeholder="Chọn Dự Án"
-          handleChange={handleChangeProject}
-          isSecondary
-        />
-      </div>
-    </div>
-    <div className="t-projectListMap_info_wrap-list">
-      <Text content="Danh Sách Dự Án" modifiers={['18x28', 'jet', '600']} />
-      {listProject.length && (
-      <ul className="t-projectListMap_info_list">
-        {listProject.map((item, index) => (
-          <li key={index.toString()}>
-            <Link href={item.href} target={item.target} useExternal={checkExternalUrl(item.href)}>
-              <div className="t-projectListMap_info_item">
-                <Text content={item.title} modifiers={['16x24', 'jet', '300']} />
-                <Icon iconName="greyArrowRight" />
-              </div>
-            </Link>
-          </li>
-        ))}
-      </ul>
-      )}
-    </div>
-  </div>
-);
+  );
+};
 
 interface MapProps {
   image: ImageMap;

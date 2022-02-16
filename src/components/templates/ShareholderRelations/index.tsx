@@ -1,6 +1,7 @@
 /* eslint-disable react/require-default-props */
 /* eslint-disable jsx-a11y/iframe-has-title */
 import React, { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 
 // import shareholderCard1 from 'assets/images/ShareholderRelations/img_shareholderCard1.png';
 import Button from 'components/atoms/Button';
@@ -83,6 +84,7 @@ const ShareholderRelations: React.FC<ShareholderRelationsProps> = ({
   titleFinancialReport,
   titleStock,
 }) => {
+  const { t } = useTranslation();
   const language = useAppSelector((state) => state.system.language);
 
   const iframeStock = useMemo(() => {
@@ -143,7 +145,7 @@ const ShareholderRelations: React.FC<ShareholderRelationsProps> = ({
           <Link href={href} target={target}>
             <Button modifiers="outlineSpanishGray" type="button">
               <Text modifiers={['14x20', '400', 'fontLexend', 'center']}>
-                {namebtn || 'Xem thêm báo cáo tài chính'}
+                {namebtn || t('financial_report.see_more_btn')}
               </Text>
             </Button>
           </Link>

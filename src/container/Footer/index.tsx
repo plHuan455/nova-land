@@ -5,6 +5,7 @@ import React, {
 } from 'react';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 import { useForm } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 
 import Footer, { FooterRegisterFormTypes, SocialListTypes } from 'components/organisms/Footer';
 import NotifyModal, { NotifyType } from 'components/organisms/NotifyModal';
@@ -18,6 +19,7 @@ interface FooterContainerProps {
 }
 
 const FooterContainer: React.FC<FooterContainerProps> = () => {
+  const { t } = useTranslation();
   const [loading, setLoading] = useState(false);
   const { dataSystem } = useAppSelector((state) => state.system);
   const menuList = useAppSelector((state) => state.menus.groupedFooter);
@@ -55,20 +57,21 @@ const FooterContainer: React.FC<FooterContainerProps> = () => {
         dispatch(setMessageNotify({
           isOpen: true,
           type: 'success',
-          title: 'Gửi liên hệ thành công',
-          message: 'Quý khách đã gửi đăng ký thành công. Xin cảm ơn',
+          title: t('notify.sent_successfully'),
+          message: t('notify.thank_you'),
         }));
       } catch (error) {
         dispatch(setMessageNotify({
           isOpen: true,
           type: 'error',
-          title: 'Gửi đăng ký thất bại',
-          message: 'Vui lòng thử lại',
+          title: t('notify.sent_failed'),
+          message: t('notify.please_check'),
         }));
       } finally {
         setLoading(false);
       }
-    }, [dispatch, executeRecaptcha, method],
+    },
+    [dispatch, executeRecaptcha, method],
   );
 
   const socialLink: SocialListTypes[] | undefined = useMemo(
@@ -123,7 +126,7 @@ const FooterContainer: React.FC<FooterContainerProps> = () => {
         type={messageNotify.type as NotifyType}
         title={messageNotify.title}
         message={messageNotify.message}
-        btnText="Đóng"
+        btnText={t('notify.close')}
       />
     </>
   );

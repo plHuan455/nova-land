@@ -1,5 +1,6 @@
 /* eslint-disable react/require-default-props */
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { TwitterShareButton, FacebookShareButton } from 'react-share';
 
 import Divider from 'components/atoms/Divider';
@@ -55,99 +56,87 @@ const NewsDetail: React.FC<NewsDetailProps> = ({
   hightLightNews,
   eventCardDetails,
   handleTagClick,
-}) => (
-  <Container>
-    <div className="t-newsdetail">
-      <div className="t-newsdetail_leftSide">
-        <Heading modifiers={['52x65', '600', 'jet', 'fontNoto']} type="h1">
-          {newsDetail.title.toLocaleLowerCase()}
-        </Heading>
-        <div className="t-newsdetail_statistical">
-          <Text modifiers={['12x17', '400', 'dimGray']}>
-            {newsDetail.createDate}
-          </Text>
-          {newsDetail.author && (
-            <>
-              <div className="t-newsdetail_circle" />
-              <Text modifiers={['12x17', '400', 'dimGray']}>
-                {newsDetail.author}
-              </Text>
-            </>
-          )}
-          {newsDetail.numberView && (
-            <>
-              <div className="t-newsdetail_circle" />
-              <div className="t-newsdetail_view">
-                <Icon iconName="eyeOpen" size="14" />
+}) => {
+  const { t } = useTranslation();
+
+  return (
+    <Container>
+      <div className="t-newsdetail">
+        <div className="t-newsdetail_leftSide">
+          <Heading modifiers={['52x65', '600', 'jet', 'fontNoto']} type="h1">
+            {newsDetail.title.toLocaleLowerCase()}
+          </Heading>
+          <div className="t-newsdetail_statistical">
+            <Text modifiers={['12x17', '400', 'dimGray']}>
+              {newsDetail.createDate}
+            </Text>
+            {newsDetail.author && (
+              <>
+                <div className="t-newsdetail_circle" />
                 <Text modifiers={['12x17', '400', 'dimGray']}>
-                  {newsDetail.numberView}
+                  {newsDetail.author}
                 </Text>
-              </div>
-            </>
-          )}
-        </div>
-        <div className="t-newsdetail_content">
-          <div className="t-newsdetail_shortDesc">
-            <Text
-              modifiers={['18x28', '600', 'jet']}
-              content={newsDetail.shortDescription}
-            />
+              </>
+            )}
+            {newsDetail.numberView && (
+              <>
+                <div className="t-newsdetail_circle" />
+                <div className="t-newsdetail_view">
+                  <Icon iconName="eyeOpen" size="14" />
+                  <Text modifiers={['12x17', '400', 'dimGray']}>
+                    {newsDetail.numberView}
+                  </Text>
+                </div>
+              </>
+            )}
           </div>
-          {eventCardDetails && (
-            <EventCardDetails
-              address={eventCardDetails.address}
-              button={eventCardDetails.button}
-              thumbnail={eventCardDetails.thumbnail}
-              name={eventCardDetails.name}
-              time={eventCardDetails.time}
-              timeSchedule={eventCardDetails.timeSchedule}
-            />
-          )}
-          <div className="t-newsdetail_content-desc">
-            <Text
-              type="div"
-              modifiers={['16x24', 'davysGrey']}
-              content={newsDetail.content}
-            />
-          </div>
-          <Divider />
-          <div className="t-newsdetail_typesnews">
-            <div className="t-newsdetail_typesnews-list">
-              {newsDetail.newsTypes.map((item, idx) => (item ? (
-                <Tag key={`type-${idx.toString()}`} onClickTag={handleTagClick} text={item} />
-              ) : null))}
-            </div>
-            <div className="t-newsdetail_typesnews-social">
-              <FacebookShareButton url={window.location.href}>
-                <Icon iconName="facebookShare" size="71x25" />
-              </FacebookShareButton>
-              <TwitterShareButton url={window.location.href}>
-                <Icon iconName="zaloShare" size="71x25" />
-              </TwitterShareButton>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="t-newsdetail_rightSide">
-        <Text modifiers={['14x22', '700', 'jet']}>{titleLatest}</Text>
-        <div className="t-newsdetail_subinfo">
-          {relatedNews.map((item, index) => (
-            <React.Fragment key={`news-${index.toString()}`}>
-              <InfoNews
-                imageSrc={item.imageNews || ''}
-                title={item.title}
-                status={item.status || ''}
-                href={item.href || ''}
+          <div className="t-newsdetail_content">
+            <div className="t-newsdetail_shortDesc">
+              <Text
+                modifiers={['18x28', '600', 'jet']}
+                content={newsDetail.shortDescription}
               />
-              {(index + 1) < relatedNews.length && <Divider />}
-            </React.Fragment>
-          ))}
+            </div>
+            {eventCardDetails && (
+              <EventCardDetails
+                address={eventCardDetails.address}
+                button={eventCardDetails.button}
+                thumbnail={eventCardDetails.thumbnail}
+                name={eventCardDetails.name}
+                time={eventCardDetails.time}
+                timeSchedule={eventCardDetails.timeSchedule}
+              />
+            )}
+            <div className="t-newsdetail_content-desc">
+              <Text
+                type="div"
+                modifiers={['16x24', 'davysGrey']}
+                content={newsDetail.content}
+              />
+            </div>
+            <Divider />
+            <div className="t-newsdetail_typesnews">
+              <div className="t-newsdetail_typesnews-list">
+                {newsDetail.newsTypes.map((item, idx) => (item ? (
+                  <Tag key={`type-${idx.toString()}`} onClickTag={handleTagClick} text={item} />
+                ) : null))}
+              </div>
+              <div className="t-newsdetail_typesnews-social">
+                <FacebookShareButton url={window.location.href}>
+                  <Icon iconName="facebookShare" size="71x25" />
+                </FacebookShareButton>
+                <TwitterShareButton url={window.location.href}>
+                  <Icon iconName="zaloShare" size="71x25" />
+                </TwitterShareButton>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="t-newsdetail_hotnews">
-          <Text modifiers={['14x22', '700', 'jet']}>{titleHot}</Text>
+        <div className="t-newsdetail_rightSide">
+          <Text modifiers={['14x22', '700', 'jet']}>{titleLatest}</Text>
           <div className="t-newsdetail_subinfo">
-            {hightLightNews.map((item, idx) => (
-              <React.Fragment key={`news-${idx.toString()}`}>
+            {relatedNews.map((item, idx) => (
+              <React.Fragment key={`news-${item.id}`}>
                 <InfoNews
                   imageSrc={item.imageNews || ''}
                   title={item.title}
@@ -158,19 +147,35 @@ const NewsDetail: React.FC<NewsDetailProps> = ({
               </React.Fragment>
             ))}
           </div>
-        </div>
-        <div className="t-newsdetail_keyword">
-          <Text modifiers={['14x22', '700', 'jet']}>Từ khóa phổ biến</Text>
-          <div className="t-newsdetail_listkey">
-            {keyword.map((item, idx) => (
-              <Tag key={`key-${idx.toString()}`} onClickTag={handleTagClick} text={item} />
-            ))}
+          <div className="t-newsdetail_hotnews">
+            <Text modifiers={['14x22', '700', 'jet']}>{titleHot}</Text>
+            <div className="t-newsdetail_subinfo">
+              {hightLightNews.map((item, idx) => (
+                <React.Fragment key={`news-${idx.toString()}`}>
+                  <InfoNews
+                    imageSrc={item.imageNews || ''}
+                    title={item.title}
+                    status={item.status || ''}
+                    href={item.href || ''}
+                  />
+                  <Divider />
+                </React.Fragment>
+              ))}
+            </div>
+          </div>
+          <div className="t-newsdetail_keyword">
+            <Text modifiers={['14x22', '700', 'jet']}>{t('general.popular_keywords')}</Text>
+            <div className="t-newsdetail_listkey">
+              {keyword.map((item, idx) => (
+                <Tag key={`key-${idx.toString()}`} onClickTag={handleTagClick} text={item} />
+              ))}
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </Container>
-);
+    </Container>
+  );
+};
 NewsDetail.defaultProps = {};
 
 export default NewsDetail;

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useQuery } from 'react-query';
 
 import { IconName } from 'components/atoms/Icon';
@@ -13,6 +14,7 @@ interface MapInformationContainerProps {
 }
 
 const MapInformationContainer: React.FC<MapInformationContainerProps> = ({ dataMarker }) => {
+  const { t } = useTranslation();
   const [dataLocation, setDataLocation] = useState<TypeMapMarker | undefined>(dataMarker);
   const systemData = useAppSelector((state) => state.system.dataSystem);
   const language = useAppSelector((state) => state.system.language);
@@ -70,7 +72,7 @@ const MapInformationContainer: React.FC<MapInformationContainerProps> = ({ dataM
           },
         },
       ],
-      nameBtn: isBack ? 'Tìm gallery gần nhất' : 'Trở lại vị trí đầu',
+      nameBtn: isBack ? t('gallery.find_gallery') : t('gallery.return_location'),
     },
   });
 
@@ -103,7 +105,7 @@ const MapInformationContainer: React.FC<MapInformationContainerProps> = ({ dataM
               },
             },
           ],
-          nameBtn: 'Tìm gallery gần nhất',
+          nameBtn: t('gallery.find_gallery'),
         },
       }));
     }
@@ -112,7 +114,7 @@ const MapInformationContainer: React.FC<MapInformationContainerProps> = ({ dataM
       lng: 0,
       dataMarker: undefined,
     }];
-  }, [data, dataMarker]);
+  }, [data, dataMarker, t]);
 
   useEffect(() => {
     if (dataMarkerDefault && dataMarkerDefault.length > 0) {

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import Button from 'components/atoms/Button';
 import Heading from 'components/atoms/Heading';
@@ -105,6 +106,7 @@ const HomeNews: React.FC<HomeNewsProps> = ({
   loading,
 }) => {
   const [indexActive, setIndexActive] = useState(0);
+  const { t } = useTranslation();
 
   return (
     <div className="t-homeNews">
@@ -149,7 +151,7 @@ const HomeNews: React.FC<HomeNewsProps> = ({
                   <div className="t-homeNews_button">
                     <Link href={href} target={target}>
                       <Button modifiers="outlineSpanishGray">
-                        {nameButton || 'Xem tất cả bài viết'}
+                        {nameButton || t('news.see_all_posts')}
                       </Button>
                     </Link>
                   </div>
@@ -157,7 +159,7 @@ const HomeNews: React.FC<HomeNewsProps> = ({
               )
                 : (
                   <div className="t-homeNews_empty">
-                    <Text modifiers={['center', '20x28']}>Không có tin tức</Text>
+                    <Text modifiers={['center', '20x28']}>{t('news.no_news')}</Text>
                   </div>
                 )
             }

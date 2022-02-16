@@ -1,5 +1,6 @@
 import GoogleMapReact from 'google-map-react';
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import Button from 'components/atoms/Button';
 import Heading from 'components/atoms/Heading';
@@ -35,93 +36,80 @@ export const MapInformationCard: React.FC<MapInformationCardProps> = ({
   nameBtn,
   handleClose,
   handleLocationSearch,
-}) => (
-  <div className="t-mapInformationCard">
-    <div
-      className="t-mapInformationCard_mbClose"
-      onClick={() => handleClose && handleClose(false)}
-    >
-      <Icon iconName="closeWhite" size="16" />
-    </div>
-    <div className="t-mapInformationCard_title">
-      <Heading modifiers={['24x30', '600', 'darkMidnightBlue', 'uppercase']}>
-        {title}
-      </Heading>
-    </div>
-    {dataCard?.length > 0 && (
-      <div className="t-mapInformationCard_wrapper">
-        {dataCard.map((item, index) => (
-          <div
-            className="t-mapInformationCard_item u-mt-lg-30 u-mt-15"
-            key={`mapInformationCard-${index.toString()}`}
-          >
-            <Text
-              modifiers={['18x28', '600', 'darkMidnightBlue', 'capitalize']}
+}) => {
+  const { t } = useTranslation();
+
+  return (
+    <div className="t-mapInformationCard">
+      <div className="t-mapInformationCard_mbClose" onClick={() => handleClose && handleClose(false)}>
+        <Icon iconName="closeWhite" size="16" />
+      </div>
+      <div className="t-mapInformationCard_title">
+        <Heading modifiers={['24x30', '600', 'darkMidnightBlue', 'uppercase']}>
+          {title}
+        </Heading>
+      </div>
+      {dataCard.length > 0 && (
+        <div className="t-mapInformationCard_wrapper">
+          {dataCard.map((item, index) => (
+            <div
+              className="t-mapInformationCard_item u-mt-lg-30 u-mt-15"
+              key={`mapInformationCard-${index.toString()}`}
             >
-              {item.branchName}
-            </Text>
-            <div className="t-mapInformationCard_location u-mt-8">
-              <div className="u-pt-2">
-                <Icon
-                  iconName={item.informationDetail.iconLocation}
-                  size="20"
-                />
-              </div>
-              <div className="t-mapInformationCard_content u-ml-8">
-                <Text modifiers={['16x24', '300', 'dimGray']}>
-                  {item.informationDetail.location}
-                </Text>
-              </div>
-            </div>
-            {item.informationDetail.email && (
-              <div className="t-mapInformationCard_email u-mt-8">
+              <Text modifiers={['18x28', '600', 'darkMidnightBlue', 'capitalize']}>
+                {item.branchName}
+              </Text>
+              <div className="t-mapInformationCard_location u-mt-8">
                 <div className="u-pt-2">
-                  <Icon
-                    iconName={item.informationDetail.iconEmail || 'email'}
-                    size="20"
-                  />
+                  <Icon iconName={item.informationDetail.iconLocation} size="20" />
                 </div>
                 <div className="t-mapInformationCard_content u-ml-8">
-                  <Link
-                    href={`mailto:${item.informationDetail.email}`}
-                    useExternal
-                  >
-                    <Text modifiers={['16x24', '300', 'dimGray', 'underline']}>
-                      {item.informationDetail.email}
-                    </Text>
+                  <Text modifiers={['16x24', '300', 'dimGray']}>
+                    {item.informationDetail.location}
+                  </Text>
+                </div>
+              </div>
+              {item.informationDetail.email && (
+                <div className="t-mapInformationCard_email u-mt-8">
+                  <div className="u-pt-2">
+                    <Icon iconName={item.informationDetail.iconEmail || 'email'} size="20" />
+                  </div>
+                  <div className="t-mapInformationCard_content u-ml-8">
+                    <Link href={`mailto:${item.informationDetail.email}`} useExternal>
+                      <Text modifiers={['16x24', '300', 'dimGray', 'underline']}>
+                        {item.informationDetail.email}
+                      </Text>
+                    </Link>
+                  </div>
+                </div>
+              )}
+              <div className="t-mapInformationCard_phone u-mt-8">
+                <div className="u-pt-2">
+                  <Icon iconName={item.informationDetail.iconPhone || 'phoneContact'} size="20" />
+                </div>
+                <div className="t-mapInformationCard_content u-ml-8">
+                  <Link href={`tel:${item.informationDetail.phone}`} useExternal>
+                    <Text
+                      modifiers={['16x24', '300', 'dimGray']}
+                      content={item.informationDetail.phone}
+                    />
                   </Link>
                 </div>
               </div>
-            )}
-            <div className="t-mapInformationCard_phone u-mt-8">
-              <div className="u-pt-2">
-                <Icon
-                  iconName={item.informationDetail.iconPhone || 'phoneContact'}
-                  size="20"
-                />
-              </div>
-              <div className="t-mapInformationCard_content u-ml-8">
-                <Link href={`tel:${item.informationDetail.phone}`} useExternal>
-                  <Text
-                    modifiers={['16x24', '300', 'dimGray']}
-                    content={item.informationDetail.phone}
-                  />
-                </Link>
-              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+      )}
+      <div className="t-mapInformationCard_btn u-mt-lg-30 u-mt-15">
+        <Button modifiers="primary" type="button" onClick={handleLocationSearch}>
+          <Text modifiers={['18x28', '600', 'center']}>
+            {nameBtn || t('gallery.find_gallery')}
+          </Text>
+        </Button>
       </div>
-    )}
-    <div className="t-mapInformationCard_btn u-mt-lg-30 u-mt-15">
-      <Button modifiers="primary" type="button" onClick={handleLocationSearch}>
-        <Text modifiers={['18x28', '600', 'center']}>
-          {nameBtn || 'Tìm gallery gần nhất'}
-        </Text>
-      </Button>
     </div>
-  </div>
-);
+  );
+};
 
 export type TypeMapMarker = {
   lat: number;

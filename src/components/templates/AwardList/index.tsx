@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import Heading from 'components/atoms/Heading';
 import Loading from 'components/atoms/Loading';
@@ -60,6 +61,7 @@ const AwardList: React.FC<AwardListProps> = ({
   handleActiveTab,
   loading,
 }) => {
+  const { t } = useTranslation();
   const [activeIdx, setActiveIdx] = useState(0);
 
   useEffect(() => {
@@ -127,7 +129,7 @@ const AwardList: React.FC<AwardListProps> = ({
                   ) : (
                     <>
                       <Heading modifiers={['center', '38x52']}>
-                        Không có dữ liệu
+                        {t('notify.no_data')}
                       </Heading>
                     </>
                   )}
