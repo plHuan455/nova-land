@@ -1,5 +1,5 @@
 import React, {
-  useCallback, useMemo, useState,
+  useCallback, useMemo, useRef, useState,
 } from 'react';
 
 import Heading from 'components/atoms/Heading';
@@ -44,12 +44,12 @@ interface MapProps {
   }
 }
 
-const Map: React.FC<MapProps> = ({
+const Map = React.forwardRef<HTMLDivElement, MapProps>(({
   image,
   listPoint,
   idProjectActive,
   fnItem,
-}) => {
+}, ref) => {
   const calculatorPosition = useCallback(
     (item: ItemBranch) => ({
       top: `${((item.point.y / image?.height) * 100)}%`,
@@ -67,6 +67,7 @@ const Map: React.FC<MapProps> = ({
     <div className="t-projectMap_map">
       <div
         className="t-projectMap_map_img"
+        ref={ref}
         style={{ paddingBottom: `${paddingBottomMap}%` }}
       >
         <img
@@ -86,7 +87,7 @@ const Map: React.FC<MapProps> = ({
       </div>
     </div>
   );
-};
+});
 
 interface InfoProps {
   title?: string;
@@ -195,6 +196,7 @@ const ProjectMap: React.FC<ProjectMapProps> = ({
   projectDataList,
 }) => {
   const [idProjectActive, setIdProjectActive] = useState(0);
+  const refMap = useRef<HTMLDivElement|null>(null);
 
   const findCategoryActive = useCallback(
     (id?: number, list?: CategoryBranch[]) => {
@@ -204,10 +206,37 @@ const ProjectMap: React.FC<ProjectMapProps> = ({
     [],
   );
 
+  const listPoint = useMemo(() => findCategoryActive(idActive, listCategory)?.listPoint,
+    [findCategoryActive, idActive, listCategory]);
+
+  const scaleImage = useCallback((x:number, y:number) => {
+    if (!image || !refMap.current) return;
+    const percentX = (x / image.width) * 100;
+    const percentY = (y / image.height) * 100;
+    refMap.current.style.transformOrigin = `${percentX}% ${percentY}%`;
+    refMap.current.style.transform = 'scale(2.5)';
+  }, [image]);
+
+  const clearStyle = useCallback(() => {
+    if (refMap.current) {
+      refMap.current.style.transformOrigin = '';
+      refMap.current.style.transform = '';
+    }
+  }, []);
+
   const fnItem = useMemo(() => ({
-    onMouseEnter: (item: ProjectsTypes) => setIdProjectActive(item.id),
-    onMouseLeave: () => setIdProjectActive(0),
-  }), []);
+    onMouseEnter: (item: ProjectsTypes) => {
+      const find = listPoint?.find((x) => x.projects.includes(item.id));
+      if (find) {
+        scaleImage(find.point.x, find.point.y);
+      }
+      setIdProjectActive(item.id);
+    },
+    onMouseLeave: () => {
+      clearStyle();
+      setIdProjectActive(0);
+    },
+  }), [clearStyle, listPoint, scaleImage]);
 
   return (
     <div className="t-projectMap">
@@ -224,10 +253,10 @@ const ProjectMap: React.FC<ProjectMapProps> = ({
           />
           {image && (
             <Map
+              ref={refMap}
               idProjectActive={idProjectActive}
               image={image}
-              listPoint={findCategoryActive(idActive, listCategory)?.listPoint}
-            // fnItem={fnItem}
+              listPoint={listPoint}
             />
           )}
         </div>
