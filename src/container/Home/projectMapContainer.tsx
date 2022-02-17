@@ -5,7 +5,7 @@ import React, {
 } from 'react';
 import { useQuery } from 'react-query';
 
-import img from 'assets/images/bg_project_list_map.png';
+import img from 'assets/images/bg_project_list_map.svg';
 import ProjectMap, { ItemBranch } from 'components/templates/ProjectMap';
 import { getProjectsService, getRealEstatesService } from 'services/project';
 import {
