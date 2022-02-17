@@ -206,6 +206,9 @@ const ProjectMap: React.FC<ProjectMapProps> = ({
     [],
   );
 
+  const listPoint = useMemo(() => findCategoryActive(idActive, listCategory)?.listPoint,
+    [findCategoryActive, idActive, listCategory]);
+
   const scaleImage = useCallback((x:number, y:number) => {
     if (!image || !refMap.current) return;
     const percentX = (x / image.width) * 100;
@@ -223,20 +226,17 @@ const ProjectMap: React.FC<ProjectMapProps> = ({
 
   const fnItem = useMemo(() => ({
     onMouseEnter: (item: ProjectsTypes) => {
-      listCategory?.forEach((x) => {
-        x.listPoint.forEach((list) => {
-          if (list.projects.includes(item.id)) {
-            scaleImage(list.point.x, list.point.y);
-          }
-        });
-      });
+      const find = listPoint?.find((x) => x.projects.includes(item.id));
+      if (find) {
+        scaleImage(find.point.x, find.point.y);
+      }
       setIdProjectActive(item.id);
     },
     onMouseLeave: () => {
       clearStyle();
       setIdProjectActive(0);
     },
-  }), [clearStyle, listCategory, scaleImage]);
+  }), [clearStyle, listPoint, scaleImage]);
 
   return (
     <div className="t-projectMap">
@@ -256,7 +256,7 @@ const ProjectMap: React.FC<ProjectMapProps> = ({
               ref={refMap}
               idProjectActive={idProjectActive}
               image={image}
-              listPoint={findCategoryActive(idActive, listCategory)?.listPoint}
+              listPoint={listPoint}
             />
           )}
         </div>
