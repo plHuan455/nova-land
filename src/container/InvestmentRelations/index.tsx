@@ -95,7 +95,7 @@ const InvestmentRelationsContainer: React.FC<BasePageData<InvestmentRelationsBlo
 
   const { data: otherDocumentHighlightData } = useQuery(
     ['getOtherDocuments', language], () => getOtherDocumentsService({
-      is_highlight: true,
+      is_highlight: 'true',
       limit: 4,
     }),
     {
@@ -140,7 +140,7 @@ const InvestmentRelationsContainer: React.FC<BasePageData<InvestmentRelationsBlo
 
   const { data: documentsAnnualHighlightData } = useQuery(
     ['getAnnualDocuments', language], () => getAnnualDocumentsService({
-      is_highlight: true,
+      is_show: 'true',
       limit: 1,
     }),
     {
