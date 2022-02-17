@@ -93,7 +93,7 @@ const GallerySlide: React.FC<GallerySlideProps> = ({
             <Animate type="fadeInRight">
               <Carousel settings={setting}>
                 {
-                  imgList.map((item, index) => (
+                  imgList?.map((item, index) => (
                     <div
                       className="t-gallerySlide_right_item"
                       key={`gallerySlide-${index.toString()}`}
