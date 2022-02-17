@@ -8,7 +8,8 @@ import Loading from 'components/atoms/Loading';
 import Text from 'components/atoms/Text';
 import Carousel, { PrevArrow, NextArrow } from 'components/organisms/Carousel';
 import Container from 'components/organisms/Container';
-import mapModifiers from 'utils/functions';
+import useMatchHeight from 'hooks/useMatchHeight';
+import mapModifiers, { checkExternalUrl } from 'utils/functions';
 
 export interface InvestmentCardProps {
   title: string;
@@ -33,6 +34,7 @@ export const InvestmentCard: React.FC<InvestmentCardProps> = ({
   imgLogoHover,
   target,
 }) => {
+  useMatchHeight('.t-investmentCard_title');
   const [isHover, setIsHover] = useState<boolean>(false);
 
   return (
@@ -57,10 +59,10 @@ export const InvestmentCard: React.FC<InvestmentCardProps> = ({
         <div className="t-investmentCard_title">
           <Heading
             modifiers={
-              isSmall
-                ? ['16x24', '600', 'jet', 'uppercase', 'fontNoto']
-                : ['24x30', '600', 'jet', 'uppercase', 'fontNoto']
-            }
+                isSmall
+                  ? ['16x24', '600', 'jet', 'uppercase', 'fontNoto']
+                  : ['24x30', '600', 'jet', 'uppercase', 'fontNoto']
+              }
             content={title}
           />
         </div>
@@ -70,7 +72,11 @@ export const InvestmentCard: React.FC<InvestmentCardProps> = ({
         <div className="t-investmentCard_thumbnail">
           <Image src={thumbnail} alt="InvestmentCard" ratio="228x145" />
           <div className="t-investmentCard_thumbnail_button">
-            <Link href={href} target={target || '_blank'}>
+            <Link
+              href={href}
+              target={target || '_blank'}
+              useExternal={checkExternalUrl(href)}
+            >
               <Button modifiers="outlineWhile" type="button">
                 <Text
                   modifiers={['16x24', '300', 'capitalize', 'center']}
@@ -165,6 +171,7 @@ const InvestmentSector: React.FC<InvestmentSectorProps> = ({
       },
     ],
   };
+  // useMatchHeight('.t-VMV_desc');
 
   return (
     <div className={mapModifiers('t-investmentSector', isSmall && 'small')}>

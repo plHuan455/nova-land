@@ -42,12 +42,11 @@
   }
 
   &_icon {
-    // background: $white;
-    // border: rem(1) solid $camel;
     border-radius: 50%;
     height: rem(120);
     position: relative;
     width: rem(120);
+    margin-bottom: rem(32);
 
     .a-image img {
       height: rem(60);
@@ -62,33 +61,29 @@
       border: 0;
     }
 
+    @include mobile-down {
+      margin-bottom: rem(24);
+    }
+
     #{$root}-small & {
       height: rem(60);
       width: rem(60);
+      margin-bottom: rem(24);
 
       .a-image img {
         height: rem(60);
         width: rem(60);
       }
+
+      @include mobile-down {
+        margin-bottom: rem(24);
+      }
     }
   }
 
   &_title {
-    margin-top: rem(32);
     max-width: max-content;
     position: relative;
-
-    @include mobile-down {
-      margin-top: rem(24);
-    }
-
-    #{$root}-small & {
-      margin-top: rem(24);
-
-      @include mobile-down {
-        margin-top: rem(16);
-      }
-    }
 
     &::after {
       background: $white;

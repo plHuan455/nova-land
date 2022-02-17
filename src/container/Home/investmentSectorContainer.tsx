@@ -30,7 +30,7 @@ const InvestmentSectorContainer: React.FC<InvestmentSectorBlock> = ({
       title: item.name,
       desc: item.description,
       thumbnail: getImageURL(item.thumbnail),
-      href: 'linh-vuc-hoat-dong',
+      href: item.link?.url,
       imgLogo: getImageURL(item.icon),
       imgLogoHover: getImageURL(item.iconHover),
       isSmall: true,
