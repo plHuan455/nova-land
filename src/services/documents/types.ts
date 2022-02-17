@@ -56,6 +56,7 @@ export type OtherDocumentCategoriesTypes = {
 }
 
 export type OtherDocumentCategoriesDetailParamsTypes = {
+  sort?: string;
   keyword?: string;
   page?: number;
   limit?: number;
