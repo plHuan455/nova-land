@@ -3,7 +3,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { getCategoryProjectsService, getProjectsService, getRealEstatesService } from 'services/project';
 import {
   CategoryProjectsDataTypes,
-  KeywordParamsTypes,
+  CategoryProjectsParamsTypes,
   ProjectParamTypes,
   ProjectsTypes,
   RealEstatesTypes,
@@ -51,10 +51,10 @@ export const getRealEstatesAction = createAsyncThunk<
 
 export const getCategoryProjectsAction = createAsyncThunk<
   CategoryProjectsDataTypes[],
-  KeywordParamsTypes
+  CategoryProjectsParamsTypes
 >(
   'fieldOfActivityReducer/getCategoryProjectsAction',
-  async (params: KeywordParamsTypes | undefined, { rejectWithValue }) => {
+  async (params: CategoryProjectsParamsTypes | undefined, { rejectWithValue }) => {
     try {
       return await getCategoryProjectsService(params);
     } catch (error) {

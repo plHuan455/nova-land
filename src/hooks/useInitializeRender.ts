@@ -10,6 +10,7 @@ import { detectLanguage } from 'i18n';
 import { LanguageKey } from 'services/system/types';
 import { useAppDispatch, useAppSelector } from 'store/hooks';
 import { getMenusAction, getStaticPageAsync } from 'store/menus';
+import { getProjectsAction } from 'store/project';
 import { getSystemAsync, setLanguage } from 'store/system';
 import { LOCAL_STORAGE } from 'utils/constants';
 import { checkActiveLang } from 'utils/language';
@@ -30,6 +31,7 @@ const useInitializeRender = () => {
         if (checkActiveLang(languageKey, res.locales)) {
           dispatch(getMenusAction());
           dispatch(getStaticPageAsync());
+          dispatch(getProjectsAction({}));
         } else {
           const message = res?.locales
             ? res.locales[languageKey].message

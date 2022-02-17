@@ -2,7 +2,7 @@ import {
   ProjectParamTypes,
   ProjectsTypes,
   RealEstatesTypes,
-  KeywordParamsTypes,
+  CategoryProjectsParamsTypes,
   CategoryProjectsDataTypes,
   RealEstatesParamsTypes,
 } from './types';
@@ -21,7 +21,7 @@ export const getRealEstatesService = async (
   return response.data.data;
 };
 
-export const getCategoryProjectsService = async (params?: KeywordParamsTypes):
+export const getCategoryProjectsService = async (params?: CategoryProjectsParamsTypes):
   Promise<CategoryProjectsDataTypes[]> => {
   const response = await axiosInstance.get('category-projects', { params });
   return response.data.data;

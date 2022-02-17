@@ -1,4 +1,6 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, {
+  useEffect, useMemo, useState, useCallback,
+} from 'react';
 import { useQuery } from 'react-query';
 
 import FieldActivityDetailsTabContainer, { FieldActivityDetailsTabTypes } from './fieldActivityDetailsTabContainer';
@@ -9,9 +11,9 @@ import ProductLines from 'components/templates/ProductLines';
 import ProjectList from 'components/templates/ProjectList';
 import HelmetContainer from 'container/helmet';
 import getBlockData from 'helpers/pageData';
-import { getProjectsService } from 'services/project';
+import { getCategoryProjectsService, getProjectsService } from 'services/project';
 import { useAppDispatch, useAppSelector } from 'store/hooks';
-import { getCategoryProjectsAction, getRealEstatesAction } from 'store/project';
+import { getRealEstatesAction } from 'store/project';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
 import { getImageURL } from 'utils/functions';
 
@@ -24,14 +26,14 @@ const FieldOfActivityContainer: React.FC<BasePageData<FieldOfActivityData>> = ({
 }) => {
   const dispatch = useAppDispatch();
   const language = useAppSelector((state) => state.system.language);
-  const { realEstatesList, categoryProjectsList } = useAppSelector((state) => state.project);
-  const [idRealEstatesSlug, setIDRealEstatesSlug] = useState<number>(2);
+  const { realEstatesList } = useAppSelector((state) => state.project);
+  const [idRealEstatesSlug, setIDRealEstatesSlug] = useState<number>(0);
   const fieldActivityDetailsTabBlock = useMemo(
     () => getBlockData('introduction', blocks) as FieldActivityDetailsTabTypes,
     [blocks],
   );
 
-  const { data: projectData } = useQuery(
+  const { data: projectData, isLoading } = useQuery(
     ['getProjectsData', idRealEstatesSlug, language],
     () => getProjectsService({
       real_estates_id: idRealEstatesSlug,
@@ -42,9 +44,21 @@ const FieldOfActivityContainer: React.FC<BasePageData<FieldOfActivityData>> = ({
     },
   );
 
+  const { data: categoryProjects } = useQuery(
+    ['getCategoryProjectsData', idRealEstatesSlug, language],
+    () => getCategoryProjectsService({
+      real_estate_id: idRealEstatesSlug,
+    }),
+    {
+      ...DEFAULT_QUERY_OPTION,
+      enabled: !!idRealEstatesSlug,
+    },
+  );
+
   const convertDataProductLines = useMemo(() => {
     if (realEstatesList) {
       return realEstatesList.map((val) => ({
+        id: val.id,
         label: val.name,
         imgActive: getImageURL(val.iconHover),
         imgInActive: getImageURL(val.icon),
@@ -57,7 +71,6 @@ const FieldOfActivityContainer: React.FC<BasePageData<FieldOfActivityData>> = ({
               content: item.description,
             })) || [],
         },
-        id: val.id,
       }));
     }
     return [];
@@ -71,10 +84,9 @@ const FieldOfActivityContainer: React.FC<BasePageData<FieldOfActivityData>> = ({
 
   useEffect(() => {
     dispatch(getRealEstatesAction({}));
-    dispatch(getCategoryProjectsAction({}));
   }, [dispatch, language]);
 
-  const convertListLogo = (nameProjects: string) => {
+  const convertListLogo = useCallback((nameProjects: string) => {
     if (projectData) {
       return projectData.filter((data) => data.category.name === nameProjects).map(
         (item) => ({
@@ -85,19 +97,18 @@ const FieldOfActivityContainer: React.FC<BasePageData<FieldOfActivityData>> = ({
       );
     }
     return [];
-  };
+  }, [projectData]);
 
   const convertDataProjectList = useMemo(() => {
-    if (categoryProjectsList) {
-      return categoryProjectsList.map((val) => ({
+    if (categoryProjects && projectData && projectData?.length > 0) {
+      return categoryProjects.map((val) => ({
         title: val.name,
         listLogo: convertListLogo(val.name),
       }));
     }
 
     return [];
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [categoryProjectsList, projectData, convertListLogo]);
+  }, [categoryProjects, projectData, convertListLogo]);
 
   return (
     <>
@@ -114,7 +125,10 @@ const FieldOfActivityContainer: React.FC<BasePageData<FieldOfActivityData>> = ({
           />
         </div>
         <div className="p-fieldOfActivity_projectList">
-          <ProjectList dataProjectList={convertDataProjectList} />
+          <ProjectList
+            dataProjectList={convertDataProjectList}
+            loading={isLoading}
+          />
         </div>
       </Container>
     </>
