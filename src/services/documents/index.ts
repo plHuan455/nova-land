@@ -8,6 +8,8 @@ import {
   OtherDocumentCategoriesTypes,
   OtherDocumentCategoriesDetailParamsTypes,
   OtherDocumentCategoriesDetailTypes,
+  AnnualDocumentParamsType,
+  AnnualDocumentsDataTypes,
 } from './types';
 
 import axiosInstance from 'services/common/instance';
@@ -27,8 +29,8 @@ export const getOtherDocumentsService = async (
 };
 
 export const getAnnualDocumentsService = async (
-  params?: OtherDocumentParamsType,
-): Promise<APIPaginationResponse<OtherDocumentsDataTypes[]>> => {
+  params?: AnnualDocumentParamsType,
+): Promise<APIPaginationResponse<AnnualDocumentsDataTypes[]>> => {
   const response = await axiosInstance.get('annual-reports', { params });
   return response.data;
 };

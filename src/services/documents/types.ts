@@ -23,7 +23,7 @@ export type OtherDocumentParamsType = {
   keyword?: string;
   page?: number;
   limit?: number;
-  is_highlight?: boolean;
+  is_highlight?: string;
 }
 
 export type OtherDocumentsDataTypes = {
@@ -33,6 +33,22 @@ export type OtherDocumentsDataTypes = {
   file: string,
   publishedAt: string,
   showHome: boolean,
+}
+
+export type AnnualDocumentParamsType = {
+  keyword?: string;
+  page?: number;
+  limit?: number;
+  is_show?: string;
+}
+
+export type AnnualDocumentsDataTypes = {
+  id: number,
+  name: string,
+  locale: string,
+  file: string,
+  publishedAt: string,
+  show: boolean,
 }
 
 export type DocumentTypes = {
