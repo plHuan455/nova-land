@@ -28,7 +28,7 @@ const InvestmentRelations: React.FC = () => {
     ['GetOtherDocumentListHighlight', indexActive, page, language, selectedSort],
     () => getOtherDocumentCategoriesDetailService(indexActive, {
       sort: selectedSort?.value,
-      limit: 2,
+      limit: 5,
       page,
     }),
     {
@@ -54,6 +54,9 @@ const InvestmentRelations: React.FC = () => {
       limit: 50,
     }));
   }, [dispatch, language]);
+
+  console.log(otherDocumentList);
+  console.log(otherDocumentList?.meta.totalPages);
 
   return (
     <div className="p-corporateGovernance_InvestmentRelationsOtherDocument">
