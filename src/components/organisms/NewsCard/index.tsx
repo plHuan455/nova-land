@@ -27,19 +27,6 @@ const NewsCard: React.FC<NewsCardProps> = ({
   variant,
   modifiers,
 }) => {
-  // const checkRatio = useCallback(() => {
-  //   switch (variant) {
-  //     case 'vertical':
-  //       return '582x534' as Ratio;
-  //     case 'horizontal':
-  //       return '582x252' as Ratio;
-  //     case 'smallVertical':
-  //       return '185x142' as Ratio;
-  //     default:
-  //       return '185x142' as Ratio;
-  //   }
-  // }, [variant]);
-
   const checkRatio = useMemo(() => {
     switch (variant) {
       case 'vertical':

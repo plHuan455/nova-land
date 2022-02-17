@@ -1,4 +1,8 @@
 .p-news {
+  &_latestNews {
+    margin-top: rem(30);
+  }
+
   &_cateBlock {
     &:nth-child(even) {
       background: $white-smoke2;
