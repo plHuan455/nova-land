@@ -1,5 +1,6 @@
 import React, { ChangeEvent, KeyboardEvent } from 'react';
 import { Controller, FormProvider, UseFormReturn } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 
 import Button from 'components/atoms/Button';
 import Divider from 'components/atoms/Divider';
@@ -48,6 +49,7 @@ const SearchResult: React.FC<SearchResultProps> = ({
   isLoading,
   handleChangePage,
 }) => {
+  const { t } = useTranslation();
   const { isMobile } = useDeviceQueries();
 
   return (
@@ -86,11 +88,11 @@ const SearchResult: React.FC<SearchResultProps> = ({
             <div className="t-searchResult_content">
               <div className="t-searchResult_amount">
                 <Heading modifiers={['600', '24x30', 'fontLexend', 'jet']}>
-                  Có
+                  {t('general.there_are')}
                   {' '}
                   {searchAmount}
                   {' '}
-                  kết quả được tìm thấy
+                  {t('general.result')}
                 </Heading>
               </div>
               <div className="t-searchResult_list">

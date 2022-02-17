@@ -36,34 +36,34 @@ const Error: React.FC<ErrorProps> = ({
       case 403:
         return {
           imgSrc: error404Img,
-          title: titlePage || t('403.title'),
+          title: titlePage || t('page403.title'),
           desc:
-            description || t('403.description'),
+            description || t('page403.description'),
         };
       case 500:
         return {
           imgSrc: error404Img,
-          title: titlePage || t('500.title'),
+          title: titlePage || t('page500.title'),
           desc:
-            description || t('500.description'),
+            description || t('page500.description'),
         };
       case 503:
         return {
           imgSrc: error404Img,
-          title: titlePage || t('503.title'),
+          title: titlePage || t('page503.title'),
           desc:
-            description || t('503.description'),
+            description || t('page503.description'),
         };
 
       default:
         return {
           imgSrc: error404Img,
-          title: titlePage || t('403.title'),
+          title: titlePage || t('page403.title'),
           desc:
-            description || t('403.description'),
+            description || t('page403.description'),
         };
     }
-  }, [description, statusCode, titlePage]);
+  }, [t, description, statusCode, titlePage]);
   return (
     <div className="t-error">
       <Section>

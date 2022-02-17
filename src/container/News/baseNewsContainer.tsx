@@ -1,4 +1,5 @@
 import React, { useMemo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useQuery } from 'react-query';
 
 import HomeNews, { dataTabsType } from 'components/templates/HomeNews';
@@ -21,6 +22,7 @@ interface BaseNewsProps {
 const BaseNewsContainer: React.FC<BaseNewsProps> = ({
   title, activeTab, tabList, exceptIds,
 }) => {
+  const { t } = useTranslation();
   const language = useAppSelector((state) => state.system.language);
   const [active, setActive] = useState(activeTab);
 
@@ -67,14 +69,14 @@ const BaseNewsContainer: React.FC<BaseNewsProps> = ({
             tabDataHomeNews={convertTabsData}
             newsList={baseNews}
             handleActive={(id) => handleClickTab(id)}
-            nameButton={`Xem thêm ${active.name}`}
+            nameButton={`${t('general.see_more_btn')} ${active.name}`}
           />
         ) : (
           <NewsList
             title={title}
             href={getPrefixURLCode(language, 'NEWS_CATEGORY', active.slug)}
             dataNewsList={baseNews}
-            btnName={`Xem thêm ${active.name}`}
+            btnName={`${t('general.see_more_btn')} ${active.name}`}
             isFetching={isFetching}
           />
         )}

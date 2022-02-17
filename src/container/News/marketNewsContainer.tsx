@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { useQuery } from 'react-query';
 
 import Animate from 'components/organisms/Animate';
@@ -10,6 +11,7 @@ import { DEFAULT_QUERY_OPTION } from 'utils/constants';
 import { getImageURL } from 'utils/functions';
 
 const MarketNewsContainer: React.FC<{ cateSlug: string }> = ({ cateSlug }) => {
+  const { t } = useTranslation();
   const language = useAppSelector((state) => state.system.language);
   const { data: res, isFetching } = useQuery(
     ['getMarketNewsList', language],
@@ -33,9 +35,9 @@ const MarketNewsContainer: React.FC<{ cateSlug: string }> = ({ cateSlug }) => {
       <Section>
         <div className="p-news_marketNewsContainer">
           <NewsList
-            title="Tin Thị Trường"
+            title={t('news.market_news')}
             dataNewsList={convertedMarketNews}
-            btnName="Xem tất cả Tin thị trường"
+            btnName={t('news.see_all_market_news')}
             isFetching={isFetching}
           />
         </div>

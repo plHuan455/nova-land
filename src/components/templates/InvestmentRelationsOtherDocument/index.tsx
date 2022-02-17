@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { ValueType } from 'react-select';
 
 import Button from 'components/atoms/Button';
@@ -143,27 +144,77 @@ const Regulations: React.FC<RegulationsProps> = ({
   totalPage,
   handleChangePage,
   loading,
-}) => (
-  <div className="t-regulations">
-    <div className="t-regulations_title">
-      <Heading modifiers={['jet', '24x30', '600', 'fontLexend']} content={title} />
-    </div>
-    <div className="t-regulations_wrapContent">
-      <div className="t-regulations_top">
-        <div className="t-regulations_sort">
-          <div className="t-regulations_sort_text">
-            <Text modifiers={['14x20', 'right', '400', 'fontLexend', 'dimGray']} content={textSort} />
+}) => {
+  const { t } = useTranslation();
+
+  return (
+    <div className="t-regulations">
+      <div className="t-regulations_title">
+        <Heading modifiers={['jet', '24x30', '600', 'fontLexend']} content={title} />
+      </div>
+      <div className="t-regulations_wrapContent">
+        <div className="t-regulations_top">
+          <div className="t-regulations_sort">
+            <div className="t-regulations_sort_text">
+              <Text modifiers={['14x20', 'right', '400', 'fontLexend', 'dimGray']} content={textSort} />
+            </div>
+            <div className="t-regulations_sort_pulldown">
+              <Pulldown
+                placeholder={t('general.select')}
+                value={selectedSort}
+                options={sortOptions}
+                handleChange={handleSort}
+              />
+            </div>
           </div>
-          <div className="t-regulations_sort_pulldown">
-            <Pulldown
-              placeholder="Chọn"
-              value={selectedSort}
-              options={sortOptions}
-              handleChange={handleSort}
+          <div className="t-regulations_pagination">
+            <Pagination
+              pageCurrent={currPage}
+              totalPage={totalPage}
+              handleChangePage={handleChangePage}
             />
           </div>
         </div>
-        <div className="t-regulations_pagination">
+        <div className="t-regulations_wrapItem">
+          {loading ? <Loading isShow /> : (
+            <>
+              {
+                dataRegulations.map((item, idx) => (
+                  <div key={`regulations-${idx.toString()}`} className="t-regulations_item">
+                    <div className="t-regulations_content">
+                      <div className="t-regulations_image">
+                        <Image alt={item.title} ratio="91x96" src={item.img} />
+                      </div>
+                      <div className="t-regulations_desc">
+                        <div className="t-regulations_desc_title">
+                          <Text modifiers={['jet', '16x24', '400', 'fontLexend']} content={item.title} />
+                        </div>
+                        <div className="t-regulations_desc_date">
+                          <Text modifiers={['12x17', 'fontLexend', '400', 'dimGray']} content={item.date} />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="t-regulations_wrapButton">
+                      <Link
+                        href={item.href}
+                        target="_blank"
+                        useExternal
+                      >
+                        <Button
+                          modifiers="iconRight"
+                          iconName="down"
+                        >
+                          {item.titleBtn}
+                        </Button>
+                      </Link>
+                    </div>
+                  </div>
+                ))
+              }
+            </>
+          )}
+        </div>
+        <div className="t-regulations_paginationButton">
           <Pagination
             pageCurrent={currPage}
             totalPage={totalPage}
@@ -171,55 +222,9 @@ const Regulations: React.FC<RegulationsProps> = ({
           />
         </div>
       </div>
-      <div className="t-regulations_wrapItem">
-        {loading ? <Loading isShow /> : (
-          <>
-            {
-              dataRegulations.map((item, idx) => (
-                <div key={`regulations-${idx.toString()}`} className="t-regulations_item">
-                  <div className="t-regulations_content">
-                    <div className="t-regulations_image">
-                      <Image alt={item.title} ratio="91x96" src={item.img} />
-                    </div>
-                    <div className="t-regulations_desc">
-                      <div className="t-regulations_desc_title">
-                        <Text modifiers={['jet', '16x24', '400', 'fontLexend']} content={item.title} />
-                      </div>
-                      <div className="t-regulations_desc_date">
-                        <Text modifiers={['12x17', 'fontLexend', '400', 'dimGray']} content={item.date} />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="t-regulations_wrapButton">
-                    <Link
-                      href={item.href}
-                      target="_blank"
-                      useExternal
-                    >
-                      <Button
-                        modifiers="iconRight"
-                        iconName="down"
-                      >
-                        {item.titleBtn}
-                      </Button>
-                    </Link>
-                  </div>
-                </div>
-              ))
-            }
-          </>
-        )}
-      </div>
-      <div className="t-regulations_paginationButton">
-        <Pagination
-          pageCurrent={currPage}
-          totalPage={totalPage}
-          handleChangePage={handleChangePage}
-        />
-      </div>
     </div>
-  </div>
-);
+  );
+};
 
 /** ******* InvestmentRelationsOtherDocument ********** */
 export interface InvestmentRelationsOtherDocumentProps extends Omit<RegulationsProps, 'title' | 'textSort'> {
@@ -239,34 +244,38 @@ const InvestmentRelationsOtherDocument: React.FC<InvestmentRelationsOtherDocumen
   handleChangePage,
   handleClick,
   loading,
-}) => (
-  <div className="t-investmentRelationsOtherDocument">
-    <Container>
-      <div className="t-investmentRelationsOtherDocument_content">
-        <div className="t-investmentRelationsOtherDocument_left">
-          <Menu
-            data={dataMenu}
-            handleClick={handleClick}
-          />
+}) => {
+  const { t } = useTranslation();
+
+  return (
+    <div className="t-investmentRelationsOtherDocument">
+      <Container>
+        <div className="t-investmentRelationsOtherDocument_content">
+          <div className="t-investmentRelationsOtherDocument_left">
+            <Menu
+              data={dataMenu}
+              handleClick={handleClick}
+            />
+          </div>
+          <div className="t-investmentRelationsOtherDocument_right">
+            <Regulations
+              title={t('general.regulations')}
+              textSort={`${t('general.sort')}:`}
+              dataRegulations={dataRegulations}
+              selectedSort={selectedSort}
+              sortOptions={sortOptions}
+              handleSort={handleSort}
+              currPage={currPage}
+              totalPage={totalPage}
+              handleChangePage={handleChangePage}
+              loading={loading}
+            />
+          </div>
         </div>
-        <div className="t-investmentRelationsOtherDocument_right">
-          <Regulations
-            title="Điều lệ"
-            textSort="Sắp xếp:"
-            dataRegulations={dataRegulations}
-            selectedSort={selectedSort}
-            sortOptions={sortOptions}
-            handleSort={handleSort}
-            currPage={currPage}
-            totalPage={totalPage}
-            handleChangePage={handleChangePage}
-            loading={loading}
-          />
-        </div>
-      </div>
-    </Container>
-  </div>
-);
+      </Container>
+    </div>
+  );
+};
 
 Regulations.defaultProps = {
   currPage: 1,

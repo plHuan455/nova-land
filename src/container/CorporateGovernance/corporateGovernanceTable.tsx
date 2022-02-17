@@ -116,7 +116,7 @@ const CorporateGovernanceTableContainer: React.FC = () => {
       }));
     }
     return [];
-  }, [documentData, documentTab]);
+  }, [t, documentData, documentTab]);
 
   const isLoading = useMemo(() => documentData.some((ele) => ele.isLoading), [documentData]);
 

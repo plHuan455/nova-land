@@ -114,7 +114,7 @@ const MapInformationContainer: React.FC<MapInformationContainerProps> = ({ dataM
       lng: 0,
       dataMarker: undefined,
     }];
-  }, [data, dataMarker, t]);
+  }, [t, data, dataMarker]);
 
   useEffect(() => {
     if (dataMarkerDefault && dataMarkerDefault.length > 0) {

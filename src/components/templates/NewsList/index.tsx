@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import Button from 'components/atoms/Button';
 import Heading from 'components/atoms/Heading';
@@ -24,53 +25,57 @@ const NewsList: React.FC<NewsListProps> = ({
   isFetching,
   href,
   handleShowMore,
-}) => (
-  <div className="t-newsList">
-    <Container>
-      {!isFetching ? (
-        <>
-          <div className="u-mb-lg-40 u-mb-sm-30 u-mb-20">
-            <Heading modifiers={['32x48', '500', 'uppercase', 'jet', 'center', 'fontNoto']}>
-              {title}
-            </Heading>
-          </div>
-          {
-              dataNewsList.length && dataNewsList.length > 0 ? (
-                <>
-                  <div className="t-newsList_wrapper">
-                    {dataNewsList.map((item, index) => (
-                      <div className="t-newsList_item" key={`newsList-${index.toString()}`}>
-                        <HomeNewsCard
-                          {...item}
-                        />
-                      </div>
-                    ))}
-                  </div>
-                  <div className="t-newsList_button">
-                    {href ? (
-                      <Link href={href} target="_self">
-                        <Button modifiers="outlineSpanishGray">
+}) => {
+  const { t } = useTranslation();
+
+  return (
+    <div className="t-newsList">
+      <Container>
+        {!isFetching ? (
+          <>
+            <div className="u-mb-lg-40 u-mb-sm-30 u-mb-20">
+              <Heading modifiers={['32x48', '500', 'uppercase', 'jet', 'center', 'fontNoto']}>
+                {title}
+              </Heading>
+            </div>
+            {
+                dataNewsList.length && dataNewsList.length > 0 ? (
+                  <>
+                    <div className="t-newsList_wrapper">
+                      {dataNewsList.map((item, index) => (
+                        <div className="t-newsList_item" key={`newsList-${index.toString()}`}>
+                          <HomeNewsCard
+                            {...item}
+                          />
+                        </div>
+                      ))}
+                    </div>
+                    <div className="t-newsList_button">
+                      {href ? (
+                        <Link href={href} target="_self">
+                          <Button modifiers="outlineSpanishGray">
+                            {btnName}
+                          </Button>
+                        </Link>
+                      ) : (
+                        <Button modifiers="outlineSpanishGray" onClick={handleShowMore}>
                           {btnName}
                         </Button>
-                      </Link>
-                    ) : (
-                      <Button modifiers="outlineSpanishGray" onClick={handleShowMore}>
-                        {btnName}
-                      </Button>
-                    )}
+                      )}
+                    </div>
+                  </>
+                ) : (
+                  <div className="t-newsList_empty">
+                    <Text modifiers={['center', '20x28']}>{t('news.no_news')}</Text>
                   </div>
-                </>
-              ) : (
-                <div className="t-newsList_empty">
-                  <Text modifiers={['center', '20x28']}>Không có tin tức</Text>
-                </div>
-              )
-            }
-        </>
-      ) : <Loading variant="fullScreen" />}
-    </Container>
-  </div>
-);
+                )
+              }
+          </>
+        ) : <Loading variant="fullScreen" />}
+      </Container>
+    </div>
+  );
+};
 
 NewsList.defaultProps = {
   handleShowMore: undefined,

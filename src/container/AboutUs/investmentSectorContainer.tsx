@@ -33,7 +33,7 @@ const InvestmentSectorContainer: React.FC<InvestmentSectorContainerProps> = ({
       btnText: t('general.learn_more'),
       target: item.link?.target,
     })),
-    [realEstatesList],
+    [t, realEstatesList],
   );
 
   useEffect(() => {

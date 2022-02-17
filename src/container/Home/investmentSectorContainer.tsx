@@ -36,7 +36,7 @@ const InvestmentSectorContainer: React.FC<InvestmentSectorBlock> = ({
       isSmall: true,
       btnText: t('general.learn_more'),
     })),
-    [realEstatesList],
+    [t, realEstatesList],
   );
 
   useEffect(() => {

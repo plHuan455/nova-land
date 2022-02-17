@@ -3,12 +3,20 @@ import { storiesOf } from '@storybook/react';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { MemoryRouter } from 'react-router-dom';
+import * as yup from 'yup';
 
 import Footer, { FooterRegisterFormTypes } from '.';
 
 import headerMenuDummy from 'assets/dataDummy/header';
 import { OptionType } from 'components/molecules/Pulldown';
-import registerSchema from 'utils/schemas';
+import { phoneRegExp } from 'utils/schemas';
+
+const registerSchema = yup.object().shape({
+  fullname: yup.string().required('Vui lòng nhập họ và tên'),
+  email: yup.string().required('Vui lòng nhập email').email('Email không hợp lệ'),
+  phone: yup.string().required('Vui lòng nhập số điện thoại').matches(phoneRegExp, 'Không đúng định dạng'),
+  project: yup.object().required('Vui lòng chọn 1 dự án').nullable(),
+});
 
 const dummyOption: OptionType[] = [
   { value: 'Quan1', label: 'Quan 1' },
