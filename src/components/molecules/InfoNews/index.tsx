@@ -21,8 +21,8 @@ const InfoNews: React.FC<InfoNewsProps> = ({
     <div className="m-infonews_content">
       <Link href={href}>
         <div className="m-infonews_title">
-          <Text modifiers={['12x17', '400', 'jet']}>
-            {title}
+          <Text modifiers={['12x17', '400', 'jet', 'capitalize']}>
+            {title.toLocaleLowerCase()}
           </Text>
         </div>
       </Link>
