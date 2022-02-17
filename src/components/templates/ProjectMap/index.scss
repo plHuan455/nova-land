@@ -11,6 +11,7 @@
 
   &_map {
     max-width: calc(373 / #{$width-in-container-value} * 100%);
+    overflow: hidden;
     @include tablet-down {
       max-width: 45%;
     }
@@ -22,7 +23,8 @@
 
     &_img {
       position: relative;
-
+      transition: 0.6s ease-in-out;
+      
       & > img {
         left: rem(4);
         max-width: 100%;

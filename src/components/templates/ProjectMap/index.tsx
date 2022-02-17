@@ -1,5 +1,6 @@
+/* eslint-disable no-unused-vars */
 import React, {
-  useCallback, useMemo, useState,
+  useCallback, useMemo, useRef, useState,
 } from 'react';
 
 import Heading from 'components/atoms/Heading';
@@ -44,12 +45,12 @@ interface MapProps {
   }
 }
 
-const Map: React.FC<MapProps> = ({
+const Map = React.forwardRef<HTMLDivElement, MapProps>(({
   image,
   listPoint,
   idProjectActive,
   fnItem,
-}) => {
+}, ref) => {
   const calculatorPosition = useCallback(
     (item: ItemBranch) => ({
       top: `${((item.point.y / image?.height) * 100)}%`,
@@ -67,6 +68,7 @@ const Map: React.FC<MapProps> = ({
     <div className="t-projectMap_map">
       <div
         className="t-projectMap_map_img"
+        ref={ref}
         style={{ paddingBottom: `${paddingBottomMap}%` }}
       >
         <img
@@ -86,7 +88,7 @@ const Map: React.FC<MapProps> = ({
       </div>
     </div>
   );
-};
+});
 
 interface InfoProps {
   title?: string;
@@ -204,10 +206,35 @@ const ProjectMap: React.FC<ProjectMapProps> = ({
     [],
   );
 
+  const scaleImage = useCallback((x:number, y:number) => {
+    if (!image || !ref.current) return;
+    const percentX = (x / image.width) * 100;
+    const percentY = (y / image.height) * 100;
+    ref.current.style.transformOrigin = `${percentX}% ${percentY}%`;
+    ref.current.style.transform = 'scale(2.5)';
+  }, [image]);
+
   const fnItem = useMemo(() => ({
-    onMouseEnter: (item: ProjectsTypes) => setIdProjectActive(item.id),
-    onMouseLeave: () => setIdProjectActive(0),
-  }), []);
+    onMouseEnter: (item: ProjectsTypes) => {
+      console.log(item);
+      console.log('listCategory', listCategory);
+      const find = listCategory?.find((x) => x.listPoint[0].projects.includes(item.id));
+      console.log(find);
+      if (find) {
+        scaleImage(find.listPoint[0].point.x, find.listPoint[0].point.y);
+      }
+      setIdProjectActive(item.id);
+    },
+    onMouseLeave: () => {
+      if (ref.current) {
+        ref.current.style.transformOrigin = '';
+        ref.current.style.transform = '';
+      }
+      setIdProjectActive(0);
+    },
+  }), [listCategory, scaleImage]);
+
+  const ref = useRef<HTMLDivElement|null>(null);
 
   return (
     <div className="t-projectMap">
@@ -224,10 +251,15 @@ const ProjectMap: React.FC<ProjectMapProps> = ({
           />
           {image && (
             <Map
+              ref={ref}
               idProjectActive={idProjectActive}
               image={image}
               listPoint={findCategoryActive(idActive, listCategory)?.listPoint}
-            // fnItem={fnItem}
+              // fnItem={{
+              //   onMouseEnter: (item: ProjectsTypes) => { console.log(item); },
+              //   onMouseLeave: (item: ProjectsTypes) => { console.log(item); },
+              //   onClick: (item: ProjectsTypes) => { console.log(item); },
+              // }}
             />
           )}
         </div>
