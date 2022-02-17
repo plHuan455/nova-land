@@ -1,7 +1,6 @@
 import React, {
   useState,
   useMemo,
-  useCallback,
   useEffect,
 } from 'react';
 import { useQuery } from 'react-query';
@@ -26,7 +25,7 @@ const LeadershipContainer: React.FC<LeadershipContainerProps> = ({
   const [indexActive, setIndexActive] = useState(0);
   const [isViewMore, setIsViewMore] = useState(false);
   const language = useAppSelector((state) => state.system.language);
-  const [currentLeader, setCurrentLeader] = useState<LeadershipDetailProps>({
+  const [currentLeader, setCurrentLeader] = useState<LeadershipDetailProps | undefined>({
     gender: '',
     name: '',
     position: '',
@@ -79,11 +78,11 @@ const LeadershipContainer: React.FC<LeadershipContainerProps> = ({
     setIndexActive(index);
   };
 
-  const handleChangeLeader = useCallback((index: number) => {
+  const handleChangeLeader = (index: number) => {
     if (leaderShipDataList) {
       setCurrentLeader(leaderShipDataList[index]);
     }
-  }, [leaderShipDataList]);
+  };
 
   return (
     <div className="p-aboutUs_leadership">
