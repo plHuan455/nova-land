@@ -20,16 +20,14 @@ const ReportListContainer: React.FC = () => {
       limit: 6,
       page: currentPage,
     }),
-    {
-      ...DEFAULT_QUERY_OPTION,
-    },
+    DEFAULT_QUERY_OPTION,
   );
 
   const reportData = useMemo(() => {
     let reportList: ReportTypes[] = [];
     let totalPages = 1;
     if (reportDataList) {
-      reportList = reportDataList.data.filter((item) => item.show === true).map((item) => ({
+      reportList = reportDataList.data.map((item) => ({
         title: item.name,
         imageSrc: imgReport,
         file: item.file,
