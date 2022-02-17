@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { useQuery } from 'react-query';
 
 import { tabDataProjectNews } from 'assets/dataDummy/newsList';
@@ -10,6 +11,7 @@ import { DEFAULT_QUERY_OPTION } from 'utils/constants';
 import { formatDateDDMMYYYY, getHourFromPastToCurrent, getImageURL } from 'utils/functions';
 
 const TabsNewsContainer: React.FC<{ cateSlug: string }> = ({ cateSlug }) => {
+  const { t } = useTranslation();
   const language = useAppSelector((state) => state.system.language);
   const { data: res } = useQuery(
     ['getProjectNewsData', language],
@@ -26,7 +28,7 @@ const TabsNewsContainer: React.FC<{ cateSlug: string }> = ({ cateSlug }) => {
     date: item.publishedAt,
     totalViews: item.viewed,
     time: new Date(item.publishedAt || '') === new Date()
-      ? `${getHourFromPastToCurrent(item.publishedAt)} giờ trước`
+      ? `${getHourFromPastToCurrent(item.publishedAt)} ${t('general.hours_ago')}`
       : formatDateDDMMYYYY(item.publishedAt),
     href: item.slug,
   })) : [];
@@ -35,7 +37,7 @@ const TabsNewsContainer: React.FC<{ cateSlug: string }> = ({ cateSlug }) => {
     <div className="p-news_cateBlock">
       <Section>
         <HomeNews
-          title="Tin dự án"
+          title={t('news.project_news')}
           href="/"
           tabDataHomeNews={tabDataProjectNews}
           newsList={convertedProjectNews}

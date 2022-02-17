@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import Animate from 'components/organisms/Animate';
 import LatestNews from 'components/templates/LatestNews';
@@ -8,6 +9,7 @@ import { formatDateDDMMYYYY, getHourFromPastToCurrent, getImageURL } from 'utils
 import { getPrefixURLCode } from 'utils/language';
 
 const LatestNewsContainer: React.FC<{latestNewsData: NewsDataTypes[]}> = ({ latestNewsData }) => {
+  const { t } = useTranslation();
   const language = useAppSelector((state) => state.system.language);
 
   const convertedPopularNews = latestNewsData?.map((item, idx) => ({
@@ -16,7 +18,7 @@ const LatestNewsContainer: React.FC<{latestNewsData: NewsDataTypes[]}> = ({ late
     alt: item.slug,
     title: item.title.toLocaleLowerCase(),
     time: new Date(item.publishedAt || '') === new Date()
-      ? `${getHourFromPastToCurrent(item.publishedAt)} giờ trước`
+      ? `${getHourFromPastToCurrent(item.publishedAt)} ${t('general.hours_ago')}`
       : formatDateDDMMYYYY(item.publishedAt),
     href: getPrefixURLCode(language, 'NEWS_DETAIL', item.slug),
   }));

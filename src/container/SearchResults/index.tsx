@@ -5,6 +5,7 @@ import React, {
   useState,
 } from 'react';
 import { useForm } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 import { useQuery } from 'react-query';
 import { useSearchParams } from 'react-router-dom';
 
@@ -28,6 +29,7 @@ export type SearchBlock =
   | IntroDataBlock;
 
 const SearchResultsContainer: React.FC<BasePageData<SearchBlock>> = ({ pageData, banners }) => {
+  const { t } = useTranslation();
   const language = useAppSelector((state) => state.system.language);
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchText, setSearchText] = useState(searchParams.get('keyword') || '');
@@ -97,8 +99,8 @@ const SearchResultsContainer: React.FC<BasePageData<SearchBlock>> = ({ pageData,
               searchAmount={newsData.totalNews}
               newsList={newsData.newsList}
               title={pageData.title}
-              placeholderText="Nhập từ khóa tìm kiếm"
-              btnText="Tìm kiếm"
+              placeholderText={t('general.search_keyword')}
+              btnText={t('general.search')}
               totalPage={newsData.totalPages}
               currentPage={currentPage}
               handleChangePage={(page: number) => setCurrentPage(page)}

@@ -42,6 +42,7 @@ const Header: React.FC<HeaderProps> = ({
   isPageRecruitment,
 }) => {
   const { i18n } = useTranslation();
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const {
     lang,
@@ -137,7 +138,7 @@ const Header: React.FC<HeaderProps> = ({
                       <Input
                         autoComplete="off"
                         id="search"
-                        placeholder="Tìm kiếm"
+                        placeholder={t('general.search')}
                         type="text"
                         ref={inputRef}
                         onKeyPress={onPressEnter}
@@ -233,7 +234,7 @@ const Header: React.FC<HeaderProps> = ({
                     <Input
                       autoComplete="off"
                       id="search"
-                      placeholder="Tìm kiếm"
+                      placeholder={t('general.search')}
                       type="text"
                       ref={inputRef}
                       onKeyPress={onPressEnter}

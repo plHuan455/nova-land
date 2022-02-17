@@ -1,1 +1,88 @@
-{}
+{
+  "general": {
+    "see_more_btn": "See more",
+    "learn_more": "Learn more",
+    "quarter": "Quarter",
+    "return_homepage": "Return to the homepage",
+    "popular_keywords": "Popular keywords",
+    "search": "Search",
+    "hours_ago": "hours ago",
+    "latest": "latest",
+    "oldest": "oldest",
+    "PDF": "View and download PDF",
+    "select": "Select",
+    "regulations": "Regulations",
+    "sort": "Sort",
+    "search_keyword": "Enter keywords into the search",
+    "there_are": "There are",
+    "result": "results were found"
+  },
+  "news": {
+    "see_all_posts": "See all posts",
+    "no_news": "No news",
+    "market_news" : "Market News",
+    "see_all_market_news": "See all Market News",
+    "project_news": "Project News"
+  },
+  "financial_report": {
+    "see_more_btn": "See more financial statements"
+  },
+  "notify": {
+    "sent_successfully": "Submit a successful registration",
+    "sent_failed": "Submit registration failed",
+    "thank_you": "You have submitted a successful registration. Thank you",
+    "please_check": "Please check the information again",
+    "close": "Close",
+    "no_data": "No data"
+  },
+  "map": {
+    "province_city": "Province / city",
+    "select_province_city": "Select the province / city",
+    "project": "Project",
+    "select_project": "Select the project",
+    "project_list": "Project List",
+    "see_location": "See location on the map"
+  },
+  "gallery": {
+    "find_gallery": "Find the nearest gallery",
+    "return_location": "Return to the original location"
+  },
+  "page403": {
+    "title": "Sorry, we couldn't find this page.",
+    "description": "Please return to the homepage or contact us for assistance."
+  },
+  "page500": {
+    "title": "Internal server error",
+    "description": "Please return to the homepage or contact us for assistance."
+  },
+  "page503": {
+    "title": "Sorry, the system is under maintenance",
+    "description": "The information page you are looking for is under maintenance, please try again later."
+  },
+  "event": {
+    "latest_events": "The latest events",
+    "outstanding_events": "Outstanding events"
+  },
+  "footer": {
+    "customer_service": "CSR’s",
+    "follow_novaland": "Follow Novaland on",
+    "note": "You register to receive email ads about the latest promotional, promotion and news from Novaland."
+  },
+  "register": {
+    "name_placeholder": "Name",
+    "phone_placeholder": "Phone",
+    "project_placeholder": "Customer project interested",
+    "btn_register": "Register",
+    "full_name_required": "please enter your name",
+    "email_required": "Please enter your email",
+    "invalid_email_required": "Invalid email",
+    "phone_required": "please enter your phone number",
+    "malformed_required": "Malformed",
+    "project_required": "Please select a project"
+  },
+  "recruitment": {
+    "similar_positions" : "Similar Positions",
+    "apply": "apply",
+    "news_share": "Share recruitment news"
+  }
+}

@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
 import React, { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useQuery } from 'react-query';
 
 import StockInformationContainer from './StockInformation';
@@ -69,6 +70,7 @@ const InvestmentRelationsContainer: React.FC<BasePageData<InvestmentRelationsBlo
   blocks,
   banners,
 }) => {
+  const { t } = useTranslation();
   const language = useAppSelector((state) => state.system.language);
   const novalandSharesBlock = useMemo(() => getBlockData('novaland_shares', blocks) as NovalandShares, [blocks]);
   const corporateGovernanceAnnualReportBlock = useMemo(() => getBlockData('corporate_governance_annual_report', blocks) as CorporateGovernanceAnnualReport,
@@ -156,7 +158,7 @@ const InvestmentRelationsContainer: React.FC<BasePageData<InvestmentRelationsBlo
       alt: documentsHighlightData?.data[0]?.name || '',
       title: documentsHighlightData?.data[0]?.name || '',
       time: new Date(documentsHighlightData?.data[0]?.publishedAt || '') === new Date()
-        ? `${getHourFromPastToCurrent(documentsHighlightData?.data[0]?.publishedAt)} giờ trước`
+        ? `${getHourFromPastToCurrent(documentsHighlightData?.data[0]?.publishedAt)} ${t('general.hours_ago')}`
         : formatDateDDMMYYYY(documentsHighlightData?.data[0]?.publishedAt),
       href: corporateGovernanceAnnualReportBlock.corporateGovernance.button.url,
       btnText: corporateGovernanceAnnualReportBlock.corporateGovernance.button.text,
@@ -172,7 +174,7 @@ const InvestmentRelationsContainer: React.FC<BasePageData<InvestmentRelationsBlo
       alt: documentsAnnualHighlightData?.data[0]?.name || '',
       title: documentsAnnualHighlightData?.data[0]?.name || '',
       time: new Date(documentsAnnualHighlightData?.data[0]?.publishedAt || '') === new Date()
-        ? `${getHourFromPastToCurrent(documentsAnnualHighlightData?.data[0]?.publishedAt)} giờ trước`
+        ? `${getHourFromPastToCurrent(documentsAnnualHighlightData?.data[0]?.publishedAt)}${t('general.hours_ago')}`
         : formatDateDDMMYYYY(documentsAnnualHighlightData?.data[0]?.publishedAt),
       href: corporateGovernanceAnnualReportBlock.annualReport.button.url,
       btnText: corporateGovernanceAnnualReportBlock.annualReport.button.text,

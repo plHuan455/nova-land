@@ -5,6 +5,8 @@ import React, {
 } from 'react';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 import { useForm } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
+import * as yup from 'yup';
 
 import Footer, { FooterRegisterFormTypes, SocialListTypes } from 'components/organisms/Footer';
 import NotifyModal, { NotifyType } from 'components/organisms/NotifyModal';
@@ -12,12 +14,13 @@ import submitContactService from 'services/contact';
 import { useAppDispatch, useAppSelector } from 'store/hooks';
 import { setMessageNotify } from 'store/system';
 import { getImageURL } from 'utils/functions';
-import registerSchema from 'utils/schemas';
+import { phoneRegExp } from 'utils/schemas';
 
 interface FooterContainerProps {
 }
 
 const FooterContainer: React.FC<FooterContainerProps> = () => {
+  const { t } = useTranslation();
   const [loading, setLoading] = useState(false);
   const { dataSystem } = useAppSelector((state) => state.system);
   const menuList = useAppSelector((state) => state.menus.groupedFooter);
@@ -26,6 +29,13 @@ const FooterContainer: React.FC<FooterContainerProps> = () => {
   const { messageNotify } = useAppSelector((state) => state.system);
 
   const dispatch = useAppDispatch();
+
+  const registerSchema = yup.object().shape({
+    fullname: yup.string().required(t('register.full_name_required')),
+    email: yup.string().required(t('register.email_required')).email(t('register.invalid_email_required')),
+    phone: yup.string().required(t('register.phone_required')).matches(phoneRegExp, t('register.malformed_required')),
+    project: yup.object().required(t('register.project_required')).nullable(),
+  });
 
   const method = useForm<FooterRegisterFormTypes>({
     resolver: yupResolver(registerSchema),
@@ -55,20 +65,21 @@ const FooterContainer: React.FC<FooterContainerProps> = () => {
         dispatch(setMessageNotify({
           isOpen: true,
           type: 'success',
-          title: 'Gửi liên hệ thành công',
-          message: 'Quý khách đã gửi đăng ký thành công. Xin cảm ơn',
+          title: t('notify.sent_successfully'),
+          message: t('notify.thank_you'),
         }));
       } catch (error) {
         dispatch(setMessageNotify({
           isOpen: true,
           type: 'error',
-          title: 'Gửi đăng ký thất bại',
-          message: 'Vui lòng thử lại',
+          title: t('notify.sent_failed'),
+          message: t('notify.please_check'),
         }));
       } finally {
         setLoading(false);
       }
-    }, [dispatch, executeRecaptcha, method],
+    },
+    [t, dispatch, executeRecaptcha, method],
   );
 
   const socialLink: SocialListTypes[] | undefined = useMemo(
@@ -123,7 +134,7 @@ const FooterContainer: React.FC<FooterContainerProps> = () => {
         type={messageNotify.type as NotifyType}
         title={messageNotify.title}
         message={messageNotify.message}
-        btnText="Đóng"
+        btnText={t('notify.close')}
       />
     </>
   );

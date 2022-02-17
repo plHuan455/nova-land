@@ -1,1 +1,88 @@
-{}
+{
+  "general": {
+    "see_more_btn": "Xem thêm",
+    "learn_more": "Tìm hiểu thêm",
+    "quarter": "Qúy",
+    "return_homepage": "Trở về trang chủ",
+    "popular_keywords": "Từ khóa phổ biến",
+    "search": "Tìm kiếm",
+    "hours_ago": "giờ trước",
+    "latest": "Mới nhất",
+    "oldest": "Cũ nhất",
+    "PDF": "Xem và tải PDF",
+    "select": "Chọn",
+    "regulations": "Điều lệ",
+    "sort": "Sắp xếp",
+    "search_keyword": "Nhập từ khóa tìm kiếm",
+    "there_are": "Có",
+    "result": "kết quả được tìm thấy"
+  },
+  "news": {
+    "see_all_posts": "Xem tất cả bài viết",
+    "no_news": "Không có tin tức",
+    "market_news" : "Tin Thị Trường",
+    "see_all_market_news": "Xem tất cả Tin thị trường",
+    "project_news": "Tin dự án"
+  },
+  "financial_report": {
+    "see_more_btn": "Xem thêm báo cáo tài chính"
+  },
+  "notify": {
+    "sent_successfully": "Gửi đăng ký thành công",
+    "sent_failed": "Gửi đăng ký thất bại",
+    "thank_you": "Quý khách đã gửi đăng ký thành công. Xin cảm ơn",
+    "please_check": "Vui lòng kiểm tra lại thông tin",
+    "close": "Đóng",
+    "no_data": "Không có dữ liệu"
+  },
+  "map": {
+    "province_city": "Tỉnh/Thành Phố",
+    "select_province_city": "Chọn Tỉnh / Thành Phố",
+    "project": "Dự Án",
+    "select_project": "Chọn Dự Án",
+    "project_list": "Danh Sách Dự Án",
+    "see_location": "Xem vị trí trên bản đồ"
+  },
+  "gallery": {
+    "find_gallery": "Tìm gallery gần nhất",
+    "return_location": "Trở lại ví trí ban đầu"
+  },
+  "page403": {
+    "title": "Rất tiếc, chúng tôi không tìm thấy trang này.",
+    "description": "Vui lòng trở về trang chủ hoặc liên hệ với chúng tôi để được hỗ trợ."
+  },
+  "page500": {
+    "title": "Lỗi máy chủ nội bộ.",
+    "description": "Rất tiếc, một vài lỗi không mong muốn đã xảy ra, chúng tôi đang cố gắng khắc phục sự cố. Quý Khách xin vui lòng thử lại sau."
+  },
+  "page503": {
+    "title": "Rất tiếc, hệ thống đang được bảo trì",
+    "description": "Trang thông tin Quý Khách tìm kiếm đang trong quá trình bảo trì, vui lòng thử lại sau."
+  },
+  "event": {
+    "latest_events": "Các sự kiện mới nhất",
+    "outstanding_events": "Các sự kiện nổi bật"
+  },
+  "footer": {
+    "customer_service": "Tổng đài CSKH",
+    "follow_novaland": "THEO DÕI NOVALAND TRÊN",
+    "note": "Quý khách đăng ký nhận email quảng cáo về các chương trình ưu đãi, khuyến mại và tin tức mới nhất từ Novaland."
+  },
+  "register": {
+    "name_placeholder": "Họ và tên",
+    "phone_placeholder": "Số điện thoại",
+    "project_placeholder": "Dự án khách hàng quan tâm",
+    "btn_register": "Đăng Ký",
+    "full_name_required": "Vui lòng nhập họ và tên",
+    "email_required": "Vui lòng nhập email",
+    "invalid_email_required": "Email không hợp lệ",
+    "phone_required": "Vui lòng nhập số điện thoại",
+    "malformed_required": "Không đúng định dạng",
+    "project_required": "Vui lòng chọn 1 dự án"
+  },
+  "recruitment": {
+    "similar_positions" : "Các vị trí tương tự",
+    "apply": "Nộp hồ sơ ứng tuyển",
+    "news_share": "Chia sẻ tin tuyển dụng"
+  }
+}

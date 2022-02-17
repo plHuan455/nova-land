@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useDispatch } from 'react-redux';
 
 import Animate from 'components/organisms/Animate';
@@ -19,6 +20,7 @@ interface InvestmentSectorBlock {
 const InvestmentSectorContainer: React.FC<InvestmentSectorBlock> = ({
   blocks,
 }) => {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   const { realEstatesList } = useAppSelector((state) => state.project);
   const language = useAppSelector((state) => state.system.language);
@@ -32,9 +34,9 @@ const InvestmentSectorContainer: React.FC<InvestmentSectorBlock> = ({
       imgLogo: getImageURL(item.icon),
       imgLogoHover: getImageURL(item.iconHover),
       isSmall: true,
-      btnText: 'Tìm Hiểu Thêm',
+      btnText: t('general.learn_more'),
     })),
-    [realEstatesList],
+    [t, realEstatesList],
   );
 
   useEffect(() => {

@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
 import React, { useState, useEffect, useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useQuery } from 'react-query';
 
 import imgPdf from 'assets/images/downImg.png';
@@ -11,18 +12,19 @@ import { useAppSelector, useAppDispatch } from 'store/hooks';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
 import { formatDateDDMMYYYY, getImageURL } from 'utils/functions';
 
-const dummyOption: OptionType[] = [
-  { value: 'latest', label: 'Mới nhất' },
-  { value: 'oldest', label: 'Cũ nhất' },
-
-];
 const InvestmentRelations: React.FC = () => {
+  const { t } = useTranslation();
   const dispatch = useAppDispatch();
   const [selectedSort, setSelectedSort] = useState<OptionType | null>(null);
   const language = useAppSelector((state) => state.system.language);
   const { otherCategories } = useAppSelector((state) => state.documents);
   const [page, setPage] = useState(1);
   const [indexActive, setIndexActive] = useState<number>(1);
+
+  const dummyOption: OptionType[] = [
+    { value: 'latest', label: t('general.latest') },
+    { value: 'oldest', label: t('general.oldest') },
+  ];
 
   const { data: otherDocumentList, isLoading } = useQuery(
     ['GetOtherDocumentListHighlight', indexActive, page, language, selectedSort],
@@ -42,12 +44,12 @@ const InvestmentRelations: React.FC = () => {
         img: imgPdf,
         title: val.name,
         date: formatDateDDMMYYYY(val.publishedAt),
-        titleBtn: 'Xem và tải PDF',
+        titleBtn: t('general.PDF'),
         href: getImageURL(val.file),
       }));
     }
     return [];
-  }, [otherDocumentList]);
+  }, [t, otherDocumentList]);
 
   useEffect(() => {
     dispatch(getOtherDocumentCategoriesAction({

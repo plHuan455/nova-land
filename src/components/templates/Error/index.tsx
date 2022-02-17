@@ -1,6 +1,7 @@
 /* eslint-disable react/require-default-props */
 
 import React, { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import error404Img from 'assets/images/errors/error-404.png';
 import Button from 'components/atoms/Button';
@@ -29,39 +30,40 @@ const Error: React.FC<ErrorProps> = ({
   linkButton,
   targetButton,
 }) => {
+  const { t } = useTranslation();
   const { title, desc, imgSrc } = useMemo(() => {
     switch (statusCode) {
       case 403:
         return {
           imgSrc: error404Img,
-          title: titlePage || 'Rất tiếc, Quý Khách không thể truy cập trang này.',
+          title: titlePage || t('page403.title'),
           desc:
-            description || 'Vui lòng trở về trang chủ hoặc liên hệ với chúng tôi để được hỗ trợ.',
+            description || t('page403.description'),
         };
       case 500:
         return {
           imgSrc: error404Img,
-          title: titlePage || 'Lỗi máy chủ nội bộ ',
+          title: titlePage || t('page500.title'),
           desc:
-            description || 'Rất tiếc, một vài lỗi không mong muốn đã xảy ra, </br> chúng tôi đang cố gắng khắc phục sự cố. Quý Khách xin vui lòng thử lại sau.',
+            description || t('page500.description'),
         };
       case 503:
         return {
           imgSrc: error404Img,
-          title: titlePage || 'Rất tiếc, hệ thống đang được bảo trì',
+          title: titlePage || t('page503.title'),
           desc:
-            description || 'Trang thông tin Quý Khách tìm kiếm đang trong quá trình bảo trì, </br> vui lòng thử lại sau.',
+            description || t('page503.description'),
         };
 
       default:
         return {
           imgSrc: error404Img,
-          title: titlePage || 'Rất tiếc, chúng tôi không tìm thấy trang này',
+          title: titlePage || t('page403.title'),
           desc:
-            description || 'Vui lòng trở về trang chủ hoặc liên hệ với chúng tôi để được hỗ trợ.',
+            description || t('page403.description'),
         };
     }
-  }, [description, statusCode, titlePage]);
+  }, [t, description, statusCode, titlePage]);
   return (
     <div className="t-error">
       <Section>

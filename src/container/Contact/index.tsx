@@ -1,4 +1,5 @@
 import React, { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import GallerySlideContainer from './gallerySlideContainer';
 import MapInformationContainer from './mapInformationContainer';
@@ -46,6 +47,7 @@ const ContactContainer: React.FC<BasePageData<ContactBlock>> = ({
   seoData,
   openGraphData,
 }) => {
+  const { t } = useTranslation();
   const locationBlock = useMemo(
     () => getBlockData('section_location', blocks) as Location,
     [blocks],
@@ -90,7 +92,7 @@ const ContactContainer: React.FC<BasePageData<ContactBlock>> = ({
                 },
               },
             ],
-            nameBtn: 'Tìm gallery gần nhất',
+            nameBtn: t('gallery.find_gallery'),
           },
         }}
       />

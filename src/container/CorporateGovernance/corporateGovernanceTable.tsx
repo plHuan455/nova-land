@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useQueries, useQuery, UseQueryResult } from 'react-query';
 
 import CorporateGovernance from 'components/templates/CorporateGovernance';
@@ -13,6 +14,7 @@ interface DocumentTabs extends DocumentTypes {
 }
 
 const CorporateGovernanceTableContainer: React.FC = () => {
+  const { t } = useTranslation();
   const language = useAppSelector((state) => state.system.language);
   const [indexActive, setIndexActive] = useState(0);
   const [documentTab, setDocumentTab] = useState<DocumentTabs[]>([]);
@@ -55,19 +57,19 @@ const CorporateGovernanceTableContainer: React.FC = () => {
           },
           {
             id: 2,
-            value: 'Quý 1',
+            value: `${t('general.quarter')} 1`,
           },
           {
             id: 2,
-            value: 'Quý 2',
+            value: `${t('general.quarter')} 2`,
           },
           {
             id: 3,
-            value: 'Quý 3',
+            value: `${t('general.quarter')} 3`,
           },
           {
             id: 4,
-            value: 'Quý 4',
+            value: `${t('general.quarter')} 4`,
           },
         ],
         dataBody: list.data?.data.map((ele) => ({
@@ -114,7 +116,7 @@ const CorporateGovernanceTableContainer: React.FC = () => {
       }));
     }
     return [];
-  }, [documentData, documentTab]);
+  }, [t, documentData, documentTab]);
 
   const isLoading = useMemo(() => documentData.some((ele) => ele.isLoading), [documentData]);
 
