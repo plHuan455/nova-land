@@ -1,5 +1,5 @@
 /* eslint-disable react/no-danger */
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import Heading from 'components/atoms/Heading';
 import Icon from 'components/atoms/Icon';
@@ -82,10 +82,9 @@ const TableCategory: React.FC<TableCategoryProps> = ({
         {dataBody.length > 0 ? (
           <tbody>
             {dataBody.map((e, i) => (
-              <>
+              <Fragment key={`tableBody-${i.toString()}`}>
                 <tr
                   className="t-tableCategory_body_row"
-                  key={`tableBody-${i.toString()}`}
                 >
                   <td
                     className="t-tableCategory_body_cell"
@@ -106,7 +105,7 @@ const TableCategory: React.FC<TableCategoryProps> = ({
                     </td>
                   ))}
                 </tr>
-              </>
+              </Fragment>
             ))}
           </tbody>
         ) : (

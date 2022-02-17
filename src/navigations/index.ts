@@ -9,6 +9,8 @@ const SearchResults = React.lazy(() => import('pages/SearchResults'));
 const Contact = React.lazy(() => import('pages/Contact'));
 const CorporateGovernance = React.lazy(() => import('pages/CorporateGovernance'));
 const InvestmentRelationsOtherDocument = React.lazy(() => import('pages/InvestmentRelationsOtherDocument'));
+const Event = React.lazy(() => import('pages/Event'));
+const ReportList = React.lazy(() => import('pages/ReportList'));
 
 export type TemplateCodeType = {
   code: string;
@@ -51,5 +53,13 @@ export const TemplateCodes: TemplateCodeType[] = [
   {
     code: 'OTHER_DOCUMENT',
     component: InvestmentRelationsOtherDocument,
+  },
+  {
+    code: 'EVENT_CALENDAR',
+    component: Event,
+  },
+  {
+    code: 'ANNUAL_REPORT',
+    component: ReportList,
   },
 ];

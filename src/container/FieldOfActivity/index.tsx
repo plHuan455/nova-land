@@ -23,6 +23,8 @@ export type FieldOfActivityData =
 const FieldOfActivityContainer: React.FC<BasePageData<FieldOfActivityData>> = ({
   blocks,
   banners,
+  openGraphData,
+  seoData,
 }) => {
   const dispatch = useAppDispatch();
   const language = useAppSelector((state) => state.system.language);
@@ -112,7 +114,7 @@ const FieldOfActivityContainer: React.FC<BasePageData<FieldOfActivityData>> = ({
 
   return (
     <>
-      <HelmetContainer />
+      <HelmetContainer ogData={openGraphData} seoData={seoData} />
       <HeroBannerContainer banners={banners} />
       <Container>
         <FieldActivityDetailsTabContainer blocks={fieldActivityDetailsTabBlock} />

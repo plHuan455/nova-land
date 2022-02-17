@@ -17,16 +17,11 @@ import Error from 'pages/Error';
 import Recruitment from 'pages/Recruitment';
 import RecruitmentDetail from 'pages/RecruitmentDetail';
 import RecruitmentList from 'pages/RecruitmentList';
-import ReportList from 'pages/ReportList';
 import useRoutesList from 'routes';
 import { store } from 'store';
 import { useAppSelector } from 'store/hooks';
 
 const staticRoutes = [
-  {
-    path: 'bao-cao-thuong-nien',
-    element: <ReportList />,
-  },
   {
     path: 'tuyen-dung',
     element: <Recruitment />,
