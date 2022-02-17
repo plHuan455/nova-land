@@ -72,7 +72,7 @@ const CorporateGovernanceTableContainer: React.FC = () => {
         ],
         dataBody: list.data?.data.map((ele) => ({
           documentName: ele.name,
-          dataByQuarter: ['1', '2', '3', '4'].reduce<{
+          dataByQuarter: [1, 2, 3, 4].reduce<{
             colSpan?: number;
             date?: string;
             href?: string;
