@@ -30,7 +30,6 @@ const ProjectMapContainer: React.FC<ProjectMapBlock> = ({
   const { maps } = useAppSelector((state) => state.maps);
   const [idCurrentRealEstates, setIDCurrentRealEstates] = useState<number>(2);
   const language = useAppSelector((state) => state.system.language);
-  const [idActive, setIdActive] = useState(0);
   const dispatch = useAppDispatch();
 
   // TODO: maps

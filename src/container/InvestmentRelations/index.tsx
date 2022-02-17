@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/iframe-has-title */
 import React, { useMemo } from 'react';
 import { useQuery } from 'react-query';
 
@@ -121,7 +122,7 @@ const InvestmentRelationsContainer: React.FC<BasePageData<InvestmentRelationsBlo
         alt: item.title,
         title: item.title,
         time: formatDateDDMMYYYY(item.eventFrom),
-        href: getPrefixURLCode(language, 'NEWS_DETAIL', item.slug),
+        href: getPrefixURLCode(language, 'EVENT_DETAIL', item.slug),
       }));
     }
     return [];
@@ -183,6 +184,32 @@ const InvestmentRelationsContainer: React.FC<BasePageData<InvestmentRelationsBlo
     // eslint-disable-next-line react-hooks/exhaustive-deps
   ], [documentsHighlightData, documentsAnnualHighlightData]);
 
+  const iframeStock = useMemo(() => {
+    if (language === 'vi') {
+      return (
+        <iframe
+          width="100%"
+          height="100%"
+          frameBorder="0"
+          title={novalandSharesBlock.title}
+          src="https://ironline.vietstock.vn/vi/NVL"
+        />
+      );
+    }
+    if (language === 'en') {
+      return (
+        <iframe
+          width="100%"
+          height="100%"
+          frameBorder="0"
+          title={novalandSharesBlock.title}
+          src="https://ironline.vietstock.vn/en/NVL"
+        />
+      );
+    }
+    return '';
+  }, [language, novalandSharesBlock.title]);
+
   return (
     <div className="p-investmentRelations">
       <BannerContainer
@@ -192,9 +219,7 @@ const InvestmentRelationsContainer: React.FC<BasePageData<InvestmentRelationsBlo
         <StockInformationContainer
           title={novalandSharesBlock.title}
         >
-          <iframe title={novalandSharesBlock.title} width="100%" height="100%" frameBorder="0" src="https://ironline.vietstock.vn/vi/NVL" />
-          {/* // implement when language function setup */}
-          {/* <iframe title={novalandSharesBlock.title} width="100%" height="100%" frameBorder="0" src="https://ironline.vietstock.vn/en/NVL" /> */}
+          {iframeStock}
         </StockInformationContainer>
       </Section>
       <Section modifiers="noPb">
