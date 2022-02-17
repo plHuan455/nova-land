@@ -136,7 +136,7 @@
 
   &_right {
     @include mobile-down {
-      margin-top: rem(10);
+      margin-top: rem(24);
     }
 
     &_item {
@@ -168,21 +168,20 @@
       padding-top: rem(40);
     }
     #{$root} {
-      &_left {
-        border-right: 1px solid $columbia-blue;
+      &_left,
+      &_right {
         padding: 0 rem(30);
         @include tablet-down {
           padding: 0 rem(23);
         }
         @include mobile-down {
           border: 0;
+          padding: 0;
         }
       }
 
-      &_right {
-        &_item {
-          padding: 0 rem(15);
-        }
+      &_left {
+        border-right: 1px solid $columbia-blue;
       }
     }
   }

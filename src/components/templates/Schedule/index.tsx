@@ -36,15 +36,16 @@ const Schedule: React.FC<ScheduleProps> = ({
   target,
 }) => (
   <div className="t-schedule">
-    <div className="t-schedule_heading">
-      <Heading modifiers={['jet', '30x42', 'center', '600', 'fontNoto']} content={heading} />
-    </div>
-    <div className="t-schedule_subTitle">
-      <Text modifiers={['fontLexend', '400', '18x28', 'center', 'dimGray']} content={subTitle} />
-    </div>
     <Container>
-      <div className="t-schedule_content">
-        {
+      <>
+        <div className="t-schedule_heading">
+          <Heading modifiers={['jet', '30x42', 'center', '600', 'fontNoto']} content={heading} />
+        </div>
+        <div className="t-schedule_subTitle">
+          <Text modifiers={['fontLexend', '400', '18x28', 'center', 'dimGray']} content={subTitle} />
+        </div>
+        <div className="t-schedule_content">
+          {
           dataCard.length === 3 && (
             <>
               <div className="t-schedule_left">
@@ -60,7 +61,7 @@ const Schedule: React.FC<ScheduleProps> = ({
             </>
           )
         }
-        {
+          {
           dataCard.length === 4 && (
             <>
               <div className="t-schedule_left">
@@ -81,7 +82,7 @@ const Schedule: React.FC<ScheduleProps> = ({
             </>
           )
         }
-        {
+          {
           dataCard.length <= 2 && (
             <div className="t-schedule_two">
               {dataCard.map((item, index) => (
@@ -92,7 +93,8 @@ const Schedule: React.FC<ScheduleProps> = ({
             </div>
           )
         }
-      </div>
+        </div>
+      </>
     </Container>
   </div>
 );
