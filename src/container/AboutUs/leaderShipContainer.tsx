@@ -9,6 +9,7 @@ import {
   getLeadershipCategoryService,
   getLeadershipService,
 } from 'services/Introduction';
+import { useAppSelector } from 'store/hooks';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
 import { getImageURL } from 'utils/functions';
 
@@ -22,17 +23,18 @@ const LeadershipContainer: React.FC<LeadershipContainerProps> = ({
 }) => {
   const [indexActive, setIndexActive] = useState(0);
   const [isViewMore, setIsViewMore] = useState(false);
+  const language = useAppSelector((state) => state.system.language);
 
   const { data: categoryListData, isLoading: isLoadingCate } = useQuery(
-    'getLeadershipCategory', () => getLeadershipCategoryService(),
+    ['getLeadershipCategory', language], () => getLeadershipCategoryService(),
     {
       ...DEFAULT_QUERY_OPTION,
     },
   );
 
   const { data: leaderData, isLoading } = useQuery(
-    ['getLeadershipData', indexActive], () => getLeadershipService({
-      leadership_category_slug: categoryListData && categoryListData[indexActive].slug,
+    ['getLeadershipData', indexActive, language], () => getLeadershipService({
+      leadership_category_slug: categoryListData && categoryListData[indexActive]?.slug,
     }),
     {
       ...DEFAULT_QUERY_OPTION,

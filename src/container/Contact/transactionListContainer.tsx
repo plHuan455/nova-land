@@ -9,6 +9,7 @@ import { TransactionCardProps } from 'components/organisms/TransactionCard';
 import Section from 'components/templates/Section';
 import TransactionList from 'components/templates/TransactionList';
 import { getExchangesService } from 'services/exchanges';
+import { useAppSelector } from 'store/hooks';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
 import { getImageURL } from 'utils/functions';
 
@@ -18,9 +19,10 @@ interface TransactionListContainerProps {
 
 const TransactionListContainer: React.FC<TransactionListContainerProps> = ({ title }) => {
   const [page, setPage] = useState<number>(1);
+  const language = useAppSelector((state) => state.system.language);
 
   const { data: transactionList, isLoading } = useQuery(
-    ['GetData', page],
+    ['GetData', page, language],
     () => getExchangesService({
       limit: 6,
       page,

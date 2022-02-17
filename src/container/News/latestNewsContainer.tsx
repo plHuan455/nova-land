@@ -3,9 +3,13 @@ import React from 'react';
 import Animate from 'components/organisms/Animate';
 import LatestNews from 'components/templates/LatestNews';
 import { NewsDataTypes } from 'services/home/type';
+import { useAppSelector } from 'store/hooks';
 import { formatDateDDMMYYYY, getHourFromPastToCurrent, getImageURL } from 'utils/functions';
+import { getPrefixURLCode } from 'utils/language';
 
 const LatestNewsContainer: React.FC<{latestNewsData: NewsDataTypes[]}> = ({ latestNewsData }) => {
+  const language = useAppSelector((state) => state.system.language);
+
   const convertedPopularNews = latestNewsData?.map((item, idx) => ({
     imgSrc: getImageURL(item.thumbnail),
     ratio: idx !== 0 ? '582x252' : '582x534' as Ratio,
@@ -14,7 +18,7 @@ const LatestNewsContainer: React.FC<{latestNewsData: NewsDataTypes[]}> = ({ late
     time: new Date(item.publishedAt || '') === new Date()
       ? `${getHourFromPastToCurrent(item.publishedAt)} giờ trước`
       : formatDateDDMMYYYY(item.publishedAt),
-    href: `/chi-tiet-tin-tuc/${item.slug}`,
+    href: getPrefixURLCode(language, 'NEWS_DETAIL', item.slug),
   }));
   return (
     <Animate type="goUp">

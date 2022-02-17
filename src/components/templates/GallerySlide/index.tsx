@@ -65,14 +65,20 @@ const GallerySlide: React.FC<GallerySlideProps> = ({
       <div className="t-gallerySlide_wrapper">
         <div className="t-gallerySlide_left u-pr-lg-50 u-pr-md-30 u-pr-0">
           <Animate type="fadeInLeft">
-            <Heading modifiers={['40x56', '500', 'jet', 'uppercase', 'fontNoto']}>
+            <Heading
+              modifiers={['40x56', '500', 'jet', 'uppercase', 'fontNoto']}
+            >
               {title}
             </Heading>
             <div className="t-gallerySlide_left_desc u-mt-xl-20 u-mt-10">
               <Text modifiers={['16x24', '300', 'dimGray']} content={desc} />
             </div>
             <div className="t-gallerySlide_left_btn u-mt-xl-20 u-mt-10">
-              <Link href={href} target={target} useExternal={checkExternalUrl(href)}>
+              <Link
+                href={href}
+                target={target}
+                useExternal={checkExternalUrl(href)}
+              >
                 <div className="t-gallerySlide_left_btn_wrap">
                   <Text modifiers={['14x20', '300', 'camel']}>
                     {nameBtn || 'Xem vị trí trên bản đồ'}
@@ -87,18 +93,18 @@ const GallerySlide: React.FC<GallerySlideProps> = ({
         </div>
         <div className="t-gallerySlide_right">
           <Animate type="fadeInRight">
-            <Carousel settings={setting}>
-              {
-                imgList.map((item, index) => (
+            {imgList && (
+              <Carousel settings={setting}>
+                {imgList.map((item, index) => (
                   <div
                     className="t-gallerySlide_right_item"
                     key={`gallerySlide-${index.toString()}`}
                   >
                     <Image src={getImageURL(item.image)} ratio="490x276" />
                   </div>
-                ))
-              }
-            </Carousel>
+                ))}
+              </Carousel>
+            )}
           </Animate>
         </div>
       </div>

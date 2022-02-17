@@ -14,8 +14,10 @@ import SearchResult, { SearchForm } from 'components/templates/SearchResult';
 import Section from 'components/templates/Section';
 import HelmetContainer from 'container/helmet';
 import { getAllNewsService } from 'services/home';
+import { useAppSelector } from 'store/hooks';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
 import { formatDateDDMMYYYY, getImageURL } from 'utils/functions';
+import { getPrefixURLCode } from 'utils/language';
 import { schemaSearchForm } from 'utils/schemas';
 
 interface IntroDataBlock {
@@ -26,9 +28,11 @@ export type SearchBlock =
   | IntroDataBlock;
 
 const SearchResultsContainer: React.FC<BasePageData<SearchBlock>> = ({ pageData, banners }) => {
+  const language = useAppSelector((state) => state.system.language);
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchText, setSearchText] = useState(searchParams.get('keyword') || '');
   const [currentPage, setCurrentPage] = useState(1);
+
   const method = useForm<SearchForm>({
     resolver: yupResolver(schemaSearchForm),
     mode: 'onSubmit',
@@ -43,7 +47,7 @@ const SearchResultsContainer: React.FC<BasePageData<SearchBlock>> = ({ pageData,
   [banners]);
 
   const { isLoading, data: newDataList } = useQuery(
-    ['getNewsData', currentPage, searchText],
+    ['getNewsData', currentPage, searchText, language],
     () => getAllNewsService({
       keyword: searchText,
       limit: 6,
@@ -61,14 +65,14 @@ const SearchResultsContainer: React.FC<BasePageData<SearchBlock>> = ({ pageData,
         imgSrc: getImageURL(item.thumbnail),
         title: item.title,
         desc: item.description,
-        href: `/chi-tiet-tin-tuc/${item.slug}`,
+        href: getPrefixURLCode(language, 'NEWS_DETAIL', item.slug),
         time: formatDateDDMMYYYY(item.publishedAt),
       }));
       totalPages = newDataList.meta.totalPages;
       totalNews = newDataList.meta.total;
     }
     return { newsList, totalPages, totalNews };
-  }, [newDataList]);
+  }, [language, newDataList]);
 
   const handleSubmit = (data: SearchForm) => {
     setSearchParams({ keyword: data.search });
@@ -79,7 +83,7 @@ const SearchResultsContainer: React.FC<BasePageData<SearchBlock>> = ({ pageData,
     setSearchText(keyword);
     method.setValue('search', keyword);
     setCurrentPage(1);
-  }, [searchParams, method]);
+  }, [searchParams, method, language]);
 
   return (
     <>

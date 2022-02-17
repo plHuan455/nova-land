@@ -3,7 +3,9 @@ import HttpBackend from 'i18next-http-backend';
 import { initReactI18next } from 'react-i18next';
 
 import { CONSTANT_LANGUAGE_LIST, LOCAL_STORAGE } from 'utils/constants';
-import bundledResources from 'utils/localTranslation';
+import bundledResources, {
+// staticBundledResources,
+} from 'utils/localTranslation';
 
 export function detectLanguage() {
   const { pathname } = window.location;
@@ -54,7 +56,7 @@ for (const lang of Object.keys(bundledResources)) {
 }
 
 //! Only turn this function on when testing static translation files
-// // eslint-disable-next-line no-restricted-syntax
+// eslint-disable-next-line no-restricted-syntax
 // for (const lang of Object.keys(staticBundledResources)) {
 //   i18n.addResourceBundle(lang, 'local', staticBundledResources[lang]);
 // }

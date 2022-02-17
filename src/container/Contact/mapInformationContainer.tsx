@@ -13,9 +13,18 @@ interface MapInformationContainerProps {
 }
 
 const MapInformationContainer: React.FC<MapInformationContainerProps> = ({ dataMarker }) => {
-  const [dataLocation, setDataLocation] = useState<TypeMapMarker>(dataMarker);
+  const [dataLocation, setDataLocation] = useState<TypeMapMarker | undefined>(dataMarker);
   const systemData = useAppSelector((state) => state.system.dataSystem);
+  const language = useAppSelector((state) => state.system.language);
   const [isBack, setIsBack] = useState(false);
+
+  const { data } = useQuery(
+    ['getExchangesHighlight', language], () => getExchangesService({
+      is_pinned: 'true',
+    }), {
+      ...DEFAULT_QUERY_OPTION,
+    },
+  );
 
   const handleLocationSearch = () => {
     try {
@@ -26,17 +35,17 @@ const MapInformationContainer: React.FC<MapInformationContainerProps> = ({ dataM
               lat: position.coords.latitude,
               lng: position.coords.longitude,
             };
-            const data = await getNearestExchangesService({
+            const res = await getNearestExchangesService({
               longtitude: pos.lng,
               latitude: pos.lat,
             });
-            const dtLocation = convertLocationData(data);
+            const dtLocation = convertLocationData(res);
             setDataLocation(dtLocation);
             setIsBack(true);
           },
         );
       }
-      if (isBack) {
+      if (isBack && dataMarkerDefault) {
         setDataLocation(dataMarkerDefault[0]);
         setIsBack(false);
       }
@@ -65,31 +74,23 @@ const MapInformationContainer: React.FC<MapInformationContainerProps> = ({ dataM
     },
   });
 
-  const { data } = useQuery(
-    ['getExchangesHighlight'], () => getExchangesService({
-      is_pinned: 'true',
-    }), {
-      ...DEFAULT_QUERY_OPTION,
-    },
-  );
-
   const dataMarkerDefault = useMemo(() => {
     if (data && data.data.length > 0) {
       return data.data.map((item) => ({
         lat: item.latitude,
         lng: item.longtitude,
         dataMarker: {
-          title: dataLocation.dataMarker.title,
+          title: dataMarker?.dataMarker?.title || '',
           dataCard: [
             {
-              branchName: dataLocation.dataMarker.dataCard[0].branchName,
+              branchName: dataMarker?.dataMarker?.dataCard[0].branchName || '',
               informationDetail: {
                 iconLocation: 'location' as IconName,
-                location: dataLocation.dataMarker.dataCard[0].informationDetail.location,
+                location: dataMarker?.dataMarker?.dataCard[0].informationDetail.location || '',
                 iconEmail: 'email' as IconName,
-                email: dataLocation.dataMarker.dataCard[0].informationDetail.email,
+                email: dataMarker?.dataMarker?.dataCard[0].informationDetail.email || '',
                 iconPhone: 'phoneContact' as IconName,
-                phone: dataLocation.dataMarker.dataCard[0].informationDetail.phone,
+                phone: dataMarker?.dataMarker?.dataCard[0].informationDetail.phone || '',
               },
             },
             {
@@ -106,21 +107,24 @@ const MapInformationContainer: React.FC<MapInformationContainerProps> = ({ dataM
         },
       }));
     }
-    return [];
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [data]);
+    return [{
+      lat: 0,
+      lng: 0,
+      dataMarker: undefined,
+    }];
+  }, [data, dataMarker]);
 
   useEffect(() => {
-    if (dataMarkerDefault.length > 0) {
+    if (dataMarkerDefault && dataMarkerDefault.length > 0) {
       setDataLocation(dataMarkerDefault[0]);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [data]);
+  }, [data, dataMarkerDefault, language]);
 
   return (
     <div className="p-contact_mapInformation">
       <MapInformation
-        mapAPIkey={systemData?.gmapId || 'AIzaSyAt4eV8aoSdhKXHQSQvJc7aSEGlcnUVbdo'}
+        mapAPIkey={systemData?.gmapId || ''}
         mapMarker={dataLocation}
         handleLocationSearch={handleLocationSearch}
       />

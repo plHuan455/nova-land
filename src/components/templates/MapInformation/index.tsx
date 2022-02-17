@@ -12,13 +12,13 @@ import mapModifiers from 'utils/functions';
 export interface ContactInformationItems {
   branchName: string;
   informationDetail: {
-    iconLocation: IconName,
-    location: string,
-    iconEmail?: IconName,
-    email?: string,
-    iconPhone: IconName,
+    iconLocation: IconName;
+    location: string;
+    iconEmail?: IconName;
+    email?: string;
+    iconPhone: IconName;
     phone: string;
-  }
+  };
 }
 
 export interface MapInformationCardProps {
@@ -37,7 +37,10 @@ export const MapInformationCard: React.FC<MapInformationCardProps> = ({
   handleLocationSearch,
 }) => (
   <div className="t-mapInformationCard">
-    <div className="t-mapInformationCard_mbClose" onClick={() => handleClose && handleClose(false)}>
+    <div
+      className="t-mapInformationCard_mbClose"
+      onClick={() => handleClose && handleClose(false)}
+    >
       <Icon iconName="closeWhite" size="16" />
     </div>
     <div className="t-mapInformationCard_title">
@@ -45,19 +48,24 @@ export const MapInformationCard: React.FC<MapInformationCardProps> = ({
         {title}
       </Heading>
     </div>
-    {dataCard.length > 0 && (
+    {dataCard?.length > 0 && (
       <div className="t-mapInformationCard_wrapper">
         {dataCard.map((item, index) => (
           <div
             className="t-mapInformationCard_item u-mt-lg-30 u-mt-15"
             key={`mapInformationCard-${index.toString()}`}
           >
-            <Text modifiers={['18x28', '600', 'darkMidnightBlue', 'capitalize']}>
+            <Text
+              modifiers={['18x28', '600', 'darkMidnightBlue', 'capitalize']}
+            >
               {item.branchName}
             </Text>
             <div className="t-mapInformationCard_location u-mt-8">
               <div className="u-pt-2">
-                <Icon iconName={item.informationDetail.iconLocation} size="20" />
+                <Icon
+                  iconName={item.informationDetail.iconLocation}
+                  size="20"
+                />
               </div>
               <div className="t-mapInformationCard_content u-ml-8">
                 <Text modifiers={['16x24', '300', 'dimGray']}>
@@ -68,10 +76,16 @@ export const MapInformationCard: React.FC<MapInformationCardProps> = ({
             {item.informationDetail.email && (
               <div className="t-mapInformationCard_email u-mt-8">
                 <div className="u-pt-2">
-                  <Icon iconName={item.informationDetail.iconEmail || 'email'} size="20" />
+                  <Icon
+                    iconName={item.informationDetail.iconEmail || 'email'}
+                    size="20"
+                  />
                 </div>
                 <div className="t-mapInformationCard_content u-ml-8">
-                  <Link href={`mailto:${item.informationDetail.email}`} useExternal>
+                  <Link
+                    href={`mailto:${item.informationDetail.email}`}
+                    useExternal
+                  >
                     <Text modifiers={['16x24', '300', 'dimGray', 'underline']}>
                       {item.informationDetail.email}
                     </Text>
@@ -81,7 +95,10 @@ export const MapInformationCard: React.FC<MapInformationCardProps> = ({
             )}
             <div className="t-mapInformationCard_phone u-mt-8">
               <div className="u-pt-2">
-                <Icon iconName={item.informationDetail.iconPhone || 'phoneContact'} size="20" />
+                <Icon
+                  iconName={item.informationDetail.iconPhone || 'phoneContact'}
+                  size="20"
+                />
               </div>
               <div className="t-mapInformationCard_content u-ml-8">
                 <Link href={`tel:${item.informationDetail.phone}`} useExternal>
@@ -109,11 +126,11 @@ export const MapInformationCard: React.FC<MapInformationCardProps> = ({
 export type TypeMapMarker = {
   lat: number;
   lng: number;
-  dataMarker: MapInformationCardProps;
+  dataMarker?: MapInformationCardProps;
 };
 
 export interface MapInformationProps {
-  mapMarker: TypeMapMarker;
+  mapMarker?: TypeMapMarker;
   mapAPIkey: string;
   handleLocationSearch?: () => void;
 }
@@ -143,49 +160,54 @@ const MapInformation: React.FC<MapInformationProps> = ({
 
   return (
     <div className="t-mapInformation">
-      <Container>
-        <div className={mapModifiers('t-mapInformation_card', isOpen && 'isOpen')}>
-          <MapInformationCard
-            {...mapMarker.dataMarker}
-            handleClose={handleClose}
-            handleLocationSearch={handleLocationSearch}
-          />
-        </div>
-      </Container>
-      <div className="t-mapInformation_wrapper">
-        {
-      mapMarker && (
-        <GoogleMapReact
-          bootstrapURLKeys={{
-            key: `${mapAPIkey}&libraries=places,geometry`,
-          }}
-          defaultCenter={{
-            lat: mapMarker.lat,
-            lng: mapMarker.lng,
-          }}
-          defaultZoom={13}
-          options={{
-            zoomControl: true,
-            mapTypeControl: false,
-            fullscreenControl: true,
-            panControl: true,
-          }}
-          center={{
-            lat: mapMarker.lat,
-            lng: mapMarker.lng,
-          }}
-        >
-          <MapContact
-            lat={mapMarker.lat}
-            lng={mapMarker.lng}
-            handleClick={() => {
-              setIsOpen(!isOpen);
+      {mapMarker?.dataMarker && (
+        <Container>
+          <div
+            className={mapModifiers(
+              't-mapInformation_card',
+              isOpen && 'isOpen',
+            )}
+          >
+            <MapInformationCard
+              {...mapMarker?.dataMarker}
+              handleClose={handleClose}
+              handleLocationSearch={handleLocationSearch}
+            />
+          </div>
+        </Container>
+      )}
+      {mapMarker && (
+        <div className="t-mapInformation_wrapper">
+          <GoogleMapReact
+            bootstrapURLKeys={{
+              key: `${mapAPIkey}&libraries=places,geometry`,
             }}
-          />
-        </GoogleMapReact>
-      )
-    }
-      </div>
+            defaultCenter={{
+              lat: mapMarker.lat || 0,
+              lng: mapMarker.lng || 0,
+            }}
+            defaultZoom={13}
+            options={{
+              zoomControl: true,
+              mapTypeControl: false,
+              fullscreenControl: true,
+              panControl: true,
+            }}
+            center={{
+              lat: mapMarker.lat || 0,
+              lng: mapMarker.lng || 0,
+            }}
+          >
+            <MapContact
+              lat={mapMarker.lat || 0}
+              lng={mapMarker.lng || 0}
+              handleClick={() => {
+                setIsOpen(!isOpen);
+              }}
+            />
+          </GoogleMapReact>
+        </div>
+      )}
     </div>
   );
 };

@@ -22,3 +22,10 @@ export type ParamsType = {
   page?: number;
   locale?: string;
 };
+
+export type LanguageKey = keyof LocalesType;
+
+export type LocalesType = {
+  vi: LocalesItem,
+  en: LocalesItem,
+}

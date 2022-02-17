@@ -13,28 +13,21 @@ import NotifyModal, { NotifyType } from 'components/organisms/NotifyModal';
 import submitContactService from 'services/contact';
 import { useAppDispatch, useAppSelector } from 'store/hooks';
 import { getProjectsAction } from 'store/project';
+import { setMessageNotify } from 'store/system';
 import { getImageURL } from 'utils/functions';
 import registerSchema from 'utils/schemas';
-
-type NotifyContact = {
-  isOpen: boolean;
-  type?: NotifyType;
-  title?: string;
-  message?: string;
-};
 
 interface FooterContainerProps {
 }
 
 const FooterContainer: React.FC<FooterContainerProps> = () => {
   const [loading, setLoading] = useState(false);
-  const [isNotify, setIsNotify] = useState<NotifyContact>({
-    isOpen: false,
-  });
   const { dataSystem } = useAppSelector((state) => state.system);
   const menuList = useAppSelector((state) => state.menus.groupedFooter);
   const { projectData } = useAppSelector((state) => state.project);
   const { executeRecaptcha } = useGoogleReCaptcha();
+  const { messageNotify } = useAppSelector((state) => state.system);
+  const language = useAppSelector((state) => state.system.language);
 
   const dispatch = useAppDispatch();
 
@@ -63,23 +56,23 @@ const FooterContainer: React.FC<FooterContainerProps> = () => {
           grecaptcha_token: tokenRecaptcha,
         });
         method.reset();
-        setIsNotify({
+        dispatch(setMessageNotify({
           isOpen: true,
           type: 'success',
           title: 'Gửi liên hệ thành công',
           message: 'Quý khách đã gửi đăng ký thành công. Xin cảm ơn',
-        });
+        }));
       } catch (error) {
-        setIsNotify({
+        dispatch(setMessageNotify({
           isOpen: true,
           type: 'error',
           title: 'Gửi đăng ký thất bại',
           message: 'Vui lòng thử lại',
-        });
+        }));
       } finally {
         setLoading(false);
       }
-    }, [executeRecaptcha, method],
+    }, [dispatch, executeRecaptcha, method],
   );
 
   const socialLink: SocialListTypes[] | undefined = useMemo(
@@ -100,11 +93,8 @@ const FooterContainer: React.FC<FooterContainerProps> = () => {
   );
 
   useEffect(() => {
-    if (!projectData) {
-      dispatch(getProjectsAction({}));
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    dispatch(getProjectsAction({}));
+  }, [dispatch, language]);
 
   return (
     <>
@@ -133,11 +123,14 @@ const FooterContainer: React.FC<FooterContainerProps> = () => {
         loadingBtn={loading}
       />
       <NotifyModal
-        isOpen={isNotify.isOpen}
-        handleClose={() => setIsNotify({ isOpen: false, type: 'none' })}
-        type={isNotify.type}
-        title={isNotify.title}
-        message={isNotify.message}
+        isOpen={messageNotify.isOpen}
+        handleClose={() => dispatch(setMessageNotify({
+          ...messageNotify,
+          isOpen: false,
+        }))}
+        type={messageNotify.type as NotifyType}
+        title={messageNotify.title}
+        message={messageNotify.message}
         btnText="Đóng"
       />
     </>

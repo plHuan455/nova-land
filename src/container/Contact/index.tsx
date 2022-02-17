@@ -18,7 +18,7 @@ type Location = {
   galleryPhone: string;
   locationName: string;
   galleryAddress: string;
-}
+};
 
 type Gallery = {
   items: {
@@ -33,27 +33,35 @@ type Gallery = {
   latitude: string;
   longtitude: string;
   description: string;
-}
+};
 
 type Exchanges = {
   title: string;
-}
+};
 
 export type ContactBlock = Location | Gallery | Exchanges;
 
 const ContactContainer: React.FC<BasePageData<ContactBlock>> = ({
   blocks,
   seoData,
+  openGraphData,
 }) => {
-  const locationBlock = useMemo(() => getBlockData('section_location', blocks) as Location, [blocks]);
-  const galleryBlock = useMemo(() => getBlockData('sectiob_gallery', blocks) as Gallery, [blocks]);
-  const exchanges = useMemo(() => getBlockData('section_exchanges', blocks) as Exchanges, [blocks]);
+  const locationBlock = useMemo(
+    () => getBlockData('section_location', blocks) as Location,
+    [blocks],
+  );
+  const galleryBlock = useMemo(
+    () => getBlockData('sectiob_gallery', blocks) as Gallery,
+    [blocks],
+  );
+  const exchanges = useMemo(
+    () => getBlockData('section_exchanges', blocks) as Exchanges,
+    [blocks],
+  );
 
   return (
     <>
-      <HelmetContainer
-        seoData={seoData}
-      />
+      <HelmetContainer seoData={seoData} ogData={openGraphData} />
       <MapInformationContainer
         dataMarker={{
           lat: parseFloat(locationBlock.latitude),
@@ -94,9 +102,7 @@ const ContactContainer: React.FC<BasePageData<ContactBlock>> = ({
         href={`${galleryBlock.button.url}/search/${galleryBlock.latitude},${galleryBlock.longtitude}`}
         imgList={galleryBlock.items}
       />
-      <TransactionListContainer
-        title={exchanges.title}
-      />
+      <TransactionListContainer title={exchanges.title} />
     </>
   );
 };

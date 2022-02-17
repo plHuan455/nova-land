@@ -1,17 +1,18 @@
 import React from 'react';
 import { useQuery } from 'react-query';
 
-// import { dataMarketNews } from 'assets/dataDummy/newsList';
 import Animate from 'components/organisms/Animate';
 import NewsList from 'components/templates/NewsList';
 import Section from 'components/templates/Section';
 import { getNewsService } from 'services/home';
+import { useAppSelector } from 'store/hooks';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
 import { getImageURL } from 'utils/functions';
 
 const MarketNewsContainer: React.FC<{ cateSlug: string }> = ({ cateSlug }) => {
+  const language = useAppSelector((state) => state.system.language);
   const { data: res, isFetching } = useQuery(
-    'getMarketNewsList',
+    ['getMarketNewsList', language],
     () => getNewsService({ limit: 4, page: 1, category_slug: cateSlug }),
     {
       ...DEFAULT_QUERY_OPTION,
@@ -26,6 +27,7 @@ const MarketNewsContainer: React.FC<{ cateSlug: string }> = ({ cateSlug }) => {
     totalViews: item.viewed,
     href: item.slug,
   })) : [];
+
   return (
     <Animate type="goUp">
       <Section>

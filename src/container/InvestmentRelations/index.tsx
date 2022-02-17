@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/iframe-has-title */
 import React, { useMemo } from 'react';
 import { useQuery } from 'react-query';
 
@@ -14,6 +15,7 @@ import getDocumentsService, {
   getOtherDocumentsService,
   getAnnualDocumentsService,
 } from 'services/documents';
+import { useAppSelector } from 'store/hooks';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
 import {
   getBlockData,
@@ -21,6 +23,7 @@ import {
   formatDateDDMMYYYY,
   getHourFromPastToCurrent,
 } from 'utils/functions';
+import { getPrefixURLCode } from 'utils/language';
 
 type NovalandShares = {
   title: string;
@@ -66,6 +69,7 @@ const InvestmentRelationsContainer: React.FC<BasePageData<InvestmentRelationsBlo
   blocks,
   banners,
 }) => {
+  const language = useAppSelector((state) => state.system.language);
   const novalandSharesBlock = useMemo(() => getBlockData('novaland_shares', blocks) as NovalandShares, [blocks]);
   const corporateGovernanceAnnualReportBlock = useMemo(() => getBlockData('corporate_governance_annual_report', blocks) as CorporateGovernanceAnnualReport,
     [blocks]);
@@ -79,7 +83,7 @@ const InvestmentRelationsContainer: React.FC<BasePageData<InvestmentRelationsBlo
   })), [banners]);
 
   const { data: calendarDataList } = useQuery(
-    ['getCalendarList'],
+    ['getCalendarList', language],
     () => getCalendarListService({
       limit: 4,
       is_popular: true,
@@ -90,7 +94,7 @@ const InvestmentRelationsContainer: React.FC<BasePageData<InvestmentRelationsBlo
   );
 
   const { data: otherDocumentHighlightData } = useQuery(
-    'getOtherDocuments', () => getOtherDocumentsService({
+    ['getOtherDocuments', language], () => getOtherDocumentsService({
       is_highlight: true,
       limit: 4,
     }),
@@ -118,14 +122,14 @@ const InvestmentRelationsContainer: React.FC<BasePageData<InvestmentRelationsBlo
         alt: item.title,
         title: item.title,
         time: formatDateDDMMYYYY(item.eventFrom),
-        href: `/chi-tiet-su-kien/${item.slug}`,
+        href: getPrefixURLCode(language, 'EVENT_DETAIL', item.slug),
       }));
     }
     return [];
-  }, [calendarDataList]);
+  }, [calendarDataList, language]);
 
   const { data: documentsHighlightData } = useQuery(
-    'getDocuments', () => getDocumentsService({
+    ['getDocuments', language], () => getDocumentsService({
       is_highlight: true,
       limit: 1,
     }),
@@ -135,7 +139,7 @@ const InvestmentRelationsContainer: React.FC<BasePageData<InvestmentRelationsBlo
   );
 
   const { data: documentsAnnualHighlightData } = useQuery(
-    'getAnnualDocuments', () => getAnnualDocumentsService({
+    ['getAnnualDocuments', language], () => getAnnualDocumentsService({
       is_highlight: true,
       limit: 1,
     }),
@@ -149,36 +153,62 @@ const InvestmentRelationsContainer: React.FC<BasePageData<InvestmentRelationsBlo
       imgSrc: getImageURL(corporateGovernanceAnnualReportBlock.corporateGovernance.image),
       ratio: '567x246' as Ratio,
       heading: corporateGovernanceAnnualReportBlock.corporateGovernance.title || '',
-      alt: documentsHighlightData?.data[0].name || '',
-      title: documentsHighlightData?.data[0].name || '',
-      time: new Date(documentsHighlightData?.data[0].publishedAt || '') === new Date()
-        ? `${getHourFromPastToCurrent(documentsHighlightData?.data[0].publishedAt)} giờ trước`
-        : formatDateDDMMYYYY(documentsHighlightData?.data[0].publishedAt),
+      alt: documentsHighlightData?.data[0]?.name || '',
+      title: documentsHighlightData?.data[0]?.name || '',
+      time: new Date(documentsHighlightData?.data[0]?.publishedAt || '') === new Date()
+        ? `${getHourFromPastToCurrent(documentsHighlightData?.data[0]?.publishedAt)} giờ trước`
+        : formatDateDDMMYYYY(documentsHighlightData?.data[0]?.publishedAt),
       href: corporateGovernanceAnnualReportBlock.corporateGovernance.button.url,
       btnText: corporateGovernanceAnnualReportBlock.corporateGovernance.button.text,
-      fileName: documentsHighlightData?.data[0].name || '',
+      fileName: documentsHighlightData?.data[0]?.name || '',
       pdfImg: imgPdf,
-      hrefLink: getImageURL(documentsHighlightData?.data[0].file),
+      hrefLink: getImageURL(documentsHighlightData?.data[0]?.file),
       target: corporateGovernanceAnnualReportBlock.corporateGovernance.button.target,
     },
     {
       imgSrc: getImageURL(corporateGovernanceAnnualReportBlock.annualReport.image),
       ratio: '567x246' as Ratio,
       heading: corporateGovernanceAnnualReportBlock.annualReport.title || '',
-      alt: documentsAnnualHighlightData?.data[0].name || '',
-      title: documentsAnnualHighlightData?.data[0].name || '',
-      time: new Date(documentsAnnualHighlightData?.data[0].publishedAt || '') === new Date()
-        ? `${getHourFromPastToCurrent(documentsAnnualHighlightData?.data[0].publishedAt)} giờ trước`
-        : formatDateDDMMYYYY(documentsAnnualHighlightData?.data[0].publishedAt),
+      alt: documentsAnnualHighlightData?.data[0]?.name || '',
+      title: documentsAnnualHighlightData?.data[0]?.name || '',
+      time: new Date(documentsAnnualHighlightData?.data[0]?.publishedAt || '') === new Date()
+        ? `${getHourFromPastToCurrent(documentsAnnualHighlightData?.data[0]?.publishedAt)} giờ trước`
+        : formatDateDDMMYYYY(documentsAnnualHighlightData?.data[0]?.publishedAt),
       href: corporateGovernanceAnnualReportBlock.annualReport.button.url,
       btnText: corporateGovernanceAnnualReportBlock.annualReport.button.text,
-      fileName: documentsAnnualHighlightData?.data[0].name || '',
+      fileName: documentsAnnualHighlightData?.data[0]?.name || '',
       pdfImg: imgPdf,
-      hrefLink: getImageURL(documentsAnnualHighlightData?.data[0].file),
+      hrefLink: getImageURL(documentsAnnualHighlightData?.data[0]?.file),
       target: corporateGovernanceAnnualReportBlock.annualReport.button.target,
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
   ], [documentsHighlightData, documentsAnnualHighlightData]);
+
+  const iframeStock = useMemo(() => {
+    if (language === 'vi') {
+      return (
+        <iframe
+          width="100%"
+          height="100%"
+          frameBorder="0"
+          title={novalandSharesBlock.title}
+          src="https://ironline.vietstock.vn/vi/NVL"
+        />
+      );
+    }
+    if (language === 'en') {
+      return (
+        <iframe
+          width="100%"
+          height="100%"
+          frameBorder="0"
+          title={novalandSharesBlock.title}
+          src="https://ironline.vietstock.vn/en/NVL"
+        />
+      );
+    }
+    return '';
+  }, [language, novalandSharesBlock.title]);
 
   return (
     <div className="p-investmentRelations">
@@ -189,9 +219,7 @@ const InvestmentRelationsContainer: React.FC<BasePageData<InvestmentRelationsBlo
         <StockInformationContainer
           title={novalandSharesBlock.title}
         >
-          <iframe title={novalandSharesBlock.title} width="100%" height="100%" frameBorder="0" src="https://ironline.vietstock.vn/vi/NVL" />
-          {/* // implement when language function setup */}
-          {/* <iframe title={novalandSharesBlock.title} width="100%" height="100%" frameBorder="0" src="https://ironline.vietstock.vn/en/NVL" /> */}
+          {iframeStock}
         </StockInformationContainer>
       </Section>
       <Section modifiers="noPb">

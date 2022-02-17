@@ -24,8 +24,12 @@ export type ConstantRoutesType = typeof CONSTANT_ROUTES;
 
 export const CONSTANT_ROUTES = {
   NEWS_CATEGORY: 'tin-tuc',
+  NEWS_DETAIL: 'chi-tiet-tin-tuc',
+  EVENT_DETAIL: 'chi-tiet-su-kien',
 };
 
 export const CONSTANT_ROUTES_EN: ConstantRoutesType = {
   NEWS_CATEGORY: 'news',
+  NEWS_DETAIL: 'news-details',
+  EVENT_DETAIL: 'event-details',
 };

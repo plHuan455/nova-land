@@ -20,7 +20,7 @@ const NewsCategoryContainer: React.FC = () => {
   const language = useAppSelector((state) => state.system.language);
 
   const { isLoading, error, data } = useQuery(
-    ['getNewsCategory', slug], () => getNewsCategoryDetailService(slug || ''),
+    ['getNewsCategory', slug, language], () => getNewsCategoryDetailService(slug || ''),
     DEFAULT_QUERY_OPTION,
   );
 

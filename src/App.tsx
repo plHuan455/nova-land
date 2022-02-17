@@ -2,7 +2,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import 'App.scss';
 import React, {
-  lazy,
   Suspense, useEffect, useState,
 } from 'react';
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
@@ -14,28 +13,16 @@ import {
 
 import Loading from 'components/atoms/Loading';
 import useInitializeRender from 'hooks/useInitializeRender';
-import DetailsPageNav from 'navigations/DetailsPageNav';
 import Error from 'pages/Error';
-import Event from 'pages/Event';
-import NewsCategory from 'pages/NewsCategory';
 import Recruitment from 'pages/Recruitment';
 import RecruitmentDetail from 'pages/RecruitmentDetail';
 import RecruitmentList from 'pages/RecruitmentList';
 import ReportList from 'pages/ReportList';
+import useRoutesList from 'routes';
 import { store } from 'store';
 import { useAppSelector } from 'store/hooks';
 
-const PageNav = lazy(() => import('navigations/PageNav'));
-
-const routes = [
-  {
-    path: 'tin-tuc/:slug',
-    element: <NewsCategory />,
-  },
-  {
-    path: 'chi-tiet-tin-tuc/:slug',
-    element: <DetailsPageNav />,
-  },
+const staticRoutes = [
   {
     path: 'bao-cao-thuong-nien',
     element: <ReportList />,
@@ -49,10 +36,6 @@ const routes = [
     element: <RecruitmentList />,
   },
   {
-    path: 'chi-tiet-su-kien/:slug',
-    element: <DetailsPageNav />,
-  },
-  {
     path: 'chi-tiet-tuyen-dung',
     element: <RecruitmentDetail />,
   },
@@ -60,18 +43,13 @@ const routes = [
     path: '404',
     element: <Error />,
   },
-  {
-    path: 'lich-su-kien',
-    element: <Event />,
-  },
-  {
-    path: ':slug',
-    element: <PageNav />,
-  },
 ];
 
 const App: React.FC = () => {
   useInitializeRender();
+  const { routes } = useRoutesList();
+  if (!routes) return <Loading variant="fullScreen" />;
+
   return (
     <Suspense fallback={<Loading isShow variant="fullScreen" />}>
       <Routes>
@@ -81,10 +59,18 @@ const App: React.FC = () => {
             <Outlet />
           )}
         >
-          <Route path="/" element={<PageNav />}>
-            <Route path=":slug" element={<PageNav />} />
-          </Route>
-          {routes.map((item, index) => (
+          {
+            (Object.keys(routes) as Array<keyof typeof routes>).map(
+              (ele) => routes[ele].paths.map((item, index) => (
+                <Route
+                  key={`router-${ele}-${index.toString()}`}
+                  path={item}
+                  element={routes[ele].element}
+                />
+              )),
+            )
+          }
+          {staticRoutes.map((item, index) => (
             <Route key={`router-${index.toString()}`} {...item} />
           ))}
         </Route>

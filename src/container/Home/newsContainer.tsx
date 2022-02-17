@@ -10,6 +10,7 @@ import { getNewsCategoryAction } from 'store/home';
 import { useAppSelector } from 'store/hooks';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
 import { getImageURL, formatDateDDMMYYYY } from 'utils/functions';
+import { getPrefixURLCode } from 'utils/language';
 
 export interface NewsTypes {
   button: {
@@ -29,6 +30,8 @@ const NewsContainer: React.FC<NewsBlock> = ({
 }) => {
   const dispatch = useDispatch();
   const { newsCategoryList } = useAppSelector((state) => state.home);
+  const language = useAppSelector((state) => state.system.language);
+
   const [indexActive, setIndexActive] = useState(0);
   // TODO: get news list by a category
   const tabDataHomeNewsList = useMemo(() => {
@@ -49,7 +52,7 @@ const NewsContainer: React.FC<NewsBlock> = ({
   };
 
   const { data, isLoading } = useQuery(
-    ['getHomeNewsList', newsCategoryList, indexActive], () => getNewsService({
+    ['getHomeNewsList', newsCategoryList, indexActive, language], () => getNewsService({
       limit: 4,
       category_slug: newsCategoryList ? handleCategorySlug(newsCategoryList) : undefined,
     }), {
@@ -66,19 +69,15 @@ const NewsContainer: React.FC<NewsBlock> = ({
         desc: item.description,
         date: formatDateDDMMYYYY(new Date(item.publishedAt).toDateString()),
         totalViews: item.viewed,
-        href: `/chi-tiet-tin-tuc/${item.slug}`,
+        href: getPrefixURLCode(language, 'NEWS_DETAIL', item.slug),
       }));
     }
     return [];
-  }, [data]);
+  }, [data, language]);
 
   useEffect(() => {
-    if (!newsCategoryList) {
-      dispatch(getNewsCategoryAction());
-    }
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    dispatch(getNewsCategoryAction());
+  }, [dispatch, language]);
 
   return (
     <div className="p-home_news">
