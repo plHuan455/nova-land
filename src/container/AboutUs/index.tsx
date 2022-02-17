@@ -125,6 +125,8 @@ const AboutUSContainer: React.FC<BasePageData<AboutUsBlock>> = ({
     [blocks]);
   const prizeBlock = useMemo(() => getBlockData('prize', blocks) as Prize,
     [blocks]);
+  const featurProjectsBlock = useMemo(() => getBlockData('featured_projects', blocks) as Projects,
+    [blocks]);
 
   const listBanner = useMemo(() => banners.map((item) => ({
     src: getImageURL(item.data.imageDesktop),
@@ -237,7 +239,7 @@ const AboutUSContainer: React.FC<BasePageData<AboutUsBlock>> = ({
         list={developHistoryList}
       />
       <OutstandingProjectContainer
-        title={projectsBlock.titleSection}
+        title={featurProjectsBlock.titleSection}
       />
       <ProjectListMapContainer title={projectsBlock.titleSection} />
       <EcoSystemContainer
