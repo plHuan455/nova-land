@@ -136,6 +136,24 @@ const AboutUSContainer: React.FC<BasePageData<AboutUsBlock>> = ({
 
   const dataVisionMission = useMemo(() => [
     {
+      title: introductionBlock.vision.title,
+      desc: introductionBlock.vision.description,
+      dataList: [
+        {
+          src: getImageURL(introductionBlock.vision.icon1.icon),
+          title: introductionBlock.vision.icon1.textIcon,
+        },
+        {
+          src: getImageURL(introductionBlock.vision.icon2.icon),
+          title: introductionBlock.vision.icon2.textIcon,
+        },
+        {
+          src: getImageURL(introductionBlock.vision.icon3.icon),
+          title: introductionBlock.vision.icon3.textIcon,
+        },
+      ],
+    },
+    {
       title: introductionBlock.mission.title,
       desc: introductionBlock.mission.description,
       dataList: [
@@ -168,24 +186,6 @@ const AboutUSContainer: React.FC<BasePageData<AboutUsBlock>> = ({
         {
           src: getImageURL(introductionBlock.role.icon3.icon),
           title: introductionBlock.role.icon3.textIcon,
-        },
-      ],
-    },
-    {
-      title: introductionBlock.vision.title,
-      desc: introductionBlock.vision.description,
-      dataList: [
-        {
-          src: getImageURL(introductionBlock.vision.icon1.icon),
-          title: introductionBlock.vision.icon1.textIcon,
-        },
-        {
-          src: getImageURL(introductionBlock.vision.icon2.icon),
-          title: introductionBlock.vision.icon2.textIcon,
-        },
-        {
-          src: getImageURL(introductionBlock.vision.icon3.icon),
-          title: introductionBlock.vision.icon3.textIcon,
         },
       ],
     },

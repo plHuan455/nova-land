@@ -1,39 +1,15 @@
 .t-eventList {
+  flex-wrap: wrap;
+  margin: rem(-15);
   margin-top: rem(30);
+  @include adjust-flex(flex-start, center);
+  
+  &_list-item {
+    flex: 0 0 calc(100% / 3);
+    padding: rem(15);
 
-  @include tablet-down {
-    margin-top: rem(16);
-  }
-
-  @include mobile-down {
-    margin-top: rem(10);
-  }
-
-  &_list {
-    @include adjust-flex(flex-start, center);
-    flex-wrap: wrap;
-    margin: rem(-15);
-
-    @include tablet-down {
-      margin: rem(-8);
-    }
-
-    @include tablet-down {
-      margin: rem(-5) 0;
-    }
-
-    &-item {
-      flex: 0 0 calc(100% / 3);
-      padding: rem(15);
-
-      @include tablet-down {
-        padding: rem(8);
-      }
-
-      @include mobile-down {
-        flex: 0 0 100%;
-        padding: rem(5) 0;
-      }
+    @include mobile-down {
+      flex: 0 0 100%;
     }
   }
 
