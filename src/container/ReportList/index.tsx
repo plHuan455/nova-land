@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { useQuery } from 'react-query';
 
 import BreadcrumbContainer from './BreadcrumbContainer';
@@ -36,11 +36,6 @@ const ReportListContainer: React.FC = () => {
     }
     return { reportList, totalPages };
   }, [reportDataList]);
-
-  const handleChangePage = useCallback((page: number) => {
-    setCurrentPage(page);
-  }, []);
-
   return (
     <>
       <HelmetContainer />
@@ -51,7 +46,7 @@ const ReportListContainer: React.FC = () => {
         totalPage={reportData.totalPages}
         currentPage={currentPage}
         reportList={reportData.reportList}
-        handleChangePage={handleChangePage}
+        handleChangePage={(page: number) => setCurrentPage(page)}
       />
     </>
   );
