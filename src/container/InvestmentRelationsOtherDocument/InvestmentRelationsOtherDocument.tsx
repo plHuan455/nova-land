@@ -55,9 +55,6 @@ const InvestmentRelations: React.FC = () => {
     }));
   }, [dispatch, language]);
 
-  console.log(otherDocumentList);
-  console.log(otherDocumentList?.meta.totalPages);
-
   return (
     <div className="p-corporateGovernance_InvestmentRelationsOtherDocument">
       <InvestmentRelationsOtherDocument
