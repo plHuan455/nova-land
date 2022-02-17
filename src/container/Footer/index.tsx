@@ -1,8 +1,6 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import React, {
-  useCallback,
-  useEffect,
-  useMemo,
+  useCallback, useMemo,
   useState,
 } from 'react';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
@@ -12,7 +10,6 @@ import Footer, { FooterRegisterFormTypes, SocialListTypes } from 'components/org
 import NotifyModal, { NotifyType } from 'components/organisms/NotifyModal';
 import submitContactService from 'services/contact';
 import { useAppDispatch, useAppSelector } from 'store/hooks';
-import { getProjectsAction } from 'store/project';
 import { setMessageNotify } from 'store/system';
 import { getImageURL } from 'utils/functions';
 import registerSchema from 'utils/schemas';
@@ -27,7 +24,6 @@ const FooterContainer: React.FC<FooterContainerProps> = () => {
   const { projectData } = useAppSelector((state) => state.project);
   const { executeRecaptcha } = useGoogleReCaptcha();
   const { messageNotify } = useAppSelector((state) => state.system);
-  const language = useAppSelector((state) => state.system.language);
 
   const dispatch = useAppDispatch();
 
@@ -91,10 +87,6 @@ const FooterContainer: React.FC<FooterContainerProps> = () => {
     })),
     [projectData],
   );
-
-  useEffect(() => {
-    dispatch(getProjectsAction({}));
-  }, [dispatch, language]);
 
   return (
     <>
