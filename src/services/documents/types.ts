@@ -16,7 +16,7 @@ export type DocumentsData = {
   file: string;
   publishedAt: string;
   showHome: boolean;
-  quarters: string[];
+  quarters: number[];
 }
 
 export type OtherDocumentParamsType = {
