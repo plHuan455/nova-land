@@ -52,7 +52,6 @@ export const Menu: React.FC<MenuProps> = ({ data, handleClick }) => {
     setHoverActive(id);
     setIdSubActive(-1);
   };
-
   return (
     <ul className="t-menu">
       {data?.map((e, i) => (

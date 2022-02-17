@@ -153,9 +153,14 @@
       height: rem(96);
       position: absolute;
       right: 24%;
+
+      @include tablet-down {
+        height: rem(50);
+      }
     }
     @include mobile-down {
       padding: 0;
+      display: block;
 
       &::after {
         display: none;
@@ -180,11 +185,18 @@
     &_date {
       margin-top: rem(8);
     }
+
+    &_title {
+      width: rem(480);
+      @include mobile-down {
+        width: unset;
+      }
+    }
   }
 
   &_pagination {
     @include mobile-down {
-      margin-top: rem(10);
+      margin-top: rem(24);
 
       .o-pagination {
         justify-content: flex-end;
@@ -197,6 +209,14 @@
 
     .o-pagination {
       justify-content: flex-end;
+    }
+  }
+    
+  &_pagination,
+  &_paginationButton {
+    @include tablet-down {
+      display: flex;
+      justify-content: center;
     }
   }
 }

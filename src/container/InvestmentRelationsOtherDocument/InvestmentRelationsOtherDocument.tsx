@@ -30,7 +30,7 @@ const InvestmentRelations: React.FC = () => {
     ['GetOtherDocumentListHighlight', indexActive, page, language, selectedSort],
     () => getOtherDocumentCategoriesDetailService(indexActive, {
       sort: selectedSort?.value,
-      limit: 2,
+      limit: 5,
       page,
     }),
     {
