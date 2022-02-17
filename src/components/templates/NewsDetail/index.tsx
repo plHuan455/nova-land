@@ -131,15 +131,15 @@ const NewsDetail: React.FC<NewsDetailProps> = ({
       <div className="t-newsdetail_rightSide">
         <Text modifiers={['14x22', '700', 'jet']}>{titleLatest}</Text>
         <div className="t-newsdetail_subinfo">
-          {relatedNews.map((item) => (
-            <React.Fragment key={`news-${item.id}`}>
+          {relatedNews.map((item, index) => (
+            <React.Fragment key={`news-${index.toString()}`}>
               <InfoNews
                 imageSrc={item.imageNews || ''}
                 title={item.title}
                 status={item.status || ''}
                 href={item.href || ''}
               />
-              <Divider />
+              {(index + 1) < relatedNews.length && <Divider />}
             </React.Fragment>
           ))}
         </div>
@@ -154,7 +154,7 @@ const NewsDetail: React.FC<NewsDetailProps> = ({
                   status={item.status || ''}
                   href={item.href || ''}
                 />
-                <Divider />
+                {(idx + 1) < hightLightNews.length && <Divider />}
               </React.Fragment>
             ))}
           </div>

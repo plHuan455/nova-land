@@ -12,5 +12,13 @@
       max-width: none;
       width: auto;
     }
-  } 
+  }
+
+  &_latestNews {
+    padding-top: rem(120);
+
+    @include tablet-down {
+      padding-top: rem(96);
+    }
+  }
 }
