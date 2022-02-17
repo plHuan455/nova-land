@@ -1,10 +1,11 @@
 import React, {
   useState,
   useMemo,
+  useEffect,
 } from 'react';
 import { useQuery } from 'react-query';
 
-import Leadership from 'components/templates/Leadership';
+import Leadership, { LeadershipDetailProps } from 'components/templates/Leadership';
 import {
   getLeadershipCategoryService,
   getLeadershipService,
@@ -24,6 +25,14 @@ const LeadershipContainer: React.FC<LeadershipContainerProps> = ({
   const [indexActive, setIndexActive] = useState(0);
   const [isViewMore, setIsViewMore] = useState(false);
   const language = useAppSelector((state) => state.system.language);
+  const [currentLeader, setCurrentLeader] = useState<LeadershipDetailProps | undefined>({
+    gender: '',
+    name: '',
+    position: '',
+    imgSrc: '',
+    achievement: '',
+    slogan: '',
+  });
 
   const { data: categoryListData, isLoading: isLoadingCate } = useQuery(
     ['getLeadershipCategory', language], () => getLeadershipCategoryService(),
@@ -58,10 +67,23 @@ const LeadershipContainer: React.FC<LeadershipContainerProps> = ({
 
   const leaderShipData = isViewMore ? leaderShipDataList : leaderShipDataList.slice(0, 3);
 
+  useEffect(() => {
+    if (leaderShipDataList) {
+      setCurrentLeader(leaderShipDataList[0]);
+    }
+  }, [leaderShipDataList]);
+
   const handleChangeTab = (index: number) => {
     setIsViewMore(false);
     setIndexActive(index);
   };
+
+  const handleChangeLeader = (index: number) => {
+    if (leaderShipDataList) {
+      setCurrentLeader(leaderShipDataList[index]);
+    }
+  };
+
   return (
     <div className="p-aboutUs_leadership">
       <Leadership
@@ -73,6 +95,9 @@ const LeadershipContainer: React.FC<LeadershipContainerProps> = ({
         handleClickViewAll={() => setIsViewMore(!isViewMore)}
         hasButtonViewAll={leaderShipDataList.length > 3}
         isViewMore={isViewMore}
+        handleChangeLeader={handleChangeLeader}
+        currentLeader={currentLeader}
+        leaderShipList={leaderShipDataList}
       />
     </div>
   );
