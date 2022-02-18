@@ -18,7 +18,7 @@ const InvestmentRelations: React.FC = () => {
   const language = useAppSelector((state) => state.system.language);
   const { otherCategories } = useAppSelector((state) => state.documents);
   const [page, setPage] = useState(1);
-  const [indexActive, setIndexActive] = useState<number>(1);
+  const [indexActive, setIndexActive] = useState<number>();
 
   const dummyOption: OptionType[] = [
     { value: 'latest', label: t('general.latest') },
@@ -27,20 +27,21 @@ const InvestmentRelations: React.FC = () => {
 
   const { data: otherDocumentList, isLoading } = useQuery(
     ['GetOtherDocumentListHighlight', indexActive, page, language, selectedSort],
-    () => getOtherDocumentCategoriesDetailService(indexActive, {
+    () => getOtherDocumentCategoriesDetailService(indexActive || 0, {
       sort: selectedSort?.value,
       limit: 5,
       page,
     }),
     {
       ...DEFAULT_QUERY_OPTION,
+      enabled: !!indexActive,
     },
   );
 
   useEffect(() => {
     if (otherCategories.length > 0) {
       if (otherCategories[0].subMenu) {
-        if (otherCategories[0].subMenu) {
+        if (otherCategories[0].subMenu[0]) {
           setIndexActive(otherCategories[0].subMenu[0].id);
         } else {
           setIndexActive(otherCategories[0].id);
