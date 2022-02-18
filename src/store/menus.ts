@@ -63,6 +63,14 @@ export const menusSlice = createSlice({
       // Footer
       $state.footer = action.payload.find((item) => item.code === MENU_CODE.MENU_FOOTER)
         ?.items || [];
+      // console.log(groupMenus(
+      //   action.payload.find((item) => item.code === MENU_CODE.MENU_FOOTER)
+      //     ?.items,
+      // ));
+      // console.log(prefixGroupMenu(groupMenus(
+      //   action.payload.find((item) => item.code === MENU_CODE.MENU_FOOTER)
+      //     ?.items,
+      // )));
       $state.groupedFooter = prefixGroupMenu(groupMenus(
         action.payload.find((item) => item.code === MENU_CODE.MENU_FOOTER)
           ?.items,

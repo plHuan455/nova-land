@@ -68,7 +68,10 @@ export const groupMenusOtherDocument = (menus?: OtherDocumentCategoriesDataTypes
   return [];
 };
 
-const checkTypePrefix = (slugParam?: string, linkParam?: string) => {
+const checkTypePrefix = (type: string, slugParam?: string, linkParam?: string) => {
+  if (type === 'OneContent\\Page\\Models\\Page') {
+    return '';
+  }
   if (slugParam) return `${slugParam}/`;
   if (linkParam) return `${linkParam}/`;
   return '';
@@ -89,28 +92,24 @@ export const prefixGroupMenu = (menus?: MenuItemDataTypes[]) => {
     return [];
   }
 
-  return menus.map((ele) => {
-    const prefix = checkTypePrefix(ele.reference?.slug, ele.link);
-
-    return {
-      ...ele,
-      reference: ele.reference
-        ? {
-          slug: `${getLanguagePrefix(i18n.language)}${ele.reference?.slug || ''}`,
-        }
-        : undefined,
-      subMenu: ele.subMenu
-        ? ele.subMenu.map((subEle) => ({
-          ...subEle,
-          reference: subEle.reference
-            ? {
-              slug: `${getLanguagePrefix(i18n.language)}${prefix}${subEle.reference?.slug || ''}`,
-            }
-            : undefined,
-        }))
-        : undefined,
-    };
-  }) as MenuItemDataTypes[];
+  return menus.map((ele) => ({
+    ...ele,
+    reference: ele.reference
+      ? {
+        slug: `${getLanguagePrefix(i18n.language)}${ele.reference?.slug || ''}`,
+      }
+      : undefined,
+    subMenu: ele.subMenu
+      ? ele.subMenu.map((subEle) => ({
+        ...subEle,
+        reference: subEle.reference
+          ? {
+            slug: `${getLanguagePrefix(i18n.language)}${checkTypePrefix(subEle.type, ele.reference?.slug, ele.link)}${subEle.reference?.slug || ''}`,
+          }
+          : undefined,
+      }))
+      : undefined,
+  })) as MenuItemDataTypes[];
 };
 
 export default groupMenus;

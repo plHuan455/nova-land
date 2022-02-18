@@ -29,6 +29,7 @@ const FooterContainer: React.FC<FooterContainerProps> = () => {
   const { messageNotify } = useAppSelector((state) => state.system);
 
   const dispatch = useAppDispatch();
+  console.log('menuList: ', menuList);
 
   const registerSchema = yup.object().shape({
     fullname: yup.string().required(t('register.full_name_required')),
