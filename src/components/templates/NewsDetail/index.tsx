@@ -143,7 +143,7 @@ const NewsDetail: React.FC<NewsDetailProps> = ({
                   status={item.status || ''}
                   href={item.href || ''}
                 />
-                {(idx + 1) < hightLightNews.length && <Divider />}
+                {(idx + 1) < relatedNews.length && <Divider />}
               </React.Fragment>
             ))}
           </div>
