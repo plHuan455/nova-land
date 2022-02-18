@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import React, { useState, useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useQuery } from 'react-query';
@@ -37,6 +36,18 @@ const InvestmentRelations: React.FC = () => {
       ...DEFAULT_QUERY_OPTION,
     },
   );
+
+  useEffect(() => {
+    if (otherCategories.length > 0) {
+      if (otherCategories[0].subMenu) {
+        if (otherCategories[0].subMenu) {
+          setIndexActive(otherCategories[0].subMenu[0].id);
+        } else {
+          setIndexActive(otherCategories[0].id);
+        }
+      }
+    }
+  }, [otherCategories]);
 
   const convertDataOtherDocument = useMemo(() => {
     if (otherDocumentList) {
