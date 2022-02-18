@@ -8,7 +8,6 @@ import Loading from 'components/atoms/Loading';
 import Text from 'components/atoms/Text';
 import Carousel, { PrevArrow, NextArrow } from 'components/organisms/Carousel';
 import Container from 'components/organisms/Container';
-import useMatchHeight from 'hooks/useMatchHeight';
 import mapModifiers, { checkExternalUrl } from 'utils/functions';
 
 export interface InvestmentCardProps {
@@ -34,7 +33,6 @@ export const InvestmentCard: React.FC<InvestmentCardProps> = ({
   imgLogoHover,
   target,
 }) => {
-  useMatchHeight('.t-investmentCard_title');
   const [isHover, setIsHover] = useState<boolean>(false);
 
   return (
@@ -59,9 +57,9 @@ export const InvestmentCard: React.FC<InvestmentCardProps> = ({
         <div className="t-investmentCard_title">
           <Heading
             modifiers={
-                isSmall
-                  ? ['16x24', '600', 'jet', 'uppercase', 'fontNoto']
-                  : ['24x30', '600', 'jet', 'uppercase', 'fontNoto']
+              isSmall
+                ? ['16x24', '600', 'jet', 'uppercase', 'fontNoto']
+                : ['24x30', '600', 'jet', 'uppercase', 'fontNoto']
               }
             content={title}
           />
@@ -171,7 +169,6 @@ const InvestmentSector: React.FC<InvestmentSectorProps> = ({
       },
     ],
   };
-  // useMatchHeight('.t-VMV_desc');
 
   return (
     <div className={mapModifiers('t-investmentSector', isSmall && 'small')}>
