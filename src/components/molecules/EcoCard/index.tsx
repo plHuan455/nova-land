@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import Icon from 'components/atoms/Icon';
 import Link from 'components/atoms/Link';
+import { checkExternalUrl } from 'utils/functions';
 
 export interface EcoCardProps {
   fieldImgSrc: string;
@@ -30,7 +31,7 @@ const EcoCard: React.FC<EcoCardProps> = ({
       <div className="m-ecoCard_brands">
         <img src={brandImage} alt="brand" sizes="cover" />
       </div>
-      <Link href={href} target={target}>
+      <Link href={href} target={target} useExternal={checkExternalUrl(href)}>
         <div className="m-ecoCard_btn">
           <Icon iconName={isHover ? 'arrowNextWhite' : 'arrowNextGray'} size="18" />
         </div>

@@ -206,7 +206,8 @@ const AboutUSContainer: React.FC<BasePageData<AboutUsBlock>> = ({
   const ecoSystemsData = useMemo(() => novaEcosystemBlock?.items?.map((item) => ({
     fieldImgSrc: getImageURL(item.imageDefault),
     brandImage: getImageURL(item.imageHover),
-    href: item.link.url,
+    href: item.link?.url,
+    target: item.link?.target,
   })), [novaEcosystemBlock]);
 
   return (
