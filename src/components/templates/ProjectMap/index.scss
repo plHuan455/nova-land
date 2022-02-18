@@ -56,7 +56,7 @@
     width: calc(739 / #{$width-in-container-value} * 100%); // 760 not scroll 
 
     @include tablet-down {
-      max-width: calc(650 / #{$width-in-container-value} * 100%);
+      max-width: calc(700 / #{$width-in-container-value} * 100%);
       top: calc(150 / #{$height-map} * 100%);
     }
 
@@ -99,6 +99,10 @@
 
     &_carousel {
       margin: 0 rem(45);
+
+      @include tablet-down {
+        margin: 0;
+      }
     }
 
     &_branch {
@@ -107,7 +111,8 @@
       transition: $transition-long ease-in-out;
 
       @include tablet-down {
-        padding: rem(12);
+        padding: 0 rem(8);
+        margin-bottom: rem(26);
       }
 
       &.zoom-in {
