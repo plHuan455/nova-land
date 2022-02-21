@@ -40,12 +40,10 @@ const InvestmentRelations: React.FC = () => {
 
   useEffect(() => {
     if (otherCategories.length > 0) {
-      if (otherCategories[0].subMenu) {
-        if (otherCategories[0].subMenu[0]) {
-          setIndexActive(otherCategories[0].subMenu[0].id);
-        } else {
-          setIndexActive(otherCategories[0].id);
-        }
+      if (otherCategories[0].subMenu && otherCategories[0].subMenu.length > 0) {
+        setIndexActive(otherCategories[0].subMenu[0].id);
+      } else {
+        setIndexActive(otherCategories[0].id);
       }
     }
   }, [otherCategories]);

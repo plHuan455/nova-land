@@ -36,9 +36,9 @@ export interface MenuProps {
   handleClick?: (e: number) => void;
 }
 export const Menu: React.FC<MenuProps> = ({ data, handleClick }) => {
-  const [idActive, setIdActive] = useState<number>();
+  const [idActive, setIdActive] = useState<number | undefined>(data && data[0].id);
   const [idSubActive, setIdSubActive] = useState<number>();
-  const [hoverActive, setHoverActive] = useState<number>(1);
+  const [hoverActive, setHoverActive] = useState<number>();
 
   const onClickSub = (id: number) => {
     if (idActive === id) {
@@ -51,10 +51,12 @@ export const Menu: React.FC<MenuProps> = ({ data, handleClick }) => {
   const onHoverSub = (id: number) => {
     setHoverActive(id);
     setIdSubActive(-1);
+    setIdActive(-1);
   };
+
   return (
     <ul className="t-menu">
-      {data?.map((e, i) => (
+      {data.length > 0 && data.map((e, i) => (
         <li
           className={mapModifiers(
             't-menu_item',
@@ -251,10 +253,12 @@ const InvestmentRelationsOtherDocument: React.FC<InvestmentRelationsOtherDocumen
       <Container>
         <div className="t-investmentRelationsOtherDocument_content">
           <div className="t-investmentRelationsOtherDocument_left">
-            <Menu
-              data={dataMenu}
-              handleClick={handleClick}
-            />
+            {dataMenu.length > 0 && (
+              <Menu
+                data={dataMenu}
+                handleClick={handleClick}
+              />
+            )}
           </div>
           <div className="t-investmentRelationsOtherDocument_right">
             <Regulations
