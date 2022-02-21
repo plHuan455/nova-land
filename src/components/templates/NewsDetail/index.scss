@@ -69,17 +69,17 @@
     }
 
     iframe {
-      height: rem(500) !important;
+      height: rem(419) !important;
 
       @include desktop-down {
-        height: rem(390) !important;
+        height: rem(334) !important;
       }
 
       @include tablet-down {
-        height: rem(280) !important;
+        height: rem(249) !important;
       }
       @include small-mobile {
-        height: rem(210) !important;
+        height: rem(206) !important;
       }
     }
   }
