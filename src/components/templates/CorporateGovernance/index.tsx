@@ -7,8 +7,7 @@ import TableCategory, { TableCategoryProps } from 'components/templates/TableCat
 
 export interface TitleTabType {
   id: number;
-  name: string;
-  locale: string;
+  year: string;
 }
 
 export interface CorporateGovernanceProps {
@@ -30,7 +29,7 @@ const CorporateGovernance: React.FC<CorporateGovernanceProps> = ({
             <Tab
               size="20x28"
               key={`tab-${index.toString()}`}
-              label={item.name}
+              label={item.year}
               active={index === tabActive}
               handleClick={() => handleChangeTab && handleChangeTab(index)}
             />

@@ -53,8 +53,7 @@ export type AnnualDocumentsDataTypes = {
 
 export type DocumentTypes = {
   id: number;
-  name: string;
-  locale: string;
+  year: string;
 }
 
 export type DocumentsParamsType = {

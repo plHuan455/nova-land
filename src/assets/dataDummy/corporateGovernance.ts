@@ -45,53 +45,43 @@ const dataCorporateGovernanceList: TableCategoryProps[] = [
 export const dataTitleTab: TitleTabType[] = [
   {
     id: 1,
-    locale: 'vi',
-    name: '2021',
+    year: '2021',
   },
   {
     id: 2,
-    locale: 'vi',
-    name: '2020',
+    year: '2020',
   },
   {
     id: 3,
-    locale: 'vi',
-    name: '2019',
+    year: '2019',
   },
   {
     id: 4,
-    locale: 'vi',
-    name: '2018',
+    year: '2018',
   },
   {
     id: 5,
-    locale: 'vi',
-    name: '2017',
+    year: '2017',
   },
   {
     id: 6,
-    locale: 'vi',
-    name: '2016',
+    year: '2016',
   },
   {
     id: 7,
-    locale: 'vi',
-    name: '2015',
+    year: '2015',
   },
   {
     id: 8,
-    locale: 'vi',
-    name: '2014',
+    year: '2014',
   },
   {
     id: 9,
-    locale: 'vi',
-    name: '2013',
+    year: '2013',
   },
   {
     id: 10,
-    locale: 'vi',
-    name: '2012',
+    year: '2012',
   },
 ];
 
