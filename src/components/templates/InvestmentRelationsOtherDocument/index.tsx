@@ -36,9 +36,7 @@ export interface MenuProps {
   handleClick?: (e: number) => void;
 }
 export const Menu: React.FC<MenuProps> = ({ data, handleClick }) => {
-  const [idActive, setIdActive] = useState<number>();
-  const [idSubActive, setIdSubActive] = useState<number>();
-  const [hoverActive, setHoverActive] = useState<number>(1);
+  const [idActive, setIdActive] = useState<number | undefined>(data && data[0]?.id);
 
   const onClickSub = (id: number) => {
     if (idActive === id) {
@@ -48,24 +46,18 @@ export const Menu: React.FC<MenuProps> = ({ data, handleClick }) => {
     }
   };
 
-  const onHoverSub = (id: number) => {
-    setHoverActive(id);
-    setIdSubActive(-1);
-  };
   return (
     <ul className="t-menu">
-      {data?.map((e, i) => (
+      {data.length > 0 && data.map((e, i) => (
         <li
           className={mapModifiers(
             't-menu_item',
-            (e.id === idActive || e.id === hoverActive) && 'show',
+            (e.id === idActive) && 'show',
             (e.id === idActive && !(e?.subMenu?.length)) && 'active',
           )}
           key={`menu-item-${i.toString()}`}
         >
           <div
-            onMouseEnter={() => onHoverSub(e.id)}
-            onMouseLeave={() => onHoverSub(-1)}
             key={String(e.id)}
           >
             <div
@@ -92,7 +84,7 @@ export const Menu: React.FC<MenuProps> = ({ data, handleClick }) => {
                     if (handleClick) handleClick(s.id);
                   }}
                 >
-                  <div className={`t-menu_link ${(s.id === idSubActive) && 'active'}`}>
+                  <div className="t-menu_link">
                     <div className="t-menu_subHead_title">
                       <Text type="span" modifiers={['400', '16x24', 'fontLexend', 'dimGray']}>{s.name}</Text>
                     </div>
@@ -251,10 +243,12 @@ const InvestmentRelationsOtherDocument: React.FC<InvestmentRelationsOtherDocumen
       <Container>
         <div className="t-investmentRelationsOtherDocument_content">
           <div className="t-investmentRelationsOtherDocument_left">
-            <Menu
-              data={dataMenu}
-              handleClick={handleClick}
-            />
+            {dataMenu.length > 0 && (
+              <Menu
+                data={dataMenu}
+                handleClick={handleClick}
+              />
+            )}
           </div>
           <div className="t-investmentRelationsOtherDocument_right">
             <Regulations
