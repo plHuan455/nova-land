@@ -38,7 +38,7 @@ const CorporateGovernanceTableContainer: React.FC = () => {
       queryKey: ['getDocumentCategory', ele.id, ele.page, indexActive, language],
       queryFn: () => getDocumentsService({
         category_id: ele.id,
-        year: documentYearsData?.[indexActive].name || '',
+        year: documentYearsData?.[indexActive].year || '',
         limit: 8,
         page: ele.page,
       }),
@@ -53,7 +53,7 @@ const CorporateGovernanceTableContainer: React.FC = () => {
         dataHeader: [
           {
             id: 1,
-            value: documentTab[index].name,
+            value: documentTab[index].year,
           },
           {
             id: 2,
