@@ -42,8 +42,6 @@
   }
 
   &_icon {
-    // background: $white;
-    // border: rem(1) solid $camel;
     border-radius: 50%;
     height: rem(120);
     position: relative;
@@ -118,9 +116,15 @@
   &_thumbnail {
     margin-top: rem(24);
     position: relative;
+    min-height: rem(100);
+
+    @include desktop-down {
+      min-height: rem(80);
+    }
 
     @include mobile-down {
       margin-top: rem(16);
+      min-height: auto;
     }
 
     &_button {
