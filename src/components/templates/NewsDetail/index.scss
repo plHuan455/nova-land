@@ -92,49 +92,49 @@
     &-desc {
       word-break: break-all;
       button {
-        height: rem(45);
+        background-color: $camel;
+        border: 0;
+        border-radius: rem(5);
+        box-shadow: 0 2px 0 $black0043;
+        color: $white;
+        margin: rem(60) 0;
+        height: rem(56);
         width: rem(237);
-        margin: rem(25) 0;
+        @include prefixed(transition-property, color);
+        @include prefixed(transition-duration, 0.3s);
+        @include prefixed(transform, perspective(1px) translateZ(0));
 
-        @include tablet-up {
-          background-color: $camel;
-          border: 0;
+        @include tablet-down {
+          height: rem(40);
+          width: rem(200);
+          margin: rem(25) 0;
+        }
+
+        &::before {
+          background: $white;
+          border: 1px solid $camel;
           border-radius: rem(5);
-          box-shadow: 0 2px 0 $black0043;
-          color: $white;
-          margin: rem(60) 0;
-          height: rem(56);
-          width: rem(237);
-          @include prefixed(transition-property, color);
+          bottom: 0;
+          content: '';
+          left: 0;
+          position: absolute;
+          right: 0;
+          top: 0;
+          z-index: -1;
+          @include prefixed(transform, scaleX(0));
+          @include prefixed(transform-origin, 50%);
+          @include prefixed(transition-property, transform);
           @include prefixed(transition-duration, 0.3s);
-          @include prefixed(transform, perspective(1px) translateZ(0));
+          @include prefixed(transition-timing-function, ease-out);
+        }
+
+        &:hover {
+          background-color: $white;
+          border: 0;
+          color: $camel;
 
           &::before {
-            background: $white;
-            border: 1px solid $camel;
-            border-radius: rem(5);
-            bottom: 0;
-            content: '';
-            left: 0;
-            position: absolute;
-            right: 0;
-            top: 0;
-            z-index: -1;
-            @include prefixed(transform, scaleX(0));
-            @include prefixed(transform-origin, 50%);
-            @include prefixed(transition-property, transform);
-            @include prefixed(transition-duration, 0.3s);
-            @include prefixed(transition-timing-function, ease-out);
-          }
-
-          &:hover {
-            background-color: $white;
-            border: 0;
-            color: $camel;
-
-            &::before {
-              @include prefixed(transform, scaleX(1));
-            }
+            @include prefixed(transform, scaleX(1));
           }
         }
       }
