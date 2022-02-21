@@ -59,8 +59,28 @@
       margin-top: rem(40);
     }
 
+    img, iframe {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+
     img {
-      max-width: 100%;
+      height: auto !important;
+    }
+
+    iframe {
+      height: rem(419) !important;
+
+      @include desktop-down {
+        height: rem(334) !important;
+      }
+
+      @include tablet-down {
+        height: rem(249) !important;
+      }
+      @include small-mobile {
+        height: rem(206) !important;
+      }
     }
   }
 
