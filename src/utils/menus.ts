@@ -1,3 +1,5 @@
+import { getStaticSlug } from './language';
+
 import i18n from 'i18n';
 import { OtherDocumentCategoriesDataTypes } from 'services/documents/types';
 import { MenuItemDataTypes } from 'services/menus/types';
@@ -70,7 +72,10 @@ export const groupMenusOtherDocument = (menus?: OtherDocumentCategoriesDataTypes
 
 const checkTypePrefix = (type: string, slugParam?: string, linkParam?: string) => {
   if (type === 'OneContent\\Page\\Models\\Page') {
-    return '';
+    return '/';
+  }
+  if (type === 'OneContent\\News\\Models\\NewsCategory' || type === 'OneContent\\Projects\\Models\\RealEstates') {
+    return `/${getStaticSlug('NEWS_CATEGORY', i18n.language)}/`;
   }
   if (slugParam) return `${slugParam}/`;
   if (linkParam) return `${linkParam}/`;
