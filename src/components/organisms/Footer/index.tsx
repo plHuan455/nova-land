@@ -130,15 +130,17 @@ const Footer: React.FC<FooterProps> = ({
                 footerLink && footerLink.map((val, idx) => (
                   <div className="o-footer_main_menu_wrap" key={idx.toString()}>
                     <div className="o-footer_main_menu_title">
-                      <Text modifiers={['white', '12x17', '600', 'uppercase']}>
-                        {val.title}
-                      </Text>
+                      <Link href={val.reference?.slug || val.link}>
+                        <Text modifiers={['white', '12x17', '600', 'uppercase']}>
+                          {val.title}
+                        </Text>
+                      </Link>
                     </div>
                     <ul className="o-footer_main_menu_list">
                       {
                         val.subMenu && val.subMenu.map((item, i) => (
                           <li className="o-footer_main_menu_nav" key={i.toString()}>
-                            <Link href={item.link}>
+                            <Link href={item.reference?.slug || item.link}>
                               <Text modifiers={['12x17', 'lavenderGray', '300']} isInline>
                                 {item.title}
                               </Text>
