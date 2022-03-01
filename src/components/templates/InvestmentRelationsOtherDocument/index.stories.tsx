@@ -21,6 +21,7 @@ const dummyOption: OptionType[] = [
 export const normal: Story = () => (
   <BrowserRouter>
     <InvestmentRelationsOtherDocument
+      titleActive="Thông tin tập đoàn"
       dataMenu={[]}
       dataRegulations={RegulationsList}
       sortOptions={dummyOption}
