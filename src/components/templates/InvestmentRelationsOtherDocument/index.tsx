@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ValueType } from 'react-select';
 
@@ -34,8 +34,9 @@ export interface MenuType {
 export interface MenuProps {
   data: OtherDocumentCategoriesDataTypes[];
   handleClick?: (e: number) => void;
+  handleChangeTitle?: (name: string) => void;
 }
-export const Menu: React.FC<MenuProps> = ({ data, handleClick }) => {
+export const Menu: React.FC<MenuProps> = ({ data, handleClick, handleChangeTitle }) => {
   const [idActive, setIdActive] = useState<number | undefined>(data && data[0]?.id);
 
   const onClickSub = (id: number) => {
@@ -65,6 +66,7 @@ export const Menu: React.FC<MenuProps> = ({ data, handleClick }) => {
               onClick={() => {
                 onClickSub(e.id);
                 if (handleClick) handleClick(e.id);
+                if (handleChangeTitle) handleChangeTitle(e.name);
               }}
             >
               <div className="t-menu_subHead-title">
@@ -82,6 +84,7 @@ export const Menu: React.FC<MenuProps> = ({ data, handleClick }) => {
                   key={`menu_subList-${idx.toString()}`}
                   onClick={() => {
                     if (handleClick) handleClick(s.id);
+                    if (handleChangeTitle) handleChangeTitle(s.name);
                   }}
                 >
                   <div className="t-menu_link">
@@ -222,6 +225,7 @@ export interface InvestmentRelationsOtherDocumentProps extends Omit<RegulationsP
   dataMenu: OtherDocumentCategoriesDataTypes[];
   handleClick?: (e: number) => void;
   loading?: boolean;
+  titleActive: string;
 }
 
 const InvestmentRelationsOtherDocument: React.FC<InvestmentRelationsOtherDocumentProps> = ({
@@ -235,8 +239,15 @@ const InvestmentRelationsOtherDocument: React.FC<InvestmentRelationsOtherDocumen
   handleChangePage,
   handleClick,
   loading,
+  titleActive,
 }) => {
   const { t } = useTranslation();
+
+  const [title, setTitle] = useState<string>(titleActive);
+
+  useEffect(() => (
+    setTitle(titleActive)
+  ), [titleActive]);
 
   return (
     <div className="t-investmentRelationsOtherDocument">
@@ -247,12 +258,13 @@ const InvestmentRelationsOtherDocument: React.FC<InvestmentRelationsOtherDocumen
               <Menu
                 data={dataMenu}
                 handleClick={handleClick}
+                handleChangeTitle={(name: string) => setTitle(name)}
               />
             )}
           </div>
           <div className="t-investmentRelationsOtherDocument_right">
             <Regulations
-              title={t('general.regulations')}
+              title={title}
               textSort={`${t('general.sort')}:`}
               dataRegulations={dataRegulations}
               selectedSort={selectedSort}

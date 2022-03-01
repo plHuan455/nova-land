@@ -19,6 +19,7 @@ const InvestmentRelations: React.FC = () => {
   const { otherCategories } = useAppSelector((state) => state.documents);
   const [page, setPage] = useState(1);
   const [indexActive, setIndexActive] = useState<number>();
+  const [titleActive, setTitleActive] = useState<string>();
 
   const dummyOption: OptionType[] = [
     { value: 'latest', label: t('general.latest') },
@@ -42,8 +43,10 @@ const InvestmentRelations: React.FC = () => {
     if (otherCategories.length > 0) {
       if (otherCategories[0].subMenu && otherCategories[0].subMenu.length > 0) {
         setIndexActive(otherCategories[0].subMenu[0].id);
+        setTitleActive(otherCategories[0].subMenu[0].name);
       } else {
         setIndexActive(otherCategories[0].id);
+        setTitleActive(otherCategories[0].name);
       }
     }
   }, [otherCategories]);
@@ -70,6 +73,7 @@ const InvestmentRelations: React.FC = () => {
   return (
     <div className="p-corporateGovernance_InvestmentRelationsOtherDocument">
       <InvestmentRelationsOtherDocument
+        titleActive={titleActive || ''}
         dataMenu={otherCategories}
         dataRegulations={convertDataOtherDocument}
         selectedSort={selectedSort}
