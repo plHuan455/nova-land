@@ -135,10 +135,18 @@
 
       &_icon {
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
         margin-top: rem(16);
         max-width: rem(170);
         padding: 0;
+
+        &_item {
+          margin-bottom: rem(6);
+
+          &:not(:last-child){
+            margin-right: rem(16);
+          }
+        }
       }
     }
 
