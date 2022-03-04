@@ -11,6 +11,15 @@ import Carousel, { PrevArrow, NextArrow } from 'components/organisms/Carousel';
 import Container from 'components/organisms/Container';
 import { getImageURL, checkExternalUrl } from 'utils/functions';
 
+interface SocialTypes {
+  icon: string,
+  link: {
+    url?: string,
+    text: string,
+    target: string,
+  }
+}
+
 export interface GallerySlideProps {
   title: string;
   desc: string;
@@ -20,6 +29,7 @@ export interface GallerySlideProps {
   imgList: {
     image: string;
   }[];
+  socialList?: SocialTypes[];
 }
 
 const setting = {
@@ -60,6 +70,7 @@ const GallerySlide: React.FC<GallerySlideProps> = ({
   href,
   nameBtn,
   imgList,
+  socialList,
 }) => {
   const { t } = useTranslation();
 
@@ -87,6 +98,23 @@ const GallerySlide: React.FC<GallerySlideProps> = ({
                   </div>
                 </Link>
               </div>
+              {socialList && (
+                <div className="t-gallerySlide_left_social u-mt-md-20 u-mt-10">
+                  {
+                    socialList.map((item, index) => (
+                      <div className="t-gallerySlide_left_social_item" key={index.toString()}>
+                        <Link
+                          href={item.link?.url || ''}
+                          target={item.link.target}
+                          useExternal={checkExternalUrl(item.link?.url)}
+                        >
+                          <img src={getImageURL(item.icon)} alt="icon" />
+                        </Link>
+                      </div>
+                    ))
+                  }
+                </div>
+              )}
             </Animate>
           </div>
           <div className="t-gallerySlide_right">

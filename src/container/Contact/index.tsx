@@ -31,6 +31,14 @@ type Gallery = {
     text: string;
     target: string;
   };
+  socical: {
+    icon: string,
+    link: {
+      url?: string,
+      text: string,
+      target: string,
+    }
+  }[];
   latitude: string;
   longtitude: string;
   description: string;
@@ -103,6 +111,7 @@ const ContactContainer: React.FC<BasePageData<ContactBlock>> = ({
         nameBtn={galleryBlock.button.text}
         href={`${galleryBlock.button.url}/search/${galleryBlock.latitude},${galleryBlock.longtitude}`}
         imgList={galleryBlock.items}
+        socialList={galleryBlock.socical}
       />
       <TransactionListContainer title={exchanges.title} />
     </>
