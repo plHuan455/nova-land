@@ -34,6 +34,22 @@
         }
       }
     }
+
+    &_social {
+      display: flex;
+      flex-wrap: wrap;
+      &_item {
+        max-width: rem(36);
+
+        img {
+          width: 100%;
+        }
+
+        &:not(:first-child) {
+          margin-left: rem(20);
+        }
+      }
+    }
   }
 
   &_right {
