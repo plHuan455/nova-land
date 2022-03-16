@@ -3,15 +3,11 @@
   background: $white;
   border: rem(1) solid $gainsboro;
 
-  @include small-mobile {
-    display: block;
-  }
-
   &_thumbnail {
     min-width: rem(194);
 
     @include small-mobile {
-      width: 100%;
+      min-width: rem(120);
     }
   }
 
@@ -25,6 +21,10 @@
 
   &_title {
     @include text-overflow(2);
+
+    @include small-mobile {
+      display: none;
+    }
   }
 
   &_content {
@@ -80,6 +80,80 @@
     width: 100%;
   }
 
+  &_wrapper {
+    margin-top: rem(24);
+
+    .a-loader-circle {
+      margin-top: rem(50);
+    }
+
+    .o-tabs {
+      margin: 0 auto;
+      max-width: calc(100% - 300px);
+
+      @include tablet-down {
+        max-width: calc(100% - 200px);
+      }
+
+      @include small-mobile {
+        max-width: calc(100% - 130px);
+      }
+    }
+
+    &_cover {
+      position: relative;
+
+      .slick-arrow {
+        width: rem(48);
+        height: rem(48);
+
+        @include small-mobile {
+          width: rem(30);
+          height: rem(30);
+        }
+      }
+
+      &_prev {
+        position: absolute;
+        left: 60px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @include tablet-down {
+          left: 10px;
+        }
+
+        @include small-mobile {
+          left: 0;
+        }
+      }
+
+      &_next {
+        position: absolute;
+        right: 60px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @include tablet-down {
+          right: 10px;
+        }
+
+        @include small-mobile {
+          right: 0;
+        }
+      }
+
+      .o-tabs_labels::-webkit-scrollbar {
+        display: none;
+      }
+
+      .o-tabs_labels {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    }
+  }
+
   &_list {
     @include adjust-flex(flex-start, center);
     flex-wrap: wrap;
@@ -87,13 +161,8 @@
     @include tablet-down {
       margin-top: rem(6);
     }
-  }
-
-  &_wrapper {
-    margin-top: rem(24);
-
-    .a-loader-circle {
-      margin-top: rem(50);
+    @include small-mobile {
+      margin-bottom: rem(-14);
     }
   }
 
@@ -102,6 +171,20 @@
 
     @include tablet-down {
       flex: 0 0 100%;
+    }
+
+    @include small-mobile {
+      padding: rem(14) 0;
+    }
+
+    &_titleMobile {
+      display: none;
+
+      @include small-mobile {
+        display: block;
+        @include text-overflow(4);
+        width: 100%;
+      }
     }
   }
 
