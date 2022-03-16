@@ -53,6 +53,7 @@ const NewsContainer: React.FC<BasePageData<NewsData>> = ({
             activeTab={item.children.length > 0 ? item.children[0] : item}
             tabList={item.children}
             exceptIds={convertExceptIds}
+            classTabsActive={`cateBlock-${index.toString()}`}
           />
         ))}
     </>

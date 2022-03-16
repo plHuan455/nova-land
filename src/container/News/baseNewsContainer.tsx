@@ -12,15 +12,20 @@ import { DEFAULT_QUERY_OPTION } from 'utils/constants';
 import { formatDateDDMMYYYY, getImageURL } from 'utils/functions';
 import { getPrefixURLCode } from 'utils/language';
 
-interface BaseNewsProps {
+export interface BaseNewsProps {
   title: string;
   activeTab: NewsCategoryChildrenTypes;
   tabList: NewsCategoryChildrenTypes[];
   exceptIds: string;
+  classTabsActive?: string;
 }
 
 const BaseNewsContainer: React.FC<BaseNewsProps> = ({
-  title, activeTab, tabList, exceptIds,
+  title,
+  activeTab,
+  tabList,
+  exceptIds,
+  classTabsActive,
 }) => {
   const { t } = useTranslation();
   const language = useAppSelector((state) => state.system.language);
@@ -70,6 +75,8 @@ const BaseNewsContainer: React.FC<BaseNewsProps> = ({
             newsList={baseNews}
             handleActive={(id) => handleClickTab(id)}
             nameButton={`${t('general.see_more_btn')} ${active.name}`}
+            loading={isFetching}
+            classTabsActive={classTabsActive}
           />
         ) : (
           <NewsList

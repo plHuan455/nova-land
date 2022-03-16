@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import Button from 'components/atoms/Button';
@@ -8,6 +8,7 @@ import Image from 'components/atoms/Image';
 import Link from 'components/atoms/Link';
 import Loading from 'components/atoms/Loading';
 import Text from 'components/atoms/Text';
+import { PrevArrow, NextArrow } from 'components/organisms/Carousel';
 import Container from 'components/organisms/Container';
 import { Tab, Tabs } from 'components/organisms/Tabs';
 
@@ -93,6 +94,7 @@ interface HomeNewsProps {
   newsList?: HomeNewsCardProps[];
   handleActive?: (id: number) => void;
   loading?: boolean;
+  classTabsActive?: string;
 }
 
 const HomeNews: React.FC<HomeNewsProps> = ({
@@ -104,9 +106,29 @@ const HomeNews: React.FC<HomeNewsProps> = ({
   newsList,
   handleActive,
   loading,
+  classTabsActive,
 }) => {
   const [indexActive, setIndexActive] = useState(0);
   const { t } = useTranslation();
+
+  const handleClickNext = () => {
+    if (indexActive < tabDataHomeNews.length - 1 && indexActive >= 0) {
+      setIndexActive(indexActive + 1);
+    }
+  };
+
+  const handleClickPrev = () => {
+    if (indexActive <= tabDataHomeNews.length - 1 && indexActive > 0) {
+      setIndexActive(indexActive - 1);
+    }
+  };
+
+  useEffect(() => {
+    if (handleActive) {
+      handleActive(indexActive);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [indexActive]);
 
   return (
     <div className="t-homeNews">
@@ -116,22 +138,26 @@ const HomeNews: React.FC<HomeNewsProps> = ({
           content={title}
         />
         <div className="t-homeNews_wrapper">
-          <Tabs variableMutate={indexActive}>
-            {
-              tabDataHomeNews.map((item, index) => (
-                <Tab
-                  size="20x28"
-                  key={`tab-${index.toString()}`}
-                  label={item.titleTab}
-                  active={index === indexActive}
-                  handleClick={() => {
-                    setIndexActive(index);
-                    if (handleActive) handleActive(index);
-                  }}
-                />
-              ))
-            }
-          </Tabs>
+          <div className="t-homeNews_wrapper_cover">
+            <PrevArrow extendClassname={`t-homeNews_wrapper_cover_prev slick-arrow slick-prev ${indexActive === 0 && 'slick-disabled'}`} onClick={handleClickPrev} />
+            <Tabs classTabsActive={classTabsActive} variableMutate={indexActive}>
+              {
+                tabDataHomeNews.map((item, index) => (
+                  <Tab
+                    type={classTabsActive}
+                    size="20x28"
+                    key={`tab-${index.toString()}`}
+                    label={item.titleTab}
+                    active={index === indexActive}
+                    handleClick={() => {
+                      setIndexActive(index);
+                    }}
+                  />
+                ))
+              }
+            </Tabs>
+            <NextArrow extendClassname={`t-homeNews_wrapper_cover_next slick-arrow slick-next ${indexActive === tabDataHomeNews.length - 1 && 'slick-disabled'}`} onClick={handleClickNext} />
+          </div>
           {(() => {
             if (loading) return <Loading isShow />;
             return (
@@ -141,6 +167,14 @@ const HomeNews: React.FC<HomeNewsProps> = ({
                 <>
                   {newsList.map((ele, idx) => (
                     <div className="t-homeNews_content" key={`homeNews-homeNewsCard-${idx.toString()}`}>
+                      <div className="t-homeNews_content_titleMobile">
+                        <Link href={ele.href}>
+                          <Text
+                            modifiers={['16x24', '600', 'arsenic', 'capitalize']}
+                            content={ele.title.toLocaleLowerCase()}
+                          />
+                        </Link>
+                      </div>
                       <div className="t-homeNews_item">
                         <HomeNewsCard
                           {...ele}
@@ -179,6 +213,7 @@ HomeNews.defaultProps = {
   newsList: undefined,
   handleActive: undefined,
   loading: false,
+  classTabsActive: undefined,
 };
 
 export default HomeNews;

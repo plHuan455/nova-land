@@ -12,12 +12,13 @@ interface TabProps {
   size?: '16x24' | '20x28';
   acitveColor?: 'goldenBrown';
   handleClick?: () => void;
+  type?: string;
 }
 
 interface TabsProps {
   variableMutate?: number | string;
   classTabsActive?: string;
-  variant?: 'white'
+  variant?: 'white';
 }
 
 export const TabPanel: React.FC<TabPanelProps> = ({ active, children }) => (
@@ -25,9 +26,9 @@ export const TabPanel: React.FC<TabPanelProps> = ({ active, children }) => (
 );
 
 export const Tab: React.FC<TabProps> = ({
-  active, label, size, acitveColor, handleClick,
+  active, label, size, acitveColor, handleClick, type,
 }) => (
-  <div onClick={handleClick} className={mapModifiers('o-tabs_tab', active && 'active', acitveColor)}>
+  <div onClick={handleClick} className={mapModifiers('o-tabs_tab', active && 'active', acitveColor, type ? `${type}-${active && 'active'}` : '')}>
     <span className={`o-tabs_label ${size ? `o-tabs_label-${size}` : ''} ${acitveColor ? `o-tabs_label-${acitveColor}` : ''}`}>{label}</span>
   </div>
 );
@@ -38,7 +39,7 @@ export const Tabs: React.FC<TabsProps> = ({
   const ref = useRef<HTMLDivElement | null>(null);
 
   useLayoutEffect(() => {
-    handleScrollCenter(ref, classTabsActive || '.o-tabs_tab-active');
+    handleScrollCenter(ref, `.o-tabs_tab-${classTabsActive}-active` || '.o-tabs_tab-active');
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [variableMutate]);
 
@@ -61,6 +62,7 @@ Tab.defaultProps = {
   size: undefined,
   acitveColor: undefined,
   handleClick: undefined,
+  type: undefined,
 };
 
 Tabs.defaultProps = {
