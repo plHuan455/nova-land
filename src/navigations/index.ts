@@ -63,12 +63,9 @@ export const TemplateCodes: TemplateCodeType[] = [
     code: 'ANNUAL_REPORT',
     component: ReportList,
   },
-<<<<<<< Updated upstream
-=======
   {
     code: 'RULES_PRIVACY',
     component: TermsPolicy,
   },
 
->>>>>>> Stashed changes
 ];
