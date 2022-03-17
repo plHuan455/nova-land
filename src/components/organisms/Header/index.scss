@@ -178,6 +178,9 @@
         @include tablet-down {
           content: none;
         }
+        @include desktop-down {
+          top: rem(58);
+        }
       }
 
       @include font-base(14, 20);
@@ -229,8 +232,8 @@
       background-color: $white;
       box-shadow: inset 0 1px 4px $black025;
       left: 0;
-      max-height: 0;
       opacity: 1;
+      max-height: 0;
       overflow: hidden;
       position: absolute;
       top: rem(65);
@@ -241,7 +244,6 @@
 
     @include tablet-down {
       max-height: 0;
-      opacity: 0;
       visibility: hidden;
       @include transition(all $transition-long ease-in-out);
 
@@ -249,7 +251,10 @@
         max-width: 100%;
       }
     }
-
+    @include desktop-down {
+      opacity: 1;
+      overflow: hidden;
+    }
     &_wrapper {
       @include tablet-up {
         padding: rem(16) rem(20);
@@ -290,6 +295,10 @@
       &:hover {
         opacity: 1;
         color: $dark-midnight-blue;
+        font-weight: 600;
+      }
+      @include desktop-down {
+        color: $white;
       }
     }
   }
