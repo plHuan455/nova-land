@@ -83,7 +83,7 @@ const OutstandingProject: React.FC<OutstandingProjectProps> = ({
           <div className="t-outstandingProject_title">
             <AnimateCarousel type="fadeInLeft">
               <Heading
-                modifiers={['32x48', 'camel', '500', 'fontNoto', 'uppercase']}
+                modifiers={['32x48', 'camel', '700', 'fontCalibri', 'uppercase']}
                 content={title}
               />
             </AnimateCarousel>

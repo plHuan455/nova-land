@@ -134,7 +134,7 @@ const HomeNews: React.FC<HomeNewsProps> = ({
     <div className="t-homeNews">
       <Container>
         <Heading
-          modifiers={['32x48', '500', 'uppercase', 'jet', 'center', 'fontNoto']}
+          modifiers={['32x48', '700', 'uppercase', 'jet', 'center', 'fontCalibri']}
           content={title}
         />
         <div className="t-homeNews_wrapper">

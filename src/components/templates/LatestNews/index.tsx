@@ -43,7 +43,7 @@ export const LatestNewsCard: React.FC<LatestNewsCardProps> = ({
     {
       heading && (
         <div className="t-latestNewsCard_heading">
-          <Heading modifiers={['600', '30x42', 'center', 'uppercase', 'jet', 'fontNoto']}>{heading}</Heading>
+          <Heading modifiers={['700', '30x42', 'center', 'uppercase', 'jet', 'fontCalibri']}>{heading}</Heading>
         </div>
       )
     }

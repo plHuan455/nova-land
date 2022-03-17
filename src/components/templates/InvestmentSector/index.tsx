@@ -58,8 +58,8 @@ export const InvestmentCard: React.FC<InvestmentCardProps> = ({
           <Heading
             modifiers={
               isSmall
-                ? ['16x24', '600', 'jet', 'uppercase', 'fontNoto']
-                : ['24x30', '600', 'jet', 'uppercase', 'fontNoto']
+                ? ['16x24', '700', 'jet', 'uppercase', 'fontCalibri']
+                : ['24x30', '700', 'jet', 'uppercase', 'fontCalibri']
               }
             content={title}
           />
@@ -178,10 +178,10 @@ const InvestmentSector: React.FC<InvestmentSectorProps> = ({
             modifiers={[
               '32x48',
               'jet',
-              '500',
+              '700',
               'uppercase',
               'center',
-              'fontNoto',
+              'fontCalibri',
             ]}
             content={title}
           />

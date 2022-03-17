@@ -40,7 +40,7 @@ const FilterRecruitment: React.FC<FilterRecruitmentProps> = ({
     <Container>
       <div className="t-filterRecruitment">
         <div className="t-filterRecruitment_heading">
-          <Heading modifiers={['400', '64x83', 'center', 'fontNoto', 'white']} content={heading} />
+          <Heading modifiers={['700', '64x83', 'center', 'fontCalibri', 'white']} content={heading} />
         </div>
         <div className="t-filterRecruitment_desc">
           <Text modifiers={['300', '18x28', 'center', 'fontLexend', 'white']} content={desc} />

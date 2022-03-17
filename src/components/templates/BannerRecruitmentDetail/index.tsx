@@ -33,7 +33,7 @@ const BannerRecruitmentDetail: React.FC<BannerRecruitmentDetailProps> = ({
             <Text modifiers={['12x17', 'white']}>{time}</Text>
           </div>
           <div className="t-bannerRecruitmentDetail_title">
-            <Heading modifiers={['52x65', 'white', 'fontNoto', '400']}>{title}</Heading>
+            <Heading modifiers={['52x65', 'white', 'fontCalibri', '700']}>{title}</Heading>
           </div>
         </div>
       </Container>

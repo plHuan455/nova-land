@@ -22,7 +22,7 @@ const BannerInvestmentRelations: React.FC<BannerInvestmentRelationsProps> = ({
       imageTabletSrc={srcTablet}
       imageMobileSrc={srcMobile}
     >
-      <Heading modifiers={['52x65', 'white', 'center', 'fontNoto', '400']}>{title}</Heading>
+      <Heading modifiers={['52x65', 'white', 'center', 'fontCalibri', '700']}>{title}</Heading>
     </BannerRecruitment>
   </div>
 );

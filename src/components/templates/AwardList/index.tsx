@@ -72,8 +72,8 @@ const AwardList: React.FC<AwardListProps> = ({
       <Container>
         <Heading
           modifiers={[
-            '500',
-            'fontNoto',
+            '700',
+            'fontCalibri',
             'uppercase',
             '32x48',
             'jet',

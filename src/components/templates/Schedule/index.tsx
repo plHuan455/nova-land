@@ -39,7 +39,7 @@ const Schedule: React.FC<ScheduleProps> = ({
     <Container>
       <>
         <div className="t-schedule_heading">
-          <Heading modifiers={['jet', '30x42', 'center', '600', 'fontNoto']} content={heading} />
+          <Heading modifiers={['jet', '30x42', 'center', '700', 'fontCalibri']} content={heading} />
         </div>
         <div className="t-schedule_subTitle">
           <Text modifiers={['fontLexend', '400', '18x28', 'center', 'dimGray']} content={subTitle} />

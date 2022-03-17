@@ -25,7 +25,7 @@ const TransactionList: React.FC<TransactionListProps> = ({
 }) => (
   <div className="t-transactionList">
     <Container>
-      <Heading modifiers={['30x42', '500', 'fontNoto', 'jet', 'center', 'uppercase']}>
+      <Heading modifiers={['30x42', '700', 'fontCalibri', 'jet', 'center', 'uppercase']}>
         {title}
       </Heading>
       <div className="t-transactionList_wrapper u-mt-md-36 u-mt-20">

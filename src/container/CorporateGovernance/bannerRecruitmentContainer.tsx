@@ -19,7 +19,7 @@ const BannerRecruitmentContainer: React.FC<BannerRecruitmentContainerProps> = ({
       imageTabletSrc={imageTabletSrc}
       imageMobileSrc={imageMobileSrc}
     >
-      <Heading modifiers={['52x65', 'white', 'center', 'fontNoto', '400']}>{title}</Heading>
+      <Heading modifiers={['52x65', 'white', 'center', 'fontCalibri', '700']}>{title}</Heading>
     </BannerRecruitment>
   </div>
 );

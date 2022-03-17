@@ -156,7 +156,7 @@ const ProjectListMap: React.FC<ProjectListMapProps> = ({
 }) => (
   <div className="t-projectListMap">
     <Container>
-      <Heading content={title} modifiers={['32x48', 'jet', 'fontNoto', '500', 'center']} />
+      <Heading content={title} modifiers={['32x48', 'jet', 'fontCalibri', '700', 'center']} />
       <div className="t-projectListMap_content">
         {children}
       </div>

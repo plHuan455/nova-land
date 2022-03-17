@@ -57,7 +57,7 @@ const EcoSystems: React.FC<EcoSystemsProps> = ({ title, desc, dataList }) => {
   return (
     <div className="t-ecoSystems">
       <Container>
-        <Heading modifiers={['32x48', '500', 'fontNoto', 'jet', 'uppercase', 'center']}>{title}</Heading>
+        <Heading modifiers={['32x48', '700', 'fontCalibri', 'jet', 'uppercase', 'center']}>{title}</Heading>
         <div className="t-ecoSystems_desc">
           <Text type="div" modifiers={['400', 'center', 'dimGray', '16x24']} content={desc} />
         </div>

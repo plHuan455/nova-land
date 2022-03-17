@@ -36,7 +36,7 @@ export const TabBg: React.FC<TabProps> = ({
       <div className="o-tabsBg_image">
         <Image ratio="1x1" src={(active ? imgActive : imgInActive) || ''} />
       </div>
-      <Text modifiers={['18x28', '500', 'jet', 'fontNoto', 'uppercase']}>{label}</Text>
+      <Text modifiers={['18x28', '700', 'jet', 'fontCalibri', 'uppercase']}>{label}</Text>
     </span>
   </div>
 );

@@ -34,7 +34,7 @@ const NewsList: React.FC<NewsListProps> = ({
         {!isFetching ? (
           <>
             <div className="u-mb-lg-40 u-mb-sm-30 u-mb-20">
-              <Heading modifiers={['32x48', '500', 'uppercase', 'jet', 'center', 'fontNoto']}>
+              <Heading modifiers={['32x48', '700', 'uppercase', 'jet', 'center', 'fontCalibri']}>
                 {title}
               </Heading>
             </div>

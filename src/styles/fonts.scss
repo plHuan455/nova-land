@@ -328,3 +328,39 @@
   font-weight: 900;
   src: url('#{$font-path}Lato-Black.woff2') format('woff2'), url('#{$font-path}Lato-Black.woff') format('woff');
 }
+
+@font-face {
+  font-display: swap;
+  font-family: 'Calibri';
+  font-style: italic;
+  font-weight: bold;
+  src: url('#{$font-path}Calibri-Bold-Italic.woff2') format('woff2'), url('#{$font-path}Calibri-Bold-Italic.woff') format('woff'),
+    url('#{$font-path}Calibri-Bold-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Calibri';
+  font-style: normal;
+  font-weight: bold;
+  src: url('#{$font-path}Calibri-Bold.woff2') format('woff2'), url('#{$font-path}Calibri-Bold.woff') format('woff'),
+    url('#{$font-path}Calibri-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Calibri';
+  font-style: italic;
+  font-weight: normal;
+  src: url('#{$font-path}Calibri-Italic.woff2') format('woff2'), url('#{$font-path}Calibri-Italic.woff') format('woff'),
+    url('#{$font-path}Calibri-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Calibri';
+  font-style: normal;
+  font-weight: normal;
+  src: url('#{$font-path}Calibri-Regular.woff2') format('woff2'), url('#{$font-path}Calibri-Regular.woff') format('woff'),
+    url('#{$font-path}Calibri-Regular.ttf') format('truetype');
+}

@@ -63,7 +63,7 @@ const NewsDetail: React.FC<NewsDetailProps> = ({
     <Container>
       <div className="t-newsdetail">
         <div className="t-newsdetail_leftSide">
-          <Heading modifiers={['52x65', '600', 'jet', 'fontNoto']} type="h1">
+          <Heading modifiers={['52x65', '700', 'jet', 'fontCalibri']} type="h1">
             {newsDetail.title.toLocaleLowerCase()}
           </Heading>
           <div className="t-newsdetail_statistical">

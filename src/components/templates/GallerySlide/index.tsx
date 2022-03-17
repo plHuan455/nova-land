@@ -80,7 +80,7 @@ const GallerySlide: React.FC<GallerySlideProps> = ({
         <div className="t-gallerySlide_wrapper">
           <div className="t-gallerySlide_left u-pr-lg-50 u-pr-md-30 u-pr-0">
             <Animate type="fadeInLeft">
-              <Heading modifiers={['40x56', '500', 'jet', 'uppercase', 'fontNoto']}>
+              <Heading modifiers={['40x56', '700', 'jet', 'uppercase', 'fontCalibri']}>
                 {title}
               </Heading>
               <div className="t-gallerySlide_left_desc u-mt-xl-20 u-mt-10">
