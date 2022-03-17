@@ -152,7 +152,7 @@ const Header: React.FC<HeaderProps> = ({
                     headerMenu && headerMenu.map((val, idx) => {
                       const link = `${val.reference && val.reference.slug !== '/' ? `/${val.reference.slug}` : (val.reference?.slug || val.link)}`;
                       return (
-                        <li className={`o-header_nav_item ${val?.subMenu?.length ? 'o-header_hasChild' : ''} `} key={idx.toString()}>
+                        <li className={`o-header_nav_item${val?.subMenu?.length ? ' o-header_hasChild' : ''}`} key={idx.toString()}>
                           <Link
                             href={link}
                             customClassName="o-header_nav_link"
@@ -174,7 +174,7 @@ const Header: React.FC<HeaderProps> = ({
                                     key={`${itemSubmenu.title}${index.toString()}`}
                                   >
                                     <Link
-                                      href={`/${itemSubmenu.reference && itemSubmenu.reference.slug}` || '/'}
+                                      href={`${itemSubmenu.reference && itemSubmenu.reference.slug}` || '/'}
                                       handleClick={() => {
                                         setIsOpenMenu(false);
                                       }}

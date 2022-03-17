@@ -105,7 +105,7 @@
     @include adjust-flex(unset, center);
 
     @include tablet-down {
-      background-color: $dim-gray;
+      background-color: $light-french-beige;
       display: block;
       height: 100vh;
       overflow-y: auto;
@@ -210,22 +210,22 @@
       }
     }
   }
-  &_hasChild {
-    #{$root}_nav_link {
-      &:hover {
-        font-weight: 300;
-        &:after {
-          width: 0%;
-        }
-      }
-      &.active {
-        font-weight: 600;
-        &:after {
-          width: 100%;
-        }
-      }
-    }
-  }
+  // &_hasChild {
+  //   #{$root}_nav_link {
+  //     &:hover {
+  //       font-weight: 300;
+  //       &:after {
+  //         width: 0%;
+  //       }
+  //     }
+  //     &.active {
+  //       font-weight: 600;
+  //       &:after {
+  //         width: 100%;
+  //       }
+  //     }
+  //   }
+  // }
 
   &_dropdown {
     @include tablet-up {
