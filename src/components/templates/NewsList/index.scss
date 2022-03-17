@@ -8,15 +8,37 @@
     @include tablet-down {
       margin: rem(-10) 0;
     }
-  }
 
-  &_item {
-    flex: 0 0 50%;
-    padding: rem(15);
+    &_content {
+      flex: 0 0 50%;
 
-    @include tablet-down {
-      flex: 0 0 100%;
-      padding: rem(10) 0;
+      @include tablet-down {
+        flex: 0 0 100%;
+      }
+  
+      @include small-mobile {
+        padding: rem(14) 0;
+      }
+    }
+
+    &_titleMobile {
+      display: none;
+
+      @include small-mobile {
+        display: block;
+        @include text-overflow(4);
+        width: 100%;
+      }
+    }
+
+    &_item {
+      flex: 0 0 50%;
+      padding: rem(15);
+  
+      @include tablet-down {
+        flex: 0 0 100%;
+        padding: rem(10) 0;
+      }
     }
   }
 

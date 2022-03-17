@@ -43,10 +43,20 @@ const NewsList: React.FC<NewsListProps> = ({
                   <>
                     <div className="t-newsList_wrapper">
                       {dataNewsList.map((item, index) => (
-                        <div className="t-newsList_item" key={`newsList-${index.toString()}`}>
-                          <HomeNewsCard
-                            {...item}
-                          />
+                        <div className="t-newsList_wrapper_content">
+                          <div className="t-newsList_wrapper_titleMobile">
+                            <Link href={item.href}>
+                              <Text
+                                modifiers={['16x24', '600', 'arsenic', 'capitalize']}
+                                content={item.title.toLocaleLowerCase()}
+                              />
+                            </Link>
+                          </div>
+                          <div className="t-newsList_wrapper_item" key={`newsList-${index.toString()}`}>
+                            <HomeNewsCard
+                              {...item}
+                            />
+                          </div>
                         </div>
                       ))}
                     </div>
