@@ -50,7 +50,7 @@ const WorkEnvironment: React.FC<WorkEnvironmentProps> = ({
 }) => (
   <div className="t-workEnvironment">
     <div className="t-workEnvironment_title">
-      <Heading modifiers={['600', '30x42', 'center', 'jet', 'fontNoto', 'uppercase']}>{title}</Heading>
+      <Heading modifiers={['700', '30x42', 'center', 'jet', 'fontCalibri', 'uppercase']}>{title}</Heading>
     </div>
     <div className="t-workEnvironment_carousel">
       <Carousel settings={setting}>

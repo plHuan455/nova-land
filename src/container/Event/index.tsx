@@ -97,7 +97,7 @@ const EventContainer: React.FC<BasePageData<[]>> = ({
           imageTabletSrc={convertedBanner[0].srcTablet}
           imageMobileSrc={convertedBanner[0].srcMobile}
         >
-          <Heading modifiers={['52x65', 'white', 'center', 'fontNoto', '400']}>{banners[0].data.title}</Heading>
+          <Heading modifiers={['52x65', 'white', 'center', 'fontCalibri', '700']}>{banners[0].data.title}</Heading>
         </BannerRecruitment>
       </div>
       <div className="p-event_breadcrumb u-mt-md-24 u-mb-md-24 u-mt-14 u-mb-16">

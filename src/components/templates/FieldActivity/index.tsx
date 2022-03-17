@@ -15,7 +15,7 @@ const FieldActivity: React.FC<FieldActivityProps> = ({ title, imgSrc }) => (
     <div className="t-fieldActivity">
       <Container>
         <Heading
-          modifiers={['32x48', '500', 'fontNoto', 'jet', 'uppercase', 'center']}
+          modifiers={['32x48', '700', 'fontCalibri', 'jet', 'uppercase', 'center']}
           content={title}
         />
         <div className="t-fieldActivity_thumbnail u-mt-16 u-mt-sm-24 u-mt-lg-32">

@@ -34,7 +34,7 @@ const OutStandingNumbers: React.FC<OutStandingNumbersProps> = ({
     <Section>
       <Container>
         <div className="t-outStandingNumbers_heading">
-          <Heading modifiers={['center', '500', '30x42', 'fontNoto', 'jet']}>
+          <Heading modifiers={['center', '700', '30x42', 'fontCalibri', 'jet']}>
             {title}
           </Heading>
         </div>

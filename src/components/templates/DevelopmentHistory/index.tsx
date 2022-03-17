@@ -68,7 +68,7 @@ const DevelopmentHistory: React.FC<DevelopmentHistoryProps> = ({
     <div className="t-developmentHistory">
       <Section>
         <Container>
-          <Heading type="h2" modifiers={['32x48', '500', 'white', 'center', 'fontNoto']} content={title} />
+          <Heading type="h2" modifiers={['32x48', '700', 'white', 'center', 'fontCalibri']} content={title} />
           <div className="t-developmentHistory_description">
             <Text type="div" modifiers={['center', 'white', '16x24', '300']} content={description} />
           </div>

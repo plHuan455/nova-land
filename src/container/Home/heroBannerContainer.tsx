@@ -18,7 +18,7 @@ const HeroBannerContainer: React.FC<BannerProps> = ({
         {banners && banners.map((item, idx) => (
           <Fragment key={idx.toString()}>
             <div className="p-home_heroBanner_info_title">
-              <Heading modifiers={['center', '400', '64x83', 'fontNoto', 'white']}>
+              <Heading modifiers={['center', '700', '64x83', 'fontCalibri', 'white']}>
                 {item.data.title}
               </Heading>
             </div>

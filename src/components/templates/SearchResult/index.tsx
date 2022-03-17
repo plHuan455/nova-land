@@ -57,7 +57,7 @@ const SearchResult: React.FC<SearchResultProps> = ({
       <Container>
         <div className="t-searchResult_heading">
           <Heading
-            modifiers={['jet', '600', '52x65', 'center', 'fontNoto']}
+            modifiers={['jet', '700', '52x65', 'center', 'fontCalibri']}
             content={title}
           />
         </div>

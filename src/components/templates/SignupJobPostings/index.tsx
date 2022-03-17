@@ -23,7 +23,7 @@ const SignupJobPostings: React.FC<SignupJobPostingsProps> = ({
     <Section>
       <Container>
         <div className="t-signupJobPostings_heading">
-          <Heading modifiers={['600', 'center', '30x42', 'fontNoto', 'jet', 'uppercase']} content={heading} />
+          <Heading modifiers={['700', 'center', '30x42', 'fontCalibri', 'jet', 'uppercase']} content={heading} />
         </div>
         <div className="t-signupJobPostings_desc">
           <Text modifiers={['400', 'fontLexend', '18x28', 'center', 'dimGray']} content={desc} />

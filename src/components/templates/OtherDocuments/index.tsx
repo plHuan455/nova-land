@@ -30,7 +30,7 @@ const OtherDocuments: React.FC<OtherDocumentsProps> = ({
 }) => (
   <div className="t-otherDocuments">
     <div className="t-otherDocuments_heading">
-      <Heading modifiers={['600', '30x42', 'jet', 'center', 'uppercase', 'fontNoto']} content={heading} />
+      <Heading modifiers={['700', '30x42', 'jet', 'center', 'uppercase', 'fontCalibri']} content={heading} />
     </div>
     <Container>
       <div className="t-otherDocuments_content">

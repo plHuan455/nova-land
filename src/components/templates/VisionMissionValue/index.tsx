@@ -23,7 +23,7 @@ export interface ContentBlockProps {
 const ContentBlock: React.FC<ContentBlockProps> = ({ title, desc, dataList }) => (
   <div className="t-VMV_content">
     <div className="t-VMV_title">
-      <Heading modifiers={['32x48', '500', 'fontNoto', 'white', 'uppercase', 'center']}>{title}</Heading>
+      <Heading modifiers={['32x48', '700', 'fontCalibri', 'white', 'uppercase', 'center']}>{title}</Heading>
     </div>
     <div className="t-VMV_desc u-mt-16 u-mt-md-24 u-mt-lg-32 u-mb-16 u-mb-md-24">
       <Text modifiers={['300', 'fontLexend', 'white', 'center', '14x20']}>{desc}</Text>

@@ -74,11 +74,11 @@ const ProductLines: React.FC<ProductLinesProps> = ({
           <Heading
             modifiers={[
               '30x42',
-              '500',
+              '700',
               'jet',
               'uppercase',
               'center',
-              'fontNoto',
+              'fontCalibri',
             ]}
           >
             {title}

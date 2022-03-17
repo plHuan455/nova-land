@@ -97,6 +97,6 @@ type ColorStyle =
   | 'columbiaBlue'
   | 'spanishGray';
 
-type FontFamily = 'fontLexend' | 'fontNoto' | 'fontLato';
+type FontFamily = 'fontLexend' | 'fontNoto' | 'fontLato' | 'fontCalibri';
 
 type GeneralTextStyle = ColorStyle | FontWeightStyle | TextStyle | FontFamily;

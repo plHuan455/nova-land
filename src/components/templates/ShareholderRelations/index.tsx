@@ -118,11 +118,11 @@ const ShareholderRelations: React.FC<ShareholderRelationsProps> = ({
           <Heading
             modifiers={[
               '32x48',
-              '500',
+              '700',
               'arsenic',
               'uppercase',
               'center',
-              'fontNoto',
+              'fontCalibri',
             ]}
             content={title}
           />

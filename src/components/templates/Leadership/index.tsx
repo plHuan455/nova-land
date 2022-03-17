@@ -171,7 +171,7 @@ const Leadership: React.FC<LeadershipProps> = ({
       <Section>
         <Container>
           <Heading
-            modifiers={['32x48', '500', 'uppercase', 'center', 'fontNoto', 'jet']}
+            modifiers={['32x48', '700', 'uppercase', 'center', 'fontCalibri', 'jet']}
             content={title}
           />
           <div className="t-leadership_wrapper">

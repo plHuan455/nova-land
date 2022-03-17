@@ -41,7 +41,7 @@ const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
   return (
     <div className="t-featuredProjects">
       <Container>
-        <Heading modifiers={['32x48', 'jet', '500', 'fontNoto', 'center', 'uppercase']}>
+        <Heading modifiers={['32x48', 'jet', '700', 'fontCalibri', 'center', 'uppercase']}>
           {title}
         </Heading>
         {loading ? <Loading isShow /> : featuredProjectList.length > 0 && (
