@@ -11,6 +11,7 @@ const CorporateGovernance = React.lazy(() => import('pages/CorporateGovernance')
 const InvestmentRelationsOtherDocument = React.lazy(() => import('pages/InvestmentRelationsOtherDocument'));
 const Event = React.lazy(() => import('pages/Event'));
 const ReportList = React.lazy(() => import('pages/ReportList'));
+const TermsPolicy = React.lazy(() => import('pages/TermsPolicy'));
 
 export type TemplateCodeType = {
   code: string;
@@ -62,4 +63,12 @@ export const TemplateCodes: TemplateCodeType[] = [
     code: 'ANNUAL_REPORT',
     component: ReportList,
   },
+<<<<<<< Updated upstream
+=======
+  {
+    code: 'RULES_PRIVACY',
+    component: TermsPolicy,
+  },
+
+>>>>>>> Stashed changes
 ];
