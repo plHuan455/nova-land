@@ -26,4 +26,5 @@ export type MenuDataTypes = {
 
 export type MenuItemDataTypes = {
   subMenu?: MenuItemDataTypes[];
+  isActivated?: boolean;
 } & MenuItemTypes;
