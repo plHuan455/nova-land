@@ -18,7 +18,9 @@ const TermsPolicy: React.FC<TermsPolicyProps> = ({ title, description }) => (
             {title}
           </Heading>
         </div>
-        <Text modifiers={['18x22', 'fontLexend', 'arsenic', 'justify']} content={description} />
+        <div className="t-termsPolicy_content_ckeditor">
+          <Text modifiers={['18x22', 'fontLexend', 'arsenic', 'justify']} content={description} />
+        </div>
       </div>
 
     </Container>
