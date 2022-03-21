@@ -79,18 +79,18 @@ export const LeadershipDetail: React.FC<LeadershipDetailProps> = ({
     <div className="t-leadershipDetail_wrapper">
       <div className="t-leadershipDetail_info">
         <Heading
-          modifiers={['darkMidnightBlue', '300', 'capitalize']}
+          modifiers={['darkMidnightBlue', '300', 'capitalize', 'fontCalibri']}
           content={gender}
         />
         <div className="t-leadershipDetail_name">
           <Heading
-            modifiers={['38x52', '500', 'jet', 'capitalize', 'fontNoto']}
+            modifiers={['38x52', '500', 'jet', 'capitalize', 'fontCalibri']}
             content={name}
           />
         </div>
         <div className="t-leadershipDetail_divider" />
         <Text
-          modifiers={['dimGray', '300', '20x28']}
+          modifiers={['dimGray', '300', '20x28', 'fontCalibri']}
           content={position}
         />
       </div>
