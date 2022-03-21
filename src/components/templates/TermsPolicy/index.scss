@@ -10,19 +10,33 @@
   }
 
   &_content_ckeditor {
-    ol, ul, li {
+    ol,
+    ul,
+    li {
       padding-left: rem(12);
     }
 
-    img, video {
+    img,
+    video {
       max-width: 100%;
     }
   }
 
   &-isPageSustainableDevelopment {
     #{$root} {
-      &_content {
-        border-top: 3px solid $tan;
+      &_heading {
+        width: fit-content;
+        margin: 0 auto;
+        position: relative;
+        &:before {
+          content: '';
+          position: absolute;
+          top: rem(-8);
+          width: 50%;
+          height: 3px;
+          background: $tan;
+          transform: translateX(50%);
+        }
       }
     }
   }
