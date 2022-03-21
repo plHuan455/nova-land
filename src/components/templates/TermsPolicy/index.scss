@@ -6,4 +6,14 @@
       padding-bottom: rem(24);
     }
   }
+
+  &_content_ckeditor {
+    ol, ul, li {
+      padding-left: rem(12);
+    }
+
+    img, video {
+      max-width: 100%;
+    }
+  }
 }
