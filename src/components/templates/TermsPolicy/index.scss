@@ -1,4 +1,6 @@
 .t-termsPolicy {
+  $root: &;
+
   &_heading {
     padding-bottom: rem(40);
 
@@ -14,6 +16,14 @@
 
     img, video {
       max-width: 100%;
+    }
+  }
+
+  &-isPageSustainableDevelopment {
+    #{$root} {
+      &_content {
+        border-top: 3px solid $tan;
+      }
     }
   }
 }
