@@ -10,7 +10,7 @@ export interface TermsPolicyProps {
 }
 
 const TermsPolicy: React.FC<TermsPolicyProps> = ({ title, description }) => (
-  <div className="t-termsPolicy">
+  <div className="t-termsPolicy pt-80 pb-80">
     <Container>
       <div className="t-termsPolicy_content">
         <div className="t-termsPolicy_heading">

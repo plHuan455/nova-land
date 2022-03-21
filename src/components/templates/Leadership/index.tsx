@@ -37,7 +37,7 @@ export const LeadershipCard: React.FC<LeadershipCardProps> = ({
         </div>
         <div className="t-leadershipCard_name">
           <Text
-            modifiers={['jet', '500', 'fontNoto', '18x28']}
+            modifiers={['jet', '500', 'fontCalibri', '18x28']}
             content={name}
           />
           {/* <div className="t-leadershipCard_icon">

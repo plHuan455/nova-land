@@ -24,7 +24,9 @@ const TermsPolicyContainer: React.FC<BasePageData<TermsPolicyBlock>> = ({
   return (
     <>
       <HelmetContainer seoData={seoData} ogData={openGraphData} />
-      <TermsPolicy description={contentBlock.description} title={contentBlock.title} />
+      <section className="pt-header">
+        <TermsPolicy description={contentBlock.description} title={contentBlock.title} />
+      </section>
     </>
   );
 };
