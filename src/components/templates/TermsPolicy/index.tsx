@@ -16,7 +16,7 @@ const TermsPolicy: React.FC<TermsPolicyProps> = ({
   description,
   isPageSustainableDevelopment,
 }) => (
-  <div className={mapModifiers('t-termsPolicy pt-80 pb-80', isPageSustainableDevelopment && 'isPageSustainableDevelopment')}>
+  <div className={`${mapModifiers('t-termsPolicy', isPageSustainableDevelopment && 'isPageSustainableDevelopment')} pt-80 pb-80`}>
     <Container>
       <div className="t-termsPolicy_content">
         <div className="t-termsPolicy_heading">

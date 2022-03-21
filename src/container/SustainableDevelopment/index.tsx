@@ -25,7 +25,7 @@ const SustainableDevelopmentContainer: React.FC<BasePageData<SustainableDevelopm
   return (
     <>
       <HelmetContainer seoData={seoData} ogData={openGraphData} />
-      <section className="pt-sustainableDevelopmentMenu">
+      <section className="pt-sustainableDevelopmentMenu pt-header">
         <TermsPolicy
           description={contentBlock.description}
           title={contentBlock.title}
