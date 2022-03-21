@@ -30071,6 +30071,42 @@ exports[`Storyshots Components/templates/TableCategory Normal 1`] = `
 </div>
 `;
 
+exports[`Storyshots Components/templates/TermsPolicy Normal 1`] = `
+<div
+  className="t-termsPolicy pt-80 pb-80"
+>
+  <div
+    className="container o-container"
+  >
+    <div
+      className="t-termsPolicy_content"
+    >
+      <div
+        className="t-termsPolicy_heading"
+      >
+        <h2
+          className="a-heading a-heading-52x65 a-heading-600 a-heading-capitalize a-heading-jet a-heading-center a-heading-fontCalibri"
+        >
+          Điều khoản khách hàng
+        </h2>
+      </div>
+      <div
+        className="t-termsPolicy_content_ckeditor"
+      >
+        <p
+          className="a-text a-text-18x22 a-text-fontLexend a-text-arsenic a-text-justify"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Content",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Components/templates/TransactionList Normal 1`] = `
 <div
   style={

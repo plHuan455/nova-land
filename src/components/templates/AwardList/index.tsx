@@ -30,7 +30,7 @@ const AwardCard: React.FC<AwardCardProps> = ({
     </div>
     <div className="t-awardList_card_year">
       <div className="t-awardList_card_year-clip">
-        <Heading modifiers={['24x34', 'white', '400', 'center', 'fontNoto']}>
+        <Heading modifiers={['24x34', 'white', '400', 'center', 'fontCalibri']}>
           {awardYear}
         </Heading>
       </div>

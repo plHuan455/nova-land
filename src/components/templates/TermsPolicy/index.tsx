@@ -14,7 +14,7 @@ const TermsPolicy: React.FC<TermsPolicyProps> = ({ title, description }) => (
     <Container>
       <div className="t-termsPolicy_content">
         <div className="t-termsPolicy_heading">
-          <Heading modifiers={['52x65', '600', 'capitalize', 'jet', 'center', 'fontNoto']}>
+          <Heading modifiers={['52x65', '600', 'capitalize', 'jet', 'center', 'fontCalibri']}>
             {title}
           </Heading>
         </div>
