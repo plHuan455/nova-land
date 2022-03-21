@@ -34,7 +34,7 @@ const CompanyProfile: React.FC<CompanyProfileProps> = ({
         <Image src={iconSrc} alt={subDescription} ratio="1x1" />
       </div>
       <div className="t-companyProfile_subDesc-desc">
-        <Text modifiers={['400', 'jet', 'fontNoto', '14x20']} content={subDescription} />
+        <Text modifiers={['400', 'jet', 'fontCalibri', '14x20']} content={subDescription} />
       </div>
     </div>
   </div>
