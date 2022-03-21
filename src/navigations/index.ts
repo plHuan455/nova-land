@@ -12,6 +12,7 @@ const InvestmentRelationsOtherDocument = React.lazy(() => import('pages/Investme
 const Event = React.lazy(() => import('pages/Event'));
 const ReportList = React.lazy(() => import('pages/ReportList'));
 const TermsPolicy = React.lazy(() => import('pages/TermsPolicy'));
+const SustainableDevelopment = React.lazy(() => import('pages/SustainableDevelopment'));
 
 export type TemplateCodeType = {
   code: string;
@@ -67,5 +68,8 @@ export const TemplateCodes: TemplateCodeType[] = [
     code: 'RULES_PRIVACY',
     component: TermsPolicy,
   },
-
+  {
+    code: 'LASTING_DEVELOPMENT',
+    component: SustainableDevelopment,
+  },
 ];
