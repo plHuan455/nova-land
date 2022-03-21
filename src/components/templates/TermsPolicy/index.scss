@@ -1,0 +1,9 @@
+.t-termsPolicy {
+  &_heading {
+    padding-bottom: rem(40);
+
+    @include mobile-down {
+      padding-bottom: rem(24);
+    }
+  }
+}
