@@ -162,7 +162,7 @@ const Header: React.FC<HeaderProps> = ({
                           >
                             {val.title}
                           </Link>
-                          {val?.subMenu?.length && (
+                          {/* {val?.subMenu?.length && (
                           <div className="o-header_dropdown">
                             <div className="o-header_dropdown_wrapper">
                               <ul className="o-header_dropdown_content">
@@ -174,7 +174,8 @@ const Header: React.FC<HeaderProps> = ({
                                     key={`${itemSubmenu.title}${index.toString()}`}
                                   >
                                     <Link
-                                      href={`${itemSubmenu.reference && itemSubmenu.reference.slug}` || '/'}
+                                      href={`${itemSubmenu.reference
+                                        && itemSubmenu.reference.slug}` || '/'}
                                       handleClick={() => {
                                         setIsOpenMenu(false);
                                       }}
@@ -187,7 +188,7 @@ const Header: React.FC<HeaderProps> = ({
                               </ul>
                             </div>
                           </div>
-                          )}
+                          )} */}
                         </li>
                       );
                     })
