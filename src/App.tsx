@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import 'App.scss';
 import React, {
   Suspense, useEffect, useState,
@@ -13,7 +11,7 @@ import {
 
 import Loading from 'components/atoms/Loading';
 import useInitializeRender from 'hooks/useInitializeRender';
-import Error from 'pages/Error';
+import RedirectNavigate from 'navigations/redirectNavigate';
 import Recruitment from 'pages/Recruitment';
 import RecruitmentDetail from 'pages/RecruitmentDetail';
 import RecruitmentList from 'pages/RecruitmentList';
@@ -35,8 +33,8 @@ const staticRoutes = [
     element: <RecruitmentDetail />,
   },
   {
-    path: '404',
-    element: <Error />,
+    path: '*',
+    element: <RedirectNavigate />,
   },
 ];
 
