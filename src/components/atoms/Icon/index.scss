@@ -44,6 +44,11 @@
     width: rem(71);
   }
 
+  &-15x19 {
+    height: rem(15);
+    width: rem(19);
+  }
+
   &-search {
     background-image: url('~assets/icons/ic_search.svg');
   }
@@ -227,5 +232,9 @@
   
   &-marker {
     background-image: url('~assets/icons/ic_marker.svg');
+  }
+
+  &-novaMark {
+    background-image: url('~assets/icons/ic_nova_mark.svg');
   }
 }
