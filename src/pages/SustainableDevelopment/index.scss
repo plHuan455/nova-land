@@ -1,0 +1,23 @@
+.p-sustainableDevelopmentMenu {
+  @include tablet-down {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &_menu {
+    @include tablet-down {
+      order: 2;
+      padding-bottom: rem(60);
+    }
+
+    @include mobile-down {
+      padding-bottom: rem(40);
+    }
+  }
+
+  &_content {
+    @include tablet-down {
+      order: 1;
+    }
+  }
+}

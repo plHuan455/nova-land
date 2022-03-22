@@ -1,9 +1,9 @@
 import React, { useMemo } from 'react';
 
-import { headerSustainableDevelopmentMenuDummy } from 'assets/dataDummy/header';
 import SustainableDevelopmentMenu from 'components/organisms/SustainableDevelopmentMenu';
 import TermsPolicy from 'components/templates/TermsPolicy';
 import HelmetContainer from 'container/helmet';
+import { useAppSelector } from 'store/hooks';
 import { getBlockData } from 'utils/functions';
 
 type Content = {
@@ -19,6 +19,7 @@ const SustainableDevelopmentContainer: React.FC<BasePageData<SustainableDevelopm
   openGraphData,
   blocks,
 }) => {
+  const groupedDevelopment = useAppSelector((state) => state.menus.groupedDevelopment);
   const contentBlock = useMemo(
     () => getBlockData('content', blocks) as Content,
     [blocks],
@@ -27,13 +28,17 @@ const SustainableDevelopmentContainer: React.FC<BasePageData<SustainableDevelopm
   return (
     <>
       <HelmetContainer seoData={seoData} ogData={openGraphData} />
-      <section className="pt-sustainableDevelopmentMenu pt-header">
-        <SustainableDevelopmentMenu headerDataMenus={headerSustainableDevelopmentMenuDummy} />
-        <TermsPolicy
-          description={contentBlock.description}
-          title={contentBlock.title}
-          isPageSustainableDevelopment
-        />
+      <section className="p-sustainableDevelopmentMenu pt-header">
+        <div className="p-sustainableDevelopmentMenu_menu">
+          <SustainableDevelopmentMenu headerDataMenus={groupedDevelopment} />
+        </div>
+        <div className="p-sustainableDevelopmentMenu_content">
+          <TermsPolicy
+            description={contentBlock.description}
+            title={contentBlock.title}
+            isPageSustainableDevelopment
+          />
+        </div>
       </section>
     </>
   );
