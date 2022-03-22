@@ -20,12 +20,12 @@ const TermsPolicy: React.FC<TermsPolicyProps> = ({
     <Container>
       <div className="t-termsPolicy_content">
         <div className="t-termsPolicy_heading">
-          <Heading modifiers={['52x65', '600', 'capitalize', 'jet', 'center', 'fontCalibri']}>
+          <Heading modifiers={[isPageSustainableDevelopment ? '30x42' : '52x65', '600', 'capitalize', 'jet', 'center', 'fontCalibri']}>
             {title}
           </Heading>
         </div>
         <div className="t-termsPolicy_content_ckeditor">
-          <Text modifiers={['18x22', 'fontLexend', 'arsenic', 'justify']} content={description} />
+          <Text modifiers={['20x28', 'fontLexend', 'dimGray', 'justify']} content={description} />
         </div>
       </div>
 
