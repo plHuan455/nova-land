@@ -1,5 +1,7 @@
 import React, { useMemo } from 'react';
 
+import { headerSustainableDevelopmentMenuDummy } from 'assets/dataDummy/header';
+import SustainableDevelopmentMenu from 'components/organisms/SustainableDevelopmentMenu';
 import TermsPolicy from 'components/templates/TermsPolicy';
 import HelmetContainer from 'container/helmet';
 import { getBlockData } from 'utils/functions';
@@ -26,6 +28,7 @@ const SustainableDevelopmentContainer: React.FC<BasePageData<SustainableDevelopm
     <>
       <HelmetContainer seoData={seoData} ogData={openGraphData} />
       <section className="pt-sustainableDevelopmentMenu pt-header">
+        <SustainableDevelopmentMenu headerDataMenus={headerSustainableDevelopmentMenuDummy} />
         <TermsPolicy
           description={contentBlock.description}
           title={contentBlock.title}

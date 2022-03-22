@@ -1,7 +1,10 @@
 import { Story, Meta } from '@storybook/react';
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
 import SustainableDevelopmentMenu from '.';
+
+import { headerSustainableDevelopmentMenuDummy } from 'assets/dataDummy/header';
 
 export default {
   title: 'Components/organisms/SustainableDevelopmentMenu',
@@ -10,5 +13,12 @@ export default {
 } as Meta;
 
 export const normal: Story = () => (
-  <SustainableDevelopmentMenu />
+  <BrowserRouter>
+    <div style={{ height: '100vh' }}>
+      <SustainableDevelopmentMenu
+        headerDataMenus={headerSustainableDevelopmentMenuDummy}
+      />
+    </div>
+
+  </BrowserRouter>
 );

@@ -1,9 +1,11 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next';
+import React, { useRef, useState } from 'react';
 
+import Container from '../Container';
+
+import Icon from 'components/atoms/Icon';
 import Link from 'components/atoms/Link';
 import { MenuItemDataTypes } from 'services/menus/types';
-import { returnRouteMenu } from 'utils/menus';
+import mapModifiers, { checkExternalUrl } from 'utils/functions';
 
 interface SustainableDevelopmentMenuProps {
   headerDataMenus?: MenuItemDataTypes[];
@@ -12,58 +14,89 @@ interface SustainableDevelopmentMenuProps {
 const SustainableDevelopmentMenu: React.FC<SustainableDevelopmentMenuProps> = ({
   headerDataMenus = [],
 }) => {
-  const { i18n } = useTranslation();
+  // STATE
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
+
+  // HOOK
+  const menuRef = useRef<HTMLUListElement>(null);
   return (
-    <div className="o-sustainableDevelopmentMenu">
-      <div className="o-sustainableDevelopmentMenu_mainMenu">
-        <ul
-          className="o-sustainableDevelopmentMenu_mainMenu_nav"
-        >
-          {
-            headerDataMenus.map((item, idx) => (
-              <li
-                key={`mainMenu-${idx.toString()}`}
-                className={`o-sustainableDevelopmentMenu_mainMenu_navItem ${item.subMenu?.length ? 'o-sustainableDevelopmentMenu_hasChild' : ''}`}
-              >
-                <div className="o-sustainableDevelopmentMenu_mainMenu_wrapLink">
-                  {
-                    item.isActivated ? (
-                      <Link
-                        href={returnRouteMenu(item, i18n.language)}
-                        customClassName="o-sustainableDevelopmentMenu_mainMenu_navLink"
-                      >
-                        {item.title}
-                      </Link>
-                    ) : (
-                      <span>{item.title}</span>
-                    )
-                  }
-                </div>
-                {item.subMenu?.length && (
-                <div className="o-sustainableDevelopmentMenu_dropdown">
-                  <div className="o-sustainableDevelopmentMenu_dropdown_wrapper">
-                    <ul className="o-sustainableDevelopmentMenu_dropdown_content">
-                      {item.subMenu.map((itemSubmenu, index) => (
-                        <li
-                          className="o-sustainableDevelopmentMenu_dropdown_item"
-                          key={`${itemSubmenu.title}${index.toString()}`}
-                        >
-                          <Link
-                            href={`/${itemSubmenu.reference && itemSubmenu.reference.slug}` || '/'}
-                          >
-                            {itemSubmenu.title}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-                )}
-              </li>
-            ))
-          }
-        </ul>
-      </div>
+    <div className="o-sdMenu">
+      <Container>
+        <div className="o-sdMenu_menu">
+          <ul
+            ref={menuRef}
+            className={mapModifiers(
+              'o-sdMenu_nav',
+              isOpenMenu && 'active',
+            )}
+          >
+            {headerDataMenus
+              && headerDataMenus.map((val, idx) => {
+                const link = `${
+                  val.reference && val.reference.slug !== '/'
+                    ? `/${val.reference.slug}`
+                    : val.reference?.slug || val.link
+                }`;
+                return (
+                  <li
+                    className={`o-sdMenu_nav_item${
+                      val?.subMenu?.length
+                        ? ' o-sdMenu_hasChild'
+                        : ''
+                    }`}
+                    key={idx.toString()}
+                  >
+                    <Link
+                      href={link}
+                      customClassName="o-sdMenu_nav_link"
+                      handleClick={() => setIsOpenMenu(!isOpenMenu)}
+                      target={val.target}
+                      useExternal={
+                        val.reference?.slug ? false : checkExternalUrl(val.link)
+                      }
+                    >
+                      {val.title}
+                    </Link>
+                    {val?.subMenu?.length && (
+                      <div className="o-sdMenu_dropdown">
+                        <div className="o-sdMenu_dropdown_wrapper">
+                          <ul className="o-sdMenu_dropdown_content">
+                            {val.subMenu.map((itemSubmenu, index) => (
+                              <li
+                                className={mapModifiers(
+                                  'o-sdMenu_dropdown_item',
+                                )}
+                                key={`${itemSubmenu.title}${index.toString()}`}
+                              >
+                                <div className="o-sdMenu_dropdown_item_icon u-mr-8">
+                                  <Icon iconName="novaMark" size="15x19" />
+                                </div>
+                                <Link
+                                  href={
+                                    `${
+                                      itemSubmenu.reference
+                                      && itemSubmenu.reference.slug
+                                    }` || '/'
+                                  }
+                                  handleClick={() => {
+                                    setIsOpenMenu(false);
+                                  }}
+                                  customClassName="o-sdMenu_dropdown_nav_link"
+                                >
+                                  {itemSubmenu.title}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    )}
+                  </li>
+                );
+              })}
+          </ul>
+        </div>
+      </Container>
     </div>
   );
 };
