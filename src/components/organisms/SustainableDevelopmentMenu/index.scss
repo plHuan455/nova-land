@@ -49,8 +49,8 @@
     &_item {
       margin-bottom: 0;
       position: relative;
-      padding-left: rem(20);
-      padding-right: rem(20);
+      padding-left: rem(10);
+      padding-right: rem(10);
 
       &:hover {
         #{$root}_dropdown {
@@ -60,8 +60,8 @@
       }
 
       @include desktop-down {
-        padding-left: rem(10);
-        padding-right: rem(10);
+        padding-left: rem(5);
+        padding-right: rem(5);
       }
 
       @include tablet-down {
