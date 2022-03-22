@@ -14,8 +14,11 @@ export default {
 
 export const normal: Story = () => (
   <BrowserRouter>
-    <SustainableDevelopmentMenu
-      headerDataMenus={headerSustainableDevelopmentMenuDummy}
-    />
+    <div style={{ height: '100vh' }}>
+      <SustainableDevelopmentMenu
+        headerDataMenus={headerSustainableDevelopmentMenuDummy}
+      />
+    </div>
+
   </BrowserRouter>
 );

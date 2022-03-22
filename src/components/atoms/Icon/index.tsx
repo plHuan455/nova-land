@@ -49,11 +49,12 @@ export const iconList = {
   orangeTimeSchedule: 'orangeTimeSchedule',
   orangeAddress: 'orangeAddress',
   marker: 'marker',
+  novaMark: 'novaMark',
 };
 
 export type IconName = keyof typeof iconList;
 
-export type IconSize = '14' | '24' |'40' | '10' | '16' | '20' | '18' | '71x25';
+export type IconSize = '14' | '24' |'40' | '10' | '16' | '20' | '18' | '71x25' | '15x19';
 
 interface IconProps {
   iconName: IconName;

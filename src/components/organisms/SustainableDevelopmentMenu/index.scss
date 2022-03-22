@@ -1,9 +1,18 @@
-.o-sustainableDevelopmentMenu {
+.o-sdMenu {
   $root: &;
+  background: url('~assets/images/bg_sustainableDevelopmentMenu.png') right/contain no-repeat, linear-gradient(180deg, $tan 0%, $light-taupe 214.94%);
+  box-shadow: 0px rem(4) rem(16) rgba($dark-liver-horses, 0.16);
+
+  @include tablet-down {
+    box-shadow: none;
+    background: none;
+  }
 
   &_menu {
-    background: linear-gradient(180deg, $tan 0%, $light-taupe 214.94%);
-    box-shadow: 0px rem(4) rem(16) rgba($dark-liver-horses, 0.16);
+    @include tablet-down {
+      box-shadow: 0px rem(4) rem(16) rgba($dark-liver-horses, 0.16);
+      background: $white;
+    }
 
     ul {
       margin: 0;
@@ -13,7 +22,25 @@
   &_nav {
     list-style: none;
     padding-left: 0;
-    @include adjust-flex(unset, center);
+    @include adjust-flex(space-between, center);
+    margin-left: rem(-20);
+    margin-right: rem(-20);
+
+    @include desktop-down {
+      margin-left: rem(-10);
+      margin-right: rem(-10);
+    }
+
+    @include tablet-down {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    @include tablet-down {
+      margin-left: 0;
+      margin-right: 0;
+    }
 
     &-active {
       right: 0;
@@ -22,6 +49,8 @@
     &_item {
       margin-bottom: 0;
       position: relative;
+      padding-left: rem(20);
+      padding-right: rem(20);
 
       &:hover {
         #{$root}_dropdown {
@@ -29,8 +58,15 @@
           max-height: rem(320);
         }
       }
-      &:not(:nth-child(0)) {
-        padding-left: rem(40);
+
+      @include desktop-down {
+        padding-left: rem(10);
+        padding-right: rem(10);
+      }
+
+      @include tablet-down {
+        padding: 0;
+        width: 100%;
       }
     }
 
@@ -44,34 +80,21 @@
       z-index: $z-2;
       transition: all 0.4s linear;
 
-      &::after {
-        content: "";
-        background-color: $dark-midnight-blue;
-        bottom: rem(4);
-        height: rem(2);
-        left: rem(9);
-        position: absolute;
-        transition: all 0.4s linear;
-        width: 0%;
-
-        @include tablet-down {
-          content: none;
-        }
-        @include desktop-down {
-          left: rem(4);
-          top: rem(23);
-        }
-      }
-
       @include font-base(14, 20);
       @include style-font-family();
 
       @include desktop-down {
-        padding: rem(4);
+        padding: rem(20) 0;
       }
 
       @include tablet-down {
-        color: $white;
+        color: $spanish-gray;
+        padding: rem(24) rem(16);
+        @include font-base(20, 22);
+      }
+
+      @include mobile-down {
+        @include font-base(14, 20);
       }
 
       &:hover,
@@ -95,18 +118,76 @@
     }
   }
 
-    &_hasChild {
+  &_hasChild {
     #{$root}_nav_link {
-      &:hover {
-        font-weight: 400;
-        &:after {
-          width: 0%;
+      &:after {
+        width: 0%;
+        background: url("~assets/icons/ic_arrow_down_white.svg") no-repeat;
+        content: "";
+        width: rem(16);
+        height: rem(16);
+        position: absolute;
+        right: rem(-20);
+        transform: rotate(0deg) translateY(-50%);
+        transition: all ease 0.3s;
+        top: 50%;
+
+        @include desktop-down {
+          right: rem(-10);
+        }
+
+        @include tablet-down {
+          background: url("~assets/icons/ic_arrow_down_gray.svg") no-repeat;
+          width: rem(24);
+          height: rem(24);
+          background-size: rem(24);
+          right: rem(20);
         }
       }
+
+      &:hover {
+        font-weight: 400;
+
+        @include tablet-down {
+          background-color: $camel;
+          color: $white;
+        }
+        &:after {
+          transform: rotate(-180deg) translateY(50%);
+
+          @include tablet-down {
+            background: url("~assets/icons/ic_arrow_down_white.svg") no-repeat;
+            width: rem(24);
+            height: rem(24);
+            background-size: rem(24);
+            right: rem(20);
+          }
+        }
+      }
+
       &.active {
         font-weight: 600;
         &:after {
           width: 100%;
+        }
+      }
+    }
+
+    &:hover {
+      #{$root}_nav_link {
+        @include tablet-down {
+          background-color: $camel;
+          color: $white;
+        }
+
+        &:after {
+          background: url("~assets/icons/ic_arrow_down_white.svg") no-repeat;
+          transform: rotate(-180deg) translateY(50%);
+          @include tablet-down {
+            width: rem(24);
+            height: rem(24);
+            background-size: rem(24);
+          }
         }
       }
     }
@@ -122,20 +203,16 @@
       max-height: 0;
       overflow: hidden;
       position: absolute;
-      top: rem(65);
       visibility: hidden;
       z-index: 3;
       @include transition(all $transition-long ease-in-out);
-    }
-    @include desktop-down {
-      top: rem(60);
     }
 
     @include tablet-down {
       max-height: 0;
       visibility: hidden;
       overflow: hidden;
-
+      background-color: $light-french-beige-7d;
       @include transition(all $transition-long ease-in-out);
 
       .o-container {
@@ -155,8 +232,9 @@
 
     &_item {
       font-weight: 400;
-      width: max-content;
+      min-width: rem(325);
       color: $jet;
+      display: flex;
       @include font-base(14, 20);
 
       @include tablet-up {
@@ -168,24 +246,36 @@
       }
 
       @include tablet-down {
-        padding-left: rem(20);
-        padding-top: rem(20);
+        padding: rem(24);
+        min-width: 0;
+        @include font-base(14, 20);
+
+        .a-icon {
+          display: none;
+        }
       }
 
       @include mobile-down {
-        @include font-base(16, 18);
+        padding: rem(16) rem(16) rem(16) rem(32);
+      }
+
+      &_icon {
+        @include tablet-down {
+          display: none;
+        }
       }
     }
 
     &_nav_link {
       transition: $transition-long ease;
-      color: $black;
+      color: $jet;
       opacity: 1;
       &:hover {
         opacity: 1;
         color: $dark-midnight-blue;
         font-weight: 600;
       }
+
       @include tablet-down {
         color: $white;
       }
