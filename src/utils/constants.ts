@@ -17,6 +17,7 @@ export const DEFAULT_QUERY_OPTION = {
 export const MENU_CODE = {
   MENU_HEADER: 'menu',
   MENU_FOOTER: 'main-footer',
+  MENU_DEVELOPMENT: 'menu-development',
 };
 
 export type ConstantRoutesCodes = keyof typeof CONSTANT_ROUTES;

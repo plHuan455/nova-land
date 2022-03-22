@@ -13,6 +13,8 @@ interface MenusState {
   footer: MenuItemDataTypes[];
   groupedFooter: MenuItemDataTypes[];
   staticPage?: StaticSlug[];
+  development: MenuItemDataTypes[];
+  groupedDevelopment: MenuItemDataTypes[];
 }
 
 const initialState: MenusState = {
@@ -21,6 +23,8 @@ const initialState: MenusState = {
   footer: [],
   groupedFooter: [],
   staticPage: undefined,
+  development: [],
+  groupedDevelopment: [],
 };
 
 export const getMenusAction = createAsyncThunk<
@@ -65,6 +69,13 @@ export const menusSlice = createSlice({
         ?.items || [];
       $state.groupedFooter = prefixGroupMenu(groupMenus(
         action.payload.find((item) => item.code === MENU_CODE.MENU_FOOTER)
+          ?.items,
+      ));
+      // Development
+      $state.development = action.payload.find((item) => item.code === MENU_CODE.MENU_DEVELOPMENT)
+        ?.items || [];
+      $state.groupedDevelopment = prefixGroupMenu(groupMenus(
+        action.payload.find((item) => item.code === MENU_CODE.MENU_DEVELOPMENT)
           ?.items,
       ));
     });
