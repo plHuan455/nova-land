@@ -91,6 +91,7 @@ const NewsContainer: React.FC<NewsBlock> = ({
           newsList={newsData}
           handleActive={setIndexActive}
           loading={isLoading}
+          classTabsActive="homeNews"
         />
       </Section>
     </div>
