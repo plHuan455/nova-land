@@ -105,6 +105,7 @@ const ProjectMapContainer: React.FC<ProjectMapBlock> = ({
         handleSelect={(id) => setIDCurrentRealEstates(id)}
         idActive={idCurrentRealEstates}
         projectDataList={convertedProjectData}
+        classTabsActive="homeProjectMap"
       />
     </div>
   );

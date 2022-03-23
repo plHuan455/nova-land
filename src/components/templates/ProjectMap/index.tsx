@@ -101,6 +101,7 @@ interface InfoProps {
   };
   idProjectActive: number;
   projectDataList?: ProjectsTypes[];
+  classTabsActive?: string;
 }
 
 const InfoMap: React.FC<InfoProps> = ({
@@ -111,6 +112,7 @@ const InfoMap: React.FC<InfoProps> = ({
   fnItem,
   idProjectActive,
   projectDataList,
+  classTabsActive,
 }) => {
   const renderCarousel = () => {
     const settings = {
@@ -150,9 +152,10 @@ const InfoMap: React.FC<InfoProps> = ({
       <div className="t-projectMap_info_wrap">
         <Heading type="h2" modifiers={['32x48', 'white', '700', 'fontCalibri', 'center']} content={title} />
         <div className="t-projectMap_info_content">
-          <Tabs variant="white" variableMutate={idActive}>
+          <Tabs classTabsActive={classTabsActive} variant="white" variableMutate={idActive}>
             {listCategory?.map((item, index) => (
               <Tab
+                type={classTabsActive}
                 key={`tab-${index.toString()}`}
                 label={item.title}
                 active={item.id === idActive}
@@ -185,6 +188,7 @@ interface ProjectMapProps {
   handleSelect: (id: number) => void;
   idActive: number;
   projectDataList?: ProjectsTypes[];
+  classTabsActive?: string;
 }
 
 const ProjectMap: React.FC<ProjectMapProps> = ({
@@ -194,6 +198,7 @@ const ProjectMap: React.FC<ProjectMapProps> = ({
   handleSelect,
   idActive,
   projectDataList,
+  classTabsActive,
 }) => {
   const [idProjectActive, setIdProjectActive] = useState(0);
   const refMap = useRef<HTMLDivElement|null>(null);
@@ -250,6 +255,7 @@ const ProjectMap: React.FC<ProjectMapProps> = ({
             fnItem={fnItem}
             idProjectActive={idProjectActive}
             projectDataList={projectDataList}
+            classTabsActive={classTabsActive}
           />
           {image && (
             <Map
@@ -270,6 +276,7 @@ ProjectMap.defaultProps = {
   image: undefined,
   textProject: undefined,
   projectDataList: undefined,
+  classTabsActive: undefined,
 };
 
 Map.defaultProps = {
@@ -284,6 +291,7 @@ InfoMap.defaultProps = {
   listCategory: undefined,
   fnItem: undefined,
   projectDataList: undefined,
+  classTabsActive: undefined,
 };
 
 export default ProjectMap;
