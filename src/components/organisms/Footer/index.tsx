@@ -15,6 +15,8 @@ import Text from 'components/atoms/Text';
 import { OptionType, PulldownHookForm } from 'components/molecules/Pulldown';
 import { MenuItemDataTypes } from 'services/menus/types';
 import { checkExternalUrl, getImageURL } from 'utils/functions';
+import { getHomeLangURL } from 'utils/language';
+import { checkSlugExternalUrl, returnRouteMenu } from 'utils/menus';
 
 export type SocialListTypes = {
   iconName?: string;
@@ -70,7 +72,7 @@ const Footer: React.FC<FooterProps> = ({
   socialList,
   loadingBtn,
 }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <footer className="o-footer" style={{ backgroundImage: `url(${bgFooter})` }}>
@@ -83,7 +85,7 @@ const Footer: React.FC<FooterProps> = ({
                 <div className="o-footer_main_menu_top">
                   {/* Logo  */}
                   <div className="o-footer_main_logo">
-                    <Link href="/">
+                    <Link href={getHomeLangURL(i18n.language)}>
                       <Image src={imgLogo || logoImg} ratio="174x136" alt="novaland logo" />
                     </Link>
                   </div>
@@ -130,7 +132,11 @@ const Footer: React.FC<FooterProps> = ({
                 footerLink && footerLink.map((val, idx) => (
                   <div className="o-footer_main_menu_wrap" key={idx.toString()}>
                     <div className="o-footer_main_menu_title">
-                      <Link href={val.reference?.slug || val.link}>
+                      <Link
+                        href={returnRouteMenu(val, i18n.language)}
+                        target={val.target}
+                        useExternal={checkSlugExternalUrl(val)}
+                      >
                         <Text modifiers={['white', '12x17', '600', 'uppercase']}>
                           {val.title}
                         </Text>
@@ -140,7 +146,11 @@ const Footer: React.FC<FooterProps> = ({
                       {
                         val.subMenu && val.subMenu.map((item, i) => (
                           <li className="o-footer_main_menu_nav" key={i.toString()}>
-                            <Link href={item.reference?.slug || item.link}>
+                            <Link
+                              href={returnRouteMenu(item, i18n.language)}
+                              target={item.target}
+                              useExternal={checkSlugExternalUrl(item)}
+                            >
                               <Text modifiers={['12x17', 'lavenderGray', '300']} isInline>
                                 {item.title}
                               </Text>

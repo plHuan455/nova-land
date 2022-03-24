@@ -18,8 +18,7 @@ import { useAppSelector } from 'store/hooks';
 import { getBreadcrumbs } from 'utils/breadcrumbs';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
 import { getSlugByTemplateCode } from 'utils/functions';
-import { getStaticSlug } from 'utils/language';
-import { getLangURL } from 'utils/menus';
+import { getLangURLFirstDash, getStaticSlug } from 'utils/language';
 
 const DetailsPageNav: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -41,7 +40,7 @@ const DetailsPageNav: React.FC = () => {
   const staticPage = useAppSelector((state) => state.menus.staticPage);
 
   const handleTagClick = (tag: string) => {
-    navigate(`${getLangURL(i18n.language)}/${getSlugByTemplateCode('SEARCH', staticPage)}?keyword=${tag}`);
+    navigate(`${getLangURLFirstDash(i18n.language)}/${getSlugByTemplateCode('SEARCH', staticPage)}?keyword=${tag}`);
   };
 
   const {

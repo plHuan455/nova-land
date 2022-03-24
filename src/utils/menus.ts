@@ -1,4 +1,8 @@
-import { getStaticSlug } from './language';
+/* eslint-disable no-unused-vars */
+import { checkExternalUrl } from './functions';
+import {
+  getLangSlug, getLangURLFirstDash, getStaticSlug,
+} from './language';
 
 import i18n from 'i18n';
 import { OtherDocumentCategoriesDataTypes } from 'services/documents/types';
@@ -70,26 +74,41 @@ export const groupMenusOtherDocument = (menus?: OtherDocumentCategoriesDataTypes
   return [];
 };
 
-const checkTypePrefix = (type: string, slugParam?: string, linkParam?: string) => {
-  if (type === 'OneContent\\Page\\Models\\Page') {
-    return '/';
-  }
+const checkTypePrefix = (
+  type: string,
+  slugParam?: string,
+  linkParam?: string,
+  // eslint-disable-next-line no-unused-vars
+  cssClass?: string,
+) => {
+  let prefix = '';
   if (type === 'OneContent\\News\\Models\\NewsCategory' || type === 'OneContent\\Projects\\Models\\RealEstates') {
-    return `/${getStaticSlug('NEWS_CATEGORY', i18n.language)}/`;
+    prefix = `${getLangSlug(i18n.language)}${getStaticSlug('NEWS_CATEGORY', i18n.language)}/`;
   }
-  if (slugParam) return `${slugParam}/`;
-  if (linkParam) return `${linkParam}/`;
-  return '';
+  if (slugParam) return `${getLangSlug(i18n.language)}${slugParam}/`;
+  if (linkParam) return `${getLangSlug(i18n.language)}${linkParam}/`;
+  return prefix;
 };
 
-export function getLangURL(lang?: string) {
-  if (lang && lang !== 'vi') return `/${lang}`;
-  return '';
-}
+export const detectTypePrefix = (type: string, lang: string) => {
+  switch (type) {
+    // INVESTMENT_SECTORS
+    case 'OneContent\\News\\Models\\NewsCategory':
+    case 'OneContent\\Projects\\Models\\RealEstates':
+      return getStaticSlug('NEWS_CATEGORY', lang);
+    // Pages
+    default:
+      return '';
+  }
+};
 
-export const getLanguagePrefix = (lang: string) => {
-  if (lang && lang !== 'vi') return `${lang}/`;
-  return '';
+const checkTypePrefixParentCustomLink = (itemMenu: MenuItemDataTypes) => itemMenu.link;
+
+const checkTypePrefixSub = (menuItem: MenuItemDataTypes, menuItemSub: MenuItemDataTypes) => {
+  if (menuItemSub.type === 'OneContent\\Page\\Models\\Page') {
+    return menuItemSub.reference?.slug;
+  }
+  return `${checkTypePrefix(menuItem.type, menuItem.reference?.slug, menuItem.link, menuItem.cssClass)}${menuItemSub.reference?.slug || ''}`;
 };
 
 export const prefixGroupMenu = (menus?: MenuItemDataTypes[]) => {
@@ -99,9 +118,10 @@ export const prefixGroupMenu = (menus?: MenuItemDataTypes[]) => {
 
   return menus.map((ele) => ({
     ...ele,
+    link: ele.type === 'custom_link' ? checkTypePrefixParentCustomLink(ele) : ele.link,
     reference: ele.reference
       ? {
-        slug: `${getLanguagePrefix(i18n.language)}${ele.reference?.slug || ''}`,
+        slug: `${ele.reference?.slug || ''}`,
       }
       : undefined,
     subMenu: ele.subMenu
@@ -109,7 +129,7 @@ export const prefixGroupMenu = (menus?: MenuItemDataTypes[]) => {
         ...subEle,
         reference: subEle.reference
           ? {
-            slug: `${getLanguagePrefix(i18n.language)}${checkTypePrefix(subEle.type, ele.reference?.slug, ele.link)}${subEle.reference?.slug || ''}`,
+            slug: checkTypePrefixSub(ele, subEle),
           }
           : undefined,
       }))
@@ -119,12 +139,19 @@ export const prefixGroupMenu = (menus?: MenuItemDataTypes[]) => {
 
 export const returnRouteMenu = (menu: MenuItemDataTypes, lang?: string) => {
   if (menu.type === 'custom_link' && menu.link) {
-    return `${getLangURL(lang)}${menu.link}`;
+    return `${getLangURLFirstDash(lang)}${menu.link}`;
   }
   if (menu.reference?.slug) {
-    return `${getLangURL(lang)}/${menu.reference?.slug !== '/' ? menu.reference.slug : ''}`;
+    return `${getLangURLFirstDash(lang)}/${menu.reference?.slug !== '/' ? menu.reference.slug : ''}`;
   }
   return '#';
+};
+
+export const checkSlugExternalUrl = (menu: MenuItemDataTypes) => {
+  if (menu.reference?.slug) {
+    return false;
+  }
+  return checkExternalUrl(menu.link);
 };
 
 export default groupMenus;
