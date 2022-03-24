@@ -20,8 +20,8 @@ import useWindowScroll from 'hooks/useWindowScroll';
 import { MenuItemDataTypes } from 'services/menus/types';
 import { useAppSelector } from 'store/hooks';
 import mapModifiers, { checkExternalUrl, getSlugByTemplateCode } from 'utils/functions';
-import { getHomeLangURL } from 'utils/language';
-import { getLangURL } from 'utils/menus';
+import { getHomeLangURL, getLangURLFirstDash } from 'utils/language';
+import { returnRouteMenu } from 'utils/menus';
 
 export type HeaderMenuTypes = {
   href: string;
@@ -41,8 +41,7 @@ const Header: React.FC<HeaderProps> = ({
   handleLanguage,
   isPageRecruitment,
 }) => {
-  const { i18n } = useTranslation();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const {
     lang,
@@ -82,7 +81,7 @@ const Header: React.FC<HeaderProps> = ({
   // Submit search
   const handleSubmit = (text?: string) => {
     if (text) {
-      navigate(`${getLangURL(i18n.language)}/${getSlugByTemplateCode('SEARCH', staticPage)}?keyword=${text}`);
+      navigate(`${getLangURLFirstDash(i18n.language)}/${getSlugByTemplateCode('SEARCH', staticPage)}?keyword=${text}`);
     }
     setIsOpenSearch(false);
     setIsOpenMenu(!isOpenMenu);
@@ -97,6 +96,7 @@ const Header: React.FC<HeaderProps> = ({
       handleSubmit(e.currentTarget.value);
     }
   };
+
   return (
     <header className={mapModifiers('o-header', isScroll && 'scrolled', isPageRecruitment && 'isPageRecruitment')}>
       <Container>
@@ -118,7 +118,7 @@ const Header: React.FC<HeaderProps> = ({
               <span />
             </div>
             <div className="o-header_left">
-              <Link href={getHomeLangURL(languageSelected.value)}>
+              <Link href={getHomeLangURL(i18n.language)}>
                 <div className="o-header_logo">
                   <Image src={logoSrc} ratio="logo" />
                 </div>
@@ -149,20 +149,18 @@ const Header: React.FC<HeaderProps> = ({
                     </div>
                   </div>
                   {
-                    headerMenu && headerMenu.map((val, idx) => {
-                      const link = `${val.reference && val.reference.slug !== '/' ? `/${val.reference.slug}` : (val.reference?.slug || val.link)}`;
-                      return (
-                        <li className={`o-header_nav_item${val?.subMenu?.length ? ' o-header_hasChild' : ''}`} key={idx.toString()}>
-                          <Link
-                            href={link}
-                            customClassName="o-header_nav_link"
-                            handleClick={() => setIsOpenMenu(!isOpenMenu)}
-                            target={val.target}
-                            useExternal={val.reference?.slug ? false : checkExternalUrl(val.link)}
-                          >
-                            {val.title}
-                          </Link>
-                          {/* {val?.subMenu?.length && (
+                    headerMenu && headerMenu.map((val, idx) => (
+                      <li className={`o-header_nav_item${val?.subMenu?.length ? ' o-header_hasChild' : ''}`} key={idx.toString()}>
+                        <Link
+                          href={returnRouteMenu(val, i18n.language)}
+                          customClassName="o-header_nav_link"
+                          handleClick={() => setIsOpenMenu(!isOpenMenu)}
+                          target={val.target}
+                          useExternal={val.reference?.slug ? false : checkExternalUrl(val.link)}
+                        >
+                          {val.title}
+                        </Link>
+                        {/* {val?.subMenu?.length && (
                           <div className="o-header_dropdown">
                             <div className="o-header_dropdown_wrapper">
                               <ul className="o-header_dropdown_content">
@@ -189,9 +187,8 @@ const Header: React.FC<HeaderProps> = ({
                             </div>
                           </div>
                           )} */}
-                        </li>
-                      );
-                    })
+                      </li>
+                    ))
                   }
                 </ul>
               </div>

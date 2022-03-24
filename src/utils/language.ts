@@ -24,13 +24,13 @@ export const checkActiveLang = (
   return false;
 };
 
-export function getHomeLangSlug(lang?: string) {
+export function getLangSlug(lang?: string) {
   if (lang && lang !== 'vi') return `${lang}/`;
   return '';
 }
 
-export function getLangSlug(lang?: string) {
-  if (lang && lang !== 'vi') return `${lang}/`;
+export function getLangURLFirstDash(lang?: string) {
+  if (lang && lang !== 'vi') return `/${lang}`;
   return '';
 }
 
@@ -42,6 +42,12 @@ export function getHomeLangURL(lang?: string) {
 export function getLangURL(lang?: string) {
   if (lang && lang !== 'vi') return `/${lang}/`;
   return '/';
+}
+
+export function getLangPageTranslation(lang?: string, isHome?: boolean) {
+  if (lang && lang !== 'vi' && !isHome) return lang;
+  if (lang && lang !== 'vi') return `${lang}/`;
+  return '';
 }
 
 export function getActiveLanguages(locales?: LocalesType) {
@@ -56,7 +62,7 @@ export function getActiveLanguages(locales?: LocalesType) {
 }
 
 export function convertHomeRoute(langList: LanguageKey[]) {
-  return langList.map((ele) => getHomeLangSlug(ele));
+  return langList.map((ele) => getLangSlug(ele));
 }
 
 export function convertRoute(langList: LanguageKey[], slug?: string) {

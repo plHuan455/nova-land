@@ -1,4 +1,4 @@
-import { useMemo, useCallback } from 'react';
+import { useCallback, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { OptionType } from 'components/molecules/Pulldown';
@@ -12,8 +12,7 @@ import { getImageURL } from 'utils/functions';
 import {
   checkActiveLang,
   getHomeLangURL,
-  getLangURL,
-  langLabel,
+  getLangURL, langLabel,
 } from 'utils/language';
 
 const useLanguage = () => {
