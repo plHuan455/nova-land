@@ -8,11 +8,11 @@ import HeroBannerContainer from './heroBannerContainer';
 import InvestmentSectorContainer from './investmentSectorContainer';
 import LeadershipContainer from './leaderShipContainer';
 import OutStandingNumbersContainer from './outStandingNumbersContainer';
-import OutstandingProjectContainer from './outstandingProjectContainer';
 import ProjectListMapContainer from './projectListMapContainer';
 import TransportationContainer from './transportationContainer';
 import VisionMissionValueContainer from './visionMissionValueContainer';
 
+import FeaturedProjectsContainer from 'container/Home/featuredProjectsContainer';
 import HelmetContainer from 'container/helmet';
 import { getBlockData, getImageURL } from 'utils/functions';
 
@@ -239,9 +239,7 @@ const AboutUSContainer: React.FC<BasePageData<AboutUsBlock>> = ({
         description={developmentHistoryBlock.description}
         list={developHistoryList}
       />
-      <OutstandingProjectContainer
-        title={featurProjectsBlock.titleSection}
-      />
+      <FeaturedProjectsContainer blocks={featurProjectsBlock} />
       <ProjectListMapContainer title={projectsBlock.titleSection} />
       <EcoSystemContainer
         title={novaEcosystemBlock.titleSection}
