@@ -44,8 +44,8 @@ export const HomeNewsCard: React.FC<HomeNewsCardProps> = ({
         <div className="t-homeNewsCard_title">
           <Link href={href}>
             <Text
-              modifiers={['16x24', '600', 'arsenic', 'capitalize']}
-              content={title.toLocaleLowerCase()}
+              modifiers={['16x24', '600', 'arsenic']}
+              content={title}
             />
           </Link>
         </div>

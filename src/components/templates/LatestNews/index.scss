@@ -18,7 +18,7 @@
   &_image {
     @include mobile-down {
       .a-image {
-        @include aspect-ratio(582,252);
+        @include aspect-ratio(582, 252);
       }
     }
   }
@@ -49,9 +49,6 @@
 
     &_title {
       @include text-overflow();
-      .a-heading {
-        text-transform: capitalize;
-      }
     }
   }
 
@@ -63,12 +60,12 @@
     margin-top: rem(20);
     padding: rem(10) rem(20);
   }
-  
+
   &_icon {
     max-width: rem(50);
     width: 100%;
   }
-  
+
   &_fileName {
     margin-left: rem(20);
     @include text-overflow(3);
