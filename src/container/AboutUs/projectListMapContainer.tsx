@@ -3,15 +3,12 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { useQuery } from 'react-query';
 import { useDispatch } from 'react-redux';
 
-import img from 'assets/images/bg_project_list_map.png';
 import { OptionType } from 'components/molecules/Pulldown';
 import ProjectListMap, {
-  ItemBranch,
   ProjectListMapGround,
   ProjectListMapInfo,
 } from 'components/templates/ProjectListMap';
 import Section from 'components/templates/Section';
-import getMapService from 'services/maps';
 import { getProjectsService } from 'services/project';
 import { useAppSelector } from 'store/hooks';
 import { getCitiesAction } from 'store/location';
@@ -30,8 +27,7 @@ const ProjectListMapContainer: React.FC<ProjectListMapContainerProps> = ({
   const [province, setProvince] = useState<OptionType | null>(null);
   const [project, setProject] = useState<OptionType | null>(null);
 
-  const [listSelectProject, setSelectProjectList] = useState<ItemBranch[]>([]);
-  const [isLoading, setLoading] = useState(false);
+  const systemData = useAppSelector((state) => state.system.dataSystem);
 
   const { data: projectDataAboutUs } = useQuery(
     ['getProjectsDataAboutUs', province, language],
@@ -41,16 +37,6 @@ const ProjectListMapContainer: React.FC<ProjectListMapContainerProps> = ({
     {
       ...DEFAULT_QUERY_OPTION,
       enabled: !!province,
-    },
-  );
-
-  const { data: projectData } = useQuery(
-    ['getProjectsData', language],
-    () => getProjectsService({
-      about_us: true,
-    }),
-    {
-      ...DEFAULT_QUERY_OPTION,
     },
   );
 
@@ -77,48 +63,13 @@ const ProjectListMapContainer: React.FC<ProjectListMapContainerProps> = ({
     return [];
   }, [listCities]);
 
-  const listProject = useMemo(
-    () => projectData?.map((item) => ({
-      title: item.name,
-      href: item.link?.url || '#',
-      target: item.link?.target,
-    })),
-    [projectData],
-  );
-
-  const filterMaps = async (cityId?: number, projectId?: number) => {
-    try {
-      const params = cityId
-        ? { city_id: cityId }
-        : projectId
-          ? { project_id: projectId }
-          : {};
-      setLoading(true);
-      const prjList = await getMapService(params);
-      const convertPrjList = prjList.map((item) => ({
-        id: item.id,
-        point: {
-          x: item.pointX,
-          y: item.pointY,
-        },
-      }));
-      setSelectProjectList(convertPrjList);
-    } catch {
-      // Empty
-    } finally {
-      setLoading(false);
-    }
-  };
-
   const handleChangeProvince = (option: OptionType) => {
     setProvince(option);
-    filterMaps(Number(option.value), Number(project?.value));
     setProject(null);
   };
 
   const handleChangeProject = (option: OptionType) => {
     setProject(option);
-    filterMaps(Number(province?.value), Number(option.value));
   };
 
   useEffect(() => {
@@ -130,7 +81,6 @@ const ProjectListMapContainer: React.FC<ProjectListMapContainerProps> = ({
       <Section>
         <ProjectListMap title={title}>
           <ProjectListMapInfo
-            listProject={listProject || []}
             provinceOptions={provinceOptions || []}
             projectOptions={projectOptionData || []}
             valueProvince={province}
@@ -139,13 +89,11 @@ const ProjectListMapContainer: React.FC<ProjectListMapContainerProps> = ({
             handleChangeProject={handleChangeProject}
           />
           <ProjectListMapGround
-            image={{
-              path: img,
-              width: 320,
-              height: 508,
+            mapAPIkey={systemData?.gmapId || ''}
+            mapMarker={{
+              lat: 10.781241219776518,
+              lng: 106.7415968021698,
             }}
-            listPoint={listSelectProject}
-            loading={isLoading}
           />
         </ProjectListMap>
       </Section>

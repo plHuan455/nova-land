@@ -1,21 +1,13 @@
 /* eslint-disable react/require-default-props */
-import React, { useCallback } from 'react';
+import GoogleMapReact from 'google-map-react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 import Heading from 'components/atoms/Heading';
 import Icon from 'components/atoms/Icon';
-import Link from 'components/atoms/Link';
-import Loading from 'components/atoms/Loading';
 import Text from 'components/atoms/Text';
 import Pulldown, { OptionType } from 'components/molecules/Pulldown';
 import Container from 'components/organisms/Container';
-import { checkExternalUrl } from 'utils/functions';
-
-interface ImageMap {
-  path: string;
-  width: number;
-  height: number;
-}
 
 export interface ItemBranch {
   id: number;
@@ -25,18 +17,11 @@ export interface ItemBranch {
   };
 }
 
-interface ItemProject {
-  title: string;
-  href: string;
-  target?: string;
-}
-
 interface InfoProps {
   provinceOptions: OptionType[];
   projectOptions: OptionType[];
   valueProvince: OptionType|null;
   valueProject: OptionType|null;
-  listProject: ItemProject[];
   handleChangeProvince: (value: OptionType) => void;
   handleChangeProject: (value: OptionType) => void;
 }
@@ -46,7 +31,6 @@ export const ProjectListMapInfo:React.FC<InfoProps> = ({
   projectOptions,
   valueProvince,
   valueProject,
-  listProject,
   handleChangeProvince,
   handleChangeProject,
 }) => {
@@ -78,73 +62,66 @@ export const ProjectListMapInfo:React.FC<InfoProps> = ({
           />
         </div>
       </div>
-      <div className="t-projectListMap_info_wrap-list">
-        <Text content={t('map.project_list')} modifiers={['18x28', 'jet', '600']} />
-        {listProject.length && (
-        <ul className="t-projectListMap_info_list">
-          {listProject.map((item, index) => (
-            <li key={index.toString()}>
-              <Link href={item.href} target={item.target} useExternal={checkExternalUrl(item.href)}>
-                <div className="t-projectListMap_info_item">
-                  <Text content={item.title} modifiers={['16x24', 'jet', '300']} />
-                  <Icon iconName="greyArrowRight" />
-                </div>
-              </Link>
-            </li>
-          ))}
-        </ul>
-        )}
-      </div>
     </div>
   );
 };
 
+export interface MapContactProps {
+  lat?: number;
+  lng?: number;
+}
+
+const MapContact: React.FC<MapContactProps> = () => (
+  <div className="t-mapInformation_marker">
+    <Icon iconName="marker" size="40" />
+  </div>
+);
+
+export type TypeMapMarker = {
+  lat: number;
+  lng: number;
+};
 interface MapProps {
-  image: ImageMap;
-  listPoint: ItemBranch[];
-  loading?: boolean;
+  mapMarker?: TypeMapMarker;
+  mapAPIkey: string;
 }
 
 export const ProjectListMapGround:React.FC<MapProps> = ({
-  image,
-  listPoint,
-  loading,
-}) => {
-  const calculatorPosition = useCallback(
-    (item: ItemBranch) => ({
-      top: `${((item.point.y / image.height) * 100)}%`,
-      left: `${((item.point.x / image.width) * 100)}%`,
-      width: `${(19 / image.width) * 100}%`,
-      height: `${(24.5 / image.height) * 100}%`,
-    }),
-    [image.height, image.width],
-  );
-
-  // const paddingBottomMap = useMemo(() => ((image.height / image.width) * 100),
-  //   [image.height, image.width]);
-
-  return (
-    <div className="t-projectListMap_map">
-      <div
-        className="t-projectListMap_map_img"
-        // style={{ paddingBottom: `${paddingBottomMap}%` }}
-      >
-        <img
-          src={image.path}
-          alt="map"
-        />
-        {listPoint?.map((item, index) => (
-          <div
-            className="t-projectListMap_map_area "
-            key={`${index.toString()}`}
-            style={{ ...calculatorPosition(item) }}
+  mapMarker,
+  mapAPIkey,
+}) => (
+  <div className="t-projectListMap_map">
+    {mapMarker && (
+      <div className="t-projectListMap_map_wrapper">
+        <GoogleMapReact
+          bootstrapURLKeys={{
+            key: `${mapAPIkey}&libraries=places,geometry`,
+          }}
+          defaultCenter={{
+            lat: mapMarker.lat || 0,
+            lng: mapMarker.lng || 0,
+          }}
+          defaultZoom={10}
+          options={{
+            zoomControl: true,
+            mapTypeControl: false,
+            fullscreenControl: true,
+            panControl: true,
+          }}
+          center={{
+            lat: mapMarker.lat || 0,
+            lng: mapMarker.lng || 0,
+          }}
+        >
+          <MapContact
+            lat={mapMarker.lat || 0}
+            lng={mapMarker.lng || 0}
           />
-        ))}
+        </GoogleMapReact>
       </div>
-      <div className="t-projectListMap_map_loading">{loading && (<Loading isShow />)}</div>
-    </div>
-  );
-};
+    )}
+  </div>
+);
 
 interface ProjectListMapProps {
   title?: string;

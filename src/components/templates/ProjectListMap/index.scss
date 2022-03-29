@@ -1,6 +1,4 @@
 .t-projectListMap {
-  $width-in-container-value: 1126;
-
   &_content {
     display: flex;
     flex-wrap: wrap;
@@ -12,11 +10,7 @@
   }
 
   &_info {
-    flex: 0 0 calc(450 / #{$width-in-container-value} * 100%);
-
-    @include tablet-down {
-      flex: 0 0 50%;
-    }
+    flex: 0 0 40%;
 
     @include small-mobile {
       flex: 0 0 100%;
@@ -32,97 +26,22 @@
         margin-top: rem(16);
       }
     }
-
-    &_wrap-list {
-      margin-top: rem(40);
-      @include mobile-down {
-        margin-top: rem(16);
-      }
-    }
-
-    &_list {
-      margin-top: rem(16);
-      max-height: rem(278);
-      overflow: auto;
-      padding-right: rem(16);
-      @include scroll-bars(8, $gainsboro);
-
-      @include desktop-down {
-        max-height: rem(220);
-      }
-
-      @include mobile-down {
-        max-height: rem(145);
-      }
-
-      li {
-        border-bottom: $gainsboro 1px solid;
-        list-style: none;
-        padding: rem(16) 0;
-
-        @include mobile-down {
-          padding: rem(7) 0;
-        }
-
-        &:first-child {
-          border-top: $gainsboro 1px solid;
-        } 
-      }
-    }
-
-    &_item {
-      transition: opacity $transition linear;
-      @include adjust-flex(space-between);
-      @include mobile-down {
-        .a-icon {
-          height: rem(16);
-          width: rem(16);
-        }
-      }
-
-      &:hover {
-        opacity: 0.7;
-      }
-    }
   }
 
   &_map {
-    flex: 0 0 calc(373 / #{$width-in-container-value} * 100%);
-    margin-left: calc(194 / #{$width-in-container-value} * 100%);
+    flex: 0 0 60%;
+    padding-left: rem(70);
     position: relative;
 
     @include tablet-down {
-      flex: 0 0 45%;
-      margin-left: 5%;
+      padding-left: rem(40);
     }
 
     @include small-mobile {
       flex: 0 0 100%;
       margin: rem(20) auto 0;
       max-width: 100%;
-    }
-
-    &_img {
-      position: relative;
-
-      & > img {
-        height: 100%;
-        width: 100%;
-        // max-height: rem(508);
-      }
-    }
-
-    &_area {
-      background: url('~assets/images/logo_slide.png') no-repeat center/contain;
-      cursor: pointer;
-      opacity: 0.6;
-      position: absolute;
-      transform: translate(-50%, -50%);
-      transition: $transition-long ease-in-out;
-
-      &:hover {
-        opacity: 1;
-      }
+      padding-left: 0;
     }
 
     &_loading {
@@ -134,6 +53,12 @@
       position: absolute;
       top: 0;
       width: 100%;
+    }
+
+    &_wrapper {
+      height: 550px;
+      width: 100%;
+      position: relative;
     }
   }
 }
