@@ -17,14 +17,18 @@ export interface FieldActivityDetailsTabTypes {
     title: string;
     tabName: string;
     descriptoion: string;
-  }
+  };
 }
 
 interface FieldActivityDetailsTabBlock {
   blocks: FieldActivityDetailsTabTypes;
+  tag: number;
+  handleChangeTab: (index: number) => void;
 }
 
-const FieldActivityDetailsTabContainer: React.FC<FieldActivityDetailsTabBlock> = ({ blocks }) => (
+const FieldActivityDetailsTabContainer: React.FC<
+  FieldActivityDetailsTabBlock
+> = ({ blocks, tag, handleChangeTab }) => (
   <div className="p-fieldOfActivity_heroBanner">
     <Section>
       <FieldActivityDetailsTab
@@ -46,6 +50,8 @@ const FieldActivityDetailsTabContainer: React.FC<FieldActivityDetailsTabBlock> =
             },
           },
         ]}
+        tag={tag}
+        handleChangeTab={handleChangeTab}
       />
     </Section>
   </div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import Animate from 'components/organisms/Animate';
 import { Tab, TabPanel, Tabs } from 'components/organisms/Tabs';
@@ -10,49 +10,48 @@ interface FieldActivityContentType {
   desc: string;
 }
 
-interface FieldActivityType{
+interface FieldActivityType {
   label: string;
   content: FieldActivityContentType;
 }
 
 export interface FieldActivityDetailsTabProps {
   dataFieldActivity: Array<FieldActivityType>;
+  handleChangeTab: (index: number) => void;
+  tag: number;
 }
 
-const FieldActivityDetailsTab: React.FC<FieldActivityDetailsTabProps> = ({ dataFieldActivity }) => {
-  const [indexActive, setIndexActive] = useState(0);
-
-  return (
-    <div className="t-fieldActivityDetailsTab">
-      <Animate type="goUp">
-        <Tabs variableMutate={indexActive}>
-          {
-        dataFieldActivity.map((item, index) => (
+const FieldActivityDetailsTab: React.FC<FieldActivityDetailsTabProps> = ({
+  dataFieldActivity,
+  tag,
+  handleChangeTab,
+}) => (
+  <div className="t-fieldActivityDetailsTab">
+    <Animate type="goUp">
+      <Tabs variableMutate={tag}>
+        {dataFieldActivity.map((item, index) => (
           <Tab
             key={`tab-${index.toString()}`}
             label={item.label}
-            active={index === indexActive}
+            active={index === tag}
             size="20x28"
-            handleClick={() => setIndexActive(index)}
+            handleClick={() => handleChangeTab(index)}
           />
-        ))
-      }
-        </Tabs>
-        {dataFieldActivity.map((item, index) => (
-          <TabPanel key={`tab-panel-${index.toString()}`} active={index === indexActive}>
-            <TransportationInfrastructure
-              imgSrc={item.content.imgSrc}
-              title={item.content.title}
-              desc={item.content.desc}
-            />
-          </TabPanel>
         ))}
-      </Animate>
-    </div>
-  );
-};
+      </Tabs>
+      {dataFieldActivity.map((item, index) => (
+        <TabPanel key={`tab-panel-${index.toString()}`} active={index === tag}>
+          <TransportationInfrastructure
+            imgSrc={item.content.imgSrc}
+            title={item.content.title}
+            desc={item.content.desc}
+          />
+        </TabPanel>
+      ))}
+    </Animate>
+  </div>
+);
 
-FieldActivityDetailsTab.defaultProps = {
-};
+FieldActivityDetailsTab.defaultProps = {};
 
 export default FieldActivityDetailsTab;

@@ -1,5 +1,5 @@
 import { Story, Meta } from '@storybook/react';
-import React from 'react';
+import React, { useState } from 'react';
 
 import FieldActivityDetailsTab from '.';
 
@@ -38,6 +38,17 @@ const dummyData = [
   },
 ];
 
-export const normal: Story = () => (
-  <FieldActivityDetailsTab dataFieldActivity={dummyData} />
-);
+export const normal: Story = () => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [indexActive, setIndexActive] = useState(0);
+  return (
+    <FieldActivityDetailsTab
+      dataFieldActivity={dummyData}
+      handleChangeTab={(tag) => {
+        setIndexActive(tag);
+        console.log(tag);
+      }}
+      tag={indexActive}
+    />
+  );
+};
