@@ -22,7 +22,9 @@
     "no_news": "Không có tin tức",
     "market_news" : "Tin Thị Trường",
     "see_all_market_news": "Xem tất cả Tin thị trường",
-    "project_news": "Tin dự án"
+    "project_news": "Tin dự án",
+    "news_in_the_same_category": "Tin cùng chuyên mục",
+    "featured_news": "Các tin nổi bật"
   },
   "financial_report": {
     "see_more_btn": "Xem thêm báo cáo tài chính"
