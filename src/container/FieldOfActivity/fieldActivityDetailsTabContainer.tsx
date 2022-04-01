@@ -22,13 +22,13 @@ export interface FieldActivityDetailsTabTypes {
 
 interface FieldActivityDetailsTabBlock {
   blocks: FieldActivityDetailsTabTypes;
-  tag: number;
+  indexTab: number;
   handleChangeTab: (index: number) => void;
 }
 
 const FieldActivityDetailsTabContainer: React.FC<
   FieldActivityDetailsTabBlock
-> = ({ blocks, tag, handleChangeTab }) => (
+> = ({ blocks, indexTab, handleChangeTab }) => (
   <div className="p-fieldOfActivity_heroBanner">
     <Section>
       <FieldActivityDetailsTab
@@ -50,7 +50,7 @@ const FieldActivityDetailsTabContainer: React.FC<
             },
           },
         ]}
-        tag={tag}
+        indexTab={indexTab}
         handleChangeTab={handleChangeTab}
       />
     </Section>

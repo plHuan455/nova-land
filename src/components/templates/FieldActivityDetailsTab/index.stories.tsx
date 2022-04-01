@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { Story, Meta } from '@storybook/react';
 import React, { useState } from 'react';
 
@@ -48,7 +49,7 @@ export const normal: Story = () => {
         setIndexActive(tag);
         console.log(tag);
       }}
-      tag={indexActive}
+      indexTab={indexActive}
     />
   );
 };

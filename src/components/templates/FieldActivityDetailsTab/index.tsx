@@ -18,29 +18,29 @@ interface FieldActivityType {
 export interface FieldActivityDetailsTabProps {
   dataFieldActivity: Array<FieldActivityType>;
   handleChangeTab: (index: number) => void;
-  tag: number;
+  indexTab: number;
 }
 
 const FieldActivityDetailsTab: React.FC<FieldActivityDetailsTabProps> = ({
   dataFieldActivity,
-  tag,
+  indexTab,
   handleChangeTab,
 }) => (
   <div className="t-fieldActivityDetailsTab">
     <Animate type="goUp">
-      <Tabs variableMutate={tag}>
+      <Tabs variableMutate={indexTab}>
         {dataFieldActivity.map((item, index) => (
           <Tab
             key={`tab-${index.toString()}`}
             label={item.label}
-            active={index === tag}
+            active={index === indexTab}
             size="20x28"
             handleClick={() => handleChangeTab(index)}
           />
         ))}
       </Tabs>
       {dataFieldActivity.map((item, index) => (
-        <TabPanel key={`tab-panel-${index.toString()}`} active={index === tag}>
+        <TabPanel key={`tab-panel-${index.toString()}`} active={index === indexTab}>
           <TransportationInfrastructure
             imgSrc={item.content.imgSrc}
             title={item.content.title}

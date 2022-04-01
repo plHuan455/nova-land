@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -35,7 +36,11 @@ const dummyData = [
 describe('<FieldActivityDetailsTab />', () => {
   test('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<FieldActivityDetailsTab dataFieldActivity={dummyData} />, div);
+    ReactDOM.render(<FieldActivityDetailsTab
+      dataFieldActivity={dummyData}
+      handleChangeTab={() => console.log('zoo')}
+      indexTab={0}
+    />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 });

@@ -128,28 +128,28 @@ const FieldOfActivityContainer: React.FC<BasePageData<FieldOfActivityData>> = ({
       <Container>
         <FieldActivityDetailsTabContainer
           blocks={fieldActivityDetailsTabBlock}
-          tag={indexActive}
-          handleChangeTab={(tag) => {
-            setIndexActive(tag);
+          indexTab={indexActive}
+          handleChangeTab={(tab) => {
+            setIndexActive(tab);
           }}
         />
         {indexActive === 0 && (
-        <>
-          <div className="p-fieldOfActivity_productLines">
-            <ProductLines
-              title={fieldActivityDetailsTabBlock.tab1.titleProject}
-              dataProductLines={convertDataProductLines}
-              indexActive={idRealEstatesSlug}
-              handleChangeTab={(id) => setIDRealEstatesSlug(id)}
-            />
-          </div>
-          <div className="p-fieldOfActivity_projectList">
-            <ProjectList
-              dataProjectList={convertDataProjectList}
-              loading={isLoading}
-            />
-          </div>
-        </>
+          <>
+            <div className="p-fieldOfActivity_productLines">
+              <ProductLines
+                title={fieldActivityDetailsTabBlock.tab1.titleProject}
+                dataProductLines={convertDataProductLines}
+                indexActive={idRealEstatesSlug}
+                handleChangeTab={(id) => setIDRealEstatesSlug(id)}
+              />
+            </div>
+            <div className="p-fieldOfActivity_projectList">
+              <ProjectList
+                dataProjectList={convertDataProjectList}
+                loading={isLoading}
+              />
+            </div>
+          </>
         )}
       </Container>
     </>
