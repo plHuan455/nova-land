@@ -22,7 +22,9 @@
     "no_news": "No news",
     "market_news" : "Market News",
     "see_all_market_news": "See all Market News",
-    "project_news": "Project News"
+    "project_news": "Project News",
+    "news_in_the_same_category": "News in the same category",
+    "featured_news": "Featured news"
   },
   "financial_report": {
     "see_more_btn": "See more financial statements"

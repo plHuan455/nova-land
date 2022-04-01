@@ -1,5 +1,6 @@
 /* eslint-disable react/require-default-props */
 import React, { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useQuery } from 'react-query';
 
 import NewsDetail from 'components/templates/NewsDetail';
@@ -21,6 +22,7 @@ const NewsDetailTemplateContainer: React.FC<NewsDetailTemplateContainerProps> = 
   newsTagData,
   handleTagClick,
 }) => {
+  const { t } = useTranslation();
   const language = useAppSelector((state) => state.system.language);
 
   const { data: hightLightNews } = useQuery(
@@ -66,22 +68,22 @@ const NewsDetailTemplateContainer: React.FC<NewsDetailTemplateContainerProps> = 
     title: item.title,
     content: item.content,
     status: new Date(item.publishedAt || '') === new Date()
-      ? `${getHourFromPastToCurrent(item.publishedAt)} giờ trước`
+      ? `${getHourFromPastToCurrent(item.publishedAt)} ${t('general.hours_ago')}`
       : formatDateDDMMYYYY(item.publishedAt),
     imageNews: getImageURL(item.thumbnail),
     href: getPrefixURLCode(language, 'NEWS_DETAIL', item.slug),
-  })), [hightLightNews, language]);
+  })), [hightLightNews, language, t]);
 
   const relatedNewsData = useMemo(() => relatedNews?.map((item) => ({
     id: String(item.id),
     title: item.title,
     content: item.content,
     status: new Date(item.publishedAt || '') === new Date()
-      ? `${getHourFromPastToCurrent(item.publishedAt)} giờ trước`
+      ? `${getHourFromPastToCurrent(item.publishedAt)} ${t('general.hours_ago')}`
       : formatDateDDMMYYYY(item.publishedAt),
     imageNews: getImageURL(item.thumbnail),
     href: getPrefixURLCode(language, 'NEWS_DETAIL', item.slug),
-  })), [language, relatedNews]);
+  })), [language, relatedNews, t]);
 
   const tagNewsData = useMemo(() => newsTagData?.map((item) => item.name), [newsTagData]);
 
@@ -91,8 +93,8 @@ const NewsDetailTemplateContainer: React.FC<NewsDetailTemplateContainerProps> = 
         newsDetail={newsDetail || ''}
         relatedNews={relatedNewsData || []}
         keyword={tagNewsData || []}
-        titleLatest="Các tin mới nhất"
-        titleHot="Các tin nổi bật"
+        titleLatest={t('news.news_in_the_same_category')}
+        titleHot={t('news.featured_news')}
         hightLightNews={hightLightNewsData || []}
         handleTagClick={handleTagClick}
       />
