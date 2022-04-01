@@ -55,13 +55,13 @@ const NewsCard: React.FC<NewsCardProps> = ({
           <div className="o-newsCard_content">
             <div className="o-newsCard_content_title">
               {modifiers === 'smallTitle' ? (
-                <Text modifiers={['jet', '600', 'fontLexend', '16x24', 'capitalize']}>
-                  {title.toLocaleLowerCase()}
+                <Text modifiers={['jet', '600', 'fontLexend', '16x24']}>
+                  {title}
                 </Text>
               )
                 : (
-                  <Heading modifiers={variant === 'smallVertical' ? ['jet', '24x30', '400', 'fontLexend', 'capitalize'] : ['white', 'fontLexend', '600', '24x30', 'capitalize']}>
-                    {title.toLocaleLowerCase()}
+                  <Heading modifiers={variant === 'smallVertical' ? ['jet', '24x30', '400', 'fontLexend'] : ['white', 'fontLexend', '600', '24x30']}>
+                    {title}
                   </Heading>
                 )}
             </div>

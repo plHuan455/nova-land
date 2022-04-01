@@ -33,7 +33,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
   children,
 }) => (
   <Animate type="goUpHero">
-    <div className="t-heroBanner">
+    <div className={`t-heroBanner ${list.length === 0 ? 'pt-header' : ''}`}>
       <Carousel settings={setting || settingBanner}>
         {list.map((item, index) => (
           <Image key={`index-${index.toString()}`} {...item} ratio="1371x620" alt="image-banner" />
