@@ -75,7 +75,7 @@ export const NewsCategoryCard: React.FC<NewsCategoryCardProps> = ({
               </div>
             )}
             <div className="t-newsCategoryCard_title">
-              <Heading modifiers={['20x30', '600', 'jet', 'capitalize']}>{title.toLocaleLowerCase()}</Heading>
+              <Heading modifiers={['20x30', '600', 'jet']}>{title}</Heading>
             </div>
             <div className="t-newsCategoryCard_desc u-mt-4">
               <Text

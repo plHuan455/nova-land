@@ -16,7 +16,7 @@ const LatestNewsContainer: React.FC<{latestNewsData: NewsDataTypes[]}> = ({ late
     imgSrc: getImageURL(item.thumbnail),
     ratio: idx !== 0 ? '582x252' : '582x534' as Ratio,
     alt: item.slug,
-    title: item.title.toLocaleLowerCase(),
+    title: item.title,
     time: new Date(item.publishedAt || '') === new Date()
       ? `${getHourFromPastToCurrent(item.publishedAt)} ${t('general.hours_ago')}`
       : formatDateDDMMYYYY(item.publishedAt),

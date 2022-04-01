@@ -36,8 +36,8 @@ export const FeaturedNewsCard: React.FC<FeaturedNewsCardProps> = ({
         <div className="t-featuredNewsCard_layer" />
         <div className="t-featuredNewsCard_content">
           <div className="t-featuredNewsCard_content_title">
-            <Heading modifiers={['24x30', '600', 'white', 'capitalize']}>
-              {title.toLocaleLowerCase()}
+            <Heading modifiers={['24x30', '600', 'white']}>
+              {title}
             </Heading>
           </div>
           <div className="mt-8">

@@ -31,7 +31,7 @@ const NewsCategoryContainer: React.FC = () => {
   return (
     <>
       <HelmetContainer ogData={data?.openGraph} seoData={data?.seoData} />
-      <HeroBanner list={convertBanner(data?.banner.items || [])} />
+      <HeroBanner list={convertBanner(data?.banner?.items)} />
       <div className="p-newsCategory_breadcrumb u-mt-md-24 u-mb-md-27 u-mt-14 u-mb-16">
         <Breadcrumb
           breadcrumbs={getBreadcrumbs({

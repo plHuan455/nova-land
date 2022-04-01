@@ -48,7 +48,7 @@ const NewsList: React.FC<NewsListProps> = ({
                             <Link href={item.href}>
                               <Text
                                 modifiers={['16x24', '600', 'arsenic', 'capitalize']}
-                                content={item.title.toLocaleLowerCase()}
+                                content={item.title}
                               />
                             </Link>
                           </div>
