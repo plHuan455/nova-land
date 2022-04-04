@@ -14,6 +14,13 @@ export const getProjectsService = async (params?: ProjectParamTypes): Promise<Pr
   return response.data.data;
 };
 
+export const getProjectsDetailService = async (
+  id: number,
+): Promise<ProjectsTypes> => {
+  const response = await axiosInstance.get(`projects/${id}`);
+  return response.data.data;
+};
+
 export const getRealEstatesService = async (
   params?: RealEstatesParamsTypes,
 ): Promise<RealEstatesTypes[]> => {

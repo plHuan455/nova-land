@@ -52,7 +52,10 @@ export type ProjectsTypes = {
   },
   description: string,
   onGoing: boolean,
+  pin: boolean,
   darkBackgroundLogo?: string,
+  longtitude: number,
+  latitude: number,
 }
 
 export type ProjectParamTypes = {
@@ -63,6 +66,7 @@ export type ProjectParamTypes = {
   about_us?: boolean;
   city_id?: number;
   on_going?: boolean;
+  pin?: boolean;
 }
 
 export type CategoryProjectsDataTypes = {

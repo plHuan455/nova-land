@@ -7,9 +7,10 @@ import { OptionType } from 'components/molecules/Pulldown';
 import ProjectListMap, {
   ProjectListMapGround,
   ProjectListMapInfo,
+  TypeMapMarker,
 } from 'components/templates/ProjectListMap';
 import Section from 'components/templates/Section';
-import { getProjectsService } from 'services/project';
+import { getProjectsService, getProjectsDetailService } from 'services/project';
 import { useAppSelector } from 'store/hooks';
 import { getCitiesAction } from 'store/location';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
@@ -26,6 +27,8 @@ const ProjectListMapContainer: React.FC<ProjectListMapContainerProps> = ({
   const language = useAppSelector((state) => state.system.language);
   const [province, setProvince] = useState<OptionType | null>(null);
   const [project, setProject] = useState<OptionType | null>(null);
+  const [locationMarker, setLocationMarker] = useState<TypeMapMarker>({ lat: 0, lng: 0 });
+  const [loadingMap, setLoadingMap] = useState(false);
 
   const systemData = useAppSelector((state) => state.system.dataSystem);
 
@@ -37,6 +40,15 @@ const ProjectListMapContainer: React.FC<ProjectListMapContainerProps> = ({
     {
       ...DEFAULT_QUERY_OPTION,
       enabled: !!province,
+    },
+  );
+
+  const { data: projectDetailData, isLoading } = useQuery(
+    ['getProjectsDetailData', project, language],
+    () => getProjectsDetailService(Number(project?.value)),
+    {
+      ...DEFAULT_QUERY_OPTION,
+      enabled: !!project,
     },
   );
 
@@ -76,6 +88,34 @@ const ProjectListMapContainer: React.FC<ProjectListMapContainerProps> = ({
     dispatch(getCitiesAction());
   }, [dispatch, language]);
 
+  useEffect(() => {
+    const initLocation = async () => {
+      try {
+        setLoadingMap(true);
+        const data = await getProjectsService({ pin: true });
+        if (data.length > 0) {
+          setLocationMarker({
+            lat: data[0].latitude,
+            lng: data[0].longtitude,
+          });
+        }
+      } finally {
+        setLoadingMap(false);
+      }
+    };
+
+    initLocation();
+  }, [dispatch]);
+
+  useEffect(() => {
+    if (projectDetailData) {
+      setLocationMarker({
+        lat: projectDetailData.latitude,
+        lng: projectDetailData.longtitude,
+      });
+    }
+  }, [projectDetailData]);
+
   return (
     <div className="p-aboutUs_projectListMap">
       <Section>
@@ -90,10 +130,8 @@ const ProjectListMapContainer: React.FC<ProjectListMapContainerProps> = ({
           />
           <ProjectListMapGround
             mapAPIkey={systemData?.gmapId || ''}
-            mapMarker={{
-              lat: 10.781241219776518,
-              lng: 106.7415968021698,
-            }}
+            mapMarker={locationMarker}
+            loading={loadingMap || isLoading}
           />
         </ProjectListMap>
       </Section>

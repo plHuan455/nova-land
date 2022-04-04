@@ -60,5 +60,11 @@
       width: 100%;
       position: relative;
     }
+
+    .a-loader-circle {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
   }
 }

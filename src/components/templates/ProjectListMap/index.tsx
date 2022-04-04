@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 import Heading from 'components/atoms/Heading';
 import Icon from 'components/atoms/Icon';
+import Loading from 'components/atoms/Loading';
 import Text from 'components/atoms/Text';
 import Pulldown, { OptionType } from 'components/molecules/Pulldown';
 import Container from 'components/organisms/Container';
@@ -84,41 +85,49 @@ export type TypeMapMarker = {
 interface MapProps {
   mapMarker?: TypeMapMarker;
   mapAPIkey: string;
+  loading?: boolean;
 }
 
 export const ProjectListMapGround:React.FC<MapProps> = ({
   mapMarker,
   mapAPIkey,
+  loading,
 }) => (
   <div className="t-projectListMap_map">
-    {mapMarker && (
-      <div className="t-projectListMap_map_wrapper">
-        <GoogleMapReact
-          bootstrapURLKeys={{
-            key: `${mapAPIkey}&libraries=places,geometry`,
-          }}
-          defaultCenter={{
-            lat: mapMarker.lat || 0,
-            lng: mapMarker.lng || 0,
-          }}
-          defaultZoom={10}
-          options={{
-            zoomControl: true,
-            mapTypeControl: false,
-            fullscreenControl: true,
-            panControl: true,
-          }}
-          center={{
-            lat: mapMarker.lat || 0,
-            lng: mapMarker.lng || 0,
-          }}
-        >
-          <MapContact
-            lat={mapMarker.lat || 0}
-            lng={mapMarker.lng || 0}
-          />
-        </GoogleMapReact>
-      </div>
+    {loading ? (
+      <Loading isShow variant="default" />
+    ) : (
+      <>
+        {mapMarker && (
+          <div className="t-projectListMap_map_wrapper">
+            <GoogleMapReact
+              bootstrapURLKeys={{
+                key: `${mapAPIkey}&libraries=places,geometry`,
+              }}
+              defaultCenter={{
+                lat: mapMarker.lat || 0,
+                lng: mapMarker.lng || 0,
+              }}
+              defaultZoom={10}
+              options={{
+                zoomControl: true,
+                mapTypeControl: false,
+                fullscreenControl: true,
+                panControl: true,
+              }}
+              center={{
+                lat: mapMarker.lat || 0,
+                lng: mapMarker.lng || 0,
+              }}
+            >
+              <MapContact
+                lat={mapMarker.lat || 0}
+                lng={mapMarker.lng || 0}
+              />
+            </GoogleMapReact>
+          </div>
+        )}
+      </>
     )}
   </div>
 );
