@@ -3,16 +3,14 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { useQuery } from 'react-query';
 import { useDispatch } from 'react-redux';
 
-import img from 'assets/images/bg_project_list_map.png';
 import { OptionType } from 'components/molecules/Pulldown';
 import ProjectListMap, {
-  ItemBranch,
   ProjectListMapGround,
   ProjectListMapInfo,
+  TypeMapMarker,
 } from 'components/templates/ProjectListMap';
 import Section from 'components/templates/Section';
-import getMapService from 'services/maps';
-import { getProjectsService } from 'services/project';
+import { getProjectsService, getProjectsDetailService } from 'services/project';
 import { useAppSelector } from 'store/hooks';
 import { getCitiesAction } from 'store/location';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
@@ -29,9 +27,10 @@ const ProjectListMapContainer: React.FC<ProjectListMapContainerProps> = ({
   const language = useAppSelector((state) => state.system.language);
   const [province, setProvince] = useState<OptionType | null>(null);
   const [project, setProject] = useState<OptionType | null>(null);
+  const [locationMarker, setLocationMarker] = useState<TypeMapMarker>({ lat: 0, lng: 0 });
+  const [loadingMap, setLoadingMap] = useState(false);
 
-  const [listSelectProject, setSelectProjectList] = useState<ItemBranch[]>([]);
-  const [isLoading, setLoading] = useState(false);
+  const systemData = useAppSelector((state) => state.system.dataSystem);
 
   const { data: projectDataAboutUs } = useQuery(
     ['getProjectsDataAboutUs', province, language],
@@ -44,13 +43,12 @@ const ProjectListMapContainer: React.FC<ProjectListMapContainerProps> = ({
     },
   );
 
-  const { data: projectData } = useQuery(
-    ['getProjectsData', language],
-    () => getProjectsService({
-      about_us: true,
-    }),
+  const { data: projectDetailData, isLoading } = useQuery(
+    ['getProjectsDetailData', project, language],
+    () => getProjectsDetailService(Number(project?.value)),
     {
       ...DEFAULT_QUERY_OPTION,
+      enabled: !!project,
     },
   );
 
@@ -77,60 +75,52 @@ const ProjectListMapContainer: React.FC<ProjectListMapContainerProps> = ({
     return [];
   }, [listCities]);
 
-  const listProject = useMemo(
-    () => projectData?.map((item) => ({
-      title: item.name,
-      href: item.link?.url || '#',
-      target: item.link?.target,
-    })),
-    [projectData],
-  );
-
-  const filterMaps = async (cityId?: number, projectId?: number) => {
-    try {
-      const params = cityId
-        ? { city_id: cityId }
-        : projectId
-          ? { project_id: projectId }
-          : {};
-      setLoading(true);
-      const prjList = await getMapService(params);
-      const convertPrjList = prjList.map((item) => ({
-        id: item.id,
-        point: {
-          x: item.pointX,
-          y: item.pointY,
-        },
-      }));
-      setSelectProjectList(convertPrjList);
-    } catch {
-      // Empty
-    } finally {
-      setLoading(false);
-    }
-  };
-
   const handleChangeProvince = (option: OptionType) => {
     setProvince(option);
-    filterMaps(Number(option.value), Number(project?.value));
     setProject(null);
   };
 
   const handleChangeProject = (option: OptionType) => {
     setProject(option);
-    filterMaps(Number(province?.value), Number(option.value));
   };
 
   useEffect(() => {
     dispatch(getCitiesAction());
   }, [dispatch, language]);
 
+  useEffect(() => {
+    const initLocation = async () => {
+      try {
+        setLoadingMap(true);
+        const data = await getProjectsService({ pin: true });
+        if (data.length > 0) {
+          setLocationMarker({
+            lat: data[0].latitude,
+            lng: data[0].longtitude,
+          });
+        }
+      } finally {
+        setLoadingMap(false);
+      }
+    };
+
+    initLocation();
+  }, [dispatch]);
+
+  useEffect(() => {
+    if (projectDetailData) {
+      setLocationMarker({
+        lat: projectDetailData.latitude,
+        lng: projectDetailData.longtitude,
+      });
+    }
+  }, [projectDetailData]);
+
   return (
     <div className="p-aboutUs_projectListMap">
       <Section>
         <ProjectListMap title={title}>
           <ProjectListMapInfo
-            listProject={listProject || []}
             provinceOptions={provinceOptions || []}
             projectOptions={projectOptionData || []}
             valueProvince={province}
@@ -139,13 +129,9 @@ const ProjectListMapContainer: React.FC<ProjectListMapContainerProps> = ({
             handleChangeProject={handleChangeProject}
           />
           <ProjectListMapGround
-            image={{
-              path: img,
-              width: 320,
-              height: 508,
-            }}
-            listPoint={listSelectProject}
-            loading={isLoading}
+            mapAPIkey={systemData?.gmapId || ''}
+            mapMarker={locationMarker}
+            loading={loadingMap || isLoading}
           />
         </ProjectListMap>
       </Section>

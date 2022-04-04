@@ -8,7 +8,6 @@ import {
 import ProjectListMap, { ProjectListMapGround, ProjectListMapInfo } from '.';
 
 import dataDummy from 'assets/dataDummy/projectListMap';
-import img from 'assets/images/bg_project_list_map.svg';
 import { OptionType } from 'components/molecules/Pulldown';
 
 export default {
@@ -31,17 +30,10 @@ export const normal: Story = () => {
   const customProjectOptions = listProjectSelect
     .map((x) => ({ value: String(x.id), label: x.label }));
 
-  const listPoint = () => {
-    const find = listProjectSelect.find((x) => String(x.id) === project?.value);
-    if (find) return [{ id: find.id, point: find.point }];
-    return listProjectSelect.map((x) => ({ id: x.id, point: x.point }));
-  };
-
   return (
     <Router>
       <ProjectListMap title="Dự Án">
         <ProjectListMapInfo
-          listProject={dataDummy.listProject}
           provinceOptions={dataDummy.provinceOptions}
           projectOptions={customProjectOptions}
           valueProvince={province}
@@ -53,12 +45,11 @@ export const normal: Story = () => {
           handleChangeProject={(value) => setProject(value)}
         />
         <ProjectListMapGround
-          image={{
-            path: img,
-            width: 373,
-            height: 593,
+          mapAPIkey="AIzaSyAt4eV8aoSdhKXHQSQvJc7aSEGlcnUVbdo"
+          mapMarker={{
+            lat: 10.781241219776518,
+            lng: 106.7415968021698,
           }}
-          listPoint={listPoint()}
         />
       </ProjectListMap>
     </Router>
