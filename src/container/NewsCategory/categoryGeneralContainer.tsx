@@ -1,37 +1,39 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useMemo } from 'react';
+import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
 
 import NewsCategory, { NewsCategoryItemTypes } from 'components/templates/NewsCategory';
 import { getNewsService } from 'services/home';
 import { useAppSelector } from 'store/hooks';
+import { DEFAULT_QUERY_OPTION } from 'utils/constants';
 import { getImageURL, formatDateDDMMYYYY } from 'utils/functions';
 import { getPrefixURLCode } from 'utils/language';
 
 const LIMIT = 9;
-const PAGE = 1;
 
 const CategoryGeneralContainer: React.FC = () => {
   const language = useAppSelector((state) => state.system.language);
-  const [isLoading, setLoading] = useState(false);
-  const [totalPages, setTotalPages] = useState<number>(1);
   const [page, setPage] = useState<number>(1);
-  const [listData, setListData] = useState<NewsCategoryItemTypes[]>([]);
   const { slug } = useParams<{ slug: string }>();
 
-  const fetchNewsCategoryData = useCallback(async (params?: {
-    categorySlug?: string;
-    page?: number;
-    limit?: number;
-  }) => {
-    try {
-      setLoading(true);
-      const res = await getNewsService({
-        category_slug: params?.categorySlug,
-        page: params?.page,
-        limit: params?.limit,
+  const { data, isLoading } = useQuery(
+    ['getNewsServiceByHighlight', language, slug, page],
+    () => getNewsService({
+      category_slug: slug,
+      page,
+      limit: LIMIT,
+    }),
+    {
+      ...DEFAULT_QUERY_OPTION,
+      enabled: !!slug,
+    },
+  );
 
-      });
-      const newsData = res.data.map((item) => ({
+  const convertData = useMemo(() => {
+    let dataList: NewsCategoryItemTypes[] = [];
+    let totalPage = 1;
+    if (data) {
+      dataList = data.data.map((item) => ({
         imgSrc: getImageURL(item.thumbnail),
         ratio: '' as Ratio,
         title: item.title,
@@ -39,62 +41,18 @@ const CategoryGeneralContainer: React.FC = () => {
         time: formatDateDDMMYYYY(item.publishedAt),
         href: getPrefixURLCode(language, 'NEWS_DETAIL', item.slug),
       }));
-      setTotalPages(res.meta.totalPages);
-      setPage(res.meta.page);
-      setListData(newsData);
-    } catch {
-      // Empty
-    } finally {
-      setLoading(false);
+      totalPage = data.meta.totalPages;
     }
-  }, [language]);
-
-  const handleChangePage = async (pageChange: number) => {
-    setLoading(true);
-    try {
-      if (totalPages > page) {
-        const res = await getNewsService({
-          category_slug: slug,
-          page: pageChange,
-          limit: LIMIT,
-        });
-        const newsData = res.data.map((item) => ({
-          imgSrc: getImageURL(item.thumbnail),
-          ratio: '' as Ratio,
-          title: item.title,
-          desc: item.description,
-          time: formatDateDDMMYYYY(item.publishedAt),
-          href: getPrefixURLCode(language, 'NEWS_DETAIL', item.slug),
-        }));
-        setTotalPages(res.meta.totalPages);
-        setPage(res.meta.page);
-        setListData(newsData);
-      } else {
-        setListData(listData.slice(0, LIMIT));
-        setPage(1);
-      }
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    fetchNewsCategoryData({
-      categorySlug: slug,
-      limit: LIMIT,
-      page: PAGE,
-    });
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [slug, language]);
+    return { dataList, totalPage };
+  }, [data, language]);
 
   return (
     <div className="p-newsCategory_categoryGeneral pb-80">
       <NewsCategory
-        dataNewsCategory={listData}
-        totalPage={totalPages}
+        dataNewsCategory={convertData.dataList}
+        totalPage={convertData.totalPage}
         currentPage={page}
-        handleChangePage={handleChangePage}
+        handleChangePage={(pageChange: number) => setPage(pageChange)}
         loading={isLoading}
       />
     </div>
