@@ -59,9 +59,10 @@
       margin-top: rem(40);
     }
 
-    img, iframe {
-      width: 100% !important;
+    img,
+    iframe {
       max-width: 100% !important;
+      width: 100% !important;
     }
 
     img {
@@ -91,14 +92,15 @@
   &_content {
     &-desc {
       word-break: break-all;
+
       button {
         background-color: $camel;
         border: 0;
         border-radius: rem(5);
         box-shadow: 0 2px 0 $black0043;
         color: $white;
-        margin: rem(60) 0;
         height: rem(56);
+        margin: rem(60) 0;
         width: rem(237);
         @include prefixed(transition-property, color);
         @include prefixed(transition-duration, 0.3s);
@@ -106,8 +108,8 @@
 
         @include tablet-down {
           height: rem(40);
-          width: rem(200);
           margin: rem(25) 0;
+          width: rem(200);
         }
 
         &::before {

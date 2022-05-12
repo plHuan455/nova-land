@@ -11,6 +11,7 @@
 
   &_content_ckeditor {
     list-style-position: inside;
+
     ol,
     ul,
     li {
@@ -26,17 +27,18 @@
   &-isPageSustainableDevelopment {
     #{$root} {
       &_heading {
-        width: fit-content;
         margin: 0 auto;
         position: relative;
-        &:before {
+        width: fit-content;
+
+        &::before {
+          background: $tan;
           content: '';
+          height: 3px;
           position: absolute;
           top: rem(-8);
-          width: 50%;
-          height: 3px;
-          background: $tan;
           transform: translateX(50%);
+          width: 50%;
         }
       }
     }

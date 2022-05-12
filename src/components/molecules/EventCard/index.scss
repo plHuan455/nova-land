@@ -35,10 +35,12 @@
 
     &-btn {
       @include adjust-flex(flex-start, center);
+
       .a-icon {
         margin-left: rem(10);
         transition: all $transition ease-in-out;
       }
+
       &:hover {
         .a-icon {
           transform: translateX(5px);

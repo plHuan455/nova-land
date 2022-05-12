@@ -57,14 +57,14 @@
 
     &_wrapper {
       height: 550px;
-      width: 100%;
       position: relative;
+      width: 100%;
     }
 
     .a-loader-circle {
-      height: 100%;
-      display: flex;
       align-items: center;
+      display: flex;
+      height: 100%;
     }
   }
 }

@@ -1,17 +1,17 @@
 .o-sdMenu {
   $root: &;
   background: url('~assets/images/bg_sustainableDevelopmentMenu.png') right/contain no-repeat, linear-gradient(180deg, $tan 0%, $light-taupe 214.94%);
-  box-shadow: 0px rem(4) rem(16) rgba($dark-liver-horses, 0.16);
+  box-shadow: 0 rem(4) rem(16) rgba($dark-liver-horses, 0.16);
 
   @include tablet-down {
-    box-shadow: none;
     background: none;
+    box-shadow: none;
   }
 
   &_menu {
     @include tablet-down {
-      box-shadow: 0px rem(4) rem(16) rgba($dark-liver-horses, 0.16);
       background: $white;
+      box-shadow: 0 rem(4) rem(16) rgba($dark-liver-horses, 0.16);
     }
 
     ul {
@@ -21,10 +21,10 @@
 
   &_nav {
     list-style: none;
-    padding-left: 0;
-    @include adjust-flex(space-between, center);
     margin-left: rem(-20);
     margin-right: rem(-20);
+    padding-left: 0;
+    @include adjust-flex(space-between, center);
 
     @include desktop-down {
       margin-left: rem(-10);
@@ -32,9 +32,9 @@
     }
 
     @include tablet-down {
+      align-items: flex-start;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
     }
 
     @include tablet-down {
@@ -48,14 +48,14 @@
 
     &_item {
       margin-bottom: 0;
-      position: relative;
       padding-left: rem(10);
       padding-right: rem(10);
+      position: relative;
 
       &:hover {
         #{$root}_dropdown {
-          visibility: visible;
           max-height: rem(320);
+          visibility: visible;
         }
       }
 
@@ -77,8 +77,8 @@
       padding: rem(28) 0;
       position: relative;
       text-transform: capitalize;
-      z-index: $z-2;
       transition: all 0.4s linear;
+      z-index: $z-2;
 
       @include font-base(14, 20);
       @include style-font-family();
@@ -100,8 +100,8 @@
       &:hover,
       &.active {
         color: $dark-midnight-blue;
-        opacity: 1;
         font-weight: 600;
+        opacity: 1;
 
         &::after {
           opacity: 1;
@@ -120,28 +120,28 @@
 
   &_hasChild {
     #{$root}_nav_link {
-      &:after {
-        width: 0%;
-        background: url("~assets/icons/ic_arrow_down_white.svg") no-repeat;
-        content: "";
-        width: rem(16);
+      &::after {
+        background: url('~assets/icons/ic_arrow_down_white.svg') no-repeat;
+        content: '';
         height: rem(16);
         position: absolute;
         right: rem(-20);
+        top: 50%;
         transform: translateY(-50%);
         transition: all ease 0.3s;
-        top: 50%;
+        width: 0%;
+        width: rem(16);
 
         @include desktop-down {
           right: rem(-15);
         }
 
         @include tablet-down {
-          background: url("~assets/icons/ic_arrow_down_gray.svg") no-repeat;
-          width: rem(24);
-          height: rem(24);
+          background: url('~assets/icons/ic_arrow_down_gray.svg') no-repeat;
           background-size: rem(24);
+          height: rem(24);
           right: rem(20);
+          width: rem(24);
         }
       }
 
@@ -152,15 +152,16 @@
           background-color: $camel;
           color: $white;
         }
-        &:after {
+
+        &::after {
           transform: rotate(180deg) translateY(50%);
 
           @include tablet-down {
-            background: url("~assets/icons/ic_arrow_down_white.svg") no-repeat;
-            width: rem(24);
-            height: rem(24);
+            background: url('~assets/icons/ic_arrow_down_white.svg') no-repeat;
             background-size: rem(24);
+            height: rem(24);
             right: rem(20);
+            width: rem(24);
           }
         }
       }
@@ -177,13 +178,13 @@
           color: $white;
         }
 
-        &:after {
-          background: url("~assets/icons/ic_arrow_down_white.svg") no-repeat;
+        &::after {
+          background: url('~assets/icons/ic_arrow_down_white.svg') no-repeat;
           transform: rotate(180deg) translateY(50%);
           @include tablet-down {
-            width: rem(24);
-            height: rem(24);
             background-size: rem(24);
+            height: rem(24);
+            width: rem(24);
           }
         }
       }
@@ -193,11 +194,11 @@
   &_dropdown {
     @include tablet-up {
       background-color: $white;
-      box-shadow: 0 rem(4) rem(16) rgba($dark-liver-horses, 0.16);
       border-radius: 0 0 rem(12) rem(12);
+      box-shadow: 0 rem(4) rem(16) rgba($dark-liver-horses, 0.16);
       left: 0;
-      opacity: 1;
       max-height: 0;
+      opacity: 1;
       overflow: hidden;
       position: absolute;
       visibility: hidden;
@@ -206,10 +207,10 @@
     }
 
     @include tablet-down {
-      max-height: 0;
-      visibility: hidden;
-      overflow: hidden;
       background-color: $light-french-beige-7d;
+      max-height: 0;
+      overflow: hidden;
+      visibility: hidden;
       @include transition(all $transition-long ease-in-out);
 
       .o-container {
@@ -228,10 +229,10 @@
     }
 
     &_item {
-      font-weight: 400;
-      min-width: rem(325);
       color: $jet;
       display: flex;
+      font-weight: 400;
+      min-width: rem(325);
       @include font-base(14, 20);
 
       @include tablet-up {
@@ -243,8 +244,8 @@
       }
 
       @include tablet-down {
-        padding: rem(24);
         min-width: 0;
+        padding: rem(24);
         @include font-base(14, 20);
 
         .a-icon {
@@ -264,13 +265,14 @@
     }
 
     &_nav_link {
-      transition: $transition-long ease;
       color: $jet;
       opacity: 1;
+      transition: $transition-long ease;
+
       &:hover {
-        opacity: 1;
         color: $dark-midnight-blue;
         font-weight: 600;
+        opacity: 1;
       }
 
       @include tablet-down {

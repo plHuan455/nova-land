@@ -26,10 +26,10 @@
     padding: 0 rem(30);
 
     img {
-      max-width: 100%;
-      width: 100%;
       max-height: rem(100);
+      max-width: 100%;
       object-fit: contain;
+      width: 100%;
     }
     @include tablet-down {
       flex: 0 0 calc(100% / 4);

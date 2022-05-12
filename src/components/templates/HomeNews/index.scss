@@ -12,8 +12,8 @@
   }
 
   &_wrapper {
-    width: 100%;
     padding: rem(24) rem(24) rem(20);
+    width: 100%;
 
     @include mobile-down {
       padding: rem(15);
@@ -105,18 +105,18 @@
       position: relative;
 
       .slick-arrow {
-        width: rem(48);
         height: rem(48);
+        width: rem(48);
 
         @include small-mobile {
-          width: rem(30);
           height: rem(30);
+          width: rem(30);
         }
       }
 
       &_prev {
-        position: absolute;
         left: 60px;
+        position: absolute;
         top: 50%;
         transform: translateY(-50%);
 
@@ -183,8 +183,8 @@
 
       @include small-mobile {
         display: block;
-        @include text-overflow(4);
         width: 100%;
+        @include text-overflow(4);
       }
     }
   }
