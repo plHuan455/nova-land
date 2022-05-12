@@ -16,7 +16,7 @@ $oxford-blue: rgb(1, 11, 52); //#010b34
 $arsenic: rgb(67, 67, 67); // #434343
 $deer: rgb(181, 134, 84); // #b58654
 $taupe-gray: rgb(140, 140, 140); //#8c8c8c
-$spanish-gray: 	rgb(158,160,160); // #9ea0a0
+$spanish-gray: rgb(158, 160, 160); // #9ea0a0
 
 // Palette Colors
 $amazon: rgb(57, 112, 90); // #39705a
@@ -27,7 +27,7 @@ $june-bud: rgb(180, 205, 96); // #b4cd60
 $pale-goldenrod: rgb(217, 230, 175); // #d9e6af
 $golden-brown: rgb(162, 104, 41); //#A26829
 $tan: rgb(210, 179, 129); // #d2b381
-$light-taupe: rgb(172,146,105); // #ac9269
+$light-taupe: rgb(172, 146, 105); // #ac9269
 $dark-liver-horses: rgb(87, 70, 55); // #574637
 
 // Toast Colors
@@ -58,7 +58,7 @@ $anti-flash-white-4f9: rgb(241, 244, 249); //#f1f4f9
 $glitter: rgb(231, 235, 240); // #e7ebf0
 $silverSand: rgb(196, 196, 196); //#C4C4C4
 $light-french-beige: rgb(206, 169, 113); // #cea971
-$light-french-beige-7d: 	rgb(202,172,125); // #caac7d
+$light-french-beige-7d: rgb(202, 172, 125); // #caac7d
 
 // Neutral
 $ghost-white: rgb(249, 250, 253); //#f9fafd
@@ -133,40 +133,28 @@ $white03: rgba($white, 0.3);
 $chocolate-white: rgba(216, 221, 236, 0.4);
 
 // Linear colors
-$outstanding-number-linear: linear-gradient(
-  180deg,
-  $dark-midnight-blue0 0%,
-  $oxford-blue 100%
-);
-$camel-linear: linear-gradient(
-  90deg,
-  rgba($camel, 0) 0%,
-  $bisque 50.52%,
-  rgba($camel, 0) 100%
-);
-$cool-black-linear: linear-gradient(
-  to right,
-  $cool-black 2%,
-  rgba($cool-black, 0.25) 30%,
-  transparent 35%,
-  transparent 65%,
-  rgba($cool-black, 0.25) 70%,
-  $cool-black 98%
-);
+$outstanding-number-linear: linear-gradient(180deg,
+$dark-midnight-blue0 0%,
+$oxford-blue 100%);
+$camel-linear: linear-gradient(90deg,
+rgba($camel, 0) 0%,
+$bisque 50.52%,
+rgba($camel, 0) 100%);
+$cool-black-linear: linear-gradient(to right,
+$cool-black 2%,
+rgba($cool-black, 0.25) 30%,
+transparent 35%,
+transparent 65%,
+rgba($cool-black, 0.25) 70%,
+$cool-black 98%);
 $white-linear: linear-gradient(360deg, rgba($white, 0) 45.9%, $white 108.19%);
-$dark-green-linear: linear-gradient(
-  180deg,
-  rgba($dark-green, 0) 27.85%,
-  $rich-black 189.79%
-);
-$oxford-dark-linear: linear-gradient(
-  180deg,
-  $oxford-blue 0%,
-  rgba($dark-midnight-blue, 0) 100%
-);
-$dark-midnight: linear-gradient(
-    180deg,
-    $dark-midnight-blue00 38.27%,
-    $oxford-blue 79.08%
-  ),
+$dark-green-linear: linear-gradient(180deg,
+rgba($dark-green, 0) 27.85%,
+$rich-black 189.79%);
+$oxford-dark-linear: linear-gradient(180deg,
+$oxford-blue 0%,
+rgba($dark-midnight-blue, 0) 100%);
+$dark-midnight: linear-gradient(180deg,
+$dark-midnight-blue00 38.27%,
+$oxford-blue 79.08%),
   $dark-midnight-blue;

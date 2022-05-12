@@ -159,8 +159,8 @@
       }
     }
     @include mobile-down {
-      padding: 0;
       display: block;
+      padding: 0;
 
       &::after {
         display: none;

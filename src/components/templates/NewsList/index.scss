@@ -1,8 +1,8 @@
 .t-newsList {
   &_wrapper {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
     margin: rem(-15);
 
     @include tablet-down {
@@ -26,8 +26,8 @@
 
       @include small-mobile {
         display: block;
-        @include text-overflow(4);
         width: 100%;
+        @include text-overflow(4);
       }
     }
 

@@ -1,7 +1,7 @@
 .p-aboutUs {
   &_ecoSystem {
-    padding-bottom: rem(122);
     background-color: $white-smoke2;
+    padding-bottom: rem(122);
 
     @include tablet-down {
       padding-bottom: rem(100);

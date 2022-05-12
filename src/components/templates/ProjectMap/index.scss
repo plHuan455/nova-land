@@ -111,8 +111,8 @@
       transition: $transition-long ease-in-out;
 
       @include tablet-down {
-        padding: 0 rem(8);
         margin-bottom: rem(26);
+        padding: 0 rem(8);
       }
 
       &.zoom-in {

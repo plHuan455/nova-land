@@ -16,7 +16,7 @@
       background-color: $columbia-blue;
 
       bottom: 0;
-      content: "";
+      content: '';
       height: rem(1);
       left: 0;
       position: absolute;
@@ -25,6 +25,7 @@
   }
   @include tablet-down {
     background-color: $light-french-beige;
+
     &-scrolled {
       background-color: $light-french-beige;
 
@@ -141,10 +142,11 @@
 
       &:hover {
         #{$root}_dropdown {
-          visibility: visible;
           max-height: rem(320);
+          visibility: visible;
         }
       }
+
       &:not(:nth-child(2)) {
         margin-left: rem(18);
       }
@@ -171,13 +173,13 @@
       padding: rem(9);
       position: relative;
       text-transform: capitalize;
-      z-index: $z-2;
       transition: all 0.4s linear;
+      z-index: $z-2;
 
       &::after {
-        content: "";
         background-color: $dark-midnight-blue;
         bottom: rem(4);
+        content: '';
         height: rem(2);
         left: rem(9);
         position: absolute;
@@ -207,8 +209,8 @@
       &:hover,
       &.active {
         color: $dark-midnight-blue;
-        opacity: 1;
         font-weight: 600;
+        opacity: 1;
 
         &::after {
           opacity: 1;
@@ -246,8 +248,8 @@
       background-color: $white;
       box-shadow: inset 0 1px 4px $black025;
       left: 0;
-      opacity: 1;
       max-height: 0;
+      opacity: 1;
       overflow: hidden;
       position: absolute;
       top: rem(65);
@@ -261,8 +263,8 @@
 
     @include tablet-down {
       max-height: 0;
-      visibility: hidden;
       overflow: hidden;
+      visibility: hidden;
 
       @include transition(all $transition-long ease-in-out);
 
@@ -305,19 +307,21 @@
     }
 
     &_nav_link {
-      transition: $transition-long ease;
       color: $black;
       opacity: 1;
+      transition: $transition-long ease;
+
       &:hover {
-        opacity: 1;
         color: $dark-midnight-blue;
         font-weight: 600;
+        opacity: 1;
       }
       @include tablet-down {
         color: $white;
       }
     }
   }
+
   &_search {
     cursor: pointer;
     margin-left: rem(12);

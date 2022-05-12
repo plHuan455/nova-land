@@ -1,17 +1,17 @@
 .o-eventCardDetails {
-  position: relative;
-  margin-top: rem(40);
   margin-bottom: rem(40);
+  margin-top: rem(40);
+  position: relative;
 
   @include mobile-down {
-    margin-top: rem(20);
     margin-bottom: rem(20);
+    margin-top: rem(20);
   }
 
   &_content {
-    padding: rem(20) rem(30);
-    display: flex;
     border: 1px solid $camel;
+    display: flex;
+    padding: rem(20) rem(30);
 
     @include tablet-down {
       flex-direction: column;
