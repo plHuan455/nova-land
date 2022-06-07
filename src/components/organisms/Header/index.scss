@@ -23,6 +23,7 @@
       width: 100%;
     }
   }
+
   @include tablet-down {
     background-color: $light-french-beige;
 
@@ -80,6 +81,7 @@
         }
       }
     }
+
     @include tablet-down {
       display: block;
       margin: 0 rem(11);
@@ -189,6 +191,7 @@
         @include tablet-down {
           content: none;
         }
+
         @include desktop-down {
           left: rem(4);
           top: rem(23);
@@ -209,39 +212,20 @@
       &:hover,
       &.active {
         color: $dark-midnight-blue;
-        font-weight: 600;
         opacity: 1;
+        text-shadow: 0 1px 0 $dark-midnight-blue, 0 0 0 $dark-midnight-blue, 0 0 0 $dark-midnight-blue;
 
         &::after {
           opacity: 1;
           width: calc(100% - 18px);
+
           @include desktop-down {
             width: calc(100% - 9px);
           }
         }
       }
-
-      &.active {
-        font-weight: 600;
-      }
     }
   }
-  // &_hasChild {
-  //   #{$root}_nav_link {
-  //     &:hover {
-  //       font-weight: 300;
-  //       &:after {
-  //         width: 0%;
-  //       }
-  //     }
-  //     &.active {
-  //       font-weight: 600;
-  //       &:after {
-  //         width: 100%;
-  //       }
-  //     }
-  //   }
-  // }
 
   &_dropdown {
     @include tablet-up {
@@ -257,6 +241,7 @@
       z-index: 3;
       @include transition(all $transition-long ease-in-out);
     }
+
     @include desktop-down {
       top: rem(60);
     }
@@ -316,6 +301,7 @@
         font-weight: 600;
         opacity: 1;
       }
+
       @include tablet-down {
         color: $white;
       }
@@ -335,6 +321,7 @@
 
     &.mb {
       display: none;
+
       @include tablet-down {
         display: block;
         margin-left: 0;
