@@ -101,20 +101,27 @@
   }
 
   &_desc {
-    letter-spacing: 0.015em;
     margin-top: rem(8);
     opacity: 0.8;
-    @include text-overflow(3);
+
+    @include desktop-up {
+      min-height: rem(110);
+    }
 
     #{$root}-small & {
       letter-spacing: 0;
       margin-top: rem(6);
       @include text-overflow(2);
     }
+
+    &>.a-text {
+      @include text-overflow(3);
+      letter-spacing: 0.015em;
+    }
   }
 
   &_thumbnail {
-    margin-top: rem(24);
+    margin-top: rem(16);
     min-height: rem(100);
     position: relative;
 
@@ -123,7 +130,6 @@
     }
 
     @include mobile-down {
-      margin-top: rem(16);
       min-height: auto;
     }
 
@@ -157,9 +163,9 @@
     #{$root}_desc {
       position: relative;
       z-index: 2;
-      @include text-overflow(5);
 
       .a-text {
+        @include text-overflow(5);
         color: $white;
       }
     }
@@ -273,36 +279,36 @@
     }
   }
 
-  
+
   &-small {
     #{$root}_content {
       .slick-prev {
         left: calc(-60 / 1366 * 100%);
-  
+
         @include desktop-down {
           left: calc(-72 / 1366 * 100%);
         }
-  
+
         @include tablet-down {
           left: calc(-110 / 1366 * 100%);
         }
-  
+
         @include small-mobile {
           left: calc(-70 / 1366 * 100%);
         }
       }
-  
+
       .slick-next {
         right: calc(-60 / 1366 * 100%);
-  
+
         @include desktop-down {
           right: calc(-72 / 1366 * 100%);
         }
-  
+
         @include tablet-down {
           right: calc(-110 / 1366 * 100%);
         }
-  
+
         @include small-mobile {
           right: calc(-70 / 1366 * 100%);
         }
@@ -311,16 +317,17 @@
       .o-carousel {
         margin-left: rem(-15);
         margin-right: rem(-15);
+
         @include tablet-down {
           padding-left: rem(50);
           padding-right: rem(50);
         }
-  
+
         @include mobile-down {
           padding-left: 0;
           padding-right: 0;
         }
-  
+
         @include small-mobile {
           padding-left: rem(30);
           padding-right: rem(30);

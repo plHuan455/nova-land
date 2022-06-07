@@ -6,6 +6,10 @@
   box-shadow: 0 rem(25) rem(50) $black01;
   padding: rem(60) rem(40);
 
+  @include break(1024px, 1281px) {
+    padding: rem(30);
+  }
+
   @include tablet-down {
     padding: rem(50) rem(35);
   }
@@ -16,6 +20,20 @@
 
   @include iphone-large-lands {
     padding: rem(40) rem(30);
+  }
+
+  &_title {
+    @include break(1024px, 1281px) {
+      .a-heading {
+        @include font-base(22, 28);
+      }
+    }
+  }
+
+  &_item {
+    @include break(1024px, 1281px) {
+      margin-top: rem(20);
+    }
   }
 
   &_location,
@@ -56,11 +74,10 @@
 
   &_card {
     max-width: rem(448);
-    max-width: rem(448);
     position: absolute;
     width: 100%;
     z-index: 2;
-    z-index: 2;
+
     @include tablet-down {
       max-width: rem(348);
     }
@@ -93,7 +110,7 @@
       @include mobile-down {
         right: 0;
       }
-      
+
       @include iphone-large-lands {
         right: 0;
       }
