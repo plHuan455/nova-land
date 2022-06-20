@@ -65,7 +65,7 @@ const SustainableDevelopmentMenu: React.FC<SustainableDevelopmentMenuProps> = ({
                             )}
                             key={`${itemSubmenu.title}${index.toString()}`}
                           >
-                            <div className="o-sdMenu_dropdown_item_icon u-mr-8">
+                            <div className="o-sdMenu_dropdown_item_icon u-mr-8 u-pt-3">
                               <Icon iconName="novaMark" size="15x19" />
                             </div>
                             <Link
