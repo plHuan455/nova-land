@@ -68,6 +68,20 @@
         padding: 0;
         width: 100%;
       }
+
+      &:last-child {
+        .o-sdMenu_dropdown {
+          @include break-max(1600px) {
+            right: 5%;
+            left: unset;
+          }
+
+          @include break(1024px, 1366px) {
+            right: 0;
+            left: unset;
+          }
+        }
+      }
     }
 
     &_link {
@@ -232,8 +246,16 @@
       color: $jet;
       display: flex;
       font-weight: 400;
-      min-width: rem(325);
+      min-width: rem(300);
       @include font-base(14, 20);
+
+      @include break(1199px, 1366px) {
+        min-width: rem(230);
+      }
+
+      @include desktop {
+        min-width: rem(200);
+      }
 
       @include tablet-up {
         &:not(:first-child) {
