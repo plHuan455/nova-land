@@ -68,12 +68,16 @@ const useLanguage = () => {
   );
 
   //* Functions
-  const handleChangeLang = (item: OptionType) => {
+  const handleChangeLang = (item: OptionType, callback?: any) => {
     const languageKey = item.value as LanguageKey;
     if (checkActiveLang(languageKey, dataSystem?.locales)) {
       i18n.changeLanguage(languageKey, () => {
         dispatch(setLanguage(languageKey));
-        handleLogicChangeLang(languageKey);
+        if (callback) {
+          callback();
+        } else {
+          handleLogicChangeLang(languageKey);
+        }
       });
     } else {
       const message = dataSystem?.locales
