@@ -1,13 +1,18 @@
 import React, { useMemo } from 'react';
 import { useQuery } from 'react-query';
-import { Navigate, Route, useLocation } from 'react-router-dom';
+import {
+  Navigate, Route, useLocation,
+} from 'react-router-dom';
 
 import Loading from 'components/atoms/Loading';
 import Error from 'components/templates/Error';
 import MainLayout from 'components/templates/MainLayout';
+import useLanguage from 'hooks/useLanguage';
+import i18n from 'i18n';
 import { getPageService, redirectPageService } from 'services/navigations';
 import { DEFAULT_QUERY_OPTION } from 'utils/constants';
-import { getBlockData, checkExternalUrl } from 'utils/functions';
+import { checkExternalUrl, getBlockData } from 'utils/functions';
+import { checkExistingPrefixLang } from 'utils/language';
 
 interface BlockError {
   link: {
@@ -20,7 +25,8 @@ interface BlockError {
   sympathySentence: string;
 }
 
-const Redirect301:React.FC = () => {
+const Redirect301: React.FC = () => {
+  const { handleChangeLang } = useLanguage();
   const { pathname } = useLocation();
   const { isLoading, data } = useQuery(
     ['GetRedirectPageData', pathname],
@@ -42,19 +48,33 @@ const Redirect301:React.FC = () => {
         />
       );
     }
-    return (
-      <Navigate
-        to={{
-          pathname: data.to,
-        }}
-      />
-    );
+    const preLang = checkExistingPrefixLang(data.to);
+    if (preLang !== i18n.language) {
+      handleChangeLang({
+        label: checkExistingPrefixLang(data.to),
+        value: checkExistingPrefixLang(data.to),
+      }, () => (
+        <Navigate
+          to={{
+            pathname: data.to,
+          }}
+        />
+      ));
+    } else {
+      return (
+        <Navigate
+          to={{
+            pathname: data.to,
+          }}
+        />
+      );
+    }
   }
 
   return <Redirect404 />;
 };
 
-export const Redirect404:React.FC = () => {
+export const Redirect404: React.FC = () => {
   const { isLoading, data } = useQuery(
     ['getPageErrorData'],
     () => getPageService('404'),

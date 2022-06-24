@@ -97,3 +97,10 @@ export function getPrefixURLCodeSwicthLang(lang: string, code: ConstantRoutesCod
   if (slug) return `${getLangSlug(lang)}${getStaticSlug(code, lang)}/${slug}`;
   return '';
 }
+
+export function checkExistingPrefixLang(to?: string) {
+  if (!to) return 'vi';
+  const prefixLang = to.split('/');
+  if (prefixLang.length > 1 && langLabel(prefixLang[1])) return prefixLang[1];
+  return 'vi';
+}
