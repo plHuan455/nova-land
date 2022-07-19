@@ -10,15 +10,17 @@ const axiosInstance = axios.create({
 
 axiosInstance.interceptors.request.use(
   ($config: AxiosRequestConfig): AxiosRequestConfig => {
-    const token = getAccessToken();
-    if (token) {
-      $config.headers.Authorization = `Bearer ${token}`;
+    if ($config.headers) {
+      const token = getAccessToken();
+      if (token) {
+        $config.headers.Authorization = `Bearer ${token}`;
+      }
+      if ($config.method === 'get') {
+        $config.params = { ...$config.params, locale: window.localStorage.getItem(LOCAL_STORAGE.LANGUAGE) || 'vi' };
+      }
+      $config.headers['Content-Type'] = 'application/json';
+      $config.headers.Accept = 'application/json';
     }
-    if ($config.method === 'get') {
-      $config.params = { ...$config.params, locale: window.localStorage.getItem(LOCAL_STORAGE.LANGUAGE) || 'vi' };
-    }
-    $config.headers['Content-Type'] = 'application/json';
-    $config.headers.Accept = 'application/json';
     return $config;
   },
   async (error: AxiosError): Promise<AxiosError> => Promise.reject(error),
@@ -27,7 +29,7 @@ axiosInstance.interceptors.request.use(
 axiosInstance.interceptors.response.use(
   (response: AxiosResponse): AxiosResponse => response,
   async (error: AxiosError): Promise<AxiosError> => Promise.reject(
-    error.response ? error.response.data.errors : error,
+    error.response?.data ? (error.response?.data as any)?.errors : error,
   ),
 );
 export default axiosInstance;
