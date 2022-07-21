@@ -1,3 +1,4 @@
+import DOMPurify from 'dompurify';
 import React from 'react';
 
 import mapModifiers from 'utils/functions';
@@ -40,7 +41,7 @@ const Text: React.FC<TextProps> = ({
       {content ? (
         <Element
           className={mapModifiers('a-text', modifiers, isInline && 'inline')}
-          dangerouslySetInnerHTML={{ __html: content }}
+          dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(content) }}
         />
       ) : (
         <Element className={mapModifiers('a-text', modifiers, isInline && 'inline')}>
