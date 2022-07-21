@@ -1,4 +1,5 @@
 /* eslint-disable react/no-danger */
+import DOMPurify from 'dompurify';
 import React from 'react';
 
 import Heading from 'components/atoms/Heading';
@@ -38,7 +39,7 @@ const Collapses: React.FC<CollapsesProps> = ({
       className={mapModifiers('o-collapses_wrapper', active && 'active')}
     >
       {content ? (
-        <div className="o-collapses_description" dangerouslySetInnerHTML={{ __html: content }} />
+        <div className="o-collapses_description" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(content) }} />
       ) : (
         <div className="o-collapses_description">
           {children}
