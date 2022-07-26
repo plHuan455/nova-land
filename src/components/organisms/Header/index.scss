@@ -213,7 +213,7 @@
       &.active {
         color: $dark-midnight-blue;
         opacity: 1;
-        text-shadow: 0 1px 0 $dark-midnight-blue, 0 0 0 $dark-midnight-blue, 0 0 0 $dark-midnight-blue;
+        text-shadow: 0 0 rem(1) $dark-midnight-blue;
 
         &::after {
           opacity: 1;
