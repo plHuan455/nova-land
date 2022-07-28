@@ -1,0 +1,140 @@
+.date-pickerHeader {
+  font-family: $font-lexend;
+
+  @include adjust-flex(space-between, center);
+  padding: rem(11) 0;
+  // margin: rem(6) rem(6) 0 rem(6);
+  border-bottom: rem(1) solid $white-smoke-8f8;
+
+  &_date {
+    @include font-base(14, 18);
+    font-weight: 500;
+
+  }
+
+  &_btn {
+    @include reset-button;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+
+    &-previous {
+      transform: rotate(180deg);
+    }
+
+    &-next {
+      margin-left: rem(7);
+    }
+
+  }
+}
+
+.date-picker {  
+  min-width: rem(288);
+  // width: rem(288);
+
+  .react-datepicker {
+    width: 100%;
+    font-family: $font-lexend;
+    $root: &;
+    background-color: $white;
+    border: 0;
+
+    &__header {
+      padding-top: 0;
+      background-color: transparent;
+      border-bottom: 0;
+
+    }
+
+    &__month {
+      &-container {
+        float: none;
+      }
+
+      margin: 0;
+      padding: rem(3) 0 rem(11);
+    }
+
+    &__day {
+      &-names {
+        @include adjust-flex(space-between, center);
+        padding: rem(8) rem(12) rem(0);
+      }
+      &--outside-month {
+        color: $black025;
+      }
+
+      &--keyboard-selected {
+        // Background is blue of datepicker
+        background-color: transparent;
+      }
+
+    }
+
+    &__week {
+      @include adjust-flex(space-between, center);
+      margin: rem(6) rem(18) 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+    }
+    
+  }
+
+  &_day {
+    $day: &;
+
+    @include font-base(14, 18);
+    @include adjust-flex(center, center);
+    width: rem(24);
+    height: rem(24);
+    margin: 0;
+    font-weight: 300;
+    color: $black085;
+    border-radius: rem(2);
+
+    &-event {
+      background-color: $yellow-green;
+    }
+
+    &-now {
+      border: rem(1) solid $golden-brown;
+    }
+
+    &:hover {
+      border-radius: rem(2);
+      background-color: $golden-brown050;
+    }
+
+    &-selected {
+      background-color: $golden-brown;
+      color: $white;
+      
+      &:hover {
+        background-color: $golden-brown;
+      }
+    }
+    
+  }
+
+  &_weekDay {
+    @include font-base(14, 18);
+    @include adjust-flex(center, center);
+    width: rem(36);
+    height: rem(30);
+    font-weight: 400;
+    margin: 0;
+  }
+
+  &_month {
+
+  }
+
+}
+
+.test {
+  background-color: red;
+}

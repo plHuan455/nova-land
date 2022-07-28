@@ -1,0 +1,31 @@
+.event-item {
+  display: flex;
+
+  &_date {
+    @include adjust-flex(center, center);
+    background-color: $golden-brown;
+    flex-direction: column;
+    width: rem(61);
+    padding: rem(8) 0;
+    color: $white;
+    
+    &_dayMonth {
+      @include font-base(16, 24);
+      font-weight: 500;
+      
+    }
+    
+    &_monthYear {
+      @include font-base(12, 16);
+      font-weight: 300;
+
+    }
+  }
+
+  &_description {
+    @include adjust-flex(flex-start, center);
+    color: $davys-grey;
+    font-weight: 300;
+    margin-left: rem(8);
+  }
+}

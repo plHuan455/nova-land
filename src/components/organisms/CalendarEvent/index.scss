@@ -1,0 +1,138 @@
+.calendar-event {
+  $root: &;
+
+  display: flex;
+  box-shadow: 0 rem(4) rem(4) $black025;
+
+  /** LEFT */
+  &_datePicker {
+    padding: 0 0 rem(6) rem(6);
+  }
+
+  /** RIGHT */
+  &_event {
+    $root-event: &;
+    
+    flex-grow: 1;
+    margin-left: rem(24);
+
+    &Header {
+      @include adjust-flex(flex-start, flex-end);
+      flex-direction: column;
+      padding-right: rem(12);
+
+      #{$root-event}Input {
+        width: rem(165);
+
+        .m-pulldown {
+          &-default {
+            &__placeholder, &__input {
+              font-size: rem(12) !important;
+              line-height: rem(16);
+              font-weight: 400;
+            }
+
+            &__placeholder + div {
+              display: flex;
+              align-items: center;
+            }
+
+            &__control {
+              @include adjust-flex(center, center);
+              padding: 0 rem(16);
+              max-height: rem(24);
+              min-height: auto;
+              height: auto;
+              border-radius: rem(2);
+
+              &--is-focused {
+                height: auto;
+                font-size: rem(12) !important;
+                line-height: rem(16);
+
+              }
+            }
+
+            &__value {
+              &-container {
+                padding: 0;
+                max-height: rem(24);
+               
+                & > div:last-child {
+                  margin:0
+                }
+              }
+
+            }
+
+            &__indicator {
+              img {
+                width: rem(16);
+                height: rem(16);
+              }
+            }
+            
+          }
+
+        }
+      }
+  
+      #{$root-event}Note {
+        margin-top: rem(12);
+        @include adjust-flex(flex-end, center);
+        list-style: none;
+  
+        &_item {
+          $icon-size: 8;
+  
+          position: relative;
+          @include font-base(12, 16);
+          font-weight: 300;
+          padding-left: rem($icon-size * 2);
+          margin-left: rem(20);
+          
+          &:first-child {
+            margin-left: 0;
+          }
+  
+  
+          &::before{
+            box-sizing: border-box;
+            content: '';
+            position: absolute;
+            top: calc(50% - #{rem($icon-size / 2)});
+            left: 0;
+            width: rem($icon-size);
+            height: rem($icon-size);
+            border-radius: 100%;
+          }
+
+          &-select:before {
+            background-color: $golden-brown;
+          }
+  
+          &-today:before {
+            border: rem(1) solid $golden-brown;
+          }
+  
+          &-event:before {
+            background-color: $yellow-green;  
+          }
+          
+        }
+        
+      }
+    }
+
+    #{$root}_eventList {
+      margin-top: rem(12);
+      max-height: rem(212);
+      overflow: auto;
+    }
+    
+    #{$root}_eventList_item + #{$root}_eventList_item {
+      margin-top: rem(8);
+    }
+
+  }
+}

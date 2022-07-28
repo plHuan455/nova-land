@@ -190,6 +190,8 @@ export const getHourFromPastToCurrent = (date?: string) => {
   return new Date(hour).getHours();
 };
 
+export const addZeroWhenLessThanTen = (num: number): string => (num < 10 ? `0${num}` : String(num));
+
 export function openInNewTab(href?: string) {
   if (!href) return;
   const link = document.createElement('a');

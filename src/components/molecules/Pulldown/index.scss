@@ -16,7 +16,7 @@
 
     &__placeholder {
       @include mobile-down {
-        font-size: rem(14) !important;
+        font-size: rem(10) !important;
         line-height: rem(20);
       }
     }

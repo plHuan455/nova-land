@@ -1,6 +1,7 @@
 @import 'styles/common';
 
 //Library
+@import 'react-datepicker/dist/react-datepicker.css';
 @import '~bootstrap/dist/css/bootstrap-grid.min.css';
 @import '~slick-carousel/slick/slick-theme.css';
 @import '~slick-carousel/slick/slick.css';
@@ -22,6 +23,7 @@
 @import 'components/molecules/Pulldown/';
 @import 'components/molecules/EcoCard/';
 @import 'components/molecules/Breadcrumb';
+@import 'components/molecules/DatePicker';
 @import 'components/molecules/Pagination';
 @import 'components/molecules/InfoProduct/';
 @import 'components/molecules/ListLogoProject/';
@@ -35,6 +37,7 @@
 @import 'components/organisms/Container/';
 @import 'components/organisms/Carousel/';
 @import 'components/organisms/Collapses/';
+@import 'components/organisms/CalendarEvent/';
 @import 'components/organisms/Tabs';
 @import 'components/organisms/Footer/';
 @import 'components/organisms/Banner/';
@@ -51,6 +54,7 @@
 @import 'components/organisms/NotifyModal';
 @import 'components/organisms/Modal';
 @import 'components/organisms/EventCardDetails';
+@import 'components/organisms/EventItem';
 @import 'components/organisms/SustainableDevelopmentMenu';
 
 //Templates
